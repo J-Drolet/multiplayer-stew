@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://lcx7afjcynql"]
+
+[ext_resource type="Script" path="res://Scripts/Character.cs" id="1_n6eoi"]
+[ext_resource type="Texture2D" uid="uid://bp1y6idrr3kgr" path="res://Assets/Crosshair.png" id="2_oey5o"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wgmvx"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dlrkp"]
+
+[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "Head")]
+script = ExtResource("1_n6eoi")
+Camera = NodePath("Head/Camera3D")
+Head = NodePath("Head")
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_wgmvx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_dlrkp")
+
+[node name="Head" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.577425, -0.203255)
+current = true
+
+[node name="UI" type="Control" parent="."]
+process_mode = 4
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Text" type="Label" parent="UI"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 23.0
+text = "MULTIPLAYER-STEW"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("2_oey5o")

@@ -1,17 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://dustp76kyosr0"]
+[gd_scene load_steps=7 format=3 uid="uid://dustp76kyosr0"]
 
 [ext_resource type="Script" path="res://Scripts/Root.cs" id="1_p77lm"]
-[ext_resource type="Script" path="res://Scenes/Character.cs" id="2_toqgn"]
+[ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_s51pw"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_p1auc"]
 size = Vector3(50, 0.25, 50)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bbwtt"]
 size = Vector3(50, 0.25, 50)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_wgmvx"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dlrkp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_piarx"]
 size = Vector3(1.12, 1, 1)
@@ -32,24 +28,8 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
 shape = SubResource("BoxShape3D_bbwtt")
 
-[node name="Character" type="CharacterBody3D" parent="." node_paths=PackedStringArray("Camera", "Head")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.38239, 0)
-script = ExtResource("2_toqgn")
-Camera = NodePath("Head/Camera3D")
-Head = NodePath("Head")
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Character"]
-mesh = SubResource("CapsuleMesh_wgmvx")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Character"]
-shape = SubResource("CapsuleShape3D_dlrkp")
-
-[node name="Head" type="Node3D" parent="Character"]
-
-[node name="Camera3D" type="Camera3D" parent="Character/Head"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.577425, -0.203255)
-current = true
+[node name="Character" parent="." instance=ExtResource("2_s51pw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.32287, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.766896, 0.439592, -0.467578, 0, 0.728574, 0.684967, 0.641771, -0.525299, 0.558741, 0, 0, 0)
