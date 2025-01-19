@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://eoi8ks6agami"]
+[gd_scene load_steps=3 format=3 uid="uid://eoi8ks6agami"]
 
 [ext_resource type="Script" path="res://Scripts/Networking/Client.cs" id="1_i1rml"]
+[ext_resource type="PackedScene" uid="uid://emhg32smyqx0" path="res://Scenes/mainMenu.tscn" id="2_518qk"]
 
 [node name="Root" type="Node"]
 script = ExtResource("1_i1rml")
+
+[node name="MainMenu" parent="." instance=ExtResource("2_518qk")]

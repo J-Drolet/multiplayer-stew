@@ -1,27 +1,56 @@
 using Godot;
 using System;
+using System.Threading;
 
 public partial class Client : Node
 {
-    // Define the server's IP and port
-    private string _serverIp = "127.0.0.1";  // Localhost for testing
-    private const int ServerPort = 12345;
+   
+    private readonly string localHost = "127.0.0.1";
+    private const int ServerPort = 3333;
     private ENetMultiplayerPeer _client;
+    private int ServerPid;
+
+    // Kill server process
+    public override void _ExitTree()
+    {
+        OS.Kill(ServerPid);
+        base._ExitTree();
+    }
+
+    public override void _Ready()
+    {
+        /*Multiplayer.PeerConnected.connect(player_connected);
+        Multiplayer.PeerDisconnected.connect(player_disconnected);
+        Multiplayer.ConnectedToServer.connect(connected_to_server);
+        Multiplayer.ConnectionFailed.connect(connection_failed);
+        */
+
+        Multiplayer.Connect("ConnectedToServer", new Callable(this, "ConnectedToServer"));
+        Multiplayer.Connect("ConnectionFailed", new Callable(this, "ConnectionFailed"));
+
+        CreateLobbyAndConnect();
+    }
 
     // Called when the "Create Lobby" button is pressed
     public void CreateLobbyAndConnect()
     {
-        StartServer();  // Start the server in headless mode
-        ConnectToServer(_serverIp, ServerPort);  // Connect the client to the server
+        StartServer();
+        ConnectToServer(localHost, ServerPort);  // Connect the client to the server
     }
 
     private void StartServer()
     {
-        if (Engine.IsEditorHint())
-        {
-            string[] args = new string[] { "--headless", "server.tscn" };
-            var exec = OS.Execute("godot", args, null, true);
-            GD.Print("Started the server in headless mode.");
+        if (OS.HasFeature("editor")) // different execution chains for when it is packaged and when it is being tested in editor
+        { 
+            string[] args = new string[] {  "Scenes/server.tscn" };//{ "--headless", "Scenes/server.tscn" };
+            ServerPid = OS.CreateInstance(args);
+            if(ServerPid != -1) 
+            {
+                GD.Print("Started the server in headless mode.");
+            }
+            else {
+                GD.Print("Failed to start server instance.");
+            }
         }
         else
         {
@@ -34,17 +63,24 @@ public partial class Client : Node
         // Set up the client network connection to the server
         _client = new ENetMultiplayerPeer();
         Error err = _client.CreateClient(ip, port);
-
-        if (err == Error.Ok)
-        {
-            GD.Print("Connected to the server.");
-            Multiplayer.MultiplayerPeer = _client;
-        }
-        else
-        {
-            GD.PrintErr("Failed to connect: " + err);
-        }
+    
+        Multiplayer.MultiplayerPeer = _client;
     }
+
+    // called only on clients
+    private void ConnectedToServer()
+    {
+        GD.Print("Connected to server");
+        //main.connection_succeeded()
+        //send_player_info.rpc_id(1, peer_name, peer_color, multiplayer.get_unique_id()
+    }
+
+    // called only on clients
+    private void ConnectionFailed()
+    {
+        GD.Print("Failed Connection");
+    }
+
 
     /*
 	send_player_info(player_name, player_color, multiplayer.get_unique_id())

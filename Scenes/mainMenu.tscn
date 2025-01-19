@@ -1,5 +1,83 @@
-[gd_scene format=3 uid="uid://emhg32smyqx0"]
+[gd_scene load_steps=4 format=3 uid="uid://emhg32smyqx0"]
+
+[ext_resource type="Theme" uid="uid://y8ujbi36xquh" path="res://Assets/Themes/MainMenu.tres" id="1_c0h8v"]
+[ext_resource type="Script" path="res://Scripts/Main Menu/MainMenuButtons.cs" id="2_vxqo8"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_efk2d"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="."]
+material = SubResource("CanvasItemMaterial_efk2d")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.706
+anchor_bottom = 0.211
+offset_left = 69.0
+offset_top = 54.0
+offset_right = 68.688
+offset_bottom = 54.272
+theme = ExtResource("1_c0h8v")
+theme_override_font_sizes/font_size = 100
+text = "Multiplayer Stew"
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.84
+anchor_right = 0.201
+anchor_bottom = 1.0
+offset_left = 74.0
+offset_top = -92.32
+offset_right = 73.448
+offset_bottom = -92.0
+grow_vertical = 0
+script = ExtResource("2_vxqo8")
+
+[node name="Host" type="Button" parent="Buttons"]
+layout_mode = 2
+theme = ExtResource("1_c0h8v")
+theme_override_font_sizes/font_size = 36
+text = "Host game"
+alignment = 0
+
+[node name="Join" type="Button" parent="Buttons"]
+layout_mode = 2
+theme = ExtResource("1_c0h8v")
+theme_override_font_sizes/font_size = 36
+text = "Join game
+"
+alignment = 0
+
+[node name="Settings" type="Button" parent="Buttons"]
+layout_mode = 2
+theme = ExtResource("1_c0h8v")
+theme_override_font_sizes/font_size = 36
+text = "Settings"
+alignment = 0
+
+[node name="Quit" type="Button" parent="Buttons"]
+layout_mode = 2
+theme = ExtResource("1_c0h8v")
+theme_override_font_sizes/font_size = 36
+text = "Exit game"
+alignment = 0
+
+[connection signal="pressed" from="Buttons/Host" to="Buttons" method="OnHostPressed"]
+[connection signal="pressed" from="Buttons/Join" to="Buttons" method="OnJoinPressed"]
+[connection signal="pressed" from="Buttons/Settings" to="Buttons" method="OnSettingsPressed"]
+[connection signal="pressed" from="Buttons/Quit" to="Buttons" method="OnQuitPressed"]
