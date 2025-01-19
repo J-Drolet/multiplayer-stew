@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://eoi8ks6agami"]
+
+[ext_resource type="Script" path="res://Scripts/Networking/Client.cs" id="1_i1rml"]
+
+[node name="Root" type="Node"]
+script = ExtResource("1_i1rml")
