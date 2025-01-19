@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8hpvrno7saob"]
+
+[ext_resource type="Script" path="res://Scripts/Weapons/Pistol.cs" id="1_7881s"]
+[ext_resource type="PackedScene" uid="uid://g1mopusla6rw" path="res://Scenes/Projectiles/SimpleBullet.tscn" id="2_6tjck"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_l5pk5"]
+size = Vector3(1, 2.695, 1)
+
+[node name="Pistol" type="Node3D" node_paths=PackedStringArray("ProjectileOrigin")]
+script = ExtResource("1_7881s")
+MaxAmmo = 8
+FireRate = 1.0
+ProjectilePerShot = 1
+ProjectileOrigin = NodePath("Barrel")
+Projectile = ExtResource("2_6tjck")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.141696, 0, 0, 0, 0.215589, 0, 0, 0, 0.141696, 0, 0, 0)
+mesh = SubResource("BoxMesh_l5pk5")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.141696, 0, 0, 0, -9.4237e-09, 0.141696, 0, -0.215589, -6.19371e-09, 0, 0.235212, -0.15058)
+mesh = SubResource("BoxMesh_l5pk5")
+
+[node name="Barrel" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.255082, -0.433387)

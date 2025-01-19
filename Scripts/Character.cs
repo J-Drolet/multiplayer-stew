@@ -1,4 +1,5 @@
 using Godot;
+using multiplayerstew.Scripts.Base;
 using System;
 
 public partial class Character : CharacterBody3D
@@ -7,14 +8,14 @@ public partial class Character : CharacterBody3D
 	public Camera3D Camera;
 	[Export]
 	public Node3D Head;
+	[Export]
+	public UpgradableWeapon EquippedWeapon;
 
 	[Export]
 	public int MouseSensitivity = 50;
 
 	public const float Speed = 5.0f;
 	public const float JumpVelocity = 4.5f;
-
-
 
     public override void _Ready()
     {
@@ -25,6 +26,10 @@ public partial class Character : CharacterBody3D
     {
 		if(Input.MouseMode == Input.MouseModeEnum.Captured)
 		{
+			if (@event.IsActionPressed("Fire"))
+			{
+				EquippedWeapon.Fire();
+			}
 			if (@event.IsActionPressed("ui_cancel"))
 			{
                 Input.MouseMode = Input.MouseModeEnum.Visible;

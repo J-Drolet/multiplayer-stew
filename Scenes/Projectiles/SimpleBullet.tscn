@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://g1mopusla6rw"]
+
+[ext_resource type="Script" path="res://Scripts/Projectiles/SimpleBullet.cs" id="1_iga3j"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_2wu11"]
+
+[node name="SimpleBullet" type="Node3D"]
+script = ExtResource("1_iga3j")
+InitialVelocity = 20.0
+Damage = 1.0
+VitalMultiplier = 1.0
+Lifespan = 1.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.267544, 0, 0, 0, 0.267544, 0, 0, 0, 0.267544, 0, 0, 0)
+mesh = SubResource("SphereMesh_2wu11")

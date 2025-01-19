@@ -1,16 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://lcx7afjcynql"]
+[gd_scene load_steps=7 format=3 uid="uid://lcx7afjcynql"]
 
 [ext_resource type="Script" path="res://Scripts/Character.cs" id="1_n6eoi"]
+[ext_resource type="PackedScene" uid="uid://b8hpvrno7saob" path="res://Scenes/Weapons/pistol.tscn" id="2_dpln1"]
 [ext_resource type="Texture2D" uid="uid://bp1y6idrr3kgr" path="res://Assets/Crosshair.png" id="2_oey5o"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_wgmvx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dlrkp"]
 
-[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "Head")]
+[sub_resource type="SphereMesh" id="SphereMesh_pva0j"]
+
+[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "Head", "EquippedWeapon")]
 script = ExtResource("1_n6eoi")
 Camera = NodePath("Head/Camera3D")
 Head = NodePath("Head")
+EquippedWeapon = NodePath("Head/Camera3D/Hand/Pistol")
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -24,6 +28,15 @@ shape = SubResource("CapsuleShape3D_dlrkp")
 [node name="Camera3D" type="Camera3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.577425, -0.203255)
 current = true
+
+[node name="Hand" type="Node3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.465, -0.486425, -0.679745)
+
+[node name="HandMesh" type="MeshInstance3D" parent="Head/Camera3D/Hand"]
+transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, 0, 0)
+mesh = SubResource("SphereMesh_pva0j")
+
+[node name="Pistol" parent="Head/Camera3D/Hand" instance=ExtResource("2_dpln1")]
 
 [node name="UI" type="Control" parent="."]
 process_mode = 4
