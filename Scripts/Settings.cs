@@ -9,8 +9,8 @@ public partial class Settings : Node
     private static Dictionary<string, string> DefaultSettings = new Dictionary<string, string>();
 
     // File paths for settings
-    private static string filepath = "res://Config/settings.cfg";
-    private static string defaultsFilepath = "res://Config/defaults.cfg";
+    private static readonly string Filepath = "res://Config/settings.cfg";
+    private static readonly string DefaultsFilepath = "res://Config/defaults.cfg";
 
     // We use an instance purely so we can emit events
     private static Settings Instance;
@@ -29,7 +29,7 @@ public partial class Settings : Node
     {
         if (ActiveSettings.Count == 0)
         {
-            ReadSettings(filepath, ActiveSettings);
+            ReadSettings(Filepath, ActiveSettings);
         }
 
         if (ActiveSettings.ContainsKey(propertyKey)) // settings.cfg has the value for the property
@@ -40,7 +40,7 @@ public partial class Settings : Node
         {
             if (DefaultSettings.Count == 0)
             {
-                ReadSettings(defaultsFilepath, DefaultSettings);
+                ReadSettings(DefaultsFilepath, DefaultSettings);
             }
 
             if (DefaultSettings.ContainsKey(propertyKey))
@@ -60,7 +60,7 @@ public partial class Settings : Node
     {
         if (ActiveSettings.Count == 0)
         {
-            ReadSettings(filepath, ActiveSettings);
+            ReadSettings(Filepath, ActiveSettings);
         }
 
         ActiveSettings[propertyKey] = propertyValue;
@@ -72,7 +72,7 @@ public partial class Settings : Node
     {
         if (!FileAccess.FileExists(settingsFilepath))
         {
-            System.IO.File.Create(settingsFilepath);
+            return;
         }
 
         // Check if we have already attempted reading
@@ -106,7 +106,7 @@ public partial class Settings : Node
             return;
         }
 
-        FileAccess fileAccess = FileAccess.Open(filepath, FileAccess.ModeFlags.Write);
+        FileAccess fileAccess = FileAccess.Open(Filepath, FileAccess.ModeFlags.Write);
 
         foreach (var key in ActiveSettings.Keys)
         {
