@@ -5,14 +5,14 @@ using System;
 public partial class Character : CharacterBody3D
 {
 	[Export]
-	public Camera3D Camera;
+	public Camera3D Camera { get; set; }
 	[Export]
-	public Node3D Head;
-	[Export]
-	public UpgradableWeapon EquippedWeapon;
+	public Node3D Head { get; set; }
+    [Export]
+	public UpgradableWeapon EquippedWeapon { get; set; }
 
-	[Export]
-	public int MouseSensitivity = 50;
+    [Export]
+	public int MouseSensitivity { get; set; } = 50;
 
 	public const float Speed = 5.0f;
 	public const float JumpVelocity = 4.5f;
@@ -26,10 +26,7 @@ public partial class Character : CharacterBody3D
     {
 		if(Input.MouseMode == Input.MouseModeEnum.Captured)
 		{
-			if (@event.IsActionPressed("Fire"))
-			{
-				EquippedWeapon.Fire();
-			}
+			
 			if (@event.IsActionPressed("ui_cancel"))
 			{
                 Input.MouseMode = Input.MouseModeEnum.Visible;
@@ -44,6 +41,14 @@ public partial class Character : CharacterBody3D
             }
 		}
 			
+    }
+
+    public override void _Process(double delta)
+    {
+        if (Input.IsActionPressed("Fire"))
+        {
+            EquippedWeapon.Fire();
+        }
     }
 
     public override void _PhysicsProcess(double delta)

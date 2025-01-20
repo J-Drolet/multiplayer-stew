@@ -6,8 +6,6 @@
 
 [node name="SimpleBullet" type="Node3D"]
 script = ExtResource("1_iga3j")
-InitialVelocity = 20.0
-Damage = 1.0
 VitalMultiplier = 1.0
 Lifespan = 1.0
 

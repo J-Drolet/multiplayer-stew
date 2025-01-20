@@ -8,17 +8,17 @@ namespace multiplayerstew.Scripts.Base
     {
         
         [Export]
-        public float InitialVelocity;
+        public float InitialVelocity { get; set; } = 20.0f;
         [Export]
-        public float Damage;
+        public float Damage { get; set; } = 1.0f;
         [Export]
-        public float VitalMultiplier;
+        public float VitalMultiplier { get; set; } = 2.0f;
         [Export]
-        public int MaxHits = 1;
+        public int MaxHits { get; set; } = 1;
         [Export]
-        public float Lifespan;
+        public float Lifespan { get; set; } = 3.0f;
         [Export]
-        public float ShotSpread;
+        public float ShotSpread { get; set; } = 0.0f;
 
         private Vector3 Velocity = Vector3.Zero;
         private Vector3 ProjectileGravity = Vector3.Down * 5;

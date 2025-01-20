@@ -38,6 +38,9 @@ mesh = SubResource("SphereMesh_pva0j")
 
 [node name="Pistol" parent="Head/Camera3D/Hand" instance=ExtResource("2_dpln1")]
 
+[node name="ProjectileOrigin" type="Node3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.75163)
+
 [node name="UI" type="Control" parent="."]
 process_mode = 4
 layout_mode = 3
