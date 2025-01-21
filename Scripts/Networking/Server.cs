@@ -6,11 +6,13 @@ public partial class Server : Node
     // Define the maximum number of clients allowed
     private const int MaxClients = 10;
     private ENetMultiplayerPeer _server;
-
-    private bool AcceptingConnections = true; // whether or not the server is accepting connections or not
+    private bool AcceptingConnections { get; set; } = true; // whether or not the server is accepting connections or not
 
     public override void _Ready()
-    {
+    {   
+        Multiplayer.PeerConnected += PeerConnected;
+        Multiplayer.PeerDisconnected += PeerDisconnected;
+
         _server = new ENetMultiplayerPeer();
         Error err = _server.CreateServer(3333, MaxClients);
 
@@ -22,6 +24,26 @@ public partial class Server : Node
         {
             GD.Print("Server started successfully.");
             Multiplayer.MultiplayerPeer = _server;
+        }
+    }
+
+    private void PeerDisconnected(long id)
+    {
+        GD.Print("Server received message: Player connected: " + id);
+        
+        GameManager.RemovePlayer(id);
+    }
+
+    // this gets called on the server and client when someone connects
+
+    private void PeerConnected(long id) {
+        GD.Print("Server received message: Player connected: " + id);
+        
+        if (!AcceptingConnections == false)
+        {
+            // tell peer that the server is refusing the connection
+            // @TODO 
+            //rpc_id(id, "connection_refused")
         }
     }
 

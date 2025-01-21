@@ -6,13 +6,13 @@ public static class GameManager
 {   
     public struct PlayerInfo {
         public string name;
-        public int id;
+        public long id;
         public Node3D characterNode;
     }
 
-    public static Dictionary<int, PlayerInfo> Players = new Dictionary<int, PlayerInfo>();
+    public static Dictionary<long, PlayerInfo> Players = new Dictionary<long, PlayerInfo>();
 
-    public static void RemovePlayer(int id)
+    public static void RemovePlayer(long id)
     {
         if(Players.ContainsKey(id) && Players[id].characterNode != null)
         {
