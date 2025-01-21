@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://lcx7afjcynql"]
+[gd_scene load_steps=6 format=3 uid="uid://lcx7afjcynql"]
 
 [ext_resource type="Script" path="res://Scripts/Character.cs" id="1_n6eoi"]
 [ext_resource type="PackedScene" uid="uid://b8hpvrno7saob" path="res://Scenes/Weapons/pistol.tscn" id="2_dpln1"]
@@ -7,8 +7,6 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_wgmvx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dlrkp"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_pva0j"]
 
 [node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "Head", "EquippedWeapon")]
 script = ExtResource("1_n6eoi")
@@ -32,11 +30,8 @@ current = true
 [node name="Hand" type="Node3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.465, -0.486425, -0.679745)
 
-[node name="HandMesh" type="MeshInstance3D" parent="Head/Camera3D/Hand"]
-transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, 0, 0)
-mesh = SubResource("SphereMesh_pva0j")
-
-[node name="Pistol" parent="Head/Camera3D/Hand" instance=ExtResource("2_dpln1")]
+[node name="Pistol" parent="Head/Camera3D/Hand" node_paths=PackedStringArray("ProjectileOrigin") instance=ExtResource("2_dpln1")]
+ProjectileOrigin = NodePath("../../ProjectileOrigin")
 
 [node name="ProjectileOrigin" type="Node3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.75163)

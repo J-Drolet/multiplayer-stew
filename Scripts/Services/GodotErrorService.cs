@@ -33,7 +33,7 @@ namespace multiplayerstew.Scripts.Services
                     foreach (string name in animationNames)
                     {
                         if(!APlayer.HasAnimation(name))
-                            GD.PushError($"{prop.Name} is missing a 'Fire' animation");
+                            GD.PushError($"{prop.Name} is missing a '{name}' animation");
                     }
                 }
 

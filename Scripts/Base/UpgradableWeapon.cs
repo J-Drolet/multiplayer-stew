@@ -31,7 +31,7 @@ namespace multiplayerstew.Scripts.Base
         public PackedScene Projectile { get; set; }
         [Export]
         public bool CanFire = true; // Trigger this in the Animation to set the rate of fire
-        [Export, ExportRequired, AnimationsRequired(new string[] { "Fire" })]
+        [Export, ExportRequired, AnimationsRequired(new string[] { "Fire" })] 
         public AnimationPlayer APlayer { get; set; }
 
         public int CurrentAmmo { get; set; }

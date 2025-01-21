@@ -1,12 +1,13 @@
 using Godot;
+using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Base;
 using System;
 
 public partial class Character : CharacterBody3D
 {
-	[Export]
+	[Export, ExportRequired]
 	public Camera3D Camera { get; set; }
-	[Export]
+	[Export, ExportRequired]
 	public Node3D Head { get; set; }
     [Export]
 	public UpgradableWeapon EquippedWeapon { get; set; }
@@ -26,6 +27,10 @@ public partial class Character : CharacterBody3D
     {
 		if(Input.MouseMode == Input.MouseModeEnum.Captured)
 		{
+			if(EquippedWeapon?.FireMode == FireModes.Single && @event.IsActionPressed("Fire"))
+			{
+				EquippedWeapon.Fire();
+			}
 			
 			if (@event.IsActionPressed("ui_cancel"))
 			{
@@ -45,7 +50,7 @@ public partial class Character : CharacterBody3D
 
     public override void _Process(double delta)
     {
-        if (Input.IsActionPressed("Fire"))
+        if (EquippedWeapon?.FireMode == FireModes.Automatic && Input.IsActionPressed("Fire"))
         {
             EquippedWeapon.Fire();
         }
