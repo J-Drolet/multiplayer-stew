@@ -35,7 +35,7 @@ theme = ExtResource("1_c0h8v")
 theme_override_font_sizes/font_size = 100
 text = "Multiplayer Stew"
 
-[node name="Buttons" type="VBoxContainer" parent="."]
+[node name="Buttons" type="VBoxContainer" parent="." node_paths=PackedStringArray("JoinInformation")]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.84
@@ -47,6 +47,7 @@ offset_right = 73.448
 offset_bottom = -92.0
 grow_vertical = 0
 script = ExtResource("2_vxqo8")
+JoinInformation = NodePath("../JoinInformation")
 
 [node name="Host" type="Button" parent="Buttons"]
 layout_mode = 2
@@ -78,6 +79,7 @@ text = "Exit game"
 alignment = 0
 
 [node name="JoinInformation" parent="." instance=ExtResource("3_svqof")]
+visible = false
 custom_minimum_size = Vector2(700, 300)
 layout_mode = 1
 anchors_preset = 8

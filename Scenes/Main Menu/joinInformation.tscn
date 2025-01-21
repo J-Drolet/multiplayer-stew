@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://ck74o0nreiu38"]
+[gd_scene load_steps=3 format=3 uid="uid://ck74o0nreiu38"]
+
+[ext_resource type="Script" path="res://Scripts/Main Menu/JoinInformation.cs" id="1_jmgh3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ckfve"]
 bg_color = Color(0.666667, 0.72549, 0.603922, 1)
@@ -14,6 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_jmgh3")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -81,3 +84,5 @@ text = "Cancel
 [node name="Connect" type="Button" parent="Panel/VBoxContainer/Buttons"]
 layout_mode = 2
 text = "Connect"
+
+[connection signal="pressed" from="Panel/VBoxContainer/Buttons/Cancel" to="." method="OnCancelPressed"]
