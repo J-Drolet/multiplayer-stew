@@ -5,12 +5,17 @@ using System;
 
 namespace multiplayerstew.Scripts.Base
 {
-    public partial class Pickup: Node3D
+    public abstract partial class Pickup: Node3D
     {
         [Export, ExportRequired]
         public Area3D PickupArea { get; set; }
-        [Export, ExportRequired]
-        public Mesh PickupMesh { get; set; }
+
+        public override void _Ready()
+        {
+            PickupArea.BodyEntered += ActivatePickup;
+        }
+
+        protected abstract void ActivatePickup(Node3D body);
 
     }
 }

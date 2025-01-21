@@ -10,7 +10,11 @@ public partial class Character : CharacterBody3D
 	[Export, ExportRequired]
 	public Node3D Head { get; set; }
     [Export]
-	public UpgradableWeapon EquippedWeapon { get; set; }
+    public UpgradableWeapon EquippedWeapon
+	{
+		get => EquippedWeapon;
+		set => EquipWeapon(value);	
+	}
 
     [Export]
 	public int MouseSensitivity { get; set; } = 50;
@@ -89,5 +93,10 @@ public partial class Character : CharacterBody3D
 
 		Velocity = velocity;
 		MoveAndSlide();
+	}
+
+	public void EquipWeapon(UpgradableWeapon weapon)
+	{
+
 	}
 }
