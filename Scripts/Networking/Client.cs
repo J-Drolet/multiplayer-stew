@@ -1,11 +1,13 @@
 using Godot;
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading;
 
 public partial class Client : Node
 {
    
-    private readonly string localHost = "127.0.0.1";
+    private readonly string LocalHost = "127.0.0.1";
     private const int ServerPort = 3333;
     private ENetMultiplayerPeer _client;
     private int ServerPid;
@@ -19,14 +21,10 @@ public partial class Client : Node
 
     public override void _Ready()
     {
-        /*Multiplayer.PeerConnected.connect(player_connected);
-        Multiplayer.PeerDisconnected.connect(player_disconnected);
-        Multiplayer.ConnectedToServer.connect(connected_to_server);
-        Multiplayer.ConnectionFailed.connect(connection_failed);
-        */
-
-        Multiplayer.Connect("ConnectedToServer", new Callable(this, "ConnectedToServer"));
-        Multiplayer.Connect("ConnectionFailed", new Callable(this, "ConnectionFailed"));
+        Multiplayer.ConnectedToServer += ConnectedToServer;
+        Multiplayer.ConnectionFailed += ConnectionFailed;
+        Multiplayer.PeerConnected += PeerConnected;
+        Multiplayer.PeerDisconnected += PeerDisconnected;
 
         CreateLobbyAndConnect();
     }
@@ -35,15 +33,16 @@ public partial class Client : Node
     public void CreateLobbyAndConnect()
     {
         StartServer();
-        ConnectToServer(localHost, ServerPort);  // Connect the client to the server
+        ConnectToServer(LocalHost, ServerPort);  // Connect the client to the server
     }
 
     private void StartServer()
     {
         if (OS.HasFeature("editor")) // different execution chains for when it is packaged and when it is being tested in editor
         { 
-            string[] args = new string[] {  "Scenes/server.tscn" };//{ "--headless", "Scenes/server.tscn" };
+            string[] args = new string[] { "--server" };//{ "--headless", "Scenes/server.tscn" };
             ServerPid = OS.CreateInstance(args);
+
             if(ServerPid != -1) 
             {
                 GD.Print("Started the server in headless mode.");
@@ -63,6 +62,9 @@ public partial class Client : Node
         // Set up the client network connection to the server
         _client = new ENetMultiplayerPeer();
         Error err = _client.CreateClient(ip, port);
+        if(err != Error.Ok) {
+            GD.Print("Client error: " + err);
+        }
     
         Multiplayer.MultiplayerPeer = _client;
     }
@@ -79,6 +81,25 @@ public partial class Client : Node
     private void ConnectionFailed()
     {
         GD.Print("Failed Connection");
+    }
+
+    // this gets called on the server and client when someone connects
+    private void PeerConnected(long id)
+    {
+        GD.Print($"Peer {Multiplayer.GetUniqueId()} received message: Player connected: {id}");
+    }
+
+    // this gets called on the server and client when someone disconnects
+    private void PeerDisconnected(long id)
+    {
+        GD.Print($"Peer {Multiplayer.GetUniqueId()} received message: Player disconnected: {id}");
+        
+        if (id == 1) // if the server disconnected we get kicked back to main menu
+        {
+            //@TODO 
+            //disconnect_from_server()
+            //main.server_closed()
+        }
     }
 
 

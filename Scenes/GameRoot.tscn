@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://dswcf86dip7va"]
+
+[ext_resource type="Script" path="res://Scripts/Root.cs" id="1_ajeda"]
+[ext_resource type="PackedScene" uid="uid://eoi8ks6agami" path="res://Scenes/client.tscn" id="2_bl443"]
+[ext_resource type="PackedScene" uid="uid://oeuhmhokafto" path="res://Scenes/server.tscn" id="3_s7534"]
+
+[node name="Root" type="Node"]
+script = ExtResource("1_ajeda")
+ClientScene = ExtResource("2_bl443")
+ServerScene = ExtResource("3_s7534")

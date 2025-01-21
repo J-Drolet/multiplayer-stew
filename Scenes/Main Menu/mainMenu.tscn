@@ -2,8 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://y8ujbi36xquh" path="res://Assets/Themes/MainMenu.tres" id="1_c0h8v"]
 [ext_resource type="Script" path="res://Scripts/Main Menu/MainMenuButtons.cs" id="2_vxqo8"]
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_efk2d"]
+[ext_resource type="PackedScene" uid="uid://ck74o0nreiu38" path="res://Scenes/Main Menu/joinInformation.tscn" id="3_svqof"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -13,14 +12,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="Panel" parent="."]
-material = SubResource("CanvasItemMaterial_efk2d")
+[node name="Background" type="ColorRect" parent="."]
+z_index = -10
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.447059, 0.490196, 0.45098, 1)
 
 [node name="Label" type="Label" parent="Background"]
 layout_mode = 1
@@ -76,6 +76,15 @@ theme = ExtResource("1_c0h8v")
 theme_override_font_sizes/font_size = 36
 text = "Exit game"
 alignment = 0
+
+[node name="JoinInformation" parent="." instance=ExtResource("3_svqof")]
+custom_minimum_size = Vector2(700, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 
 [connection signal="pressed" from="Buttons/Host" to="Buttons" method="OnHostPressed"]
 [connection signal="pressed" from="Buttons/Join" to="Buttons" method="OnJoinPressed"]
