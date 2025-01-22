@@ -25,12 +25,12 @@ public partial class Root : Node
 		if(isServer) 
 		{
 			Node networkingScene = ServerScene.Instantiate();
-			this.AddChild(networkingScene);
+			AddChild(networkingScene);
 		}
 		else 
 		{
 			Node networkingScene = ClientScene.Instantiate();
-			this.AddChild(networkingScene);
+			AddChild(networkingScene);
 		}
 	}
 }

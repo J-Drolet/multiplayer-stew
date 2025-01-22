@@ -9,7 +9,7 @@ public partial class MainMenuButtons : Node
     public Control JoinInformation { get; set; }
 
     [Export, ExportRequired]
-    public Control HostInformation { get; set; }
+    public Control LobbyPage { get; set; }
 
     [Export, ExportRequired]
     public Control Settings { get; set; }
@@ -21,14 +21,15 @@ public partial class MainMenuButtons : Node
 
     private void CloseAllWindows() {
         JoinInformation.Hide();
-        //HostInformation.Hide();
+        LobbyPage.Hide();
         //Settings.Hide();
     }
 
     public void OnHostPressed()
     {
         CloseAllWindows();
-        HostInformation.Show();
+        Client.Instance.CreateLobbyAndConnect();
+        LobbyPage.Show();
     }
 
     public void OnJoinPressed()
