@@ -1,0 +1,136 @@
+[gd_scene load_steps=5 format=3 uid="uid://dc0pw0ayb5an4"]
+
+[ext_resource type="Script" path="res://Scripts/Main Menu/Lobby.cs" id="1_eorg6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2vxmi"]
+bg_color = Color(0.666667, 0.72549, 0.603922, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1b0hd"]
+bg_color = Color(0, 0, 0, 0.372549)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_vyxat"]
+color = Color(1, 1, 1, 1)
+grow_begin = -10.0
+grow_end = -10.0
+
+[node name="Lobby" type="Control" node_paths=PackedStringArray("PlayerPrototype")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eorg6")
+PlayerPrototype = NodePath("Panel/Panel/Player List/PlayerPrototype")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2vxmi")
+
+[node name="Lobby Title" type="Label" parent="Panel"]
+layout_mode = 1
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 235.0
+offset_bottom = 126.0
+theme_override_font_sizes/font_size = 70
+text = "Lobby"
+
+[node name="Panel" type="Panel" parent="Panel"]
+custom_minimum_size = Vector2(800, 300)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.153
+anchor_top = 0.269
+anchor_right = 0.847
+anchor_bottom = 0.731
+offset_left = 399.744
+offset_top = 149.688
+offset_right = -399.744
+offset_bottom = -149.688
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1b0hd")
+
+[node name="Player List" type="VBoxContainer" parent="Panel/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerPrototype" type="Control" parent="Panel/Panel/Player List"]
+visible = false
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="Panel/Panel/Player List/PlayerPrototype"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 4.0
+grow_horizontal = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_vyxat")
+
+[node name="Name" type="Label" parent="Panel/Panel/Player List/PlayerPrototype"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = 40.0
+grow_vertical = 2
+text = "Player"
+vertical_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/Panel/Player List/PlayerPrototype"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/separator = SubResource("StyleBoxLine_vyxat")
+
+[node name="Button Container" type="HBoxContainer" parent="Panel"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.37
+anchor_top = 0.86
+anchor_right = 0.63
+anchor_bottom = 0.907
+offset_left = 129.76
+offset_top = 50.72
+offset_right = -129.76
+offset_bottom = 0.263977
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="Leave" type="Button" parent="Panel/Button Container"]
+layout_mode = 2
+text = "Leave Game"
+
+[node name="Start" type="Button" parent="Panel/Button Container"]
+layout_mode = 2
+text = "Start Game"
+
+[connection signal="pressed" from="Panel/Button Container/Leave" to="." method="OnLeavePressed"]
+[connection signal="pressed" from="Panel/Button Container/Start" to="." method="OnStartPressed"]

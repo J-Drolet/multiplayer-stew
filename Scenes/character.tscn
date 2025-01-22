@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Character.cs" id="1_n6eoi"]
 [ext_resource type="PackedScene" uid="uid://b8hpvrno7saob" path="res://Scenes/Weapons/pistol.tscn" id="2_dpln1"]
-[ext_resource type="Texture2D" uid="uid://bp1y6idrr3kgr" path="res://Assets/Crosshair.png" id="2_oey5o"]
+[ext_resource type="Texture2D" uid="uid://bh2w5lp527x68" path="res://Assets/Crosshair.png" id="2_oey5o"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_wgmvx"]
 

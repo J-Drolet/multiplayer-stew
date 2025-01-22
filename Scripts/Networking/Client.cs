@@ -6,7 +6,8 @@ using System.Threading;
 
 public partial class Client : Node
 {
-   
+    public static Client Instance { get; private set; }
+
     private readonly string LocalHost = "127.0.0.1";
     private const int ServerPort = 3333;
     private ENetMultiplayerPeer _client;
@@ -20,13 +21,14 @@ public partial class Client : Node
     }
 
     public override void _Ready()
-    {
+    {   
+        Instance = this;
+
         Multiplayer.ConnectedToServer += ConnectedToServer;
         Multiplayer.ConnectionFailed += ConnectionFailed;
         Multiplayer.PeerConnected += PeerConnected;
         Multiplayer.PeerDisconnected += PeerDisconnected;
 
-        CreateLobbyAndConnect();
     }
 
     // Called when the "Create Lobby" button is pressed
@@ -57,7 +59,27 @@ public partial class Client : Node
         }
     }
 
-    private void ConnectToServer(string ip, int port)
+    private void CloseServer()
+    {
+        OS.Kill(ServerPid);
+    }
+
+    public void Disconnect()
+    {
+        if (GameManager.GameHost == Multiplayer.GetUniqueId())
+        {
+            CloseServer();
+        }
+
+        GameManager.Players.Clear();
+        _client.Close();
+    }
+
+    public void StartGame() {
+        RpcId(1, MethodName.NotifyStartGame);
+    }
+
+    public void ConnectToServer(string ip, int port)
     {
         // Set up the client network connection to the server
         _client = new ENetMultiplayerPeer();
@@ -73,6 +95,7 @@ public partial class Client : Node
     private void ConnectedToServer()
     {
         GD.Print("Connected to server");
+        RpcId(1, MethodName.SendPlayerInfo, Multiplayer.GetUniqueId(), $"Player {Multiplayer.GetUniqueId()}");
         //main.connection_succeeded()
         //send_player_info.rpc_id(1, peer_name, peer_color, multiplayer.get_unique_id()
     }
@@ -93,7 +116,7 @@ public partial class Client : Node
     private void PeerDisconnected(long id)
     {
         GD.Print($"Peer {Multiplayer.GetUniqueId()} received message: Player disconnected: {id}");
-        
+        GameManager.Players.Remove(id);
         if (id == 1) // if the server disconnected we get kicked back to main menu
         {
             //@TODO 
@@ -103,24 +126,29 @@ public partial class Client : Node
     }
 
 
-    /*
-	send_player_info(player_name, player_color, multiplayer.get_unique_id())
-    ## called on join, allows keeping track of connected players
-    @rpc("any_peer", "reliable")
-    [Rpc(
-    func send_player_info(player_name: String, player_color: Color, id: int) -> void:
-        if accepting_connections == false: return # if we aren't accepting connections then we don't add new players
-        
-        if !game_manager.players.has(id):
-            game_manager.players[id] = {
-                "name": player_name,
-                "id": id,
-                "color": player_color
-            }
-        if multiplayer.is_server():
-            for i: int in game_manager.players:
-                rpc("send_player_info", game_manager.players[i].name, game_manager.players[i].color, i)
-        
-        main.update_player_list()
-        */
+    [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+    public void SendPlayerInfo(long id, string name) {}
+
+    [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+    public void NotifyPlayerConnected(long id, string name) {
+        GameManager.Players.Add(id, new GameManager.PlayerInfo{ name = name, id = id });
+    }
+
+    [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+    public void NotifyPlayerDisconnected(long id) {
+        GameManager.Players.Remove(id);
+    }
+
+    [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+    public void NotifyStartGame() 
+    {
+        PackedScene levelPackedScene = (PackedScene)ResourceLoader.Load("res://Scenes/root.tscn");
+        Node level = levelPackedScene.Instantiate();
+        GetTree().Root.AddChild(level);
+    }
+
+    [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+    public void NotifyCurrentHost(long hostId) {
+        GameManager.GameHost = hostId;
+    }
 }

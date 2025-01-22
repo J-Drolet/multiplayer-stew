@@ -5,14 +5,14 @@ using System;
 
 public partial class JoinInformation : Control
 {
-    [Signal]
-    public delegate void ConnectionRequestEventHandler(string ip, int port);
+    [Export, ExportRequired]
+    LineEdit IPInput { get; set; }
 
     [Export, ExportRequired]
-    LineEdit IPInput;
+    LineEdit PortInput { get; set; }
 
     [Export, ExportRequired]
-    LineEdit PortInput;
+    Control LobbyPage { get; set; }
 
    public override void _Ready()
     {
@@ -27,7 +27,8 @@ public partial class JoinInformation : Control
 
     public void OnConnectPressed() 
     {   
-        EmitSignal("ConnectionRequest", IPInput.Text, PortInput.Text);
+        Client.Instance.ConnectToServer(IPInput.Text, int.Parse(PortInput.Text));
         Hide();
+        LobbyPage.Show();
     }
 }

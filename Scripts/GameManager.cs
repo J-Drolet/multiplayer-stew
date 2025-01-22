@@ -10,6 +10,8 @@ public static class GameManager
         public Node3D characterNode;
     }
 
+    public static long GameHost { get; set; } = -1;
+
     public static Dictionary<long, PlayerInfo> Players = new Dictionary<long, PlayerInfo>();
 
     public static void RemovePlayer(long id)

@@ -9,7 +9,7 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 6
 
-[node name="JoinInformation" type="Control"]
+[node name="JoinInformation" type="Control" node_paths=PackedStringArray("IPInput", "PortInput")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,6 +17,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jmgh3")
+IPInput = NodePath("Panel/VBoxContainer/IP/IP Address")
+PortInput = NodePath("Panel/VBoxContainer/Port/Port")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -86,3 +88,4 @@ layout_mode = 2
 text = "Connect"
 
 [connection signal="pressed" from="Panel/VBoxContainer/Buttons/Cancel" to="." method="OnCancelPressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Buttons/Connect" to="." method="OnConnectPressed"]
