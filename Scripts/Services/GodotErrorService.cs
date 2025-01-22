@@ -13,28 +13,33 @@ namespace multiplayerstew.Scripts.Services
     {
         public static void ValidateRequiredData(Object obj)
         {
-            Type type = obj.GetType();
-            IEnumerable<PropertyInfo> properties = type.GetProperties();
-            // In the passed type, get all custom attributes and see if our custom attributes are found
-            foreach (PropertyInfo prop in properties)
+            // Only run in editor. No need to run possibly expensive code outside of editor
+            if (OS.HasFeature("editor"))
             {
-                // ExportRequiredAttribute
-                if (Attribute.GetCustomAttributes(prop).Where(a => a is ExportRequiredAttribute).Any())
+                Type type = obj.GetType();
+                IEnumerable<PropertyInfo> properties = type.GetProperties();
+                // In the passed type, get all custom attributes and see if our custom attributes are found
+                foreach (PropertyInfo prop in properties)
                 {
-                    if(prop.GetValue(obj) == null)
-                        GD.PushError($"Export {prop.Name} is not assigned in {type.Name}");
-                }
-
-                // AnimationsRequiredAttribute
-                string[] animationNames = (Attribute.GetCustomAttributes(prop).Where(a => a is AnimationsRequiredAttribute)?.FirstOrDefault() as AnimationsRequiredAttribute)?.AnimationNames ?? Array.Empty<string>();
-                if (animationNames.Any())
-                {
-                    AnimationPlayer APlayer = prop.GetValue(obj) as AnimationPlayer;
-                    foreach (string name in animationNames)
+                    // ExportRequiredAttribute
+                    if (Attribute.GetCustomAttributes(prop).Where(a => a is ExportRequiredAttribute).Any())
                     {
-                        if(!APlayer.HasAnimation(name))
-                            GD.PushError($"{prop.Name} is missing a '{name}' animation");
+                        if (prop.GetValue(obj) == null)
+                            GD.PushError($"Export {prop.Name} is not assigned in {type.Name}");
                     }
+
+                    // AnimationsRequiredAttribute
+                    string[] animationNames = (Attribute.GetCustomAttributes(prop).Where(a => a is AnimationsRequiredAttribute)?.FirstOrDefault() as AnimationsRequiredAttribute)?.AnimationNames ?? Array.Empty<string>();
+                    if (animationNames.Any())
+                    {
+                        AnimationPlayer APlayer = prop.GetValue(obj) as AnimationPlayer;
+                        foreach (string name in animationNames)
+                        {
+                            if (!APlayer.HasAnimation(name))
+                                GD.PushError($"{prop.Name} is missing a '{name}' animation");
+                        }
+                    }
+
                 }
 
             }

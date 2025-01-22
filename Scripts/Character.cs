@@ -1,6 +1,7 @@
 using Godot;
 using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Base;
+using multiplayerstew.Scripts.Services;
 using System;
 
 public partial class Character : CharacterBody3D
@@ -8,12 +9,17 @@ public partial class Character : CharacterBody3D
 	[Export, ExportRequired]
 	public Camera3D Camera { get; set; }
 	[Export, ExportRequired]
+	public Node3D ProjectileOrigin { get; set; }
+	[Export, ExportRequired]
 	public Node3D Head { get; set; }
-    [Export]
+	[Export, ExportRequired]
+	public Node3D Hand { get; set; }
+	[Export]
+	private UpgradableWeapon equippedWeapon;
     public UpgradableWeapon EquippedWeapon
 	{
-		get => EquippedWeapon;
-		set => EquipWeapon(value);	
+		get { return equippedWeapon; }
+		set { EquipWeapon(value); }	
 	}
 
     [Export]
@@ -24,6 +30,7 @@ public partial class Character : CharacterBody3D
 
     public override void _Ready()
     {
+		GodotErrorService.ValidateRequiredData(this);
 		Input.MouseMode = Input.MouseModeEnum.Captured;
     }
 
@@ -31,9 +38,12 @@ public partial class Character : CharacterBody3D
     {
 		if(Input.MouseMode == Input.MouseModeEnum.Captured)
 		{
-			if(EquippedWeapon?.FireMode == FireModes.Single && @event.IsActionPressed("Fire"))
+			if (EquippedWeapon != null)
 			{
-				EquippedWeapon.Fire();
+				if ((EquippedWeapon?.FireMode == FireModes.Single) && @event.IsActionPressed("Fire"))
+				{
+					EquippedWeapon.Fire();
+				}
 			}
 			
 			if (@event.IsActionPressed("ui_cancel"))
@@ -54,10 +64,13 @@ public partial class Character : CharacterBody3D
 
     public override void _Process(double delta)
     {
-        if (EquippedWeapon?.FireMode == FireModes.Automatic && Input.IsActionPressed("Fire"))
-        {
-            EquippedWeapon.Fire();
-        }
+		if (EquippedWeapon != null)
+		{
+			if (EquippedWeapon?.FireMode == FireModes.Automatic && Input.IsActionPressed("Fire"))
+			{
+				EquippedWeapon.Fire();
+			}
+		}
     }
 
     public override void _PhysicsProcess(double delta)
@@ -97,6 +110,12 @@ public partial class Character : CharacterBody3D
 
 	public void EquipWeapon(UpgradableWeapon weapon)
 	{
-
-	}
+		if (EquippedWeapon != null)
+		{
+			EquippedWeapon.QueueFree();
+		}
+		equippedWeapon = weapon;
+        EquippedWeapon.ProjectileOrigin = ProjectileOrigin; 
+        Hand.AddChild(EquippedWeapon);
+    }
 }

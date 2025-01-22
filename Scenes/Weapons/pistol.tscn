@@ -46,7 +46,7 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_c27f4"]
-resource_name = "Fire2"
+resource_name = "Fire"
 length = 0.2
 step = 0.005
 tracks/0/type = "value"
@@ -88,17 +88,16 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qq742"]
 _data = {
-"Fire2": SubResource("Animation_c27f4"),
+"Fire": SubResource("Animation_c27f4"),
 "RESET": SubResource("Animation_i6i74")
 }
 
 [sub_resource type="SphereMesh" id="SphereMesh_sshab"]
 
-[node name="Pistol" type="Node3D" node_paths=PackedStringArray("ProjectileOrigin", "APlayer")]
+[node name="Pistol" type="Node3D" node_paths=PackedStringArray("APlayer")]
 script = ExtResource("1_7881s")
 WeaponName = "Godot Pistol"
 MaxAmmo = 8
-ProjectileOrigin = NodePath("")
 Projectile = ExtResource("2_6tjck")
 APlayer = NodePath("AnimationPlayer")
 

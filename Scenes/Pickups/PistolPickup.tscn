@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://x7a1ptqtwtmp"]
+
+[ext_resource type="Script" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_8dmwd"]
+[ext_resource type="PackedScene" uid="uid://b8hpvrno7saob" path="res://Scenes/Weapons/pistol.tscn" id="2_d8t66"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vmxku"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fl822"]
+size = Vector3(1, 2.695, 1)
+
+[sub_resource type="Animation" id="Animation_wds57"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pistol:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fdsld"]
+resource_name = "PickupIdle"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pistol:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_57bpt"]
+_data = {
+"PickupIdle": SubResource("Animation_fdsld"),
+"RESET": SubResource("Animation_wds57")
+}
+
+[node name="PistolPickup" type="Node3D" node_paths=PackedStringArray("PickupArea", "APlayer")]
+script = ExtResource("1_8dmwd")
+Weapon = ExtResource("2_d8t66")
+PickupArea = NodePath("Area3D")
+APlayer = NodePath("AnimationPlayer")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_vmxku")
+
+[node name="Pistol" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pistol"]
+transform = Transform3D(0.141696, 0, 0, 0, 0.215589, 0, 0, 0, 0.141696, 0, 0, 0)
+mesh = SubResource("BoxMesh_fl822")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Pistol"]
+transform = Transform3D(0.141696, 0, 0, 0, -9.4237e-09, 0.141696, 0, -0.215589, -6.19371e-09, 0, 0.235212, -0.15058)
+mesh = SubResource("BoxMesh_fl822")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_57bpt")
+}

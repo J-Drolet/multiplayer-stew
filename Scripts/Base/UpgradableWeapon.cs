@@ -25,7 +25,7 @@ namespace multiplayerstew.Scripts.Base
         public FireModes FireMode { get; set; } = FireModes.Single;
         [Export]
         public int ProjectilePerShot { get; set; } = 1;
-        [Export, ExportRequired]
+        [Export]
         public Node3D ProjectileOrigin { get; set; }
         [Export, ExportRequired]
         public PackedScene Projectile { get; set; }
