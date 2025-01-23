@@ -1,0 +1,94 @@
+[gd_scene load_steps=11 format=3 uid="uid://b0ywmvox13rx1"]
+
+[ext_resource type="Script" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_rhqx7"]
+[ext_resource type="PackedScene" uid="uid://cohf65bso617l" path="res://Scenes/Weapons/Shotgun.tscn" id="2_0afdq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vmxku"]
+size = Vector3(2, 1, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xt4jc"]
+albedo_color = Color(0.354206, 0.181351, 0.0854171, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ibl0g"]
+material = SubResource("StandardMaterial3D_xt4jc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bfpr3"]
+albedo_color = Color(0.28485, 0.28485, 0.28485, 1)
+metallic = 0.54
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_keuxc"]
+material = SubResource("StandardMaterial3D_bfpr3")
+radial_steps = 24
+
+[sub_resource type="Animation" id="Animation_fdsld"]
+resource_name = "PickupIdle"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Shotgun:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wds57"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Shotgun:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_57bpt"]
+_data = {
+"PickupIdle": SubResource("Animation_fdsld"),
+"RESET": SubResource("Animation_wds57")
+}
+
+[node name="ShotgunPickup" type="Node3D" node_paths=PackedStringArray("PickupArea", "APlayer")]
+script = ExtResource("1_rhqx7")
+Weapon = ExtResource("2_0afdq")
+PickupArea = NodePath("Area3D")
+APlayer = NodePath("AnimationPlayer")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_vmxku")
+
+[node name="Shotgun" type="Node3D" parent="."]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Shotgun"]
+transform = Transform3D(0.341897, 0, 0, 0, 0.283293, 0.0404738, 0, -0.0653669, 0.175409, -0.000422478, 0.137658, 0.0824666)
+mesh = SubResource("BoxMesh_ibl0g")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Shotgun"]
+transform = Transform3D(0.345923, 0, 0, 0, 0.10751, 0.106542, 0, -0.764489, 0.014983, 0, -0.00884821, 0.438468)
+mesh = SubResource("BoxMesh_ibl0g")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Shotgun"]
+transform = Transform3D(0.269549, 0, 0, 0, -8.17605e-08, 0.122926, 0, -1.87046, -5.37327e-09, -0.0715945, 0.266807, -0.761792)
+mesh = SubResource("TubeTrailMesh_keuxc")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Shotgun"]
+transform = Transform3D(0.269549, 0, 0, 0, -8.17605e-08, 0.122926, 0, -1.87046, -5.37327e-09, 0.0623711, 0.266807, -0.761792)
+mesh = SubResource("TubeTrailMesh_keuxc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_57bpt")
+}

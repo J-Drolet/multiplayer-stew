@@ -1,16 +1,18 @@
 [gd_scene load_steps=5 format=3 uid="uid://lcx7afjcynql"]
 
 [ext_resource type="Script" path="res://Scripts/Character.cs" id="1_n6eoi"]
-[ext_resource type="Texture2D" uid="uid://bh2w5lp527x68" path="res://Assets/Crosshair.png" id="2_oey5o"]
+[ext_resource type="Texture2D" uid="uid://bp1y6idrr3kgr" path="res://Assets/Crosshair.png" id="2_oey5o"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_wgmvx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dlrkp"]
 
-[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "Head")]
+[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "ProjectileOrigin", "Head", "Hand")]
 script = ExtResource("1_n6eoi")
 Camera = NodePath("Head/Camera3D")
+ProjectileOrigin = NodePath("Head/Camera3D/ProjectileOrigin")
 Head = NodePath("Head")
+Hand = NodePath("Head/Camera3D/Hand")
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

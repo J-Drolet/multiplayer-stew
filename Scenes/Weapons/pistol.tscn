@@ -1,9 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://b8hpvrno7saob"]
+[gd_scene load_steps=10 format=3 uid="uid://b8hpvrno7saob"]
 
 [ext_resource type="Script" path="res://Scripts/Weapons/Pistol.cs" id="1_7881s"]
 [ext_resource type="PackedScene" uid="uid://g1mopusla6rw" path="res://Scenes/Projectiles/SimpleBullet.tscn" id="2_6tjck"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ajf1t"]
+albedo_color = Color(0.314316, 0.314316, 0.314316, 1)
+metallic = 0.3
+
 [sub_resource type="BoxMesh" id="BoxMesh_l5pk5"]
+material = SubResource("StandardMaterial3D_ajf1t")
 size = Vector3(1, 2.695, 1)
 
 [sub_resource type="Animation" id="Animation_c27f4"]
@@ -92,7 +97,11 @@ _data = {
 "RESET": SubResource("Animation_i6i74")
 }
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mrl0e"]
+albedo_color = Color(0.907052, 0.693446, 0.497686, 1)
+
 [sub_resource type="SphereMesh" id="SphereMesh_sshab"]
+material = SubResource("StandardMaterial3D_mrl0e")
 
 [node name="Pistol" type="Node3D" node_paths=PackedStringArray("APlayer")]
 script = ExtResource("1_7881s")

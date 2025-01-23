@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://chv0b14sstem5"]
+
+[ext_resource type="Script" path="res://Scripts/Base/UpgradeableProjectile.cs" id="1_g76ux"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3alw"]
+albedo_color = Color(0.370364, 0.370364, 0.370364, 1)
+metallic = 0.7
+
+[sub_resource type="SphereMesh" id="SphereMesh_k41vp"]
+material = SubResource("StandardMaterial3D_e3alw")
+
+[node name="ShotgunPellet" type="Node3D"]
+script = ExtResource("1_g76ux")
+ShotSpread = 0.18
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0409161, 0, 0, 0, 0.0409161, 0, 0, 0, 0.0409161, 0, 0, 0)
+mesh = SubResource("SphereMesh_k41vp")

@@ -1,0 +1,125 @@
+[gd_scene load_steps=12 format=3 uid="uid://cohf65bso617l"]
+
+[ext_resource type="Script" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_ekypa"]
+[ext_resource type="PackedScene" uid="uid://chv0b14sstem5" path="res://Scenes/Projectiles/ShotgunPellet.tscn" id="2_67p85"]
+
+[sub_resource type="Animation" id="Animation_omih6"]
+resource_name = "Fire"
+length = 0.4
+step = 0.02
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.250009, 1.40841), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.446473, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hlufq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mxbmx"]
+_data = {
+"Fire": SubResource("Animation_omih6"),
+"RESET": SubResource("Animation_hlufq")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n42so"]
+albedo_color = Color(0.354206, 0.181351, 0.0854171, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_foywp"]
+material = SubResource("StandardMaterial3D_n42so")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8n68b"]
+albedo_color = Color(0.28485, 0.28485, 0.28485, 1)
+metallic = 0.54
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_qqlwn"]
+material = SubResource("StandardMaterial3D_8n68b")
+radial_steps = 24
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a7frm"]
+albedo_color = Color(0.907052, 0.693446, 0.497686, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_1tuyb"]
+material = SubResource("StandardMaterial3D_a7frm")
+
+[node name="Shotgun" type="Node3D" node_paths=PackedStringArray("APlayer")]
+script = ExtResource("1_ekypa")
+WeaponName = "Shotgun"
+MaxAmmo = 2
+ProjectilePerShot = 24
+Projectile = ExtResource("2_67p85")
+APlayer = NodePath("AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mxbmx")
+}
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.341897, 0, 0, 0, 0.283293, 0.0404738, 0, -0.0653669, 0.175409, -0.000422478, 0.137658, 0.0824666)
+mesh = SubResource("BoxMesh_foywp")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.345923, 0, 0, 0, 0.10751, 0.106542, 0, -0.764489, 0.014983, 0, -0.00884821, 0.438468)
+mesh = SubResource("BoxMesh_foywp")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.269549, 0, 0, 0, -8.17605e-08, 0.122926, 0, -1.87046, -5.37327e-09, -0.0715945, 0.266807, -0.761792)
+mesh = SubResource("TubeTrailMesh_qqlwn")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.269549, 0, 0, 0, -8.17605e-08, 0.122926, 0, -1.87046, -5.37327e-09, 0.0623711, 0.266807, -0.761792)
+mesh = SubResource("TubeTrailMesh_qqlwn")
+
+[node name="HandMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, -0.00580746, 0.0914766, -0.851659)
+mesh = SubResource("SphereMesh_1tuyb")
+skeleton = NodePath("../AnimationPlayer")
+
+[node name="HandMesh2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0.0668784, 0.0491567, 0.140218)
+mesh = SubResource("SphereMesh_1tuyb")
+skeleton = NodePath("../AnimationPlayer")
