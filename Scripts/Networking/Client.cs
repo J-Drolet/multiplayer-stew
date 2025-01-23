@@ -142,7 +142,7 @@ public partial class Client : Node
     [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyStartGame() 
     {
-        PackedScene levelPackedScene = (PackedScene)ResourceLoader.Load("res://Scenes/root.tscn");
+        PackedScene levelPackedScene = (PackedScene)ResourceLoader.Load("res://Scenes/Level.tscn");
         Node level = levelPackedScene.Instantiate();
         GetTree().Root.AddChild(level);
     }
