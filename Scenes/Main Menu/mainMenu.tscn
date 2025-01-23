@@ -1,17 +1,20 @@
 [gd_scene load_steps=5 format=3 uid="uid://emhg32smyqx0"]
 
 [ext_resource type="Theme" uid="uid://y8ujbi36xquh" path="res://Assets/Themes/MainMenu.tres" id="1_c0h8v"]
-[ext_resource type="Script" path="res://Scripts/Main Menu/MainMenuButtons.cs" id="2_vxqo8"]
+[ext_resource type="Script" path="res://Scripts/Main Menu/MainMenu.cs" id="1_rahjv"]
 [ext_resource type="PackedScene" uid="uid://ck74o0nreiu38" path="res://Scenes/Main Menu/joinInformation.tscn" id="3_svqof"]
 [ext_resource type="PackedScene" uid="uid://dc0pw0ayb5an4" path="res://Scenes/Main Menu/lobby.tscn" id="4_tv7ky"]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" node_paths=PackedStringArray("JoinInformation", "LobbyPage")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rahjv")
+JoinInformation = NodePath("JoinInformation")
+LobbyPage = NodePath("Lobby")
 
 [node name="Background" type="ColorRect" parent="."]
 z_index = -10
@@ -36,7 +39,7 @@ theme = ExtResource("1_c0h8v")
 theme_override_font_sizes/font_size = 100
 text = "Multiplayer Stew"
 
-[node name="Buttons" type="VBoxContainer" parent="." node_paths=PackedStringArray("JoinInformation", "LobbyPage")]
+[node name="Buttons" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.064
@@ -48,9 +51,6 @@ offset_top = 107.912
 offset_right = -0.280029
 offset_bottom = 0.0159912
 grow_vertical = 0
-script = ExtResource("2_vxqo8")
-JoinInformation = NodePath("../JoinInformation")
-LobbyPage = NodePath("../Lobby")
 
 [node name="Host" type="Button" parent="Buttons"]
 layout_mode = 2
@@ -96,7 +96,7 @@ LobbyPage = NodePath("../Lobby")
 visible = false
 layout_mode = 1
 
-[connection signal="pressed" from="Buttons/Host" to="Buttons" method="OnHostPressed"]
-[connection signal="pressed" from="Buttons/Join" to="Buttons" method="OnJoinPressed"]
-[connection signal="pressed" from="Buttons/Settings" to="Buttons" method="OnSettingsPressed"]
-[connection signal="pressed" from="Buttons/Quit" to="Buttons" method="OnQuitPressed"]
+[connection signal="pressed" from="Buttons/Host" to="." method="OnHostPressed"]
+[connection signal="pressed" from="Buttons/Join" to="." method="OnJoinPressed"]
+[connection signal="pressed" from="Buttons/Settings" to="." method="OnSettingsPressed"]
+[connection signal="pressed" from="Buttons/Quit" to="." method="OnQuitPressed"]

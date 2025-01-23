@@ -7,14 +7,14 @@ public partial class Server : Node
 
     // Define the maximum number of clients allowed
     private const int MaxClients = 10;
-    private ENetMultiplayerPeer _server;
+    private ENetMultiplayerPeer Peer;
     private bool AcceptingConnections { get; set; } = true; // whether or not the server is accepting connections or not
 
 
     // Handle disconnects
     public override void _ExitTree()
     {
-        _server.Close();
+        Peer.Close();
         base._ExitTree();
     }
 
@@ -25,67 +25,104 @@ public partial class Server : Node
         Multiplayer.PeerConnected += PeerConnected;
         Multiplayer.PeerDisconnected += PeerDisconnected;
 
-        _server = new ENetMultiplayerPeer();
-        Error err = _server.CreateServer(3333, MaxClients);
+        Peer = new ENetMultiplayerPeer();
+        Error err = Peer.CreateServer(3333, MaxClients);
 
         if (err != Error.Ok)
         {
-            GD.PrintErr("Error starting the server: " + err);
+            GD.PrintErr("Server._Ready - Error starting the server: " + err);
         }
         else
         {
-            GD.Print("Server started successfully.");
-            Multiplayer.MultiplayerPeer = _server;
+            GD.Print("Server._Ready - Server started successfully.");
+            Multiplayer.MultiplayerPeer = Peer;
         }
     }
 
     private void PeerDisconnected(long id)
     {
-        GD.Print("Server received message: Player connected: " + id);
+        GD.Print("Server.PeerDisconnected - Player disconnected: " + id);
         
         GameManager.RemovePlayer(id);
     }
 
-    // this gets called on the server and client when someone connects
-
     private void PeerConnected(long id) {
-        GD.Print("Server received message: Player connected: " + id);
+        GD.Print("Server.PeerConnected - Player connected: " + id);
 
-        if (GameManager.GameHost == -1) {
+        if (GameManager.GameHost == -1) { // First peer connected becomes host
             GameManager.GameHost = id;
         }
         
-        if (!AcceptingConnections == false)
+        if(AcceptingConnections == false)
         {
-            // tell peer that the server is refusing the connection
-            // @TODO 
-            //rpc_id(id, "connection_refused")
-            
+            RpcId(id, MethodName.NotifyConnectionRefused, "Connection failed: Game has already started");
+            Peer.DisconnectPeer((int) id, true);
         }
     }
 
+    /// <summary>
+    /// Client uses this to tell the server about themselves
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="name"></param>
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void SendPlayerInfo(long id, string name) {
         Rpc(MethodName.NotifyPlayerConnected, id, name);
         Rpc(MethodName.NotifyCurrentHost, GameManager.GameHost);
     }
 
+    /// <summary>
+    /// Server uses this to tell all clients about a new player that connected. Tells the client who connected about all previous connections
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="name"></param>
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyPlayerConnected(long id, string name) {
+        // For the peer that connected, we have to tell them about all other players that joined before them
+        foreach(GameManager.PlayerInfo player in GameManager.Players.Values)
+        {
+            RpcId(id, MethodName.NotifyPlayerConnected, player.id, player.name);
+        }
         GameManager.Players.Add(id, new GameManager.PlayerInfo{ name = name, id = id });
     }
 
+    /// <summary>
+    /// Server uses this to tell all clients about a player that disconnected.
+    /// </summary>
+    /// <param name="id"></param>
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyPlayerDisconnected(long id) {
         GameManager.Players.Remove(id);
     }
 
+    /// <summary>
+    /// Server uses this to tell all clients to start their games
+    /// </summary>
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyStartGame() {
-        GD.Print("Starting");
-        Rpc(MethodName.NotifyStartGame);
+        if(Multiplayer.GetRemoteSenderId() == GameManager.GameHost)
+        {
+            GD.Print("Server.NotifyStartGame - Telling clients to start their games");
+            AcceptingConnections = false;
+            Rpc(MethodName.NotifyStartGame);
+        }
+        else 
+        {
+            GD.Print("Server.NotifyStartGame - Telling clients to start their games");
+        }
     }
 
+    /// <summary>
+    /// Server uses this to tell all clients who the current host is
+    /// </summary>
+    /// <param name="hostId"></param>
     [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyCurrentHost(long hostId) {}
+
+    /// <summary>
+    /// Server uses this to tell a client that the connection was refused and why
+    /// </summary>
+    /// <param name="reason"></param>
+    [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+    public void NotifyConnectionRefused(string reason) {}
 }

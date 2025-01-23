@@ -1,9 +1,8 @@
 using Godot;
 using multiplayerstew.Scripts.Attributes;
-using multiplayerstew.Scripts.Services;
 using System;
 
-public partial class MainMenuButtons : Node
+public partial class MainMenu : Control
 {
     [Export, ExportRequired]
     public Control JoinInformation { get; set; }
@@ -14,12 +13,17 @@ public partial class MainMenuButtons : Node
     [Export, ExportRequired]
     public Control Settings { get; set; }
 
+    [Export, ExportRequired]
+    public ErrorMessage ErrorMessage { get; set; }
+
+
     public override void _Ready()
     {
+        UI.MainMenu = this;
         //GodotErrorService.ValidateRequiredData(this);
     }
 
-    private void CloseAllWindows() {
+    public void CloseAllWindows() {
         JoinInformation.Hide();
         LobbyPage.Hide();
         //Settings.Hide();
@@ -30,20 +34,19 @@ public partial class MainMenuButtons : Node
         CloseAllWindows();
         Client.Instance.CreateLobbyAndConnect();
         LobbyPage.Show();
+        UI.ShowSpinner();
     }
 
     public void OnJoinPressed()
     {
         CloseAllWindows();
         JoinInformation.Show();
-
     }
 
     public void OnSettingsPressed() 
     {
         CloseAllWindows();
         Settings.Show();
-
     }
 
     public void OnQuitPressed() 

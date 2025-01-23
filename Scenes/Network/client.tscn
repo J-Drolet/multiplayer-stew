@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://eoi8ks6agami"]
+
+[ext_resource type="Script" path="res://Scripts/Networking/Client.cs" id="1_i1rml"]
+[ext_resource type="PackedScene" uid="uid://emhg32smyqx0" path="res://Scenes/Main Menu/mainMenu.tscn" id="2_518qk"]
+[ext_resource type="PackedScene" uid="uid://sd5volwon26q" path="res://Scenes/Main Menu/ErrorMessage.tscn" id="3_rpxpi"]
+[ext_resource type="PackedScene" uid="uid://c8dnsixk45ugs" path="res://Scenes/Main Menu/Spinner.tscn" id="4_ryq63"]
+
+[node name="Network" type="Node"]
+script = ExtResource("1_i1rml")
+
+[node name="MainMenu" parent="." instance=ExtResource("2_518qk")]
+
+[node name="ErrorMessage" parent="." instance=ExtResource("3_rpxpi")]
+visible = false
+
+[node name="Spinner" parent="." instance=ExtResource("4_ryq63")]
+visible = false

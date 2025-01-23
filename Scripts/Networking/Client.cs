@@ -10,25 +10,23 @@ public partial class Client : Node
 
     private readonly string LocalHost = "127.0.0.1";
     private const int ServerPort = 3333;
-    private ENetMultiplayerPeer _client;
-    private int ServerPid;
+    private ENetMultiplayerPeer Peer;
+    private int ServerPid = -1;
 
-    // Kill server process
     public override void _ExitTree()
     {
-        OS.Kill(ServerPid);
+        CloseServer();
+
         base._ExitTree();
     }
 
     public override void _Ready()
     {   
         Instance = this;
-
         Multiplayer.ConnectedToServer += ConnectedToServer;
         Multiplayer.ConnectionFailed += ConnectionFailed;
         Multiplayer.PeerConnected += PeerConnected;
         Multiplayer.PeerDisconnected += PeerDisconnected;
-
     }
 
     // Called when the "Create Lobby" button is pressed
@@ -47,34 +45,43 @@ public partial class Client : Node
 
             if(ServerPid != -1) 
             {
-                GD.Print("Started the server in headless mode.");
+                GD.Print("Client.StartServer - Started the server in headless mode.");
             }
             else {
-                GD.Print("Failed to start server instance.");
+                GD.Print("Client.StartServer - Failed to start server instance.");
             }
         }
         else
         {
-            GD.Print("Running in a build");
+            GD.Print("Client.StartServer - Running in a build");
         }
     }
 
     private void CloseServer()
     {
-        OS.Kill(ServerPid);
+        if (ServerPid != -1) // kill headless server if this client created one
+        {
+            OS.Kill(ServerPid);
+        }
     }
 
+    /// <summary>
+    /// Disconnects the client from the server and handles closing the server if client was the host
+    /// </summary>
     public void Disconnect()
     {
-        if (GameManager.GameHost == Multiplayer.GetUniqueId())
+        if (GameManager.GameHost == Multiplayer.GetUniqueId()) // if client is the host, close the server
         {
             CloseServer();
         }
 
         GameManager.Players.Clear();
-        _client.Close();
+        Peer.Close();
     }
 
+    /// <summary>
+    /// Tell the server to start the game. This will only hope if calling peer is the host
+    /// </summary>
     public void StartGame() {
         RpcId(1, MethodName.NotifyStartGame);
     }
@@ -82,19 +89,21 @@ public partial class Client : Node
     public void ConnectToServer(string ip, int port)
     {
         // Set up the client network connection to the server
-        _client = new ENetMultiplayerPeer();
-        Error err = _client.CreateClient(ip, port);
+        Peer = new ENetMultiplayerPeer();
+        Error err = Peer.CreateClient(ip, port);
         if(err != Error.Ok) {
-            GD.Print("Client error: " + err);
+            GD.PrintErr("Client.ConnectToServer - Error: " + err);
         }
     
-        Multiplayer.MultiplayerPeer = _client;
+        Multiplayer.MultiplayerPeer = Peer;
+        Peer.GetConnectionStatus();
     }
 
     // called only on clients
     private void ConnectedToServer()
     {
         GD.Print("Connected to server");
+        UI.HideSpinner();
         RpcId(1, MethodName.SendPlayerInfo, Multiplayer.GetUniqueId(), $"Player {Multiplayer.GetUniqueId()}");
         //main.connection_succeeded()
         //send_player_info.rpc_id(1, peer_name, peer_color, multiplayer.get_unique_id()
@@ -145,10 +154,22 @@ public partial class Client : Node
         PackedScene levelPackedScene = (PackedScene)ResourceLoader.Load("res://Scenes/Level.tscn");
         Node level = levelPackedScene.Instantiate();
         GetTree().Root.AddChild(level);
+        UI.MainMenu.CloseAllWindows();
+        UI.MainMenu.Hide();
     }
 
     [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyCurrentHost(long hostId) {
         GameManager.GameHost = hostId;
+    }
+
+    /// <summary>
+    /// Server uses this to tell a client that the connection was refused and why
+    /// </summary>
+    /// <param name="reason"></param>
+    [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+    public void NotifyConnectionRefused(string reason) {
+        GD.Print("Client.NotifyConnectionRefused - Connection refused: " + reason);
+        UI.DisplayError(reason);
     }
 }
