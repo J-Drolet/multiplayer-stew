@@ -1,0 +1,146 @@
+[gd_scene load_steps=12 format=3 uid="uid://bfmxfalt2u42"]
+
+[ext_resource type="Script" path="res://Scripts/Weapons/Pistol.cs" id="1_nluh6"]
+[ext_resource type="PackedScene" uid="uid://de6ynjcj4qnom" path="res://Scenes/Projectiles/Submachine gun bullet.tscn" id="2_etlu4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tmury"]
+albedo_color = Color(0.314316, 0.314316, 0.314316, 1)
+metallic = 0.3
+
+[sub_resource type="BoxMesh" id="BoxMesh_l5pk5"]
+material = SubResource("StandardMaterial3D_tmury")
+size = Vector3(1, 2.695, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uqtj5"]
+albedo_color = Color(0.753984, 0.753984, 0.753984, 1)
+metallic = 1.0
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_k5o77"]
+material = SubResource("StandardMaterial3D_uqtj5")
+radial_steps = 24
+
+[sub_resource type="Animation" id="Animation_c27f4"]
+resource_name = "Fire"
+length = 0.04
+step = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:CanFire")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.04),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.015, 0.04),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.469947, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.023, 0.04),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.112, 0.315), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_i6i74"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:CanFire")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qq742"]
+_data = {
+"Fire": SubResource("Animation_c27f4"),
+"RESET": SubResource("Animation_i6i74")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mrl0e"]
+albedo_color = Color(0.907052, 0.693446, 0.497686, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_sshab"]
+material = SubResource("StandardMaterial3D_mrl0e")
+
+[node name="Mac10" type="Node3D" node_paths=PackedStringArray("APlayer")]
+script = ExtResource("1_nluh6")
+WeaponName = "Godot Pistol"
+MaxAmmo = 30
+FireMode = 2
+Projectile = ExtResource("2_etlu4")
+APlayer = NodePath("AnimationPlayer")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.113337, 0, 0, 0, 0.0822317, 0, 0, 0, 0.22686, 0, 0.0590581, 0.0393912)
+mesh = SubResource("BoxMesh_l5pk5")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.113337, 0, 0, 0, 0.191579, 0, 0, 0, 0.102026, 0, -0.155255, 0.0393912)
+mesh = SubResource("BoxMesh_l5pk5")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0617103, 0, 0, 0, -1.36111e-08, 0.0555518, 0, -0.311386, -2.42824e-09, 0, 0.263931, -0.282568)
+mesh = SubResource("TubeTrailMesh_k5o77")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.131237, 0, 0, 0, -9.4237e-09, 0.226908, 0, -0.215589, -9.91844e-09, 0, 0.235212, -0.0050514)
+mesh = SubResource("BoxMesh_l5pk5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qq742")
+}
+
+[node name="HandMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, -0.0527012, 0.0262967)
+mesh = SubResource("SphereMesh_sshab")
+skeleton = NodePath("../AnimationPlayer")

@@ -47,7 +47,7 @@ namespace multiplayerstew.Scripts.Base
         {
             if ((CurrentAmmo > 0 || MaxAmmo < 0) && CanFire) 
             {
-
+                
                 APlayer.Play("Fire");
 
                 for (int x = ProjectilePerShot; x > 0; x--)

@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://bwh21gfyr2idt"]
+
+[ext_resource type="Texture2D" uid="uid://rb8847h6lkvg" path="res://Assets/icon.svg" id="1_srln8"]
+[ext_resource type="Script" path="res://Scripts/Base/DamageSource.cs" id="1_srmf1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_piarx"]
+size = Vector3(1.12, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ds6qc"]
+albedo_texture = ExtResource("1_srln8")
+
+[sub_resource type="BoxMesh" id="BoxMesh_tbtrk"]
+material = SubResource("StandardMaterial3D_ds6qc")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0488x"]
+
+[node name="StaticBody3D" type="StaticBody3D" node_paths=PackedStringArray("Hitbox", "HealthText")]
+script = ExtResource("1_srmf1")
+Hitbox = NodePath("Area3D")
+HealthText = NodePath("Label3D")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_piarx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_tbtrk")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_0488x")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.838147, 0)
+text = "Health:"
+font_size = 64

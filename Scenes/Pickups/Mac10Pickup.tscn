@@ -1,0 +1,97 @@
+[gd_scene load_steps=11 format=3 uid="uid://k3u720y471ax"]
+
+[ext_resource type="Script" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_1diif"]
+[ext_resource type="PackedScene" uid="uid://bfmxfalt2u42" path="res://Scenes/Weapons/Mac10.tscn" id="2_mtb26"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vmxku"]
+size = Vector3(1.60541, 1, 1.51859)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ajf1t"]
+albedo_color = Color(0.314316, 0.314316, 0.314316, 1)
+metallic = 0.3
+
+[sub_resource type="BoxMesh" id="BoxMesh_l5uvk"]
+material = SubResource("StandardMaterial3D_ajf1t")
+size = Vector3(1, 2.695, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ki7x2"]
+albedo_color = Color(0.753984, 0.753984, 0.753984, 1)
+metallic = 1.0
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_rt28v"]
+material = SubResource("StandardMaterial3D_ki7x2")
+radial_steps = 24
+
+[sub_resource type="Animation" id="Animation_fdsld"]
+resource_name = "PickupIdle"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mac10:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wds57"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mac10:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_57bpt"]
+_data = {
+"PickupIdle": SubResource("Animation_fdsld"),
+"RESET": SubResource("Animation_wds57")
+}
+
+[node name="Mac10Pickup" type="Node3D" node_paths=PackedStringArray("PickupArea", "APlayer")]
+script = ExtResource("1_1diif")
+Weapon = ExtResource("2_mtb26")
+PickupArea = NodePath("Area3D")
+APlayer = NodePath("AnimationPlayer")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0145569, 0, -0.0141144)
+shape = SubResource("BoxShape3D_vmxku")
+
+[node name="Mac10" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Mac10"]
+transform = Transform3D(0.113337, 0, 0, 0, 0.0822317, 0, 0, 0, 0.22686, 0, 0.0590581, 0.0393912)
+mesh = SubResource("BoxMesh_l5uvk")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Mac10"]
+transform = Transform3D(0.113337, 0, 0, 0, 0.191579, 0, 0, 0, 0.102026, 0, -0.155255, 0.0393912)
+mesh = SubResource("BoxMesh_l5uvk")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Mac10"]
+transform = Transform3D(0.0617103, 0, 0, 0, -1.36111e-08, 0.0555518, 0, -0.311386, -2.42824e-09, 0, 0.263931, -0.282568)
+mesh = SubResource("TubeTrailMesh_rt28v")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Mac10"]
+transform = Transform3D(0.131237, 0, 0, 0, -9.4237e-09, 0.226908, 0, -0.215589, -9.91844e-09, 0, 0.235212, -0.0050514)
+mesh = SubResource("BoxMesh_l5uvk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_57bpt")
+}

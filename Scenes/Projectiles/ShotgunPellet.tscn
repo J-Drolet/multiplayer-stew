@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://chv0b14sstem5"]
+[gd_scene load_steps=5 format=3 uid="uid://chv0b14sstem5"]
 
 [ext_resource type="Script" path="res://Scripts/Base/UpgradeableProjectile.cs" id="1_g76ux"]
 
@@ -9,10 +9,21 @@ metallic = 0.7
 [sub_resource type="SphereMesh" id="SphereMesh_k41vp"]
 material = SubResource("StandardMaterial3D_e3alw")
 
-[node name="ShotgunPellet" type="Node3D"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_t1i6r"]
+radius = 0.0212086
+
+[node name="ShotgunPellet" type="Node3D" node_paths=PackedStringArray("Hitbox")]
 script = ExtResource("1_g76ux")
 ShotSpread = 0.18
+Hitbox = NodePath("Area3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0409161, 0, 0, 0, 0.0409161, 0, 0, 0, 0.0409161, 0, 0, 0)
 mesh = SubResource("SphereMesh_k41vp")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_t1i6r")

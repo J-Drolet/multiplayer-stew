@@ -1,4 +1,6 @@
 ﻿using Godot;
+using multiplayerstew.Scripts.Attributes;
+using multiplayerstew.Scripts.Services;
 using System;
 
 
@@ -19,6 +21,8 @@ namespace multiplayerstew.Scripts.Base
         public float Lifespan { get; set; } = 3.0f;
         [Export]
         public float ShotSpread { get; set; } = 0.0f;
+        [Export, ExportRequired]
+        public Area3D Hitbox { get; set; }
 
         private Vector3 Velocity = Vector3.Zero;
         private Vector3 ProjectileGravity = Vector3.Down * 5;
@@ -34,6 +38,8 @@ namespace multiplayerstew.Scripts.Base
             directionVector = directionVector.Rotated(Transform.Basis.Y, ((float)rand.NextDouble() * ShotSpread*2) + (-ShotSpread));
 
             Velocity = directionVector * InitialVelocity;
+
+            GodotErrorService.ValidateRequiredData(this);
         }
 
         public override void _Process(double delta)
