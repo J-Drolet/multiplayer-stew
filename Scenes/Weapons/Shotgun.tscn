@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cohf65bso617l"]
+[gd_scene load_steps=15 format=3 uid="uid://cohf65bso617l"]
 
 [ext_resource type="Script" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_ekypa"]
 [ext_resource type="PackedScene" uid="uid://chv0b14sstem5" path="res://Scenes/Projectiles/ShotgunPellet.tscn" id="2_67p85"]
@@ -17,7 +17,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.16, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0.250009, 1.40841), Vector3(0, 0, 0)]
+"values": [Vector3(0, 0, 0), Vector3(0, 0.102209, 0.833397), Vector3(0, 0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -29,7 +29,19 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.16, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0.446473, 0, 0), Vector3(0, 0, 0)]
+"values": [Vector3(0, 0, 0), Vector3(0.592487, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:CanFire")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="Animation" id="Animation_hlufq"]
@@ -37,7 +49,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath("Front:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -49,7 +61,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
+tracks/1/path = NodePath("Front:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -58,18 +70,260 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Back:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Back:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Shell2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Shell1:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Shell1:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0749748, 0.310866, -0.0847024)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Shell2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0839168, 0.299115, -0.0916603)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Front/HandMesh:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.00580746, 0.0914766, -0.851659)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath(".:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath(".:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath(".:CanFire")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_h106b"]
+resource_name = "Reload"
+length = 1.48
+step = 0.02
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Front:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 1.32, 1.48),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.042506, 0), Vector3(0, 0.042506, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Front:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 1.32, 1.48),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.654272, 0, 0), Vector3(-0.654272, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Back:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.18, 1.32, 1.48),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.0746766, -0.0818572), Vector3(0, 0.0746766, -0.0818572), Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Back:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.18, 1.32, 1.48),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.459406, 0, 0), Vector3(0.459406, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Shell2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3, 1.14),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Shell1:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(-2.98023e-08, 0.3, 1.14),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Shell1:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.3, 0.38, 0.4, 0.58, 0.86, 0.98),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.0749748, 0.310866, -0.0847024), Vector3(-0.0749748, 0.937723, 0.940869), Vector3(-1.95464, -0.2693, 0.572118), Vector3(-1.95464, -0.2693, 0.572118), Vector3(-0.0954311, 0.370033, 0.0422338), Vector3(-0.0954312, 0.28408, -0.108091)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Shell2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.3, 0.38, 0.4, 0.58, 0.86, 1.08, 1.14),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.0839168, 0.299115, -0.0916603), Vector3(0.0839168, 0.925971, 0.933911), Vector3(-1.79574, -0.281052, 0.56516), Vector3(-1.79574, -0.281052, 0.56516), Vector3(0.0634604, 0.358282, 0.0352758), Vector3(0.0634604, 0.358282, 0.0352758), Vector3(0.0634604, 0.319905, -0.0738802)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Front/HandMesh:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.32, 0.58, 0.86, 0.98, 1.08, 1.14, 1.32),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.00580746, 0.0914766, -0.851659), Vector3(-1.87896, -0.751483, 0.247423), Vector3(-0.01976, 0.0783005, 0.216051), Vector3(-0.0197601, 0.0803355, 0.137304), Vector3(-0.01976, 0.0783005, 0.216051), Vector3(-0.0197601, 0.114279, 0.106081), Vector3(-0.00580746, 0.0914766, -0.851659)]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1.48),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"RefillAmmo"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mxbmx"]
 _data = {
 "Fire": SubResource("Animation_omih6"),
-"RESET": SubResource("Animation_hlufq")
+"RESET": SubResource("Animation_hlufq"),
+"Reload": SubResource("Animation_h106b")
 }
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n42so"]
-albedo_color = Color(0.354206, 0.181351, 0.0854171, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_foywp"]
-material = SubResource("StandardMaterial3D_n42so")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8n68b"]
 albedo_color = Color(0.28485, 0.28485, 0.28485, 1)
@@ -85,6 +339,19 @@ albedo_color = Color(0.907052, 0.693446, 0.497686, 1)
 [sub_resource type="SphereMesh" id="SphereMesh_1tuyb"]
 material = SubResource("StandardMaterial3D_a7frm")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n42so"]
+albedo_color = Color(0.354206, 0.181351, 0.0854171, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_foywp"]
+material = SubResource("StandardMaterial3D_n42so")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2cuq"]
+albedo_color = Color(0.46757, 0.0813626, 0.0913478, 1)
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_phv26"]
+material = SubResource("StandardMaterial3D_h2cuq")
+radial_steps = 24
+
 [node name="Shotgun" type="Node3D" node_paths=PackedStringArray("APlayer")]
 script = ExtResource("1_ekypa")
 WeaponName = "Shotgun"
@@ -98,28 +365,47 @@ libraries = {
 "": SubResource("AnimationLibrary_mxbmx")
 }
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.341897, 0, 0, 0, 0.283293, 0.0404738, 0, -0.0653669, 0.175409, -0.000422478, 0.137658, 0.0824666)
-mesh = SubResource("BoxMesh_foywp")
+[node name="Front" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.345923, 0, 0, 0, 0.10751, 0.106542, 0, -0.764489, 0.014983, 0, -0.00884821, 0.438468)
-mesh = SubResource("BoxMesh_foywp")
-
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Front"]
 transform = Transform3D(0.269549, 0, 0, 0, -8.17605e-08, 0.122926, 0, -1.87046, -5.37327e-09, -0.0715945, 0.266807, -0.761792)
 mesh = SubResource("TubeTrailMesh_qqlwn")
+skeleton = NodePath("../..")
 
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Front"]
 transform = Transform3D(0.269549, 0, 0, 0, -8.17605e-08, 0.122926, 0, -1.87046, -5.37327e-09, 0.0623711, 0.266807, -0.761792)
 mesh = SubResource("TubeTrailMesh_qqlwn")
+skeleton = NodePath("../..")
 
-[node name="HandMesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, -0.00580746, 0.0914766, -0.851659)
+[node name="HandMesh" type="MeshInstance3D" parent="Front"]
+transform = Transform3D(0.33, 0, 0, 0, 0.33, 1.49012e-08, 0, -1.49012e-08, 0.33, -0.00580746, 0.0914766, -0.851659)
 mesh = SubResource("SphereMesh_1tuyb")
-skeleton = NodePath("../AnimationPlayer")
+skeleton = NodePath("../../AnimationPlayer")
 
-[node name="HandMesh2" type="MeshInstance3D" parent="."]
+[node name="Back" type="Node3D" parent="."]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Back"]
+transform = Transform3D(0.341897, 0, 0, 0, 0.283293, 0.0404738, 0, -0.0653669, 0.175409, -0.000422478, 0.137658, 0.0824666)
+mesh = SubResource("BoxMesh_foywp")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Back"]
+transform = Transform3D(0.345923, 0, 0, 0, 0.10751, 0.106542, 0, -0.764489, 0.014983, 0, -0.00884821, 0.438468)
+mesh = SubResource("BoxMesh_foywp")
+skeleton = NodePath("../..")
+
+[node name="HandMesh2" type="MeshInstance3D" parent="Back"]
 transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0.0668784, 0.0491567, 0.140218)
 mesh = SubResource("SphereMesh_1tuyb")
-skeleton = NodePath("../AnimationPlayer")
+skeleton = NodePath("../../AnimationPlayer")
+
+[node name="Shell1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0589666, 0, 0, 0, 0.0724628, -0.0476553, 0, 0.0994369, 0.0347279, -0.0749748, 0.310866, -0.0847024)
+visible = false
+mesh = SubResource("TubeTrailMesh_phv26")
+
+[node name="Shell2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0589666, 0, 0, 0, 0.0744131, -0.0469599, 0, 0.0979859, 0.0356626, 0.0839168, 0.299115, -0.0916603)
+visible = false
+mesh = SubResource("TubeTrailMesh_phv26")

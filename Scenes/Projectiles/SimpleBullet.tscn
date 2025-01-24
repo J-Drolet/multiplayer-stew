@@ -9,7 +9,6 @@ radius = 0.137246
 
 [node name="SimpleBullet" type="Node3D" node_paths=PackedStringArray("Hitbox")]
 script = ExtResource("1_iga3j")
-VitalMultiplier = 1.0
 Lifespan = 1.0
 Hitbox = NodePath("Area3D")
 
@@ -19,7 +18,7 @@ mesh = SubResource("SphereMesh_2wu11")
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_layer = 8
-collision_mask = 4
+collision_mask = 20
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("SphereShape3D_hmntw")

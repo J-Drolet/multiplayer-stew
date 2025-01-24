@@ -23,7 +23,7 @@ mesh = SubResource("SphereMesh_k41vp")
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_layer = 8
-collision_mask = 4
+collision_mask = 20
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("SphereShape3D_t1i6r")

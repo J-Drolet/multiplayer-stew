@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b8hpvrno7saob"]
+[gd_scene load_steps=11 format=3 uid="uid://b8hpvrno7saob"]
 
 [ext_resource type="Script" path="res://Scripts/Weapons/Pistol.cs" id="1_7881s"]
 [ext_resource type="PackedScene" uid="uid://g1mopusla6rw" path="res://Scenes/Projectiles/SimpleBullet.tscn" id="2_6tjck"]
@@ -90,11 +90,127 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mag:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.117084, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ReloadHand:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ReloadHand:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0739522, -0.250139, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Slide:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.235212, -0.0566793)]
+}
+
+[sub_resource type="Animation" id="Animation_sk1b1"]
+resource_name = "Reload"
+length = 1.75
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mag:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.43, 0.71),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.117084, 0), Vector3(0, -1.41442, 0), Vector3(0, -1.41442, 0), Vector3(0, -0.117084, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ReloadHand:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.43),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ReloadHand:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.43, 0.710144, 0.82, 0.98, 1.13, 1.27, 1.46, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.074, -1.44064, 0), Vector3(-0.0739522, -0.250139, 0), Vector3(-0.0739522, -0.250139, 0), Vector3(0.010153, 0.20788, 0.229124), Vector3(0.010153, 0.20788, 0.229124), Vector3(0.010153, 0.20788, 0.48862), Vector3(0.010153, 0.20788, 0.48862), Vector3(-0.074, -1.44064, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Slide:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.13, 1.27, 1.33, 1.42),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.235212, -0.0566793), Vector3(0, 0.235212, 0.202817), Vector3(0, 0.235212, 0.202817), Vector3(0, 0.235212, -0.0566793)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.42),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"RefillAmmo"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qq742"]
 _data = {
 "Fire": SubResource("Animation_c27f4"),
-"RESET": SubResource("Animation_i6i74")
+"RESET": SubResource("Animation_i6i74"),
+"Reload": SubResource("Animation_sk1b1")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mrl0e"]
@@ -114,8 +230,16 @@ APlayer = NodePath("AnimationPlayer")
 transform = Transform3D(0.141696, 0, 0, 0, 0.215589, 0, 0, 0, 0.141696, 0, 0, 0)
 mesh = SubResource("BoxMesh_l5pk5")
 
+[node name="Mag" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0641569, 0, 0, 0, 0.128763, 0, 0, 0, 0.141696, 0, -0.117084, 0)
+mesh = SubResource("BoxMesh_l5pk5")
+
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.141696, 0, 0, 0, -9.4237e-09, 0.141696, 0, -0.215589, -6.19371e-09, 0, 0.235212, -0.15058)
+mesh = SubResource("BoxMesh_l5pk5")
+
+[node name="Slide" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.096497, 0, 0, 0, -6.42433e-09, 0.141696, 0, -0.146971, -6.19371e-09, 0, 0.235212, -0.0566793)
 mesh = SubResource("BoxMesh_l5pk5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -125,5 +249,11 @@ libraries = {
 
 [node name="HandMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, -0.0656728, 0)
+mesh = SubResource("SphereMesh_sshab")
+skeleton = NodePath("../AnimationPlayer")
+
+[node name="ReloadHand" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, -0.0739522, -0.250139, 0)
+visible = false
 mesh = SubResource("SphereMesh_sshab")
 skeleton = NodePath("../AnimationPlayer")

@@ -2,6 +2,7 @@
 using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Services;
 using System;
+using System.Collections.Generic;
 
 
 namespace multiplayerstew.Scripts.Base
@@ -11,7 +12,7 @@ namespace multiplayerstew.Scripts.Base
         [Export, ExportRequired]
         public float MaxHealth { get; set; } = 100.0f;
         [Export, ExportRequired]
-        public Area3D Hitbox { get; set; }
+        public Area3D[] Hitboxes { get; set; }
         [Export]
         public Label3D HealthText { get; set; }
 
@@ -25,15 +26,20 @@ namespace multiplayerstew.Scripts.Base
             {
                 HealthText.Text = "Health: " + CurrentHealth.ToString();
             }
-            Hitbox.AreaEntered += HitboxHit; 
+            foreach (Area3D hitbox in Hitboxes)
+            {
+                hitbox.AreaEntered += (Area3D projectileHitbox) => HitboxHit(projectileHitbox, hitbox);
+            }   
         }
 
-        private void HitboxHit(Area3D projectileHitbox)
+        private void HitboxHit(Area3D projectileHitbox, Area3D hitbox)
         {
             UpgradeableProjectile projectile = projectileHitbox?.GetOwner() as UpgradeableProjectile;
             if (projectile != null)
             {
-                CurrentHealth = Math.Clamp(CurrentHealth - projectile.Damage, 0.0f, float.MaxValue);
+                // layer 5 = vital hitbox
+                float damage = hitbox.GetCollisionLayerValue(5) ? projectile.Damage * projectile.VitalMultiplier : projectile.Damage;
+                CurrentHealth = Math.Clamp(CurrentHealth - damage, 0.0f, float.MaxValue);
                 if(HealthText != null)
                 {
                     HealthText.Text = CurrentHealth <= 0.0f ? "Dead" : "Health: " + CurrentHealth.ToString();

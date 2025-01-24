@@ -14,9 +14,9 @@ material = SubResource("StandardMaterial3D_ds6qc")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0488x"]
 
-[node name="StaticBody3D" type="StaticBody3D" node_paths=PackedStringArray("Hitbox", "HealthText")]
+[node name="StaticBody3D" type="StaticBody3D" node_paths=PackedStringArray("Hitboxes", "HealthText")]
 script = ExtResource("1_srmf1")
-Hitbox = NodePath("Area3D")
+Hitboxes = [NodePath("Area3D")]
 HealthText = NodePath("Label3D")
 metadata/_edit_group_ = true
 

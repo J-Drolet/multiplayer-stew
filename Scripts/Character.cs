@@ -16,6 +16,8 @@ public partial class Character : CharacterBody3D
 	public Node3D Hand { get; set; }
 	[Export]
 	private UpgradableWeapon equippedWeapon;
+	[Export, ExportRequired]
+	private Label AmmoLabel { get; set; }
     public UpgradableWeapon EquippedWeapon
 	{
 		get { return equippedWeapon; }
@@ -44,6 +46,10 @@ public partial class Character : CharacterBody3D
 				{
 					EquippedWeapon.Fire();
 				}
+				if (@event.IsActionPressed("Reload"))
+				{
+					EquippedWeapon.Reload();
+				}
 			}
 			
 			if (@event.IsActionPressed("ui_cancel"))
@@ -66,6 +72,7 @@ public partial class Character : CharacterBody3D
     {
 		if (EquippedWeapon != null)
 		{
+			AmmoLabel.Text = EquippedWeapon.GetCurrentAmmoText();
 			if (EquippedWeapon?.FireMode == FireModes.Automatic && Input.IsActionPressed("Fire"))
 			{
 				EquippedWeapon.Fire();

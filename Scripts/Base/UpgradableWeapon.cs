@@ -9,6 +9,7 @@ namespace multiplayerstew.Scripts.Base
 {
     public enum FireModes
     {
+        // Some weapons with "None" will call "Fire()" in their animantion Ex. Melee weapons
         None,
         Single,
         Automatic,
@@ -34,7 +35,7 @@ namespace multiplayerstew.Scripts.Base
         [Export, ExportRequired, AnimationsRequired(new string[] { "Fire" })] 
         public AnimationPlayer APlayer { get; set; }
 
-        public int CurrentAmmo { get; set; }
+        private int CurrentAmmo { get; set; }
         public List<Upgrade> Upgrades { get; set; }
 
         public override void _Ready()
@@ -47,9 +48,8 @@ namespace multiplayerstew.Scripts.Base
         {
             if ((CurrentAmmo > 0 || MaxAmmo < 0) && CanFire) 
             {
-                
                 APlayer.Play("Fire");
-
+                CurrentAmmo -= 1;
                 for (int x = ProjectilePerShot; x > 0; x--)
                 {
                     UpgradeableProjectile projectileInstance = Projectile.Instantiate() as UpgradeableProjectile;
@@ -57,6 +57,30 @@ namespace multiplayerstew.Scripts.Base
                     GetTree().CurrentScene.AddChild(projectileInstance);
                 }
             }
+        }
+
+        // Triggered by character
+        public void Reload()
+        {
+            if (APlayer.HasAnimation("Reload"))
+            {
+                APlayer.Play("Reload");
+            }
+            else
+            {
+                GD.PushWarning($"No reload animation for {WeaponName}");
+            }
+        }
+
+        // Called by Reload Animation or other
+        public void RefillAmmo()
+        {
+            CurrentAmmo = MaxAmmo;
+        }
+
+        public string GetCurrentAmmoText()
+        {
+            return $"{CurrentAmmo}/{MaxAmmo}";
         }
     }
 }
