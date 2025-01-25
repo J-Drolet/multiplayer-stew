@@ -4,6 +4,7 @@ using System;
 public static class UI
 {
     public static MainMenu MainMenu { get; set; }
+    public static Lobby Lobby { get; set; }
     
     public static ErrorMessage ErrorMessage { get; set; }
 
@@ -14,13 +15,15 @@ public static class UI
         ErrorMessage.DisplayError(errorText);
     }
 
-    public static void ShowSpinner() 
+    public static void ToggleSpinner(bool visibility) 
     {
-        Spinner.Show();
-    }
-
-    public static void HideSpinner() 
-    {
-        Spinner.Hide();
+        if(visibility) 
+        {
+            Spinner.Show();
+        }
+        else
+        {
+            Spinner.Hide();
+        }
     }
 }

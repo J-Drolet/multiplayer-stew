@@ -41,7 +41,6 @@ public partial class Character : CharacterBody3D
 	
 		if(!IsMultiplayerAuthority()) return;
 
-		GD.Print($"Peer {Multiplayer.GetUniqueId()} is making character {Name} the current");
 		Input.MouseMode = Input.MouseModeEnum.Captured;
 		Camera.MakeCurrent();
     }

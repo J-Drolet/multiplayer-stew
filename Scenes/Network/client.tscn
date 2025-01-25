@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/Networking/Client.cs" id="1_i1rml"]
 [ext_resource type="PackedScene" uid="uid://emhg32smyqx0" path="res://Scenes/Main Menu/mainMenu.tscn" id="2_518qk"]
-[ext_resource type="PackedScene" uid="uid://sd5volwon26q" path="res://Scenes/Main Menu/ErrorMessage.tscn" id="3_rpxpi"]
-[ext_resource type="PackedScene" uid="uid://c8dnsixk45ugs" path="res://Scenes/Main Menu/Spinner.tscn" id="4_ryq63"]
+[ext_resource type="PackedScene" uid="uid://sd5volwon26q" path="res://Scenes/Main Menu/errorMessage.tscn" id="3_rpxpi"]
+[ext_resource type="PackedScene" uid="uid://c8dnsixk45ugs" path="res://Scenes/Main Menu/spinner.tscn" id="4_ryq63"]
 
 [node name="Network" type="Node"]
 script = ExtResource("1_i1rml")

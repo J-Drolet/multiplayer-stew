@@ -1,12 +1,22 @@
 using Godot;
 using multiplayerstew.Scripts.Attributes;
+using multiplayerstew.Scripts.Services;
 using System;
 
 
 public partial class Lobby : Control
 {
     [Export, ExportRequired]
-    public Control PlayerPrototype { get; set; } 
+    public Control PlayerPrototype { get; set; }
+    
+    [Export, ExportRequired]
+    public Control StartGameButton { get; set; }
+
+    public override void _Ready()
+    {
+        GodotErrorService.ValidateRequiredData(this);
+        UI.Lobby = this;
+    }
 
     public override void _Process(double delta)
     {

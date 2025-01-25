@@ -1,0 +1,352 @@
+[gd_scene load_steps=6 format=3 uid="uid://mujxr1ewuap1"]
+
+[ext_resource type="Theme" uid="uid://bvq6iy5t625tg" path="res://Assets/Themes/SettingsMenu.tres" id="1_l023w"]
+[ext_resource type="Script" path="res://Scripts/Main Menu/SettingsScreen.cs" id="1_stk7l"]
+[ext_resource type="Script" path="res://Scripts/Main Menu/SettingInputTypes/LineEditSettingInput.cs" id="3_vkvsy"]
+[ext_resource type="Script" path="res://Scripts/Main Menu/SettingInputTypes/ButtonSettingInput.cs" id="4_5t2f1"]
+[ext_resource type="Script" path="res://Scripts/Main Menu/SettingInputTypes/SliderSettingInput.cs" id="5_tqr58"]
+
+[node name="SettingsScreen" type="Control" node_paths=PackedStringArray("GameTab", "ControlTab", "VideoTab", "AudioTab")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_stk7l")
+GameTab = NodePath("Tabs/GameTab")
+ControlTab = NodePath("Tabs/ControlTab")
+VideoTab = NodePath("Tabs/VideoTab")
+AudioTab = NodePath("Tabs/AudioTab")
+
+[node name="Header" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.066
+anchor_top = 0.039
+anchor_right = 0.934
+anchor_bottom = 0.1
+offset_left = -0.0319977
+offset_top = -0.272001
+offset_right = 0.0319824
+offset_bottom = 0.199997
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l023w")
+
+[node name="TabSelectors" type="HBoxContainer" parent="Header"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="BackButton" type="Button" parent="Header/TabSelectors"]
+layout_mode = 2
+theme = ExtResource("1_l023w")
+text = "<< Back"
+
+[node name="GameTabButton" type="Button" parent="Header/TabSelectors"]
+layout_mode = 2
+theme = ExtResource("1_l023w")
+text = "Game"
+
+[node name="ControlTabButton" type="Button" parent="Header/TabSelectors"]
+layout_mode = 2
+theme = ExtResource("1_l023w")
+text = "Control"
+
+[node name="VideoTabButton" type="Button" parent="Header/TabSelectors"]
+layout_mode = 2
+theme = ExtResource("1_l023w")
+text = "Video"
+
+[node name="AudioTabButton" type="Button" parent="Header/TabSelectors"]
+layout_mode = 2
+theme = ExtResource("1_l023w")
+text = "Audio"
+
+[node name="Tabs" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.066
+anchor_top = 0.114
+anchor_right = 0.934
+anchor_bottom = 0.886
+offset_left = -0.0319977
+offset_top = 0.127998
+offset_right = 0.0319824
+offset_bottom = -0.128052
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameTab" type="Panel" parent="Tabs"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l023w")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tabs/GameTab"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="Label" parent="Tabs/GameTab/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_l023w")
+theme_override_font_sizes/font_size = 32
+text = "Game Settings"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Tabs/GameTab/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_l023w")
+
+[node name="Ingame Name" type="HBoxContainer" parent="Tabs/GameTab/VBoxContainer" node_paths=PackedStringArray("Input")]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+script = ExtResource("3_vkvsy")
+Input = NodePath("LineEdit")
+SettingName = "player_name"
+
+[node name="Label" type="Label" parent="Tabs/GameTab/VBoxContainer/Ingame Name"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme = ExtResource("1_l023w")
+text = "Player Name
+"
+horizontal_alignment = 2
+
+[node name="LineEdit" type="LineEdit" parent="Tabs/GameTab/VBoxContainer/Ingame Name"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="ControlTab" type="Panel" parent="Tabs"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l023w")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tabs/ControlTab"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="Label" parent="Tabs/ControlTab/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_l023w")
+theme_override_font_sizes/font_size = 32
+text = "Control Settings"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Tabs/ControlTab/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_l023w")
+
+[node name="Mouse Sensitivity" type="HBoxContainer" parent="Tabs/ControlTab/VBoxContainer" node_paths=PackedStringArray("Input")]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+script = ExtResource("5_tqr58")
+Input = NodePath("HSlider")
+SettingName = "mouse_sensitivity"
+
+[node name="Label" type="Label" parent="Tabs/ControlTab/VBoxContainer/Mouse Sensitivity"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme = ExtResource("1_l023w")
+text = "Mouse Sensitivity"
+horizontal_alignment = 2
+
+[node name="HSlider" type="HSlider" parent="Tabs/ControlTab/VBoxContainer/Mouse Sensitivity"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("1_l023w")
+
+[node name="VideoTab" type="Panel" parent="Tabs"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l023w")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tabs/VideoTab"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="Label" parent="Tabs/VideoTab/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_l023w")
+theme_override_font_sizes/font_size = 32
+text = "Video Settings"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Tabs/VideoTab/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_l023w")
+
+[node name="Show FPS" type="HBoxContainer" parent="Tabs/VideoTab/VBoxContainer" node_paths=PackedStringArray("Input")]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+script = ExtResource("4_5t2f1")
+Input = NodePath("FormatBox/CheckBox")
+SettingName = "show_fps"
+
+[node name="Label" type="Label" parent="Tabs/VideoTab/VBoxContainer/Show FPS"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme = ExtResource("1_l023w")
+text = "Show FPS"
+horizontal_alignment = 2
+
+[node name="FormatBox" type="Control" parent="Tabs/VideoTab/VBoxContainer/Show FPS"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="Tabs/VideoTab/VBoxContainer/Show FPS/FormatBox"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -12.0
+offset_right = 24.0
+offset_bottom = 12.0
+grow_vertical = 2
+
+[node name="AudioTab" type="Panel" parent="Tabs"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l023w")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tabs/AudioTab"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="Label" parent="Tabs/AudioTab/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_l023w")
+theme_override_font_sizes/font_size = 32
+text = "Audio Settings"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Tabs/AudioTab/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_l023w")
+
+[node name="Music Volume" type="HBoxContainer" parent="Tabs/AudioTab/VBoxContainer" node_paths=PackedStringArray("Input")]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+script = ExtResource("5_tqr58")
+Input = NodePath("HSlider")
+SettingName = "music_volume"
+
+[node name="Label" type="Label" parent="Tabs/AudioTab/VBoxContainer/Music Volume"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme = ExtResource("1_l023w")
+text = "Music Volume"
+horizontal_alignment = 2
+
+[node name="HSlider" type="HSlider" parent="Tabs/AudioTab/VBoxContainer/Music Volume"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("1_l023w")
+max_value = 1.0
+step = 0.01
+
+[node name="SFX Volume" type="HBoxContainer" parent="Tabs/AudioTab/VBoxContainer" node_paths=PackedStringArray("Input")]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+script = ExtResource("5_tqr58")
+Input = NodePath("HSlider")
+SettingName = "sfx_volume"
+
+[node name="Label" type="Label" parent="Tabs/AudioTab/VBoxContainer/SFX Volume"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme = ExtResource("1_l023w")
+text = "Sound Effects Volume"
+horizontal_alignment = 2
+
+[node name="HSlider" type="HSlider" parent="Tabs/AudioTab/VBoxContainer/SFX Volume"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("1_l023w")
+max_value = 1.0
+step = 0.01
+
+[node name="Footer" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.066
+anchor_top = 0.039
+anchor_right = 0.934
+anchor_bottom = 0.1
+offset_left = -0.0319977
+offset_top = 564.728
+offset_right = 0.0319824
+offset_bottom = 565.2
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l023w")
+
+[node name="SaveButton" type="Button" parent="Footer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -20.0
+offset_right = 34.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l023w")
+text = "Save"
+
+[connection signal="visibility_changed" from="." to="." method="OnVisibilityChanged"]
+[connection signal="pressed" from="Header/TabSelectors/BackButton" to="." method="OnBackButtonPressed"]
+[connection signal="pressed" from="Header/TabSelectors/GameTabButton" to="." method="OnGameButtonPressed"]
+[connection signal="pressed" from="Header/TabSelectors/ControlTabButton" to="." method="OnControlButtonPressed"]
+[connection signal="pressed" from="Header/TabSelectors/VideoTabButton" to="." method="OnVideoButtonPressed"]
+[connection signal="pressed" from="Header/TabSelectors/AudioTabButton" to="." method="OnAudioButtonPressed"]
+[connection signal="pressed" from="Footer/SaveButton" to="." method="OnSaveButtonPressed"]

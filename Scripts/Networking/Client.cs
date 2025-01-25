@@ -16,6 +16,7 @@ public partial class Client : Node
     public override void _ExitTree()
     {
         CloseServer();
+        Settings.WriteSettings();
 
         base._ExitTree();
     }
@@ -103,7 +104,7 @@ public partial class Client : Node
     private void ConnectedToServer()
     {
         GD.Print("Connected to server");
-        UI.HideSpinner();
+        UI.ToggleSpinner(false);
         RpcId(1, MethodName.SendPlayerInfo, Multiplayer.GetUniqueId(), $"Player {Multiplayer.GetUniqueId()}");
         //main.connection_succeeded()
         //send_player_info.rpc_id(1, peer_name, peer_color, multiplayer.get_unique_id()
@@ -161,6 +162,13 @@ public partial class Client : Node
     [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyCurrentHost(long hostId) {
         GameManager.GameHost = hostId;
+        if (hostId == Multiplayer.GetUniqueId()) {
+            UI.Lobby.StartGameButton.Show();
+        }
+        else 
+        {
+            UI.Lobby.StartGameButton.Hide();
+        }
     }
 
     /// <summary>
