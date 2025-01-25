@@ -1,5 +1,6 @@
 using Godot;
 using multiplayerstew.Scripts.Attributes;
+using multiplayerstew.Scripts.Services;
 using System;
 
 public partial class MainMenu : Control
@@ -13,14 +14,11 @@ public partial class MainMenu : Control
     [Export, ExportRequired]
     public Control Settings { get; set; }
 
-    [Export, ExportRequired]
-    public ErrorMessage ErrorMessage { get; set; }
-
 
     public override void _Ready()
     {
         UI.MainMenu = this;
-        //GodotErrorService.ValidateRequiredData(this);
+        GodotErrorService.ValidateRequiredData(this);
     }
 
     public void CloseAllWindows() {
@@ -34,7 +32,7 @@ public partial class MainMenu : Control
         CloseAllWindows();
         Client.Instance.CreateLobbyAndConnect();
         LobbyPage.Show();
-        UI.ShowSpinner();
+        UI.ToggleSpinner(true);
     }
 
     public void OnJoinPressed()

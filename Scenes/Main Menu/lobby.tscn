@@ -21,7 +21,7 @@ color = Color(1, 1, 1, 1)
 grow_begin = -10.0
 grow_end = -10.0
 
-[node name="Lobby" type="Control" node_paths=PackedStringArray("PlayerPrototype")]
+[node name="Lobby" type="Control" node_paths=PackedStringArray("PlayerPrototype", "StartGameButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,6 +30,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_eorg6")
 PlayerPrototype = NodePath("Panel/Panel/Player List/PlayerPrototype")
+StartGameButton = NodePath("Panel/Button Container/Start")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -129,6 +130,7 @@ layout_mode = 2
 text = "Leave Game"
 
 [node name="Start" type="Button" parent="Panel/Button Container"]
+visible = false
 layout_mode = 2
 text = "Start Game"
 

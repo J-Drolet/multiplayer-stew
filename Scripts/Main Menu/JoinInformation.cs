@@ -30,6 +30,6 @@ public partial class JoinInformation : Control
         Client.Instance.ConnectToServer(IPInput.Text, int.Parse(PortInput.Text));
         Hide();
         LobbyPage.Show();
-        UI.ShowSpinner();
+        UI.ToggleSpinner(true);
     }
 }
