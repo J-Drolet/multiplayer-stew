@@ -30,14 +30,26 @@ public partial class Character : CharacterBody3D
 	public const float Speed = 5.0f;
 	public const float JumpVelocity = 4.5f;
 
+	public override void _EnterTree()
+	{
+		SetMultiplayerAuthority(Name.ToString().ToInt());
+	}
+
     public override void _Ready()
     {
 		GodotErrorService.ValidateRequiredData(this);
+	
+		if(!IsMultiplayerAuthority()) return;
+
+		GD.Print($"Peer {Multiplayer.GetUniqueId()} is making character {Name} the current");
 		Input.MouseMode = Input.MouseModeEnum.Captured;
+		Camera.MakeCurrent();
     }
 
     public override void _UnhandledInput(InputEvent @event)
     {
+		if(!IsMultiplayerAuthority()) return;
+
 		if(Input.MouseMode == Input.MouseModeEnum.Captured)
 		{
 			if (EquippedWeapon != null)
@@ -63,6 +75,7 @@ public partial class Character : CharacterBody3D
 				Head.RotateY(-iEvent.Relative.X * MouseSensitivity * 0.0001f);
                 Camera.RotateX(-iEvent.Relative.Y * MouseSensitivity * 0.0001f);
 				Camera.RotationDegrees = new Vector3(Math.Clamp(Camera.RotationDegrees.X, -85, 85), 0, 0);
+				
             }
 		}
 			
@@ -70,6 +83,8 @@ public partial class Character : CharacterBody3D
 
     public override void _Process(double delta)
     {
+		if(!IsMultiplayerAuthority()) return;
+
 		if (EquippedWeapon != null)
 		{
 			AmmoLabel.Text = EquippedWeapon.GetCurrentAmmoText();
@@ -82,6 +97,7 @@ public partial class Character : CharacterBody3D
 
     public override void _PhysicsProcess(double delta)
 	{
+		if(!IsMultiplayerAuthority()) return;
 		Vector3 velocity = Velocity;
 
 		// Add the gravity.
@@ -110,13 +126,14 @@ public partial class Character : CharacterBody3D
 			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
 			velocity.Z = Mathf.MoveToward(Velocity.Z, 0, Speed);
 		}
-
 		Velocity = velocity;
 		MoveAndSlide();
 	}
 
 	public void EquipWeapon(UpgradableWeapon weapon)
 	{
+		if(!IsMultiplayerAuthority()) return;
+
 		if (EquippedWeapon != null)
 		{
 			EquippedWeapon.QueueFree();

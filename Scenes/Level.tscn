@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://dustp76kyosr0"]
+[gd_scene load_steps=11 format=3 uid="uid://dustp76kyosr0"]
 
+[ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_xdbua"]
 [ext_resource type="PackedScene" uid="uid://bwh21gfyr2idt" path="res://Scenes/GodotBox.tscn" id="2_glbo0"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_hmwfx"]
 [ext_resource type="PackedScene" uid="uid://x7a1ptqtwtmp" path="res://Scenes/Pickups/PistolPickup.tscn" id="3_ttko1"]
@@ -18,6 +19,8 @@ size = Vector3(50, 0.25, 50)
 size = Vector3(50, 0.25, 50)
 
 [node name="Level" type="Node3D"]
+script = ExtResource("1_xdbua")
+PlayerScene = ExtResource("2_hmwfx")
 
 [node name="Floor" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.210621, 0)
@@ -30,14 +33,12 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
 shape = SubResource("BoxShape3D_bbwtt")
 
-[node name="Character" parent="." instance=ExtResource("2_hmwfx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.32287, 0)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.766896, 0.439592, -0.467578, 0, 0.728574, 0.684967, 0.641771, -0.525299, 0.558741, 0, 0, 0)
 
-[node name="StaticBody3D" parent="." instance=ExtResource("2_glbo0")]
+[node name="StaticBody3D" parent="." node_paths=PackedStringArray("Hitboxes") instance=ExtResource("2_glbo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.808029, -11.4214)
+Hitboxes = []
 
 [node name="PistolPickup" parent="." instance=ExtResource("3_ttko1")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.588806, -7.64804)
@@ -45,8 +46,23 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.5
 [node name="ShotgunPickup" parent="." instance=ExtResource("4_4busq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.48535, 0.602038, -7.69477)
 
-[node name="Target" parent="." instance=ExtResource("5_5mb3y")]
+[node name="Target" parent="." node_paths=PackedStringArray("Hitboxes") instance=ExtResource("5_5mb3y")]
 transform = Transform3D(2.44707, 0, 0, 0, 2.44707, 0, 0, 0, 2.44707, -4.73272, 0.992495, -7.92899)
+Hitboxes = []
 
 [node name="Mac10Pickup" parent="." instance=ExtResource("6_vl5y8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.42344, 0.702979, -7.972)
+
+[node name="Spawns" type="Node3D" parent="."]
+
+[node name="1" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0889, 0, 0)
+
+[node name="2" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1707, 0, 0)
+
+[node name="3" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.2456)
+
+[node name="4" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20.0295)
