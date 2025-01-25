@@ -40,6 +40,7 @@ namespace multiplayerstew.Scripts.Base
 
         public override void _Ready()
         {
+            GameManager.Players[GetMultiplayerAuthority()].projectileSpawner.AddSpawnableScene(Projectile.ResourcePath);
             CurrentAmmo = MaxAmmo;
             GodotErrorService.ValidateRequiredData(this);
         }
@@ -52,8 +53,9 @@ namespace multiplayerstew.Scripts.Base
                 CurrentAmmo -= 1;
                 for (int x = ProjectilePerShot; x > 0; x--)
                 {
-                    UpgradeableProjectile projectileInstance = GameManager.Players[GetMultiplayerAuthority()].projectileSpawner.Spawn(Projectile) as UpgradeableProjectile;
+                    UpgradeableProjectile projectileInstance = Projectile.Instantiate() as UpgradeableProjectile;
                     projectileInstance.GlobalTransform = ProjectileOrigin.GlobalTransform;
+                    GameManager.Players[GetMultiplayerAuthority()].projectileParent.AddChild(projectileInstance); 
                 }
             }
         }

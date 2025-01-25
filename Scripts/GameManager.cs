@@ -7,6 +7,7 @@ public static class GameManager
     public class PlayerInfo {
         public string name;
         public Node3D characterNode;
+        public Node3D projectileParent;
         public MultiplayerSpawner projectileSpawner;
     }
 
