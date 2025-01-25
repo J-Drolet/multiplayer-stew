@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://lcx7afjcynql"]
+[gd_scene load_steps=7 format=3 uid="uid://lcx7afjcynql"]
 
 [ext_resource type="Script" path="res://Scripts/Character.cs" id="1_n6eoi"]
 [ext_resource type="Texture2D" uid="uid://bp1y6idrr3kgr" path="res://Assets/Crosshair.png" id="2_oey5o"]
@@ -9,6 +9,17 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_4dtqg"]
 font_size = 36
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_w7qvv"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath("Head:rotation")
+properties/2/spawn = true
+properties/2/replication_mode = 1
 
 [node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "ProjectileOrigin", "Head", "Hand", "AmmoLabel")]
 script = ExtResource("1_n6eoi")
@@ -79,3 +90,6 @@ text = "0/0"
 label_settings = SubResource("LabelSettings_4dtqg")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_w7qvv")
