@@ -3,8 +3,8 @@
 [ext_resource type="Theme" uid="uid://y8ujbi36xquh" path="res://Assets/Themes/MainMenu.tres" id="1_c0h8v"]
 [ext_resource type="Script" path="res://Scripts/Main Menu/MainMenu.cs" id="1_rahjv"]
 [ext_resource type="PackedScene" uid="uid://ck74o0nreiu38" path="res://Scenes/Main Menu/joinInformation.tscn" id="3_svqof"]
-[ext_resource type="PackedScene" uid="uid://dc0pw0ayb5an4" path="res://Scenes/Main Menu/lobby.tscn" id="4_tv7ky"]
-[ext_resource type="PackedScene" uid="uid://mujxr1ewuap1" path="res://Scenes/Main Menu/settingsScreen.tscn" id="5_r16hp"]
+[ext_resource type="PackedScene" uid="uid://cyk5w16gxy3dv" path="res://Scenes/Main Menu/lobby.tscn" id="4_tv7ky"]
+[ext_resource type="PackedScene" path="res://Scenes/Main Menu/settingsScreen.tscn" id="5_r16hp"]
 
 [node name="MainMenu" type="Control" node_paths=PackedStringArray("JoinInformation", "LobbyPage", "Settings")]
 layout_mode = 3
