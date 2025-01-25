@@ -141,7 +141,7 @@ public partial class Client : Node
 
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyPlayerConnected(long id, string name) {
-        GameManager.Players.Add(id, new GameManager.PlayerInfo{ name = name, id = id });
+        GameManager.Players.Add(id, new GameManager.PlayerInfo{ name = name });
     }
 
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]

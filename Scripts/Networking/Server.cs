@@ -79,11 +79,12 @@ public partial class Server : Node
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyPlayerConnected(long id, string name) {
         // For the peer that connected, we have to tell them about all other players that joined before them
-        foreach(GameManager.PlayerInfo player in GameManager.Players.Values)
+        foreach(long peerId in GameManager.Players.Keys)
         {
-            RpcId(id, MethodName.NotifyPlayerConnected, player.id, player.name);
+            RpcId(id, MethodName.NotifyPlayerConnected, peerId, GameManager.Players[peerId].name);
         }
-        GameManager.Players.Add(id, new GameManager.PlayerInfo{ name = name, id = id });
+
+        GameManager.Players.Add(id, new GameManager.PlayerInfo{ name = name });
     }
 
     /// <summary>

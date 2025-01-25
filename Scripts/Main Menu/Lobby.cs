@@ -2,6 +2,7 @@ using Godot;
 using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Services;
 using System;
+using System.Data.Common;
 
 
 public partial class Lobby : Control
@@ -28,9 +29,9 @@ public partial class Lobby : Control
             }
         }
 
-        foreach(GameManager.PlayerInfo player in GameManager.Players.Values)
+        foreach(long id in GameManager.Players.Keys)
         {
-            AddPlayer(player.id, player.name);
+            AddPlayer(id, GameManager.Players[id].name);
         }
     }
 
