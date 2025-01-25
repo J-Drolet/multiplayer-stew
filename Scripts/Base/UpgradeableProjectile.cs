@@ -31,6 +31,9 @@ namespace multiplayerstew.Scripts.Base
 
         public override void _Ready()
         {
+            GodotErrorService.ValidateRequiredData(this);
+            if (!IsMultiplayerAuthority()) return;
+
             Vector3 directionVector = -Transform.Basis.Z;
 
             Random rand = new Random();
@@ -38,12 +41,12 @@ namespace multiplayerstew.Scripts.Base
             directionVector = directionVector.Rotated(Transform.Basis.Y, ((float)rand.NextDouble() * ShotSpread*2) + (-ShotSpread));
 
             Velocity = directionVector * InitialVelocity;
-
-            GodotErrorService.ValidateRequiredData(this);
         }
 
         public override void _Process(double delta)
         {
+            if (!IsMultiplayerAuthority()) return;
+
             TimeAlive += (float)delta;
             if (TimeAlive > Lifespan)
             {
@@ -53,6 +56,8 @@ namespace multiplayerstew.Scripts.Base
 
         public override void _PhysicsProcess(double delta)
         {
+            if (!IsMultiplayerAuthority()) return;
+
             Velocity += ProjectileGravity * (float)delta;
 
             if (Velocity != Vector3.Zero)

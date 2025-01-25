@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b8hpvrno7saob"]
+[gd_scene load_steps=12 format=3 uid="uid://b8hpvrno7saob"]
 
 [ext_resource type="Script" path="res://Scripts/Weapons/Pistol.cs" id="1_7881s"]
 [ext_resource type="PackedScene" uid="uid://g1mopusla6rw" path="res://Scenes/Projectiles/SimpleBullet.tscn" id="2_6tjck"]
@@ -219,6 +219,26 @@ albedo_color = Color(0.907052, 0.693446, 0.497686, 1)
 [sub_resource type="SphereMesh" id="SphereMesh_sshab"]
 material = SubResource("StandardMaterial3D_mrl0e")
 
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ckjjw"]
+properties/0/path = NodePath("Mag:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath("Slide:position")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath("ReloadHand:position")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+properties/3/path = NodePath(".:position")
+properties/3/spawn = true
+properties/3/replication_mode = 1
+properties/4/path = NodePath(".:rotation")
+properties/4/spawn = true
+properties/4/replication_mode = 1
+properties/5/path = NodePath("ReloadHand:visible")
+properties/5/spawn = true
+properties/5/replication_mode = 1
+
 [node name="Pistol" type="Node3D" node_paths=PackedStringArray("APlayer")]
 script = ExtResource("1_7881s")
 WeaponName = "Godot Pistol"
@@ -257,3 +277,6 @@ transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, -0.0739522, -0.25013
 visible = false
 mesh = SubResource("SphereMesh_sshab")
 skeleton = NodePath("../AnimationPlayer")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_ckjjw")

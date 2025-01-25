@@ -14,14 +14,24 @@ public partial class Character : CharacterBody3D
 	public Node3D Head { get; set; }
 	[Export, ExportRequired]
 	public Node3D Hand { get; set; }
-	[Export]
-	private UpgradableWeapon equippedWeapon;
+	
 	[Export, ExportRequired]
 	private Label AmmoLabel { get; set; }
+    [Export]
+    private UpgradableWeapon equippedWeapon;
     public UpgradableWeapon EquippedWeapon
 	{
 		get { return equippedWeapon; }
-		set { EquipWeapon(value); }	
+		set {
+            if (EquippedWeapon != null)
+            {
+                EquippedWeapon.QueueFree();
+            }
+            equippedWeapon = value;
+            EquippedWeapon.ProjectileOrigin = ProjectileOrigin;
+			equippedWeapon.SetMultiplayerAuthority(Name.ToString().ToInt());
+            Hand.AddChild(EquippedWeapon);
+        }	
 	}
 
     [Export]
@@ -128,17 +138,4 @@ public partial class Character : CharacterBody3D
 		Velocity = velocity;
 		MoveAndSlide();
 	}
-
-	public void EquipWeapon(UpgradableWeapon weapon)
-	{
-		if(!IsMultiplayerAuthority()) return;
-
-		if (EquippedWeapon != null)
-		{
-			EquippedWeapon.QueueFree();
-		}
-		equippedWeapon = weapon;
-        EquippedWeapon.ProjectileOrigin = ProjectileOrigin; 
-        Hand.AddChild(EquippedWeapon);
-    }
 }
