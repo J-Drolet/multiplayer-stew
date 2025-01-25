@@ -366,7 +366,6 @@ libraries = {
 }
 
 [node name="Front" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="Front"]
 transform = Transform3D(0.269549, 0, 0, 0, -8.17605e-08, 0.122926, 0, -1.87046, -5.37327e-09, -0.0715945, 0.266807, -0.761792)

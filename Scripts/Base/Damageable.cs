@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace multiplayerstew.Scripts.Base
 {
-    public partial class DamageSource : Node
+    public partial class Damageable : Node
     {
         [Export, ExportRequired]
         public float MaxHealth { get; set; } = 100.0f;
