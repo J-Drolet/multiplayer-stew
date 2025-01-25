@@ -162,10 +162,10 @@ tracks/1/path = NodePath("ReloadHand:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.43),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.43, 1.75),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true]
+"values": [false, true, false]
 }
 tracks/2/type = "value"
 tracks/2/imported = false

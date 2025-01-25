@@ -23,10 +23,19 @@ public partial class SceneManager : Node
             GameManager.PlayerInfo playerInfo = GameManager.Players[players[i]];
 
             CharacterBody3D currentPlayer = (CharacterBody3D) PlayerScene.Instantiate();
-            currentPlayer.Name = playerInfo.id.ToString();
+            currentPlayer.Name = players[i].ToString();
             AddChild(currentPlayer);
+            Node3D projectileParent = new Node3D();
+            MultiplayerSpawner projectileSpawner = new MultiplayerSpawner();
+            projectileSpawner.SpawnPath = projectileParent.GetPath();
+            projectileParent.AddChild(projectileSpawner);
+            
+            projectileParent.SetMultiplayerAuthority((int)players[i]);
+            projectileParent.Name = "PP" + players[i];
+            AddChild(projectileParent);
 
             playerInfo.characterNode = currentPlayer;
+            playerInfo.projectileSpawner = projectileSpawner;
             GameManager.Players[players[i]] = playerInfo;
             foreach(Node3D spawn in GetTree().GetNodesInGroup("PlayerSpawnPoint"))
             {

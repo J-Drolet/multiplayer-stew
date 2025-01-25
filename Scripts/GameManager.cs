@@ -4,10 +4,10 @@ using System.Collections.Generic;
 
 public static class GameManager
 {   
-    public struct PlayerInfo {
+    public class PlayerInfo {
         public string name;
-        public long id;
         public Node3D characterNode;
+        public MultiplayerSpawner projectileSpawner;
     }
 
     public static long GameHost { get; set; } = -1;

@@ -52,9 +52,8 @@ namespace multiplayerstew.Scripts.Base
                 CurrentAmmo -= 1;
                 for (int x = ProjectilePerShot; x > 0; x--)
                 {
-                    UpgradeableProjectile projectileInstance = Projectile.Instantiate() as UpgradeableProjectile;
+                    UpgradeableProjectile projectileInstance = GameManager.Players[GetMultiplayerAuthority()].projectileSpawner.Spawn(Projectile) as UpgradeableProjectile;
                     projectileInstance.GlobalTransform = ProjectileOrigin.GlobalTransform;
-                    GetTree().CurrentScene.AddChild(projectileInstance);
                 }
             }
         }
