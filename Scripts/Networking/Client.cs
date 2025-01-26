@@ -130,9 +130,8 @@ public partial class Client : Node
         UI.Lobby.RefreshLobby();
         if (id == 1) // if the server disconnected we get kicked back to main menu
         {
-            //@TODO 
-            //disconnect_from_server()
-            //main.server_closed()
+            GameManager.LeaveJoinedGame();
+            UI.ErrorMessage.DisplayError("Server disconnected");
         }
     }
 

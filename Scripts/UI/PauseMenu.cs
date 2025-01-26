@@ -36,9 +36,6 @@ public partial class PauseMenu : Control
     public void OnLeaveButtonPressed()
     {
         GameManager.LeaveJoinedGame();
-        UI.MainMenu.Show();
-        UI.PauseMenu.Hide();
-        UI.InGameUI.Hide();
     }
 
     public void OnExitButtonPressed()

@@ -36,6 +36,11 @@ public static class GameManager
             CurrentLevel.QueueFree();
             CurrentLevel = null;
         }
+
+        UI.MainMenu.Show();
+        UI.PauseMenu.Hide();
+        UI.InGameUI.Hide();
+        Input.MouseMode = Input.MouseModeEnum.Visible;
     }
 
     public static void UpdateAudioBuses()
