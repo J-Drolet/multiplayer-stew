@@ -3,8 +3,8 @@ using System;
 
 public partial class Config: Node
 {
-    public static ConfigFile UserSettings { get; set; }
-    public static ConfigFile DefaultSettings { get; set; }
+    private static ConfigFile UserSettings { get; set; }
+    private static ConfigFile DefaultSettings { get; set; }
 
     // File paths for settings
     private static readonly string UserSettingsFilepath = "user://MultiplayerStewSettings.cfg";
