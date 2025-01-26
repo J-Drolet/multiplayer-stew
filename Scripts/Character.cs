@@ -70,7 +70,7 @@ public partial class Character : CharacterBody3D
 			if(@event is InputEventMouseMotion)
 			{
 				InputEventMouseMotion iEvent = @event as InputEventMouseMotion;
-				float MouseSensitivity = Settings.GetValue("mouse_sensitivity").ToFloat();
+				float MouseSensitivity = (float) Config.GetValue("settings", "mouse_sensitivity");
 				Head.RotateY(-iEvent.Relative.X * MouseSensitivity * 0.0001f);
                 Camera.RotateX(-iEvent.Relative.Y * MouseSensitivity * 0.0001f);
 				Camera.RotationDegrees = new Vector3(Math.Clamp(Camera.RotationDegrees.X, -85, 85), 0, 0);

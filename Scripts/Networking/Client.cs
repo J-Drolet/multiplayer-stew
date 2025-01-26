@@ -16,7 +16,7 @@ public partial class Client : Node
     public override void _ExitTree()
     {
         CloseServer();
-        Settings.WriteSettings();
+        Config.WriteConfig();
 
         base._ExitTree();
     }

@@ -115,6 +115,7 @@ theme_override_constants/separation = 40
 alignment = 1
 script = ExtResource("3_7u800")
 Input = NodePath("LineEdit")
+SettingSection = "settings"
 SettingName = "player_name"
 
 [node name="Label" type="Label" parent="Tabs/GameTab/VBoxContainer/Ingame Name"]
@@ -164,6 +165,7 @@ theme_override_constants/separation = 40
 alignment = 1
 script = ExtResource("4_j6ui4")
 Input = NodePath("HSlider")
+SettingSection = "settings"
 SettingName = "mouse_sensitivity"
 
 [node name="Label" type="Label" parent="Tabs/ControlTab/VBoxContainer/Mouse Sensitivity"]
@@ -214,6 +216,7 @@ theme_override_constants/separation = 40
 alignment = 1
 script = ExtResource("5_aka8e")
 Input = NodePath("FormatBox/CheckBox")
+SettingSection = "settings"
 SettingName = "show_fps"
 
 [node name="Label" type="Label" parent="Tabs/VideoTab/VBoxContainer/Show FPS"]
@@ -272,6 +275,7 @@ theme_override_constants/separation = 40
 alignment = 1
 script = ExtResource("4_j6ui4")
 Input = NodePath("HSlider")
+SettingSection = "settings"
 SettingName = "music_volume"
 
 [node name="Label" type="Label" parent="Tabs/AudioTab/VBoxContainer/Music Volume"]
@@ -295,6 +299,7 @@ theme_override_constants/separation = 40
 alignment = 1
 script = ExtResource("4_j6ui4")
 Input = NodePath("HSlider")
+SettingSection = "settings"
 SettingName = "sfx_volume"
 
 [node name="Label" type="Label" parent="Tabs/AudioTab/VBoxContainer/SFX Volume"]

@@ -17,8 +17,8 @@ config/icon="res://Assets/icon.svg"
 
 [autoload]
 
-Settings="*res://Scripts/Settings.cs"
 Ui="*res://Scripts/UI/UI.cs"
+Config="*res://Scripts/Config.cs"
 
 [dotnet]
 

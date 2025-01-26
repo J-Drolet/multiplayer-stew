@@ -14,9 +14,9 @@ public partial class ButtonSettingInput: SettingInput
 
     public override void InitSetting() 
     {
-        string settingValue = Settings.GetValue(SettingName);
+        bool settingValue = (bool)Config.GetValue(SettingSection, SettingName);
         
-        if (settingValue == "true")
+        if (settingValue)
         {
             Input.ButtonPressed = true;
         }
@@ -29,9 +29,8 @@ public partial class ButtonSettingInput: SettingInput
     public override void SaveSetting() 
     {
         bool isToggled = Input.ButtonPressed;
-        string settingValue = isToggled ? "true" : "false";
 
-        Settings.AddValue(SettingName, settingValue);
+        Config.SetValue(SettingSection, SettingName, isToggled);
     }
 
 
