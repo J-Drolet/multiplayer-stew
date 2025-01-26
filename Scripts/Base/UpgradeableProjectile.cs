@@ -2,6 +2,7 @@
 using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Services;
 using System;
+using System.Linq;
 
 
 namespace multiplayerstew.Scripts.Base
@@ -28,6 +29,11 @@ namespace multiplayerstew.Scripts.Base
         private Vector3 ProjectileGravity = Vector3.Down * 5;
         private float TimeAlive;
         private int HitsLeft;
+
+        public override void _EnterTree()
+        {
+            SetMultiplayerAuthority(Name.ToString().Split('#').First().ToInt());
+        }
 
         public override void _Ready()
         {

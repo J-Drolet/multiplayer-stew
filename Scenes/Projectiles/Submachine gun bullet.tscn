@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://de6ynjcj4qnom"]
+[gd_scene load_steps=6 format=3 uid="uid://de6ynjcj4qnom"]
 
 [ext_resource type="Script" path="res://Scripts/Projectiles/SimpleBullet.cs" id="1_vyfoj"]
 
@@ -11,6 +11,14 @@ material = SubResource("StandardMaterial3D_xqcxk")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_hmntw"]
 radius = 0.137246
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_s3o7p"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
 
 [node name="sub bullet" type="Node3D" node_paths=PackedStringArray("Hitbox")]
 transform = Transform3D(0.434487, 0, 0, 0, 0.434487, 0, 0, 0, 0.434487, 0, 0, 0)
@@ -31,3 +39,6 @@ collision_mask = 20
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("SphereShape3D_hmntw")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_s3o7p")
