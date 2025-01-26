@@ -27,6 +27,7 @@ public partial class SceneManager : Node
             AddChild(currentPlayer);
             Node3D projectileParent = new Node3D();
             MultiplayerSpawner projectileSpawner = new MultiplayerSpawner();
+            projectileSpawner.Name = "SPAWNER";
 
             AddChild(projectileParent);
             projectileParent.AddChild(projectileSpawner);
