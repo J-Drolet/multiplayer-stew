@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bwh21gfyr2idt"]
 
-[ext_resource type="Texture2D" uid="uid://b5gav0ulky2i1" path="res://Assets/icon.svg" id="1_srln8"]
+[ext_resource type="Texture2D" uid="uid://rb8847h6lkvg" path="res://Assets/icon.svg" id="1_srln8"]
 [ext_resource type="Script" path="res://Scripts/Base/Damageable.cs" id="1_srmf1"]
 [ext_resource type="Script" path="res://Scripts/Base/DamageArea.cs" id="3_b7p7m"]
 
