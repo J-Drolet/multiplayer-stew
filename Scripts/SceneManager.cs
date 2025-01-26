@@ -36,11 +36,10 @@ public partial class SceneManager : Node
 
             AddChild(projectileParent);
             projectileParent.AddChild(projectileSpawner);
-            projectileSpawner.SpawnPath = projectileParent.GetPath();
-
             projectileParent.SetMultiplayerAuthority((int)players[i]);
             projectileParent.Name = "PP" + players[i];
 
+            projectileSpawner.SpawnPath = projectileParent.GetPath();
             playerInfo.characterNode = currentPlayer;
             playerInfo.projectileSpawner = projectileSpawner;
             playerInfo.projectileParent = projectileParent;
