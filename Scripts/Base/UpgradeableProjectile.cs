@@ -40,7 +40,7 @@ namespace multiplayerstew.Scripts.Base
             GodotErrorService.ValidateRequiredData(this);
             if (!IsMultiplayerAuthority()) return;
 
-            Vector3 directionVector = -Transform.Basis.Z;
+            Vector3 directionVector = -GlobalTransform.Basis.Z;
 
             Random rand = new Random();
             directionVector = directionVector.Rotated(Transform.Basis.X, ((float)rand.NextDouble() * ShotSpread*2) + (-ShotSpread));

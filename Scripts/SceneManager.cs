@@ -27,7 +27,7 @@ public partial class SceneManager : Node
             }
             GameManager.PlayerInfo playerInfo = GameManager.Players[players[i]];
 
-            CharacterBody3D currentPlayer = (CharacterBody3D) PlayerScene.Instantiate();
+            Character currentPlayer = (Character) PlayerScene.Instantiate();
             currentPlayer.Name = players[i].ToString();
             AddChild(currentPlayer);
             Node3D projectileParent = new Node3D();

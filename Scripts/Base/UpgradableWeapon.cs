@@ -26,8 +26,6 @@ namespace multiplayerstew.Scripts.Base
         public FireModes FireMode { get; set; } = FireModes.Single;
         [Export]
         public int ProjectilePerShot { get; set; } = 1;
-        [Export]
-        public Node3D ProjectileOrigin { get; set; }
         [Export, ExportRequired]
         public PackedScene Projectile { get; set; }
         [Export]
@@ -55,8 +53,8 @@ namespace multiplayerstew.Scripts.Base
                 {
                     UpgradeableProjectile projectileInstance = Projectile.Instantiate() as UpgradeableProjectile;
                     projectileInstance.Name = GetMultiplayerAuthority().ToString() +"#";
+                    projectileInstance.GlobalTransform = GameManager.Players[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalTransform;
                     GameManager.Players[GetMultiplayerAuthority()].projectileParent.AddChild(projectileInstance, true);
-                    projectileInstance.GlobalTransform = ProjectileOrigin.GlobalTransform;
                 }
             }
         }

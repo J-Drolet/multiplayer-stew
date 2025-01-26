@@ -26,7 +26,6 @@ public partial class Character : CharacterBody3D
                 EquippedWeapon.QueueFree();
             }
             equippedWeapon = value;
-            EquippedWeapon.ProjectileOrigin = ProjectileOrigin;
 			equippedWeapon.SetMultiplayerAuthority(Name.ToString().ToInt());
             Hand.AddChild(EquippedWeapon);
         }	
