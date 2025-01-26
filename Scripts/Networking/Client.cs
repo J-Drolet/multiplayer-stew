@@ -105,7 +105,7 @@ public partial class Client : Node
     {
         GD.Print("Connected to server");
         UI.ToggleSpinner(false);
-        RpcId(1, MethodName.SendPlayerInfo, Multiplayer.GetUniqueId(), $"Player {Multiplayer.GetUniqueId()}");
+        RpcId(1, MethodName.SendPlayerInfo, Multiplayer.GetUniqueId(), Config.GetValue("settings", "player_name").ToString());
         //main.connection_succeeded()
         //send_player_info.rpc_id(1, peer_name, peer_color, multiplayer.get_unique_id()
     }
@@ -140,8 +140,8 @@ public partial class Client : Node
     public void SendPlayerInfo(long id, string name) {}
 
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-    public void NotifyPlayerConnected(long id, string name) {
-        GameManager.Players.Add(id, new GameManager.PlayerInfo{ name = name });
+    public void NotifyPlayerConnected(long id, string name, int sequenceNumber) {
+        GameManager.Players.Add(id, new GameManager.PlayerInfo{ name = name, sequenceNumber = sequenceNumber });
     }
 
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]

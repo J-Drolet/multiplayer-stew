@@ -67,7 +67,7 @@ public partial class Server : Node
     /// <param name="name"></param>
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void SendPlayerInfo(long id, string name) {
-        Rpc(MethodName.NotifyPlayerConnected, id, name);
+        Rpc(MethodName.NotifyPlayerConnected, id, name, GameManager.Players.Count);
         Rpc(MethodName.NotifyCurrentHost, GameManager.GameHost);
     }
 
@@ -77,14 +77,14 @@ public partial class Server : Node
     /// <param name="id"></param>
     /// <param name="name"></param>
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-    public void NotifyPlayerConnected(long id, string name) {
+    public void NotifyPlayerConnected(long id, string name, int sequenceNumber) {
         // For the peer that connected, we have to tell them about all other players that joined before them
         foreach(long peerId in GameManager.Players.Keys)
         {
-            RpcId(id, MethodName.NotifyPlayerConnected, peerId, GameManager.Players[peerId].name);
+            RpcId(id, MethodName.NotifyPlayerConnected, peerId, GameManager.Players[peerId].name, GameManager.Players[peerId].sequenceNumber);
         }
 
-        GameManager.Players.Add(id, new GameManager.PlayerInfo{ name = name });
+        GameManager.Players.Add(id, new GameManager.PlayerInfo{ name = name, sequenceNumber = sequenceNumber });
     }
 
     /// <summary>

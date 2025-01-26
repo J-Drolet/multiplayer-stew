@@ -3,6 +3,7 @@ using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Services;
 using System;
 using System.Data.Common;
+using System.Linq;
 
 
 public partial class Lobby : Control
@@ -29,7 +30,7 @@ public partial class Lobby : Control
             }
         }
 
-        foreach(long id in GameManager.Players.Keys)
+        foreach(long id in GameManager.Players.Keys.OrderBy(x => GameManager.Players[x].sequenceNumber))
         {
             AddPlayer(id, GameManager.Players[id].name);
         }
@@ -38,7 +39,7 @@ public partial class Lobby : Control
     public void AddPlayer(long id, string name)
     {
         Control player = PlayerPrototype.Duplicate() as Control;
-        player.GetNode<Label>("Name").Text = id.ToString();
+        player.GetNode<Label>("Name").Text = $"{name} ({id}) Sequence: {GameManager.Players[id].sequenceNumber}";
         PlayerPrototype.GetParent().AddChild(player);
         player.Show();
     }
