@@ -15,6 +15,8 @@ public static class GameManager
 
     public static Dictionary<long, PlayerInfo> Players = new Dictionary<long, PlayerInfo>();
 
+    public static Node CurrentLevel { get; set; }
+
     public static void RemovePlayer(long id)
     {
         if(Players.ContainsKey(id) && Players[id].characterNode != null)
@@ -23,6 +25,16 @@ public static class GameManager
         }
 
         Players.Remove(id);
+    }
+
+    public static void LeaveJoinedGame()
+    {
+        Client.Instance.Disconnect();
+        if(CurrentLevel != null)
+        {
+            CurrentLevel.QueueFree();
+            CurrentLevel = null;
+        }
     }
 
     public static void UpdateAudioBuses()

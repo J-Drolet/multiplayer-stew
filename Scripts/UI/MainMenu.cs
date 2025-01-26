@@ -11,9 +11,6 @@ public partial class MainMenu : Control
     [Export, ExportRequired]
     public Control LobbyPage { get; set; }
 
-    [Export, ExportRequired]
-    public Control Settings { get; set; }
-
 
     public override void _Ready()
     {
@@ -44,7 +41,7 @@ public partial class MainMenu : Control
     public void OnSettingsPressed() 
     {
         CloseAllWindows();
-        Settings.Show();
+        UI.SettingsScreen.Show();
     }
 
     public void OnQuitPressed() 

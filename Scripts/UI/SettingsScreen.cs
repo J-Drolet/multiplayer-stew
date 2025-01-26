@@ -21,6 +21,7 @@ public partial class SettingsScreen : Control
     public override void _Ready()
     {
         GodotErrorService.ValidateRequiredData(this);
+        UI.SettingsScreen = this;
         SettingInputs = FindSettings(this, new List<SettingInput>());
     }
 

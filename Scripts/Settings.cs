@@ -13,7 +13,7 @@ public partial class Settings : Node
     private static readonly string DefaultsFilepath = "res://Config/defaults.cfg";
 
     // We use an instance purely so we can emit events
-    private static Settings Instance;
+    public static Settings Instance;
 
     public override void _Ready()
     {
@@ -101,6 +101,7 @@ public partial class Settings : Node
     // Writes all the values in the settings dictionary to disk
     public static void WriteSettings()
     {
+        GD.Print($"Settings.WriteSettings - Writing settings to {Filepath}");
         if (ActiveSettings.Count == 0)
         {
             return;
@@ -111,6 +112,7 @@ public partial class Settings : Node
         foreach (var key in ActiveSettings.Keys)
         {
             fileAccess.StoreLine(key + ":" + ActiveSettings[key]);
+            GD.Print($"Settings.WriteSettings - Wrote setting {key} with value {ActiveSettings[key]}");
         }
 
         fileAccess.Close();
