@@ -38,9 +38,9 @@ namespace multiplayerstew.Scripts.Base
 
         public override void _Ready()
         {
+            GodotErrorService.ValidateRequiredData(this);
             GameManager.Players[GetMultiplayerAuthority()].projectileSpawner.AddSpawnableScene(Projectile.ResourcePath);
             CurrentAmmo = MaxAmmo;
-            GodotErrorService.ValidateRequiredData(this);
         }
 
         public void Fire()
