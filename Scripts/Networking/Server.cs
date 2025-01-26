@@ -53,6 +53,8 @@ public partial class Server : Node
             GameManager.GameHost = id;
         }
         
+        RpcId(id, MethodName.NotifyCurrentHost, GameManager.GameHost);
+        
         if(AcceptingConnections == false)
         {
             RpcId(id, MethodName.NotifyConnectionRefused, "Connection failed: Game has already started");
@@ -68,7 +70,6 @@ public partial class Server : Node
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void SendPlayerInfo(long id, string name) {
         Rpc(MethodName.NotifyPlayerConnected, id, name, GameManager.Players.Count);
-        Rpc(MethodName.NotifyCurrentHost, GameManager.GameHost);
     }
 
     /// <summary>
@@ -85,15 +86,6 @@ public partial class Server : Node
         }
 
         GameManager.Players.Add(id, new GameManager.PlayerInfo{ name = name, sequenceNumber = sequenceNumber });
-    }
-
-    /// <summary>
-    /// Server uses this to tell all clients about a player that disconnected.
-    /// </summary>
-    /// <param name="id"></param>
-    [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-    public void NotifyPlayerDisconnected(long id) {
-        GameManager.Players.Remove(id);
     }
 
     /// <summary>

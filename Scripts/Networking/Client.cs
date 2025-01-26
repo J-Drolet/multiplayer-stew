@@ -126,7 +126,8 @@ public partial class Client : Node
     private void PeerDisconnected(long id)
     {
         GD.Print($"Peer {Multiplayer.GetUniqueId()} received message: Player disconnected: {id}");
-        GameManager.Players.Remove(id);
+        GameManager.Players.Remove(id);        
+        UI.Lobby.RefreshLobby();
         if (id == 1) // if the server disconnected we get kicked back to main menu
         {
             //@TODO 
@@ -142,22 +143,21 @@ public partial class Client : Node
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyPlayerConnected(long id, string name, int sequenceNumber) {
         GameManager.Players.Add(id, new GameManager.PlayerInfo{ name = name, sequenceNumber = sequenceNumber });
+        UI.Lobby.RefreshLobby();
     }
 
-    [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-    public void NotifyPlayerDisconnected(long id) {
-        GameManager.Players.Remove(id);
-    }
-
-    [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+    [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyStartGame() 
     {
-        PackedScene levelPackedScene = (PackedScene)ResourceLoader.Load("res://Scenes/Level.tscn");
-        Node level = levelPackedScene.Instantiate();
-        GetTree().Root.AddChild(level);
-        GameManager.CurrentLevel = level;
-        UI.MainMenu.CloseAllWindows();
-        UI.MainMenu.Hide();
+        if(Multiplayer.GetRemoteSenderId() == 1) // only the server should call this
+        {
+            PackedScene levelPackedScene = (PackedScene)ResourceLoader.Load("res://Scenes/Level.tscn");
+            Node level = levelPackedScene.Instantiate();
+            GetTree().Root.AddChild(level);
+            GameManager.CurrentLevel = level;
+            UI.MainMenu.CloseAllWindows();
+            UI.MainMenu.Hide();
+        }
     }
 
     [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]

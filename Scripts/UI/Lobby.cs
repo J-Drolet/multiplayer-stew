@@ -20,7 +20,7 @@ public partial class Lobby : Control
         UI.Lobby = this;
     }
 
-    public override void _Process(double delta)
+    public void RefreshLobby()
     {
         foreach(Node child in PlayerPrototype.GetParent().GetChildren())
         {
@@ -36,10 +36,11 @@ public partial class Lobby : Control
         }
     }
 
-    public void AddPlayer(long id, string name)
+    private void AddPlayer(long id, string name)
     {
         Control player = PlayerPrototype.Duplicate() as Control;
-        player.GetNode<Label>("Name").Text = $"{name} ({id}) Sequence: {GameManager.Players[id].sequenceNumber}";
+        string symbol = id == GameManager.GameHost ? "♔" : "";
+        player.GetNode<Label>("Name").Text = $"{name} ({id}) Sequence: {GameManager.Players[id].sequenceNumber} {symbol}";
         PlayerPrototype.GetParent().AddChild(player);
         player.Show();
     }
