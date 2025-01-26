@@ -2,6 +2,7 @@ using Godot;
 using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Services;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 public partial class SceneManager : Node
@@ -16,8 +17,10 @@ public partial class SceneManager : Node
         UI.InGameUI.Show();
 
         // spawning characters on spawn points (ran on every peer)
-        long[] players = GameManager.Players.Keys.ToArray();
-        for(int i = 0; i < players.Length; i++)
+        List<long> players = GameManager.Players.Keys.OrderBy(p => p).ToList();
+        List<Node3D> spawnPoints = GetTree().GetNodesInGroup("PlayerSpawnPoint").Select(s => s as Node3D).ToList();
+
+        for (int i = 0; i < players.Count; i++)
         {   
             if(players[i] == 1) {
                 continue; // skip the server
@@ -42,12 +45,10 @@ public partial class SceneManager : Node
             playerInfo.projectileSpawner = projectileSpawner;
             playerInfo.projectileParent = projectileParent;
             GameManager.Players[players[i]] = playerInfo;
-            foreach(Node3D spawn in GetTree().GetNodesInGroup("PlayerSpawnPoint"))
+
+            if(spawnPoints != null && spawnPoints.Count > i)
             {
-                if(spawn.Name == i.ToString())
-                {
-                    currentPlayer.GlobalPosition = spawn.GlobalPosition;
-                }
+                currentPlayer.GlobalPosition = spawnPoints[i].GlobalPosition;
             }
         }
     }
