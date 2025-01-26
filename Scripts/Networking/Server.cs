@@ -98,6 +98,11 @@ public partial class Server : Node
             GD.Print("Server.NotifyStartGame - Telling clients to start their games");
             AcceptingConnections = false;
             Rpc(MethodName.NotifyStartGame);
+
+            PackedScene levelPackedScene = (PackedScene)ResourceLoader.Load("res://Scenes/Level.tscn");
+            Node level = levelPackedScene.Instantiate();
+            Root.Instance.AddChild(level); // using Config.Instance just to access tree
+            GameManager.CurrentLevel = level;
         }
         else 
         {

@@ -148,15 +148,8 @@ public partial class Client : Node
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyStartGame() 
     {
-        if(Multiplayer.GetRemoteSenderId() == 1) // only the server should call this
-        {
-            PackedScene levelPackedScene = (PackedScene)ResourceLoader.Load("res://Scenes/Level.tscn");
-            Node level = levelPackedScene.Instantiate();
-            GetTree().Root.AddChild(level);
-            GameManager.CurrentLevel = level;
-            UI.MainMenu.CloseAllWindows();
-            UI.MainMenu.Hide();
-        }
+        UI.MainMenu.CloseAllWindows();
+        UI.MainMenu.Hide();
     }
 
     [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]

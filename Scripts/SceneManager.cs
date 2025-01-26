@@ -14,7 +14,9 @@ public partial class SceneManager : Node
     {   
         GodotErrorService.ValidateRequiredData(this);
 
-        UI.InGameUI.Show();
+        if(!Multiplayer.IsServer()) {
+            UI.InGameUI.Show();
+        }
 
         // spawning characters on spawn points (ran on every peer)
         List<long> players = GameManager.Players.Keys.OrderBy(p => p).ToList();

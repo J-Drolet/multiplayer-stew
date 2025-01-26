@@ -8,3 +8,7 @@
 script = ExtResource("1_c1kdx")
 ClientScene = ExtResource("2_dalob")
 ServerScene = ExtResource("3_4ghm8")
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://Scenes/Level.tscn")
+spawn_path = NodePath("..")

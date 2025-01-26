@@ -17,7 +17,7 @@ namespace multiplayerstew.Scripts.Base
         public Label3D HealthText { get; set; }
 
         [Export]
-        private float CurrentHealth { get; set; }
+        public float CurrentHealth { get; set; }
         public override void _Ready()
         {
             GodotErrorService.ValidateRequiredData(this);
@@ -52,7 +52,7 @@ namespace multiplayerstew.Scripts.Base
                 // Disable projectile from hitting other hitboxes before getting deleted by peer owner
                 if(projectile.MaxHits <= 0)
                 {
-                    projectileHitbox.Monitorable = false;
+                    projectileHitbox.SetDeferred("monitorable", false);
                     projectile.RpcId(projectile.GetMultiplayerAuthority(), UpgradeableProjectile.MethodName.DeletePeerProjectile);
                 }
             }
