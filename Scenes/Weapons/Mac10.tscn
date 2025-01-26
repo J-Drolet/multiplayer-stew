@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bfmxfalt2u42"]
+[gd_scene load_steps=11 format=3 uid="uid://bfmxfalt2u42"]
 
-[ext_resource type="Script" path="res://Scripts/Weapons/Pistol.cs" id="1_nluh6"]
-[ext_resource type="PackedScene" uid="uid://de6ynjcj4qnom" path="res://Scenes/Projectiles/Submachine gun bullet.tscn" id="2_etlu4"]
+[ext_resource type="Script" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_250w0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tmury"]
 albedo_color = Color(0.314316, 0.314316, 0.314316, 1)
@@ -111,13 +110,8 @@ albedo_color = Color(0.907052, 0.693446, 0.497686, 1)
 [sub_resource type="SphereMesh" id="SphereMesh_sshab"]
 material = SubResource("StandardMaterial3D_mrl0e")
 
-[node name="Mac10" type="Node3D" node_paths=PackedStringArray("APlayer")]
-script = ExtResource("1_nluh6")
-WeaponName = "Godot Pistol"
-MaxAmmo = 30
-FireMode = 2
-Projectile = ExtResource("2_etlu4")
-APlayer = NodePath("AnimationPlayer")
+[node name="Mac10" type="Node3D"]
+script = ExtResource("1_250w0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.113337, 0, 0, 0, 0.0822317, 0, 0, 0, 0.22686, 0, 0.0590581, 0.0393912)
