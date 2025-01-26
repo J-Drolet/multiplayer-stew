@@ -74,5 +74,11 @@ namespace multiplayerstew.Scripts.Base
             }
         }
 
+        [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+        public void DeletePeerProjectile()
+        {
+            QueueFree();
+        }
+
     }
 }
