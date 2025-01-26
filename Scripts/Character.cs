@@ -14,6 +14,8 @@ public partial class Character : CharacterBody3D
 	public Node3D Head { get; set; }
 	[Export, ExportRequired]
 	public Node3D Hand { get; set; }
+
+	public bool CanMove { get; set; } = true;
 	
     [Export]
     private UpgradableWeapon equippedWeapon;
@@ -105,15 +107,20 @@ public partial class Character : CharacterBody3D
 		}
 
 		// Handle Jump.
-		if (Input.IsActionJustPressed("Jump") && IsOnFloor())
+		if (Input.IsActionJustPressed("Jump") && IsOnFloor() && CanMove)
 		{
 			velocity.Y = JumpVelocity;
 		}
 
-		// Get the input direction and handle the movement/deceleration.
-		// As good practice, you should replace UI actions with custom gameplay actions.
-		Vector2 inputDir = Input.GetVector("Left", "Right", "Forward", "Back");
-		Vector3 direction = (Head.Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
+		Vector3 direction = Vector3.Zero;
+		if(CanMove)
+		{
+			// Get the input direction and handle the movement/deceleration.
+			// As good practice, you should replace UI actions with custom gameplay actions.
+			Vector2 inputDir = Input.GetVector("Left", "Right", "Forward", "Back");
+			direction = (Head.Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
+		}
+
 		if (direction != Vector3.Zero)
 		{
 			velocity.X = direction.X * Speed;
@@ -124,6 +131,7 @@ public partial class Character : CharacterBody3D
 			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
 			velocity.Z = Mathf.MoveToward(Velocity.Z, 0, Speed);
 		}
+
 		Velocity = velocity;
 		MoveAndSlide();
 	}

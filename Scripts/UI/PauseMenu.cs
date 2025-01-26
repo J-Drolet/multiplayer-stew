@@ -15,10 +15,12 @@ public partial class PauseMenu : Control
         if(Visible)
         {
             Input.MouseMode = Input.MouseModeEnum.Visible;
+            GameManager.Players[Multiplayer.GetUniqueId()].characterNode.CanMove = false;
         }
         else
         {
             Input.MouseMode = Input.MouseModeEnum.Captured;
+            GameManager.Players[Multiplayer.GetUniqueId()].characterNode.CanMove = true;
         }
     }
 
