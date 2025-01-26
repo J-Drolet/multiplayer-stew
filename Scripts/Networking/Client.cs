@@ -16,7 +16,7 @@ public partial class Client : Node
     public override void _ExitTree()
     {
         CloseServer();
-        Settings.WriteSettings();
+        Config.WriteConfig();
 
         base._ExitTree();
     }
@@ -155,6 +155,7 @@ public partial class Client : Node
         PackedScene levelPackedScene = (PackedScene)ResourceLoader.Load("res://Scenes/Level.tscn");
         Node level = levelPackedScene.Instantiate();
         GetTree().Root.AddChild(level);
+        GameManager.CurrentLevel = level;
         UI.MainMenu.CloseAllWindows();
         UI.MainMenu.Hide();
     }

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cyk5w16gxy3dv"]
 
-[ext_resource type="Script" path="res://Scripts/Main Menu/Lobby.cs" id="1_eorg6"]
+[ext_resource type="Script" path="res://Scripts/UI/Lobby.cs" id="1_0ljmd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2vxmi"]
 bg_color = Color(0.666667, 0.72549, 0.603922, 1)
@@ -28,7 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_eorg6")
+script = ExtResource("1_0ljmd")
 PlayerPrototype = NodePath("Panel/Panel/Player List/PlayerPrototype")
 StartGameButton = NodePath("Panel/Button Container/Start")
 

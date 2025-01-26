@@ -15,6 +15,8 @@ public static class GameManager
 
     public static Dictionary<long, PlayerInfo> Players = new Dictionary<long, PlayerInfo>();
 
+    public static Node CurrentLevel { get; set; }
+
     public static void RemovePlayer(long id)
     {
         if(Players.ContainsKey(id) && Players[id].characterNode != null)
@@ -25,10 +27,20 @@ public static class GameManager
         Players.Remove(id);
     }
 
+    public static void LeaveJoinedGame()
+    {
+        Client.Instance.Disconnect();
+        if(CurrentLevel != null)
+        {
+            CurrentLevel.QueueFree();
+            CurrentLevel = null;
+        }
+    }
+
     public static void UpdateAudioBuses()
     {
-        AudioServer.SetBusVolumeDb(AudioServer.GetBusIndex("Music"), Mathf.LinearToDb(Settings.GetValue("music_volume").ToFloat()));
-        AudioServer.SetBusVolumeDb(AudioServer.GetBusIndex("SFX"), Mathf.LinearToDb(Settings.GetValue("sfx_volume").ToFloat()));
+        AudioServer.SetBusVolumeDb(AudioServer.GetBusIndex("Music"), Mathf.LinearToDb((float) Config.GetValue("settings", "music_volume")));
+        AudioServer.SetBusVolumeDb(AudioServer.GetBusIndex("SFX"), Mathf.LinearToDb((float) Config.GetValue("settings", "sfx_volume")));
     }
 
 }

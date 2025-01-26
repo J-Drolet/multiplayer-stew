@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://sd5volwon26q"]
 
-[ext_resource type="Script" path="res://Scripts/Main Menu/ErrorMessage.cs" id="1_t3f2e"]
+[ext_resource type="Script" path="res://Scripts/UI/ErrorMessage.cs" id="1_p6rjb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ao8gq"]
 bg_color = Color(0.92384, 0.42342, 0.378145, 1)
@@ -17,7 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_t3f2e")
+script = ExtResource("1_p6rjb")
 ErrorLabel = NodePath("Panel/Error Message")
 
 [node name="Panel" type="Panel" parent="."]

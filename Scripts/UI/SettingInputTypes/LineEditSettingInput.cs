@@ -9,11 +9,11 @@ public partial class LineEditSettingInput: SettingInput
 
     public override void InitSetting() 
     {
-        Input.Text = Settings.GetValue(SettingName);
+        Input.Text = Config.GetValue(SettingSection, SettingName).ToString();
     }
 
     public override void SaveSetting() 
     {
-        Settings.AddValue(SettingName, Input.Text);
+        Config.SetValue(SettingSection, SettingName, Input.Text);
     }
 }

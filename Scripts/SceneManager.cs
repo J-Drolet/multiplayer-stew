@@ -13,6 +13,8 @@ public partial class SceneManager : Node
     {   
         GodotErrorService.ValidateRequiredData(this);
 
+        UI.InGameUI.Show();
+
         // spawning characters on spawn points (ran on every peer)
         long[] players = GameManager.Players.Keys.ToArray();
         for(int i = 0; i < players.Length; i++)
