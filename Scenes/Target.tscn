@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dpd0cvtbs8iuo"]
+[gd_scene load_steps=8 format=3 uid="uid://dpd0cvtbs8iuo"]
 
 [ext_resource type="Script" path="res://Scripts/Base/Damageable.cs" id="1_3i7fc"]
+[ext_resource type="Script" path="res://Scripts/Base/DamageArea.cs" id="2_00s7s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_na5c2"]
 albedo_color = Color(0.605274, 0.605274, 0.605274, 1)
@@ -36,6 +37,7 @@ mesh = SubResource("BoxMesh_ynux2")
 [node name="Head" type="Area3D" parent="."]
 collision_layer = 20
 collision_mask = 8
+script = ExtResource("2_00s7s")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000604376, 0.399475, -0.000823975)
@@ -44,6 +46,7 @@ shape = SubResource("BoxShape3D_172pg")
 [node name="Body" type="Area3D" parent="."]
 collision_layer = 4
 collision_mask = 8
+script = ExtResource("2_00s7s")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00128771, -0.00317366, 0.000762939)

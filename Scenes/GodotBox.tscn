@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bwh21gfyr2idt"]
+[gd_scene load_steps=9 format=3 uid="uid://bwh21gfyr2idt"]
 
-[ext_resource type="Texture2D" uid="uid://rb8847h6lkvg" path="res://Assets/icon.svg" id="1_srln8"]
+[ext_resource type="Texture2D" uid="uid://b5gav0ulky2i1" path="res://Assets/icon.svg" id="1_srln8"]
 [ext_resource type="Script" path="res://Scripts/Base/Damageable.cs" id="1_srmf1"]
+[ext_resource type="Script" path="res://Scripts/Base/DamageArea.cs" id="3_b7p7m"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_piarx"]
 size = Vector3(1.12, 1, 1)
@@ -34,6 +35,7 @@ mesh = SubResource("BoxMesh_tbtrk")
 [node name="Area3D" type="Area3D" parent="."]
 collision_layer = 4
 collision_mask = 8
+script = ExtResource("3_b7p7m")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("BoxShape3D_0488x")
