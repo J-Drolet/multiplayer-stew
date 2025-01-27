@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://eb3bvjl3kk7c"]
+
+[node name="CSGTESTASSET" type="Node3D"]
+metadata/_edit_group_ = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+flip_faces = true
+size = Vector3(10, 10, 10)
+
+[node name="desk" type="CSGCombiner3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.07769, -4.28439, -3.45341)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="desk"]
+transform = Transform3D(5.36298, 0, 0, 0, 0.297891, 0, 0, 0, 2.31466, 0, 1.4526, 0)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="desk"]
+transform = Transform3D(0.270866, 0, 0, 0, 2.27276, 0, 0, 0, 0.298677, 2.54456, 0.437939, 0.999417)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="desk"]
+transform = Transform3D(0.270866, 0, 0, 0, 2.27276, 0, 0, 0, 0.298677, -2.48252, 0.437939, -1.01958)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="desk"]
+transform = Transform3D(0.270866, 0, 0, 0, 2.27276, 0, 0, 0, 0.298677, 2.53731, 0.437939, -1.01958)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="desk"]
+transform = Transform3D(0.270866, 0, 0, 0, 2.27276, 0, 0, 0, 0.298677, -2.48252, 0.437939, 0.997914)
+
+[node name="bookshelf" type="CSGCombiner3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02977, -3.74043, -3.54832)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="bookshelf"]
+transform = Transform3D(2.39818, 0, 0, 0, 2.39818, 0, 0, 0, 2.39818, 0, 0, 0)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="bookshelf"]
+transform = Transform3D(1.8611, 0, 0, 0, 0.861752, 0, 0, 0, 1.8611, 0, -0.526952, 0.482828)
+operation = 2
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="bookshelf"]
+transform = Transform3D(1.8611, 0, 0, 0, 0.891769, 0, 0, 0, 1.8611, 0, 0.559146, 0.482828)
+operation = 2

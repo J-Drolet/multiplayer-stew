@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://btavi7m2jh606"]
+[gd_scene load_steps=17 format=3 uid="uid://btavi7m2jh606"]
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_tjnmx"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_m4m6e"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dpd0cvtbs8iuo" path="res://Scenes/Target.tscn" id="6_dsuo7"]
 [ext_resource type="PackedScene" uid="uid://d1glk6osihae1" path="res://Scenes/Levels/LevelAssets/fuelstorage.tscn" id="6_w1hny"]
 [ext_resource type="PackedScene" uid="uid://k3u720y471ax" path="res://Scenes/Pickups/Mac10Pickup.tscn" id="7_6s4tg"]
+[ext_resource type="PackedScene" uid="uid://eb3bvjl3kk7c" path="res://Scenes/Levels/LevelAssets/csgtestasset.tscn" id="7_x8i23"]
 [ext_resource type="PackedScene" uid="uid://1fdlt6hucwhx" path="res://Scenes/Pickups/BoltyPickup.tscn" id="8_886jj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4e45f"]
@@ -61,8 +62,11 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.552
 [node name="FuelStorage3" parent="." instance=ExtResource("6_w1hny")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.1812, 2.68449, -8.84692)
 
+[node name="CSGTESTASSET" parent="." instance=ExtResource("7_x8i23")]
+transform = Transform3D(0.445821, 0, 0, 0, 0.445821, 0, 0, 0, 0.445821, 13.6411, 2.44903, 15.5941)
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.766896, 0.439592, -0.467578, 0, 0.728574, 0.684967, 0.641771, -0.525299, 0.558741, 0, 0, 0)
+transform = Transform3D(0.766896, 0.439592, -0.467578, 0, 0.728574, 0.684967, 0.641771, -0.525299, 0.558741, -27.059, 12.9604, 20.8694)
 
 [node name="StaticBody3D" parent="." instance=ExtResource("3_yfddj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.808029, -11.4214)

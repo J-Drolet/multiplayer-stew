@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdu7h1l1jg443"]
+[gd_scene load_steps=6 format=3 uid="uid://bdu7h1l1jg443"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_y06m1"]
 
@@ -12,6 +12,9 @@ sections = 10
 section_rings = 2
 cap_top = false
 cap_bottom = false
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hwduj"]
+height = 0.001
 
 [sub_resource type="TubeTrailMesh" id="TubeTrailMesh_qjifv"]
 material = SubResource("StandardMaterial3D_wsya2")
@@ -40,7 +43,7 @@ transform = Transform3D(0.0463436, -4.38874, 0, 4.38874, 0.0463436, 0, 0, 0, 4.3
 [node name="StaticBody3D" type="StaticBody3D" parent="ConcretePipe2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ConcretePipe2/StaticBody3D"]
-shape = SubResource("CylinderShape3D_y06m1")
+shape = SubResource("CylinderShape3D_hwduj")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ConcretePipe2"]
 mesh = SubResource("TubeTrailMesh_qjifv")
