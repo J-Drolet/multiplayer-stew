@@ -1,10 +1,10 @@
-﻿using multiplayerstew.Scripts.Base;
+using multiplayerstew.Scripts.Base;
 
 
 namespace multiplayerstew.Scripts.Projectiles
 {
-    public partial class SimpleBullet: UpgradeableProjectile
-    {
+	public partial class SimpleBullet: UpgradeableProjectile
+	{
 
-    }
+	}
 }
