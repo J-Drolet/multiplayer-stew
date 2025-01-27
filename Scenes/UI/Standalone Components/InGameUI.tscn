@@ -1,10 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://dker47ss6f07g"]
+[gd_scene load_steps=5 format=3 uid="uid://dker47ss6f07g"]
 
 [ext_resource type="Script" path="res://Scripts/UI/InGameUI.cs" id="1_8bj3a"]
 [ext_resource type="Texture2D" uid="uid://bp1y6idrr3kgr" path="res://Assets/Crosshair.png" id="2_k7omr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1vvx4"]
 font_size = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yipwk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
 
 [node name="InGameUi" type="Control" node_paths=PackedStringArray("AmmoCount", "HealthBar")]
 layout_mode = 3
@@ -16,7 +24,7 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_8bj3a")
 AmmoCount = NodePath("AmmoCount")
-HealthBar = NodePath("HealthBar")
+HealthBar = NodePath("PanelContainer/HealthBar")
 
 [node name="Game Name" type="Label" parent="."]
 layout_mode = 0
@@ -53,15 +61,20 @@ label_settings = SubResource("LabelSettings_1vvx4")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HealthBar" type="TextureRect" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.283
-anchor_top = 0.974
-anchor_right = 0.717
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 0.483978
-offset_top = -0.152039
-offset_right = -0.484009
+offset_left = -5.0
+offset_top = -12.248
+offset_right = 5.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yipwk")
+
+[node name="HealthBar" type="TextureRect" parent="PanelContainer"]
+custom_minimum_size = Vector2(700, 30)
+layout_mode = 2
