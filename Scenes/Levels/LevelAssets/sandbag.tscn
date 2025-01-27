@@ -1,0 +1,91 @@
+[gd_scene load_steps=3 format=3 uid="uid://yqxo7dd0068w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0jidg"]
+size = Vector3(2.31006, 10.866, 1.10809)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jfcqi"]
+
+[node name="Sandbag" type="Node3D"]
+metadata/_edit_group_ = true
+
+[node name="sandbag" type="Node3D" parent="."]
+transform = Transform3D(0.00286229, 0.999996, 0, -0.999996, 0.00286229, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="sandbag"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sandbag/StaticBody3D"]
+transform = Transform3D(1, -9.7556e-08, 0, 9.7556e-08, 1, 0, 0, 0, 1, -0.655032, -0.294567, 0.00192261)
+visible = false
+shape = SubResource("BoxShape3D_0jidg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sandbag"]
+transform = Transform3D(0.609821, -4.65661e-10, 0, 0, 1.00112, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_jfcqi")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="sandbag"]
+transform = Transform3D(0.609821, 0.000891066, 0, -0.000542812, 1.00112, 0, 0, 0, 1, -0.064537, -4.11382, 0.0261278)
+mesh = SubResource("CylinderMesh_jfcqi")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="sandbag"]
+transform = Transform3D(0.609821, 0.000891065, 0, -0.000542812, 1.00112, 0, 0, 0, 1, -0.652744, -3.69936, 0.0261278)
+mesh = SubResource("CylinderMesh_jfcqi")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="sandbag"]
+transform = Transform3D(0.609821, 0.000891065, 0, -0.000542812, 1.00112, 0, 0, 0, 1, -1.2211, -3.37247, -0.114692)
+mesh = SubResource("CylinderMesh_jfcqi")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="sandbag"]
+transform = Transform3D(0.541375, 0.460822, 0, -0.280706, 0.88875, 0, 0, 0, 1, -1.14631, 3.44194, -0.0742302)
+mesh = SubResource("CylinderMesh_jfcqi")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="sandbag"]
+transform = Transform3D(0.609822, 0.000891064, 0, -0.000542812, 1.00112, 0, 0, 0, 1, 0.0278378, 4.09508, 0.0306978)
+mesh = SubResource("CylinderMesh_jfcqi")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="sandbag"]
+transform = Transform3D(0.609822, 0.000891064, 0, -0.000542812, 1.00112, 0, 0, 0, 1, -0.558967, 3.77636, 0.0585263)
+mesh = SubResource("CylinderMesh_jfcqi")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="sandbag"]
+transform = Transform3D(0.609821, -1.86265e-09, 0, 0, 1.00112, 0, 0, 0, 1, -1.51786, -2.28346, 0)
+mesh = SubResource("CylinderMesh_jfcqi")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="sandbag"]
+transform = Transform3D(0.609821, -1.86265e-09, 0, 0, 1.00112, 0, 0, 0, 1, -1.51164, -0.239392, 0)
+mesh = SubResource("CylinderMesh_jfcqi")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="sandbag"]
+transform = Transform3D(0.609821, -1.39698e-09, 0, 0, 1.00112, 0, 0, 0, 1, -1.50798, 1.77483, 0)
+mesh = SubResource("CylinderMesh_jfcqi")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="sandbag"]
+transform = Transform3D(0.609821, -1.39698e-09, 0, 0, 1.00112, 0, 0, 0, 1, -1.06597, 2.18359, 0)
+mesh = SubResource("CylinderMesh_jfcqi")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="sandbag"]
+transform = Transform3D(0.609821, -1.39698e-09, 0, 0, 1.00112, 0, 0, 0, 1, -1.1226, 0.139605, 0)
+mesh = SubResource("CylinderMesh_jfcqi")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="sandbag"]
+transform = Transform3D(0.609821, -1.39698e-09, 0, 0, 1.00112, 0, 0, 0, 1, -1.1235, -1.90813, 0)
+mesh = SubResource("CylinderMesh_jfcqi")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="sandbag"]
+transform = Transform3D(0.609822, -6.98492e-09, 0, 5.82077e-10, 1.00112, 0, 0, 0, 1, -0.553392, 2.35548, 0.0399308)
+mesh = SubResource("CylinderMesh_jfcqi")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="sandbag"]
+transform = Transform3D(0.609821, -2.79397e-09, 0, 1.16415e-10, 1.00112, 0, 0, 0, 1, -0.560435, 0.351837, 0)
+mesh = SubResource("CylinderMesh_jfcqi")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="sandbag"]
+transform = Transform3D(0.609821, -2.79397e-09, 0, 1.16415e-10, 1.00112, 0, 0, 0, 1, -0.57705, -1.69252, -0.00405836)
+mesh = SubResource("CylinderMesh_jfcqi")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="sandbag"]
+transform = Transform3D(0.609821, -9.31323e-10, 0, 0, 1.00112, 0, 0, 0, 1, 0.00594752, 2.07788, 0)
+mesh = SubResource("CylinderMesh_jfcqi")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="sandbag"]
+transform = Transform3D(0.609821, -1.86265e-09, 0, 0, 1.00112, 0, 0, 0, 1, -0.0238849, -2.08152, 0)
+mesh = SubResource("CylinderMesh_jfcqi")

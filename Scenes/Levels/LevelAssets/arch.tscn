@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqvjwundgypu5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_leryq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vxovq"]
+
+[node name="Arch" type="Node3D"]
+transform = Transform3D(0.908825, 0, 0, 0, 0.908825, 0, 0, 0, 0.908825, 0.0065124, 1.26115, -0.437842)
+metadata/_edit_group_ = true
+
+[node name="Arch-Right" type="Node3D" parent="."]
+transform = Transform3D(1.6498, -3.92442, 0, 1.1215, 5.77309, 0, 0, 0, 1.88778, 8.50897, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Arch-Right"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Arch-Right/StaticBody3D"]
+shape = SubResource("BoxShape3D_leryq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Arch-Right"]
+mesh = SubResource("BoxMesh_vxovq")
+skeleton = NodePath("")
+
+[node name="Arch-Top" type="Node3D" parent="."]
+transform = Transform3D(-0.163203, 18.8892, 0, -2.02005, -1.52609, 0, 0, 0, 1.88778, -0.303823, 3.83355, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Arch-Top"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Arch-Top/StaticBody3D"]
+shape = SubResource("BoxShape3D_leryq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Arch-Top"]
+mesh = SubResource("BoxMesh_vxovq")
+skeleton = NodePath("")
+
+[node name="Arch-Left" type="Node3D" parent="."]
+transform = Transform3D(1.82154, 3.27368, 0, -0.717121, 8.31539, 0, 0, 0, 1.88778, -9.58884, 0.564243, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Arch-Left"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Arch-Left/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_leryq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Arch-Left"]
+mesh = SubResource("BoxMesh_vxovq")
