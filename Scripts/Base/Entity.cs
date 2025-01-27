@@ -44,8 +44,7 @@ namespace multiplayerstew.Scripts.Base
             // Disable projectile from hitting other hitboxes before getting deleted by peer owner
             if(projectile.MaxHits <= 0)
             {
-                projectile.SetDeferred("monitorable", false);
-                projectile.RpcId(projectile.GetMultiplayerAuthority(), UpgradeableProjectile.MethodName.DeletePeerProjectile);
+                projectile.QueueFree();
             }
         }
 
