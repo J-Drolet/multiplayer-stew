@@ -50,7 +50,7 @@ transform = Transform3D(0.148448, 0, -0.504383, 0, 0.525775, 0, 0.504383, 0, 0.1
 transform = Transform3D(0.148448, 0, -0.504383, 0, 0.525775, 0, 0.504383, 0, 0.148448, -4.84246, 0.510523, -4.21123)
 
 [node name="ConcretePipe" parent="." instance=ExtResource("5_xq3c0")]
-transform = Transform3D(0.538879, 0, -0.904049, 0, 1.05247, 0, 0.904049, 0, 0.538879, 0, 1.3779, 11.4218)
+transform = Transform3D(0.538879, 0, -0.904049, 0, 1.05247, 0, 0.904049, 0, 0.538879, 0, 1.71826, 11.4218)
 
 [node name="FuelStorage" parent="." instance=ExtResource("6_w1hny")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.5524, 2.68449, -20.0438)

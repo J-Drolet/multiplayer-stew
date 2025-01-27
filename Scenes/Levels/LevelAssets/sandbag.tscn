@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://yqxo7dd0068w"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0jidg"]
-size = Vector3(2.31006, 10.866, 1.10809)
+size = Vector3(2.31006, 10.2656, 1.10809)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_jfcqi"]
 
@@ -14,8 +14,7 @@ transform = Transform3D(0.00286229, 0.999996, 0, -0.999996, 0.00286229, 0, 0, 0,
 [node name="StaticBody3D" type="StaticBody3D" parent="sandbag"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="sandbag/StaticBody3D"]
-transform = Transform3D(1, -9.7556e-08, 0, 9.7556e-08, 1, 0, 0, 0, 1, -0.655032, -0.294567, 0.00192261)
-visible = false
+transform = Transform3D(0.999994, -1.00117e-07, 0, 1.00117e-07, 0.999994, 0, 0, 0, 1, -0.655032, 0.00564684, 0.00192261)
 shape = SubResource("BoxShape3D_0jidg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="sandbag"]
