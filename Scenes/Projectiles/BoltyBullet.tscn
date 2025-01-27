@@ -1,18 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://diqolrhp5s6sw"]
 
-[ext_resource type="Script" path="res://Scripts/Projectiles/SimpleBullet.cs" id="1_66fkm"]
+[ext_resource type="Script" path="res://Scripts/Base/UpgradeableProjectile.cs" id="1_ot4mb"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_2wu11"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_hmntw"]
 radius = 0.137246
 
-[node name="SimpleBullet" type="Node3D" node_paths=PackedStringArray("Hitbox")]
+[node name="SimpleBullet" type="Node3D"]
 transform = Transform3D(2.31578, 0, 0, 0, 0.748114, 0, 0, 0, 0.702631, 0, 0, 0)
-script = ExtResource("1_66fkm")
-Damage = 5.0
-Lifespan = 1.0
-Hitbox = NodePath("Area3D")
+script = ExtResource("1_ot4mb")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.267544, 0, 0, 0, 0.267544, 0, 0, 0, 0.267544, 0, 0, 0)

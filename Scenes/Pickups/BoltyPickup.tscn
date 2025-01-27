@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://1fdlt6hucwhx"]
 
 [ext_resource type="Script" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_4t0va"]
-[ext_resource type="PackedScene" uid="uid://cl6ckcu4c5ymq" path="res://Scenes/Weapons/m1-garand.tscn" id="2_jipal"]
+[ext_resource type="PackedScene" uid="uid://cl6ckcu4c5ymq" path="res://Scenes/Weapons/BoltAction.tscn" id="2_jipal"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vmxku"]
 size = Vector3(2, 1, 2)
