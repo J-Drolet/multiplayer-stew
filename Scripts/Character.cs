@@ -95,7 +95,9 @@ public partial class Character : Entity
 			{
 				EquippedWeapon.Fire();
 			}
-		}
+        }
+
+		UI.InGameUI.SetHealthBar(CurrentHealth / MaxHealth);
     }
 
     public override void _PhysicsProcess(double delta)
