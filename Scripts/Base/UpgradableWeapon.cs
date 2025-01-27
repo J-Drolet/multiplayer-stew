@@ -34,7 +34,7 @@ namespace multiplayerstew.Scripts.Base
 		public AnimationPlayer APlayer { get; set; }
 
 		private int CurrentAmmo { get; set; }
-		public List<Upgrade> Upgrades { get; set; }
+		public List<Upgrade> Upgrades { get; set; } = new();
 
 		public override void _Ready()
 		{
@@ -44,7 +44,12 @@ namespace multiplayerstew.Scripts.Base
 		}
 
 		public void Fire()
-		{
+		{   
+            foreach(Upgrade upgrade in Upgrades) 
+            {
+                upgrade.OnFire(this);
+            }
+
 			if ((CurrentAmmo > 0 || MaxAmmo < 0) && CanFire) 
 			{
 				APlayer.Play("Fire");
