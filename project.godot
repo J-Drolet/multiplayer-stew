@@ -24,6 +24,10 @@ Config="*res://Scripts/Config.cs"
 
 project/assembly_name="multiplayer-stew"
 
+[global_group]
+
+PlayerSpawnPoint=""
+
 [input]
 
 Forward={
