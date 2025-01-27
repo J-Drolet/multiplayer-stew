@@ -7,8 +7,10 @@ using System.Collections.Generic;
 
 namespace multiplayerstew.Scripts.Base
 {
-    public partial class Damageable : CharacterBody3D
+    public partial class Entity : CharacterBody3D
     {
+        [Export]
+        public float CurrentHealth { get; set; }
         [Export, ExportRequired]
         public float MaxHealth { get; set; } = 100.0f;
         [Export, ExportRequired]
@@ -16,34 +18,27 @@ namespace multiplayerstew.Scripts.Base
         [Export]
         public Label3D HealthText { get; set; }
 
-        [Export]
-        public float CurrentHealth { get; set; }
-        public override void _Ready()
+        public void Init()
         {
-            GodotErrorService.ValidateRequiredData(this);
-            if (!Multiplayer.IsServer())
-                return;
+            SetCurrentHealth(MaxHealth);
 
-            CurrentHealth = MaxHealth;
             foreach (DamageArea hitbox in Hitboxes)
             {
                 hitbox.AreaHit += (UpgradeableProjectile projectile) => HitboxHit(projectile, hitbox);
-            }   
+            }
         }
 
-        public override void _Process(double delta)
+        public override void _Ready()
         {
-            if (HealthText != null)
-            {
-                HealthText.Text = CurrentHealth <= 0.0f ? "Dead" : "Health: " + CurrentHealth.ToString();
-            }
+            GodotErrorService.ValidateRequiredData(this);
+            Init();
         }
 
         private void HitboxHit(UpgradeableProjectile projectile, DamageArea hitbox)
         {
             // layer 5 = vital hitbox
             float damage = hitbox.GetCollisionLayerValue(5) ? projectile.Damage * projectile.VitalMultiplier : projectile.Damage;
-            CurrentHealth = Math.Clamp(CurrentHealth - damage, 0.0f, MaxHealth);
+            Rpc(MethodName.SetCurrentHealth, Math.Clamp(CurrentHealth - damage, 0.0f, MaxHealth));
             projectile.MaxHits--;
 
             // Disable projectile from hitting other hitboxes before getting deleted by peer owner
@@ -51,6 +46,17 @@ namespace multiplayerstew.Scripts.Base
             {
                 projectile.SetDeferred("monitorable", false);
                 projectile.RpcId(projectile.GetMultiplayerAuthority(), UpgradeableProjectile.MethodName.DeletePeerProjectile);
+            }
+        }
+
+        [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+        public void SetCurrentHealth(float health)
+        {
+            CurrentHealth = health;
+
+            if (HealthText != null)
+            {
+                HealthText.Text = CurrentHealth <= 0.0f ? "Dead" : "Health: " + CurrentHealth.ToString();
             }
         }
     }

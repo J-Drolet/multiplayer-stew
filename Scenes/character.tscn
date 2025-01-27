@@ -1,6 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://lcx7afjcynql"]
+[gd_scene load_steps=7 format=3 uid="uid://lcx7afjcynql"]
 
 [ext_resource type="Script" path="res://Scripts/Character.cs" id="1_n6eoi"]
+[ext_resource type="Script" path="res://Scripts/Base/DamageArea.cs" id="2_4301p"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mo30b"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_wgmvx"]
 
@@ -17,14 +20,23 @@ properties/2/path = NodePath("Head:rotation")
 properties/2/spawn = true
 properties/2/replication_mode = 1
 
-[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "ProjectileOrigin", "Head", "Hand", "Hitboxes")]
+[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "ProjectileOrigin", "Head", "Hand", "Hitboxes", "HealthText")]
 script = ExtResource("1_n6eoi")
 Camera = NodePath("Head/Camera3D")
 ProjectileOrigin = NodePath("Head/Camera3D/ProjectileOrigin")
 Head = NodePath("Head")
 Hand = NodePath("Head/Camera3D/Hand")
-Hitboxes = []
+Hitboxes = [NodePath("Area3D")]
+HealthText = NodePath("Cur Health")
 metadata/_edit_group_ = true
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("2_4301p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CapsuleShape3D_mo30b")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_wgmvx")
@@ -45,3 +57,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.75163)
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_w7qvv")
+
+[node name="Cur Health" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14348, 0)
+billboard = 1
+text = "Text"

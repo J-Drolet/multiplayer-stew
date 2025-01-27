@@ -38,12 +38,10 @@ namespace multiplayerstew.Scripts.Base
         public override void _Ready()
         {
             GodotErrorService.ValidateRequiredData(this);
-            if(Multiplayer.IsServer())
-            {
-                Hitbox.AreaEntered += OnAreaEntered;
-            }
 
             if (!IsMultiplayerAuthority()) return;
+
+            Hitbox.AreaEntered += OnAreaEntered;
 
             Vector3 directionVector = -GlobalTransform.Basis.Z;
 
@@ -56,6 +54,9 @@ namespace multiplayerstew.Scripts.Base
 
         private void OnAreaEntered(Area3D area)
         {
+            if(!IsMultiplayerAuthority()) return;
+
+
             if(area is DamageArea) 
             {
                 DamageArea damageArea = area as DamageArea;
