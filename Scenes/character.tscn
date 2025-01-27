@@ -17,12 +17,13 @@ properties/2/path = NodePath("Head:rotation")
 properties/2/spawn = true
 properties/2/replication_mode = 1
 
-[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "ProjectileOrigin", "Head", "Hand")]
+[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "ProjectileOrigin", "Head", "Hand", "Hitboxes")]
 script = ExtResource("1_n6eoi")
 Camera = NodePath("Head/Camera3D")
 ProjectileOrigin = NodePath("Head/Camera3D/ProjectileOrigin")
 Head = NodePath("Head")
 Hand = NodePath("Head/Camera3D/Hand")
+Hitboxes = []
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

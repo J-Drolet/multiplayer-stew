@@ -4,7 +4,7 @@ using multiplayerstew.Scripts.Base;
 using multiplayerstew.Scripts.Services;
 using System;
 
-public partial class Character : CharacterBody3D
+public partial class Character : Damageable
 {
 	[Export, ExportRequired]
 	public Camera3D Camera { get; set; }
