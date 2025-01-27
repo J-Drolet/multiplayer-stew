@@ -44,7 +44,12 @@ namespace multiplayerstew.Scripts.Base
 		}
 
 		public void Fire()
-		{
+		{   
+            foreach(Upgrade upgrade in Upgrades) 
+            {
+                upgrade.OnFire(this);
+            }
+
 			if ((CurrentAmmo > 0 || MaxAmmo < 0) && CanFire) 
 			{
 				APlayer.Play("Fire");
