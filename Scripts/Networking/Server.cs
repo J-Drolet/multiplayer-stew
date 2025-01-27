@@ -99,7 +99,7 @@ public partial class Server : Node
             AcceptingConnections = false;
             Rpc(MethodName.NotifyStartGame);
 
-            PackedScene levelPackedScene = (PackedScene)ResourceLoader.Load("res://Scenes/Level.tscn");
+            PackedScene levelPackedScene = (PackedScene)ResourceLoader.Load("res://Scenes/Levels/Level.tscn");
             Node level = levelPackedScene.Instantiate();
             Root.Instance.AddChild(level); // using Config.Instance just to access tree
             GameManager.CurrentLevel = level;
