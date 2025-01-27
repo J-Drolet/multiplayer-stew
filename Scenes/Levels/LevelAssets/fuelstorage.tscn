@@ -1,0 +1,142 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1glk6osihae1"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_p4b5a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_owil2"]
+albedo_color = Color(0.629675, 0.629675, 0.629675, 1)
+metallic = 1.0
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_uo1nl"]
+material = SubResource("StandardMaterial3D_owil2")
+radial_steps = 10
+sections = 10
+section_rings = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uk2m6"]
+metallic = 1.0
+
+[node name="FuelStorage" type="Node3D"]
+transform = Transform3D(2.25849, 0, 0, 0, 1.40175, 0, 0, 0, 2.25849, 0, 0, 0)
+metadata/_edit_group_ = true
+
+[node name="FuelStorageBody" type="Node3D" parent="."]
+transform = Transform3D(-4.38843, -0.0697816, 0, 0.0697816, -4.38843, 0, 0, 0, 4.38898, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="FuelStorageBody"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FuelStorageBody/StaticBody3D"]
+shape = SubResource("CylinderShape3D_p4b5a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FuelStorageBody"]
+layers = 2
+mesh = SubResource("TubeTrailMesh_uo1nl")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_uk2m6")
+
+[node name="FuelStoragePiping" type="Node3D" parent="."]
+transform = Transform3D(-0.126931, -0.0688047, 0, 0.00201837, -4.327, 0, 0, 0, 0.148282, 2.36565, 0, -0.360717)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="FuelStoragePiping"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FuelStoragePiping/StaticBody3D"]
+shape = SubResource("CylinderShape3D_p4b5a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FuelStoragePiping"]
+mesh = SubResource("TubeTrailMesh_uo1nl")
+skeleton = NodePath("")
+
+[node name="FuelStoragePiping2" type="Node3D" parent="."]
+transform = Transform3D(-0.126931, -0.0688047, 0, 0.00201837, -4.327, 0, 0, 0, 0.153092, 2.38073, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="FuelStoragePiping2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FuelStoragePiping2/StaticBody3D"]
+shape = SubResource("CylinderShape3D_p4b5a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FuelStoragePiping2"]
+mesh = SubResource("TubeTrailMesh_uo1nl")
+skeleton = NodePath("")
+
+[node name="FuelStoragePipingBendUP" type="Node3D" parent="."]
+transform = Transform3D(0.159767, -0.207654, 0, 0.0784765, 0.422754, 0, 0, 0, 0.15, 2.23252, 4.70786, 0.00310959)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="FuelStoragePipingBendUP"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FuelStoragePipingBendUP/StaticBody3D"]
+shape = SubResource("CylinderShape3D_p4b5a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FuelStoragePipingBendUP"]
+mesh = SubResource("TubeTrailMesh_uo1nl")
+skeleton = NodePath("")
+
+[node name="FuelStoragePipingBendDown" type="Node3D" parent="."]
+transform = Transform3D(0.151317, 0.248043, 0, -0.09374, 0.400395, 0, 0, 0, 0.15, 1.47496, 4.70786, 0.00310959)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="FuelStoragePipingBendDown"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FuelStoragePipingBendDown/StaticBody3D"]
+shape = SubResource("CylinderShape3D_p4b5a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FuelStoragePipingBendDown"]
+mesh = SubResource("TubeTrailMesh_uo1nl")
+skeleton = NodePath("")
+
+[node name="FuelStoragePiping2BendDown2" type="Node3D" parent="."]
+transform = Transform3D(0.151317, 0.248043, 0, -0.09374, 0.400395, 0, 0, 0, 0.15, 1.44327, 4.75171, -0.328817)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="FuelStoragePiping2BendDown2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FuelStoragePiping2BendDown2/StaticBody3D"]
+shape = SubResource("CylinderShape3D_p4b5a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FuelStoragePiping2BendDown2"]
+mesh = SubResource("TubeTrailMesh_uo1nl")
+skeleton = NodePath("")
+
+[node name="FuelStoragePiping2BendUP" type="Node3D" parent="."]
+transform = Transform3D(0.159767, -0.207654, 0, 0.0784765, 0.422754, 0, 0, 0, 0.15, 2.21466, 4.70786, -0.35633)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="FuelStoragePiping2BendUP"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FuelStoragePiping2BendUP/StaticBody3D"]
+shape = SubResource("CylinderShape3D_p4b5a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FuelStoragePiping2BendUP"]
+mesh = SubResource("TubeTrailMesh_uo1nl")
+skeleton = NodePath("")
+
+[node name="FuelStoragePipingTop2" type="Node3D" parent="."]
+transform = Transform3D(-0.00294429, -0.213242, 0, 0.173006, -0.00362906, 0, 0, 0, 0.126335, 1.86194, 5.09571, 0.0135935)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="FuelStoragePipingTop2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FuelStoragePipingTop2/StaticBody3D"]
+shape = SubResource("CylinderShape3D_p4b5a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FuelStoragePipingTop2"]
+mesh = SubResource("TubeTrailMesh_uo1nl")
+skeleton = NodePath("")
+
+[node name="FuelStoragePiping2Top" type="Node3D" parent="."]
+transform = Transform3D(-0.00294429, -0.213242, 0, 0.173006, -0.00362906, 0, 0, 0, 0.126335, 1.85129, 5.10969, -0.350008)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="FuelStoragePiping2Top"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FuelStoragePiping2Top/StaticBody3D"]
+shape = SubResource("CylinderShape3D_p4b5a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FuelStoragePiping2Top"]
+mesh = SubResource("TubeTrailMesh_uo1nl")
+skeleton = NodePath("")
+
+[node name="FuelStorageGuardrail" type="Node3D" parent="."]
+transform = Transform3D(-0.00294429, -0.213242, 0, 0.173006, -0.00362906, 0, 0, 0, 0.126335, 1.85129, 5.10969, -0.350008)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="FuelStorageGuardrail"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FuelStorageGuardrail/StaticBody3D"]
+shape = SubResource("CylinderShape3D_p4b5a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FuelStorageGuardrail"]
+mesh = SubResource("TubeTrailMesh_uo1nl")
+skeleton = NodePath("")
