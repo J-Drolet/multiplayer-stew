@@ -29,7 +29,5 @@ public partial class InGameUI : Control
         //CLEAR POINT
         (HealthBar.Texture as GradientTexture1D).Gradient.SetOffset(1, healthOffset + 0.0001f);
         (HealthBar.Texture as GradientTexture1D).Gradient.SetColor(1, new Color(1.0f, 1.0f, 1.0f, 0.0f));
-
-
     }
 }
