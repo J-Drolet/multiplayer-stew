@@ -13,12 +13,16 @@ namespace multiplayerstew.Scripts.Base
         [Export]
         public AnimationPlayer APlayer { get; set; }
 
+        [Export]
+        public bool DestroyOnPickup { get; set; } = true;
+
         public override void _Ready()
         {
             if (APlayer != null && APlayer.HasAnimation("PickupIdle"))
             {
                 APlayer.Play("PickupIdle");
             }
+
             PickupArea.BodyEntered += ActivatePickup;
             GodotErrorService.ValidateRequiredData(this);
         }

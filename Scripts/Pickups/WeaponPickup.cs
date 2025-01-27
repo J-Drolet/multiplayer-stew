@@ -22,8 +22,19 @@ namespace multiplayerstew.Scripts.Pickups
 			if (body is Character)
 			{
 				Character character = body as Character;
-				character.EquippedWeapon = Weapon.Instantiate() as UpgradableWeapon;
-				this.QueueFree();
+                UpgradableWeapon weaponPickup = Weapon.Instantiate() as UpgradableWeapon;
+
+				// Dont pick up same weapon again and if so, delete instantiated weapon
+				if ((character.EquippedWeapon?.Name ?? "") != weaponPickup.Name)
+				{
+					character.EquippedWeapon = weaponPickup;
+					if (DestroyOnPickup)
+						this.QueueFree();
+				}
+				else 
+				{
+					weaponPickup.QueueFree();
+				}
 			}
 		}
 	}
