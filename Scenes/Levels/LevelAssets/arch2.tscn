@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dxtx8tubrgl7h"]
+
+[node name="Arch" type="Node3D"]
+transform = Transform3D(0.908825, 0, 0, 0, 0.908825, 0, 0, 0, 0.908825, 0.0065124, 1.26115, -0.437842)
+metadata/_edit_group_ = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="ArchRight" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1.6498, -3.92443, 0, 1.1215, 5.77309, 0, 0, 0, 1.88778, 8.50897, 0, 0)
+
+[node name="ArchTop" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-0.163203, 18.8892, 0, -2.02005, -1.52609, 0, 0, 0, 1.88778, -0.303823, 3.83355, 0)
+
+[node name="ArchLeft" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1.82154, 3.27368, 0, -0.717121, 8.31539, 0, 0, 0, 1.88778, -9.58884, 0.564243, 0)

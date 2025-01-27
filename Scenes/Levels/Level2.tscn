@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://btavi7m2jh606"]
+[gd_scene load_steps=18 format=3 uid="uid://btavi7m2jh606"]
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_tjnmx"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_m4m6e"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bwh21gfyr2idt" path="res://Scenes/GodotBox.tscn" id="3_yfddj"]
 [ext_resource type="PackedScene" uid="uid://x7a1ptqtwtmp" path="res://Scenes/Pickups/PistolPickup.tscn" id="4_7bjvl"]
 [ext_resource type="PackedScene" uid="uid://yqxo7dd0068w" path="res://Scenes/Levels/LevelAssets/sandbag.tscn" id="4_51ga2"]
+[ext_resource type="PackedScene" uid="uid://dxtx8tubrgl7h" path="res://Scenes/Levels/LevelAssets/arch2.tscn" id="4_xgihm"]
 [ext_resource type="PackedScene" uid="uid://b0ywmvox13rx1" path="res://Scenes/Pickups/ShotgunPickup.tscn" id="5_2onvt"]
 [ext_resource type="PackedScene" uid="uid://bdu7h1l1jg443" path="res://Scenes/Levels/LevelAssets/concretepipe.tscn" id="5_xq3c0"]
 [ext_resource type="PackedScene" uid="uid://dpd0cvtbs8iuo" path="res://Scenes/Target.tscn" id="6_dsuo7"]
@@ -39,7 +40,10 @@ skeleton = NodePath("")
 shape = SubResource("BoxShape3D_bbwtt")
 
 [node name="Arch" parent="." instance=ExtResource("3_nlxkw")]
-transform = Transform3D(-0.230935, 0.0097036, -0.858338, -0.130717, 0.74452, 0.0707792, 0.651193, 0.152893, -0.290188, -18.6049, -1.75856, -0.884152)
+transform = Transform3D(-0.230935, 0.0097036, -0.858338, -0.130717, 0.74452, 0.0707792, 0.651193, 0.152893, -0.290188, -8.02797, 10.6676, 13.6131)
+
+[node name="Arch2" parent="." instance=ExtResource("4_xgihm")]
+transform = Transform3D(0.118342, 0, -0.901087, -0.256224, 0.871309, -0.0336507, 0.863891, 0.258424, 0.113457, -18.938, -1.70141, 0.477198)
 
 [node name="Sandbag" parent="." instance=ExtResource("4_51ga2")]
 transform = Transform3D(0.148448, 0, -0.504383, 0, 0.525775, 0, 0.504383, 0, 0.148448, -11.7427, 0.510523, -7.59638)
@@ -124,3 +128,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 23.4312)
 
 [node name="4" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.69138, 0, 22.9489)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]

@@ -4,6 +4,7 @@
 metadata/_edit_group_ = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
+visible = false
 flip_faces = true
 size = Vector3(10, 10, 10)
 
