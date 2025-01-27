@@ -1,7 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dpd0cvtbs8iuo"]
+[gd_scene load_steps=9 format=3 uid="uid://dpd0cvtbs8iuo"]
 
 [ext_resource type="Script" path="res://Scripts/Base/Damageable.cs" id="1_3i7fc"]
 [ext_resource type="Script" path="res://Scripts/Base/DamageArea.cs" id="2_00s7s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hc7fe"]
+size = Vector3(0.434143, 0.822754, 0.0632324)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_na5c2"]
 albedo_color = Color(0.605274, 0.605274, 0.605274, 1)
@@ -21,10 +24,14 @@ properties/0/path = NodePath(".:CurrentHealth")
 properties/0/spawn = true
 properties/0/replication_mode = 1
 
-[node name="Target" type="Node3D" node_paths=PackedStringArray("Hitboxes", "HealthText")]
+[node name="Target" type="CharacterBody3D" node_paths=PackedStringArray("Hitboxes", "HealthText")]
 script = ExtResource("1_3i7fc")
-Hitboxes = [NodePath("Body"), NodePath("Head")]
+Hitboxes = [NodePath("Head"), NodePath("Body")]
 HealthText = NodePath("Label3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00180054, 0.088623, 0.00183105)
+shape = SubResource("BoxShape3D_hc7fe")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.418031, 0, 0, 0, 0.604854, 0, 0, 0, 0.0468157, 0, -0.00380564, 0)
