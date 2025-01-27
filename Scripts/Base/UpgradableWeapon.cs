@@ -34,7 +34,7 @@ namespace multiplayerstew.Scripts.Base
 		public AnimationPlayer APlayer { get; set; }
 
 		private int CurrentAmmo { get; set; }
-		public List<Upgrade> Upgrades { get; set; }
+		public List<Upgrade> Upgrades { get; set; } = new();
 
 		public override void _Ready()
 		{
