@@ -1,0 +1,177 @@
+[gd_scene load_steps=21 format=3 uid="uid://1fdlt6hucwhx"]
+
+[ext_resource type="Script" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_4t0va"]
+[ext_resource type="PackedScene" uid="uid://cl6ckcu4c5ymq" path="res://Scenes/Weapons/m1-garand.tscn" id="2_jipal"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vmxku"]
+size = Vector3(2, 1, 2)
+
+[sub_resource type="Animation" id="Animation_fdsld"]
+resource_name = "PickupIdle"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Meshes:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wds57"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Meshes:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_57bpt"]
+_data = {
+"PickupIdle": SubResource("Animation_fdsld"),
+"RESET": SubResource("Animation_wds57")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n42so"]
+albedo_color = Color(0.352941, 0.180392, 0.0862745, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6u8j6"]
+material = SubResource("StandardMaterial3D_n42so")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nye0u"]
+albedo_color = Color(0.653852, 0.653852, 9.62615e-07, 1)
+metallic = 1.0
+metallic_specular = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_m0e50"]
+material = SubResource("StandardMaterial3D_nye0u")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6vhn"]
+albedo_color = Color(0.28485, 0.28485, 0.28485, 1)
+metallic = 0.54
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_2rchs"]
+material = SubResource("StandardMaterial3D_q6vhn")
+radial_steps = 24
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jxm8s"]
+albedo_color = Color(0.352941, 0.180392, 0.0862745, 1)
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_nsnet"]
+material = SubResource("StandardMaterial3D_jxm8s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i2r18"]
+albedo_color = Color(0.282639, 0.260275, 0.30127, 1)
+metallic = 1.0
+metallic_specular = 0.55
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_6i1om"]
+material = SubResource("StandardMaterial3D_i2r18")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wcui0"]
+albedo_color = Color(0.282353, 0.258824, 0.301961, 1)
+metallic = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_r7t17"]
+material = SubResource("StandardMaterial3D_wcui0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3q2fy"]
+albedo_color = Color(0.879171, 0.606463, 0.273035, 1)
+metallic = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_arv3l"]
+material = SubResource("StandardMaterial3D_3q2fy")
+
+[node name="GarandPickup" type="Node3D" node_paths=PackedStringArray("PickupArea", "APlayer")]
+script = ExtResource("1_4t0va")
+Weapon = ExtResource("2_jipal")
+PickupArea = NodePath("Area3D")
+APlayer = NodePath("AnimationPlayer")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_vmxku")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_57bpt")
+}
+
+[node name="Meshes" type="Node3D" parent="."]
+
+[node name="Back" type="Node3D" parent="Meshes"]
+
+[node name="garand-handle-mesh" type="MeshInstance3D" parent="Meshes/Back"]
+transform = Transform3D(0.158495, 0, 0, 0, 0.286356, 0.0406614, 0, -0.0660735, 0.176222, -0.000422478, 0.137658, 0.0824666)
+mesh = SubResource("BoxMesh_6u8j6")
+skeleton = NodePath("../..")
+
+[node name="garand-stock-mesh" type="MeshInstance3D" parent="Meshes/Back"]
+transform = Transform3D(0.113968, 0, 0, 0, -0.0279981, 0.227586, 0, -0.661394, -0.00963414, 0.00568672, 0.124341, 0.44853)
+mesh = SubResource("BoxMesh_6u8j6")
+skeleton = NodePath("../..")
+
+[node name="garand-clip-mesh" type="MeshInstance3D" parent="Meshes/Back"]
+transform = Transform3D(-0.000663989, -0.000459546, -0.0589754, -0.140868, -0.00238119, 0.000282782, 0.00293061, -0.114563, 0.000230723, 0.04, 0.2, 0.08)
+mesh = SubResource("BoxMesh_m0e50")
+skeleton = NodePath("../..")
+
+[node name="Front" type="Node3D" parent="Meshes"]
+
+[node name="garand-barrel-mesh" type="MeshInstance3D" parent="Meshes/Front"]
+transform = Transform3D(0.097334, 0, 0, 0, -7.4549e-08, 0.11196, 0, -1.70548, -4.89395e-09, 0.00334185, 0.270733, -0.860803)
+mesh = SubResource("TubeTrailMesh_2rchs")
+skeleton = NodePath("../..")
+
+[node name="garand-far-sights-mesh" type="MeshInstance3D" parent="Meshes/Front"]
+transform = Transform3D(0.0308595, 0, 0, 0, -1.98655e-09, 0.100804, 0, -0.045447, -4.40629e-09, -0.000640184, 0.307847, -1.66397)
+mesh = SubResource("TubeTrailMesh_2rchs")
+skeleton = NodePath("../..")
+
+[node name="garand-near-sights-left-mesh2" type="MeshInstance3D" parent="Meshes/Front"]
+transform = Transform3D(0.020793, 0, 0, 0, -1.33853e-09, 0.0679212, 0, -0.030622, -2.96894e-09, -0.0128661, 0.309319, -0.0535074)
+mesh = SubResource("TubeTrailMesh_2rchs")
+skeleton = NodePath("../..")
+
+[node name="garand-near-sights-right-mesh3" type="MeshInstance3D" parent="Meshes/Front"]
+transform = Transform3D(0.0208556, 0, 0, 0, -1.34256e-09, 0.0681257, 0, -0.0307141, -2.97787e-09, 0.0204891, 0.308274, -0.0531404)
+mesh = SubResource("TubeTrailMesh_2rchs")
+skeleton = NodePath("../..")
+
+[node name="garand-body-mesh" type="MeshInstance3D" parent="Meshes/Front"]
+transform = Transform3D(0.147799, 0, 0, 0, -4.68976e-08, 0.156937, 0, -1.07289, -6.85996e-09, -0.00267732, 0.215943, -0.530743)
+mesh = SubResource("TubeTrailMesh_nsnet")
+skeleton = NodePath("../..")
+
+[node name="garand-reload-drive-mesh" type="MeshInstance3D" parent="Meshes/Front"]
+transform = Transform3D(0.0319825, 0, 0, 0, -1.52342e-08, 0.0295907, 0, -0.348518, -1.29345e-09, -0.0429351, 0.302542, -0.249398)
+mesh = SubResource("TubeTrailMesh_6i1om")
+skeleton = NodePath("../..")
+
+[node name="garand-reload-pin-mesh" type="MeshInstance3D" parent="Meshes/Front/garand-reload-drive-mesh"]
+transform = Transform3D(0.341215, 0.442301, -0.000180179, -2.84478e-10, 0.0501636, 0.0330692, 0.0766521, -1.96889, 0.000802063, 0, 0.461, 1)
+mesh = SubResource("TubeTrailMesh_6i1om")
+skeleton = NodePath("../..")
+
+[node name="garand-reload-pin-knob-mesh" type="MeshInstance3D" parent="Meshes/Front/garand-reload-drive-mesh/garand-reload-pin-mesh"]
+transform = Transform3D(1.67236, 0.442817, -0.0017783, -1.47847e-08, 0.0502222, 0.326347, 0.375688, -1.97119, 0.0079163, 0.0198119, -0.511386, 0.0752125)
+mesh = SubResource("SphereMesh_r7t17")
+skeleton = NodePath("../..")
+
+[node name="garand-spent-shell-mesh" type="MeshInstance3D" parent="Meshes/Front"]
+transform = Transform3D(0.0217661, 0, 0, 0, -0.0030115, 0.0197302, 0, -0.064216, -0.000925273, 0, 0.17, -0.15)
+mesh = SubResource("CylinderMesh_arv3l")

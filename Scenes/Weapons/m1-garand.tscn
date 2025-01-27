@@ -1,0 +1,323 @@
+[gd_scene load_steps=23 format=3 uid="uid://cl6ckcu4c5ymq"]
+
+[ext_resource type="Script" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_uajlt"]
+[ext_resource type="PackedScene" uid="uid://diqolrhp5s6sw" path="res://Scenes/Projectiles/GarandBullet.tscn" id="2_meyh4"]
+
+[sub_resource type="Animation" id="Animation_omih6"]
+resource_name = "Fire"
+length = 1.8
+step = 0.02
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.24, 0.4), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.174533, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:CanFire")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "position_3d"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Front/HandMesh")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0.0625579, -0.797975, 0.5, 1, 0, 0.063, -0.798, 0.82, 1, -0.17, 0.25, -0.4, 1.16, 1, -0.17, 0.25, -0.15, 1.5, 1, -0.17, 0.25, -0.4, 1.8, 1, 0, 0.0625579, -0.797975)
+tracks/4/type = "position_3d"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Front/garand-reload-drive-mesh/garand-reload-pin-mesh")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0.461, 1, 0.8, 1, 0, 0.461, 1, 1.14, 1, 0, -0.5, 1, 1.48, 1, 0, 0.461, 1)
+tracks/5/type = "position_3d"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Front/garand-spent-shell-mesh")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(1.04, 1, 0, 0.17, -0.15, 1.18, 1, 0.1, 0.5, -0.15, 1.32, 1, 0.3, 0.2, -0.15, 1.42, 1, 0.3, -0.1, -0.15, 1.54, 1, 0.3, -0.5, -0.15, 1.64, 1, 0.3, -15, -0.15)
+
+[sub_resource type="Animation" id="Animation_hlufq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:CanFire")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "position_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Front/HandMesh")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/3/type = "position_3d"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Front/garand-reload-drive-mesh/garand-reload-pin-mesh")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0.461182, 9.53674e-07)
+tracks/4/type = "position_3d"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/5/type = "position_3d"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Back/HandMesh2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/6/type = "position_3d"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Back/garand-clip-mesh")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/7/type = "position_3d"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Front/garand-spent-shell-mesh")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+
+[sub_resource type="Animation" id="Animation_h106b"]
+resource_name = "Reload"
+length = 2.05
+step = 0.02
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Front/HandMesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.00580746, 0.0914766, -0.851659, 0.32, 1, -0.17, 0.25, -0.4, 0.64, 1, -0.185, 0.25, -0.13, 1.64, 1, -0.185, 0.25, -0.13, 1.84, 1, -0.13, 0.25, -0.4, 2, 1, -0.00580746, 0.0914766, -0.851659)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Front/garand-reload-drive-mesh/garand-reload-pin-mesh")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0.02, 1, 0, 0.461182, 9.53674e-07, 0.3, 1, 0, 0.461182, 9.53674e-07, 0.6, 1, 0, -0.45, 1, 1.66, 1, 0, -0.45, 1, 1.84, 1, 0, 0.461182, 9.53674e-07)
+tracks/2/type = "position_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Back/HandMesh2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0.28, 1, 0, 0, 0, 0.82, 1, 0.2, 0, 0, 1.08, 1, 0.365, 0.5, -0.15, 1.26, 1, 0.21, 0.5, -0.15, 1.48, 1, 0.21, 0.3, -0.15, 1.76, 1, 0, 0, 0)
+tracks/3/type = "position_3d"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Back/garand-clip-mesh")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0.28, 1, 0, 0, 0, 0.82, 1, 0.2, 0, 0, 1.04, 1, 0.2, 0.5, -0.15, 1.24, 1, 0.04, 0.5, -0.15, 1.46, 1, 0, 0.22, -0.15, 1.52, 1, 0.04, 0.2, 0.08)
+tracks/4/type = "position_3d"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mxbmx"]
+_data = {
+"Fire": SubResource("Animation_omih6"),
+"RESET": SubResource("Animation_hlufq"),
+"Reload": SubResource("Animation_h106b")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_218to"]
+albedo_color = Color(0.28485, 0.28485, 0.28485, 1)
+metallic = 0.54
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_qqlwn"]
+material = SubResource("StandardMaterial3D_218to")
+radial_steps = 24
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p3dwk"]
+albedo_color = Color(0.907052, 0.693446, 0.497686, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_1tuyb"]
+material = SubResource("StandardMaterial3D_p3dwk")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cc3lx"]
+albedo_color = Color(0.352941, 0.180392, 0.0862745, 1)
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_x4px7"]
+material = SubResource("StandardMaterial3D_cc3lx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h0brl"]
+albedo_color = Color(0.282639, 0.260275, 0.30127, 1)
+metallic = 1.0
+metallic_specular = 0.55
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_pn1ys"]
+material = SubResource("StandardMaterial3D_h0brl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rr6oy"]
+albedo_color = Color(0.282353, 0.258824, 0.301961, 1)
+metallic = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_twomr"]
+material = SubResource("StandardMaterial3D_rr6oy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7bcsw"]
+albedo_color = Color(0.879171, 0.606463, 0.273035, 1)
+metallic = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4xpno"]
+material = SubResource("StandardMaterial3D_7bcsw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xkm3e"]
+albedo_color = Color(0.352941, 0.180392, 0.0862745, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_foywp"]
+material = SubResource("StandardMaterial3D_xkm3e")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7n8ab"]
+albedo_color = Color(0.653852, 0.653852, 9.62615e-07, 1)
+metallic = 1.0
+metallic_specular = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_4g0a3"]
+material = SubResource("StandardMaterial3D_7n8ab")
+
+[node name="M1-Garand" type="Node3D" node_paths=PackedStringArray("APlayer")]
+script = ExtResource("1_uajlt")
+WeaponName = "M1 Garand"
+MaxAmmo = 8
+Projectile = ExtResource("2_meyh4")
+APlayer = NodePath("AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mxbmx")
+}
+
+[node name="Front" type="Node3D" parent="."]
+
+[node name="garand-barrel-mesh" type="MeshInstance3D" parent="Front"]
+transform = Transform3D(0.097334, 0, 0, 0, -7.4549e-08, 0.11196, 0, -1.70548, -4.89395e-09, 0.00334185, 0.270733, -0.860803)
+mesh = SubResource("TubeTrailMesh_qqlwn")
+skeleton = NodePath("../..")
+
+[node name="HandMesh" type="MeshInstance3D" parent="Front"]
+transform = Transform3D(0.33, 0, 0, 0, 0.33, 1.49012e-08, 0, -1.49012e-08, 0.33, 0, 0, 0)
+mesh = SubResource("SphereMesh_1tuyb")
+skeleton = NodePath("../../AnimationPlayer")
+
+[node name="garand-far-sights-mesh" type="MeshInstance3D" parent="Front"]
+transform = Transform3D(0.0308595, 0, 0, 0, -1.98655e-09, 0.100804, 0, -0.045447, -4.40629e-09, -0.000640184, 0.307847, -1.66397)
+mesh = SubResource("TubeTrailMesh_qqlwn")
+skeleton = NodePath("../..")
+
+[node name="garand-near-sights-left-mesh2" type="MeshInstance3D" parent="Front"]
+transform = Transform3D(0.020793, 0, 0, 0, -1.33853e-09, 0.0679212, 0, -0.030622, -2.96894e-09, -0.0128661, 0.309319, -0.0535074)
+mesh = SubResource("TubeTrailMesh_qqlwn")
+skeleton = NodePath("../..")
+
+[node name="garand-near-sights-right-mesh3" type="MeshInstance3D" parent="Front"]
+transform = Transform3D(0.0208556, 0, 0, 0, -1.34256e-09, 0.0681257, 0, -0.0307141, -2.97787e-09, 0.0204891, 0.308274, -0.0531404)
+mesh = SubResource("TubeTrailMesh_qqlwn")
+skeleton = NodePath("../..")
+
+[node name="garand-body-mesh" type="MeshInstance3D" parent="Front"]
+transform = Transform3D(0.147799, 0, 0, 0, -4.68976e-08, 0.156937, 0, -1.07289, -6.85996e-09, -0.00267732, 0.215943, -0.530743)
+mesh = SubResource("TubeTrailMesh_x4px7")
+skeleton = NodePath("../..")
+
+[node name="garand-reload-drive-mesh" type="MeshInstance3D" parent="Front"]
+transform = Transform3D(0.0319825, 0, 0, 0, -1.52342e-08, 0.0295907, 0, -0.348518, -1.29345e-09, -0.0429351, 0.302542, -0.249398)
+mesh = SubResource("TubeTrailMesh_pn1ys")
+skeleton = NodePath("../..")
+
+[node name="garand-reload-pin-mesh" type="MeshInstance3D" parent="Front/garand-reload-drive-mesh"]
+transform = Transform3D(0.341215, 0.442301, -0.000180179, -2.84478e-10, 0.0501636, 0.0330692, 0.0766521, -1.96889, 0.000802063, 0, 0.461182, 9.53674e-07)
+mesh = SubResource("TubeTrailMesh_pn1ys")
+skeleton = NodePath("../..")
+
+[node name="garand-reload-pin-knob-mesh" type="MeshInstance3D" parent="Front/garand-reload-drive-mesh/garand-reload-pin-mesh"]
+transform = Transform3D(1.67236, 0.442817, -0.0017783, -1.47847e-08, 0.0502222, 0.326347, 0.375688, -1.97119, 0.0079163, 0.0198119, -0.511386, 0.0752125)
+mesh = SubResource("SphereMesh_twomr")
+skeleton = NodePath("../..")
+
+[node name="garand-spent-shell-mesh" type="MeshInstance3D" parent="Front"]
+transform = Transform3D(0.0217661, 0, 0, 0, -0.0030115, 0.0197302, 0, -0.064216, -0.000925273, 0, 0, 0)
+mesh = SubResource("CylinderMesh_4xpno")
+
+[node name="Back" type="Node3D" parent="."]
+
+[node name="garand-handle-mesh" type="MeshInstance3D" parent="Back"]
+transform = Transform3D(0.158495, 0, 0, 0, 0.286356, 0.0406614, 0, -0.0660735, 0.176222, -0.000422478, 0.137658, 0.0824666)
+mesh = SubResource("BoxMesh_foywp")
+skeleton = NodePath("../..")
+
+[node name="garand-stock-mesh" type="MeshInstance3D" parent="Back"]
+transform = Transform3D(0.113968, 0, 0, 0, -0.0279981, 0.227586, 0, -0.661394, -0.00963414, 0.00568672, 0.124341, 0.44853)
+mesh = SubResource("BoxMesh_foywp")
+skeleton = NodePath("../..")
+
+[node name="HandMesh2" type="MeshInstance3D" parent="Back"]
+transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, 0, 0)
+mesh = SubResource("SphereMesh_1tuyb")
+skeleton = NodePath("../../AnimationPlayer")
+
+[node name="garand-clip-mesh" type="MeshInstance3D" parent="Back"]
+transform = Transform3D(-0.000663989, -0.000459546, -0.0589754, -0.140868, -0.00238119, 0.000282782, 0.00293061, -0.114563, 0.000230723, 0, 0, 0)
+mesh = SubResource("BoxMesh_4g0a3")
+skeleton = NodePath("../..")
