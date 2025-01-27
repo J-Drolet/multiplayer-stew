@@ -4,7 +4,7 @@ using multiplayerstew.Scripts.Base;
 using multiplayerstew.Scripts.Services;
 using System;
 
-public partial class Character : Damageable
+public partial class Character : Entity
 {
 	[Export, ExportRequired]
 	public Camera3D Camera { get; set; }
@@ -45,7 +45,9 @@ public partial class Character : Damageable
     public override void _Ready()
     {
 		GodotErrorService.ValidateRequiredData(this);
-	
+
+		Init();
+
 		if(!IsMultiplayerAuthority()) return;
 
 		Input.MouseMode = Input.MouseModeEnum.Captured;

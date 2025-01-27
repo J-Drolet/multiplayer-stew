@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpd0cvtbs8iuo"]
+[gd_scene load_steps=8 format=3 uid="uid://dpd0cvtbs8iuo"]
 
-[ext_resource type="Script" path="res://Scripts/Base/Damageable.cs" id="1_3i7fc"]
+[ext_resource type="Script" path="res://Scripts/Base/Entity.cs" id="1_8cod3"]
 [ext_resource type="Script" path="res://Scripts/Base/DamageArea.cs" id="2_00s7s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hc7fe"]
@@ -19,13 +19,8 @@ size = Vector3(0.154419, 0.201782, 0.048584)
 [sub_resource type="BoxShape3D" id="BoxShape3D_g2of7"]
 size = Vector3(0.421234, 0.606445, 0.0475464)
 
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_b0qcy"]
-properties/0/path = NodePath(".:CurrentHealth")
-properties/0/spawn = true
-properties/0/replication_mode = 1
-
 [node name="Target" type="CharacterBody3D" node_paths=PackedStringArray("Hitboxes", "HealthText")]
-script = ExtResource("1_3i7fc")
+script = ExtResource("1_8cod3")
 Hitboxes = [NodePath("Head"), NodePath("Body")]
 HealthText = NodePath("Label3D")
 
@@ -63,6 +58,3 @@ shape = SubResource("BoxShape3D_g2of7")
 transform = Transform3D(0.279928, 0, 0, 0, 0.279928, 0, 0, 0, 0.279928, 0, 0.616431, 0)
 text = "Health:"
 font_size = 64
-
-[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
-replication_config = SubResource("SceneReplicationConfig_b0qcy")
