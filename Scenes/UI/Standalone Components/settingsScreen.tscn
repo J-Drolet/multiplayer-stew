@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://mujxr1ewuap1"]
+[gd_scene load_steps=7 format=3 uid="uid://mujxr1ewuap1"]
 
 [ext_resource type="Script" path="res://Scripts/UI/SettingsScreen.cs" id="1_cvm75"]
 [ext_resource type="Theme" uid="uid://emuxwpv1i0mt" path="res://Assets/Themes/SettingsMenu.tres" id="2_oyqlb"]
 [ext_resource type="Script" path="res://Scripts/UI/SettingInputTypes/LineEditSettingInput.cs" id="3_7u800"]
 [ext_resource type="Script" path="res://Scripts/UI/SettingInputTypes/SliderSettingInput.cs" id="4_j6ui4"]
 [ext_resource type="Script" path="res://Scripts/UI/SettingInputTypes/ButtonSettingInput.cs" id="5_aka8e"]
+[ext_resource type="Script" path="res://Scripts/UI/SettingInputTypes/OptionsButtonSettingInput.cs" id="6_45gcu"]
 
 [node name="SettingsScreen" type="Control" node_paths=PackedStringArray("GameTab", "ControlTab", "VideoTab", "AudioTab")]
 layout_mode = 3
@@ -239,6 +240,32 @@ offset_top = -12.0
 offset_right = 24.0
 offset_bottom = 12.0
 grow_vertical = 2
+
+[node name="Display Mode" type="HBoxContainer" parent="Tabs/VideoTab/VBoxContainer" node_paths=PackedStringArray("Input")]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+script = ExtResource("6_45gcu")
+Input = NodePath("OptionButton")
+SettingSection = "settings"
+SettingName = "display_mode"
+
+[node name="Label" type="Label" parent="Tabs/VideoTab/VBoxContainer/Display Mode"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme = ExtResource("2_oyqlb")
+text = "Display Mode"
+horizontal_alignment = 2
+
+[node name="OptionButton" type="OptionButton" parent="Tabs/VideoTab/VBoxContainer/Display Mode"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "Fullscreen"
+popup/item_1/text = "Windowed"
+popup/item_1/id = 1
+popup/item_2/text = "Borderless Fullscreen"
+popup/item_2/id = 2
 
 [node name="AudioTab" type="Panel" parent="Tabs"]
 visible = false

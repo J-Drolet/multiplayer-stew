@@ -42,11 +42,4 @@ public static class GameManager
         UI.InGameUI.Hide();
         Input.MouseMode = Input.MouseModeEnum.Visible;
     }
-
-    public static void UpdateAudioBuses()
-    {
-        AudioServer.SetBusVolumeDb(AudioServer.GetBusIndex("Music"), Mathf.LinearToDb((float) Config.GetValue("settings", "music_volume")));
-        AudioServer.SetBusVolumeDb(AudioServer.GetBusIndex("SFX"), Mathf.LinearToDb((float) Config.GetValue("settings", "sfx_volume")));
-    }
-
 }

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dker47ss6f07g"]
 
 [ext_resource type="Script" path="res://Scripts/UI/InGameUI.cs" id="1_8bj3a"]
-[ext_resource type="Texture2D" uid="uid://bp1y6idrr3kgr" path="res://Assets/Crosshair.png" id="2_k7omr"]
+[ext_resource type="Texture2D" uid="uid://bh2w5lp527x68" path="res://Assets/Crosshair.png" id="2_k7omr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1vvx4"]
 font_size = 36

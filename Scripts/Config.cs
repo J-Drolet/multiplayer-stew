@@ -1,4 +1,5 @@
 using Godot;
+using Godot.Collections;
 using System;
 
 public partial class Config: Node
@@ -15,7 +16,7 @@ public partial class Config: Node
 
     // Signal when a setting changes
     [Signal]
-    public delegate void ConfigChangedEventHandler(string propertyKey, Variant propertyValue);
+    public delegate void ConfigChangedEventHandler(string section, string propertyKey, Variant propertyValue);
 
     public override void _EnterTree()
     {   
@@ -38,7 +39,7 @@ public partial class Config: Node
     public static Variant SetValue(string section, string propertyKey, Variant propertyValue)
     {
         UserSettings.SetValue(section, propertyKey, propertyValue);
-        Instance.EmitSignal("ConfigChanged", propertyKey, propertyValue);
+        Instance.EmitSignal("ConfigChanged", section, propertyKey, propertyValue);
         return propertyValue;
     }
 

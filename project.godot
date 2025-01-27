@@ -19,6 +19,7 @@ config/icon="res://Assets/icon.svg"
 
 Ui="*res://Scripts/UI/UI.cs"
 Config="*res://Scripts/Config.cs"
+SettingsUpdater="*res://Scripts/SettingsUpdater.cs"
 
 [dotnet]
 
