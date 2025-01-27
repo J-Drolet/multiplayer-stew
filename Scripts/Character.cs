@@ -4,7 +4,7 @@ using multiplayerstew.Scripts.Base;
 using multiplayerstew.Scripts.Services;
 using System;
 
-public partial class Character : CharacterBody3D
+public partial class Character : Damageable
 {
 	[Export, ExportRequired]
 	public Camera3D Camera { get; set; }
@@ -14,9 +14,9 @@ public partial class Character : CharacterBody3D
 	public Node3D Head { get; set; }
 	[Export, ExportRequired]
 	public Node3D Hand { get; set; }
+
+	public bool CanMove { get; set; } = true;
 	
-	[Export, ExportRequired]
-	private Label AmmoLabel { get; set; }
     [Export]
     private UpgradableWeapon equippedWeapon;
     public UpgradableWeapon EquippedWeapon
@@ -28,14 +28,11 @@ public partial class Character : CharacterBody3D
                 EquippedWeapon.QueueFree();
             }
             equippedWeapon = value;
-            EquippedWeapon.ProjectileOrigin = ProjectileOrigin;
+			equippedWeapon.Name = Name.ToString() + ":EquippedWeapon";
 			equippedWeapon.SetMultiplayerAuthority(Name.ToString().ToInt());
             Hand.AddChild(EquippedWeapon);
         }	
 	}
-
-    [Export]
-	public int MouseSensitivity { get; set; } = 50;
 
 	public const float Speed = 5.0f;
 	public const float JumpVelocity = 4.5f;
@@ -72,15 +69,10 @@ public partial class Character : CharacterBody3D
 					EquippedWeapon.Reload();
 				}
 			}
-			
-			if (@event.IsActionPressed("ui_cancel"))
-			{
-                Input.MouseMode = Input.MouseModeEnum.Visible;
-            }
-
 			if(@event is InputEventMouseMotion)
 			{
 				InputEventMouseMotion iEvent = @event as InputEventMouseMotion;
+				float MouseSensitivity = (float) Config.GetValue("settings", "mouse_sensitivity");
 				Head.RotateY(-iEvent.Relative.X * MouseSensitivity * 0.0001f);
                 Camera.RotateX(-iEvent.Relative.Y * MouseSensitivity * 0.0001f);
 				Camera.RotationDegrees = new Vector3(Math.Clamp(Camera.RotationDegrees.X, -85, 85), 0, 0);
@@ -96,7 +88,7 @@ public partial class Character : CharacterBody3D
 
 		if (EquippedWeapon != null)
 		{
-			AmmoLabel.Text = EquippedWeapon.GetCurrentAmmoText();
+			UI.InGameUI.AmmoCount.Text = EquippedWeapon.GetCurrentAmmoText();
 			if (EquippedWeapon?.FireMode == FireModes.Automatic && Input.IsActionPressed("Fire"))
 			{
 				EquippedWeapon.Fire();
@@ -116,15 +108,20 @@ public partial class Character : CharacterBody3D
 		}
 
 		// Handle Jump.
-		if (Input.IsActionJustPressed("Jump") && IsOnFloor())
+		if (Input.IsActionJustPressed("Jump") && IsOnFloor() && CanMove)
 		{
 			velocity.Y = JumpVelocity;
 		}
 
-		// Get the input direction and handle the movement/deceleration.
-		// As good practice, you should replace UI actions with custom gameplay actions.
-		Vector2 inputDir = Input.GetVector("Left", "Right", "Forward", "Back");
-		Vector3 direction = (Head.Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
+		Vector3 direction = Vector3.Zero;
+		if(CanMove)
+		{
+			// Get the input direction and handle the movement/deceleration.
+			// As good practice, you should replace UI actions with custom gameplay actions.
+			Vector2 inputDir = Input.GetVector("Left", "Right", "Forward", "Back");
+			direction = (Head.Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
+		}
+
 		if (direction != Vector3.Zero)
 		{
 			velocity.X = direction.X * Speed;
@@ -135,6 +132,7 @@ public partial class Character : CharacterBody3D
 			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
 			velocity.Z = Mathf.MoveToward(Velocity.Z, 0, Speed);
 		}
+
 		Velocity = velocity;
 		MoveAndSlide();
 	}

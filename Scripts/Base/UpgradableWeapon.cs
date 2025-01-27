@@ -26,8 +26,6 @@ namespace multiplayerstew.Scripts.Base
         public FireModes FireMode { get; set; } = FireModes.Single;
         [Export]
         public int ProjectilePerShot { get; set; } = 1;
-        [Export]
-        public Node3D ProjectileOrigin { get; set; }
         [Export, ExportRequired]
         public PackedScene Projectile { get; set; }
         [Export]
@@ -40,9 +38,9 @@ namespace multiplayerstew.Scripts.Base
 
         public override void _Ready()
         {
+            GodotErrorService.ValidateRequiredData(this);
             GameManager.Players[GetMultiplayerAuthority()].projectileSpawner.AddSpawnableScene(Projectile.ResourcePath);
             CurrentAmmo = MaxAmmo;
-            GodotErrorService.ValidateRequiredData(this);
         }
 
         public void Fire()
@@ -54,8 +52,9 @@ namespace multiplayerstew.Scripts.Base
                 for (int x = ProjectilePerShot; x > 0; x--)
                 {
                     UpgradeableProjectile projectileInstance = Projectile.Instantiate() as UpgradeableProjectile;
-                    projectileInstance.GlobalTransform = ProjectileOrigin.GlobalTransform;
-                    GameManager.Players[GetMultiplayerAuthority()].projectileParent.AddChild(projectileInstance); 
+                    projectileInstance.Name = GetMultiplayerAuthority().ToString() +"#";
+                    projectileInstance.GlobalTransform = GameManager.Players[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalTransform;
+                    GameManager.Players[GetMultiplayerAuthority()].projectileParent.AddChild(projectileInstance, true);
                 }
             }
         }

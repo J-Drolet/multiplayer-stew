@@ -53,6 +53,8 @@ public partial class Server : Node
             GameManager.GameHost = id;
         }
         
+        RpcId(id, MethodName.NotifyCurrentHost, GameManager.GameHost);
+        
         if(AcceptingConnections == false)
         {
             RpcId(id, MethodName.NotifyConnectionRefused, "Connection failed: Game has already started");
@@ -67,8 +69,7 @@ public partial class Server : Node
     /// <param name="name"></param>
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void SendPlayerInfo(long id, string name) {
-        Rpc(MethodName.NotifyPlayerConnected, id, name);
-        Rpc(MethodName.NotifyCurrentHost, GameManager.GameHost);
+        Rpc(MethodName.NotifyPlayerConnected, id, name, GameManager.Players.Count);
     }
 
     /// <summary>
@@ -77,23 +78,14 @@ public partial class Server : Node
     /// <param name="id"></param>
     /// <param name="name"></param>
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-    public void NotifyPlayerConnected(long id, string name) {
+    public void NotifyPlayerConnected(long id, string name, int sequenceNumber) {
         // For the peer that connected, we have to tell them about all other players that joined before them
         foreach(long peerId in GameManager.Players.Keys)
         {
-            RpcId(id, MethodName.NotifyPlayerConnected, peerId, GameManager.Players[peerId].name);
+            RpcId(id, MethodName.NotifyPlayerConnected, peerId, GameManager.Players[peerId].name, GameManager.Players[peerId].sequenceNumber);
         }
 
-        GameManager.Players.Add(id, new GameManager.PlayerInfo{ name = name });
-    }
-
-    /// <summary>
-    /// Server uses this to tell all clients about a player that disconnected.
-    /// </summary>
-    /// <param name="id"></param>
-    [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-    public void NotifyPlayerDisconnected(long id) {
-        GameManager.Players.Remove(id);
+        GameManager.Players.Add(id, new GameManager.PlayerInfo{ name = name, sequenceNumber = sequenceNumber });
     }
 
     /// <summary>
@@ -106,6 +98,11 @@ public partial class Server : Node
             GD.Print("Server.NotifyStartGame - Telling clients to start their games");
             AcceptingConnections = false;
             Rpc(MethodName.NotifyStartGame);
+
+            PackedScene levelPackedScene = (PackedScene)ResourceLoader.Load("res://Scenes/Level.tscn");
+            Node level = levelPackedScene.Instantiate();
+            Root.Instance.AddChild(level); // using Config.Instance just to access tree
+            GameManager.CurrentLevel = level;
         }
         else 
         {

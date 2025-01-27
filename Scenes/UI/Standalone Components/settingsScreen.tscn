@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://mujxr1ewuap1"]
 
-[ext_resource type="Theme" uid="uid://bvq6iy5t625tg" path="res://Assets/Themes/SettingsMenu.tres" id="1_l023w"]
-[ext_resource type="Script" path="res://Scripts/Main Menu/SettingsScreen.cs" id="1_stk7l"]
-[ext_resource type="Script" path="res://Scripts/Main Menu/SettingInputTypes/LineEditSettingInput.cs" id="3_vkvsy"]
-[ext_resource type="Script" path="res://Scripts/Main Menu/SettingInputTypes/ButtonSettingInput.cs" id="4_5t2f1"]
-[ext_resource type="Script" path="res://Scripts/Main Menu/SettingInputTypes/SliderSettingInput.cs" id="5_tqr58"]
+[ext_resource type="Script" path="res://Scripts/UI/SettingsScreen.cs" id="1_cvm75"]
+[ext_resource type="Theme" uid="uid://emuxwpv1i0mt" path="res://Assets/Themes/SettingsMenu.tres" id="2_oyqlb"]
+[ext_resource type="Script" path="res://Scripts/UI/SettingInputTypes/LineEditSettingInput.cs" id="3_7u800"]
+[ext_resource type="Script" path="res://Scripts/UI/SettingInputTypes/SliderSettingInput.cs" id="4_j6ui4"]
+[ext_resource type="Script" path="res://Scripts/UI/SettingInputTypes/ButtonSettingInput.cs" id="5_aka8e"]
 
 [node name="SettingsScreen" type="Control" node_paths=PackedStringArray("GameTab", "ControlTab", "VideoTab", "AudioTab")]
 layout_mode = 3
@@ -13,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_stk7l")
+script = ExtResource("1_cvm75")
 GameTab = NodePath("Tabs/GameTab")
 ControlTab = NodePath("Tabs/ControlTab")
 VideoTab = NodePath("Tabs/VideoTab")
@@ -32,7 +32,7 @@ offset_right = 0.0319824
 offset_bottom = 0.199997
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 
 [node name="TabSelectors" type="HBoxContainer" parent="Header"]
 layout_mode = 1
@@ -45,27 +45,27 @@ theme_override_constants/separation = 15
 
 [node name="BackButton" type="Button" parent="Header/TabSelectors"]
 layout_mode = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 text = "<< Back"
 
 [node name="GameTabButton" type="Button" parent="Header/TabSelectors"]
 layout_mode = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 text = "Game"
 
 [node name="ControlTabButton" type="Button" parent="Header/TabSelectors"]
 layout_mode = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 text = "Control"
 
 [node name="VideoTabButton" type="Button" parent="Header/TabSelectors"]
 layout_mode = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 text = "Video"
 
 [node name="AudioTabButton" type="Button" parent="Header/TabSelectors"]
 layout_mode = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 text = "Audio"
 
 [node name="Tabs" type="Control" parent="."]
@@ -88,7 +88,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Tabs/GameTab"]
 layout_mode = 1
@@ -100,27 +100,28 @@ grow_vertical = 2
 
 [node name="Header" type="Label" parent="Tabs/GameTab/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 theme_override_font_sizes/font_size = 32
 text = "Game Settings"
 horizontal_alignment = 1
 
 [node name="HSeparator" type="HSeparator" parent="Tabs/GameTab/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 
 [node name="Ingame Name" type="HBoxContainer" parent="Tabs/GameTab/VBoxContainer" node_paths=PackedStringArray("Input")]
 layout_mode = 2
 theme_override_constants/separation = 40
 alignment = 1
-script = ExtResource("3_vkvsy")
+script = ExtResource("3_7u800")
 Input = NodePath("LineEdit")
+SettingSection = "settings"
 SettingName = "player_name"
 
 [node name="Label" type="Label" parent="Tabs/GameTab/VBoxContainer/Ingame Name"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 text = "Player Name
 "
 horizontal_alignment = 2
@@ -137,7 +138,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Tabs/ControlTab"]
 layout_mode = 1
@@ -149,27 +150,28 @@ grow_vertical = 2
 
 [node name="Header" type="Label" parent="Tabs/ControlTab/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 theme_override_font_sizes/font_size = 32
 text = "Control Settings"
 horizontal_alignment = 1
 
 [node name="HSeparator" type="HSeparator" parent="Tabs/ControlTab/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 
 [node name="Mouse Sensitivity" type="HBoxContainer" parent="Tabs/ControlTab/VBoxContainer" node_paths=PackedStringArray("Input")]
 layout_mode = 2
 theme_override_constants/separation = 40
 alignment = 1
-script = ExtResource("5_tqr58")
+script = ExtResource("4_j6ui4")
 Input = NodePath("HSlider")
+SettingSection = "settings"
 SettingName = "mouse_sensitivity"
 
 [node name="Label" type="Label" parent="Tabs/ControlTab/VBoxContainer/Mouse Sensitivity"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 text = "Mouse Sensitivity"
 horizontal_alignment = 2
 
@@ -177,7 +179,7 @@ horizontal_alignment = 2
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_vertical = 4
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 
 [node name="VideoTab" type="Panel" parent="Tabs"]
 visible = false
@@ -187,7 +189,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Tabs/VideoTab"]
 layout_mode = 1
@@ -199,27 +201,28 @@ grow_vertical = 2
 
 [node name="Header" type="Label" parent="Tabs/VideoTab/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 theme_override_font_sizes/font_size = 32
 text = "Video Settings"
 horizontal_alignment = 1
 
 [node name="HSeparator" type="HSeparator" parent="Tabs/VideoTab/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 
 [node name="Show FPS" type="HBoxContainer" parent="Tabs/VideoTab/VBoxContainer" node_paths=PackedStringArray("Input")]
 layout_mode = 2
 theme_override_constants/separation = 40
 alignment = 1
-script = ExtResource("4_5t2f1")
+script = ExtResource("5_aka8e")
 Input = NodePath("FormatBox/CheckBox")
+SettingSection = "settings"
 SettingName = "show_fps"
 
 [node name="Label" type="Label" parent="Tabs/VideoTab/VBoxContainer/Show FPS"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 text = "Show FPS"
 horizontal_alignment = 2
 
@@ -245,7 +248,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Tabs/AudioTab"]
 layout_mode = 1
@@ -257,27 +260,28 @@ grow_vertical = 2
 
 [node name="Header" type="Label" parent="Tabs/AudioTab/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 theme_override_font_sizes/font_size = 32
 text = "Audio Settings"
 horizontal_alignment = 1
 
 [node name="HSeparator" type="HSeparator" parent="Tabs/AudioTab/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 
 [node name="Music Volume" type="HBoxContainer" parent="Tabs/AudioTab/VBoxContainer" node_paths=PackedStringArray("Input")]
 layout_mode = 2
 theme_override_constants/separation = 40
 alignment = 1
-script = ExtResource("5_tqr58")
+script = ExtResource("4_j6ui4")
 Input = NodePath("HSlider")
+SettingSection = "settings"
 SettingName = "music_volume"
 
 [node name="Label" type="Label" parent="Tabs/AudioTab/VBoxContainer/Music Volume"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 text = "Music Volume"
 horizontal_alignment = 2
 
@@ -285,7 +289,7 @@ horizontal_alignment = 2
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_vertical = 4
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 max_value = 1.0
 step = 0.01
 
@@ -293,14 +297,15 @@ step = 0.01
 layout_mode = 2
 theme_override_constants/separation = 40
 alignment = 1
-script = ExtResource("5_tqr58")
+script = ExtResource("4_j6ui4")
 Input = NodePath("HSlider")
+SettingSection = "settings"
 SettingName = "sfx_volume"
 
 [node name="Label" type="Label" parent="Tabs/AudioTab/VBoxContainer/SFX Volume"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 text = "Sound Effects Volume"
 horizontal_alignment = 2
 
@@ -308,7 +313,7 @@ horizontal_alignment = 2
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_vertical = 4
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 max_value = 1.0
 step = 0.01
 
@@ -325,7 +330,7 @@ offset_right = 0.0319824
 offset_bottom = 565.2
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 
 [node name="SaveButton" type="Button" parent="Footer"]
 layout_mode = 1
@@ -340,7 +345,7 @@ offset_right = 34.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_l023w")
+theme = ExtResource("2_oyqlb")
 text = "Save"
 
 [connection signal="visibility_changed" from="." to="." method="OnVisibilityChanged"]

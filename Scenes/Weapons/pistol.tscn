@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://b8hpvrno7saob"]
 
-[ext_resource type="Script" path="res://Scripts/Weapons/Pistol.cs" id="1_7881s"]
+[ext_resource type="Script" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_3n8ap"]
 [ext_resource type="PackedScene" uid="uid://g1mopusla6rw" path="res://Scenes/Projectiles/SimpleBullet.tscn" id="2_6tjck"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ajf1t"]
@@ -205,6 +205,18 @@ tracks/4/keys = {
 "method": &"RefillAmmo"
 }]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:CanFire")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qq742"]
 _data = {
@@ -240,8 +252,8 @@ properties/5/spawn = true
 properties/5/replication_mode = 1
 
 [node name="Pistol" type="Node3D" node_paths=PackedStringArray("APlayer")]
-script = ExtResource("1_7881s")
-WeaponName = "Godot Pistol"
+script = ExtResource("1_3n8ap")
+WeaponName = "Pistol"
 MaxAmmo = 8
 Projectile = ExtResource("2_6tjck")
 APlayer = NodePath("AnimationPlayer")

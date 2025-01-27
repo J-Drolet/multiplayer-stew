@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bfmxfalt2u42"]
+[gd_scene load_steps=16 format=3 uid="uid://bfmxfalt2u42"]
 
-[ext_resource type="Script" path="res://Scripts/Weapons/Pistol.cs" id="1_nluh6"]
+[ext_resource type="Script" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_250w0"]
 [ext_resource type="PackedScene" uid="uid://de6ynjcj4qnom" path="res://Scenes/Projectiles/Submachine gun bullet.tscn" id="2_etlu4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tmury"]
@@ -98,11 +98,139 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mag:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.155255, 0.0393912)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ReloadHand:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.0527012, 0.0262967)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ReloadHand:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ChargingHandle:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.360815, -0.105729)]
+}
+
+[sub_resource type="Animation" id="Animation_2y52e"]
+resource_name = "Reload"
+length = 1.9
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mag:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.44, 0.76),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.155255, 0.0393912), Vector3(0, -1.36773, 0.0393912), Vector3(0, -1.36773, 0.0393912), Vector3(0, -0.155255, 0.0393912)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ReloadHand:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.44, 0.76, 0.86, 1.01, 1.15, 1.24, 1.49, 1.56, 1.72, 1.78, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.0368413, -1.40606, 0.0529303), Vector3(-0.0368413, -0.235075, 0.0529303), Vector3(-0.0368413, -0.235075, 0.0529303), Vector3(-0.304, 0.153, 0.053), Vector3(0.00104725, 0.531239, -0.107306), Vector3(0.00104725, 0.531239, -0.107306), Vector3(0.00104725, 0.531239, 0.181507), Vector3(0.00104725, 0.531239, 0.181507), Vector3(0.00104725, 0.546368, 0.444137), Vector3(0.00104725, 0.546368, 0.444137), Vector3(-1.71474, -0.956605, 0.444137)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ReloadHand:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.44, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ChargingHandle:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.24, 1.49, 1.56, 1.66),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.360815, -0.105729), Vector3(0, 0.360815, 0.183084), Vector3(0, 0.360815, 0.183084), Vector3(0, 0.360815, -0.105729)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:CanFire")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.66),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"RefillAmmo"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qq742"]
 _data = {
 "Fire": SubResource("Animation_c27f4"),
-"RESET": SubResource("Animation_i6i74")
+"RESET": SubResource("Animation_i6i74"),
+"Reload": SubResource("Animation_2y52e")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mrl0e"]
@@ -111,19 +239,41 @@ albedo_color = Color(0.907052, 0.693446, 0.497686, 1)
 [sub_resource type="SphereMesh" id="SphereMesh_sshab"]
 material = SubResource("StandardMaterial3D_mrl0e")
 
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_rglvy"]
+properties/0/path = NodePath("Handle:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath("Mag:position")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath("ReloadHand:position")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+properties/3/path = NodePath("ReloadHand:visible")
+properties/3/spawn = true
+properties/3/replication_mode = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x3qn3"]
+albedo_color = Color(0.462291, 0.462291, 0.462291, 1)
+metallic = 1.0
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_x52s6"]
+material = SubResource("StandardMaterial3D_x3qn3")
+radial_steps = 18
+
 [node name="Mac10" type="Node3D" node_paths=PackedStringArray("APlayer")]
-script = ExtResource("1_nluh6")
-WeaponName = "Godot Pistol"
+script = ExtResource("1_250w0")
+WeaponName = "Mac 10"
 MaxAmmo = 30
 FireMode = 2
 Projectile = ExtResource("2_etlu4")
 APlayer = NodePath("AnimationPlayer")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Handle" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.113337, 0, 0, 0, 0.0822317, 0, 0, 0, 0.22686, 0, 0.0590581, 0.0393912)
 mesh = SubResource("BoxMesh_l5pk5")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+[node name="Mag" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.113337, 0, 0, 0, 0.191579, 0, 0, 0, 0.102026, 0, -0.155255, 0.0393912)
 mesh = SubResource("BoxMesh_l5pk5")
 
@@ -144,3 +294,16 @@ libraries = {
 transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, -0.0527012, 0.0262967)
 mesh = SubResource("SphereMesh_sshab")
 skeleton = NodePath("../AnimationPlayer")
+
+[node name="ReloadHand" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, -0.0527012, 0.0262967)
+visible = false
+mesh = SubResource("SphereMesh_sshab")
+skeleton = NodePath("../AnimationPlayer")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_rglvy")
+
+[node name="ChargingHandle" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0466801, 0, 0, 0, 0.0466801, 0, 0, 0, 0.0466801, 0, 0.360815, -0.105729)
+mesh = SubResource("TubeTrailMesh_x52s6")

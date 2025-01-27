@@ -1,22 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://emhg32smyqx0"]
+[gd_scene load_steps=5 format=3 uid="uid://emhg32smyqx0"]
 
+[ext_resource type="Script" path="res://Scripts/UI/MainMenu.cs" id="1_8m0rs"]
 [ext_resource type="Theme" uid="uid://y8ujbi36xquh" path="res://Assets/Themes/MainMenu.tres" id="1_c0h8v"]
-[ext_resource type="Script" path="res://Scripts/Main Menu/MainMenu.cs" id="1_rahjv"]
-[ext_resource type="PackedScene" uid="uid://ck74o0nreiu38" path="res://Scenes/Main Menu/joinInformation.tscn" id="3_svqof"]
-[ext_resource type="PackedScene" uid="uid://cyk5w16gxy3dv" path="res://Scenes/Main Menu/lobby.tscn" id="4_tv7ky"]
-[ext_resource type="PackedScene" path="res://Scenes/Main Menu/settingsScreen.tscn" id="5_r16hp"]
+[ext_resource type="PackedScene" uid="uid://ck74o0nreiu38" path="res://Scenes/UI/Main Menu/joinInformation.tscn" id="3_svqof"]
+[ext_resource type="PackedScene" uid="uid://cyk5w16gxy3dv" path="res://Scenes/UI/Main Menu/lobby.tscn" id="4_tv7ky"]
 
-[node name="MainMenu" type="Control" node_paths=PackedStringArray("JoinInformation", "LobbyPage", "Settings")]
+[node name="MainMenu" type="Control" node_paths=PackedStringArray("JoinInformation", "LobbyPage")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_rahjv")
+script = ExtResource("1_8m0rs")
 JoinInformation = NodePath("JoinInformation")
 LobbyPage = NodePath("Lobby")
-Settings = NodePath("SettingsScreen")
 
 [node name="Background" type="ColorRect" parent="."]
 z_index = -10
@@ -95,10 +93,6 @@ anchor_bottom = 0.5
 LobbyPage = NodePath("../Lobby")
 
 [node name="Lobby" parent="." instance=ExtResource("4_tv7ky")]
-visible = false
-layout_mode = 1
-
-[node name="SettingsScreen" parent="." instance=ExtResource("5_r16hp")]
 visible = false
 layout_mode = 1
 

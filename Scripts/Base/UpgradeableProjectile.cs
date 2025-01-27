@@ -2,6 +2,7 @@
 using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Services;
 using System;
+using System.Linq;
 
 
 namespace multiplayerstew.Scripts.Base
@@ -29,12 +30,22 @@ namespace multiplayerstew.Scripts.Base
         private float TimeAlive;
         private int HitsLeft;
 
+        public override void _EnterTree()
+        {
+            SetMultiplayerAuthority(Name.ToString().Split('#').First().ToInt());
+        }
+
         public override void _Ready()
         {
             GodotErrorService.ValidateRequiredData(this);
+            if(Multiplayer.IsServer())
+            {
+                Hitbox.AreaEntered += OnAreaEntered;
+            }
+
             if (!IsMultiplayerAuthority()) return;
 
-            Vector3 directionVector = -Transform.Basis.Z;
+            Vector3 directionVector = -GlobalTransform.Basis.Z;
 
             Random rand = new Random();
             directionVector = directionVector.Rotated(Transform.Basis.X, ((float)rand.NextDouble() * ShotSpread*2) + (-ShotSpread));
@@ -42,6 +53,16 @@ namespace multiplayerstew.Scripts.Base
 
             Velocity = directionVector * InitialVelocity;
         }
+
+        private void OnAreaEntered(Area3D area)
+        {
+            if(area is DamageArea) 
+            {
+                DamageArea damageArea = area as DamageArea;
+                damageArea.HitDamageArea(this);
+            }
+        }
+
 
         public override void _Process(double delta)
         {
@@ -66,6 +87,12 @@ namespace multiplayerstew.Scripts.Base
                 Transform = Transform with { Origin = Transform.Origin + Velocity * (float)delta };
 
             }
+        }
+
+        [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+        public void DeletePeerProjectile()
+        {
+            QueueFree();
         }
 
     }

@@ -6,7 +6,11 @@ using System;
 public abstract partial class SettingInput : Node
 {
     [Export, ExportRequired]
+    public string SettingSection { get; set; }
+    
+    [Export, ExportRequired]
     public string SettingName { get; set; }
+
 
     public override void _Ready()
     {

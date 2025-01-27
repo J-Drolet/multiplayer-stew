@@ -9,11 +9,11 @@ public partial class SliderSettingInput: SettingInput
 
     public override void InitSetting() 
     {
-        Input.Value = Settings.GetValue(SettingName).ToFloat();
+        Input.Value = (double)Config.GetValue(SettingSection, SettingName);
     }
 
     public override void SaveSetting() 
     {
-        Settings.AddValue(SettingName, Input.Value.ToString());
+        Config.SetValue(SettingSection, SettingName, Input.Value);
     }
 }

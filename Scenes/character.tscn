@@ -1,14 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://lcx7afjcynql"]
+[gd_scene load_steps=5 format=3 uid="uid://lcx7afjcynql"]
 
 [ext_resource type="Script" path="res://Scripts/Character.cs" id="1_n6eoi"]
-[ext_resource type="Texture2D" uid="uid://bp1y6idrr3kgr" path="res://Assets/Crosshair.png" id="2_oey5o"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_wgmvx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dlrkp"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_4dtqg"]
-font_size = 36
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_w7qvv"]
 properties/0/path = NodePath(".:position")
@@ -21,13 +17,13 @@ properties/2/path = NodePath("Head:rotation")
 properties/2/spawn = true
 properties/2/replication_mode = 1
 
-[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "ProjectileOrigin", "Head", "Hand", "AmmoLabel")]
+[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "ProjectileOrigin", "Head", "Hand", "Hitboxes")]
 script = ExtResource("1_n6eoi")
 Camera = NodePath("Head/Camera3D")
 ProjectileOrigin = NodePath("Head/Camera3D/ProjectileOrigin")
 Head = NodePath("Head")
 Hand = NodePath("Head/Camera3D/Hand")
-AmmoLabel = NodePath("UI/AmmoCount")
+Hitboxes = []
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -46,50 +42,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.368436, -0.486425, -1.21339
 
 [node name="ProjectileOrigin" type="Node3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.75163)
-
-[node name="UI" type="Control" parent="."]
-process_mode = 4
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Text" type="Label" parent="UI"]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 23.0
-text = "MULTIPLAYER-STEW"
-horizontal_alignment = 1
-
-[node name="CenterContainer" type="CenterContainer" parent="UI"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="UI/CenterContainer"]
-layout_mode = 2
-texture = ExtResource("2_oey5o")
-
-[node name="AmmoCount" type="Label" parent="UI"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -116.0
-offset_top = -83.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "0/0"
-label_settings = SubResource("LabelSettings_4dtqg")
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_w7qvv")

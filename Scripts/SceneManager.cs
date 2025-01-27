@@ -2,6 +2,7 @@ using Godot;
 using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Services;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 public partial class SceneManager : Node
@@ -13,38 +14,42 @@ public partial class SceneManager : Node
     {   
         GodotErrorService.ValidateRequiredData(this);
 
+        if(!Multiplayer.IsServer()) {
+            UI.InGameUI.Show();
+        }
+
         // spawning characters on spawn points (ran on every peer)
-        long[] players = GameManager.Players.Keys.ToArray();
-        for(int i = 0; i < players.Length; i++)
+        List<long> players = GameManager.Players.Keys.OrderBy(p => p).ToList();
+        List<Node3D> spawnPoints = GetTree().GetNodesInGroup("PlayerSpawnPoint").Select(s => s as Node3D).ToList();
+
+        for (int i = 0; i < players.Count; i++)
         {   
             if(players[i] == 1) {
                 continue; // skip the server
             }
             GameManager.PlayerInfo playerInfo = GameManager.Players[players[i]];
 
-            CharacterBody3D currentPlayer = (CharacterBody3D) PlayerScene.Instantiate();
+            Character currentPlayer = (Character) PlayerScene.Instantiate();
             currentPlayer.Name = players[i].ToString();
             AddChild(currentPlayer);
             Node3D projectileParent = new Node3D();
             MultiplayerSpawner projectileSpawner = new MultiplayerSpawner();
+            projectileSpawner.Name = "SPAWNER";
 
             AddChild(projectileParent);
             projectileParent.AddChild(projectileSpawner);
-            projectileSpawner.SpawnPath = projectileParent.GetPath();
-
             projectileParent.SetMultiplayerAuthority((int)players[i]);
             projectileParent.Name = "PP" + players[i];
 
+            projectileSpawner.SpawnPath = projectileParent.GetPath();
             playerInfo.characterNode = currentPlayer;
             playerInfo.projectileSpawner = projectileSpawner;
             playerInfo.projectileParent = projectileParent;
             GameManager.Players[players[i]] = playerInfo;
-            foreach(Node3D spawn in GetTree().GetNodesInGroup("PlayerSpawnPoint"))
+
+            if(spawnPoints != null && spawnPoints.Count > i)
             {
-                if(spawn.Name == i.ToString())
-                {
-                    currentPlayer.GlobalPosition = spawn.GlobalPosition;
-                }
+                currentPlayer.GlobalPosition = spawnPoints[i].GlobalPosition;
             }
         }
     }

@@ -7,45 +7,50 @@ using System.Collections.Generic;
 
 namespace multiplayerstew.Scripts.Base
 {
-    public partial class Damageable : Node
+    public partial class Damageable : CharacterBody3D
     {
         [Export, ExportRequired]
         public float MaxHealth { get; set; } = 100.0f;
         [Export, ExportRequired]
-        public Area3D[] Hitboxes { get; set; }
+        public DamageArea[] Hitboxes { get; set; }
         [Export]
         public Label3D HealthText { get; set; }
 
-        private float CurrentHealth { get; set; }
+        [Export]
+        public float CurrentHealth { get; set; }
         public override void _Ready()
         {
             GodotErrorService.ValidateRequiredData(this);
-            
+            if (!Multiplayer.IsServer())
+                return;
+
             CurrentHealth = MaxHealth;
-            if (HealthText != null)
+            foreach (DamageArea hitbox in Hitboxes)
             {
-                HealthText.Text = "Health: " + CurrentHealth.ToString();
-            }
-            foreach (Area3D hitbox in Hitboxes)
-            {
-                hitbox.AreaEntered += (Area3D projectileHitbox) => HitboxHit(projectileHitbox, hitbox);
+                hitbox.AreaHit += (UpgradeableProjectile projectile) => HitboxHit(projectile, hitbox);
             }   
         }
 
-        private void HitboxHit(Area3D projectileHitbox, Area3D hitbox)
+        public override void _Process(double delta)
         {
-            UpgradeableProjectile projectile = projectileHitbox?.GetOwner() as UpgradeableProjectile;
-            if (projectile != null)
+            if (HealthText != null)
             {
-                // layer 5 = vital hitbox
-                float damage = hitbox.GetCollisionLayerValue(5) ? projectile.Damage * projectile.VitalMultiplier : projectile.Damage;
-                CurrentHealth = Math.Clamp(CurrentHealth - damage, 0.0f, float.MaxValue);
-                if(HealthText != null)
-                {
-                    HealthText.Text = CurrentHealth <= 0.0f ? "Dead" : "Health: " + CurrentHealth.ToString();
-                }
-                
-                projectile.QueueFree();
+                HealthText.Text = CurrentHealth <= 0.0f ? "Dead" : "Health: " + CurrentHealth.ToString();
+            }
+        }
+
+        private void HitboxHit(UpgradeableProjectile projectile, DamageArea hitbox)
+        {
+            // layer 5 = vital hitbox
+            float damage = hitbox.GetCollisionLayerValue(5) ? projectile.Damage * projectile.VitalMultiplier : projectile.Damage;
+            CurrentHealth = Math.Clamp(CurrentHealth - damage, 0.0f, MaxHealth);
+            projectile.MaxHits--;
+
+            // Disable projectile from hitting other hitboxes before getting deleted by peer owner
+            if(projectile.MaxHits <= 0)
+            {
+                projectile.SetDeferred("monitorable", false);
+                projectile.RpcId(projectile.GetMultiplayerAuthority(), UpgradeableProjectile.MethodName.DeletePeerProjectile);
             }
         }
     }
