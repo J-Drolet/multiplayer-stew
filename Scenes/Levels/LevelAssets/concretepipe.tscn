@@ -1,50 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdu7h1l1jg443"]
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_y06m1"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wsya2"]
-metallic = 1.0
-
-[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_rox24"]
-material = SubResource("StandardMaterial3D_wsya2")
-flip_faces = true
-sections = 10
-section_rings = 2
-cap_top = false
-cap_bottom = false
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_hwduj"]
-height = 0.001
-
-[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_qjifv"]
-material = SubResource("StandardMaterial3D_wsya2")
-sections = 10
-section_rings = 2
-cap_top = false
-cap_bottom = false
+[gd_scene format=3 uid="uid://bdu7h1l1jg443"]
 
 [node name="Node3D" type="Node3D"]
 
-[node name="ConcretePipe" type="Node3D" parent="."]
-transform = Transform3D(0.0463436, -4.38874, 0, 4.38874, 0.0463436, 0, 0, 0, 4.38898, 0, 0, 0)
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(-0.0164387, -5.8502, 0, 5.8502, -0.0164387, 0, 0, 0, 5.85023, 0, 0, 0)
+use_collision = true
+sides = 12
 
-[node name="StaticBody3D" type="StaticBody3D" parent="ConcretePipe"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ConcretePipe/StaticBody3D"]
-shape = SubResource("CylinderShape3D_y06m1")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="ConcretePipe"]
-mesh = SubResource("TubeTrailMesh_rox24")
-skeleton = NodePath("")
-
-[node name="ConcretePipe2" type="Node3D" parent="."]
-transform = Transform3D(0.0463436, -4.38874, 0, 4.38874, 0.0463436, 0, 0, 0, 4.38898, 0, 0, 0)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="ConcretePipe2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ConcretePipe2/StaticBody3D"]
-shape = SubResource("CylinderShape3D_hwduj")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="ConcretePipe2"]
-mesh = SubResource("TubeTrailMesh_qjifv")
-skeleton = NodePath("")
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CSGCylinder3D"]
+transform = Transform3D(0.857283, 7.45058e-09, 0, -1.49012e-08, 1.00973, 0, 0, 0, 0.872854, 0, 0, 0)
+operation = 2
+sides = 12
