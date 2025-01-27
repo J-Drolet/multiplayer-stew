@@ -7,9 +7,12 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_hmntw"]
 radius = 0.137246
 
-[node name="SimpleBullet" type="Node3D"]
+[node name="BoltyBullet" type="Node3D" node_paths=PackedStringArray("Hitbox")]
 transform = Transform3D(2.31578, 0, 0, 0, 0.748114, 0, 0, 0, 0.702631, 0, 0, 0)
 script = ExtResource("1_ot4mb")
+InitialVelocity = 50.0
+Damage = 25.0
+Hitbox = NodePath("Area3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.267544, 0, 0, 0, 0.267544, 0, 0, 0, 0.267544, 0, 0, 0)
