@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://cal3vkhqtpyb2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_06agk"]
+
+[node name="Node3D" type="Node3D"]
+metadata/_edit_group_ = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(10, 10, 10)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(0.9582, 0, 0, 0, 0.9582, 0, 0, 0, 0.9582, 0.000693944, -0.0957031, -0.032634)
+operation = 2
+size = Vector3(10, 10.1914, 10.0681)
+material = SubResource("StandardMaterial3D_06agk")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.67793, -3.32244, 0.0453568)
+operation = 2
+size = Vector3(0.677734, 3.35069, 1.69304)
