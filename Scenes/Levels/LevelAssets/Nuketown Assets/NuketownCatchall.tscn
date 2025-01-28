@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bsyma36nmixdd"]
+
+[node name="Bus" type="CSGCombiner3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00208, 1.14136, -4.17297)
+size = Vector3(3.00415, 3.28271, 9.34595)

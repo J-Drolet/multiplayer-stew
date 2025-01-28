@@ -1,19 +1,15 @@
-[gd_scene load_steps=18 format=3 uid="uid://3yy3vug3dvgm"]
+[gd_scene load_steps=14 format=3 uid="uid://3yy3vug3dvgm"]
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_mrkvx"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_q20kt"]
-[ext_resource type="PackedScene" uid="uid://bqvjwundgypu5" path="res://Scenes/Levels/LevelAssets/(DELETE AFTER DEMO) arch.tscn" id="3_ldj0q"]
-[ext_resource type="PackedScene" uid="uid://dxtx8tubrgl7h" path="res://Scenes/Levels/LevelAssets/arch2.tscn" id="4_nxuhu"]
-[ext_resource type="PackedScene" uid="uid://yqxo7dd0068w" path="res://Scenes/Levels/LevelAssets/sandbag.tscn" id="5_payip"]
-[ext_resource type="PackedScene" uid="uid://bdu7h1l1jg443" path="res://Scenes/Levels/LevelAssets/concretepipe.tscn" id="6_06v6w"]
-[ext_resource type="PackedScene" uid="uid://d1glk6osihae1" path="res://Scenes/Levels/LevelAssets/fuelstorage.tscn" id="7_ok0nr"]
-[ext_resource type="PackedScene" uid="uid://eb3bvjl3kk7c" path="res://Scenes/Levels/LevelAssets/csgtestasset.tscn" id="8_u7kva"]
+[ext_resource type="PackedScene" uid="uid://dtl5ybo8pgt3b" path="res://Scenes/Levels/LevelAssets/Nuketown Assets/NuketownBlueHouse.tscn" id="8_5bntp"]
+[ext_resource type="PackedScene" uid="uid://bsyma36nmixdd" path="res://Scenes/Levels/LevelAssets/Nuketown Assets/NuketownCatchall.tscn" id="9_3t8kx"]
 [ext_resource type="PackedScene" uid="uid://x7a1ptqtwtmp" path="res://Scenes/Pickups/PistolPickup.tscn" id="9_ouy8b"]
 [ext_resource type="PackedScene" uid="uid://b0ywmvox13rx1" path="res://Scenes/Pickups/ShotgunPickup.tscn" id="10_4gn11"]
+[ext_resource type="PackedScene" uid="uid://dkqpcv60f5l45" path="res://Scenes/Levels/LevelAssets/Nuketown Assets/NuketownTruck.tscn" id="10_vcc2o"]
 [ext_resource type="PackedScene" uid="uid://dpd0cvtbs8iuo" path="res://Scenes/Target.tscn" id="11_lrir8"]
 [ext_resource type="PackedScene" uid="uid://k3u720y471ax" path="res://Scenes/Pickups/Mac10Pickup.tscn" id="12_rehwa"]
 [ext_resource type="PackedScene" uid="uid://1fdlt6hucwhx" path="res://Scenes/Pickups/BoltyPickup.tscn" id="13_m1xd8"]
-[ext_resource type="PackedScene" uid="uid://dtl5ybo8pgt3b" path="res://Scenes/Levels/LevelAssets/NuketownBlueHouse.tscn" id="14_esf2y"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4e45f"]
 albedo_color = Color(0.239473, 0.128064, 0.00900927, 1)
@@ -30,6 +26,7 @@ script = ExtResource("1_mrkvx")
 PlayerScene = ExtResource("2_q20kt")
 
 [node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(2.52731, 0, 0, 0, 2.52731, 0, 0, 0, 2.52731, 0, 0, 0)
 metadata/_edit_group_ = true
 
 [node name="FloorMesh" type="MeshInstance3D" parent="Floor"]
@@ -39,79 +36,74 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
 shape = SubResource("BoxShape3D_bbwtt")
 
-[node name="Arch (For Demo)" parent="." instance=ExtResource("3_ldj0q")]
-transform = Transform3D(-0.230935, 0.0097036, -0.858338, -0.130717, 0.74452, 0.0707792, 0.651193, 0.152893, -0.290188, -8.02797, 10.6676, 13.6131)
-visible = false
-
-[node name="Arch2" parent="." instance=ExtResource("4_nxuhu")]
-transform = Transform3D(0.118342, 0, -0.901087, -0.256224, 0.871309, -0.0336507, 0.863891, 0.258424, 0.113457, -18.938, -1.70141, 0.477198)
-
-[node name="Sandbag" parent="." instance=ExtResource("5_payip")]
-transform = Transform3D(0.148448, 0, -0.504383, 0, 0.525775, 0, 0.504383, 0, 0.148448, -11.7427, 0.510523, -7.59638)
-
-[node name="Sandbag2" parent="." instance=ExtResource("5_payip")]
-transform = Transform3D(0.148448, 0, -0.504383, 0, 0.525775, 0, 0.504383, 0, 0.148448, 3.8358, 0.510523, -5.38641)
-
-[node name="Sandbag3" parent="." instance=ExtResource("5_payip")]
-transform = Transform3D(0.148448, 0, -0.504383, 0, 0.525775, 0, 0.504383, 0, 0.148448, -4.84246, 0.510523, -4.21123)
-
-[node name="ConcretePipe" parent="." instance=ExtResource("6_06v6w")]
-transform = Transform3D(0.538879, 0, -0.904049, 0, 1.05247, 0, 0.904049, 0, 0.538879, 0, 1.71826, 11.4218)
-
-[node name="FuelStorage" parent="." instance=ExtResource("7_ok0nr")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.5524, 2.68449, -20.0438)
-
-[node name="FuelStorage2" parent="." instance=ExtResource("7_ok0nr")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.5524, 2.68449, -14.3516)
-
-[node name="FuelStorage3" parent="." instance=ExtResource("7_ok0nr")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.1812, 2.68449, -8.84692)
-
-[node name="CSGTESTASSET" parent="." instance=ExtResource("8_u7kva")]
-transform = Transform3D(0.445821, 0, 0, 0, 0.445821, 0, 0, 0, 0.445821, 13.6411, 2.44903, 15.5941)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.766896, 0.439592, -0.467578, 0, 0.728574, 0.684967, 0.641771, -0.525299, 0.558741, -27.059, 12.9604, 20.8694)
-
-[node name="PistolPickup" parent="." instance=ExtResource("9_ouy8b")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.4633, 0.588806, 15.8056)
-
-[node name="ShotgunPickup" parent="." instance=ExtResource("10_4gn11")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.48535, 0.602038, -7.69477)
 
 [node name="Target" parent="." instance=ExtResource("11_lrir8")]
 transform = Transform3D(0.835721, 0.000172564, -2.29994, 0.00391944, 2.44707, 0.00160778, 2.29994, -0.00423287, 0.835719, -10.9228, 0.992495, -9.32628)
 
-[node name="Target3" parent="." node_paths=PackedStringArray("Hitboxes") instance=ExtResource("11_lrir8")]
-transform = Transform3D(0.835721, 0.000172564, -2.29994, 0.00391944, 2.44707, 0.00160778, 2.29994, -0.00423287, 0.835719, -3.90216, 0.992495, -5.4309)
-Hitboxes = [NodePath("../Target/Head"), NodePath("../Target/Body")]
+[node name="Assets" type="Node3D" parent="."]
 
-[node name="Target4" parent="." node_paths=PackedStringArray("Hitboxes") instance=ExtResource("11_lrir8")]
-transform = Transform3D(0.835721, 0.000172564, -2.29994, 0.00391944, 2.44707, 0.00160778, 2.29994, -0.00423287, 0.835719, -3.33352, 0.801077, -3.59638)
-Hitboxes = [NodePath("../Target/Head"), NodePath("../Target/Body")]
+[node name="Pickups" type="Node3D" parent="Assets"]
 
-[node name="Target5" parent="." node_paths=PackedStringArray("Hitboxes") instance=ExtResource("11_lrir8")]
-transform = Transform3D(0.835721, 0.000172564, -2.29994, 0.00391944, 2.44707, 0.00160778, 2.29994, -0.00423287, 0.835719, 6.02936, 0.70088, -5.27121)
-Hitboxes = [NodePath("../Target/Head"), NodePath("../Target/Body")]
+[node name="GarandPickup" parent="Assets/Pickups" instance=ExtResource("13_m1xd8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -9)
 
-[node name="Target6" parent="." node_paths=PackedStringArray("Hitboxes") instance=ExtResource("11_lrir8")]
-transform = Transform3D(0.835721, 0.000172564, -2.29994, 0.00391944, 2.44707, 0.00160778, 2.29994, -0.00423287, 0.835719, 4.34507, 0.992495, -6.79494)
-Hitboxes = [NodePath("../Target/Head"), NodePath("../Target/Body")]
-
-[node name="Target2" parent="." node_paths=PackedStringArray("Hitboxes") instance=ExtResource("11_lrir8")]
-transform = Transform3D(0.835721, 0.000172564, -2.29994, 0.00391944, 2.44707, 0.00160778, 2.29994, -0.00423287, 0.835719, -10.1257, 0.992495, -6.95913)
-Hitboxes = [NodePath("../Target/Head"), NodePath("../Target/Body")]
-
-[node name="Mac10Pickup" parent="." instance=ExtResource("12_rehwa")]
+[node name="Mac10Pickup" parent="Assets/Pickups" instance=ExtResource("12_rehwa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.42344, 0.702979, -7.972)
 
-[node name="GarandPickup" parent="." instance=ExtResource("13_m1xd8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -9)
+[node name="PistolPickup" parent="Assets/Pickups" instance=ExtResource("9_ouy8b")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.4633, 0.588806, 15.8056)
+visible = false
+
+[node name="ShotgunPickup" parent="Assets/Pickups" instance=ExtResource("10_4gn11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.48535, 0.602038, -7.69477)
+visible = false
+
+[node name="Map Elements" type="Node3D" parent="Assets"]
+
+[node name="NuketownBlueHouse" type="Node3D" parent="Assets/Map Elements"]
+
+[node name="MainHouse" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("8_5bntp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.09187, -28.4145)
+
+[node name="NukeShelter" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
+use_collision = true
+
+[node name="Greenhouse" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.00331, 0, 0)
+use_collision = true
+
+[node name="Shed" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.51869, 0, 0)
+use_collision = true
+
+[node name="Cul-De-Sac" type="Node3D" parent="Assets/Map Elements"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 27.1342)
+
+[node name="Bus" parent="Assets/Map Elements/Cul-De-Sac" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(1, 0, 0, 0, 1.56175, 0, 0, 0, 1.34648, 0.0370412, 0, -0.185497)
+use_collision = true
+
+[node name="NuketownSign" parent="Assets/Map Elements/Cul-De-Sac" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(0.190797, 0, 0, 0, 1.26528, 0, 0, 0, 0.461086, 14.1595, 2.1624, -5.89683)
+use_collision = true
+
+[node name="CarEast" parent="Assets/Map Elements/Cul-De-Sac" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.062, 0, 0)
+use_collision = true
+
+[node name="CarWest" parent="Assets/Map Elements/Cul-De-Sac" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6634, 0, 0)
+use_collision = true
+
+[node name="Truck" parent="Assets/Map Elements/Cul-De-Sac" instance=ExtResource("10_vcc2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.41422, 1.58092, 0)
 
 [node name="Spawns" type="Node3D" parent="."]
 
 [node name="1" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.95056, 0, 23.1881)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.0497, 2.75561, -0.368292)
 
 [node name="2" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.83456, 0, 21.3678)
@@ -121,10 +113,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 23.4312)
 
 [node name="4" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.69138, 0, 22.9489)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-
-[node name="NuketownTestHouse" type="Node3D" parent="."]
-
-[node name="CSGCombiner3D" parent="NuketownTestHouse" instance=ExtResource("14_esf2y")]
-transform = Transform3D(-0.563245, 0, 0.0107854, 0, 0.563348, 0, -0.0107854, 0, -0.563245, 14.9194, 3.20258, 4.20253)

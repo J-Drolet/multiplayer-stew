@@ -53,8 +53,8 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.7039
 size = Vector3(3.57482, 0.5, 8.63007)
 
 [node name="BlueHouseLadderJumpUp" type="CSGBox3D" parent="HouseBody"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.70395, -7.06433, 6.68461)
-size = Vector3(3.57482, 1.55322, 2.03762)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.3269, -5.28057, 6.68461)
+size = Vector3(2.32891, 1.55322, 2.03762)
 
 [node name="BlueHouseBackLanding" type="CSGBox3D" parent="HouseBody"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8153, 0.289585, -6.565)
@@ -74,8 +74,8 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -3.176
 size = Vector3(10.3388, 0.270874, 5.95872)
 
 [node name="F2StairWallS" type="CSGBox3D" parent="HouseBody"]
-transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, -1, 1, -4.37114e-08, -4.37114e-08, 1.87075, 3.19344, -0.326612)
-size = Vector3(14.6593, 0.263062, 5.95872)
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, -1, 1, -4.37114e-08, -4.37114e-08, 1.87075, 3.19344, -0.054121)
+size = Vector3(14.1143, 0.263062, 5.95872)
 
 [node name="BlueHouseIntWall" type="CSGBox3D" parent="HouseBody"]
 transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -3.68783, -3.19006, -0.15976)
@@ -105,6 +105,10 @@ transform = Transform3D(1.00692, 0, -0.00401743, 0, 1.55342, 0, 0.00192605, 0, 0
 operation = 2
 size = Vector3(0.9823, 3.04548, 11.2356)
 
+[node name="Chimney" type="CSGBox3D" parent="HouseBody"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -3.66981, -0.112144, -9.07745)
+size = Vector3(1.79883, 3.28271, 13.0875)
+
 [node name="Garage" type="CSGBox3D" parent="."]
 transform = Transform3D(-0.0115015, 0, 0.999934, 0, 1, 0, -0.999934, 0, -0.0115015, 3.23768, -1.76646, 10.0898)
 use_collision = true
@@ -125,3 +129,7 @@ size = Vector3(0.677734, 3.64214, 3.13255)
 transform = Transform3D(0.0111138, 0, -0.479053, 0, 1, 0, 1.00686, 0, 0.0021865, 1.7284, -1.21607, 4.87972)
 operation = 2
 size = Vector3(0.9823, 4.20828, 8.99711)
+
+[node name="Parked Car2" type="CSGBox3D" parent="Garage"]
+transform = Transform3D(-0.0173147, -0.999946, 4.37088e-08, 0, -4.37114e-08, -1, 1.50534, -0.0115016, 5.0275e-10, -2.4797, -2.42392, 11.4045)
+size = Vector3(6.25219, 2.70239, 1.8136)

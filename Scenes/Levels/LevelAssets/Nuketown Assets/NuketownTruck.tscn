@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dkqpcv60f5l45"]
+
+[node name="Truck" type="CSGCombiner3D"]
+use_collision = true
+
+[node name="Main Truck" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00208, 1.14136, -4.17297)
+size = Vector3(3.00415, 3.28271, 9.34595)
+
+[node name="TruckCab" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00208, 1.14136, -10.1222)
+size = Vector3(3.00415, 3.28271, 2.14954)
+
+[node name="TruckCabGrill" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00208, 0.255253, -11.2638)
+size = Vector3(3.00415, 1.5105, 1.72125)
+
+[node name="TruckRamp" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, -1.00208, -0.546438, 1.22786)
+size = Vector3(3.00415, 0.140013, 1.72125)
+
+[node name="TruckPassthroughN-S" type="CSGBox3D" parent="."]
+transform = Transform3D(1.00692, 0, -0.00401743, 0, 1, 0, 0.00192605, 0, 0.479042, -0.610704, 1.26988, -3.55569)
+operation = 2
+size = Vector3(4.74164, 2.67939, 6.16998)
+
+[node name="TruckPassthroughE-W" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.4014e-08, 0, 0.479059, 0, 1, 0, -1.00692, 0, -2.09403e-08, -0.995392, 1.26988, -0.719804)
+operation = 2
+size = Vector3(4.74164, 2.67939, 6.16998)
+
+[node name="TruckBoxes" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.08217, 1.00385, 0.0085398)
+size = Vector3(0.843964, 2.17419, 0.684022)
