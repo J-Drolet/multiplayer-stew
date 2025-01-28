@@ -79,6 +79,7 @@ operation = 2
 
 [node name="BlueHouse" type="CSGCombiner3D" parent="Assets"]
 transform = Transform3D(0.0108675, 4.33681e-19, 0, 0, 0.0108675, 0, 0, 0, 0.0108674, -4.47035e-08, 167.427, 0)
+use_collision = true
 
 [node name="CSGCombiner3D" parent="Assets/BlueHouse" instance=ExtResource("3_vvwqc")]
 transform = Transform3D(0.224369, -2.30926e-14, 0, 4.54747e-13, 84.5068, 0, 0, 0, 0.22437, -2.87735, -14453.1, 31.0626)
