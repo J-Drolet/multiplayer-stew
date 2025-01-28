@@ -28,7 +28,7 @@ script = ExtResource("1_mrkvx")
 PlayerScene = ExtResource("2_q20kt")
 
 [node name="Floor" type="StaticBody3D" parent="."]
-transform = Transform3D(4.15565, 0, 0, 0, 4.15565, 0, 0, 0, 4.15565, 0, 0, 0)
+transform = Transform3D(6.17932, 0, 0, 0, 6.17932, 0, 0, 0, 6.17932, 0, -1.68455, 0)
 metadata/_edit_group_ = true
 
 [node name="FloorMesh" type="MeshInstance3D" parent="Floor"]
@@ -65,71 +65,156 @@ visible = false
 [node name="Map Elements" type="Node3D" parent="Assets"]
 
 [node name="NuketownBlueHouse" type="Node3D" parent="Assets/Map Elements"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.7762, 0, 14.34)
+transform = Transform3D(0.937913, 0, -0.34687, 0, 1, 0, 0.34687, 0, 0.937913, -66.7762, 0, 14.34)
 
 [node name="MainHouse" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("8_5bntp")]
-transform = Transform3D(1.12102, 0, 0, 0, 1.12102, 0, 0, 0, 1.49067, 7.46873, 6.10288, -18.25)
+transform = Transform3D(1.20907, 0, -5.96046e-08, 0, 1.20907, 0, 8.9407e-08, 0, 1.60775, 8.87465, 6.10288, -12.2421)
 
 [node name="NukeShelter" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(-8.65146e-08, 0, 0.9062, 0, 1.6734, 0, -1.97922, 0, -3.96112e-08, -9.53938, 1.13451, -48.5698)
+transform = Transform3D(0.0958008, 0, 1.11243, 0, 2.05582, 0, -2.42964, 0, 0.0438629, -30.0117, 1.13451, -37.7346)
 use_collision = true
 
 [node name="Greenhouse" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(0.00859947, 0, -1.13828, 0, 3.06863, 0, 2.86443, 0, 0.00341722, -34.0453, 0.909871, -15.9194)
+transform = Transform3D(-0.096808, 0, -1.27175, 0, 3.06863, 0, 2.06199, 0, -0.0597073, -62.7423, 0.909871, -0.4105)
 use_collision = true
 
 [node name="Greenhouse2" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(0.00294882, 0, -0.714156, 0, 1.95875, 0, 0.982231, 0, 0.00214397, -26.1604, 0.909871, -11.9604)
+transform = Transform3D(-0.0276825, 0, -0.713876, 0, 1.95875, 0, 0.981846, 0, -0.0201273, -52.1027, 0.909871, 2.52974)
 use_collision = true
 
 [node name="SpawnFence" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(-1.53606e-07, 0, 0.043041, 0, 1.92273, 0, -3.51409, 0, -1.88138e-09, -24.6371, 0.909871, -4.06352)
+transform = Transform3D(-1.19209e-07, 0, 0.043041, 0, 1.92273, 0, -3.51409, 0, -1.86265e-09, -46.8891, 0.909871, 4.16599)
 use_collision = true
 
 [node name="SpawnFence2" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(-8.60514e-08, 0, 0.043041, 0, 1.92273, 0, -1.96863, 0, -1.88138e-09, -24.6371, 0.909871, 10.8462)
+transform = Transform3D(0, 0, 0.043041, 0, 1.92273, 0, -1.96863, 0, -1.86265e-09, -49.7602, 0.909871, 20.1375)
 use_collision = true
 
 [node name="Back Fence" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(-4.89991e-07, 0, 0.043041, 0, 1.92273, 0, -11.2097, 0, -1.88138e-09, -31.3814, 0.909871, -44.1297)
+transform = Transform3D(-2.38419e-07, 0, 0.043041, 0, 1.92273, 0, -11.2097, 0, -9.31323e-10, -48.6087, 0.909871, -37.7585)
 use_collision = true
 
 [node name="Shed" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(2.42549, 0, 0, 0, 2.08141, 0, 0, 0, 0.761204, 0.818962, 0, 15.2023)
+transform = Transform3D(4.032, 4.2822e-10, -0.0331133, -4.93985e-10, 3.46121, 6.22652e-11, 0.105512, -1.591e-10, 1.26539, -13.9406, 0, 30.4527)
 use_collision = true
 
 [node name="Cul-De-Sac" type="Node3D" parent="Assets/Map Elements"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 27.1342)
 
 [node name="Bus" parent="Assets/Map Elements/Cul-De-Sac" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(-0.949283, 2.04471e-08, -0.423366, 1.28829e-08, 1.56175, 3.69509e-09, 0.314423, -2.25769e-09, -1.27819, 0.610847, 0, -24.5777)
+transform = Transform3D(-1.92704, 4.15074e-08, -0.859429, 2.61522e-08, 3.17035, 7.50102e-09, 0.638277, -4.58309e-09, -2.59473, -10.9705, 0, -5.92205)
 use_collision = true
 
 [node name="NuketownSign" parent="Assets/Map Elements/Cul-De-Sac" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(0.136137, 0, -0.526807, 0, 1.70438, 0, 0.217992, 0, 0.328994, -16.7208, 2.55113, -35.4906)
+transform = Transform3D(0.136137, 0, -0.526807, 0, 1.70438, 0, 0.217992, 0, 0.328994, -16.7208, 2.55113, -29.368)
 use_collision = true
 
 [node name="CarEast" parent="Assets/Map Elements/Cul-De-Sac" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.062, 0, 0)
+transform = Transform3D(0.146398, 0, -1.42951, 0, 1.35725, 0, 1.91661, 0, 0.109192, -3.1219, 0, 34.4395)
 use_collision = true
 
-[node name="CarWest" parent="Assets/Map Elements/Cul-De-Sac" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(0.940555, 0, 0.339641, 0, 1, 0, -0.339641, 0, 0.940555, 2.06816, 0, -49.243)
+[node name="CarWestv2" parent="Assets/Map Elements/Cul-De-Sac" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(-1.71372, 0, -0.649359, 0, 1.35725, 0, 0.870624, 0, -1.27819, -6.18324, 0, -49.7459)
 use_collision = true
 
 [node name="Truck" parent="Assets/Map Elements/Cul-De-Sac" instance=ExtResource("10_vcc2o")]
-transform = Transform3D(-0.949283, 1.30924e-08, -0.314423, 1.28829e-08, 1, 2.74425e-09, 0.314423, -1.44561e-09, -0.949283, 8.93933, 1.58092, -29.7605)
+transform = Transform3D(-2.29692, 3.16788e-08, -0.76079, 3.11719e-08, 2.41964, 6.6401e-09, 0.76079, -3.49785e-09, -2.29692, -1.00988, 1.58092, -27.4645)
 
 [node name="NuketownYellowHouse" type="Node3D" parent="Assets/Map Elements"]
-transform = Transform3D(-0.97113, 0, -0.23855, 0, 1, 0, 0.23855, 0, -0.97113, 76.1106, 0, 44.9494)
+transform = Transform3D(-0.865169, 0, -0.501481, 0, 1, 0, 0.501481, 0, -0.865169, 86.091, 0, 44.9494)
 
 [node name="CSGCombiner3D" parent="Assets/Map Elements/NuketownYellowHouse" instance=ExtResource("11_sboat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.38615, 5.52799, 48.1448)
+transform = Transform3D(0.899811, 0, -0.386064, 0, 1, 0, 0.212424, 0, 1.63533, 7.48658, 5.52799, 51.6479)
+
+[node name="SpawnFence3" parent="Assets/Map Elements/NuketownYellowHouse" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(-1.09768, 0, -0.0417984, 0, 1.92273, 0, 4.4686, 0, -0.0102675, -46.3516, 0.909871, 26.0391)
+use_collision = true
+
+[node name="BackyardFence" parent="Assets/Map Elements/NuketownYellowHouse" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(-0.779711, 0, -0.0417984, 0, 1.92273, 0, 3.17417, 0, -0.0102675, -20.0392, 0.909871, 16.3617)
+use_collision = true
+
+[node name="Trellis" parent="Assets/Map Elements/NuketownYellowHouse" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(-3.80094, 0, 0.0365451, 0, 2.08141, 0, -0.933671, 0, -0.148774, -51.1867, 0, 42.6258)
+use_collision = true
+
+[node name="Shed2" parent="Assets/Map Elements/NuketownYellowHouse" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(-2.29917, 0, 0.251563, 0, 2.08141, 0, -0.564773, 0, -1.0241, -32.8472, 0, 75.2479)
+use_collision = true
+
+[node name="BlueHouseBoundary2" parent="Assets/Map Elements/NuketownYellowHouse" instance=ExtResource("12_5pit1")]
+transform = Transform3D(-5.63527, 0, 1.22274, 0, 1, 0, -1.38426, 0, -4.97771, -2.60347, 6.6815, 48.7142)
+visible = false
 
 [node name="MapBoundaries" type="Node3D" parent="Assets/Map Elements"]
 
-[node name="Boundary" parent="Assets/Map Elements/MapBoundaries" instance=ExtResource("12_5pit1")]
-transform = Transform3D(5.8028, 0, 0, 0, 1, 0, 0, 0, 5.12569, -64.3621, 6.6815, -2.97955)
+[node name="Outerbound" parent="Assets/Map Elements/MapBoundaries" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(-29.9282, 0, -0.0929556, 0, 1.92273, 0, -9.75255, 0, 0.285258, -115.78, 0.909871, -45.3106)
+use_collision = true
+
+[node name="Outerbound2" parent="Assets/Map Elements/MapBoundaries" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(-14.3018, 0, 0.136662, 0, 1.92273, 0, 6.83144, 0, 0.286106, -36.1866, 0.909871, -24.6469)
+use_collision = true
+
+[node name="Outerbound4" parent="Assets/Map Elements/MapBoundaries" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(-7.50444, 0, 0.274169, 0, 1.92273, 0, 26.8345, 0, 0.0766731, -132.617, 0.909871, 14.3846)
+use_collision = true
+
+[node name="Outerbound5" parent="Assets/Map Elements/MapBoundaries" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(-34.4879, 0, -0.0757488, 0, 1.92273, 0, -8.84343, 0, 0.295407, -126.495, 0.909871, 31.987)
+use_collision = true
+
+[node name="Outerbound6" parent="Assets/Map Elements/MapBoundaries" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(-33.529, 0, 0.102582, 0, 1.92273, 0, 11.9761, 0, 0.287194, 57.9482, 0.909871, 42.7015)
+use_collision = true
+
+[node name="Outerbound7" parent="Assets/Map Elements/MapBoundaries" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(-13.7941, 0, -0.281146, 0, 1.92273, 0, -32.8229, 0, 0.118154, 100.806, 0.909871, -62.1477)
+use_collision = true
+
+[node name="Outerbound8" parent="Assets/Map Elements/MapBoundaries" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(33.7452, 0, -0.0972411, 0, 1.92273, 0, -11.3526, 0, -0.289046, 123.001, 0.909871, -63.6783)
+use_collision = true
+
+[node name="Outerbound3" parent="Assets/Map Elements/MapBoundaries" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(-11.4552, 0, -0.0808845, 0, 1.92273, 0, -4.52782, 0, 0.204635, -4.043, 0.909871, -43.0146)
+use_collision = true
+
+[node name="Outerbound10" parent="Assets/Map Elements/MapBoundaries" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(-5.75571, 0, -0.107637, 0, 1.92273, 0, -4.26631, 0, 0.145213, -30.6002, 0.909871, 41.1708)
+use_collision = true
+
+[node name="Outerbound12" parent="Assets/Map Elements/MapBoundaries" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(2.41413, 0, -0.154223, 0, 1.92273, 0, -5.40114, 0, -0.0689325, -34.9328, 0.909871, 41.1708)
+use_collision = true
+
+[node name="Outerbound13" parent="Assets/Map Elements/MapBoundaries" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(-0.441494, 0, -0.225367, 0, 1.92273, 0, -7.11042, 0, 0.0139933, -17.8187, 0.909871, 52.7161)
+use_collision = true
+
+[node name="Outerbound14" parent="Assets/Map Elements/MapBoundaries" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(14.7888, 0, -0.0118208, 0, 1.92273, 0, -0.805594, 0, -0.217001, 20.2522, 0.909871, 65.6612)
+use_collision = true
+
+[node name="Outerbound15" parent="Assets/Map Elements/MapBoundaries" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(0.552615, 0, 0.223734, 0, 1.92273, 0, 8.66055, 0, -0.0142761, 28.8659, 0.909871, 65.6612)
+use_collision = true
+
+[node name="Outerbound16" parent="Assets/Map Elements/MapBoundaries" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(-4.68851, 0, 0.203477, 0, 1.92273, 0, 11.3904, 0, 0.083755, 28.8659, 0.909871, -37.0005)
+use_collision = true
+
+[node name="Outerbound17" parent="Assets/Map Elements/MapBoundaries" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(0.723396, 0, 0.220683, 0, 1.92273, 0, 11.337, 0, -0.0140814, 43.6096, 0.909871, 65.6612)
+use_collision = true
+
+[node name="Outerbound11" parent="Assets/Map Elements/MapBoundaries" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(-5.49442, 0, 0.115569, 0, 1.92273, 0, 2.57471, 0, 0.246623, 28.1005, 0.909871, 44.9974)
+use_collision = true
+
+[node name="Outerbound9" parent="Assets/Map Elements/MapBoundaries" instance=ExtResource("9_3t8kx")]
+transform = Transform3D(-9.09042, 0, -0.0742845, 0, 1.92273, 0, -3.5931, 0, 0.187937, 18.9167, 0.909871, -41.484)
+use_collision = true
 
 [node name="Spawns" type="Node3D" parent="."]
 
