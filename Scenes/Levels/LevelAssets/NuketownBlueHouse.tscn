@@ -11,9 +11,9 @@ use_collision = true
 size = Vector3(16.5337, 12.6689, 14.8018)
 
 [node name="BulkInterior" type="CSGBox3D" parent="HouseBody"]
-transform = Transform3D(0.9582, 0, 0, 0, 0.9582, 0, 0, 0, 0.9582, -0.108379, 0.0415564, -0.144336)
+transform = Transform3D(0.9582, 0, 0, 0, 0.9582, 0, 0, 0, 0.9582, -0.108379, -0.0431721, -0.144336)
 operation = 2
-size = Vector3(16.9049, 13.1493, 14.751)
+size = Vector3(16.9049, 12.9724, 14.751)
 material = SubResource("StandardMaterial3D_rkoc8")
 
 [node name="SouthDoor" type="CSGBox3D" parent="HouseBody"]
@@ -44,6 +44,18 @@ size = Vector3(16.534, 0.5, 14.802)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1043, 0.289585, 0)
 size = Vector3(3.57482, 0.5, 14.802)
 
+[node name="BlueHouseFrontSill" type="CSGBox3D" parent="HouseBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.70395, 0.289585, -1.00702)
+size = Vector3(3.57482, 0.5, 12.788)
+
+[node name="BlueHouseSillLadder" type="CSGBox3D" parent="HouseBody"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.70395, -3.76811, 5.66304)
+size = Vector3(3.57482, 0.5, 8.63007)
+
+[node name="BlueHouseLadderJumpUp" type="CSGBox3D" parent="HouseBody"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.70395, -7.06433, 6.68461)
+size = Vector3(3.57482, 1.55322, 2.03762)
+
 [node name="BlueHouseBackLanding" type="CSGBox3D" parent="HouseBody"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8153, 0.289585, -6.565)
 size = Vector3(3.57482, 0.5, 1.672)
@@ -62,8 +74,8 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -3.176
 size = Vector3(10.3388, 0.270874, 5.95872)
 
 [node name="F2StairWallS" type="CSGBox3D" parent="HouseBody"]
-transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, -1, 1, -4.37114e-08, -4.37114e-08, 1.87075, 3.19344, -5.38869)
-size = Vector3(4.53513, 0.263062, 5.95872)
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, -1, 1, -4.37114e-08, -4.37114e-08, 1.87075, 3.19344, -0.326612)
+size = Vector3(14.6593, 0.263062, 5.95872)
 
 [node name="BlueHouseIntWall" type="CSGBox3D" parent="HouseBody"]
 transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -3.68783, -3.19006, -0.15976)
@@ -74,11 +86,16 @@ transform = Transform3D(1, 0, 0, 0, 0.869262, -0.494352, 0, 0.494352, 0.869262, 
 size = Vector3(1.74279, 0.5, 14.0111)
 
 [node name="BlueHouseWindow" type="CSGBox3D" parent="HouseBody"]
-transform = Transform3D(1.00692, 0, -0.00401743, 0, 1, 0, 0.00192605, 0, 0.479042, 8.31046, 3.18954, 3.42592)
+transform = Transform3D(1.00692, 0, -0.00401743, 0, 1, 0, 0.00192605, 0, 0.479042, 8.31046, 3.18954, 2.36963)
 operation = 2
 size = Vector3(0.9823, 3.73158, 11.2356)
 
-[node name="BlueHouseWindow2" type="CSGBox3D" parent="HouseBody"]
+[node name="BlueHouseStairDoor" type="CSGBox3D" parent="HouseBody"]
+transform = Transform3D(1.00693, 0, 0, 0, 1, 0, 0, 0, 0.479058, 1.81227, 2.41836, 3.82315)
+operation = 2
+size = Vector3(0.9823, 3.73158, 4.82906)
+
+[node name="BlueHouseBedroomDoor" type="CSGBox3D" parent="HouseBody"]
 transform = Transform3D(-4.40141e-08, 0, 0.479058, 0, 1, 0, -1.00693, 0, -2.09403e-08, -6.8746, 2.43717, -3.15131)
 operation = 2
 size = Vector3(0.9823, 3.73158, 2.89224)
