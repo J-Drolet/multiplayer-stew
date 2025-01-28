@@ -91,23 +91,23 @@ transform = Transform3D(0.0958008, 0, 1.11243, 0, 2.05582, 0, -2.42964, 0, 0.043
 use_collision = true
 
 [node name="Greenhouse" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(-0.141705, 0, -1.86156, 0, 4.49178, 0, 3.01829, 0, -0.0873982, -59.3125, 0.909871, -6.57193)
+transform = Transform3D(-0.12354, 0, -2.68081, 0, 4.49178, 0, 2.63137, 0, -0.125862, -63.9907, -6.25654, -5.71036)
 use_collision = true
 
 [node name="Greenhouse2" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(-0.033168, 0, -0.855335, 0, 2.34688, 0, 1.1764, 0, -0.0241157, -45.5381, 0.909871, -3.97551)
+transform = Transform3D(-0.033168, 0, -0.855335, 0, 2.34688, 0, 1.1764, 0, -0.0241158, -43.1493, 0.909871, -3.00559)
 use_collision = true
 
 [node name="SpawnFence" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(-1.19209e-07, 0, 0.043041, 0, 1.92273, 0, -3.51409, 0, -1.86265e-09, -42.3788, 0.909871, 16.3614)
+transform = Transform3D(-1.19209e-07, 0, 0.0380968, 0, 1.92273, 0, -4.60558, 0, 9.31323e-10, -47.9448, 0.583718, 7.93174)
 use_collision = true
 
 [node name="SpawnFence2" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(0, 0, 0.043041, 0, 1.92273, 0, -1.96863, 0, -1.86265e-09, -49.7602, 0.909871, 20.1375)
+transform = Transform3D(9.53674e-07, 0, 0.035517, 0, 1.92273, 0, -3.23619, 0, 1.86265e-09, -48.0251, 0.909871, 27.9929)
 use_collision = true
 
 [node name="Back Fence" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(-2.38419e-07, 0, 0.043041, 0, 1.92273, 0, -11.2097, 0, -9.31323e-10, -37.1307, 0.909871, -42.0034)
+transform = Transform3D(-2.38419e-07, 0, 0.043041, 0, 1.92273, 0, -11.2097, 0, 9.31323e-10, -56.197, 0.909871, -36.0211)
 use_collision = true
 
 [node name="Shed" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
