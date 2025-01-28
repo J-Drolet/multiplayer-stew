@@ -75,15 +75,15 @@ transform = Transform3D(0.0958008, 0, 1.11243, 0, 2.05582, 0, -2.42964, 0, 0.043
 use_collision = true
 
 [node name="Greenhouse" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(-0.096808, 0, -1.27175, 0, 3.06863, 0, 2.06199, 0, -0.0597073, -62.7423, 0.909871, -0.4105)
+transform = Transform3D(-0.141705, 0, -1.86156, 0, 4.49178, 0, 3.01829, 0, -0.0873982, -59.3125, 0.909871, -6.57193)
 use_collision = true
 
 [node name="Greenhouse2" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(-0.0276825, 0, -0.713876, 0, 1.95875, 0, 0.981846, 0, -0.0201273, -52.1027, 0.909871, 2.52974)
+transform = Transform3D(-0.033168, 0, -0.855335, 0, 2.34688, 0, 1.1764, 0, -0.0241157, -45.5381, 0.909871, -3.97551)
 use_collision = true
 
 [node name="SpawnFence" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(-1.19209e-07, 0, 0.043041, 0, 1.92273, 0, -3.51409, 0, -1.86265e-09, -46.8891, 0.909871, 4.16599)
+transform = Transform3D(-1.19209e-07, 0, 0.043041, 0, 1.92273, 0, -3.51409, 0, -1.86265e-09, -42.3788, 0.909871, 16.3614)
 use_collision = true
 
 [node name="SpawnFence2" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
@@ -91,7 +91,7 @@ transform = Transform3D(0, 0, 0.043041, 0, 1.92273, 0, -1.96863, 0, -1.86265e-09
 use_collision = true
 
 [node name="Back Fence" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(-2.38419e-07, 0, 0.043041, 0, 1.92273, 0, -11.2097, 0, -9.31323e-10, -48.6087, 0.909871, -37.7585)
+transform = Transform3D(-2.38419e-07, 0, 0.043041, 0, 1.92273, 0, -11.2097, 0, -9.31323e-10, -37.1307, 0.909871, -42.0034)
 use_collision = true
 
 [node name="Shed" parent="Assets/Map Elements/NuketownBlueHouse" instance=ExtResource("9_3t8kx")]
@@ -127,7 +127,7 @@ transform = Transform3D(-0.865169, 0, -0.501481, 0, 1, 0, 0.501481, 0, -0.865169
 transform = Transform3D(0.899811, 0, -0.386064, 0, 1, 0, 0.212424, 0, 1.63533, 7.48658, 5.52799, 51.6479)
 
 [node name="SpawnFence3" parent="Assets/Map Elements/NuketownYellowHouse" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(-1.09768, 0, -0.0417984, 0, 1.92273, 0, 4.4686, 0, -0.0102675, -46.3516, 0.909871, 26.0391)
+transform = Transform3D(-2.29089, 0, -0.0872346, 0, 4.0128, 0, 9.32612, 0, -0.0214285, -49.5635, 0.909871, 39.2064)
 use_collision = true
 
 [node name="BackyardFence" parent="Assets/Map Elements/NuketownYellowHouse" instance=ExtResource("9_3t8kx")]
@@ -135,7 +135,7 @@ transform = Transform3D(-0.779711, 0, -0.0417984, 0, 1.92273, 0, 3.17417, 0, -0.
 use_collision = true
 
 [node name="Trellis" parent="Assets/Map Elements/NuketownYellowHouse" instance=ExtResource("9_3t8kx")]
-transform = Transform3D(-3.80094, 0, 0.0365451, 0, 2.08141, 0, -0.933671, 0, -0.148774, -51.1867, 0, 42.6258)
+transform = Transform3D(-3.7865, 0, 0.0310272, 0, 2.0573, 0, -0.792697, 0, -0.148209, -52.5101, 0, 41.8587)
 use_collision = true
 
 [node name="Shed2" parent="Assets/Map Elements/NuketownYellowHouse" instance=ExtResource("9_3t8kx")]
