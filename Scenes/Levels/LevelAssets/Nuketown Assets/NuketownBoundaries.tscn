@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc2vwvhuy86ya"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_likfn"]
+albedo_color = Color(0, 1, 1, 1)
+
+[node name="Boundary" type="CSGCombiner3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(12.7102, 0, 0, 0, 12.7102, 0, 0, 0, 12.7102, 0, 0, 0)
+flip_faces = true
+material = SubResource("StandardMaterial3D_likfn")
