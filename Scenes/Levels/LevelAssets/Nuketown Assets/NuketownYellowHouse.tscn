@@ -11,20 +11,15 @@ use_collision = true
 size = Vector3(16.5337, 12.6689, 14.8018)
 
 [node name="BulkInterior" type="CSGBox3D" parent="HouseBody"]
-transform = Transform3D(0.9582, 0, 0, 0, 0.9582, 0, 0, 0, 0.9582, -0.108379, -0.0431721, -0.144336)
+transform = Transform3D(0.9582, 0, 0, 0, 0.9582, 0, 0, 0, 0.9582, -0.108379, -0.0431721, 0.176575)
 operation = 2
-size = Vector3(16.9049, 12.9724, 14.751)
+size = Vector3(16.9049, 12.9724, 14.0812)
 material = SubResource("StandardMaterial3D_rkoc8")
 
 [node name="SouthDoor" type="CSGBox3D" parent="HouseBody"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.95629, -3.8194, -3.73187)
 operation = 2
 size = Vector3(0.677734, 3.84478, 2.26107)
-
-[node name="EastDoor" type="CSGBox3D" parent="HouseBody"]
-transform = Transform3D(-0.01697, 0, 0.692025, 0, 1, 0, -1.00332, 0, -0.0117048, -5.86664, -3.89926, 7.19441)
-operation = 2
-size = Vector3(0.677734, 3.72014, 1.90316)
 
 [node name="BlueHouseFront" type="CSGBox3D" parent="HouseBody"]
 transform = Transform3D(-0.01697, 0, 0.692025, 0, 1, 0, -1.00332, 0, -0.0117048, 8.49009, -4.43778, -0.423753)
@@ -37,23 +32,23 @@ operation = 2
 size = Vector3(2.02014, 3.73675, 0.555096)
 
 [node name="Floor2" type="CSGBox3D" parent="HouseBody"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.289585, 0)
-size = Vector3(16.534, 0.5, 14.802)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.289585, 0.303283)
+size = Vector3(16.534, 0.5, 14.1954)
 
 [node name="BlueHouseBackDeck" type="CSGBox3D" parent="HouseBody"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1043, 0.289585, 0)
 size = Vector3(3.57482, 0.5, 14.802)
 
-[node name="BlueHouseFrontSill" type="CSGBox3D" parent="HouseBody"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.70395, 0.289585, -1.00702)
+[node name="FrontSill" type="CSGBox3D" parent="HouseBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.70395, 0.289585, 0.401002)
 size = Vector3(3.57482, 0.5, 12.788)
 
-[node name="BlueHouseSillLadder" type="CSGBox3D" parent="HouseBody"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.70395, -3.76811, 5.66304)
+[node name="SillLadder" type="CSGBox3D" parent="HouseBody"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.70395, -3.76811, -5.73675)
 size = Vector3(3.57482, 0.5, 8.63007)
 
-[node name="BlueHouseLadderJumpUp" type="CSGBox3D" parent="HouseBody"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.3269, -5.28057, 6.68461)
+[node name="LadderJumpUp" type="CSGBox3D" parent="HouseBody"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.3269, -5.28057, -6.59866)
 size = Vector3(2.32891, 1.55322, 2.03762)
 
 [node name="BlueHouseBackLanding" type="CSGBox3D" parent="HouseBody"]
@@ -86,7 +81,7 @@ transform = Transform3D(1, 0, 0, 0, 0.869262, -0.494352, 0, 0.494352, 0.869262, 
 size = Vector3(1.74279, 0.5, 14.0111)
 
 [node name="BlueHouseWindow" type="CSGBox3D" parent="HouseBody"]
-transform = Transform3D(1.00692, 0, -0.00401743, 0, 1, 0, 0.00192605, 0, 0.479042, 8.31046, 3.18954, 2.36963)
+transform = Transform3D(1.00692, 0, -0.00401743, 0, 1, 0, 0.00192605, 0, 0.479042, 8.31046, 3.18954, -2.94674)
 operation = 2
 size = Vector3(0.9823, 3.73158, 11.2356)
 
@@ -101,31 +96,48 @@ operation = 2
 size = Vector3(0.9823, 3.73158, 2.89224)
 
 [node name="BlueHouseF1Passthrough" type="CSGBox3D" parent="HouseBody"]
-transform = Transform3D(1.00692, 0, -0.00401743, 0, 1.55342, 0, 0.00192605, 0, 0.479042, -3.66609, -3.92155, 1.19046)
+transform = Transform3D(1.00692, 0, -0.00401743, 0, 1.55342, 0, 0.00192605, 0, 0.479042, -3.66917, -3.92155, 1.55811)
 operation = 2
-size = Vector3(0.9823, 3.04548, 11.2356)
+size = Vector3(0.9823, 3.04548, 10.4537)
 
-[node name="Garage" type="CSGBox3D" parent="."]
-transform = Transform3D(-0.0115015, 0, 0.999934, 0, 1, 0, -0.999934, 0, -0.0115015, 3.23768, -1.76646, 10.0898)
+[node name="toHouse" type="CSGBox3D" parent="HouseBody"]
+transform = Transform3D(-0.00166365, 0, 0.459753, 0, 1, 0, -1.00347, 0, -0.00172745, -5.61511, -4.50788, 7.15575)
+operation = 2
+size = Vector3(1.47754, 3.64214, 3.13255)
+
+[node name="PatioStove" type="CSGBox3D" parent="HouseBody"]
+transform = Transform3D(1.00001, 1.85594e-08, 7.37484e-17, 0, -4.37114e-08, -1, -9.68575e-08, 1.00001, -4.37117e-08, -14.9425, -4.96374, 3.42091)
+size = Vector3(2.57037, 3.01135, 2.93582)
+
+[node name="PatioCounter" type="CSGBox3D" parent="HouseBody"]
+transform = Transform3D(1.00001, 1.85594e-08, 7.37484e-17, 0, -4.37114e-08, -1, -9.68575e-08, 1.00001, -4.37117e-08, -17.5758, -5.88682, 3.42091)
+size = Vector3(2.72044, 3.01135, 1.08967)
+
+[node name="Garage" type="CSGBox3D" parent="HouseBody"]
+transform = Transform3D(-0.00764006, 0, 0.664223, 0, 1, 0, -0.999934, 0, -0.0115015, -2.17113, -3.10093, 12.5279)
 use_collision = true
-size = Vector3(10.429, 6.5, 10)
+size = Vector3(10.429, 6.5, 16.479)
 
-[node name="BulkInterior" type="CSGBox3D" parent="Garage"]
-transform = Transform3D(0.958208, 0, 3.53903e-08, 0, 0.9582, 0, -3.53903e-08, 0, 0.958208, 1.08594, -0.468128, -0.0711462)
+[node name="BulkInterior" type="CSGBox3D" parent="HouseBody/Garage"]
+transform = Transform3D(0.95821, 0, 3.91155e-08, 0, 0.9582, 0, -2.98023e-08, 0, 0.95821, 1.08594, -0.468128, 0.0218931)
 operation = 2
-size = Vector3(12.9909, 5.77734, 9.98761)
+size = Vector3(12.9909, 5.77734, 16.6752)
 material = SubResource("StandardMaterial3D_rkoc8")
 
-[node name="GarageBack" type="CSGBox3D" parent="Garage"]
-transform = Transform3D(-0.0169701, 0, 0.692025, 0, 1, 0, -1.00333, 0, -0.0117048, -2.91451, -1.41893, -4.84493)
+[node name="GarageBack" type="CSGBox3D" parent="HouseBody/Garage"]
+transform = Transform3D(-0.0169701, 0, 0.692025, 0, 1, 0, -1.00333, 0, -0.0117048, -2.87767, -1.41893, -8.04771)
 operation = 2
 size = Vector3(0.677734, 3.64214, 3.13255)
 
-[node name="GarageFront" type="CSGBox3D" parent="Garage"]
-transform = Transform3D(0.0111138, 0, -0.479053, 0, 1, 0, 1.00686, 0, 0.0021865, 1.7284, -1.21607, 4.87972)
+[node name="GarageFront" type="CSGBox3D" parent="HouseBody/Garage"]
+transform = Transform3D(0.0111138, 0, -0.479052, 0, 1, 0, 1.00686, 0, 0.0021865, 1.38851, -1.13271, 7.83163)
 operation = 2
-size = Vector3(0.9823, 4.20828, 8.99711)
+size = Vector3(0.9823, 4.20828, 10.2744)
 
-[node name="Parked Car2" type="CSGBox3D" parent="Garage"]
-transform = Transform3D(-0.0173147, -0.999946, 4.37088e-08, 0, -4.37114e-08, -1, 1.50534, -0.0115016, 5.0275e-10, -2.4797, -2.42392, 11.4045)
-size = Vector3(6.25219, 2.70239, 1.8136)
+[node name="Parked Car2" type="CSGBox3D" parent="HouseBody/Garage"]
+transform = Transform3D(-0.0173147, -0.999946, 4.37088e-08, 0, -4.37114e-08, -1, 1.50534, -0.0115016, 5.0275e-10, -3.00419, -2.42392, 15.4502)
+size = Vector3(6.25219, 3.01135, 1.8136)
+
+[node name="GarageExtPotrusion" type="CSGBox3D" parent="HouseBody/Garage"]
+transform = Transform3D(-0.0173148, -0.999946, 4.37089e-08, 0, -4.37114e-08, -1, 1.50534, -0.0115016, 5.02751e-10, -6.26602, -0.031692, 3.21889)
+size = Vector3(2.72044, 3.01135, 6.59806)

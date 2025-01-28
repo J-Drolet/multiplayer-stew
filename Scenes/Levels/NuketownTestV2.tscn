@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://3yy3vug3dvgm"]
+[gd_scene load_steps=15 format=3 uid="uid://3yy3vug3dvgm"]
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_mrkvx"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_q20kt"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b0ywmvox13rx1" path="res://Scenes/Pickups/ShotgunPickup.tscn" id="10_4gn11"]
 [ext_resource type="PackedScene" uid="uid://dkqpcv60f5l45" path="res://Scenes/Levels/LevelAssets/Nuketown Assets/NuketownTruck.tscn" id="10_vcc2o"]
 [ext_resource type="PackedScene" uid="uid://dpd0cvtbs8iuo" path="res://Scenes/Target.tscn" id="11_lrir8"]
+[ext_resource type="PackedScene" uid="uid://dtl5ybo8pgt3b" path="res://Scenes/Levels/LevelAssets/Nuketown Assets/NuketownYellowHouse.tscn" id="11_sboat"]
 [ext_resource type="PackedScene" uid="uid://k3u720y471ax" path="res://Scenes/Pickups/Mac10Pickup.tscn" id="12_rehwa"]
 [ext_resource type="PackedScene" uid="uid://1fdlt6hucwhx" path="res://Scenes/Pickups/BoltyPickup.tscn" id="13_m1xd8"]
 
@@ -99,6 +100,11 @@ use_collision = true
 
 [node name="Truck" parent="Assets/Map Elements/Cul-De-Sac" instance=ExtResource("10_vcc2o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.41422, 1.58092, 0)
+
+[node name="NuketownYellowHouse" type="Node3D" parent="Assets/Map Elements"]
+
+[node name="CSGCombiner3D" parent="Assets/Map Elements/NuketownYellowHouse" instance=ExtResource("11_sboat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.3273, 44.1174)
 
 [node name="Spawns" type="Node3D" parent="."]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://btavi7m2jh606"]
+[gd_scene load_steps=17 format=3 uid="uid://btavi7m2jh606"]
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_tjnmx"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_m4m6e"]
@@ -13,8 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://k3u720y471ax" path="res://Scenes/Pickups/Mac10Pickup.tscn" id="7_6s4tg"]
 [ext_resource type="PackedScene" uid="uid://eb3bvjl3kk7c" path="res://Scenes/Levels/LevelAssets/csgtestasset.tscn" id="7_x8i23"]
 [ext_resource type="PackedScene" uid="uid://1fdlt6hucwhx" path="res://Scenes/Pickups/BoltyPickup.tscn" id="8_886jj"]
-[ext_resource type="PackedScene" uid="uid://dkqpcv60f5l45" path="res://Scenes/Levels/LevelAssets/Nuketown Assets/NuketownTruck.tscn" id="15_2r8h7"]
-[ext_resource type="PackedScene" uid="uid://dtl5ybo8pgt3b" path="res://Scenes/Levels/LevelAssets/Nuketown Assets/NuketownBlueHouse.tscn" id="15_20p7e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4e45f"]
 albedo_color = Color(0.239473, 0.128064, 0.00900927, 1)
@@ -57,7 +55,7 @@ transform = Transform3D(0.148448, 0, -0.504383, 0, 0.525775, 0, 0.504383, 0, 0.1
 transform = Transform3D(0.148448, 0, -0.504383, 0, 0.525775, 0, 0.504383, 0, 0.148448, -4.84246, 0.510523, -4.21123)
 
 [node name="ConcretePipe" parent="." instance=ExtResource("5_xq3c0")]
-transform = Transform3D(0.538879, 0, -0.904049, 0, 1.05247, 0, 0.904049, 0, 0.538879, 0, 1.71826, 11.4218)
+transform = Transform3D(0.538879, 0, -0.904049, 0, 1.05247, 0, 0.904049, 0, 0.538879, -38.8701, 1.71826, 11.4218)
 
 [node name="FuelStorage" parent="." instance=ExtResource("6_w1hny")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.5524, 2.68449, -20.0438)
@@ -126,9 +124,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.69138, 0, 22.9489)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 
 [node name="NuketownTestHouse" type="Node3D" parent="."]
-
-[node name="Truck" parent="NuketownTestHouse" instance=ExtResource("15_2r8h7")]
-transform = Transform3D(0.773552, 0, 0, 0, 0.773552, 0, 0, 0, 0.773552, -15.1062, 0.775151, 8.71321)
-
-[node name="CSGCombiner3D" parent="NuketownTestHouse" instance=ExtResource("15_20p7e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.4585, 0, 0)
