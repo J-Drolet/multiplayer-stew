@@ -18,14 +18,14 @@ size = Vector3(16.9049, 12.9724, 14.6361)
 material = SubResource("StandardMaterial3D_rkoc8")
 
 [node name="SouthDoor" type="CSGBox3D" parent="HouseBody"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.95629, -3.8194, -3.73187)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.95629, -4.09111, -3.73187)
 operation = 2
-size = Vector3(0.677734, 3.84478, 2.26107)
+size = Vector3(0.677734, 4.38821, 2.26107)
 
 [node name="EastDoor" type="CSGBox3D" parent="HouseBody"]
-transform = Transform3D(-0.01697, 0, 0.692025, 0, 1, 0, -1.00332, 0, -0.0117048, -5.86664, -3.89926, 7.19441)
+transform = Transform3D(-0.01697, 0, 0.692025, 0, 1, 0, -1.00332, 0, -0.0117048, -5.86664, -4.17089, 7.19441)
 operation = 2
-size = Vector3(0.677734, 3.72014, 1.90316)
+size = Vector3(0.677734, 4.26339, 1.90316)
 
 [node name="BlueHouseFront" type="CSGBox3D" parent="HouseBody"]
 transform = Transform3D(-0.01697, 0, 0.692025, 0, 1, 0, -1.00332, 0, -0.0117048, 8.49009, -4.43778, -0.423753)
@@ -50,8 +50,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.70395, 0.289585, -1.00702)
 size = Vector3(3.57482, 0.5, 12.788)
 
 [node name="BlueHouseSillLadder" type="CSGBox3D" parent="HouseBody"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8.70395, -3.76811, 5.66304)
-size = Vector3(3.57482, 0.5, 8.63007)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.24665, -3.76811, 5.66304)
+size = Vector3(2.48941, 0.5, 8.63007)
 
 [node name="BlueHouseLadderJumpUp" type="CSGBox3D" parent="HouseBody"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 9.3269, -5.28057, 6.68461)
@@ -134,3 +134,110 @@ size = Vector3(0.9823, 4.20828, 8.99711)
 [node name="Parked Car2" type="CSGBox3D" parent="Garage"]
 transform = Transform3D(-0.0173147, -0.999946, 4.37088e-08, 0, -4.37114e-08, -1, 1.50534, -0.0115016, 5.0275e-10, -2.4797, -2.42392, 11.4045)
 size = Vector3(6.25219, 2.70239, 1.8136)
+
+[node name="Small Assets" type="Node3D" parent="."]
+
+[node name="Desk" type="CSGBox3D" parent="Small Assets"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.85898, 2.61926, 0.710176)
+size = Vector3(4.22656, 1.45605, 1.3302)
+
+[node name="Bed" type="CSGBox3D" parent="Small Assets"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.28331, 2.47507, -6.48598)
+size = Vector3(5.93491, 1.11029, 4.5585)
+
+[node name="Cabinets1" type="CSGBox3D" parent="Small Assets"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.09925, -4.17157, -7.9866)
+size = Vector3(5.93491, 1.65014, 1.07299)
+
+[node name="Cabinets2" type="CSGBox3D" parent="Small Assets"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.09925, 0.21541, -7.9866)
+size = Vector3(5.93491, 1.65014, 1.07299)
+
+[node name="Cabinets3" type="CSGBox3D" parent="Small Assets"]
+transform = Transform3D(0.0175396, 0, -0.999846, 0, 1, 0, 0.999846, 0, 0.0175396, -8.15431, -4.16537, 0.235416)
+size = Vector3(8.41854, 1.65014, 1.07299)
+
+[node name="Table" type="CSGBox3D" parent="Small Assets"]
+transform = Transform3D(0.0175396, 0, -0.999846, 0, 1, 0, 0.999846, 0, 0.0175396, -3.31106, -4.15797, -5.76771)
+size = Vector3(2.80678, 1.65014, 1.40063)
+
+[node name="Chair" type="CSGBox3D" parent="Small Assets"]
+transform = Transform3D(-0.263419, 0, -0.964682, 0, 1, 0, 0.964682, 0, -0.263419, 2.50787, -4.366, 2.64732)
+size = Vector3(1.33066, 1.27819, 2.08313)
+
+[node name="Chair2" type="CSGBox3D" parent="Small Assets"]
+transform = Transform3D(0.506019, 0, -0.862522, 0, 1, 0, 0.862522, 0, 0.506019, 6.77555, -4.28508, 2.64732)
+size = Vector3(1.33066, 1.27819, 2.08313)
+
+[node name="Potted Plant" type="CSGBox3D" parent="Small Assets"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0415, -3.30132, 3.80669)
+size = Vector3(1.15654, 3.48495, 1.1098)
+
+[node name="Table w TV" type="CSGBox3D" parent="Small Assets"]
+transform = Transform3D(-1.10733, 0, -0.0105139, 0, 1.10738, 0, 0.0105139, 0, -1.10733, 1.06031, -3.91832, -5.00202)
+size = Vector3(3.41951, 2.09741, 1.40063)
+
+[node name="Medium Cabinet" type="CSGBox3D" parent="Small Assets"]
+transform = Transform3D(-0.999955, 0, -0.00949443, 0, 1, 0, 0.00949443, 0, -0.999955, 10.3253, -3.68123, -8.32364)
+size = Vector3(3.41951, 2.73633, 1.40063)
+
+[node name="Wardrobe" type="CSGBox3D" parent="Small Assets"]
+transform = Transform3D(0.876366, 0, -0.481647, 0, 1, 0, 0.481647, 0, 0.876366, 13.9959, 3.97948, -8.83979)
+size = Vector3(2.29155, 4.11911, 0.9897)
+
+[node name="Bookshelf" type="CSGBox3D" parent="Small Assets"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.64508, 4.23819, 3.80525)
+size = Vector3(3.08606, 4.69391, 1.3302)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Small Assets/Bookshelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0256503, 1.38756, -0.273226)
+operation = 2
+size = Vector3(2.69202, 1, 0.979004)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Small Assets/Bookshelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0256503, 0.199057, -0.273226)
+operation = 2
+size = Vector3(2.69202, 1, 0.979004)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Small Assets/Bookshelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0256503, -1.11993, -0.273226)
+operation = 2
+size = Vector3(2.69202, 1, 0.979004)
+
+[node name="Bookshelf2" type="CSGBox3D" parent="Small Assets"]
+transform = Transform3D(-0.999806, 0, -0.0196861, 0, 1, 0, 0.0196861, 0, -0.999806, -1.29183, 4.23819, -4.84666)
+size = Vector3(3.08606, 4.69391, 1.3302)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Small Assets/Bookshelf2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0256503, 1.38756, -0.273226)
+operation = 2
+size = Vector3(2.69202, 1, 0.979004)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Small Assets/Bookshelf2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0256503, 0.199057, -0.273226)
+operation = 2
+size = Vector3(2.69202, 1, 0.979004)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Small Assets/Bookshelf2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0256503, -1.11993, -0.273226)
+operation = 2
+size = Vector3(2.69202, 1, 0.979004)
+
+[node name="Bookshelf3" type="CSGBox3D" parent="Small Assets"]
+transform = Transform3D(-0.0483966, 0, 0.998828, 0, 1, 0, -0.998828, 0, -0.0483966, 5.35017, 4.23819, -2.07155)
+size = Vector3(3.08606, 4.69391, 1.3302)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Small Assets/Bookshelf3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0256503, 1.38756, -0.273226)
+operation = 2
+size = Vector3(2.69202, 1, 0.979004)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Small Assets/Bookshelf3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0256503, 0.199057, -0.273226)
+operation = 2
+size = Vector3(2.69202, 1, 0.979004)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Small Assets/Bookshelf3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0256503, -1.11993, -0.273226)
+operation = 2
+size = Vector3(2.69202, 1, 0.979004)

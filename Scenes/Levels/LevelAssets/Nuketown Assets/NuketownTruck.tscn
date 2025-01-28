@@ -32,3 +32,11 @@ size = Vector3(4.74164, 2.67939, 6.16998)
 [node name="TruckBoxes" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.08217, 1.00385, 0.0085398)
 size = Vector3(0.843964, 2.17419, 0.684022)
+
+[node name="RightWheelWell" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.09887, 0.144567, -1.12568)
+size = Vector3(0.74688, 0.509735, 1.48117)
+
+[node name="LeftWheelWell" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0886505, 0.144567, -1.12568)
+size = Vector3(0.74688, 0.509735, 1.48117)

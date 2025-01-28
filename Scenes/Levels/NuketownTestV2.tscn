@@ -48,19 +48,35 @@ transform = Transform3D(0.835721, 0.000172564, -2.29994, 0.00391944, 2.44707, 0.
 
 [node name="Pickups" type="Node3D" parent="Assets"]
 
-[node name="GarandPickup" parent="Assets/Pickups" instance=ExtResource("13_m1xd8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -9)
+[node name="BlueSpawnPickups" type="Node3D" parent="Assets/Pickups"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.6426, 0, 0)
 
-[node name="Mac10Pickup" parent="Assets/Pickups" instance=ExtResource("12_rehwa")]
+[node name="GarandPickup" parent="Assets/Pickups/BlueSpawnPickups" instance=ExtResource("13_m1xd8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 5.585)
+
+[node name="Mac10Pickup" parent="Assets/Pickups/BlueSpawnPickups" instance=ExtResource("12_rehwa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.42344, 0.702979, 8.30686)
+
+[node name="PistolPickup" parent="Assets/Pickups/BlueSpawnPickups" instance=ExtResource("9_ouy8b")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.9855, 0.588806, 9.13795)
+
+[node name="ShotgunPickup" parent="Assets/Pickups/BlueSpawnPickups" instance=ExtResource("10_4gn11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.48535, 0.602038, 1.74168)
+
+[node name="YellowSpawnPickups" type="Node3D" parent="Assets/Pickups"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 95.5006, 0, 0)
+
+[node name="GarandPickup" parent="Assets/Pickups/YellowSpawnPickups" instance=ExtResource("13_m1xd8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -2.85463)
+
+[node name="Mac10Pickup" parent="Assets/Pickups/YellowSpawnPickups" instance=ExtResource("12_rehwa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.42344, 0.702979, -7.972)
 
-[node name="PistolPickup" parent="Assets/Pickups" instance=ExtResource("9_ouy8b")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.4633, 0.588806, 15.8056)
-visible = false
+[node name="PistolPickup" parent="Assets/Pickups/YellowSpawnPickups" instance=ExtResource("9_ouy8b")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.55824, 1.29268, 1.98046)
 
-[node name="ShotgunPickup" parent="Assets/Pickups" instance=ExtResource("10_4gn11")]
+[node name="ShotgunPickup" parent="Assets/Pickups/YellowSpawnPickups" instance=ExtResource("10_4gn11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.48535, 0.602038, -7.69477)
-visible = false
 
 [node name="Map Elements" type="Node3D" parent="Assets"]
 
@@ -121,7 +137,7 @@ use_collision = true
 transform = Transform3D(-2.29692, 3.16788e-08, -0.76079, 3.11719e-08, 2.41964, 6.6401e-09, 0.76079, -3.49785e-09, -2.29692, -1.00988, 1.58092, -27.4645)
 
 [node name="NuketownYellowHouse" type="Node3D" parent="Assets/Map Elements"]
-transform = Transform3D(-0.865169, 0, -0.501481, 0, 1, 0, 0.501481, 0, -0.865169, 86.091, 0, 44.9494)
+transform = Transform3D(-0.865169, 0, -0.501481, 0, 1.06303, 0, 0.501481, 0, -0.865169, 86.091, 0, 44.9494)
 
 [node name="CSGCombiner3D" parent="Assets/Map Elements/NuketownYellowHouse" instance=ExtResource("11_sboat")]
 transform = Transform3D(0.899811, 0, -0.386064, 0, 1, 0, 0.212424, 0, 1.63533, 7.48658, 5.52799, 51.6479)
@@ -219,13 +235,40 @@ use_collision = true
 [node name="Spawns" type="Node3D" parent="."]
 
 [node name="1" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.0497, 2.75561, -0.368292)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121.604, 2.75561, 7.22515)
 
 [node name="2" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.83456, 0, 21.3678)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.749, 0, -9.61344)
 
 [node name="3" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 23.4312)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.9297, 0, 16.749)
 
 [node name="4" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.69138, 0, 22.9489)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.444, 0, 0.472315)
+
+[node name="5" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.82, 0, -42.6085)
+
+[node name="6" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.3984, 0, -26.954)
+
+[node name="7" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.1598, 0, -15.6092)
+
+[node name="8" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.963, 0, 31.3193)
+
+[node name="9" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.905, 0, -31.0985)
+
+[node name="10" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.228, 0, -18.5761)
+
+[node name="11" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.681, 0, 3.63191)
+
+[node name="12" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -119.212, 0, 22.9489)
+
+[node name="13" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -121.431, 0, -6.28685)
