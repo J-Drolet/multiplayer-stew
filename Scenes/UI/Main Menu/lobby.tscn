@@ -21,7 +21,7 @@ color = Color(1, 1, 1, 1)
 grow_begin = -10.0
 grow_end = -10.0
 
-[node name="Lobby" type="Control" node_paths=PackedStringArray("PlayerPrototype", "StartGameButton")]
+[node name="Lobby" type="Control" node_paths=PackedStringArray("PlayerPrototype", "StartGameButton", "GameSettings", "LevelSelector")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,6 +31,8 @@ grow_vertical = 2
 script = ExtResource("1_0ljmd")
 PlayerPrototype = NodePath("Panel/Panel/Player List/PlayerPrototype")
 StartGameButton = NodePath("Panel/Button Container/Start")
+GameSettings = NodePath("Panel/GameSettings")
+LevelSelector = NodePath("Panel/GameSettings/VBoxContainer/HBoxContainer/OptionButton")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -133,6 +135,41 @@ text = "Leave Game"
 visible = false
 layout_mode = 2
 text = "Start Game"
+
+[node name="GameSettings" type="Panel" parent="Panel"]
+visible = false
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.674
+anchor_top = 0.046
+anchor_right = 0.934
+anchor_bottom = 0.201
+offset_left = -0.447998
+offset_top = 0.191998
+offset_right = 0.0319824
+offset_bottom = -0.248001
+grow_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/GameSettings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/GameSettings/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/GameSettings/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Level"
+
+[node name="OptionButton" type="OptionButton" parent="Panel/GameSettings/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(175, 0)
+layout_mode = 2
 
 [connection signal="pressed" from="Panel/Button Container/Leave" to="." method="OnLeavePressed"]
 [connection signal="pressed" from="Panel/Button Container/Start" to="." method="OnStartPressed"]
