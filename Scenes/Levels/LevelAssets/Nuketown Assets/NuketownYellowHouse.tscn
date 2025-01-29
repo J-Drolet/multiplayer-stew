@@ -17,9 +17,9 @@ size = Vector3(16.9049, 12.9724, 14.228)
 material = SubResource("StandardMaterial3D_rkoc8")
 
 [node name="SouthDoor" type="CSGBox3D" parent="HouseBody"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.95629, -3.8194, -3.73187)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.95629, -4.10698, -3.73187)
 operation = 2
-size = Vector3(0.677734, 3.84478, 2.26107)
+size = Vector3(0.677734, 4.41994, 2.26107)
 
 [node name="BlueHouseFront" type="CSGBox3D" parent="HouseBody"]
 transform = Transform3D(-0.01697, 0, 0.692025, 0, 1, 0, -1.00332, 0, -0.0117048, 8.49009, -4.43778, -0.423753)
@@ -27,9 +27,9 @@ operation = 2
 size = Vector3(2.02014, 3.73675, 2.50179)
 
 [node name="Floor2BackDoor" type="CSGBox3D" parent="HouseBody"]
-transform = Transform3D(-0.01697, 0, 0.692025, 0, 1, 0, -1.00332, 0, -0.0117048, -8.20444, 2.63181, -0.468027)
+transform = Transform3D(-0.01697, 0, 0.692025, 0, 1, 0, -1.00332, 0, -0.0117048, -8.20444, 2.56209, -0.468027)
 operation = 2
-size = Vector3(2.02014, 3.73675, 0.555096)
+size = Vector3(2.02014, 3.87619, 0.555096)
 
 [node name="Floor2" type="CSGBox3D" parent="HouseBody"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.191178, 0.289585, 0.334289)
