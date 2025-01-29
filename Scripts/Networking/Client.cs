@@ -39,22 +39,15 @@ public partial class Client : Node
 
     private void StartServer()
     {
-        if (OS.HasFeature("editor")) // different execution chains for when it is packaged and when it is being tested in editor
-        { 
-            string[] args = new string[] { "--server" };//{ "--headless", "Scenes/server.tscn" };
-            ServerPid = OS.CreateInstance(args);
+        string[] args = new string[] { "--server" };//{ "--headless", "Scenes/server.tscn" };
+        ServerPid = OS.CreateInstance(args);
 
-            if(ServerPid != -1) 
-            {
-                GD.Print("Client.StartServer - Started the server in headless mode.");
-            }
-            else {
-                GD.Print("Client.StartServer - Failed to start server instance.");
-            }
-        }
-        else
+        if(ServerPid != -1) 
         {
-            GD.Print("Client.StartServer - Running in a build");
+            GD.Print("Client.StartServer - Started the server in headless mode.");
+        }
+        else {
+            GD.Print("Client.StartServer - Failed to start server instance.");
         }
     }
 

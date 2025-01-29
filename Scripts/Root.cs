@@ -50,7 +50,9 @@ public partial class Root : Node
 	public static List<string> GetLevelFilepaths()
 	{
 		List<string> levels = new();
-		foreach(string filename in DirAccess.GetFilesAt(LevelsFilepath)) 
+		DirAccess dir = DirAccess.Open(LevelsFilepath);
+		
+		foreach(string filename in dir.GetFiles()) 
 		{
 			string filepath = LevelsFilepath + filename;
 			string extension = GetExtension(filepath);
