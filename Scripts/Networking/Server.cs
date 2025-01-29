@@ -59,7 +59,6 @@ public partial class Server : Node
         if(AcceptingConnections == false)
         {
             RpcId(id, MethodName.NotifyConnectionRefused, "Connection failed: Game has already started");
-            Peer.DisconnectPeer((int) id, true);
         }
     }
 
@@ -70,7 +69,10 @@ public partial class Server : Node
     /// <param name="name"></param>
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void SendPlayerInfo(long id, string name) {
-        Rpc(MethodName.NotifyPlayerConnected, id, name, GameManager.Players.Count);
+        if(AcceptingConnections)
+        {
+            Rpc(MethodName.NotifyPlayerConnected, id, name, GameManager.Players.Count);
+        }
     }
 
     /// <summary>
@@ -105,10 +107,6 @@ public partial class Server : Node
             Node level = levelPackedScene.Instantiate();
             Root.Instance.AddChild(level); // using Config.Instance just to access tree
             GameManager.CurrentLevel = level;
-        }
-        else 
-        {
-            GD.Print("Server.NotifyStartGame - Telling clients to start their games");
         }
     }
 

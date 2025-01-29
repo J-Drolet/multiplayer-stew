@@ -165,6 +165,8 @@ public partial class Client : Node
     [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyConnectionRefused(string reason) {
         GD.Print("Client.NotifyConnectionRefused - Connection refused: " + reason);
+        Peer.Close();
+        GameManager.LeaveJoinedGame();
         UI.DisplayError(reason);
     }
 }

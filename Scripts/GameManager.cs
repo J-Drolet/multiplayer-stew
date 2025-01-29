@@ -37,6 +37,7 @@ public static class GameManager
             CurrentLevel = null;
         }
 
+        UI.MainMenu.CloseAllWindows();
         UI.MainMenu.Show();
         UI.PauseMenu.Hide();
         UI.InGameUI.Hide();
