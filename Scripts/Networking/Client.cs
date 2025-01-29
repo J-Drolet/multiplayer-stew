@@ -84,7 +84,6 @@ public partial class Client : Node
     /// Tell the server to start the game. This will only hope if calling peer is the host
     /// </summary>
     public void StartGame(string levelPath) {
-        GD.Print("starting " + levelPath);
         RpcId(1, MethodName.NotifyStartGame, levelPath);
     }
 

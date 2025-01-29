@@ -10,6 +10,8 @@ public partial class SceneManager : Node
 	[Export, ExportRequired]
 	public PackedScene PlayerScene { get; set; }
 
+	public List<Node3D> SpawnPoints;
+
 	public override void _Ready() 
 	{   
 		GodotErrorService.ValidateRequiredData(this);
@@ -18,9 +20,10 @@ public partial class SceneManager : Node
 			UI.InGameUI.Show();
 		}
 
+		SpawnPoints = GetTree().GetNodesInGroup("PlayerSpawnPoint").Select(s => s as Node3D).ToList();
+
 		// spawning characters on spawn points (ran on every peer)
 		List<long> players = GameManager.Players.Keys.OrderBy(p => p).ToList();
-		List<Node3D> spawnPoints = GetTree().GetNodesInGroup("PlayerSpawnPoint").Select(s => s as Node3D).ToList();
 
 		for (int i = 0; i < players.Count; i++)
 		{   
@@ -47,11 +50,46 @@ public partial class SceneManager : Node
 			playerInfo.projectileParent = projectileParent;
 			GameManager.Players[players[i]] = playerInfo;
 
-			if(spawnPoints != null && spawnPoints.Count > i)
+			if(SpawnPoints != null && SpawnPoints.Count > i)
 			{
-				currentPlayer.GlobalPosition = spawnPoints[i].GlobalPosition;
+				currentPlayer.GlobalPosition = SpawnPoints[i].GlobalPosition;
 			}
 		}
 	}
-	
+
+
+	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+	public void RespawnPlayer(long peerId)
+	{
+		GameManager.Players[peerId].characterNode.QueueFree();
+		GameManager.Players[peerId].characterNode.Name = "QUEUED FOR DESTRUCTION"; // so we dont overlap the id name
+
+		Character currentPlayer = (Character) PlayerScene.Instantiate();
+		currentPlayer.Name = peerId.ToString();
+		AddChild(currentPlayer);
+
+		var random = new Random();
+		if(Multiplayer.GetUniqueId() == peerId)
+		{
+			currentPlayer.GlobalPosition = SpawnPoints[random.Next(SpawnPoints.Count)].GlobalPosition;
+		}
+
+		GameManager.Players[peerId].characterNode = currentPlayer;
+	}
+
+    public override void _Process(double delta)
+    {
+		if(Multiplayer.IsServer())
+		{
+			foreach(long id in GameManager.Players.Keys)
+			{
+				if(GameManager.Players[id].characterNode.CurrentHealth == 0)
+				{
+					Rpc(MethodName.RespawnPlayer, id);
+				}
+			}
+		}
+    }
+
+
 }
