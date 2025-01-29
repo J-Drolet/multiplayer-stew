@@ -4,9 +4,10 @@ using System;
 public partial class Server : Node
 {
     public static Server Instance { get; private set; }
-
+    
     // Define the maximum number of clients allowed
     private const int MaxClients = 10;
+    private string levelFilepath;
     private ENetMultiplayerPeer Peer;
     private bool AcceptingConnections { get; set; } = true; // whether or not the server is accepting connections or not
 
@@ -91,15 +92,16 @@ public partial class Server : Node
     /// <summary>
     /// Server uses this to tell all clients to start their games
     /// </summary>
+    /// <param name="filepath"></param>
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-    public void NotifyStartGame() {
+    public void NotifyStartGame(string filepath) {
         if(Multiplayer.GetRemoteSenderId() == GameManager.GameHost)
         {
             GD.Print("Server.NotifyStartGame - Telling clients to start their games");
             AcceptingConnections = false;
-            Rpc(MethodName.NotifyStartGame);
+            Rpc(MethodName.NotifyStartGame, filepath);
 
-            PackedScene levelPackedScene = (PackedScene)ResourceLoader.Load("res://Scenes/Levels/Level.tscn");
+            PackedScene levelPackedScene = (PackedScene)ResourceLoader.Load(filepath);
             Node level = levelPackedScene.Instantiate();
             Root.Instance.AddChild(level); // using Config.Instance just to access tree
             GameManager.CurrentLevel = level;

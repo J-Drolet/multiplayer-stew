@@ -4,11 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://eoi8ks6agami" path="res://Scenes/Network/client.tscn" id="2_dalob"]
 [ext_resource type="PackedScene" uid="uid://oeuhmhokafto" path="res://Scenes/Network/server.tscn" id="3_4ghm8"]
 
-[node name="Root" type="Node"]
+[node name="Root" type="Node" node_paths=PackedStringArray("LevelSpawner")]
 script = ExtResource("1_c1kdx")
 ClientScene = ExtResource("2_dalob")
 ServerScene = ExtResource("3_4ghm8")
+LevelSpawner = NodePath("MultiplayerSpawner")
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
-_spawnable_scenes = PackedStringArray("res://Scenes/Levels/Level.tscn", "res://Scenes/Levels/Level2.tscn")
 spawn_path = NodePath("..")

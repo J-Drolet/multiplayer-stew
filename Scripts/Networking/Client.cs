@@ -83,8 +83,9 @@ public partial class Client : Node
     /// <summary>
     /// Tell the server to start the game. This will only hope if calling peer is the host
     /// </summary>
-    public void StartGame() {
-        RpcId(1, MethodName.NotifyStartGame);
+    public void StartGame(string levelPath) {
+        GD.Print("starting " + levelPath);
+        RpcId(1, MethodName.NotifyStartGame, levelPath);
     }
 
     public void ConnectToServer(string ip, int port)
@@ -146,7 +147,7 @@ public partial class Client : Node
     }
 
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-    public void NotifyStartGame() 
+    public void NotifyStartGame(string filepath)
     {
         UI.MainMenu.CloseAllWindows();
         UI.MainMenu.Hide();
@@ -155,13 +156,7 @@ public partial class Client : Node
     [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyCurrentHost(long hostId) {
         GameManager.GameHost = hostId;
-        if (hostId == Multiplayer.GetUniqueId()) {
-            UI.Lobby.StartGameButton.Show();
-        }
-        else 
-        {
-            UI.Lobby.StartGameButton.Hide();
-        }
+        UI.Lobby.SetHost(hostId);
     }
 
     /// <summary>

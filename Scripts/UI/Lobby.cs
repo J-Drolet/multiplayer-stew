@@ -14,10 +14,35 @@ public partial class Lobby : Control
     [Export, ExportRequired]
     public Control StartGameButton { get; set; }
 
+    [Export, ExportRequired]
+    public Control GameSettings { get; set; }
+
+    [Export, ExportRequired]
+    public OptionButton LevelSelector { get; set; }
+
     public override void _Ready()
     {
         GodotErrorService.ValidateRequiredData(this);
         UI.Lobby = this;
+
+        // init list of levels
+        foreach(string filepath in Root.GetLevelFilepaths()) 
+		{
+            LevelSelector.AddItem(filepath);
+        }
+    }
+
+    public void SetHost(long hostId)
+    {
+        if (hostId == Multiplayer.GetUniqueId()) {
+            UI.Lobby.StartGameButton.Show();
+            GameSettings.Show();
+        }
+        else 
+        {
+            UI.Lobby.StartGameButton.Hide();
+            GameSettings.Hide();
+        }
     }
 
     public void RefreshLobby()
@@ -53,6 +78,6 @@ public partial class Lobby : Control
 
     public void OnStartPressed() 
     {
-        Client.Instance.StartGame();
+        Client.Instance.StartGame(LevelSelector.GetItemText(LevelSelector.Selected));
     }
 }
