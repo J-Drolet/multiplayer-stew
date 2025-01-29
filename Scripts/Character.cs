@@ -23,14 +23,20 @@ public partial class Character : Entity
 	{
 		get { return equippedWeapon; }
 		set {
-            if (EquippedWeapon != null)
+            if (equippedWeapon != null)
             {
-                EquippedWeapon.QueueFree();
+                equippedWeapon.QueueFree();
             }
             equippedWeapon = value;
 			equippedWeapon.Name = Name.ToString() + ":EquippedWeapon";
 			equippedWeapon.SetMultiplayerAuthority(Name.ToString().ToInt());
             Hand.AddChild(EquippedWeapon);
+
+			// toggle ammo count display of local player
+			if(IsMultiplayerAuthority())
+			{
+				UI.InGameUI.AmmoCount.Visible = equippedWeapon != null;
+			}
         }	
 	}
 
