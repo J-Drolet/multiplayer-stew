@@ -28,7 +28,7 @@ public partial class Lobby : Control
         // init list of levels
         foreach(string filepath in Root.GetLevelFilepaths()) 
 		{
-            LevelSelector.AddItem(filepath);
+            LevelSelector.AddItem(filepath.Split('/').Last().Split('.').First());
         }
     }
 
@@ -78,6 +78,6 @@ public partial class Lobby : Control
 
     public void OnStartPressed() 
     {
-        Client.Instance.StartGame(LevelSelector.GetItemText(LevelSelector.Selected));
+        Client.Instance.StartGame(Root.LevelsFilepath + LevelSelector.GetItemText(LevelSelector.Selected) + ".tscn");
     }
 }

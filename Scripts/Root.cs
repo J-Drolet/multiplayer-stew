@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 public partial class Root : Node
 {
-	public const string LevelsFilepath = "res://Scenes/Levels/";
+	public static readonly string LevelsFilepath = "res://Scenes/Levels/";
 
 	[Export, ExportRequired]
 	public PackedScene ClientScene { get; set; }
