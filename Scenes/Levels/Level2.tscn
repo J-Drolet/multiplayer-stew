@@ -1,8 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://btavi7m2jh606"]
+[gd_scene load_steps=16 format=3 uid="uid://btavi7m2jh606"]
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_tjnmx"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_m4m6e"]
-[ext_resource type="PackedScene" uid="uid://bqvjwundgypu5" path="res://Scenes/Levels/LevelAssets/(DELETE AFTER DEMO) arch.tscn" id="3_nlxkw"]
 [ext_resource type="PackedScene" uid="uid://x7a1ptqtwtmp" path="res://Scenes/Pickups/PistolPickup.tscn" id="4_7bjvl"]
 [ext_resource type="PackedScene" uid="uid://yqxo7dd0068w" path="res://Scenes/Levels/LevelAssets/sandbag.tscn" id="4_51ga2"]
 [ext_resource type="PackedScene" uid="uid://dxtx8tubrgl7h" path="res://Scenes/Levels/LevelAssets/arch2.tscn" id="4_xgihm"]
@@ -37,10 +36,6 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
 shape = SubResource("BoxShape3D_bbwtt")
-
-[node name="Arch (For Demo)" parent="." instance=ExtResource("3_nlxkw")]
-transform = Transform3D(-0.230935, 0.0097036, -0.858338, -0.130717, 0.74452, 0.0707792, 0.651193, 0.152893, -0.290188, -8.02797, 10.6676, 13.6131)
-visible = false
 
 [node name="Arch2" parent="." instance=ExtResource("4_xgihm")]
 transform = Transform3D(0.118342, 0, -0.901087, -0.256224, 0.871309, -0.0336507, 0.863891, 0.258424, 0.113457, -18.938, 16.3409, 0.477198)
