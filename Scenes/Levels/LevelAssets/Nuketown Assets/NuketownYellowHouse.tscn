@@ -1,4 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtl5ybo8pgt3b"]
+[gd_scene load_steps=3 format=3 uid="uid://dtl5ybo8pgt3b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8abki"]
+albedo_color = Color(0.909804, 0.843137, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rkoc8"]
 
@@ -9,6 +12,7 @@ use_collision = true
 transform = Transform3D(1.50542, 0, 0, 0, 1, 0, 0, 0, 1, 3.26685, 1.33447, -2.40088)
 use_collision = true
 size = Vector3(16.5337, 12.6689, 14.8018)
+material = SubResource("StandardMaterial3D_8abki")
 
 [node name="BulkInterior" type="CSGBox3D" parent="HouseBody"]
 transform = Transform3D(0.9582, 0, 0, 0, 0.9582, 0, 0, 0, 0.9582, -0.108379, -0.0431721, 0.106215)
