@@ -1,16 +1,17 @@
-[gd_scene load_steps=16 format=3 uid="uid://btavi7m2jh606"]
+[gd_scene load_steps=17 format=3 uid="uid://btavi7m2jh606"]
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_tjnmx"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_m4m6e"]
+[ext_resource type="PackedScene" uid="uid://cnjqtyat1tb0i" path="res://Scenes/Levels/LevelAssets/Level2Assets/lvl2water.tscn" id="4_3ia18"]
 [ext_resource type="PackedScene" uid="uid://x7a1ptqtwtmp" path="res://Scenes/Pickups/PistolPickup.tscn" id="4_7bjvl"]
-[ext_resource type="PackedScene" uid="uid://yqxo7dd0068w" path="res://Scenes/Levels/LevelAssets/sandbag.tscn" id="4_51ga2"]
-[ext_resource type="PackedScene" uid="uid://dxtx8tubrgl7h" path="res://Scenes/Levels/LevelAssets/arch2.tscn" id="4_xgihm"]
+[ext_resource type="PackedScene" uid="uid://yqxo7dd0068w" path="res://Scenes/Levels/LevelAssets/Level2Assets/sandbag.tscn" id="4_51ga2"]
+[ext_resource type="PackedScene" uid="uid://dxtx8tubrgl7h" path="res://Scenes/Levels/LevelAssets/Level2Assets/arch2.tscn" id="4_xgihm"]
 [ext_resource type="PackedScene" uid="uid://b0ywmvox13rx1" path="res://Scenes/Pickups/ShotgunPickup.tscn" id="5_2onvt"]
-[ext_resource type="PackedScene" uid="uid://bdu7h1l1jg443" path="res://Scenes/Levels/LevelAssets/concretepipe.tscn" id="5_xq3c0"]
+[ext_resource type="PackedScene" uid="uid://bdu7h1l1jg443" path="res://Scenes/Levels/LevelAssets/Level2Assets/concretepipe.tscn" id="5_xq3c0"]
 [ext_resource type="PackedScene" uid="uid://dpd0cvtbs8iuo" path="res://Scenes/Target.tscn" id="6_dsuo7"]
-[ext_resource type="PackedScene" uid="uid://d1glk6osihae1" path="res://Scenes/Levels/LevelAssets/fuelstorage.tscn" id="6_w1hny"]
+[ext_resource type="PackedScene" uid="uid://d1glk6osihae1" path="res://Scenes/Levels/LevelAssets/Level2Assets/fuelstorage.tscn" id="6_w1hny"]
 [ext_resource type="PackedScene" uid="uid://k3u720y471ax" path="res://Scenes/Pickups/Mac10Pickup.tscn" id="7_6s4tg"]
-[ext_resource type="PackedScene" uid="uid://eb3bvjl3kk7c" path="res://Scenes/Levels/LevelAssets/csgtestasset.tscn" id="7_x8i23"]
+[ext_resource type="PackedScene" uid="uid://eb3bvjl3kk7c" path="res://Scenes/Levels/LevelAssets/Level2Assets/csgtestasset.tscn" id="7_x8i23"]
 [ext_resource type="PackedScene" uid="uid://1fdlt6hucwhx" path="res://Scenes/Pickups/BoltyPickup.tscn" id="8_886jj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4e45f"]
@@ -38,7 +39,10 @@ skeleton = NodePath("")
 shape = SubResource("BoxShape3D_bbwtt")
 
 [node name="Arch2" parent="." instance=ExtResource("4_xgihm")]
-transform = Transform3D(0.118342, 0, -0.901087, -0.256224, 0.871309, -0.0336507, 0.863891, 0.258424, 0.113457, -18.938, 16.3409, 0.477198)
+transform = Transform3D(0.118342, 0, -0.901087, -0.256224, 0.871309, -0.0336507, 0.863891, 0.258424, 0.113457, 15.5198, -1.25745, 0.477198)
+
+[node name="lvl2Water" parent="." instance=ExtResource("4_3ia18")]
+transform = Transform3D(58.3194, 0, 0, 0, 12.8144, 0, 0, 0, 59.9395, 0.0065124, -24.7906, -0.437842)
 
 [node name="Sandbag" parent="." instance=ExtResource("4_51ga2")]
 transform = Transform3D(0.148448, 0, -0.504383, 0, 0.525775, 0, 0.504383, 0, 0.148448, -11.7427, 0.510523, -7.59638)
@@ -50,7 +54,7 @@ transform = Transform3D(0.148448, 0, -0.504383, 0, 0.525775, 0, 0.504383, 0, 0.1
 transform = Transform3D(0.148448, 0, -0.504383, 0, 0.525775, 0, 0.504383, 0, 0.148448, -4.84246, 0.510523, -4.21123)
 
 [node name="ConcretePipe" parent="." instance=ExtResource("5_xq3c0")]
-transform = Transform3D(0.538879, 0, -0.904049, 0, 1.05247, 0, 0.904049, 0, 0.538879, -38.8701, 1.71826, 11.4218)
+transform = Transform3D(0.538879, 0, -0.904049, 0, 1.05247, 0, 0.904049, 0, 0.538879, -11.5843, 1.71826, 11.4218)
 
 [node name="FuelStorage" parent="." instance=ExtResource("6_w1hny")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.5524, 2.68449, -20.0438)
