@@ -35,7 +35,7 @@ namespace multiplayerstew.Scripts.Base
         public override void _EnterTree()
         {
             projectileOwner = Name.ToString().Split('#').First().ToInt();
-            Visible = false;
+            //Visible = false;
         }
 
         public override void _Ready()

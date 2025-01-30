@@ -30,8 +30,8 @@ public partial class Character : Entity
             }
             equippedWeapon = value;
 			equippedWeapon.Name = GetMultiplayerAuthority().ToString() + ":EquippedWeapon";
-			equippedWeapon.SetMultiplayerAuthority((int)GetMultiplayerAuthority());
-            Hand.AddChild(EquippedWeapon);
+			equippedWeapon.SetMultiplayerAuthority(GetMultiplayerAuthority());
+            Hand.AddChild(equippedWeapon);
 
 			// toggle ammo count display of local player
 			if(IsMultiplayerAuthority())
