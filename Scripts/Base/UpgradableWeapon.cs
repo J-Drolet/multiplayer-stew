@@ -58,7 +58,7 @@ namespace multiplayerstew.Scripts.Base
 				{
 					UpgradeableProjectile projectileInstance = Projectile.Instantiate() as UpgradeableProjectile;
 					projectileInstance.Name = GetMultiplayerAuthority().ToString() +"#";
-					projectileInstance.GlobalTransform = GameManager.Players[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalTransform;
+					//projectileInstance.GlobalTransform = GameManager.Players[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalTransform;
 					GameManager.Players[GetMultiplayerAuthority()].projectileParent.AddChild(projectileInstance, true);
 				}
 			}

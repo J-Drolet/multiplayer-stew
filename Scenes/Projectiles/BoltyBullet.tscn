@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://diqolrhp5s6sw"]
+[gd_scene load_steps=5 format=3 uid="uid://diqolrhp5s6sw"]
 
 [ext_resource type="Script" path="res://Scripts/Base/UpgradeableProjectile.cs" id="1_ot4mb"]
 
@@ -7,20 +7,37 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_hmntw"]
 radius = 0.137246
 
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_m7mpy"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath(".:visible")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+
 [node name="BoltyBullet" type="Node3D" node_paths=PackedStringArray("Hitbox")]
-transform = Transform3D(2.31578, 0, 0, 0, 0.748114, 0, 0, 0, 0.702631, 0, 0, 0)
 script = ExtResource("1_ot4mb")
 InitialVelocity = 50.0
 Damage = 25.0
-Hitbox = NodePath("Area3D")
+Hitbox = NodePath("Scale parent/Area3D")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Scale parent" type="Node3D" parent="."]
+transform = Transform3D(-2.71448e-08, 0, 0.188, 0, 0.201, 0, -0.621, 0, -8.21774e-09, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Scale parent"]
 transform = Transform3D(0.267544, 0, 0, 0, 0.267544, 0, 0, 0, 0.267544, 0, 0, 0)
 mesh = SubResource("SphereMesh_2wu11")
+skeleton = NodePath("../..")
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Area3D" type="Area3D" parent="Scale parent"]
 collision_layer = 8
 collision_mask = 20
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scale parent/Area3D"]
 shape = SubResource("SphereShape3D_hmntw")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_m7mpy")

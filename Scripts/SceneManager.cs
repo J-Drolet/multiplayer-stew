@@ -66,6 +66,8 @@ public partial class SceneManager : Node
 
 	public void RespawnPlayer(long peerId)
 	{
+		GD.Print("SceneManager.RespawnPlayer - Spawning peer: " + peerId);
+		
 		Character oldCharacter = GameManager.Players[peerId].characterNode;
 		if(oldCharacter != null)
 		{
@@ -93,7 +95,6 @@ public partial class SceneManager : Node
 				if(GameManager.Players[id].characterNode != null) {
 					if(GameManager.Players[id].characterNode.CurrentHealth == 0)
 					{
-						GD.Print("Respawning " + id);
 						RespawnPlayer(id);
 					}
 				}

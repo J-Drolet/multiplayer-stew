@@ -30,26 +30,27 @@ namespace multiplayerstew.Scripts.Base
         private float TimeAlive;
         private int HitsLeft;
 
+        private int projectileOwner;
+
         public override void _EnterTree()
         {
-            SetMultiplayerAuthority(Name.ToString().Split('#').First().ToInt());
+            projectileOwner = Name.ToString().Split('#').First().ToInt();
+            Visible = false;
         }
 
         public override void _Ready()
         {
             GodotErrorService.ValidateRequiredData(this);
-
-            // server will be handling hit detection
-            if(Multiplayer.IsServer())
-            {
-                Hitbox.AreaEntered += OnAreaEntered;
-            }
-
             if (!IsMultiplayerAuthority()) return;
+
+            Hitbox.AreaEntered += OnAreaEntered;
+
+            GlobalTransform = GameManager.Players[projectileOwner].characterNode.ProjectileOrigin.GlobalTransform;
+            Visible = true; // make bullet invisible until it is moved to the right spot
 
             Vector3 directionVector = -GlobalTransform.Basis.Z;
 
-            Random rand = new Random();
+            Random rand = new();
             directionVector = directionVector.Rotated(Transform.Basis.X, ((float)rand.NextDouble() * ShotSpread*2) + (-ShotSpread));
             directionVector = directionVector.Rotated(Transform.Basis.Y, ((float)rand.NextDouble() * ShotSpread*2) + (-ShotSpread));
 
@@ -83,7 +84,7 @@ namespace multiplayerstew.Scripts.Base
             TimeAlive += (float)delta;
             if (TimeAlive > Lifespan)
             {
-                QueueFree();
+                DisableSelf();
             }
         }
 
@@ -106,8 +107,9 @@ namespace multiplayerstew.Scripts.Base
         /// </summary>                        
         private void DisableSelf()
         {
-            RpcId(GetMultiplayerAuthority(), MethodName.NotifyOfDestruction);
+            RpcId(projectileOwner, MethodName.NotifyOfDestruction);
             Hitbox.SetDeferred("monitoring", false); // makes projectile no longer cause damage
+            SetMultiplayerAuthority(projectileOwner); // stops server from syncing position - stops errors from desync between time that projectileOwner queueFree and the server gets the message
         }
 
         [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
