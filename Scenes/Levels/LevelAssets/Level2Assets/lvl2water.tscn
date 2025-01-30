@@ -102,6 +102,7 @@ seamless = true
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_8mp73"]
 noise_type = 0
+fractal_type = 2
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_t0ull"]
 seamless = true

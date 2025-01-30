@@ -43,13 +43,10 @@ sky = SubResource("Sky_oyo2i")
 sky_rotation = Vector3(0, 2.71748, 0)
 ambient_light_color = Color(0.744937, 0.66531, 0.67126, 1)
 ambient_light_sky_contribution = 0.0
-ssil_enabled = true
 ssil_radius = 3.4
 ssil_sharpness = 0.49
-sdfgi_enabled = true
 sdfgi_use_occlusion = true
 sdfgi_bounce_feedback = 0.0
-volumetric_fog_enabled = true
 volumetric_fog_density = 0.019
 volumetric_fog_albedo = Color(0.905336, 0.956918, 0.988617, 1)
 volumetric_fog_gi_inject = 0.49
@@ -115,7 +112,7 @@ transform = Transform3D(0.148448, 0, -0.504383, 0, 0.525775, 0, 0.504383, 0, 0.1
 transform = Transform3D(0.148448, 0, -0.504383, 0, 0.525775, 0, 0.504383, 0, 0.148448, -4.84246, 0.510523, -4.21123)
 
 [node name="ConcretePipe" parent="." instance=ExtResource("5_xq3c0")]
-transform = Transform3D(0.538879, 0, -0.904049, 0, 1.05247, 0, 0.904049, 0, 0.538879, -11.5843, 1.71826, 11.4218)
+transform = Transform3D(2.60009, 0, -4.36203, 0, 5.07816, 0, 4.36203, 0, 2.60009, -11.5843, 1.71826, 11.4218)
 
 [node name="FuelStorage" parent="." instance=ExtResource("6_w1hny")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.5524, 2.68449, -20.0438)
