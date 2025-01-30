@@ -20,11 +20,19 @@ namespace multiplayerstew.Scripts.Base
 
         public void Init()
         {
-            SetCurrentHealth(MaxHealth);
 
-            foreach (DamageArea hitbox in Hitboxes)
+            if(IsMultiplayerAuthority())
             {
-                hitbox.AreaHit += (UpgradeableProjectile projectile) => HitboxHit(projectile, hitbox);
+                CurrentHealth = MaxHealth;
+            }
+
+            if(Multiplayer.IsServer())
+            {
+                // Only server should listen for hits so signals are only hooked up on server
+                foreach (DamageArea hitbox in Hitboxes)
+                {
+                    hitbox.AreaHit += (UpgradeableProjectile projectile) => HitboxHit(projectile, hitbox);
+                }
             }
         }
 
@@ -34,29 +42,27 @@ namespace multiplayerstew.Scripts.Base
             Init();
         }
 
+        public override void _Process(double delta)
+        {
+            if (HealthText != null)
+            {
+                HealthText.Text = CurrentHealth <= 0.0f ? "Dead" : "Health: " + CurrentHealth.ToString();
+            }
+        }
+
         private void HitboxHit(UpgradeableProjectile projectile, DamageArea hitbox)
         {
             // layer 5 = vital hitbox
             float damage = hitbox.GetCollisionLayerValue(5) ? projectile.Damage * projectile.VitalMultiplier : projectile.Damage;
-            Rpc(MethodName.SetCurrentHealth, Math.Clamp(CurrentHealth - damage, 0.0f, MaxHealth));
-            projectile.MaxHits--;
-
-            // Disable projectile from hitting other hitboxes before getting deleted by peer owner
-            if(projectile.MaxHits <= 0)
-            {
-                projectile.QueueFree();
-            }
+            RpcId(GetMultiplayerAuthority(), MethodName.SetCurrentHealth, Math.Clamp(CurrentHealth - damage, 0.0f, MaxHealth));
         }
 
         [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
         public void SetCurrentHealth(float health)
         {
-            CurrentHealth = health;
+            if(Multiplayer.GetRemoteSenderId() != 1) return; // only server should broadcast health values
 
-            if (HealthText != null)
-            {
-                HealthText.Text = CurrentHealth <= 0.0f ? "Dead" : "Health: " + CurrentHealth.ToString();
-            }
+            CurrentHealth = health;
         }
     }
 }

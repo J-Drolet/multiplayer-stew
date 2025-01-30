@@ -3,6 +3,7 @@ using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Base;
 using multiplayerstew.Scripts.Services;
 using System;
+using System.Linq;
 
 public partial class Character : Entity
 {
@@ -28,8 +29,8 @@ public partial class Character : Entity
                 equippedWeapon.QueueFree();
             }
             equippedWeapon = value;
-			equippedWeapon.Name = Name.ToString() + ":EquippedWeapon";
-			equippedWeapon.SetMultiplayerAuthority(Name.ToString().ToInt());
+			equippedWeapon.Name = GetMultiplayerAuthority().ToString() + ":EquippedWeapon";
+			equippedWeapon.SetMultiplayerAuthority((int)GetMultiplayerAuthority());
             Hand.AddChild(EquippedWeapon);
 
 			// toggle ammo count display of local player
@@ -45,20 +46,15 @@ public partial class Character : Entity
 
 	public override void _EnterTree()
 	{
-		SetMultiplayerAuthority(Name.ToString().ToInt());
+		CurrentHealth = MaxHealth; // we have to do this here or else infinite spawns will happen on server side
+		SetMultiplayerAuthority(Name.ToString().Split("#").First().ToInt());
+		GameManager.Players[GetMultiplayerAuthority()].characterNode = this;
+		
+		if(IsMultiplayerAuthority()) // local client requests its spawn point from server
+		{
+			SceneManager.Instance.RpcId(1, SceneManager.MethodName.RequestSpawnPoint);
+		}
 	}
-
-    public override void _Ready()
-    {
-		GodotErrorService.ValidateRequiredData(this);
-
-		Init();
-
-		if(!IsMultiplayerAuthority()) return;
-
-		Input.MouseMode = Input.MouseModeEnum.Captured;
-		Camera.MakeCurrent();
-    }
 
     public override void _UnhandledInput(InputEvent @event)
     {
@@ -87,11 +83,15 @@ public partial class Character : Entity
 				
             }
 		}
-			
     }
 
     public override void _Process(double delta)
     {
+		if (HealthText != null)
+		{
+			HealthText.Text = CurrentHealth <= 0.0f ? "Dead" : "Health: " + CurrentHealth.ToString();
+		}
+
 		if(!IsMultiplayerAuthority()) return;
 
 		if (EquippedWeapon != null)
@@ -145,5 +145,22 @@ public partial class Character : Entity
 
 		Velocity = velocity;
 		MoveAndSlide();
+	}
+
+	/// <summary>
+	/// Moves the character to a spawn position. It is setup this way because local player has authority over its position, but server also needs to set an initial position
+	/// </summary>
+	/// <param name="spawnPosition"></param>
+	/// <param name="spawnRotation"></param>
+	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+	public void SetSpawnPoint(Vector3 spawnPosition, Vector3 spawnRotation)
+	{
+		if(Multiplayer.GetRemoteSenderId() != 1) return; // only server should broadcast spawn positons
+
+		GlobalPosition = spawnPosition;
+		GlobalRotation = spawnRotation;
+
+		Visible = true; // once spawned make visible
+		Camera.MakeCurrent(); // dont want to see a split second before spawn is set
 	}
 }

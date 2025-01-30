@@ -10,71 +10,77 @@ public partial class SceneManager : Node
 	[Export, ExportRequired]
 	public PackedScene PlayerScene { get; set; }
 
+	[Export]
+	public bool ChangingSpawns { get; set; } = true;
+
+	private Random RNG = new();
+
 	public List<Node3D> SpawnPoints;
+
+	private Node3D PlayerContainer;
+
+	public static SceneManager Instance;
 
 	public override void _Ready() 
 	{   
 		GodotErrorService.ValidateRequiredData(this);
-
-		if(!Multiplayer.IsServer()) {
-			UI.InGameUI.Show();
-		}
+		Instance = this;
 
 		SpawnPoints = GetTree().GetNodesInGroup("PlayerSpawnPoint").Select(s => s as Node3D).ToList();
 
-		// spawning characters on spawn points (ran on every peer)
-		List<long> players = GameManager.Players.Keys.OrderBy(p => p).ToList();
-
-		for (int i = 0; i < players.Count; i++)
+		foreach(long key in GameManager.Players.Keys)
 		{   
-			if(players[i] == 1) {
-				continue; // skip the server
-			}
-			GameManager.PlayerInfo playerInfo = GameManager.Players[players[i]];
-
-			Character currentPlayer = (Character) PlayerScene.Instantiate();
-			currentPlayer.Name = players[i].ToString();
-			AddChild(currentPlayer);
-			Node3D projectileParent = new Node3D();
-			MultiplayerSpawner projectileSpawner = new MultiplayerSpawner();
-			projectileSpawner.Name = "SPAWNER";
-
-			AddChild(projectileParent);
-			projectileParent.AddChild(projectileSpawner);
-			projectileParent.SetMultiplayerAuthority((int)players[i]);
-			projectileParent.Name = "PP" + players[i];
-
-			projectileSpawner.SpawnPath = projectileParent.GetPath();
-			playerInfo.characterNode = currentPlayer;
-			playerInfo.projectileSpawner = projectileSpawner;
-			playerInfo.projectileParent = projectileParent;
-			GameManager.Players[players[i]] = playerInfo;
-
-			if(SpawnPoints != null && SpawnPoints.Count > i)
+			if(Multiplayer.IsServer()) // only server needs to handle respawns
 			{
-				currentPlayer.GlobalPosition = SpawnPoints[i].GlobalPosition;
+				RespawnPlayer(key);
 			}
+
+			SetupPlayerStructure(key); // everyone needs to have this structure to sync projectiles
+		}
+
+		
+		if(!Multiplayer.IsServer()) 
+		{
+			UI.InGameUI.Show();
+			Input.MouseMode = Input.MouseModeEnum.Captured;
 		}
 	}
 
+	public void SetupPlayerStructure(long peerId)
+	{
+		Node3D projectileParent = new();
+		MultiplayerSpawner projectileSpawner = new();
+		projectileSpawner.Name = "SPAWNER";
 
-	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+		AddChild(projectileParent);
+		projectileParent.AddChild(projectileSpawner);
+		projectileParent.SetMultiplayerAuthority((int)peerId);
+		projectileParent.Name = "PP" + peerId;
+
+		projectileSpawner.SpawnPath = projectileParent.GetPath();
+		GameManager.Players[peerId].projectileSpawner = projectileSpawner;
+		GameManager.Players[peerId].projectileParent = projectileParent;
+	}
+
+
+
 	public void RespawnPlayer(long peerId)
 	{
-		GameManager.Players[peerId].characterNode.QueueFree();
-		GameManager.Players[peerId].characterNode.Name = "QUEUED FOR DESTRUCTION"; // so we dont overlap the id name
-
-		Character currentPlayer = (Character) PlayerScene.Instantiate();
-		currentPlayer.Name = peerId.ToString();
-		AddChild(currentPlayer);
-
-		var random = new Random();
-		if(Multiplayer.GetUniqueId() == peerId)
+		Character oldCharacter = GameManager.Players[peerId].characterNode;
+		if(oldCharacter != null)
 		{
-			currentPlayer.GlobalPosition = SpawnPoints[random.Next(SpawnPoints.Count)].GlobalPosition;
+			oldCharacter.QueueFree();
 		}
 
-		GameManager.Players[peerId].characterNode = currentPlayer;
+		Character newPlayer = (Character) PlayerScene.Instantiate();
+		newPlayer.Name = $"{peerId.ToString()}#{++GameManager.Players[peerId].spawnNumber}";
+		Root.Instance.AddChild(newPlayer, true);
+
+		if(ChangingSpawns || GameManager.Players[peerId].spawnPoint == null) // give option to have ever moving spawns or static spawns
+		{
+			Node3D spawnPoint = SpawnPoints[RNG.Next(SpawnPoints.Count)];
+			GameManager.Players[peerId].spawnPoint = spawnPoint;
+		}
 	}
 
     public override void _Process(double delta)
@@ -83,13 +89,22 @@ public partial class SceneManager : Node
 		{
 			foreach(long id in GameManager.Players.Keys)
 			{
-				if(GameManager.Players[id].characterNode.CurrentHealth == 0)
-				{
-					Rpc(MethodName.RespawnPlayer, id);
+				//GD.Print("Examining player " + id);
+				if(GameManager.Players[id].characterNode != null) {
+					if(GameManager.Players[id].characterNode.CurrentHealth == 0)
+					{
+						GD.Print("Respawning " + id);
+						RespawnPlayer(id);
+					}
 				}
 			}
 		}
     }
 
-
+	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+	public void RequestSpawnPoint()
+	{
+		long peerId = Multiplayer.GetRemoteSenderId();
+		GameManager.Players[peerId].characterNode.RpcId(peerId, Character.MethodName.SetSpawnPoint, GameManager.Players[peerId].spawnPoint.GlobalPosition, GameManager.Players[peerId].spawnPoint.GlobalRotation);
+	}
 }

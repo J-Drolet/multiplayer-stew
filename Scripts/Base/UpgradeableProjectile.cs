@@ -39,9 +39,13 @@ namespace multiplayerstew.Scripts.Base
         {
             GodotErrorService.ValidateRequiredData(this);
 
-            if (!IsMultiplayerAuthority()) return;
+            // server will be handling hit detection
+            if(Multiplayer.IsServer())
+            {
+                Hitbox.AreaEntered += OnAreaEntered;
+            }
 
-            Hitbox.AreaEntered += OnAreaEntered;
+            if (!IsMultiplayerAuthority()) return;
 
             Vector3 directionVector = -GlobalTransform.Basis.Z;
 
@@ -52,18 +56,25 @@ namespace multiplayerstew.Scripts.Base
             Velocity = directionVector * InitialVelocity;
         }
 
+        /// <summary>
+        /// When Projectile hits something - This is only run on the server (Server handles hit detection)
+        /// </summary>
+        /// <param name="area"></param>
         private void OnAreaEntered(Area3D area)
         {
-            if(!IsMultiplayerAuthority()) return;
-
-
-            if(area is DamageArea) 
+            if(MaxHits > 0 && area is DamageArea) // we do a max hit check here so server stops hitting even before authority queue frees the projectile
             {
                 DamageArea damageArea = area as DamageArea;
                 damageArea.HitDamageArea(this);
             }
+            
+            MaxHits--;
+            
+            if(MaxHits <= 0)
+            {
+                DisableSelf();
+            }
         }
-
 
         public override void _Process(double delta)
         {
@@ -90,5 +101,22 @@ namespace multiplayerstew.Scripts.Base
             }
         }
 
+        /// <summary>
+        /// Way for the server to kill a projectile without having authority.
+        /// </summary>                        
+        private void DisableSelf()
+        {
+            RpcId(GetMultiplayerAuthority(), MethodName.NotifyOfDestruction);
+            Hitbox.SetDeferred("monitoring", false); // makes projectile no longer cause damage
+        }
+
+        [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+        public void NotifyOfDestruction()
+        {
+            if(Multiplayer.GetRemoteSenderId() == 1) // only server should send this
+            {
+                QueueFree();
+            }
+        }
     }
 }
