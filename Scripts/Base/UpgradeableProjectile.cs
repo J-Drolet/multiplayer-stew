@@ -35,7 +35,6 @@ namespace multiplayerstew.Scripts.Base
         public override void _EnterTree()
         {
             projectileOwner = Name.ToString().Split('#').First().ToInt();
-            //Visible = false;
         }
 
         public override void _Ready()
@@ -46,7 +45,6 @@ namespace multiplayerstew.Scripts.Base
             Hitbox.AreaEntered += OnAreaEntered;
 
             GlobalTransform = GameManager.Players[projectileOwner].characterNode.ProjectileOrigin.GlobalTransform;
-            Visible = true; // make bullet invisible until it is moved to the right spot
 
             Vector3 directionVector = -GlobalTransform.Basis.Z;
 
