@@ -50,7 +50,7 @@ void vertex() {
 
 	// UV1 Triplanar: Enabled
 	uv1_power_normal = pow(abs(NORMAL), vec3(uv1_blend_sharpness));
-	uv1_triplanar_pos = VERTEX * uv1_scale + uv1_offset + TIME*.01;
+	uv1_triplanar_pos = VERTEX * uv1_scale + uv1_offset + TIME*.005;
 	uv1_power_normal /= dot(uv1_power_normal, vec3(1.0));
 	uv1_triplanar_pos *= vec3(1.0, -1.0, 1.0);
 }
@@ -119,7 +119,7 @@ noise = SubResource("FastNoiseLite_0qsrp")
 [resource]
 render_priority = 0
 shader = SubResource("Shader_xo4ho")
-shader_parameter/albedo = Color(0.257163, 0.702766, 0.898098, 0.0627451)
+shader_parameter/albedo = Color(0.258824, 0.701961, 0.898039, 0.0313726)
 shader_parameter/point_size = 1.0
 shader_parameter/roughness = 0.0
 shader_parameter/metallic_texture_channel = null
