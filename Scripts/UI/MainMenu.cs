@@ -11,6 +11,9 @@ public partial class MainMenu : Control
     [Export, ExportRequired]
     public Control LobbyPage { get; set; }
 
+    [Export, ExportRequired]
+    public AudioStreamPlayer MainMenuMusic { get; set; }
+
 
     public override void _Ready()
     {
@@ -18,7 +21,21 @@ public partial class MainMenu : Control
         GodotErrorService.ValidateRequiredData(this);
     }
 
-    public void CloseAllWindows() {
+    public void OpenMainMenu()
+    {
+        CloseAllWindows();
+        MainMenuMusic.Play();
+        Show();
+    }
+
+    public void CloseMainMenu()
+    {
+        CloseAllWindows();
+        MainMenuMusic.Stop();
+        Hide();
+    }
+
+    private void CloseAllWindows() {
         JoinInformation.Hide();
         LobbyPage.Hide();
         //Settings.Hide();

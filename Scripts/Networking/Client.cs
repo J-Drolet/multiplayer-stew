@@ -141,8 +141,7 @@ public partial class Client : Node
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyStartGame(string filepath)
     {
-        UI.MainMenu.CloseAllWindows();
-        UI.MainMenu.Hide();
+        UI.MainMenu.CloseMainMenu();
     }
 
     [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]

@@ -39,8 +39,7 @@ public static class GameManager
             CurrentLevel = null;
         }
 
-        UI.MainMenu.CloseAllWindows();
-        UI.MainMenu.Show();
+        UI.MainMenu.OpenMainMenu();
         UI.PauseMenu.Hide();
         UI.InGameUI.Hide();
         Input.MouseMode = Input.MouseModeEnum.Visible;
