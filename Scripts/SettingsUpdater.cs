@@ -7,7 +7,7 @@ public partial class SettingsUpdater: Node
     {
         Config.Instance.ConfigChanged += SettingsUpdated;
 
-        SettingsUpdated("settings", "display_mode", Config.GetValue("settings", "display_mode"));
+        Config.EmitInitialSettings();
     }
 
     private void SettingsUpdated(string section, string propertyKey, Variant propertyValue)

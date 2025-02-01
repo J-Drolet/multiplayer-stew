@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_tjnmx"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_m4m6e"]
-[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Level2Assets/waterparticles.tscn" id="3_2wa11"]
+[ext_resource type="PackedScene" uid="uid://da5tgs4f5e5a3" path="res://Scenes/Levels/LevelAssets/Level2Assets/waterparticles.tscn" id="3_2wa11"]
 [ext_resource type="PackedScene" uid="uid://cnjqtyat1tb0i" path="res://Scenes/Levels/LevelAssets/Level2Assets/lvl2water.tscn" id="4_3ia18"]
 [ext_resource type="PackedScene" uid="uid://x7a1ptqtwtmp" path="res://Scenes/Pickups/PistolPickup.tscn" id="4_7bjvl"]
 [ext_resource type="PackedScene" uid="uid://yqxo7dd0068w" path="res://Scenes/Levels/LevelAssets/Level2Assets/sandbag.tscn" id="4_51ga2"]

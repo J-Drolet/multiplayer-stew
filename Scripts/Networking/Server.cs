@@ -105,7 +105,7 @@ public partial class Server : Node
 
             PackedScene levelPackedScene = (PackedScene)ResourceLoader.Load(filepath);
             Node level = levelPackedScene.Instantiate();
-            Root.Instance.AddChild(level); // using Config.Instance just to access tree
+            Root.Instance.AddChild(level); // using Root.Instance just to access tree
             GameManager.CurrentLevel = level;
         }
     }

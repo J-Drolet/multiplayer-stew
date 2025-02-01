@@ -27,7 +27,17 @@ public partial class Config: Node
 
         UserSettings = new ConfigFile();
         UserSettings.Load(UserSettingsFilepath);
+    }
 
+    public static void EmitInitialSettings() 
+    {
+        foreach(string section in DefaultSettings.GetSections())
+        {
+            foreach(string propertyKey in DefaultSettings.GetSectionKeys(section))
+            {
+                Instance.EmitSignal("ConfigChanged", section, propertyKey, GetValue(section, propertyKey));
+            }
+        }
     }
 
     // Gets value from settings, reads from disk if it hasn't been read yet
