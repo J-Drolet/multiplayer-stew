@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://cohf65bso617l"]
+[gd_scene load_steps=16 format=3 uid="uid://cohf65bso617l"]
 
 [ext_resource type="Script" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_ekypa"]
 [ext_resource type="PackedScene" uid="uid://chv0b14sstem5" path="res://Scenes/Projectiles/ShotgunPellet.tscn" id="2_67p85"]
+[ext_resource type="AudioStream" uid="uid://cakk5eb7we1et" path="res://Assets/Sounds/SFX/Shotgun Single 003.wav" id="3_gxftm"]
 
 [sub_resource type="Animation" id="Animation_omih6"]
 resource_name = "Fire"
@@ -371,6 +372,7 @@ MaxAmmo = 2
 ProjectilePerShot = 24
 Projectile = ExtResource("2_67p85")
 APlayer = NodePath("AnimationPlayer")
+FiringSound = ExtResource("3_gxftm")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

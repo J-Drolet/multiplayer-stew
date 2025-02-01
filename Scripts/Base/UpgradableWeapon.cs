@@ -33,6 +33,9 @@ namespace multiplayerstew.Scripts.Base
 		[Export, ExportRequired, AnimationsRequired(new string[] { "Fire" })] 
 		public AnimationPlayer APlayer { get; set; }
 
+		[Export, ExportRequired]
+		public AudioStream FiringSound { get; set; }
+
 		private int CurrentAmmo { get; set; }
 		public List<Upgrade> Upgrades { get; set; } = new();
 
@@ -53,6 +56,7 @@ namespace multiplayerstew.Scripts.Base
 			if ((CurrentAmmo > 0 || MaxAmmo < 0) && CanFire) 
 			{
 				APlayer.Play("Fire");
+				Rpc(MethodName.PlaySound, "fire");
 				CurrentAmmo -= 1;
 				for (int x = ProjectilePerShot; x > 0; x--)
 				{
@@ -86,6 +90,34 @@ namespace multiplayerstew.Scripts.Base
 		public string GetCurrentAmmoText()
 		{
 			return $"{CurrentAmmo}/{MaxAmmo}";
+		}
+
+		/// <summary>
+		/// Spawns an AudioStreamPlayer3D to play a
+		/// </summary>
+		/// <param name="soundType"></param>
+		[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+		public void PlaySound(string soundType)
+		{
+			AudioStream audioStream;
+
+			switch (soundType)
+			{
+				case "fire":
+					audioStream = FiringSound;
+					break;
+				default:
+					audioStream = null;
+					break;
+			}
+
+			AudioStreamPlayer3D audioStreamPlayer = new();
+			audioStreamPlayer.Stream = audioStream;
+			audioStreamPlayer.GlobalTransform = GlobalTransform;
+			audioStreamPlayer.Bus = "SFX";
+			AddChild(audioStreamPlayer);
+			audioStreamPlayer.Play();
+			audioStreamPlayer.Finished += audioStreamPlayer.QueueFree;
 		}
 	}
 }

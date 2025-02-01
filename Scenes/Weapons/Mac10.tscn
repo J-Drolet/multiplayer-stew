@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://bfmxfalt2u42"]
+[gd_scene load_steps=17 format=3 uid="uid://bfmxfalt2u42"]
 
 [ext_resource type="Script" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_250w0"]
 [ext_resource type="PackedScene" uid="uid://de6ynjcj4qnom" path="res://Scenes/Projectiles/Submachine gun bullet.tscn" id="2_etlu4"]
+[ext_resource type="AudioStream" uid="uid://bdy1kw3ncpsnj" path="res://Assets/Sounds/SFX/Metalhead Gun Single 002.wav" id="3_e0hvt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tmury"]
 albedo_color = Color(0.314316, 0.314316, 0.314316, 1)
@@ -268,6 +269,7 @@ MaxAmmo = 30
 FireMode = 2
 Projectile = ExtResource("2_etlu4")
 APlayer = NodePath("AnimationPlayer")
+FiringSound = ExtResource("3_e0hvt")
 
 [node name="Handle" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.113337, 0, 0, 0, 0.0822317, 0, 0, 0, 0.22686, 0, 0.0590581, 0.0393912)

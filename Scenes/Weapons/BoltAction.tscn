@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://cl6ckcu4c5ymq"]
+[gd_scene load_steps=24 format=3 uid="uid://cl6ckcu4c5ymq"]
 
 [ext_resource type="Script" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_xk3ee"]
 [ext_resource type="PackedScene" uid="uid://diqolrhp5s6sw" path="res://Scenes/Projectiles/BoltyBullet.tscn" id="2_yn8j2"]
+[ext_resource type="AudioStream" uid="uid://cn3d74s58oki0" path="res://Assets/Sounds/SFX/Assault Rifle Single 003.wav" id="3_egmdl"]
 
 [sub_resource type="Animation" id="Animation_omih6"]
 resource_name = "Fire"
@@ -269,6 +270,7 @@ WeaponName = "M1 Garand"
 MaxAmmo = 8
 Projectile = ExtResource("2_yn8j2")
 APlayer = NodePath("AnimationPlayer")
+FiringSound = ExtResource("3_egmdl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

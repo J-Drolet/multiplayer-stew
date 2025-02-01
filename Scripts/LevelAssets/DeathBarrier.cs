@@ -1,5 +1,6 @@
 using Godot;
 using multiplayerstew.Scripts.Attributes;
+using multiplayerstew.Scripts.Services;
 using System;
 
 public partial class DeathBarrier : Node
@@ -9,6 +10,8 @@ public partial class DeathBarrier : Node
 
     public override void _Ready()
     {   
+        GodotErrorService.ValidateRequiredData(this);
+
         // server handles killing players
         if(Multiplayer.IsServer())
         {
