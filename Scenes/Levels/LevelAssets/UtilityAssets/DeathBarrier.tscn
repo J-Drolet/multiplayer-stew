@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://6jntjlknvgow"]
+
+[ext_resource type="Script" path="res://Scripts/LevelAssets/DeathBarrier.cs" id="1_ge2k3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hic5i"]
+
+[node name="DeathBarrier" type="Node3D" node_paths=PackedStringArray("Area")]
+script = ExtResource("1_ge2k3")
+Area = NodePath("Area3D")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_hic5i")
