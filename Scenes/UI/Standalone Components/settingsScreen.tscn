@@ -374,10 +374,10 @@ layout_mode = 2
 theme = ExtResource("2_oyqlb")
 text = "Save"
 
-[node name="ResetDefaultsButton" type="Button" parent="Footer/HBoxContainer"]
+[node name="RestoreDefaultsButton" type="Button" parent="Footer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_oyqlb")
-text = "Reset Defaults"
+text = "Restore Defaults"
 
 [connection signal="visibility_changed" from="." to="." method="OnVisibilityChanged"]
 [connection signal="pressed" from="Header/TabSelectors/BackButton" to="." method="OnBackButtonPressed"]
@@ -386,4 +386,4 @@ text = "Reset Defaults"
 [connection signal="pressed" from="Header/TabSelectors/VideoTabButton" to="." method="OnVideoButtonPressed"]
 [connection signal="pressed" from="Header/TabSelectors/AudioTabButton" to="." method="OnAudioButtonPressed"]
 [connection signal="pressed" from="Footer/HBoxContainer/SaveButton" to="." method="OnSaveButtonPressed"]
-[connection signal="pressed" from="Footer/HBoxContainer/ResetDefaultsButton" to="." method="OnRestoreDefaultsButtonPressed"]
+[connection signal="pressed" from="Footer/HBoxContainer/RestoreDefaultsButton" to="." method="OnRestoreDefaultsButtonPressed"]
