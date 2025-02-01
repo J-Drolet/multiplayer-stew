@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://b5mmiucg5lvya"]
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://bpffbbwv6cnan"]
 
 [sub_resource type="Shader" id="Shader_xo4ho"]
 code = "// NOTE: Shader automatically converted from Godot Engine 4.3.stable.mono's StandardMaterial3D.

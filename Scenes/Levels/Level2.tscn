@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_tjnmx"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_m4m6e"]
-[ext_resource type="PackedScene" uid="uid://da5tgs4f5e5a3" path="res://Scenes/Levels/LevelAssets/Level2Assets/waterparticles.tscn" id="3_2wa11"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Level2Assets/waterparticles.tscn" id="3_2wa11"]
 [ext_resource type="PackedScene" uid="uid://cnjqtyat1tb0i" path="res://Scenes/Levels/LevelAssets/Level2Assets/lvl2water.tscn" id="4_3ia18"]
 [ext_resource type="PackedScene" uid="uid://x7a1ptqtwtmp" path="res://Scenes/Pickups/PistolPickup.tscn" id="4_7bjvl"]
 [ext_resource type="PackedScene" uid="uid://yqxo7dd0068w" path="res://Scenes/Levels/LevelAssets/Level2Assets/sandbag.tscn" id="4_51ga2"]
@@ -109,7 +109,7 @@ shape = SubResource("BoxShape3D_bbwtt")
 transform = Transform3D(0.118342, 0, -0.901087, -0.256224, 0.871309, -0.0336507, 0.863891, 0.258424, 0.113457, 15.5198, -1.25745, 0.477198)
 
 [node name="Water" parent="." instance=ExtResource("4_3ia18")]
-transform = Transform3D(66.9556, 0, 0, 0, 11.5234, 0, 0, 0, 66.9556, 22, -11.17, -7.489)
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 1.51651, -0.426911, -1.62979)
 
 [node name="Sandbag" parent="." instance=ExtResource("4_51ga2")]
 transform = Transform3D(0.148448, 0, -0.504383, 0, 0.525775, 0, 0.504383, 0, 0.148448, -11.7427, 0.510523, -7.59638)
