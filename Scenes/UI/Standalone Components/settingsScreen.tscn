@@ -118,6 +118,7 @@ script = ExtResource("3_7u800")
 Input = NodePath("LineEdit")
 SettingSection = "settings"
 SettingName = "player_name"
+ResettableToDefault = false
 
 [node name="Label" type="Label" parent="Tabs/GameTab/VBoxContainer/Ingame Name"]
 custom_minimum_size = Vector2(200, 0)
@@ -359,21 +360,24 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_oyqlb")
 
-[node name="SaveButton" type="Button" parent="Footer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Footer"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -34.0
-offset_top = -20.0
-offset_right = 34.0
-offset_bottom = 20.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+alignment = 1
+
+[node name="SaveButton" type="Button" parent="Footer/HBoxContainer"]
+layout_mode = 2
 theme = ExtResource("2_oyqlb")
 text = "Save"
+
+[node name="ResetDefaultsButton" type="Button" parent="Footer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_oyqlb")
+text = "Reset Defaults"
 
 [connection signal="visibility_changed" from="." to="." method="OnVisibilityChanged"]
 [connection signal="pressed" from="Header/TabSelectors/BackButton" to="." method="OnBackButtonPressed"]
@@ -381,4 +385,5 @@ text = "Save"
 [connection signal="pressed" from="Header/TabSelectors/ControlTabButton" to="." method="OnControlButtonPressed"]
 [connection signal="pressed" from="Header/TabSelectors/VideoTabButton" to="." method="OnVideoButtonPressed"]
 [connection signal="pressed" from="Header/TabSelectors/AudioTabButton" to="." method="OnAudioButtonPressed"]
-[connection signal="pressed" from="Footer/SaveButton" to="." method="OnSaveButtonPressed"]
+[connection signal="pressed" from="Footer/HBoxContainer/SaveButton" to="." method="OnSaveButtonPressed"]
+[connection signal="pressed" from="Footer/HBoxContainer/ResetDefaultsButton" to="." method="OnRestoreDefaultsButtonPressed"]

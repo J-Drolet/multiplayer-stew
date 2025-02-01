@@ -53,6 +53,7 @@ public partial class Character : Entity
 		if(IsMultiplayerAuthority()) // local client requests its spawn point from server
 		{
 			SceneManager.Instance.RpcId(1, SceneManager.MethodName.RequestSpawnPoint);
+			UI.InGameUI.AmmoCount.Visible = equippedWeapon != null; // hide ammoCount on respawn
 		}
 	}
 

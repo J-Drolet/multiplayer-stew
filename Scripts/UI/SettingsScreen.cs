@@ -47,11 +47,17 @@ public partial class SettingsScreen : Control
         if (Visible) // On opening of the settings screen we have to update the GUI to reflect the Settings datasctructure (in case settings were changed somewhere else)
         {
             OnGameButtonPressed(); // reset back to the first tab
-            foreach (var settingInput in SettingInputs)
-            {
-                settingInput.InitSetting();
-            }
+            ResetSettingsInputFromConfig();
         }
+    }
+
+    private void ResetSettingsInputFromConfig()
+    {
+        foreach(SettingInput settingInput in SettingInputs)
+        {
+            settingInput.InitSetting();
+        }
+
     }
 
     public void HideAllTabs()
@@ -97,5 +103,18 @@ public partial class SettingsScreen : Control
         {
             settingInput.SaveSetting();
         }
+    }
+
+    public void OnRestoreDefaultsButtonPressed()
+    {   
+        // loop through each setting and set back to default if it is tagged as resettable
+        foreach(SettingInput settingInput in SettingInputs)
+        {
+            if(settingInput.ResettableToDefault)
+            {
+                Config.RestoreDefault(settingInput.SettingSection, settingInput.SettingName);
+            }
+        }
+        ResetSettingsInputFromConfig();
     }
 }

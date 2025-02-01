@@ -27,8 +27,12 @@ public partial class Config: Node
 
         UserSettings = new ConfigFile();
         UserSettings.Load(UserSettingsFilepath);
+        GD.Print(ProjectSettings.GlobalizePath(UserSettingsFilepath));
     }
 
+    /// <summary>
+    /// Used to go through every setting and emit the ConfigChanged signal for each setting. Specifically used for SettingsUpdater to initialize initial state of settings
+    /// </summary>
     public static void EmitInitialSettings() 
     {
         foreach(string section in DefaultSettings.GetSections())
@@ -40,19 +44,57 @@ public partial class Config: Node
         }
     }
 
-    // Gets value from settings, reads from disk if it hasn't been read yet
+    /// <summary>
+    /// Resets the config back to the default value. Throws an error if the section and propertyKey are not found in the defaults
+    /// </summary>
+    /// <param name="section"></param>
+    /// <param name="propertyKey"></param>
+    public static void RestoreDefault(string section, string propertyKey) 
+    {
+        if(UserSettings.HasSectionKey(section, propertyKey)) // only has to do something if the UserSettings has the setting defined
+        {
+            UserSettings.EraseSectionKey(section, propertyKey);
+            Instance.EmitSignal("ConfigChanged", section, propertyKey, GetValue(section, propertyKey));
+        }
+    }
+
+    /// <summary>
+    /// Gets a value from the config. Reads first from UserSettingsConfig and if it is not there, goes to DefaultSettingsConfig. If the requested section, propertyKey combo doesn't exist, an error is thrown
+    /// </summary>
+    /// <param name="section"></param>
+    /// <param name="propertyKey"></param>
+    /// <returns></returns>
     public static Variant GetValue(string section, string propertyKey)
     {
         return UserSettings.GetValue(section, propertyKey, DefaultSettings.GetValue(section, propertyKey));
     }
 
+    /// <summary>
+    /// Sets a section,propertyKey value into the config. If the setting is reset back to default then removes it from the UserSettings for easier resetting to default. 
+    /// Emits the ConfigChanged signal for the changed config
+    /// </summary>
+    /// <param name="section"></param>
+    /// <param name="propertyKey"></param>
+    /// <param name="propertyValue"></param>
+    /// <returns></returns>
     public static Variant SetValue(string section, string propertyKey, Variant propertyValue)
     {
-        UserSettings.SetValue(section, propertyKey, propertyValue);
-        Instance.EmitSignal("ConfigChanged", section, propertyKey, propertyValue);
+        if(propertyValue.Equals(DefaultSettings.GetValue(section, propertyKey))) // if we are back to default value, no reason to save it as a user setting
+        {
+            RestoreDefault(section, propertyKey);
+        }
+        else
+        {
+            UserSettings.SetValue(section, propertyKey, propertyValue);
+            Instance.EmitSignal("ConfigChanged", section, propertyKey, propertyValue);
+        }
+
         return propertyValue;
     }
 
+    /// <summary>
+    /// Saves the UserSettings ConfigFile to disk
+    /// </summary>
     public static void WriteConfig()
     {
         UserSettings.Save(UserSettingsFilepath);
