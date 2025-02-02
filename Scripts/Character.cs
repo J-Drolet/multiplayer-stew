@@ -3,6 +3,7 @@ using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Base;
 using multiplayerstew.Scripts.Services;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 public partial class Character : Entity
@@ -15,9 +16,12 @@ public partial class Character : Entity
 	public Node3D Head { get; set; }
 	[Export, ExportRequired]
 	public Node3D Hand { get; set; }
+	public HashSet<CharacterUpgrade> Upgrades { get; set; } = new();
 
-	public bool CanMove { get; set; } = true;
-	
+	public bool CanMove { get; set; } = true; // whether or not the local player should be able to manipulate the character
+	private int JumpsSinceHitGround { get; set; } // keeps track of how many jumps the character has done since last hitting the ground
+
+
     [Export]
     private UpgradableWeapon equippedWeapon;
     public UpgradableWeapon EquippedWeapon
@@ -41,7 +45,7 @@ public partial class Character : Entity
         }	
 	}
 
-	public const float Speed = 5.0f;
+	public const float BaseSpeed = 5.0f;
 	public const float JumpVelocity = 4.5f;
 
 	public override void _EnterTree()
@@ -111,17 +115,37 @@ public partial class Character : Entity
 	{
 		if(!IsMultiplayerAuthority()) return;
 		Vector3 velocity = Velocity;
+		double acceleration = BaseSpeed;
+		double deceleration = BaseSpeed;
+		double speed = BaseSpeed;
+		if(Upgrades.Contains(CharacterUpgrade.FastSlide))
+		{
+			speed *= 2;
+			acceleration /= 10;
+			deceleration /= 100;
+		}
+
+		int jumpsAllowedInAir = 0;
+		if(Upgrades.Contains(CharacterUpgrade.DoubleJump))
+		{
+			jumpsAllowedInAir = 1;
+		}
 
 		// Add the gravity.
 		if (!IsOnFloor())
 		{
 			velocity += GetGravity() * (float)delta;
 		}
+		else 
+		{
+			JumpsSinceHitGround = 0; // reset jumps back to 0
+		}
 
 		// Handle Jump.
-		if (Input.IsActionJustPressed("Jump") && IsOnFloor() && CanMove)
+		if (Input.IsActionJustPressed("Jump") && JumpsSinceHitGround <= jumpsAllowedInAir  && CanMove)
 		{
 			velocity.Y = JumpVelocity;
+			JumpsSinceHitGround++;
 		}
 
 		Vector3 direction = Vector3.Zero;
@@ -135,13 +159,32 @@ public partial class Character : Entity
 
 		if (direction != Vector3.Zero)
 		{
-			velocity.X = direction.X * Speed;
-			velocity.Z = direction.Z * Speed;
+			Vector3 desiredVelocity;
+			desiredVelocity.X = (float)(direction.X * speed);
+			desiredVelocity.Z = (float)(direction.Z * speed);
+
+			if(Math.Abs(desiredVelocity.X) > Math.Abs(velocity.X))
+			{
+				velocity.X = (float)Mathf.MoveToward(Velocity.X, desiredVelocity.X, acceleration);
+			}
+			else
+			{
+				velocity.X = (float)Mathf.MoveToward(Velocity.X, desiredVelocity.X, deceleration);
+			}
+
+			if(Math.Abs(desiredVelocity.Z) > Math.Abs(velocity.Z))
+			{
+				velocity.Z = (float)Mathf.MoveToward(Velocity.Z, desiredVelocity.Z, acceleration);
+			}
+			else
+			{
+				velocity.Z = (float)Mathf.MoveToward(Velocity.Z, desiredVelocity.Z, deceleration);
+			}
 		}
 		else
 		{
-			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
-			velocity.Z = Mathf.MoveToward(Velocity.Z, 0, Speed);
+			velocity.X = (float)Mathf.MoveToward(Velocity.X, 0, deceleration);
+			velocity.Z = (float)Mathf.MoveToward(Velocity.Z, 0, deceleration);
 		}
 
 		Velocity = velocity;

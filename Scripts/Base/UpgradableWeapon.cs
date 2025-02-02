@@ -43,8 +43,8 @@ namespace multiplayerstew.Scripts.Base
 		[Export]
 		public AudioStream RackSound { get; set; }
 
-        private int CurrentAmmo { get; set; }
-		public List<Upgrade> Upgrades { get; set; } = new();
+		private int CurrentAmmo { get; set; }
+		public HashSet<WeaponUpgrade> Upgrades { get; set; } = new();
 
 
 		public override void _Ready()
@@ -67,11 +67,6 @@ namespace multiplayerstew.Scripts.Base
 
 		public void Fire()
 		{   
-            foreach(Upgrade upgrade in Upgrades) 
-            {
-                upgrade.OnFire(this);
-            }
-
 			if ((CurrentAmmo > 0 || MaxAmmo < 0) && CanFire) 
 			{
 				APlayer.Play("Fire");

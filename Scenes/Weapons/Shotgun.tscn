@@ -503,7 +503,6 @@ skeleton = NodePath("")
 
 [node name="BackHand" type="MeshInstance3D" parent="Meshes/Body"]
 transform = Transform3D(-0.66, 5.92923e-21, 5.7699e-08, -5.7699e-08, -2.88495e-08, -0.66, 2.52211e-15, -0.66, 2.88495e-08, -0.00580737, -0.92126, 0.107284)
-visible = false
 mesh = SubResource("SphereMesh_1tuyb")
 skeleton = NodePath("../../AnimationPlayer")
 
