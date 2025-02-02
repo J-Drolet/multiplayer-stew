@@ -38,7 +38,7 @@ namespace multiplayerstew.Scripts.Base
 		public AudioStream FiringSound { get; set; }
 
 		private int CurrentAmmo { get; set; }
-		public List<WeaponUpgrade> Upgrades { get; set; } = new();
+		public HashSet<WeaponUpgrade> Upgrades { get; set; } = new();
 
 		public override void _Ready()
 		{

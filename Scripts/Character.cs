@@ -16,10 +16,12 @@ public partial class Character : Entity
 	public Node3D Head { get; set; }
 	[Export, ExportRequired]
 	public Node3D Hand { get; set; }
-	public List<CharacterUpgrade> Upgrades { get; set; } = new();
+	public HashSet<CharacterUpgrade> Upgrades { get; set; } = new();
 
-	public bool CanMove { get; set; } = true;
-	
+	public bool CanMove { get; set; } = true; // whether or not the local player should be able to manipulate the character
+	private int JumpsSinceHitGround { get; set; } // keeps track of how many jumps the character has done since last hitting the ground
+
+
     [Export]
     private UpgradableWeapon equippedWeapon;
     public UpgradableWeapon EquippedWeapon
@@ -113,17 +115,28 @@ public partial class Character : Entity
 	{
 		if(!IsMultiplayerAuthority()) return;
 		Vector3 velocity = Velocity;
+		
+		int jumpsAllowedInAir = 0;
+		if(Upgrades.Contains(CharacterUpgrade.DoubleJump))
+		{
+			jumpsAllowedInAir = 1;
+		}
 
 		// Add the gravity.
 		if (!IsOnFloor())
 		{
 			velocity += GetGravity() * (float)delta;
 		}
+		else 
+		{
+			JumpsSinceHitGround = 0; // reset jumps back to 0
+		}
 
 		// Handle Jump.
-		if (Input.IsActionJustPressed("Jump") && IsOnFloor() && CanMove)
+		if (Input.IsActionJustPressed("Jump") && JumpsSinceHitGround <= jumpsAllowedInAir  && CanMove)
 		{
 			velocity.Y = JumpVelocity;
+			JumpsSinceHitGround++;
 		}
 
 		Vector3 direction = Vector3.Zero;

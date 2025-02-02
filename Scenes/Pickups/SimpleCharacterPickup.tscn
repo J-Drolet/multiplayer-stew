@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://00oigava2hm0"]
+
+[ext_resource type="Script" path="res://Scripts/Pickups/CharacterUpgradePickup.cs" id="1_i0g7e"]
+[ext_resource type="Script" path="res://Scenes/Pickups/SimpleCharacterPickup.cs" id="2_uyvdx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2bm04"]
+size = Vector3(2, 1, 2)
+
+[sub_resource type="Animation" id="Animation_fdsld"]
+resource_name = "PickupIdle"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Shotgun:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wds57"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Shotgun:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_57bpt"]
+_data = {
+"PickupIdle": SubResource("Animation_fdsld"),
+"RESET": SubResource("Animation_wds57")
+}
+
+[node name="SimpleCharacterPickup" type="Node3D" node_paths=PackedStringArray("PickupArea", "APlayer")]
+script = ExtResource("1_i0g7e")
+PickupArea = NodePath("Area3D")
+APlayer = NodePath("AnimationPlayer")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499097, 0)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_2bm04")
+
+[node name="Shotgun" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499097, 0)
+
+[node name="Label3D" type="Label3D" parent="Shotgun" node_paths=PackedStringArray("upgradePickup")]
+font_size = 68
+script = ExtResource("2_uyvdx")
+upgradePickup = NodePath("../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_57bpt")
+}
+
+[connection signal="body_entered" from="Area3D" to="." method="ActivatePickup"]
