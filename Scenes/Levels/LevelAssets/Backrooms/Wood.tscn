@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://db17gdrydxrd2"]
+
+[ext_resource type="Material" uid="uid://bfi5wrnf6hna6" path="res://Assets/Materials/Backrooms/Wood.tres" id="1_p30qv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j7noj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5h0e3"]
+material = ExtResource("1_p30qv")
+
+[node name="Concrete" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_j7noj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_5h0e3")

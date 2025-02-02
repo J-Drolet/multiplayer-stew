@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://toxmt18epb8o"]
+
+[ext_resource type="Material" uid="uid://biqifol6vfick" path="res://Assets/Materials/Backrooms/Fabric.tres" id="2_83hmi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j7noj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5h0e3"]
+material = ExtResource("2_83hmi")
+
+[node name="Concrete" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_j7noj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_5h0e3")
