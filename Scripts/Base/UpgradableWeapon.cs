@@ -3,6 +3,7 @@ using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Services;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace multiplayerstew.Scripts.Base
@@ -44,6 +45,17 @@ namespace multiplayerstew.Scripts.Base
 			GodotErrorService.ValidateRequiredData(this);
 			GameManager.Players[GetMultiplayerAuthority()].projectileSpawner.AddSpawnableScene(Projectile.ResourcePath);
 			CurrentAmmo = MaxAmmo;
+
+			// Move local meshes to overlay layer
+			if(IsMultiplayerAuthority())
+			{
+				foreach(VisualInstance3D mesh in FindMeshes(this, new()))
+				{
+					mesh.SetLayerMaskValue(1, false);
+					mesh.SetLayerMaskValue(2, true);
+				}
+			}
+
 		}
 
 		public void Fire()
@@ -119,5 +131,28 @@ namespace multiplayerstew.Scripts.Base
 			audioStreamPlayer.Play();
 			audioStreamPlayer.Finished += audioStreamPlayer.QueueFree;
 		}
+
+		/// <summary>
+		/// Recursively loops through every node under parent and adds any VisualInstance3D nodes to the list. Useful for changing the visibility layer
+		/// </summary>
+		/// <param name="parent"></param>
+		/// <param name="meshes"></param>
+		/// <returns></returns>
+		private List<VisualInstance3D> FindMeshes(Node parent, List<VisualInstance3D> meshes)
+		{
+			foreach(Node child in parent.GetChildren(true))
+			{
+				if (child is VisualInstance3D)
+				{
+					meshes = meshes.Append((VisualInstance3D)child).ToList();
+				}
+				else
+				{
+					meshes = FindMeshes(child, meshes);
+				}
+			}
+
+			return meshes;
+		} 
 	}
 }
