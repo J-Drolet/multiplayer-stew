@@ -123,13 +123,25 @@ namespace multiplayerstew.Scripts.Base
 					break;
 			}
 
-			AudioStreamPlayer3D audioStreamPlayer = new();
-			audioStreamPlayer.Stream = audioStream;
-			audioStreamPlayer.GlobalTransform = GlobalTransform;
-			audioStreamPlayer.Bus = "SFX";
-			AddChild(audioStreamPlayer);
-			audioStreamPlayer.Play();
-			audioStreamPlayer.Finished += audioStreamPlayer.QueueFree;
+			if(IsMultiplayerAuthority()) // no locational audio for local player
+			{
+				AudioStreamPlayer audioStreamPlayer = new();
+				audioStreamPlayer.Stream = audioStream;
+				audioStreamPlayer.Bus = "SFX";
+				AddChild(audioStreamPlayer);
+				audioStreamPlayer.Play();
+				audioStreamPlayer.Finished += audioStreamPlayer.QueueFree;
+			}
+			else
+			{
+				AudioStreamPlayer3D audioStreamPlayer = new();
+				audioStreamPlayer.Stream = audioStream;
+				audioStreamPlayer.GlobalTransform = GlobalTransform;
+				audioStreamPlayer.Bus = "SFX";
+				AddChild(audioStreamPlayer);
+				audioStreamPlayer.Play();
+				audioStreamPlayer.Finished += audioStreamPlayer.QueueFree;
+			}
 		}
 
 		/// <summary>
