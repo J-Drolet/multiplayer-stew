@@ -96,17 +96,19 @@ public partial class Server : Node
     /// </summary>
     /// <param name="filepath"></param>
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-    public void NotifyStartGame(string filepath) {
+    public void NotifyStartGame(string filepath, int durationInSeconds, int maxAura) {
         if(Multiplayer.GetRemoteSenderId() == GameManager.GameHost)
         {
             GD.Print("Server.NotifyStartGame - Telling clients to start their games");
             AcceptingConnections = false;
-            Rpc(MethodName.NotifyStartGame, filepath);
+            Rpc(MethodName.NotifyStartGame, filepath, durationInSeconds, maxAura);
 
             PackedScene levelPackedScene = (PackedScene)ResourceLoader.Load(filepath);
             Node level = levelPackedScene.Instantiate();
             Root.Instance.AddChild(level); // using Root.Instance just to access tree
             GameManager.CurrentLevel = level;
+            GameManager.GameDurationSeconds = durationInSeconds;
+            GameManager.MaxAura = maxAura;
         }
     }
 

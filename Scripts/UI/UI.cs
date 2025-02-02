@@ -10,6 +10,7 @@ public partial class UI: Node
     public static Control Spinner { get; set; }
     public static SettingsScreen SettingsScreen { get; set; }
     public static InGameUI InGameUI { get; set; }
+    public static GunViewCamera gunViewCamera { get; set; }
     
     public static void DisplayError(string errorText) 
     {   

@@ -20,6 +20,12 @@ public partial class Lobby : Control
     [Export, ExportRequired]
     public OptionButton LevelSelector { get; set; }
 
+    [Export, ExportRequired]
+    public SpinBox MaxTimeInput { get; set; }
+
+    [Export, ExportRequired]
+    public SpinBox MaxAuraInput { get; set; }
+
     public override void _Ready()
     {
         GodotErrorService.ValidateRequiredData(this);
@@ -78,6 +84,6 @@ public partial class Lobby : Control
 
     public void OnStartPressed() 
     {
-        Client.Instance.StartGame(Root.LevelsFilepath + LevelSelector.GetItemText(LevelSelector.Selected) + ".tscn");
+        Client.Instance.StartGame(Root.LevelsFilepath + LevelSelector.GetItemText(LevelSelector.Selected) + ".tscn", (int)MaxTimeInput.Value * 60, (int)MaxAuraInput.Value);
     }
 }

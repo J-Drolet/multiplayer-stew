@@ -19,6 +19,8 @@ public static class GameManager
     public static Dictionary<long, PlayerInfo> Players = new Dictionary<long, PlayerInfo>();
 
     public static Node CurrentLevel { get; set; }
+    public static int GameDurationSeconds {get; set; }
+    public static int MaxAura {get; set; }
 
     public static void RemovePlayer(long id)
     {

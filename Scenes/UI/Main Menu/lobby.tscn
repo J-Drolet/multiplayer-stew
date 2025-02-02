@@ -21,7 +21,7 @@ color = Color(1, 1, 1, 1)
 grow_begin = -10.0
 grow_end = -10.0
 
-[node name="Lobby" type="Control" node_paths=PackedStringArray("PlayerPrototype", "StartGameButton", "GameSettings", "LevelSelector")]
+[node name="Lobby" type="Control" node_paths=PackedStringArray("PlayerPrototype", "StartGameButton", "GameSettings", "LevelSelector", "MaxTimeInput", "MaxAuraInput")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,7 +32,9 @@ script = ExtResource("1_0ljmd")
 PlayerPrototype = NodePath("Panel/Panel/Player List/PlayerPrototype")
 StartGameButton = NodePath("Panel/Button Container/Start")
 GameSettings = NodePath("Panel/GameSettings")
-LevelSelector = NodePath("Panel/GameSettings/VBoxContainer/HBoxContainer/OptionButton")
+LevelSelector = NodePath("Panel/GameSettings/VBoxContainer/Level Selection/OptionButton")
+MaxTimeInput = NodePath("Panel/GameSettings/VBoxContainer/Max Time/SpinBox")
+MaxAuraInput = NodePath("Panel/GameSettings/VBoxContainer/Max Kills/SpinBox")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -158,19 +160,52 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/GameSettings/VBoxContainer"]
+[node name="Level Selection" type="HBoxContainer" parent="Panel/GameSettings/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Panel/GameSettings/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Panel/GameSettings/VBoxContainer/Level Selection"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 text = "Level"
 
-[node name="OptionButton" type="OptionButton" parent="Panel/GameSettings/VBoxContainer/HBoxContainer"]
+[node name="OptionButton" type="OptionButton" parent="Panel/GameSettings/VBoxContainer/Level Selection"]
 custom_minimum_size = Vector2(175, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 text_overrun_behavior = 1
+
+[node name="Max Time" type="HBoxContainer" parent="Panel/GameSettings/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/GameSettings/VBoxContainer/Max Time"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Time limit"
+
+[node name="SpinBox" type="SpinBox" parent="Panel/GameSettings/VBoxContainer/Max Time"]
+custom_minimum_size = Vector2(175, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 2.0
+max_value = 50.0
+value = 5.0
+suffix = "minutes"
+
+[node name="Max Kills" type="HBoxContainer" parent="Panel/GameSettings/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/GameSettings/VBoxContainer/Max Kills"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Max aura"
+
+[node name="SpinBox" type="SpinBox" parent="Panel/GameSettings/VBoxContainer/Max Kills"]
+custom_minimum_size = Vector2(175, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 5.0
+max_value = 500.0
+value = 25.0
 
 [connection signal="pressed" from="Panel/Button Container/Leave" to="." method="OnLeavePressed"]
 [connection signal="pressed" from="Panel/Button Container/Start" to="." method="OnStartPressed"]

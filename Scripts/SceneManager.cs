@@ -26,6 +26,11 @@ public partial class SceneManager : Node
 		GodotErrorService.ValidateRequiredData(this);
 		Instance = this;
 
+		if(GameManager.CurrentLevel == null)
+		{
+			GameManager.CurrentLevel = this;
+		}
+
 		SpawnPoints = GetTree().GetNodesInGroup("PlayerSpawnPoint").Select(s => s as Node3D).ToList();
 
 		foreach(long key in GameManager.Players.Keys)

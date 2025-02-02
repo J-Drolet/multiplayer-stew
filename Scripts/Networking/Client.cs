@@ -69,6 +69,7 @@ public partial class Client : Node
             CloseServer();
         }
 
+        UI.gunViewCamera.active = false;
         GameManager.Players.Clear();
         Peer.Close();
     }
@@ -76,8 +77,8 @@ public partial class Client : Node
     /// <summary>
     /// Tell the server to start the game. This will only hope if calling peer is the host
     /// </summary>
-    public void StartGame(string levelPath) {
-        RpcId(1, MethodName.NotifyStartGame, levelPath);
+    public void StartGame(string levelPath, int durationInSeconds, int maxAura) {
+        RpcId(1, MethodName.NotifyStartGame, levelPath, durationInSeconds, maxAura);
     }
 
     public void ConnectToServer(string ip, int port)
@@ -139,9 +140,12 @@ public partial class Client : Node
     }
 
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-    public void NotifyStartGame(string filepath)
+    public void NotifyStartGame(string filepath, int durationInSeconds, int maxAura)
     {
+        UI.gunViewCamera.active = true;
         UI.MainMenu.CloseMainMenu();
+        GameManager.GameDurationSeconds = durationInSeconds;
+        GameManager.MaxAura = maxAura;
     }
 
     [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
