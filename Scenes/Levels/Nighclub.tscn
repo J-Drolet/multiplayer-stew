@@ -1,8 +1,123 @@
-[gd_scene load_steps=3 format=3 uid="uid://ceuyck7863ti8"]
+[gd_scene load_steps=6 format=3 uid="uid://ceuyck7863ti8"]
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_l6pac"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_68ubw"]
+[ext_resource type="PackedScene" uid="uid://b7w6gpd64ty7w" path="res://Scenes/Levels/LevelAssets/Backrooms/Primatives/Concrete.tscn" id="3_kkfn0"]
+[ext_resource type="PackedScene" uid="uid://d3kqoomv25c5t" path="res://Scenes/Levels/LevelAssets/Backrooms/Doorways/DoorwayConcrete.tscn" id="4_8vc51"]
+[ext_resource type="Material" uid="uid://b7saswbexpga0" path="res://Assets/Materials/Backrooms/Concrete.tres" id="5_nctj5"]
 
 [node name="Nightclub" type="Node3D"]
 script = ExtResource("1_l6pac")
 PlayerScene = ExtResource("2_68ubw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.377954, 0.925824, 0, -0.925824, 0.377954, 0, 7.49752, 0)
+light_energy = 1.571
+shadow_enabled = true
+
+[node name="Spawns" type="Node3D" parent="."]
+
+[node name="1" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.955, 0, 0)
+
+[node name="Character" parent="." instance=ExtResource("2_68ubw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5228, 2.63471, 6.80481)
+visible = true
+
+[node name="Dance Floor" type="Node3D" parent="."]
+
+[node name="Floor" parent="Dance Floor" instance=ExtResource("3_kkfn0")]
+transform = Transform3D(40, 0, 0, 0, 1, 0, 0, 0, 40, 0, 0, 0)
+
+[node name="Roof" parent="Dance Floor" instance=ExtResource("3_kkfn0")]
+transform = Transform3D(40, 0, 0, 0, 1, 0, 0, 0, 40, 0, 15, 0)
+visible = false
+
+[node name="WallToMensRoom" type="Node3D" parent="Dance Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 20)
+metadata/_edit_group_ = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Dance Floor/WallToMensRoom"]
+
+[node name="Main Wall" type="CSGBox3D" parent="Dance Floor/WallToMensRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
+size = Vector3(40, 20, 0.075)
+material = ExtResource("5_nctj5")
+
+[node name="Door Hole" type="CSGBox3D" parent="Dance Floor/WallToMensRoom/CSGCombiner3D/Main Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.7999, 0)
+operation = 2
+size = Vector3(4, 5, 1)
+material = ExtResource("5_nctj5")
+
+[node name="DoorwayConcrete" parent="Dance Floor/WallToMensRoom" instance=ExtResource("4_8vc51")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="WallToWomensRoom" type="Node3D" parent="Dance Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -20)
+metadata/_edit_group_ = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Dance Floor/WallToWomensRoom"]
+
+[node name="Main Wall" type="CSGBox3D" parent="Dance Floor/WallToWomensRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
+size = Vector3(40, 20, 0.075)
+material = ExtResource("5_nctj5")
+
+[node name="Door Hole" type="CSGBox3D" parent="Dance Floor/WallToWomensRoom/CSGCombiner3D/Main Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.7999, 0)
+operation = 2
+size = Vector3(4, 5, 1)
+material = ExtResource("5_nctj5")
+
+[node name="DoorwayConcrete" parent="Dance Floor/WallToWomensRoom" instance=ExtResource("4_8vc51")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="WallToCafeteria" type="Node3D" parent="Dance Floor"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20, 1, 0)
+metadata/_edit_group_ = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Dance Floor/WallToCafeteria"]
+
+[node name="Main Wall" type="CSGBox3D" parent="Dance Floor/WallToCafeteria/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
+size = Vector3(40, 20, 0.075)
+material = ExtResource("5_nctj5")
+
+[node name="Door Hole" type="CSGBox3D" parent="Dance Floor/WallToCafeteria/CSGCombiner3D/Main Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.13545, 0)
+operation = 2
+size = Vector3(4, 4.19592, 1)
+material = ExtResource("5_nctj5")
+
+[node name="DoorwayConcrete" parent="Dance Floor/WallToCafeteria" instance=ExtResource("4_8vc51")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 12.0333, 0)
+
+[node name="WallToOffices" type="Node3D" parent="Dance Floor"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20, 1, 0)
+metadata/_edit_group_ = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Dance Floor/WallToOffices"]
+
+[node name="Main Wall" type="CSGBox3D" parent="Dance Floor/WallToOffices/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
+size = Vector3(40, 20, 0.075)
+material = ExtResource("5_nctj5")
+
+[node name="Door Hole" type="CSGBox3D" parent="Dance Floor/WallToOffices/CSGCombiner3D/Main Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.13545, 0)
+operation = 2
+size = Vector3(4, 4.19592, 1)
+material = ExtResource("5_nctj5")
+
+[node name="DoorwayConcrete" parent="Dance Floor/WallToOffices" instance=ExtResource("4_8vc51")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 12.0333, 0)
+
+[node name="Lights" type="Node3D" parent="Dance Floor"]
+visible = false
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Dance Floor/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.7105, 0)
+light_color = Color(1, 0.717647, 1, 1)
+light_energy = 4.619
+omni_range = 62.992
