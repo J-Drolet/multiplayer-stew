@@ -2,18 +2,21 @@
 using System;
 
 
-namespace multiplayerstew.Scripts.Base
-{
-    public abstract class Upgrade
-    {
+public enum CharacterUpgrade {
+    DoubleJump,
+    Invisibility,
+    FastSlide,
+    SmallerHitbox,
+    OutlinePlayers
+}
 
-        public abstract void OnUpgradePickup(Character character);
-
-        public abstract void OnFire(UpgradableWeapon weapon);
-
-        public abstract void OnProjectileSpawn(UpgradeableProjectile projectile);
-
-        public abstract void OnProjectileMovement(UpgradeableProjectile projectile);
-
-    }
+public enum WeaponUpgrade {
+    IncreasedClipSlowerReload,
+    DunceCap,
+    SwitchFiremode,
+    BouncyProjectile,
+    ShotgunFiring,
+    MagDump,
+    Homing,
+    SlowTargetBullets
 }

@@ -3,6 +3,7 @@ using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Base;
 using multiplayerstew.Scripts.Services;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 public partial class Character : Entity
@@ -15,6 +16,7 @@ public partial class Character : Entity
 	public Node3D Head { get; set; }
 	[Export, ExportRequired]
 	public Node3D Hand { get; set; }
+	public List<CharacterUpgrade> Upgrades { get; set; } = new();
 
 	public bool CanMove { get; set; } = true;
 	

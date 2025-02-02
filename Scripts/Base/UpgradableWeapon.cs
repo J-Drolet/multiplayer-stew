@@ -38,7 +38,7 @@ namespace multiplayerstew.Scripts.Base
 		public AudioStream FiringSound { get; set; }
 
 		private int CurrentAmmo { get; set; }
-		public List<Upgrade> Upgrades { get; set; } = new();
+		public List<WeaponUpgrade> Upgrades { get; set; } = new();
 
 		public override void _Ready()
 		{
@@ -60,11 +60,6 @@ namespace multiplayerstew.Scripts.Base
 
 		public void Fire()
 		{   
-            foreach(Upgrade upgrade in Upgrades) 
-            {
-                upgrade.OnFire(this);
-            }
-
 			if ((CurrentAmmo > 0 || MaxAmmo < 0) && CanFire) 
 			{
 				APlayer.Play("Fire");
@@ -130,7 +125,7 @@ namespace multiplayerstew.Scripts.Base
 				AudioStreamPlayer audioStreamPlayer = new();
 				audioStreamPlayer.Stream = audioStream;
 				audioStreamPlayer.Bus = "SFX";
-				AddChild(audioStreamPlayer);
+				SceneManager.Instance.AddChild(audioStreamPlayer);
 				audioStreamPlayer.Play();
 				audioStreamPlayer.Finished += audioStreamPlayer.QueueFree;
 			}
@@ -140,7 +135,7 @@ namespace multiplayerstew.Scripts.Base
 				audioStreamPlayer.Stream = audioStream;
 				audioStreamPlayer.GlobalTransform = GlobalTransform;
 				audioStreamPlayer.Bus = "SFX";
-				AddChild(audioStreamPlayer);
+				SceneManager.Instance.AddChild(audioStreamPlayer);
 				audioStreamPlayer.Play();
 				audioStreamPlayer.Finished += audioStreamPlayer.QueueFree;
 			}
