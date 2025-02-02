@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b63wwcwx850kr"]
+
+[ext_resource type="PackedScene" uid="uid://cxct8ku15nob6" path="res://Scenes/Levels/LevelAssets/WaffleHouse/ShitterPortion.tscn" id="1_oqsjt"]
+[ext_resource type="PackedScene" uid="uid://c7p1mhm63jn1g" path="res://Scenes/Levels/LevelAssets/WaffleHouse/ShitterWall.tscn" id="2_46vsx"]
+
+[node name="GroupOf3Shitters" type="Node3D"]
+
+[node name="ShitterPortion" parent="." instance=ExtResource("1_oqsjt")]
+
+[node name="ShitterPortion2" parent="." instance=ExtResource("1_oqsjt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.427, 0, 0)
+
+[node name="ShitterPortion3" parent="." instance=ExtResource("1_oqsjt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.42652, 0, 0)
+
+[node name="ShitterWall" parent="." instance=ExtResource("2_46vsx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.17627, 0, 0)

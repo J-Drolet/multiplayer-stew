@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ceuyck7863ti8"]
+[gd_scene load_steps=7 format=3 uid="uid://ceuyck7863ti8"]
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_l6pac"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_68ubw"]
 [ext_resource type="PackedScene" uid="uid://b7w6gpd64ty7w" path="res://Scenes/Levels/LevelAssets/Backrooms/Primatives/Concrete.tscn" id="3_kkfn0"]
 [ext_resource type="PackedScene" uid="uid://d3kqoomv25c5t" path="res://Scenes/Levels/LevelAssets/Backrooms/Doorways/DoorwayConcrete.tscn" id="4_8vc51"]
 [ext_resource type="Material" uid="uid://b7saswbexpga0" path="res://Assets/Materials/Backrooms/Concrete.tres" id="5_nctj5"]
+[ext_resource type="PackedScene" uid="uid://b63wwcwx850kr" path="res://Scenes/Levels/LevelAssets/WaffleHouse/GroupOf3Shitters.tscn" id="6_3353m"]
 
 [node name="Nightclub" type="Node3D"]
 script = ExtResource("1_l6pac")
@@ -121,3 +122,151 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.7105, 0)
 light_color = Color(1, 0.717647, 1, 1)
 light_energy = 4.619
 omni_range = 62.992
+
+[node name="Mens Room" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.0029, 0, 35.3006)
+
+[node name="Floor" parent="Mens Room" instance=ExtResource("3_kkfn0")]
+transform = Transform3D(40, 0, 0, 0, 1, 0, 0, 0, 25, 0, 0, 0)
+
+[node name="Roof" parent="Mens Room" instance=ExtResource("3_kkfn0")]
+transform = Transform3D(40, 0, 0, 0, 1, 0, 0, 0, 25, 0, 10, 0)
+visible = false
+
+[node name="WallToDanceFloor" type="Node3D" parent="Mens Room"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20, 0, 0)
+metadata/_edit_group_ = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Mens Room/WallToDanceFloor"]
+
+[node name="Main Wall" type="CSGBox3D" parent="Mens Room/WallToDanceFloor/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5, 0)
+size = Vector3(25, 10, 0.075)
+material = ExtResource("5_nctj5")
+
+[node name="Door Hole" type="CSGBox3D" parent="Mens Room/WallToDanceFloor/CSGCombiner3D/Main Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 0)
+operation = 2
+size = Vector3(4, 4.5, 1)
+material = ExtResource("5_nctj5")
+
+[node name="DoorwayConcrete" parent="Mens Room/WallToDanceFloor" instance=ExtResource("4_8vc51")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="WallToOffice" type="Node3D" parent="Mens Room"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20, 0, 0)
+metadata/_edit_group_ = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Mens Room/WallToOffice"]
+
+[node name="Main Wall" type="CSGBox3D" parent="Mens Room/WallToOffice/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5, 0)
+size = Vector3(25, 10, 0.075)
+material = ExtResource("5_nctj5")
+
+[node name="Door Hole" type="CSGBox3D" parent="Mens Room/WallToOffice/CSGCombiner3D/Main Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 0)
+operation = 2
+size = Vector3(4, 4.5, 1)
+material = ExtResource("5_nctj5")
+
+[node name="DoorwayConcrete" parent="Mens Room/WallToOffice" instance=ExtResource("4_8vc51")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="WallToKitchen" type="Node3D" parent="Mens Room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.5)
+metadata/_edit_group_ = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Mens Room/WallToKitchen"]
+
+[node name="Main Wall" type="CSGBox3D" parent="Mens Room/WallToKitchen/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5, 0)
+size = Vector3(40, 10, 0.075)
+material = ExtResource("5_nctj5")
+
+[node name="Door Hole" type="CSGBox3D" parent="Mens Room/WallToKitchen/CSGCombiner3D/Main Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4514, -3, 0)
+operation = 2
+size = Vector3(4, 4.5, 1)
+material = ExtResource("5_nctj5")
+
+[node name="DoorwayConcrete" parent="Mens Room/WallToKitchen" instance=ExtResource("4_8vc51")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 11.4514, 0.5, 0)
+
+[node name="WallToNowhere" type="Node3D" parent="Mens Room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12.5)
+metadata/_edit_group_ = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Mens Room/WallToNowhere"]
+
+[node name="Main Wall" type="CSGBox3D" parent="Mens Room/WallToNowhere/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5, 0)
+size = Vector3(40, 10, 0.075)
+material = ExtResource("5_nctj5")
+
+[node name="GroupOf3Shitters" parent="Mens Room" instance=ExtResource("6_3353m")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 17.6155, 0.5, -11.3534)
+
+[node name="GroupOf3Shitters2" parent="Mens Room" instance=ExtResource("6_3353m")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 10.7608, 0.5, -11.3534)
+
+[node name="GroupOf3Shitters3" parent="Mens Room" instance=ExtResource("6_3353m")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.31249, 0.5, -11.3534)
+
+[node name="GroupOf3Shitters4" parent="Mens Room" instance=ExtResource("6_3353m")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.83223, 0.5, -11.3534)
+
+[node name="GroupOf3Shitters5" parent="Mens Room" instance=ExtResource("6_3353m")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10.63, 0.5, -11.3534)
+
+[node name="GroupOf3Shitters6" parent="Mens Room" instance=ExtResource("6_3353m")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17.6624, 0.5, -11.3534)
+
+[node name="HallwayDanceFloorToMensRoom" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 35.5)
+
+[node name="Floor" parent="HallwayDanceFloorToMensRoom" instance=ExtResource("3_kkfn0")]
+transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 20, -0.361825, 0, -5.39563)
+
+[node name="Roof" parent="HallwayDanceFloorToMensRoom" instance=ExtResource("3_kkfn0")]
+transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 20, -0.362, 8, -5.396)
+
+[node name="Wall1" type="Node3D" parent="HallwayDanceFloorToMensRoom"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.35039, 4.25, -5.51535)
+metadata/_edit_group_ = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="HallwayDanceFloorToMensRoom/Wall1"]
+
+[node name="Main Wall" type="CSGBox3D" parent="HallwayDanceFloorToMensRoom/Wall1/CSGCombiner3D"]
+size = Vector3(20, 7.5, 0.075)
+material = ExtResource("5_nctj5")
+
+[node name="Wall2" type="Node3D" parent="HallwayDanceFloorToMensRoom"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.99902, 4.25, -9.26991)
+metadata/_edit_group_ = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="HallwayDanceFloorToMensRoom/Wall2"]
+
+[node name="Main Wall" type="CSGBox3D" parent="HallwayDanceFloorToMensRoom/Wall2/CSGCombiner3D"]
+size = Vector3(12.5, 7.5, 0.075)
+material = ExtResource("5_nctj5")
+
+[node name="Wall3" type="Node3D" parent="HallwayDanceFloorToMensRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.74274, 4.25, 2.9238)
+metadata/_edit_group_ = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="HallwayDanceFloorToMensRoom/Wall3"]
+
+[node name="Main Wall" type="CSGBox3D" parent="HallwayDanceFloorToMensRoom/Wall3/CSGCombiner3D"]
+size = Vector3(12.5, 7.5, 0.075)
+material = ExtResource("5_nctj5")
+
+[node name="Wall4" type="Node3D" parent="HallwayDanceFloorToMensRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4706, 4.25, -3.05627)
+metadata/_edit_group_ = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="HallwayDanceFloorToMensRoom/Wall4"]
+
+[node name="Main Wall" type="CSGBox3D" parent="HallwayDanceFloorToMensRoom/Wall4/CSGCombiner3D"]
+size = Vector3(5, 7.5, 0.075)
+material = ExtResource("5_nctj5")
