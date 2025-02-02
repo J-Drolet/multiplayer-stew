@@ -36,9 +36,16 @@ namespace multiplayerstew.Scripts.Base
 
 		[Export, ExportRequired]
 		public AudioStream FiringSound { get; set; }
+        [Export]
+        public AudioStream UnloadSound { get; set; }
+        [Export]
+        public AudioStream LoadSound { get; set; }
+		[Export]
+		public AudioStream RackSound { get; set; }
 
-		private int CurrentAmmo { get; set; }
+        private int CurrentAmmo { get; set; }
 		public List<Upgrade> Upgrades { get; set; } = new();
+
 
 		public override void _Ready()
 		{
@@ -68,7 +75,6 @@ namespace multiplayerstew.Scripts.Base
 			if ((CurrentAmmo > 0 || MaxAmmo < 0) && CanFire) 
 			{
 				APlayer.Play("Fire");
-				Rpc(MethodName.PlaySound, "fire");
 				CurrentAmmo -= 1;
 				for (int x = ProjectilePerShot; x > 0; x--)
 				{
@@ -87,10 +93,6 @@ namespace multiplayerstew.Scripts.Base
 			{
 				APlayer.Play("Reload");
 			}
-			else
-			{
-				GD.PushWarning($"No reload animation for {WeaponName}");
-			}
 		}
 
 		// Called by Reload Animation or other
@@ -104,46 +106,25 @@ namespace multiplayerstew.Scripts.Base
 			return $"{CurrentAmmo}/{MaxAmmo}";
 		}
 
-		/// <summary>
-		/// Spawns an AudioStreamPlayer3D to play a
-		/// </summary>
-		/// <param name="soundType"></param>
-		[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-		public void PlaySound(string soundType)
+		public void PlayGunSound(string sound)
 		{
-			if(Multiplayer.IsServer()) return; // server doesn't play sounds
-
-			AudioStream audioStream;
-
-			switch (soundType)
+			switch (sound)
 			{
-				case "fire":
-					audioStream = FiringSound;
+				case "Fire":
+                    MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, FiringSound.ResourcePath, this.GetPath(), !IsMultiplayerAuthority(), "SFX");
 					break;
-				default:
-					audioStream = null;
+                case "Unload":
+                    MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, UnloadSound.ResourcePath, this.GetPath(), !IsMultiplayerAuthority(), "SFX");
+                    break;
+                case "Load":
+                    MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, LoadSound.ResourcePath, this.GetPath(), !IsMultiplayerAuthority(), "SFX");
+                    break;
+                case "Rack":
+                    MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, RackSound.ResourcePath, this.GetPath(), !IsMultiplayerAuthority(), "SFX");
+                    break;
+                default:
 					break;
-			}
-
-			if(IsMultiplayerAuthority()) // no locational audio for local player
-			{
-				AudioStreamPlayer audioStreamPlayer = new();
-				audioStreamPlayer.Stream = audioStream;
-				audioStreamPlayer.Bus = "SFX";
-				AddChild(audioStreamPlayer);
-				audioStreamPlayer.Play();
-				audioStreamPlayer.Finished += audioStreamPlayer.QueueFree;
-			}
-			else
-			{
-				AudioStreamPlayer3D audioStreamPlayer = new();
-				audioStreamPlayer.Stream = audioStream;
-				audioStreamPlayer.GlobalTransform = GlobalTransform;
-				audioStreamPlayer.Bus = "SFX";
-				AddChild(audioStreamPlayer);
-				audioStreamPlayer.Play();
-				audioStreamPlayer.Finished += audioStreamPlayer.QueueFree;
-			}
+            }
 		}
 
 		/// <summary>

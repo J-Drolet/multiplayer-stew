@@ -24,6 +24,7 @@ buses/default_bus_layout="res://Assets/audio_buses.tres"
 Ui="*res://Scripts/UI/UI.cs"
 Config="*res://Scripts/Config.cs"
 SettingsUpdater="*res://Scripts/SettingsUpdater.cs"
+MultiplayerAudioService="*res://Scripts/Services/MultiplayerAudioService.cs"
 
 [dotnet]
 
