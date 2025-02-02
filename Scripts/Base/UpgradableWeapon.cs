@@ -111,6 +111,8 @@ namespace multiplayerstew.Scripts.Base
 		[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
 		public void PlaySound(string soundType)
 		{
+			if(Multiplayer.IsServer()) return; // server doesn't play sounds
+
 			AudioStream audioStream;
 
 			switch (soundType)
