@@ -83,7 +83,7 @@ namespace multiplayerstew.Scripts.Base
 		// Triggered by character
 		public void Reload()
 		{
-			if (APlayer.HasAnimation("Reload"))
+			if (CurrentAmmo < MaxAmmo && APlayer.HasAnimation("Reload"))
 			{
 				APlayer.Play("Reload");
 			}
@@ -158,10 +158,8 @@ namespace multiplayerstew.Scripts.Base
 				{
 					meshes = meshes.Append((VisualInstance3D)child).ToList();
 				}
-				else
-				{
-					meshes = FindMeshes(child, meshes);
-				}
+
+				meshes = FindMeshes(child, meshes);
 			}
 
 			return meshes;
