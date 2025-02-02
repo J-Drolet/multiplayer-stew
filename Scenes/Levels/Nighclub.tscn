@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ceuyck7863ti8"]
+[gd_scene load_steps=9 format=3 uid="uid://ceuyck7863ti8"]
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_l6pac"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_68ubw"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://d3kqoomv25c5t" path="res://Scenes/Levels/LevelAssets/Backrooms/Doorways/DoorwayConcrete.tscn" id="4_8vc51"]
 [ext_resource type="Material" uid="uid://b7saswbexpga0" path="res://Assets/Materials/Backrooms/Concrete.tres" id="5_nctj5"]
 [ext_resource type="PackedScene" uid="uid://b63wwcwx850kr" path="res://Scenes/Levels/LevelAssets/WaffleHouse/GroupOf3Shitters.tscn" id="6_3353m"]
+[ext_resource type="PackedScene" uid="uid://00oigava2hm0" path="res://Scenes/Pickups/SimpleCharacterPickup.tscn" id="7_umkie"]
+[ext_resource type="PackedScene" uid="uid://k3u720y471ax" path="res://Scenes/Pickups/Mac10Pickup.tscn" id="8_8ytmh"]
 
 [node name="Nightclub" type="Node3D"]
 script = ExtResource("1_l6pac")
@@ -21,9 +23,14 @@ shadow_enabled = true
 [node name="1" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.955, 0, 0)
 
-[node name="Character" parent="." instance=ExtResource("2_68ubw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5228, 2.63471, 6.80481)
-visible = true
+[node name="2" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.76766, 0, 0)
+
+[node name="3" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.922868, 0, -13.1802)
+
+[node name="4" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.69583, 0, 8.28684)
 
 [node name="Dance Floor" type="Node3D" parent="."]
 
@@ -270,3 +277,20 @@ metadata/_edit_group_ = true
 [node name="Main Wall" type="CSGBox3D" parent="HallwayDanceFloorToMensRoom/Wall4/CSGCombiner3D"]
 size = Vector3(5, 7.5, 0.075)
 material = ExtResource("5_nctj5")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="HallwayDanceFloorToMensRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.87881, -3.66701)
+
+[node name="Pickups" type="Node3D" parent="."]
+
+[node name="SimpleCharacterPickup" parent="Pickups" instance=ExtResource("7_umkie")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 17)
+DestroyOnPickup = false
+
+[node name="SimpleCharacterPickup2" parent="Pickups" instance=ExtResource("7_umkie")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 17)
+DestroyOnPickup = false
+
+[node name="Mac10Pickup" parent="Pickups" instance=ExtResource("8_8ytmh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2258, 0, 17.0952)
+DestroyOnPickup = false
