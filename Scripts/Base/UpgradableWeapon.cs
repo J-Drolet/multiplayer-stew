@@ -42,6 +42,8 @@ namespace multiplayerstew.Scripts.Base
         public AudioStream LoadSound { get; set; }
 		[Export]
 		public AudioStream RackSound { get; set; }
+		[Export]
+		public AudioStream ClickSound { get; set; }
 
 		private int CurrentAmmo { get; set; }
 		public HashSet<WeaponUpgrade> Upgrades { get; set; } = new();
@@ -75,16 +77,20 @@ namespace multiplayerstew.Scripts.Base
 				{
 					UpgradeableProjectile projectileInstance = Projectile.Instantiate() as UpgradeableProjectile;
 					projectileInstance.Name = GetMultiplayerAuthority().ToString() +"#";
-					projectileInstance.GlobalTransform = GameManager.Players[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalTransform; // initial spot for local view
-					GameManager.Players[GetMultiplayerAuthority()].projectileParent.AddChild(projectileInstance, true);
-				}
+                    projectileInstance.GlobalTransform = GameManager.Players[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalTransform; // initial spot for local view
+                    GameManager.Players[GetMultiplayerAuthority()].projectileParent.AddChild(projectileInstance, true);
+                }
+			}
+			else if(CurrentAmmo <= 0 && MaxAmmo >= 0)
+			{
+				PlayGunSound("Click");
 			}
 		}
 
 		// Triggered by character
 		public void Reload()
 		{
-			if (CurrentAmmo < MaxAmmo && APlayer.HasAnimation("Reload"))
+			if (CurrentAmmo < MaxAmmo && APlayer.HasAnimation("Reload") && !APlayer.IsPlaying())
 			{
 				APlayer.Play("Reload");
 			}
@@ -117,6 +123,9 @@ namespace multiplayerstew.Scripts.Base
                 case "Rack":
                     MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, RackSound.ResourcePath, this.GetPath(), !IsMultiplayerAuthority(), "SFX");
                     break;
+				case "Click":
+                    MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, ClickSound.ResourcePath, this.GetPath(), !IsMultiplayerAuthority(), "SFX");
+					break;
                 default:
 					break;
             }

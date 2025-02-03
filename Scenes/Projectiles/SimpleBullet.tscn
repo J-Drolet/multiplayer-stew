@@ -1,11 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://g1mopusla6rw"]
+[gd_scene load_steps=8 format=4 uid="uid://g1mopusla6rw"]
 
 [ext_resource type="Script" path="res://Scripts/Projectiles/SimpleBullet.cs" id="1_iga3j"]
+[ext_resource type="Texture2D" uid="uid://wggjy5cfolrn" path="res://Assets/Models/Weapons/PistolBullet_Ammo_tex.png" id="2_7m31k"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_2wu11"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_hmntw"]
-radius = 0.137246
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t8wx2"]
+radius = 0.299964
+height = 0.715216
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_h0560"]
 properties/0/path = NodePath(".:position")
@@ -15,21 +15,68 @@ properties/1/path = NodePath(".:rotation")
 properties/1/spawn = true
 properties/1/replication_mode = 1
 
-[node name="SimpleBullet" type="Node3D" node_paths=PackedStringArray("Hitbox")]
-script = ExtResource("1_iga3j")
-Lifespan = 1.0
-Hitbox = NodePath("Area3D")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vu5ms"]
+resource_name = "Ammo"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("2_7m31k")
+roughness = 0.5
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.267544, 0, 0, 0, 0.267544, 0, 0, 0, 0.267544, 0, 0, 0)
-mesh = SubResource("SphereMesh_2wu11")
+[sub_resource type="ArrayMesh" id="ArrayMesh_wyovt"]
+_surfaces = [{
+"aabb": AABB(-0.819204, -0.396685, -0.942375, 1.63841, 0.983646, 1.88475),
+"format": 34359742465,
+"index_count": 66,
+"index_data": PackedByteArray("AQACAAAAAQADAAIAAAACAAgAAgAEAAgAAwAEAAIAAwAFAAQABQAGAAQABQAHAAYABAAGAAgABwAJAAYABwAKAAkABgAJAAgACgALAAkACgAMAAsACQALAAgADAAAAAsADAABAAAACwAAAAgAAQAFAAMABQAKAAcACgABAAwABQABAAoA"),
+"lods": [0.292139, PackedByteArray("AQADAAAAAAAEAAgABAAJAAgACQAAAAgAAwAEAAAAAwAFAAQABQAHAAQABwAJAAQABwAKAAkACgAMAAkADAAAAAkADAABAAAAAQAFAAMABQAKAAcACgABAAwABQABAAoA"), 0.397876, PackedByteArray("AQAFAAAABQAEAAAABQAKAAQACgAJAAQABAAJAAAACgABAAkAAQAAAAkABQABAAoA"), 0.475185, PackedByteArray("AQAFAAAABQAKAAAAAQAAAAoABQABAAoA")],
+"name": "Ammo",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 13,
+"vertex_data": PackedByteArray("EJ83MuADmT65Rzm/0BCYMUway76FP3G/PRAhP+ADmT62R7m+VbdRP0way758P/G+OxAhP+ADmT6/R7k+VbdRP0way76GP/E+hugYtOADmT65Rzk/9pgStEway76BP3E/gHZpMhRDFj8AANMzPRAhv+ADmT62R7k+VrdRv0way75+P/E+ORAhv+ADmT6+R7m+UrdRv0way76EP/G+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lshal"]
+resource_name = "PistolBullet_Cylinder"
+_surfaces = [{
+"aabb": AABB(-0.819204, -0.396685, -0.942375, 1.63841, 0.983646, 1.88475),
+"attribute_data": PackedByteArray("tbyrPlrSAD/S4rM+cFYnP7A/nj5a0gA/vlKiPnBWJz+mRYM+WtIAPy1lfj5wVic/RpFrPlrSAD8MRVs+cFYnP6zCkD7+xug+qEWDPlrSAD8tZX4+cFYnP7A/nj5a0gA/vlKiPnBWJz+1vKs+WtIAP7W8qz5a0gA/tbyrPlrSAD/S4rM+cFYnP9Lisz5wVic/0uKzPnBWJz8tZX4+cFYnPy1lfj5wVic/LWV+PnBWJz8tZX4+cFYnPy1lfj5wVic/LWV+PnBWJz+1vKs+WtIAP7W8qz5a0gA/tbyrPlrSAD+1vKs+WtIAP9Lisz5wVic/0uKzPnBWJz/S4rM+cFYnP9Lisz5wVic/pkWDPlrSAD+mRYM+WtIAP6ZFgz5a0gA/pkWDPlrSAD8tZX4+cFYnPy1lfj5wVic/LWV+PnBWJz8tZX4+cFYnP6hFgz5a0gA/qEWDPlrSAD+oRYM+WtIAP6hFgz5a0gA/LWV+PnBWJz8tZX4+cFYnPy1lfj5wVic/LWV+PnBWJz+1vKs+WtIAP7W8qz5a0gA/tbyrPlrSAD+1vKs+WtIAP7W8qz5a0gA/tbyrPlrSAD/S4rM+cFYnP9Lisz5wVic/0uKzPnBWJz/S4rM+cFYnP9Lisz5wVic/vlKiPnBWJz++UqI+cFYnP75Soj5wVic/vlKiPnBWJz+mRYM+WtIAP6ZFgz5a0gA/pkWDPlrSAD+mRYM+WtIAP6ZFgz5a0gA/LWV+PnBWJz8tZX4+cFYnPy1lfj5wVic/LWV+PnBWJz8tZX4+cFYnPwxFWz5wVic/DEVbPnBWJz8MRVs+cFYnPwxFWz5wVic/rMKQPv7G6D6swpA+/sboPqhFgz5a0gA/qEWDPlrSAD+oRYM+WtIAP6hFgz5a0gA/qEWDPlrSAD+oRYM+WtIAPy1lfj5wVic/LWV+PnBWJz8tZX4+cFYnPy1lfj5wVic/LWV+PnBWJz++UqI+cFYnP75Soj5wVic/vlKiPnBWJz++UqI+cFYnPw=="),
+"format": 34359742487,
+"index_count": 66,
+"index_data": PackedByteArray("AQACAAAAAQADAAIAAAACAAgAAgAEAAgAAwAEAAIAAwAFAAQABQAGAAQABQAHAAYABAAGAAgABwAJAAYABwAKAAkABgAJAAgACgALAAkACgAMAAsACQALAAgADAAAAAsADAABAAAACwAAAAgAAQAFAAMABQAKAAcACgABAAwABQABAAoA"),
+"lods": [0.292139, PackedByteArray("NwA8ADEAMgBAAE4AQABSAE8AVQA2AE4APQBBADMAPgBFAEIARgBKAEMASwBQAEQATABWAFEAVwBbAFMAXAA0AFQAXQA4ADUAOQBHAD8ASABYAE0AWQA6AF4ASQA7AFoA"), 0.397876, PackedByteArray("HQAlABkAJgAhABoAJwAtACIALgApACMAJAAqABsALwAeACsAHwAcACwAKAAgADAA"), 0.475185, PackedByteArray("EAATAA0AFAAWAA4AEQAPABcAFQASABgA")],
+"material": SubResource("StandardMaterial3D_vu5ms"),
+"name": "Ammo",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 95,
+"vertex_data": PackedByteArray("EJ83MuADmT65Rzm/0BCYMUway76FP3G/PRAhP+ADmT62R7m+VbdRP0way758P/G+OxAhP+ADmT6/R7k+VbdRP0way76GP/E+hugYtOADmT65Rzk/9pgStEway76BP3E/gHZpMhRDFj8AANMzPRAhv+ADmT62R7k+VrdRv0way75+P/E+ORAhv+ADmT6+R7m+UrdRv0way76EP/G+EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/0BCYMUway76FP3G/0BCYMUway76FP3G/0BCYMUway76FP3G/VbdRP0way76GP/E+VbdRP0way76GP/E+VbdRP0way76GP/E+VrdRv0way75+P/E+VrdRv0way75+P/E+VrdRv0way75+P/E+EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/0BCYMUway76FP3G/0BCYMUway76FP3G/0BCYMUway76FP3G/0BCYMUway76FP3G/OxAhP+ADmT6/R7k+OxAhP+ADmT6/R7k+OxAhP+ADmT6/R7k+OxAhP+ADmT6/R7k+VbdRP0way76GP/E+VbdRP0way76GP/E+VbdRP0way76GP/E+VbdRP0way76GP/E+PRAhv+ADmT62R7k+PRAhv+ADmT62R7k+PRAhv+ADmT62R7k+PRAhv+ADmT62R7k+VrdRv0way75+P/E+VrdRv0way75+P/E+VrdRv0way75+P/E+VrdRv0way75+P/E+EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/0BCYMUway76FP3G/0BCYMUway76FP3G/0BCYMUway76FP3G/0BCYMUway76FP3G/0BCYMUway76FP3G/VbdRP0way758P/G+VbdRP0way758P/G+VbdRP0way758P/G+VbdRP0way758P/G+OxAhP+ADmT6/R7k+OxAhP+ADmT6/R7k+OxAhP+ADmT6/R7k+OxAhP+ADmT6/R7k+OxAhP+ADmT6/R7k+VbdRP0way76GP/E+VbdRP0way76GP/E+VbdRP0way76GP/E+VbdRP0way76GP/E+VbdRP0way76GP/E+9pgStEway76BP3E/9pgStEway76BP3E/9pgStEway76BP3E/9pgStEway76BP3E/gHZpMhRDFj8AANMzgHZpMhRDFj8AANMzPRAhv+ADmT62R7k+PRAhv+ADmT62R7k+PRAhv+ADmT62R7k+PRAhv+ADmT62R7k+PRAhv+ADmT62R7k+PRAhv+ADmT62R7k+VrdRv0way75+P/E+VrdRv0way75+P/E+VrdRv0way75+P/E+VrdRv0way75+P/E+VrdRv0way75+P/E+UrdRv0way76EP/G+UrdRv0way76EP/G+UrdRv0way76EP/G+UrdRv0way76EP/G+o8f//yLoUFWc0QAAyxbe0TLRj8wGAHGXb9pPOQAAcZdus8uu+P+M6E65cFr+/43o/39auNwXryr/f51RM+kfrv9///8AAAAAkEzLrgYAchewRnBa////P8wuj8z4/41ojyVPOf///7/n+Dk0IuhQVbKA4eci6FBV9xIR4yLoUFXK47ciyxbe0eQTvSLLFt7RK5lkAMsW3tGQ5ZBC/v+N6PWTTLj+/43oJKBIKP7/jegecPW9////P64XI0H///8/OWD7J////z8C/JDTIuhQVSDeVLQi6FBVSqIu8SLoUFV1IVzjIuhQVeblxSDLFt7RbQRIWcsW3tGBCv/fyxbe0Q6jhwbLFt7RkMlnpvj/jOiXp+yA+P+M6JduWqj4/4zowZ4O1Pj/jOiW6uw+/v+N6FrlD5H+/43odqUCav7/jeinlJIm/v+N6NNdPqMGAHIXdnOn4AYAcheMH1yZBgByFyscTtkGAHIXwJNhb////z9pUOmN////P2cBI4D///8/GXb0Hv///z85/qLlIuhQVQiwuuYi6FBVcNwtzSLoUFUIJ1rUIuhQVboCHx8i6FBVg1Jf6yLoUFVe6A4Ryxbe0dAa6RfLFt7Ric+JK8sW3tFVMQYqyxbe0WKnyQvLFt7Rne6XIwAAcZep6JS/AABxl2rjM2IAAHGXVdPjMgAAcZfIn6/P+P+M6BfWrcD4/4zoQuL5b/j/jOg0vWR++P+M6DiNa6r4/4zoOdakZ/7/jehyuchw/v+N6D3K0Dv+/43oJ4jXR/7/jejynlc2/v+N6MirAXAz6R+u036spDPpH65qWFpoM+kfrix+mEgz6R+uYZFs/QAAAACch8/YAAAAAG1xc6oGAHIXAkQYhgYAchdreBTTBgByF9UYsX4GAHIXhCnEugYAchcNWtHeBgByF11OVmf///8/eyr+a////z+vbfdL////P8QyEjn///8/vGfZNf///z+wGxRf////v5cc4b////+/BheVJP///7+5LYE4////vw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_wyovt")
+
+[node name="SimpleBullet" type="Node3D" node_paths=PackedStringArray("Hitbox")]
+transform = Transform3D(0.184207, 0, 0, 0, -8.05195e-09, 0.184207, 0, -0.184207, -8.05195e-09, 0, 0, 0)
+script = ExtResource("1_iga3j")
+InitialVelocity = 40.0
+Damage = 3.0
+Lifespan = 2.0
+ShotSpread = 0.05
+Hitbox = NodePath("Area3D")
+metadata/_edit_group_ = true
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_layer = 8
 collision_mask = 20
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-shape = SubResource("SphereShape3D_hmntw")
+shape = SubResource("CapsuleShape3D_t8wx2")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_h0560")
+
+[node name="Pistol_caliber_1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.268463, 0, 0, 0, 0.554691, 0, 0, 0, 0.268463, 0, 0, 0)
+mesh = SubResource("ArrayMesh_lshal")
+skeleton = NodePath("")
