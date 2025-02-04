@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=4 uid="uid://g1mopusla6rw"]
 
 [ext_resource type="Script" path="res://Scripts/Projectiles/SimpleBullet.cs" id="1_iga3j"]
-[ext_resource type="Texture2D" uid="uid://wggjy5cfolrn" path="res://Assets/Models/Weapons/PistolBullet_Ammo_tex.png" id="2_7m31k"]
+[ext_resource type="Texture2D" uid="uid://sjgngmb63c6o" path="res://Assets/Models/Weapons/PistolBullet_Ammo_tex.png" id="2_7m31k"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t8wx2"]
-radius = 0.299964
-height = 0.715216
+radius = 0.055
+height = 0.132
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_h0560"]
 properties/0/path = NodePath(".:position")
@@ -57,7 +57,6 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wyovt")
 
 [node name="SimpleBullet" type="Node3D" node_paths=PackedStringArray("Hitbox")]
-transform = Transform3D(0.184207, 0, 0, 0, -8.05195e-09, 0.184207, 0, -0.184207, -8.05195e-09, 0, 0, 0)
 script = ExtResource("1_iga3j")
 InitialVelocity = 40.0
 Damage = 3.0
@@ -77,6 +76,6 @@ shape = SubResource("CapsuleShape3D_t8wx2")
 replication_config = SubResource("SceneReplicationConfig_h0560")
 
 [node name="Pistol_caliber_1" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.268463, 0, 0, 0, 0.554691, 0, 0, 0, 0.268463, 0, 0, 0)
+transform = Transform3D(0.049, 0, 0, 0, -4.41485e-09, 0.049, 0, -0.101, -2.14186e-09, 0, 0, 0)
 mesh = SubResource("ArrayMesh_lshal")
 skeleton = NodePath("")
