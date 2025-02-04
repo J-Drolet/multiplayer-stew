@@ -105,15 +105,16 @@ albedo_color = Color(0, 0.69624, 0, 0.6)
 material = SubResource("StandardMaterial3D_cde7f")
 size = Vector3(0.05, 0.05, 0.05)
 
-[node name="HealthPickup" type="Node3D"]
+[node name="HealthPickup" type="Node3D" node_paths=PackedStringArray("PickupArea", "APlayer")]
 script = ExtResource("2_kows0")
+PickupArea = NodePath("Area3D")
+APlayer = NodePath("AnimationPlayer")
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(0.387666, 0, 0, 0, 0.387666, 0, 0, 0, 0.387666, -0.00458485, 0.286345, 0)
 collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_o0sq4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

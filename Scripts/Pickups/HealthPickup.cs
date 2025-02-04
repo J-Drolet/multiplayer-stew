@@ -20,6 +20,20 @@ public partial class HealthPickup : Pickup
         if (body is Character)
         {
             Character character = body as Character;
+
+            {
+                if (character.CurrentHealth < character.MaxHealth)
+                {
+                    if ((character.CurrentHealth + HealthGained) < character.MaxHealth)
+                    {
+                        character.CurrentHealth = (character.CurrentHealth + HealthGained);
+                    }
+                    if ((character.CurrentHealth + HealthGained) >= character.MaxHealth)
+                    {
+                        character.CurrentHealth = character.MaxHealth;
+                    }
+                }
+            }
         }
     }
 }

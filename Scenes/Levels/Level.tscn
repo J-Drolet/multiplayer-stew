@@ -27,6 +27,7 @@ PlayerScene = ExtResource("2_hmwfx")
 
 [node name="HealthPickup" parent="." instance=ExtResource("10_wk5ir")]
 transform = Transform3D(2.22573, 0, 0, 0, 2.22573, 0, 0, 0, 2.22573, 13.403, 0.0122315, 2.0253)
+HealthGained = 10
 
 [node name="Floor" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.210621, 0)
