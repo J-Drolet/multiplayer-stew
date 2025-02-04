@@ -1,11 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://g1mopusla6rw"]
+[gd_scene load_steps=7 format=4 uid="uid://g1mopusla6rw"]
 
 [ext_resource type="Script" path="res://Scripts/Projectiles/SimpleBullet.cs" id="1_iga3j"]
 [ext_resource type="Texture2D" uid="uid://sjgngmb63c6o" path="res://Assets/Models/Weapons/PistolBullet_Ammo_tex.png" id="2_7m31k"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t8wx2"]
-radius = 0.055
-height = 0.132
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_h0560"]
 properties/0/path = NodePath(".:position")
@@ -56,21 +52,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wyovt")
 
-[node name="SimpleBullet" type="Node3D" node_paths=PackedStringArray("Hitbox")]
+[node name="SimpleBullet" type="Node3D"]
 script = ExtResource("1_iga3j")
 InitialVelocity = 40.0
 Damage = 3.0
 Lifespan = 2.0
 ShotSpread = 0.05
-Hitbox = NodePath("Area3D")
 metadata/_edit_group_ = true
-
-[node name="Area3D" type="Area3D" parent="."]
-collision_layer = 8
-collision_mask = 20
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-shape = SubResource("CapsuleShape3D_t8wx2")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_h0560")

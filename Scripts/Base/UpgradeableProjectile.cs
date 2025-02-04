@@ -22,8 +22,6 @@ namespace multiplayerstew.Scripts.Base
         public float Lifespan { get; set; } = 3.0f;
         [Export]
         public float ShotSpread { get; set; } = 0.0f;
-        [Export, ExportRequired]
-        public Area3D Hitbox { get; set; }
 
         private Vector3 Velocity = Vector3.Zero;
         private Vector3 ProjectileGravity = Vector3.Down * 5;
@@ -31,6 +29,7 @@ namespace multiplayerstew.Scripts.Base
         private int HitsLeft;
 
         private int projectileOwner;
+        private RayCast3D HitDetectionRaycast;
 
         public override void _EnterTree()
         {
@@ -40,9 +39,19 @@ namespace multiplayerstew.Scripts.Base
         public override void _Ready()
         {
             GodotErrorService.ValidateRequiredData(this);
-            if (!IsMultiplayerAuthority()) return;
 
-            Hitbox.AreaEntered += OnAreaEntered;
+            if (!Multiplayer.IsServer()) return;
+
+            // dynamically add raycast
+            HitDetectionRaycast = new();
+            AddChild(HitDetectionRaycast);
+            HitDetectionRaycast.SetCollisionMaskValue(1, false);
+            HitDetectionRaycast.SetCollisionMaskValue(3, true);
+            HitDetectionRaycast.SetCollisionMaskValue(5, true);
+
+            HitDetectionRaycast.CollideWithAreas = true;
+            HitDetectionRaycast.CollideWithBodies = false;
+            HitDetectionRaycast.HitFromInside = true;
 
             GlobalTransform = GameManager.Players[projectileOwner].characterNode.ProjectileOrigin.GlobalTransform;
 
@@ -53,26 +62,6 @@ namespace multiplayerstew.Scripts.Base
             directionVector = directionVector.Rotated(Transform.Basis.Y, ((float)rand.NextDouble() * ShotSpread*2) + (-ShotSpread));
 
             Velocity = directionVector * InitialVelocity;
-        }
-
-        /// <summary>
-        /// When Projectile hits something - This is only run on the server (Server handles hit detection)
-        /// </summary>
-        /// <param name="area"></param>
-        private void OnAreaEntered(Area3D area)
-        {
-            if(MaxHits > 0 && area is DamageArea) // we do a max hit check here so server stops hitting even before authority queue frees the projectile
-            {
-                DamageArea damageArea = area as DamageArea;
-                damageArea.HitDamageArea(this);
-            }
-            
-            MaxHits--;
-            
-            if(MaxHits <= 0)
-            {
-                DisableSelf();
-            }
         }
 
         public override void _Process(double delta)
@@ -94,9 +83,28 @@ namespace multiplayerstew.Scripts.Base
 
             if (Velocity != Vector3.Zero)
             {
-                LookAt(Transform.Origin + Velocity.Normalized(), Vector3.Up);
-                Transform = Transform with { Origin = Transform.Origin + Velocity * (float)delta };
+                LookAt(GlobalPosition + Velocity.Normalized(), Vector3.Up);
 
+                HitDetectionRaycast.TargetPosition = ToLocal(GlobalPosition + Velocity * (float)delta);
+                HitDetectionRaycast.ForceRaycastUpdate();
+                if(HitDetectionRaycast.IsColliding())
+                {
+                    GodotObject collider = HitDetectionRaycast.GetCollider();
+                    if(MaxHits > 0 && collider is DamageArea) // we do a max hit check here so server stops hitting even before authority queue frees the projectile
+                    {
+                        DamageArea damageArea = collider as DamageArea;
+                        damageArea.HitDamageArea(this);
+                    }
+                    
+                    MaxHits--;
+                    
+                    if(MaxHits <= 0)
+                    {
+                        DisableSelf();
+                    }
+                }
+                
+                GlobalPosition += Velocity * (float)delta;
             }
         }
 
@@ -106,7 +114,6 @@ namespace multiplayerstew.Scripts.Base
         private void DisableSelf()
         {
             RpcId(projectileOwner, MethodName.NotifyOfDestruction);
-            Hitbox.SetDeferred("monitoring", false); // makes projectile no longer cause damage
             SetMultiplayerAuthority(projectileOwner); // stops server from syncing position - stops errors from desync between time that projectileOwner queueFree and the server gets the message
         }
 
