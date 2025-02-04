@@ -1,0 +1,167 @@
+[gd_scene load_steps=18 format=3 uid="uid://c7ek42dfgsy5g"]
+
+[ext_resource type="Script" path="res://Scripts/Pickups/HealthPickup.cs" id="2_kows0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o0sq4"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="Animation" id="Animation_hgvp4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Attributes:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0vvxu"]
+resource_name = "Rotation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Attributes:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nubif"]
+_data = {
+"RESET": SubResource("Animation_hgvp4"),
+"Rotation": SubResource("Animation_0vvxu")
+}
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_tokv4"]
+noise_type = 2
+frequency = 0.048
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hg1p2"]
+as_normal_map = true
+bump_strength = 32.0
+noise = SubResource("FastNoiseLite_tokv4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sf30d"]
+albedo_color = Color(0, 0.872664, 0, 1)
+albedo_texture = SubResource("NoiseTexture2D_hg1p2")
+metallic_specular = 0.2
+
+[sub_resource type="BoxMesh" id="BoxMesh_t0a5r"]
+material = SubResource("StandardMaterial3D_sf30d")
+size = Vector3(0.25, 1, 0.25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8xnlx"]
+material = SubResource("StandardMaterial3D_sf30d")
+size = Vector3(0.25, 1, 0.25)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_uhyuo"]
+noise_type = 2
+frequency = 0.0256
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4sfrr"]
+noise = SubResource("FastNoiseLite_uhyuo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndh8k"]
+albedo_color = Color(0, 0.596512, 3.85046e-07, 1)
+albedo_texture = SubResource("NoiseTexture2D_4sfrr")
+metallic = 1.0
+metallic_specular = 1.0
+emission_enabled = true
+emission_energy_multiplier = 16.0
+
+[sub_resource type="TorusMesh" id="TorusMesh_6e8is"]
+material = SubResource("StandardMaterial3D_ndh8k")
+inner_radius = 0.401
+outer_radius = 0.268
+rings = 15
+ring_segments = 16
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_g77vp"]
+emission_shape = 1
+emission_sphere_radius = 2.19
+angle_min = -57.8
+angle_max = 358.2
+turbulence_enabled = true
+turbulence_noise_strength = 20.0
+turbulence_noise_scale = 0.225
+turbulence_noise_speed_random = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cde7f"]
+transparency = 1
+albedo_color = Color(0, 0.69624, 0, 0.6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3tp6x"]
+material = SubResource("StandardMaterial3D_cde7f")
+size = Vector3(0.05, 0.05, 0.05)
+
+[node name="HealthPickup" type="Node3D"]
+script = ExtResource("2_kows0")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(0.387666, 0, 0, 0, 0.387666, 0, 0, 0, 0.387666, -0.00458485, 0.286345, 0)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_o0sq4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nubif")
+}
+autoplay = "Rotation"
+
+[node name="Attributes" type="Node3D" parent="."]
+
+[node name="HealthSymbol" type="Node3D" parent="Attributes"]
+transform = Transform3D(2.07297, 0, -8.9407e-08, 0, 1.98293, 0, 0, 0, 2.52905, 0, -0.348018, 0)
+
+[node name="PLACEHOLDER" type="MeshInstance3D" parent="Attributes/HealthSymbol"]
+transform = Transform3D(0.272043, 0, 1.77636e-15, 0, 0.272043, 0, 0, 0, 0.277866, 0, 0.333637, 0)
+mesh = SubResource("BoxMesh_t0a5r")
+skeleton = NodePath("../../..")
+
+[node name="PLACEHOLDER2" type="MeshInstance3D" parent="Attributes/HealthSymbol"]
+transform = Transform3D(-1.18914e-08, -0.272043, 0, 0.272043, -1.18914e-08, 0, 0, 0, 0.272043, 0, 0.333637, 0)
+mesh = SubResource("BoxMesh_8xnlx")
+skeleton = NodePath("../../..")
+
+[node name="BottomRing" type="MeshInstance3D" parent="Attributes"]
+mesh = SubResource("TorusMesh_6e8is")
+skeleton = NodePath("../..")
+
+[node name="FlavorParticles" type="GPUParticles3D" parent="Attributes"]
+transform = Transform3D(0.200548, 0, 0, 0, 0.170077, 0, 0, 0, 0.200548, 0, 0.415189, 0)
+amount = 50
+lifetime = 0.25
+interp_to_end = 0.07
+preprocess = 3.0
+speed_scale = 0.2
+explosiveness = 0.01
+fixed_fps = 60
+interpolate = false
+trail_lifetime = 3.0
+process_material = SubResource("ParticleProcessMaterial_g77vp")
+draw_pass_1 = SubResource("BoxMesh_3tp6x")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Attributes"]
+transform = Transform3D(-0.469556, 0.881124, -0.0560164, -0.0415012, 0.0413484, 0.998282, 0.881927, 0.471074, 0.0171524, 0.00227018, 0.882904, 0.00973142)
+light_color = Color(0, 1, 0, 1)
+light_energy = 14.492
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 16.0
+light_size = 0.427
+light_specular = 16.0
+spot_range = 0.956441
+spot_angle = 54.0212

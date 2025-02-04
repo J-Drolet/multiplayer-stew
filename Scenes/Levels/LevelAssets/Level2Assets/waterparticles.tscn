@@ -8,12 +8,12 @@ angle_min = 83.6
 angle_max = 499.6
 turbulence_noise_scale = 2.596
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cde7f"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j23tb"]
 transparency = 1
 albedo_color = Color(0.278431, 0.443137, 0.807843, 0.301961)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gsud2"]
-material = SubResource("StandardMaterial3D_cde7f")
+material = SubResource("StandardMaterial3D_j23tb")
 size = Vector3(0.05, 0.5, 0.05)
 
 [node name="Node3D" type="Node3D"]
