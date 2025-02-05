@@ -16,6 +16,8 @@ public partial class Character : Entity
 	public Node3D Head { get; set; }
 	[Export, ExportRequired]
 	public Node3D Hand { get; set; }
+	[Export, ExportRequired]
+	public MultiplayerSpawner WeaponSpawner { get; set; }
 	public HashSet<CharacterUpgrade> Upgrades { get; set; } = new();
 
 	public bool CanMove { get; set; } = true; // whether or not the local player should be able to manipulate the character
@@ -23,26 +25,7 @@ public partial class Character : Entity
 
 
     [Export]
-    private UpgradableWeapon equippedWeapon;
-    public UpgradableWeapon EquippedWeapon
-	{
-		get { return equippedWeapon; }
-		set {
-            if (equippedWeapon != null)
-            {
-                equippedWeapon.QueueFree();
-            }
-            equippedWeapon = value;
-			equippedWeapon.Name = GetMultiplayerAuthority().ToString() + "#EquippedWeapon";
-            Hand.AddChild(equippedWeapon);
-
-			// toggle ammo count display of local player
-			if(IsMultiplayerAuthority())
-			{
-				UI.InGameUI.AmmoCount.Visible = equippedWeapon != null;
-			}
-        }	
-	}
+    private UpgradableWeapon EquippedWeapon;
 
 	public const float BaseSpeed = 5.0f;
 	public const float JumpVelocity = 4.5f;
@@ -56,9 +39,20 @@ public partial class Character : Entity
 		if(IsMultiplayerAuthority()) // local client requests its spawn point from server
 		{
 			SceneManager.Instance.RpcId(1, SceneManager.MethodName.RequestSpawnPoint);
-			UI.InGameUI.AmmoCount.Visible = equippedWeapon != null; // hide ammoCount on respawn
+			UI.InGameUI.AmmoCount.Visible = EquippedWeapon != null; // hide ammoCount on respawn
 		}
 	}
+
+    public override void _Ready()
+    {
+        base._Ready();
+
+		List<string> files = Root.GetScenesAtFilepath(Root.WeaponsFilepath);
+		foreach(string filepath in files) 
+		{
+			WeaponSpawner.AddSpawnableScene(filepath);
+		}
+    }
 
     public override void _UnhandledInput(InputEvent @event)
     {
@@ -134,6 +128,10 @@ public partial class Character : Entity
 		if (!IsOnFloor())
 		{
 			velocity += GetGravity() * (float)delta;
+			if(JumpsSinceHitGround == 0) // makes it so double jump doesn't allow 2 jumps in the air if fell of a ledge
+			{
+				JumpsSinceHitGround++;
+			}
 		}
 		else 
 		{
@@ -211,9 +209,9 @@ public partial class Character : Entity
 	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
 	public void SetWeapon(string scenePath)
 	{
-		if (equippedWeapon != null)
+		if (EquippedWeapon != null)
 		{
-			equippedWeapon.QueueFree();
+			EquippedWeapon.QueueFree();
 		}
 
 		if(scenePath != null)
@@ -221,13 +219,13 @@ public partial class Character : Entity
 			PackedScene weaponScene = (PackedScene) ResourceLoader.Load(scenePath);
 			UpgradableWeapon weapon = (UpgradableWeapon) weaponScene.Instantiate();
 			Random nameGenerator = new(); // to get nonconflicting names. MultiplayerSpawner gets mixed up if not
-            equippedWeapon = weapon;
-			equippedWeapon.Name = GetMultiplayerAuthority().ToString() + "#" + nameGenerator.NextInt64(10000);
+            EquippedWeapon = weapon;
+			EquippedWeapon.Name = GetMultiplayerAuthority().ToString() + "#" + nameGenerator.NextInt64(10000);
 			
-			Hand.AddChild(equippedWeapon);
+			Hand.AddChild(EquippedWeapon);
 
 			// toggle ammo count display of local player
-				UI.InGameUI.AmmoCount.Visible = equippedWeapon != null;
+				UI.InGameUI.AmmoCount.Visible = EquippedWeapon != null;
 		}
 	}
 

@@ -32,7 +32,7 @@ public partial class Lobby : Control
         UI.Lobby = this;
 
         // init list of levels
-        foreach(string filepath in Root.GetLevelFilepaths()) 
+        foreach(string filepath in Root.GetScenesAtFilepath(Root.LevelsFilepath)) 
 		{
             LevelSelector.AddItem(filepath.Split('/').Last().Split('.').First());
         }

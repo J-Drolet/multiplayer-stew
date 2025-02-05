@@ -26,13 +26,14 @@ properties/4/path = NodePath(".:visible")
 properties/4/spawn = true
 properties/4/replication_mode = 1
 
-[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "ProjectileOrigin", "Head", "Hand", "Hitboxes", "HealthText")]
+[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "ProjectileOrigin", "Head", "Hand", "WeaponSpawner", "Hitboxes", "HealthText")]
 visible = false
 script = ExtResource("1_n6eoi")
 Camera = NodePath("Head/Camera3D")
 ProjectileOrigin = NodePath("Head/Camera3D/ProjectileOrigin")
 Head = NodePath("Head")
 Hand = NodePath("Head/Camera3D/Hand")
+WeaponSpawner = NodePath("Head/Camera3D/Hand/MultiplayerSpawner")
 Hitboxes = [NodePath("Area3D")]
 HealthText = NodePath("Cur Health")
 metadata/_edit_group_ = true
@@ -61,7 +62,6 @@ cull_mask = 1048573
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.368436, -0.486425, -1.21339)
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="Head/Camera3D/Hand"]
-_spawnable_scenes = PackedStringArray("res://Scenes/Weapons/BoltAction.tscn", "res://Scenes/Weapons/Mac10.tscn", "res://Scenes/Weapons/pistol.tscn", "res://Scenes/Weapons/Shotgun.tscn")
 spawn_path = NodePath("..")
 
 [node name="ProjectileOrigin" type="Node3D" parent="Head/Camera3D"]
