@@ -1,0 +1,171 @@
+[gd_scene load_steps=17 format=3 uid="uid://b2he51vqcap7s"]
+
+[ext_resource type="Script" path="res://Scripts/Pickups/CharacterUpgradePickup.cs" id="1_0a4hl"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_uhyuo"]
+noise_type = 2
+frequency = 0.0256
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4sfrr"]
+bump_strength = 32.0
+normalize = false
+noise = SubResource("FastNoiseLite_uhyuo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndh8k"]
+albedo_color = Color(0.000645722, 0.218362, 1, 1)
+albedo_texture = SubResource("NoiseTexture2D_4sfrr")
+metallic = 1.0
+metallic_specular = 1.0
+emission_energy_multiplier = 16.0
+
+[sub_resource type="TorusMesh" id="TorusMesh_6e8is"]
+material = SubResource("StandardMaterial3D_ndh8k")
+inner_radius = 0.401
+outer_radius = 0.268
+rings = 15
+ring_segments = 16
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_g77vp"]
+emission_shape = 1
+emission_sphere_radius = 2.19
+angle_min = -57.8
+angle_max = 358.2
+turbulence_enabled = true
+turbulence_noise_strength = 20.0
+turbulence_noise_scale = 0.225
+turbulence_noise_speed_random = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cde7f"]
+transparency = 1
+albedo_color = Color(0, 0.219608, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3tp6x"]
+material = SubResource("StandardMaterial3D_cde7f")
+size = Vector3(0.05, 0.05, 0.05)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_gvg84"]
+noise_type = 3
+seed = 3
+frequency = 0.0034
+fractal_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ldh5r"]
+seamless = true
+as_normal_map = true
+bump_strength = 10.6
+noise = SubResource("FastNoiseLite_gvg84")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xmk3o"]
+transparency = 1
+albedo_color = Color(0, 1, 1, 0.27451)
+metallic = 0.47
+metallic_specular = 0.0
+roughness = 0.0
+normal_enabled = true
+normal_scale = -0.38
+normal_texture = SubResource("NoiseTexture2D_ldh5r")
+subsurf_scatter_strength = 0.09
+refraction_enabled = true
+refraction_scale = -0.26
+
+[sub_resource type="BoxMesh" id="BoxMesh_fng43"]
+material = SubResource("StandardMaterial3D_xmk3o")
+
+[sub_resource type="Animation" id="Animation_hgvp4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Attributes:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0vvxu"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Attributes:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nubif"]
+_data = {
+"RESET": SubResource("Animation_hgvp4"),
+"Rotation": SubResource("Animation_0vvxu")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o0sq4"]
+size = Vector3(2, 2, 2)
+
+[node name="PickupDelineator2" type="Node3D" node_paths=PackedStringArray("PickupArea", "APlayer")]
+script = ExtResource("1_0a4hl")
+PickupArea = NodePath("Area3D")
+APlayer = NodePath("AnimationPlayer")
+
+[node name="Attributes" type="Node3D" parent="."]
+
+[node name="BottomRing" type="MeshInstance3D" parent="Attributes"]
+mesh = SubResource("TorusMesh_6e8is")
+skeleton = NodePath("../..")
+
+[node name="FlavorParticles" type="GPUParticles3D" parent="Attributes"]
+transform = Transform3D(0.200548, 0, 0, 0, 0.170077, 0, 0, 0, 0.200548, 0, 0.415189, 0)
+amount = 50
+lifetime = 0.25
+interp_to_end = 0.07
+preprocess = 3.0
+speed_scale = 0.2
+explosiveness = 0.01
+fixed_fps = 60
+interpolate = false
+trail_lifetime = 3.0
+process_material = SubResource("ParticleProcessMaterial_g77vp")
+draw_pass_1 = SubResource("BoxMesh_3tp6x")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Attributes"]
+transform = Transform3D(-0.999748, -0.000727833, 0.0224486, 0.0224604, -0.032397, 0.999223, 0, 0.999475, 0.0324052, -0.0272127, 0.683721, 0.0177928)
+light_color = Color(0.129009, 0.365446, 1, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 15.11
+light_size = 1.0
+light_specular = 16.0
+spot_range = 0.956441
+spot_angle = 38.2143
+
+[node name="IceCube" type="Node3D" parent="Attributes"]
+
+[node name="PLACEHOLDER" type="MeshInstance3D" parent="Attributes/IceCube"]
+transform = Transform3D(0.292004, -0.148803, 0, 0.148803, 0.292004, 0, 0, 0, 0.327733, 0, 0.275359, 0)
+mesh = SubResource("BoxMesh_fng43")
+skeleton = NodePath("../../..")
+script = ExtResource("1_0a4hl")
+Upgrade = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nubif")
+}
+autoplay = "Rotation"
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(0.387666, 0, 0, 0, 0.387666, 0, 0, 0, 0.387666, -0.0311243, 0.286345, 0)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_o0sq4")
