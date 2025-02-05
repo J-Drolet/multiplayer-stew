@@ -1,14 +1,18 @@
-[gd_scene load_steps=13 format=3 uid="uid://dustp76kyosr0"]
+[gd_scene load_steps=17 format=3 uid="uid://dustp76kyosr0"]
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_xdbua"]
 [ext_resource type="PackedScene" uid="uid://bwh21gfyr2idt" path="res://Scenes/GodotBox.tscn" id="2_glbo0"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_hmwfx"]
-[ext_resource type="PackedScene" uid="uid://x7a1ptqtwtmp" path="res://Scenes/Pickups/PistolPickup.tscn" id="3_ttko1"]
-[ext_resource type="PackedScene" uid="uid://b0ywmvox13rx1" path="res://Scenes/Pickups/ShotgunPickup.tscn" id="4_4busq"]
+[ext_resource type="PackedScene" uid="uid://x7a1ptqtwtmp" path="res://Scenes/Pickups/Weapon Pickups/PistolPickup.tscn" id="3_ttko1"]
+[ext_resource type="PackedScene" uid="uid://b0ywmvox13rx1" path="res://Scenes/Pickups/Weapon Pickups/ShotgunPickup.tscn" id="4_4busq"]
+[ext_resource type="PackedScene" uid="uid://cryxnpccnb5vv" path="res://Scenes/Pickups/Character Upgrade Pickups/DoubleJumpPickupDEMO.tscn" id="4_qov8v"]
 [ext_resource type="PackedScene" uid="uid://dpd0cvtbs8iuo" path="res://Scenes/Target.tscn" id="5_5mb3y"]
-[ext_resource type="PackedScene" uid="uid://k3u720y471ax" path="res://Scenes/Pickups/Mac10Pickup.tscn" id="6_vl5y8"]
-[ext_resource type="PackedScene" uid="uid://1fdlt6hucwhx" path="res://Scenes/Pickups/BoltyPickup.tscn" id="8_xscgj"]
+[ext_resource type="PackedScene" uid="uid://cm2whm84p0m3u" path="res://Scenes/Pickups/Weapon Pickups/DEMOPistolPickup.tscn" id="5_iy05k"]
+[ext_resource type="PackedScene" uid="uid://k3u720y471ax" path="res://Scenes/Pickups/Weapon Pickups/Mac10Pickup.tscn" id="6_vl5y8"]
+[ext_resource type="PackedScene" uid="uid://1fdlt6hucwhx" path="res://Scenes/Pickups/Weapon Pickups/BoltyPickup.tscn" id="8_xscgj"]
 [ext_resource type="PackedScene" uid="uid://00oigava2hm0" path="res://Scenes/Pickups/SimpleCharacterPickup.tscn" id="9_un6hj"]
+[ext_resource type="PackedScene" uid="uid://c1g1i6jf36w1w" path="res://Scenes/Pickups/HealthPickup.tscn" id="10_wk5ir"]
+[ext_resource type="PackedScene" uid="uid://bxxmlyeymtjud" path="res://Scenes/Pickups/Weapon Upgrade Pickups/DEMOCartonPickup.tscn" id="14_m1uri"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4e45f"]
 albedo_color = Color(0.239473, 0.128064, 0.00900927, 1)
@@ -23,6 +27,24 @@ size = Vector3(50, 0.25, 50)
 [node name="Level" type="Node3D"]
 script = ExtResource("1_xdbua")
 PlayerScene = ExtResource("2_hmwfx")
+
+[node name="HealthPickup" parent="." instance=ExtResource("10_wk5ir")]
+transform = Transform3D(2.22573, 0, 0, 0, 2.22573, 0, 0, 0, 2.22573, 13.403, 0.0122315, 2.0253)
+HealthGained = 10
+
+[node name="DoubleJumpDemo" parent="." instance=ExtResource("4_qov8v")]
+transform = Transform3D(2.22573, 0, 0, 0, 2.22573, 0, 0, 0, 2.22573, 10.0543, 0.012, 2.04714)
+
+[node name="PistolTest" parent="." instance=ExtResource("5_iy05k")]
+transform = Transform3D(2.22573, 0, 0, 0, 2.22573, 0, 0, 0, 2.22573, 16.2882, 0.012, 2.01393)
+DestroyOnPickup = false
+
+[node name="CartonPickup" parent="." instance=ExtResource("14_m1uri")]
+transform = Transform3D(2.22573, 0, 0, 0, 2.22573, 0, 0, 0, 2.22573, 18.623, 0.012, 2.09)
+visible = false
+
+[node name="PickupDelineator" parent="." instance=ExtResource("14_m1uri")]
+transform = Transform3D(2.22573, 0, 0, 0, 2.22573, 0, 0, 0, 2.22573, 18.623, 0.012, 2.09)
 
 [node name="Floor" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.210621, 0)

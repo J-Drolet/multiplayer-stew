@@ -1,20 +1,22 @@
-[gd_scene load_steps=24 format=3 uid="uid://btavi7m2jh606"]
+[gd_scene load_steps=26 format=3 uid="uid://btavi7m2jh606"]
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_tjnmx"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_m4m6e"]
+[ext_resource type="PackedScene" uid="uid://c7ek42dfgsy5g" path="res://Scenes/Pickups/HealthPickup.tscn" id="3_0uke4"]
 [ext_resource type="PackedScene" uid="uid://da5tgs4f5e5a3" path="res://Scenes/Levels/LevelAssets/Level2Assets/waterparticles.tscn" id="3_2wa11"]
+[ext_resource type="PackedScene" uid="uid://bfbkx2qo7a8br" path="res://Scenes/Pickups/PickupDelineator.tscn" id="3_bn1pw"]
 [ext_resource type="PackedScene" uid="uid://6jntjlknvgow" path="res://Scenes/Levels/LevelAssets/UtilityAssets/DeathBarrier.tscn" id="3_gcujq"]
 [ext_resource type="PackedScene" uid="uid://cnjqtyat1tb0i" path="res://Scenes/Levels/LevelAssets/Level2Assets/lvl2water.tscn" id="4_3ia18"]
-[ext_resource type="PackedScene" uid="uid://x7a1ptqtwtmp" path="res://Scenes/Pickups/PistolPickup.tscn" id="4_7bjvl"]
+[ext_resource type="PackedScene" uid="uid://x7a1ptqtwtmp" path="res://Scenes/Pickups/Weapon Pickups/PistolPickup.tscn" id="4_7bjvl"]
 [ext_resource type="PackedScene" uid="uid://yqxo7dd0068w" path="res://Scenes/Levels/LevelAssets/Level2Assets/sandbag.tscn" id="4_51ga2"]
 [ext_resource type="PackedScene" uid="uid://dxtx8tubrgl7h" path="res://Scenes/Levels/LevelAssets/Level2Assets/arch2.tscn" id="4_xgihm"]
-[ext_resource type="PackedScene" uid="uid://b0ywmvox13rx1" path="res://Scenes/Pickups/ShotgunPickup.tscn" id="5_2onvt"]
+[ext_resource type="PackedScene" uid="uid://b0ywmvox13rx1" path="res://Scenes/Pickups/Weapon Pickups/ShotgunPickup.tscn" id="5_2onvt"]
 [ext_resource type="PackedScene" uid="uid://bdu7h1l1jg443" path="res://Scenes/Levels/LevelAssets/Level2Assets/concretepipe.tscn" id="5_xq3c0"]
 [ext_resource type="PackedScene" uid="uid://dpd0cvtbs8iuo" path="res://Scenes/Target.tscn" id="6_dsuo7"]
 [ext_resource type="PackedScene" uid="uid://d1glk6osihae1" path="res://Scenes/Levels/LevelAssets/Level2Assets/fuelstorage.tscn" id="6_w1hny"]
-[ext_resource type="PackedScene" uid="uid://k3u720y471ax" path="res://Scenes/Pickups/Mac10Pickup.tscn" id="7_6s4tg"]
+[ext_resource type="PackedScene" uid="uid://k3u720y471ax" path="res://Scenes/Pickups/Weapon Pickups/Mac10Pickup.tscn" id="7_6s4tg"]
 [ext_resource type="PackedScene" uid="uid://eb3bvjl3kk7c" path="res://Scenes/Levels/LevelAssets/Level2Assets/csgtestasset.tscn" id="7_x8i23"]
-[ext_resource type="PackedScene" uid="uid://1fdlt6hucwhx" path="res://Scenes/Pickups/BoltyPickup.tscn" id="8_886jj"]
+[ext_resource type="PackedScene" uid="uid://1fdlt6hucwhx" path="res://Scenes/Pickups/Weapon Pickups/BoltyPickup.tscn" id="8_886jj"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_ciif0"]
 noise_type = 5
@@ -79,6 +81,9 @@ size = Vector3(50, 0.25, 50)
 [node name="Level" type="Node3D"]
 script = ExtResource("1_tjnmx")
 PlayerScene = ExtResource("2_m4m6e")
+
+[node name="PickupDelineator" parent="." instance=ExtResource("3_bn1pw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.79368, 0.394823, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.652707, 0.75761, 0, -0.75761, 0.652707, 19.9146, 78.0968, -48.2063)
@@ -182,3 +187,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 23.4312)
 
 [node name="4" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.69138, 0, 22.9489)
+
+[node name="HealthPickup" parent="." instance=ExtResource("3_0uke4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.347304, 0.427873, 0)

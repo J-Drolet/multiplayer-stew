@@ -52,16 +52,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wyovt")
 
-[node name="SimpleBullet" type="Node3D"]
+[node name="SimpleBullet" type="Node3D" node_paths=PackedStringArray("multiplayerSynchronizer")]
 script = ExtResource("1_iga3j")
 InitialVelocity = 40.0
 Damage = 3.0
 Lifespan = 2.0
 ShotSpread = 0.05
+multiplayerSynchronizer = NodePath("MultiplayerSynchronizer")
 metadata/_edit_group_ = true
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_h0560")
+public_visibility = false
 
 [node name="Pistol_caliber_1" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.049, 0, 0, 0, -4.41485e-09, 0.049, 0, -0.101, -2.14186e-09, 0, 0, 0)

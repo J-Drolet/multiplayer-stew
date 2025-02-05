@@ -70,13 +70,14 @@ namespace multiplayerstew.Scripts.Base
 		public void Fire()
 		{   
 			if ((CurrentAmmo > 0 || MaxAmmo < 0) && CanFire) 
-			{
+			{	
+				Random rng = new();
 				APlayer.Play("Fire");
 				CurrentAmmo -= 1;
 				for (int x = ProjectilePerShot; x > 0; x--)
 				{
 					UpgradeableProjectile projectileInstance = Projectile.Instantiate() as UpgradeableProjectile;
-					projectileInstance.Name = GetMultiplayerAuthority().ToString() +"#";
+					projectileInstance.Name = GetMultiplayerAuthority().ToString() + "#" + rng.NextInt64(10000); // encode the owner of the projectile and the RNG seed
                     projectileInstance.GlobalTransform = GameManager.Players[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalTransform; // initial spot for local view
                     GameManager.Players[GetMultiplayerAuthority()].projectileParent.AddChild(projectileInstance, true);
                 }
