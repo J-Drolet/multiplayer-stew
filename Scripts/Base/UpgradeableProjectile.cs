@@ -44,10 +44,10 @@ namespace multiplayerstew.Scripts.Base
         {
             GodotErrorService.ValidateRequiredData(this);
 
-            if(projectileOwner == Multiplayer.GetUniqueId()) {
-                SetMultiplayerAuthority(projectileOwner);
-                multiplayerSynchronizer.Free();
-            }
+            // disable syncing on projectileOwner
+            Func<int, bool> syncFilter = (int peerId) => { return peerId != projectileOwner; };
+            multiplayerSynchronizer.AddVisibilityFilter(Callable.From(syncFilter));
+            multiplayerSynchronizer.UpdateVisibility();
 
             if(!IsMultiplayerAuthority()) return;
 
@@ -61,8 +61,7 @@ namespace multiplayerstew.Scripts.Base
             Velocity = directionVector * InitialVelocity;
 
             if (!Multiplayer.IsServer()) return;
-            Func<int, bool> syncFilter = (int peerId) => { return peerId != projectileOwner; };
-            multiplayerSynchronizer.AddVisibilityFilter(Callable.From(syncFilter));
+            //multiplayerSynchronizer.AddVisibilityFilter(Callable.From(syncFilter));
 
             // dynamically add raycast
             HitDetectionRaycast = new();
