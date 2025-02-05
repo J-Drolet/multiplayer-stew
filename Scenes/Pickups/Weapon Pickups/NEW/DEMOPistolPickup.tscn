@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://cm2whm84p0m3u"]
 
 [ext_resource type="Script" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_52fw0"]
-[ext_resource type="PackedScene" uid="uid://x7a1ptqtwtmp" path="res://Scenes/Pickups/Weapon Pickups/PistolPickup.tscn" id="2_68hqo"]
+[ext_resource type="PackedScene" uid="uid://x7a1ptqtwtmp" path="res://Scenes/Pickups/Weapon Pickups/OLD/PistolPickup.tscn" id="2_68hqo"]
 [ext_resource type="PackedScene" uid="uid://b8hpvrno7saob" path="res://Scenes/Weapons/pistol.tscn" id="2_t8sdl"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_uhyuo"]
