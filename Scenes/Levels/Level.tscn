@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cryxnpccnb5vv" path="res://Scenes/Pickups/Character Upgrade Pickups/DoubleJumpPickupDEMO.tscn" id="4_qov8v"]
 [ext_resource type="PackedScene" uid="uid://dpd0cvtbs8iuo" path="res://Scenes/Target.tscn" id="5_5mb3y"]
 [ext_resource type="PackedScene" uid="uid://cm2whm84p0m3u" path="res://Scenes/Pickups/Weapon Pickups/DEMOPistolPickup.tscn" id="5_iy05k"]
-[ext_resource type="PackedScene" uid="uid://b1f7iivgyecvp" path="res://Scenes/Pickups/Weapon Pickups/DEMOShotgunPickup.tscn" id="6_jf0qt"]
+[ext_resource type="PackedScene" path="res://Scenes/Pickups/Weapon Pickups/DEMOShotgunPickup.tscn" id="6_jf0qt"]
 [ext_resource type="PackedScene" uid="uid://k3u720y471ax" path="res://Scenes/Pickups/Weapon Pickups/Mac10Pickup.tscn" id="6_vl5y8"]
 [ext_resource type="PackedScene" uid="uid://bjlgoyux84yc2" path="res://Scenes/Pickups/Character Upgrade Pickups/MentholPickup.tscn" id="8_8i516"]
 [ext_resource type="PackedScene" uid="uid://1fdlt6hucwhx" path="res://Scenes/Pickups/Weapon Pickups/BoltyPickup.tscn" id="8_xscgj"]

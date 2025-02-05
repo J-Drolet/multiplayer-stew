@@ -28,4 +28,3 @@ mesh = SubResource("SphereMesh_k41vp")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_sjcrr")
-public_visibility = false
