@@ -10,16 +10,17 @@
 [ext_resource type="PackedScene" uid="uid://cm2whm84p0m3u" path="res://Scenes/Pickups/Weapon Pickups/DEMOPistolPickup.tscn" id="5_iy05k"]
 [ext_resource type="PackedScene" path="res://Scenes/Pickups/Weapon Pickups/DEMOShotgunPickup.tscn" id="6_jf0qt"]
 [ext_resource type="PackedScene" uid="uid://k3u720y471ax" path="res://Scenes/Pickups/Weapon Pickups/Mac10Pickup.tscn" id="6_vl5y8"]
+[ext_resource type="PackedScene" path="res://Scenes/Pickups/Character Upgrade Pickups/MentholPickup.tscn" id="8_8i516"]
 [ext_resource type="PackedScene" uid="uid://1fdlt6hucwhx" path="res://Scenes/Pickups/Weapon Pickups/BoltyPickup.tscn" id="8_xscgj"]
-[ext_resource type="PackedScene" path="res://Scenes/Pickups/SimpleCharacterPickup.tscn" id="9_un6hj"]
-[ext_resource type="PackedScene" path="res://Scenes/Pickups/HealthPickup.tscn" id="10_wk5ir"]
+[ext_resource type="PackedScene" uid="uid://00oigava2hm0" path="res://Scenes/Pickups/SimpleCharacterPickup.tscn" id="9_un6hj"]
+[ext_resource type="PackedScene" uid="uid://c1g1i6jf36w1w" path="res://Scenes/Pickups/HealthPickup.tscn" id="10_wk5ir"]
 [ext_resource type="PackedScene" uid="uid://bxxmlyeymtjud" path="res://Scenes/Pickups/Weapon Upgrade Pickups/DEMOCartonPickup.tscn" id="14_m1uri"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3tyrx"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4e45f"]
 albedo_color = Color(0.239473, 0.128064, 0.00900927, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_p1auc"]
-material = SubResource("StandardMaterial3D_3tyrx")
+material = SubResource("StandardMaterial3D_4e45f")
 size = Vector3(50, 0.25, 50)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bbwtt"]
@@ -60,10 +61,6 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
 shape = SubResource("BoxShape3D_bbwtt")
-
-[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0560989, 0.000106812, 0.055954)
-size = Vector3(50.3147, 0.246613, 49.979)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.766896, 0.439592, -0.467578, 0, 0.728574, 0.684967, 0.641771, -0.525299, 0.558741, 0, 0, 0)
@@ -112,6 +109,3 @@ DestroyOnPickup = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27323, -0.085621, -14.7573)
 Upgrade = 2
 DestroyOnPickup = false
-
-[node name="GPUParticles3D" parent="." instance=ExtResource("7_p800s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.91518, 0.202051)
