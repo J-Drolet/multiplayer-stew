@@ -25,7 +25,7 @@ public partial class Character : Entity
 
 
     [Export]
-    private UpgradableWeapon EquippedWeapon;
+    public UpgradableWeapon EquippedWeapon;
 
 	public const float BaseSpeed = 5.0f;
 	public const float JumpVelocity = 4.5f;

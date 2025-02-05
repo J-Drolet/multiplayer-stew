@@ -54,9 +54,9 @@ namespace multiplayerstew.Scripts.Base
             GlobalTransform = GameManager.Players[projectileOwner].characterNode.ProjectileOrigin.GlobalTransform;
 
             Vector3 directionVector = -GlobalTransform.Basis.Z;
-
+            int yAngleOffset = Name.ToString().Split('#')[2].ToInt();
             directionVector = directionVector.Rotated(Transform.Basis.X, ((float)Rng.NextDouble() * ShotSpread*2) + (-ShotSpread));
-            directionVector = directionVector.Rotated(Transform.Basis.Y, ((float)Rng.NextDouble() * ShotSpread*2) + (-ShotSpread));
+            directionVector = directionVector.Rotated(Transform.Basis.Y, ((float)Rng.NextDouble() * ShotSpread*2) + (-ShotSpread) + Mathf.DegToRad(yAngleOffset));
 
             Velocity = directionVector * InitialVelocity;
 

@@ -78,12 +78,27 @@ namespace multiplayerstew.Scripts.Base
 				Random rng = new();
 				APlayer.Play("Fire");
 				CurrentAmmo -= 1;
+				
+				List<int> angleOffsets = new(); // for each angleOffset a bullet will be fired with that offset
+				if(Upgrades.Contains(WeaponUpgrade.DunceCap))
+				{
+					angleOffsets.Add(-30);
+					angleOffsets.Add(30);
+				}
+				else
+				{
+					angleOffsets.Add(0);
+				}
+
 				for (int x = ProjectilePerShot; x > 0; x--)
 				{
-					UpgradeableProjectile projectileInstance = Projectile.Instantiate() as UpgradeableProjectile;
-					projectileInstance.Name = GetMultiplayerAuthority().ToString() + "#" + rng.NextInt64(10000); // encode the owner of the projectile and the RNG seed
-                    projectileInstance.GlobalTransform = GameManager.Players[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalTransform; // initial spot for local view
-                    GameManager.Players[GetMultiplayerAuthority()].projectileParent.AddChild(projectileInstance, true);
+					foreach(int angleOffset in angleOffsets)
+					{
+						UpgradeableProjectile projectileInstance = Projectile.Instantiate() as UpgradeableProjectile;
+						projectileInstance.Name = GetMultiplayerAuthority().ToString() + "#" + rng.NextInt64(10000)  + "#" + angleOffset; // encode the owner of the projectile and the RNG seed
+						projectileInstance.GlobalTransform = GameManager.Players[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalTransform; // initial spot for local view
+						GameManager.Players[GetMultiplayerAuthority()].projectileParent.AddChild(projectileInstance, true);
+					}
                 }
 			}
 			else if(CurrentAmmo <= 0 && MaxAmmo >= 0)
@@ -156,5 +171,17 @@ namespace multiplayerstew.Scripts.Base
 
 			return meshes;
 		} 
+
+		[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+		public void AddUpgrade(WeaponUpgrade upgrade)
+		{
+			Upgrades.Add(upgrade);
+		}
+
+		[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+		public void RemoveUpgrade(WeaponUpgrade upgrade)
+		{
+			Upgrades.Remove(upgrade);
+		}
 	}
 }
