@@ -48,8 +48,12 @@ namespace multiplayerstew.Scripts.Base
 		private int CurrentAmmo { get; set; }
 		public HashSet<WeaponUpgrade> Upgrades { get; set; } = new();
 
+        public override void _EnterTree()
+        {
+            SetMultiplayerAuthority(Name.ToString().Split('#').First().ToInt());
+        }
 
-		public override void _Ready()
+        public override void _Ready()
 		{
 			GodotErrorService.ValidateRequiredData(this);
 			GameManager.Players[GetMultiplayerAuthority()].projectileSpawner.AddSpawnableScene(Projectile.ResourcePath);

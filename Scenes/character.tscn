@@ -60,6 +60,10 @@ cull_mask = 1048573
 [node name="Hand" type="Node3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.368436, -0.486425, -1.21339)
 
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="Head/Camera3D/Hand"]
+_spawnable_scenes = PackedStringArray("res://Scenes/Weapons/BoltAction.tscn", "res://Scenes/Weapons/Mac10.tscn", "res://Scenes/Weapons/pistol.tscn", "res://Scenes/Weapons/Shotgun.tscn")
+spawn_path = NodePath("..")
+
 [node name="ProjectileOrigin" type="Node3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.75163)
 

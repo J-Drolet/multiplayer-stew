@@ -11,31 +11,10 @@ namespace multiplayerstew.Scripts.Pickups
 		[Export, ExportRequired]
 		private PackedScene Weapon { get; set; }
 
-		public override void _Ready()
-		{
-			base._Ready();
-			GodotErrorService.ValidateRequiredData(this);
-		}
 
-		protected override void ActivatePickup(Node3D body)
+		protected override void ActivatePickup(Character character)
 		{
-			if (body is Character)
-			{
-				Character character = body as Character;
-                UpgradableWeapon weaponPickup = Weapon.Instantiate() as UpgradableWeapon;
-
-				// Dont pick up same weapon again and if so, delete instantiated weapon
-				if ((character.EquippedWeapon?.Name ?? "") != weaponPickup.Name)
-				{
-					character.EquippedWeapon = weaponPickup;
-					if (DestroyOnPickup)
-						this.QueueFree();
-				}
-				else 
-				{
-					weaponPickup.QueueFree();
-				}
-			}
+			character.RpcId(character.GetMultiplayerAuthority(), Character.MethodName.SetWeapon, Weapon.ResourcePath);
 		}
 	}
 }

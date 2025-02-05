@@ -33,8 +33,7 @@ public partial class Character : Entity
                 equippedWeapon.QueueFree();
             }
             equippedWeapon = value;
-			equippedWeapon.Name = GetMultiplayerAuthority().ToString() + ":EquippedWeapon";
-			equippedWeapon.SetMultiplayerAuthority(GetMultiplayerAuthority());
+			equippedWeapon.Name = GetMultiplayerAuthority().ToString() + "#EquippedWeapon";
             Hand.AddChild(equippedWeapon);
 
 			// toggle ammo count display of local player
@@ -206,5 +205,41 @@ public partial class Character : Entity
 
 		Visible = true; // once spawned make visible
 		Camera.MakeCurrent(); // dont want to see a split second before spawn is set
+	}
+
+	
+	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+	public void SetWeapon(string scenePath)
+	{
+		if (equippedWeapon != null)
+		{
+			equippedWeapon.QueueFree();
+		}
+
+		if(scenePath != null)
+		{
+			PackedScene weaponScene = (PackedScene) ResourceLoader.Load(scenePath);
+			UpgradableWeapon weapon = (UpgradableWeapon) weaponScene.Instantiate();
+			Random nameGenerator = new(); // to get nonconflicting names. MultiplayerSpawner gets mixed up if not
+            equippedWeapon = weapon;
+			equippedWeapon.Name = GetMultiplayerAuthority().ToString() + "#" + nameGenerator.NextInt64(10000);
+			
+			Hand.AddChild(equippedWeapon);
+
+			// toggle ammo count display of local player
+				UI.InGameUI.AmmoCount.Visible = equippedWeapon != null;
+		}
+	}
+
+	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+	public void AddUpgrade(CharacterUpgrade upgrade)
+	{
+		Upgrades.Add(upgrade);
+	}
+
+	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+	public void RemoveUpgrade(CharacterUpgrade upgrade)
+	{
+		Upgrades.Remove(upgrade);
 	}
 }
