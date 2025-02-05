@@ -9,31 +9,11 @@ public partial class HealthPickup : Pickup
     [Export, ExportRequired]
     public int HealthGained;
 
-    public override void _Ready()
+    protected override void ActivatePickup(Character character)
     {
-        GodotErrorService.ValidateRequiredData(this);
-        base._Ready();
-    }
-
-    protected override void ActivatePickup(Node3D body)
-    {
-        if (body is Character)
+        if (character.CurrentHealth < character.MaxHealth)
         {
-            Character character = body as Character;
-
-            {
-                if (character.CurrentHealth < character.MaxHealth)
-                {
-                    if ((character.CurrentHealth + HealthGained) < character.MaxHealth)
-                    {
-                        character.CurrentHealth = (character.CurrentHealth + HealthGained);
-                    }
-                    if ((character.CurrentHealth + HealthGained) >= character.MaxHealth)
-                    {
-                        character.CurrentHealth = character.MaxHealth;
-                    }
-                }
-            }
+            character.RpcId(character.GetMultiplayerAuthority(), Character.MethodName.SetCurrentHealth, Mathf.Clamp(character.CurrentHealth + HealthGained, 0, character.MaxHealth));
         }
     }
 }

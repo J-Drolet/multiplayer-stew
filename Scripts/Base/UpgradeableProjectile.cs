@@ -37,17 +37,17 @@ namespace multiplayerstew.Scripts.Base
         public override void _EnterTree()
         {
             projectileOwner = Name.ToString().Split('#').First().ToInt();
-            Rng = new(Name.ToString().Split('#').Last().ToInt()); // get seed from name
+            Rng = new(Name.ToString().Split('#')[1].ToInt()); // get seed from name
         }
 
         public override void _Ready()
         {
             GodotErrorService.ValidateRequiredData(this);
 
-            if(projectileOwner == Multiplayer.GetUniqueId()) {
-                SetMultiplayerAuthority(projectileOwner);
-                multiplayerSynchronizer.Free();
-            }
+            // disable syncing on projectileOwner
+            Func<int, bool> syncFilter = (int peerId) => { return peerId != projectileOwner; };
+            multiplayerSynchronizer.AddVisibilityFilter(Callable.From(syncFilter));
+            multiplayerSynchronizer.UpdateVisibility();
 
             if(!IsMultiplayerAuthority()) return;
 
@@ -61,8 +61,6 @@ namespace multiplayerstew.Scripts.Base
             Velocity = directionVector * InitialVelocity;
 
             if (!Multiplayer.IsServer()) return;
-            Func<int, bool> syncFilter = (int peerId) => { return peerId != projectileOwner; };
-            multiplayerSynchronizer.AddVisibilityFilter(Callable.From(syncFilter));
 
             // dynamically add raycast
             HitDetectionRaycast = new();
@@ -78,7 +76,7 @@ namespace multiplayerstew.Scripts.Base
 
         public override void _Process(double delta)
         {
-            if (!Multiplayer.IsServer()) return;
+            if (!Multiplayer.IsServer()) return; // only the server is concerned with destroying bullets
 
             TimeAlive += (float)delta;
             if (TimeAlive > Lifespan)
@@ -98,7 +96,7 @@ namespace multiplayerstew.Scripts.Base
             {
                 LookAt(GlobalPosition + Velocity.Normalized(), Vector3.Up);
 
-                if(Multiplayer.IsServer())
+                if(Multiplayer.IsServer()) // only the server cares about hit collision
                 {
                     HitDetectionRaycast.TargetPosition = ToLocal(GlobalPosition + Velocity * (float)delta);
                     HitDetectionRaycast.ForceRaycastUpdate();

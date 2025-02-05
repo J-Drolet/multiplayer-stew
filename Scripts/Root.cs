@@ -7,6 +7,7 @@ using System.Collections.Generic;
 public partial class Root : Node
 {
 	public static readonly string LevelsFilepath = "res://Scenes/Levels/";
+	public static readonly string WeaponsFilepath = "res://Scenes/Weapons/";
 
 	[Export, ExportRequired]
 	public PackedScene ClientScene { get; set; }
@@ -47,22 +48,22 @@ public partial class Root : Node
 		}
 	}
 
-	public static List<string> GetLevelFilepaths()
+	public static List<string> GetScenesAtFilepath(string parentFilepath)
 	{
-		List<string> levels = new();
-		DirAccess dir = DirAccess.Open(LevelsFilepath);
+		List<string> scenes = new();
+		DirAccess dir = DirAccess.Open(parentFilepath);
 		
 		foreach(string filename in dir.GetFiles()) 
 		{
-			string filepath = LevelsFilepath + filename;
+			string filepath = parentFilepath + filename;
 			string extension = GetExtension(filepath);
 			if(extension == "tscn" || extension == "scn" || extension == "escn")
 			{
-				levels.Add(filepath);
+				scenes.Add(filepath);
 			}
 		}
 
-		return levels;
+		return scenes;
 	}
 
 	private static string GetExtension(string filePath)
@@ -79,7 +80,7 @@ public partial class Root : Node
 	/// </summary>
 	private void RegisterLevelScenes()
 	{
-		foreach(string filepath in GetLevelFilepaths()) 
+		foreach(string filepath in GetScenesAtFilepath(LevelsFilepath)) 
 		{
 			LevelSpawner.AddSpawnableScene(filepath);
 		}

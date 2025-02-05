@@ -9,26 +9,15 @@ public partial class CharacterUpgradePickup : Pickup
     [Export, ExportRequired]
     public CharacterUpgrade Upgrade;
 
-    public override void _Ready()
+    protected override void ActivatePickup(Character character)
     {
-        GodotErrorService.ValidateRequiredData(this);
-        base._Ready();
-    }
-
-    protected override void ActivatePickup(Node3D body)
-    {
-        if (body is Character)
+        if(!character.Upgrades.Contains(Upgrade))
         {
-            Character character = body as Character;
+            character.Rpc(Character.MethodName.AddUpgrade, Variant.From(Upgrade));
 
-            if(!character.Upgrades.Contains(Upgrade))
+            if (DestroyOnPickup)
             {
-                character.Upgrades.Add(Upgrade);
-
-                if (DestroyOnPickup)
-                {
-                    QueueFree();
-                }
+                QueueFree();
             }
         }
     }
