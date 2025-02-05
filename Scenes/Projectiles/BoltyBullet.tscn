@@ -12,10 +12,11 @@ properties/1/path = NodePath(".:rotation")
 properties/1/spawn = true
 properties/1/replication_mode = 1
 
-[node name="BoltyBullet" type="Node3D"]
+[node name="BoltyBullet" type="Node3D" node_paths=PackedStringArray("multiplayerSynchronizer")]
 script = ExtResource("1_ot4mb")
 InitialVelocity = 50.0
 Damage = 25.0
+multiplayerSynchronizer = NodePath("MultiplayerSynchronizer")
 
 [node name="Scale parent" type="Node3D" parent="."]
 transform = Transform3D(-2.71448e-08, 0, 0.188, 0, 0.201, 0, -0.621, 0, -8.21774e-09, 0, 0, 0)
@@ -27,3 +28,4 @@ skeleton = NodePath("../..")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_m7mpy")
+public_visibility = false

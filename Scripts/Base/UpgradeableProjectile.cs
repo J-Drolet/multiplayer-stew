@@ -22,6 +22,8 @@ namespace multiplayerstew.Scripts.Base
         public float Lifespan { get; set; } = 3.0f;
         [Export]
         public float ShotSpread { get; set; } = 0.0f;
+        [Export, ExportRequired]
+        public MultiplayerSynchronizer multiplayerSynchronizer { get; set; }
 
         private Vector3 Velocity = Vector3.Zero;
         private Vector3 ProjectileGravity = Vector3.Down * 5;
@@ -29,18 +31,38 @@ namespace multiplayerstew.Scripts.Base
         private int HitsLeft;
 
         private int projectileOwner;
+        private Random Rng;
         private RayCast3D HitDetectionRaycast;
 
         public override void _EnterTree()
         {
             projectileOwner = Name.ToString().Split('#').First().ToInt();
+            Rng = new(Name.ToString().Split('#').Last().ToInt()); // get seed from name
         }
 
         public override void _Ready()
         {
             GodotErrorService.ValidateRequiredData(this);
 
+            if(projectileOwner == Multiplayer.GetUniqueId()) {
+                SetMultiplayerAuthority(projectileOwner);
+                multiplayerSynchronizer.Free();
+            }
+
+            if(!IsMultiplayerAuthority()) return;
+
+            GlobalTransform = GameManager.Players[projectileOwner].characterNode.ProjectileOrigin.GlobalTransform;
+
+            Vector3 directionVector = -GlobalTransform.Basis.Z;
+
+            directionVector = directionVector.Rotated(Transform.Basis.X, ((float)Rng.NextDouble() * ShotSpread*2) + (-ShotSpread));
+            directionVector = directionVector.Rotated(Transform.Basis.Y, ((float)Rng.NextDouble() * ShotSpread*2) + (-ShotSpread));
+
+            Velocity = directionVector * InitialVelocity;
+
             if (!Multiplayer.IsServer()) return;
+            Func<int, bool> syncFilter = (int peerId) => { return peerId != projectileOwner; };
+            multiplayerSynchronizer.AddVisibilityFilter(Callable.From(syncFilter));
 
             // dynamically add raycast
             HitDetectionRaycast = new();
@@ -52,26 +74,17 @@ namespace multiplayerstew.Scripts.Base
             HitDetectionRaycast.CollideWithAreas = true;
             HitDetectionRaycast.CollideWithBodies = false;
             HitDetectionRaycast.HitFromInside = true;
-
-            GlobalTransform = GameManager.Players[projectileOwner].characterNode.ProjectileOrigin.GlobalTransform;
-
-            Vector3 directionVector = -GlobalTransform.Basis.Z;
-
-            Random rand = new();
-            directionVector = directionVector.Rotated(Transform.Basis.X, ((float)rand.NextDouble() * ShotSpread*2) + (-ShotSpread));
-            directionVector = directionVector.Rotated(Transform.Basis.Y, ((float)rand.NextDouble() * ShotSpread*2) + (-ShotSpread));
-
-            Velocity = directionVector * InitialVelocity;
         }
 
         public override void _Process(double delta)
         {
-            if (!IsMultiplayerAuthority()) return;
+            if (!Multiplayer.IsServer()) return;
 
             TimeAlive += (float)delta;
             if (TimeAlive > Lifespan)
             {
                 DisableSelf();
+                TimeAlive = -10; // give time for RPC to go through before trying to send it again (stops errors)
             }
         }
 
@@ -85,25 +98,28 @@ namespace multiplayerstew.Scripts.Base
             {
                 LookAt(GlobalPosition + Velocity.Normalized(), Vector3.Up);
 
-                HitDetectionRaycast.TargetPosition = ToLocal(GlobalPosition + Velocity * (float)delta);
-                HitDetectionRaycast.ForceRaycastUpdate();
-                if(HitDetectionRaycast.IsColliding())
+                if(Multiplayer.IsServer())
                 {
-                    GodotObject collider = HitDetectionRaycast.GetCollider();
-                    if(MaxHits > 0 && collider is DamageArea) // we do a max hit check here so server stops hitting even before authority queue frees the projectile
+                    HitDetectionRaycast.TargetPosition = ToLocal(GlobalPosition + Velocity * (float)delta);
+                    HitDetectionRaycast.ForceRaycastUpdate();
+                    if(HitDetectionRaycast.IsColliding())
                     {
-                        DamageArea damageArea = collider as DamageArea;
-                        damageArea.HitDamageArea(this);
-                    }
-                    
-                    MaxHits--;
-                    
-                    if(MaxHits <= 0)
-                    {
-                        DisableSelf();
+                        GodotObject collider = HitDetectionRaycast.GetCollider();
+                        if(MaxHits > 0 && collider is DamageArea) // we do a max hit check here so server stops hitting even before authority queue frees the projectile
+                        {
+                            DamageArea damageArea = collider as DamageArea;
+                            damageArea.HitDamageArea(this);
+                        }
+                        
+                        MaxHits--;
+                        
+                        if(MaxHits <= 0)
+                        {
+                            DisableSelf();
+                        }
                     }
                 }
-                
+
                 GlobalPosition += Velocity * (float)delta;
             }
         }
