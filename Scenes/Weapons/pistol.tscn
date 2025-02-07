@@ -1,9 +1,10 @@
-[gd_scene load_steps=24 format=4 uid="uid://b8hpvrno7saob"]
+[gd_scene load_steps=26 format=4 uid="uid://b8hpvrno7saob"]
 
 [ext_resource type="Script" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_3n8ap"]
 [ext_resource type="PackedScene" uid="uid://g1mopusla6rw" path="res://Scenes/Projectiles/SimpleBullet.tscn" id="2_6tjck"]
+[ext_resource type="PackedScene" uid="uid://cnw8ner8rvd7w" path="res://Scenes/SelfDestroyingParticles/PistolShellParticle.tscn" id="4_6qm8s"]
 [ext_resource type="Texture2D" uid="uid://c4h55agq38hwk" path="res://Assets/Models/Weapons/Lugar_Lugar_tex.png" id="4_qkti2"]
-[ext_resource type="Texture2D" uid="uid://0ijask7duxpj" path="res://Assets/Models/Weapons/PistolCasing_Ammo_tex.png" id="5_rq3oh"]
+[ext_resource type="Script" path="res://Scripts/Base/SelfDestroyingParticle.cs" id="5_k4r3p"]
 
 [sub_resource type="Animation" id="Animation_c27f4"]
 resource_name = "Fire"
@@ -36,111 +37,89 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Casing:position")
+tracks/2/path = NodePath("Lugar:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.015, 0.19),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.035, 0.115, 0.19),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(-0.0205787, 0.148513, -0.0636641), Vector3(-0.021, 1.825, 1.482)]
+"values": [Vector3(0, -0.00839388, -0.387356), Vector3(0, 0.161426, 0.0637157), Vector3(0, -0.00839388, -0.387356)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Casing:rotation")
+tracks/3/path = NodePath("Lugar:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.015, 0.19),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.035, 0.115, 0.19),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(-1.5708, 0, 0), Vector3(-2.70177, -2.17294, 2.52375)]
+"values": [Vector3(0, 3.14159, 0), Vector3(-0.310686, 3.14159, 4.84823e-08), Vector3(0, 3.14159, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Casing:visible")
+tracks/4/path = NodePath("Mag:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.015, 0.19),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
+"times": PackedFloat32Array(0.035, 0.115, 0.19),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.0711069, -0.00460848), Vector3(0, -0.0152954, 0.408967), Vector3(0, -0.0711069, -0.00460848)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Lugar:position")
+tracks/5/path = NodePath("Mag:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0.035, 0.115, 0.19),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0, -0.00839388, -0.387356), Vector3(0, 0.161426, 0.0637157), Vector3(0, -0.00839388, -0.387356)]
+"values": [Vector3(-0.523599, 0, 0), Vector3(-0.212913, 0, 0), Vector3(-0.523599, 0, 0)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Lugar:rotation")
+tracks/6/path = NodePath("HandMesh:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0.035, 0.115, 0.19),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 3.14159, 0), Vector3(-0.310686, 3.14159, 4.84823e-08), Vector3(0, 3.14159, 0)]
+"values": [Vector3(0, -0.0656728, 0), Vector3(0, -0.0115303, 0.415016), Vector3(0, -0.0656728, 0)]
 }
-tracks/7/type = "value"
+tracks/7/type = "method"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Mag:position")
+tracks/7/path = NodePath(".")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0.035, 0.115, 0.19),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0, -0.0711069, -0.00460848), Vector3(0, -0.0152954, 0.408967), Vector3(0, -0.0711069, -0.00460848)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Mag:rotation")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0.035, 0.115, 0.19),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(-0.523599, 0, 0), Vector3(-0.212913, 0, 0), Vector3(-0.523599, 0, 0)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("HandMesh:position")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0.035, 0.115, 0.19),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0, -0.0656728, 0), Vector3(0, -0.0115303, 0.415016), Vector3(0, -0.0656728, 0)]
-}
-tracks/10/type = "method"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath(".")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
 "times": PackedFloat32Array(0.015),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": ["res://Assets/Sounds/SFX/9mm Micro Pistol - Gunshot B 002.wav"],
 "method": &"PlayGunSound"
+}]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("GPUParticles3D")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.035),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitParticles"
 }]
 }
 
@@ -209,82 +188,46 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Casing:position")
+tracks/5/path = NodePath("Lugar:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-0.0205787, 0.148513, -0.0636641)]
+"values": [Vector3(0, -0.00839388, -0.387356)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Casing:rotation")
+tracks/6/path = NodePath("Lugar:rotation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-1.5708, 0, 0)]
+"values": [Vector3(0, 3.14159, 0)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Casing:visible")
+tracks/7/path = NodePath("Mag:rotation")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Vector3(-0.523599, 0, 0)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Lugar:position")
+tracks/8/path = NodePath("HandMesh:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, -0.00839388, -0.387356)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Lugar:rotation")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 3.14159, 0)]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("Mag:rotation")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.523599, 0, 0)]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("HandMesh:position")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -483,11 +426,14 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_86u1b")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ajhxx"]
+load_path = "res://.godot/imported/PistolCasing_Ammo_tex.png-cdce17a7e9bad745abf2c73dd23e4f4e.s3tc.ctex"
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i85gv"]
 resource_name = "Ammo"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("5_rq3oh")
+albedo_texture = SubResource("CompressedTexture2D_ajhxx")
 roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_achdm"]
@@ -544,6 +490,7 @@ WeaponName = "Pistol"
 MaxAmmo = 8
 Projectile = ExtResource("2_6tjck")
 APlayer = NodePath("AnimationPlayer")
+ClickSoundResourcePath = "res://Scenes/Projectiles/9mm Full Size Pistol - Dry Trigger 003.wav"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -570,16 +517,21 @@ mesh = SubResource("ArrayMesh_i5ne2")
 skeleton = NodePath("")
 
 [node name="Trigger" type="MeshInstance3D" parent="Lugar"]
-transform = Transform3D(3.07789e-07, 0.0437192, 1.40065e-07, 0.0552485, -1.38054e-07, -0.0309691, -0.0309691, 1.88221e-07, -0.0552485, -3.86984e-09, 0.153395, -0.326559)
+transform = Transform3D(3.07789e-07, 0.0437192, 1.40065e-07, 0.0552486, -1.38054e-07, -0.0309691, -0.0309691, 1.88221e-07, -0.0552486, -3.86984e-09, 0.153395, -0.326559)
 mesh = SubResource("ArrayMesh_qfe61")
 skeleton = NodePath("")
 
 [node name="Casing" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0238176, 0, 0, 0, -1.78144e-07, 0.0238176, 0, -0.0492112, -8.62195e-08, -0.0205787, 0.148513, -0.0636641)
-visible = false
 mesh = SubResource("ArrayMesh_k4uw3")
 skeleton = NodePath("")
 
 [node name="Mag" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0318699, 0, 0, 0, 0.242016, 0.042732, 0, -0.139728, 0.074014, 0, -0.0711069, -0.00460848)
 mesh = SubResource("BoxMesh_sd4pg")
+
+[node name="GPUParticles3D" parent="." instance=ExtResource("4_6qm8s")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.140897, -0.103009)
+emitting = false
+script = ExtResource("5_k4r3p")
+particleScene = ExtResource("4_6qm8s")
