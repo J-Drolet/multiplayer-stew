@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_rhqx7"]
 [ext_resource type="PackedScene" uid="uid://cohf65bso617l" path="res://Scenes/Weapons/Shotgun.tscn" id="2_0afdq"]
-[ext_resource type="Texture2D" uid="uid://cq6ma8yggpm1y" path="res://Assets/Models/Weapons/Double_Barrel_glb_Shotgun_tex.png" id="3_mqo73"]
+[ext_resource type="Texture2D" uid="uid://c2u8ie3inrtw" path="res://Assets/Models/Weapons/Double_Barrel_glb_Shotgun_tex.png" id="3_mqo73"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vmxku"]
 size = Vector3(2, 1, 2)

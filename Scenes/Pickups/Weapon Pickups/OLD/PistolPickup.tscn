@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_8dmwd"]
 [ext_resource type="PackedScene" uid="uid://b8hpvrno7saob" path="res://Scenes/Weapons/pistol.tscn" id="2_d8t66"]
-[ext_resource type="Texture2D" uid="uid://com6dvj1pfr8a" path="res://Assets/Models/Weapons/Lugar_Lugar_tex.png" id="3_ntyh8"]
+[ext_resource type="Texture2D" uid="uid://dx2yq5re6ri0f" path="res://Assets/Models/Weapons/Lugar_Lugar_tex.png" id="3_ntyh8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vmxku"]
 

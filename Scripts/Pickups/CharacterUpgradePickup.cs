@@ -14,6 +14,6 @@ public partial class CharacterUpgradePickup : Pickup
         if(!character.Upgrades.Contains(Upgrade))
         {
             character.Rpc(Character.MethodName.AddUpgrade, Variant.From(Upgrade));
-        }
+        } 
     }
 }
