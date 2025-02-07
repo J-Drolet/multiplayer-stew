@@ -33,17 +33,8 @@ namespace multiplayerstew.Scripts.Base
 		public bool CanFire = true; // Trigger this in the Animation to set the rate of fire
 		[Export, ExportRequired, AnimationsRequired(new string[] { "Fire" })] 
 		public AnimationPlayer APlayer { get; set; }
-
-		[Export, ExportRequired]
-		public AudioStream FiringSound { get; set; }
-        [Export]
-        public AudioStream UnloadSound { get; set; }
-        [Export]
-        public AudioStream LoadSound { get; set; }
 		[Export]
-		public AudioStream RackSound { get; set; }
-		[Export]
-		public AudioStream ClickSound { get; set; }
+		public string ClickSoundResourcePath { get; set; }
 
 		private int CurrentAmmo { get; set; }
 		public HashSet<WeaponUpgrade> Upgrades { get; set; } = new();
@@ -101,9 +92,9 @@ namespace multiplayerstew.Scripts.Base
 					}
                 }
 			}
-			else if(CurrentAmmo <= 0 && MaxAmmo >= 0)
+			else if(CurrentAmmo <= 0 && MaxAmmo >= 0 && ClickSoundResourcePath != null)
 			{
-				PlayGunSound("Click");
+				PlayGunSound(ClickSoundResourcePath);
 			}
 		}
 
@@ -127,28 +118,9 @@ namespace multiplayerstew.Scripts.Base
 			return $"{CurrentAmmo}/{MaxAmmo}";
 		}
 
-		public void PlayGunSound(string sound)
+		public void PlayGunSound(string soundPath)
 		{
-			switch (sound)
-			{
-				case "Fire":
-                    MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, FiringSound.ResourcePath, this.GetPath(), !IsMultiplayerAuthority(), "SFX");
-					break;
-                case "Unload":
-                    MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, UnloadSound.ResourcePath, this.GetPath(), !IsMultiplayerAuthority(), "SFX");
-                    break;
-                case "Load":
-                    MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, LoadSound.ResourcePath, this.GetPath(), !IsMultiplayerAuthority(), "SFX");
-                    break;
-                case "Rack":
-                    MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, RackSound.ResourcePath, this.GetPath(), !IsMultiplayerAuthority(), "SFX");
-                    break;
-				case "Click":
-                    MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, ClickSound.ResourcePath, this.GetPath(), !IsMultiplayerAuthority(), "SFX");
-					break;
-                default:
-					break;
-            }
+            MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, soundPath, this.GetPath(), !IsMultiplayerAuthority(), "SFX");
 		}
 
 		/// <summary>

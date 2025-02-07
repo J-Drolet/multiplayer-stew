@@ -1,13 +1,9 @@
-[gd_scene load_steps=28 format=4 uid="uid://b8hpvrno7saob"]
+[gd_scene load_steps=24 format=4 uid="uid://b8hpvrno7saob"]
 
 [ext_resource type="Script" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_3n8ap"]
 [ext_resource type="PackedScene" uid="uid://g1mopusla6rw" path="res://Scenes/Projectiles/SimpleBullet.tscn" id="2_6tjck"]
-[ext_resource type="AudioStream" uid="uid://c6xvcmxi218w2" path="res://Assets/Sounds/SFX/9mm Micro Pistol - Gunshot B 002.wav" id="3_rfedt"]
-[ext_resource type="AudioStream" uid="uid://curqfu70jok4e" path="res://Assets/Sounds/SFX/9mm Micro Pistol - Dropping Magazine 003.wav" id="4_1i427"]
-[ext_resource type="Texture2D" uid="uid://dx2yq5re6ri0f" path="res://Assets/Models/Weapons/Lugar_Lugar_tex.png" id="4_qkti2"]
-[ext_resource type="AudioStream" uid="uid://br0n1kwnby8i0" path="res://Assets/Sounds/SFX/9mm Micro Pistol - Loading Magazine 002.wav" id="5_nrcln"]
-[ext_resource type="Texture2D" uid="uid://l7ol2h3c36oa" path="res://Assets/Models/Weapons/PistolCasing_Ammo_tex.png" id="5_rq3oh"]
-[ext_resource type="AudioStream" uid="uid://dv2ul35ht7363" path="res://Assets/Sounds/SFX/9mm Full Size Pistol - Cocking Slide 003.wav" id="6_e4kka"]
+[ext_resource type="Texture2D" uid="uid://c4h55agq38hwk" path="res://Assets/Models/Weapons/Lugar_Lugar_tex.png" id="4_qkti2"]
+[ext_resource type="Texture2D" uid="uid://0ijask7duxpj" path="res://Assets/Models/Weapons/PistolCasing_Ammo_tex.png" id="5_rq3oh"]
 
 [sub_resource type="Animation" id="Animation_c27f4"]
 resource_name = "Fire"
@@ -143,7 +139,7 @@ tracks/10/keys = {
 "times": PackedFloat32Array(0.015),
 "transitions": PackedFloat32Array(1),
 "values": [{
-"args": ["Fire"],
+"args": ["res://Assets/Sounds/SFX/9mm Micro Pistol - Gunshot B 002.wav"],
 "method": &"PlayGunSound"
 }]
 }
@@ -333,16 +329,16 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0.05, 0.76, 0.9, 1.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "values": [{
-"args": ["Unload"],
+"args": ["res://Assets/Sounds/SFX/9mm Micro Pistol - Dropping Magazine 003.wav"],
 "method": &"PlayGunSound"
 }, {
-"args": ["Load"],
+"args": ["res://Assets/Sounds/SFX/9mm Micro Pistol - Loading Magazine 002.wav"],
 "method": &"PlayGunSound"
 }, {
 "args": [],
 "method": &"RefillAmmo"
 }, {
-"args": ["Rack"],
+"args": ["res://Assets/Sounds/SFX/9mm Full Size Pistol - Cocking Slide 003.wav"],
 "method": &"PlayGunSound"
 }]
 }
@@ -548,10 +544,6 @@ WeaponName = "Pistol"
 MaxAmmo = 8
 Projectile = ExtResource("2_6tjck")
 APlayer = NodePath("AnimationPlayer")
-FiringSound = ExtResource("3_rfedt")
-UnloadSound = ExtResource("4_1i427")
-LoadSound = ExtResource("5_nrcln")
-RackSound = ExtResource("6_e4kka")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

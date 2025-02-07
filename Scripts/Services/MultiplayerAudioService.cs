@@ -25,25 +25,27 @@ namespace multiplayerstew.Scripts.Services
 
                 AudioStream audioStream = ResourceLoader.Load(audioStreamPath) as AudioStream;
 
-
-                if (!is3D) // no locational audio for local player
+                if(audioStream != null)
                 {
-                    AudioStreamPlayer audioStreamPlayer = new();
-                    audioStreamPlayer.Stream = audioStream;
-                    audioStreamPlayer.Bus = bus;
-                    AddChild(audioStreamPlayer);
-                    audioStreamPlayer.Play();
-                    audioStreamPlayer.Finished += audioStreamPlayer.QueueFree;
-                }
-                else
-                {
-                    AudioStreamPlayer3D audioStreamPlayer = new();
-                    audioStreamPlayer.Stream = audioStream;
-                    audioStreamPlayer.GlobalTransform = parent3D.GlobalTransform;
-                    audioStreamPlayer.Bus = bus;
-                    AddChild(audioStreamPlayer);
-                    audioStreamPlayer.Play();
-                    audioStreamPlayer.Finished += audioStreamPlayer.QueueFree;
+                    if (!is3D) // no locational audio for local player
+                    {
+                        AudioStreamPlayer audioStreamPlayer = new();
+                        audioStreamPlayer.Stream = audioStream;
+                        audioStreamPlayer.Bus = bus;
+                        AddChild(audioStreamPlayer);
+                        audioStreamPlayer.Play();
+                        audioStreamPlayer.Finished += audioStreamPlayer.QueueFree;
+                    }
+                    else
+                    {
+                        AudioStreamPlayer3D audioStreamPlayer = new();
+                        audioStreamPlayer.Stream = audioStream;
+                        audioStreamPlayer.GlobalTransform = parent3D.GlobalTransform;
+                        audioStreamPlayer.Bus = bus;
+                        AddChild(audioStreamPlayer);
+                        audioStreamPlayer.Play();
+                        audioStreamPlayer.Finished += audioStreamPlayer.QueueFree;
+                    }
                 }
             }
         }

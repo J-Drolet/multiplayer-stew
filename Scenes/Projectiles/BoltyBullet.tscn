@@ -1,8 +1,48 @@
-[gd_scene load_steps=4 format=3 uid="uid://diqolrhp5s6sw"]
+[gd_scene load_steps=7 format=4 uid="uid://diqolrhp5s6sw"]
 
 [ext_resource type="Script" path="res://Scripts/Base/UpgradeableProjectile.cs" id="1_ot4mb"]
+[ext_resource type="Texture2D" uid="uid://dmxo7x7x7quk5" path="res://Assets/Models/Weapons/RifleBullet_Ammo_tex.png" id="2_pjhyj"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_2wu11"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ejcdq"]
+resource_name = "Ammo"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("2_pjhyj")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_li4ie"]
+_surfaces = [{
+"aabb": AABB(-0.168849, -0.309361, -0.168849, 0.337698, 0.767111, 0.337698),
+"format": 34359742465,
+"index_count": 66,
+"index_data": PackedByteArray("AQACAAAAAQADAAIAAAACAAgAAgAEAAgAAwAEAAIAAwAFAAQABQAGAAQABQAHAAYABAAGAAgABwAJAAYABwAKAAkABgAJAAgACgALAAkACgAMAAsACQALAAgADAAAAAsADAABAAAACwAAAAgAAQAFAAMABQAKAAcACgABAAwABQABAAoA"),
+"lods": [0.213593, PackedByteArray("AQACAAAAAAACAAgAAgAEAAgAAgAFAAQABQAGAAQABAAGAAgABgAKAAkABgAJAAgACgALAAkACQALAAgACwABAAAACwAAAAgAAQAFAAIABQAKAAYACgABAAsABQABAAoA"), 0.349788, PackedByteArray("AQACAAsAAQALAAYABgALAAIAAQAGAAIA")],
+"name": "Ammo",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 13,
+"vertex_data": PackedByteArray("3PPBvYCpbj7e88G9UIr8vYhknr5Sivy9jEAPPYCpbj4RygS+ToY6PYhknr625iy+EsoEPoCpbj59QA+9ueYsPohknr5Dhjq93fPBPYCpbj7i88E9Sor8PYhknr5Oivw9AGCDMjhe6j4AAEAykEAPvYCpbj4RygQ+ToY6vYhknr635iw+EcoEvoCpbj57QA89t+Ysvohknr4+hjo9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7jmvp"]
+resource_name = "RifleBullet_Cylinder_006"
+_surfaces = [{
+"aabb": AABB(-0.168849, -0.309361, -0.168849, 0.337698, 0.767111, 0.337698),
+"attribute_data": PackedByteArray("oC0APnCarj1cLgc+jOaLPjDewD1wmq49GLK7PYzmiz6IgJI9cJquPeClfj2M5os++J+jPXCarj14npU9jOaLPpj90T0AGK06CB3jPXCarj0gSeg9jOaLPlS9CD5wmq49IFQSPozmiz5cLgc+jOaLPlwuBz6M5os+XC4HPozmiz4w3sA9cJquPTDewD1wmq49MN7APXCarj34n6M9cJquPfifoz1wmq49+J+jPXCarj1UvQg+cJquPVS9CD5wmq49VL0IPnCarj1cLgc+jOaLPlwuBz6M5os+XC4HPozmiz5cLgc+jOaLPjDewD1wmq49MN7APXCarj0w3sA9cJquPTDewD1wmq494KV+PYzmiz7gpX49jOaLPuClfj2M5os+4KV+PYzmiz74n6M9cJquPfifoz1wmq49+J+jPXCarj34n6M9cJquPSBJ6D2M5os+IEnoPYzmiz4gSeg9jOaLPiBJ6D2M5os+VL0IPnCarj1UvQg+cJquPVS9CD5wmq49VL0IPnCarj2gLQA+cJquPaAtAD5wmq49oC0APnCarj2gLQA+cJquPVwuBz6M5os+XC4HPozmiz5cLgc+jOaLPlwuBz6M5os+XC4HPozmiz4w3sA9cJquPTDewD1wmq49MN7APXCarj0w3sA9cJquPTDewD1wmq49iICSPXCarj2IgJI9cJquPYiAkj1wmq49iICSPXCarj3gpX49jOaLPuClfj2M5os+4KV+PYzmiz7gpX49jOaLPuClfj2M5os++J+jPXCarj34n6M9cJquPfifoz1wmq49+J+jPXCarj34n6M9cJquPZj90T0AGK06mP3RPQAYrTqY/dE9ABitOpj90T0AGK06mP3RPQAYrTqY/dE9ABitOggd4z1wmq49CB3jPXCarj0IHeM9cJquPQgd4z1wmq49IEnoPYzmiz4gSeg9jOaLPiBJ6D2M5os+IEnoPYzmiz4gSeg9jOaLPlS9CD5wmq49VL0IPnCarj1UvQg+cJquPVS9CD5wmq49VL0IPnCarj0="),
+"format": 34359742487,
+"index_count": 66,
+"index_data": PackedByteArray("AQACAAAAAQADAAIAAAACAAgAAgAEAAgAAwAEAAIAAwAFAAQABQAGAAQABQAHAAYABAAGAAgABwAJAAYABwAKAAkABgAJAAgACgALAAkACgAMAAsACQALAAgADAAAAAsADAABAAAACwAAAAgAAQAFAAMABQAKAAcACgABAAwABQABAAoA"),
+"lods": [0.213593, PackedByteArray("NQA6ADEAMgA7AE0APAA/AE4APQBDAEAARABIAEEAQgBJAE8ASgBXAFMASwBUAFAAWABcAFUAVgBdAFEAXgA2ADMAXwA0AFIANwBFAD4ARgBZAEwAWgA4AGAARwA5AFsA"), 0.349788, PackedByteArray("DQAQABYADgAXABMAFAAYABEADwAVABIA")],
+"material": SubResource("StandardMaterial3D_ejcdq"),
+"name": "Ammo",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 97,
+"vertex_data": PackedByteArray("3PPBvYCpbj7e88G9UIr8vYhknr5Sivy9jEAPPYCpbj4RygS+ToY6PYhknr625iy+EsoEPoCpbj59QA+9ueYsPohknr5Dhjq93fPBPYCpbj7i88E9Sor8PYhknr5Oivw9AGCDMjhe6j4AAEAykEAPvYCpbj4RygQ+ToY6vYhknr635iw+EcoEvoCpbj57QA89t+Ysvohknr4+hjo9UIr8vYhknr5Sivy9UIr8vYhknr5Sivy9UIr8vYhknr5Sivy9jEAPPYCpbj4RygS+jEAPPYCpbj4RygS+jEAPPYCpbj4RygS+3fPBPYCpbj7i88E93fPBPYCpbj7i88E93fPBPYCpbj7i88E9EcoEvoCpbj57QA89EcoEvoCpbj57QA89EcoEvoCpbj57QA89UIr8vYhknr5Sivy9UIr8vYhknr5Sivy9UIr8vYhknr5Sivy9UIr8vYhknr5Sivy9jEAPPYCpbj4RygS+jEAPPYCpbj4RygS+jEAPPYCpbj4RygS+jEAPPYCpbj4RygS+ueYsPohknr5Dhjq9ueYsPohknr5Dhjq9ueYsPohknr5Dhjq9ueYsPohknr5Dhjq93fPBPYCpbj7i88E93fPBPYCpbj7i88E93fPBPYCpbj7i88E93fPBPYCpbj7i88E9ToY6vYhknr635iw+ToY6vYhknr635iw+ToY6vYhknr635iw+ToY6vYhknr635iw+EcoEvoCpbj57QA89EcoEvoCpbj57QA89EcoEvoCpbj57QA89EcoEvoCpbj57QA893PPBvYCpbj7e88G93PPBvYCpbj7e88G93PPBvYCpbj7e88G93PPBvYCpbj7e88G9UIr8vYhknr5Sivy9UIr8vYhknr5Sivy9UIr8vYhknr5Sivy9UIr8vYhknr5Sivy9UIr8vYhknr5Sivy9jEAPPYCpbj4RygS+jEAPPYCpbj4RygS+jEAPPYCpbj4RygS+jEAPPYCpbj4RygS+jEAPPYCpbj4RygS+EsoEPoCpbj59QA+9EsoEPoCpbj59QA+9EsoEPoCpbj59QA+9EsoEPoCpbj59QA+9ueYsPohknr5Dhjq9ueYsPohknr5Dhjq9ueYsPohknr5Dhjq9ueYsPohknr5Dhjq9ueYsPohknr5Dhjq93fPBPYCpbj7i88E93fPBPYCpbj7i88E93fPBPYCpbj7i88E93fPBPYCpbj7i88E93fPBPYCpbj7i88E9AGCDMjhe6j4AAEAyAGCDMjhe6j4AAEAyAGCDMjhe6j4AAEAyAGCDMjhe6j4AAEAyAGCDMjhe6j4AAEAyAGCDMjhe6j4AAEAykEAPvYCpbj4RygQ+kEAPvYCpbj4RygQ+kEAPvYCpbj4RygQ+kEAPvYCpbj4RygQ+ToY6vYhknr635iw+ToY6vYhknr635iw+ToY6vYhknr635iw+ToY6vYhknr635iw+ToY6vYhknr635iw+EcoEvoCpbj57QA89EcoEvoCpbj57QA89EcoEvoCpbj57QA89EcoEvoCpbj57QA89EcoEvoCpbj57QA89CBYDy/8//78FK30q/z//vynnPuoAAICyy9AIEQAAfc0p55WuQpSNOMvQwz9nFXyR+7QHlv8//z98qvpU////P/9///9BG/+/P2rVmAAAgTL3bstQ////P5Yu1ZhClIy4O0DLUH2G4sxAFgww/z//v+1F+Hf/P/+/L+h8Nv8//79KAJHXAACAsvu3Lu0AAICyGPzjvgAAgLIfWGyC/z//P4aXTNX/P/8/TvhETv8//z/SAtM/QpSMuK8+FYJClIy4EFwGy0KUjLhkDI0z/z//v6TVMwT/P/+/NygfYP8//79UWo4N/z//vzkGadEAAICykf2oVgAAgLKYlajyAACAsqHoGxwAAICyWOadUmcVfJEl39IiZxV8kYnB2llnFXyRIqv4HWcVfJEx/d99/z//P+psAYP/P/8/VZYGzv8//z9Uw1Bu/z//P4ZhO3b///8/v6T1Vv///z9ANqpn////P3aKpQT///8/eAeLwkKUjLh3S+SIQpSMuG99KetClIy4bSR7dUKUjLhsAzIz/z//v2ot1ur/P/+/nQNkrv8//7+QMDvJ/z//vx8NAC//P/+/hQ9iRP8//7/b1QYK/z//v8MqtVX/P/+/zliXEP8//79kBTLkAACAsr4wgPMAAICy19OP4QAAgLIY/Ki1AACAssThcBQAAICyD88A1kKUjTiC+jayQpSNOMT/PoFClI0428bws0KUjTi876ZLZxV8kQDuP25nFXyR69gYImcVfJG5sAFhZxV8kQaP4xRnFXyRt+Opg/8//z80u3Kv/z//PziQFIz/P/8/P5VHsf8//z/ss+px/z//P0Y4vvFBG/+/EMPa4EEb/7/suhi5QRv/v32PRsFBG/+/bl1/tUEb/78gTj7UQRv/vyKAk4kAAIEysooVsQAAgTJYVVeEAACBMrJc0qgAAIEyWnoXdv///z/pVL90////P0+i6F7///8/oj03Yf///z/ygV0k////P3BDZoRClIy4Z08bqEKUjLihCNakQpSMuCxAssdClIy4mShFckKUjLg=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_li4ie")
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_m7mpy"]
 properties/0/path = NodePath(".:position")
@@ -18,13 +58,10 @@ InitialVelocity = 50.0
 Damage = 25.0
 multiplayerSynchronizer = NodePath("MultiplayerSynchronizer")
 
-[node name="Scale parent" type="Node3D" parent="."]
-transform = Transform3D(-2.71448e-08, 0, 0.188, 0, 0.201, 0, -0.621, 0, -8.21774e-09, 0, 0, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Scale parent"]
-transform = Transform3D(0.267544, 0, 0, 0, 0.267544, 0, 0, 0, 0.267544, 0, 0, 0)
-mesh = SubResource("SphereMesh_2wu11")
-skeleton = NodePath("../..")
+[node name="Bullet" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.73206e-16, 1.31134e-08, 0.3, 0.3, -1.31134e-08, 0, 1.31134e-08, 0.3, -1.31134e-08, 0, 0, 0)
+mesh = SubResource("ArrayMesh_7jmvp")
+skeleton = NodePath("")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_m7mpy")
