@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bfbkx2qo7a8br"]
+[gd_scene load_steps=13 format=3 uid="uid://bnvck18xjjdjb"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_uhyuo"]
 noise_type = 2

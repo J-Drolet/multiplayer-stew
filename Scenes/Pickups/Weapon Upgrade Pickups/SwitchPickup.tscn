@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cwu4rpc1v226t"]
+[gd_scene load_steps=20 format=3 uid="uid://cfnqnnhdbei0c"]
 
 [ext_resource type="Script" path="res://Scripts/Pickups/CharacterUpgradePickup.cs" id="1_0h7na"]
 

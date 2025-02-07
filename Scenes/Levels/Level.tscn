@@ -8,12 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://cryxnpccnb5vv" path="res://Scenes/Pickups/Character Upgrade Pickups/DoubleJumpPickupDEMO.tscn" id="4_qov8v"]
 [ext_resource type="PackedScene" uid="uid://dpd0cvtbs8iuo" path="res://Scenes/Target.tscn" id="5_5mb3y"]
 [ext_resource type="PackedScene" uid="uid://cm2whm84p0m3u" path="res://Scenes/Pickups/Weapon Pickups/NEW/DEMOPistolPickup.tscn" id="5_iy05k"]
-[ext_resource type="PackedScene" path="res://Scenes/Pickups/Character Upgrade Pickups/Five-Nine.tscn" id="5_vubge"]
+[ext_resource type="PackedScene" uid="uid://df6qunsrn6l0l" path="res://Scenes/Pickups/Character Upgrade Pickups/Five-Nine.tscn" id="5_vubge"]
 [ext_resource type="PackedScene" uid="uid://b1f7iivgyecvp" path="res://Scenes/Pickups/Weapon Pickups/NEW/DEMOShotgunPickup.tscn" id="6_jf0qt"]
 [ext_resource type="PackedScene" uid="uid://k3u720y471ax" path="res://Scenes/Pickups/Weapon Pickups/OLD/Mac10Pickup.tscn" id="6_vl5y8"]
-[ext_resource type="PackedScene" path="res://Scenes/Pickups/Character Upgrade Pickups/MentholPickup.tscn" id="8_8i516"]
+[ext_resource type="PackedScene" uid="uid://7qwn7vvfveyf" path="res://Scenes/Pickups/Character Upgrade Pickups/MentholPickup.tscn" id="8_8i516"]
 [ext_resource type="PackedScene" uid="uid://1fdlt6hucwhx" path="res://Scenes/Pickups/Weapon Pickups/OLD/BoltyPickup.tscn" id="8_xscgj"]
-[ext_resource type="PackedScene" path="res://Scenes/Pickups/SimpleCharacterPickup.tscn" id="9_un6hj"]
+[ext_resource type="PackedScene" uid="uid://00oigava2hm0" path="res://Scenes/Pickups/SimpleCharacterPickup.tscn" id="9_un6hj"]
 [ext_resource type="PackedScene" uid="uid://c1g1i6jf36w1w" path="res://Scenes/Pickups/Health Pickups/HealthPickup.tscn" id="10_wk5ir"]
 [ext_resource type="PackedScene" uid="uid://bxxmlyeymtjud" path="res://Scenes/Pickups/Weapon Upgrade Pickups/DEMOCartonPickup.tscn" id="14_m1uri"]
 
@@ -53,7 +53,6 @@ transform = Transform3D(2.22573, 0, 0, 0, 2.22573, 0, 0, 0, 2.22573, 18.623, 0.0
 
 [node name="MentholPickup" parent="." instance=ExtResource("8_8i516")]
 transform = Transform3D(2.22573, 0, 0, 0, 2.22573, 0, 0, 0, 2.22573, 10.152, 0.012, 5.216)
-Upgrade = 2
 
 [node name="Floor" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.210621, 0)
@@ -65,10 +64,6 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
 shape = SubResource("BoxShape3D_bbwtt")
-
-[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0227966, -0.000106812, 0.0167847)
-size = Vector3(50.1773, 0.265717, 50.0424)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.766896, 0.439592, -0.467578, 0, 0.728574, 0.684967, 0.641771, -0.525299, 0.558741, 0, 0, 0)

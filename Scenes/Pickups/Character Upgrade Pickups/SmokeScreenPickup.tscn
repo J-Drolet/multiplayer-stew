@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cpk2yljmfo1tc"]
+[gd_scene load_steps=17 format=3 uid="uid://bv7brme1rp56"]
 
 [ext_resource type="Script" path="res://Scripts/Pickups/CharacterUpgradePickup.cs" id="1_ahdmc"]
 
@@ -114,6 +114,7 @@ size = Vector3(2, 2, 2)
 
 [node name="PickupDelineator2" type="Node3D" node_paths=PackedStringArray("PickupArea", "APlayer")]
 script = ExtResource("1_ahdmc")
+Upgrade = 1
 PickupArea = NodePath("Area3D")
 APlayer = NodePath("AnimationPlayer")
 
@@ -154,8 +155,6 @@ spot_angle = 38.2143
 transform = Transform3D(0.292004, -0.148803, 0, 0.148803, 0.292004, 0, 0, 0, 0.327733, 0, 0.275359, 0)
 mesh = SubResource("BoxMesh_fng43")
 skeleton = NodePath("../../..")
-script = ExtResource("1_ahdmc")
-Upgrade = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
