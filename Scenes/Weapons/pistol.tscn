@@ -111,7 +111,7 @@ tracks/7/keys = {
 tracks/8/type = "method"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("GPUParticles3D")
+tracks/8/path = NodePath("SelfDestroyingParticle")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -336,24 +336,15 @@ properties/2/replication_mode = 1
 properties/3/path = NodePath("Mag:rotation")
 properties/3/spawn = true
 properties/3/replication_mode = 1
-properties/4/path = NodePath("Casing:rotation")
+properties/4/path = NodePath("Lugar:position")
 properties/4/spawn = true
 properties/4/replication_mode = 1
-properties/5/path = NodePath("Casing:position")
+properties/5/path = NodePath("Lugar:rotation")
 properties/5/spawn = true
 properties/5/replication_mode = 1
-properties/6/path = NodePath("Casing:scale")
+properties/6/path = NodePath("HandMesh:position")
 properties/6/spawn = true
 properties/6/replication_mode = 1
-properties/7/path = NodePath("Lugar:position")
-properties/7/spawn = true
-properties/7/replication_mode = 1
-properties/8/path = NodePath("Lugar:rotation")
-properties/8/spawn = true
-properties/8/replication_mode = 1
-properties/9/path = NodePath("HandMesh:position")
-properties/9/spawn = true
-properties/9/replication_mode = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vl6bu"]
 resource_name = "Lugar"
@@ -480,7 +471,7 @@ skeleton = NodePath("")
 transform = Transform3D(0.0318699, 0, 0, 0, 0.242016, 0.042732, 0, -0.139728, 0.074014, 0, -0.0711069, -0.00460848)
 mesh = SubResource("BoxMesh_sd4pg")
 
-[node name="GPUParticles3D" parent="." instance=ExtResource("4_6qm8s")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.140897, -0.103009)
-emitting = false
+[node name="SelfDestroyingParticle" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.15077, -0.141823)
 script = ExtResource("5_k4r3p")
+ParticleScene = ExtResource("4_6qm8s")
