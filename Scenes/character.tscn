@@ -1,12 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://lcx7afjcynql"]
+[gd_scene load_steps=10 format=3 uid="uid://lcx7afjcynql"]
 
 [ext_resource type="Script" path="res://Scripts/Character.cs" id="1_n6eoi"]
 [ext_resource type="Script" path="res://Scripts/Base/DamageArea.cs" id="2_4301p"]
+[ext_resource type="AudioStream" uid="uid://b4o2ftef65g1l" path="res://Assets/Sounds/SFX/Voice B Pain Grunt 002.wav" id="2_b0fus"]
 [ext_resource type="PackedScene" uid="uid://bu6ksmfk5pwif" path="res://Scenes/Particles/InvisibilitySmoke.tscn" id="3_ffhoh"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dlrkp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mo30b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jx8bc"]
+render_priority = 1
+transparency = 4
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_wgmvx"]
 
@@ -37,6 +42,7 @@ Hand = NodePath("Head/Camera3D/Hand")
 CharacterMesh = NodePath("CharacterMesh")
 InvisibilitySmokeParticles = NodePath("CharacterMesh/InvisibilitySmoke")
 WeaponSpawner = NodePath("Head/Camera3D/Hand/MultiplayerSpawner")
+OutlinePlayerSFX = ExtResource("2_b0fus")
 Hitboxes = [NodePath("Area3D")]
 HealthText = NodePath("CharacterMesh/Cur Health")
 metadata/_edit_group_ = true
@@ -56,6 +62,7 @@ shape = SubResource("CapsuleShape3D_mo30b")
 
 [node name="CharacterMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+material_overlay = SubResource("StandardMaterial3D_jx8bc")
 mesh = SubResource("CapsuleMesh_wgmvx")
 
 [node name="Cur Health" type="Label3D" parent="CharacterMesh"]
