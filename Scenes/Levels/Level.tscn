@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://1fdlt6hucwhx" path="res://Scenes/Pickups/Weapon Pickups/OLD/BoltyPickup.tscn" id="8_xscgj"]
 [ext_resource type="PackedScene" uid="uid://00oigava2hm0" path="res://Scenes/Pickups/SimpleCharacterPickup.tscn" id="9_un6hj"]
 [ext_resource type="PackedScene" uid="uid://c1g1i6jf36w1w" path="res://Scenes/Pickups/Health Pickups/HealthPickup.tscn" id="10_wk5ir"]
-[ext_resource type="PackedScene" uid="uid://bxxmlyeymtjud" path="res://Scenes/Pickups/Weapon Upgrade Pickups/DEMOCartonPickup.tscn" id="14_m1uri"]
+[ext_resource type="PackedScene" uid="uid://dgbp3hgx35bpy" path="res://Scenes/Pickups/Weapon Upgrade Pickups/SpliffPickup.tscn" id="16_shahq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4e45f"]
 albedo_color = Color(0.239473, 0.128064, 0.00900927, 1)
@@ -47,9 +47,6 @@ DestroyOnPickup = false
 
 [node name="ShotgunPickup2" parent="." instance=ExtResource("6_jf0qt")]
 transform = Transform3D(2.22573, 0, 0, 0, 2.22573, 0, 0, 0, 2.22573, 16.1034, 0.012, 6.15008)
-
-[node name="CartonPickup" parent="." instance=ExtResource("14_m1uri")]
-transform = Transform3D(2.22573, 0, 0, 0, 2.22573, 0, 0, 0, 2.22573, 18.623, 0.012, 2.09)
 
 [node name="MentholPickup" parent="." instance=ExtResource("8_8i516")]
 transform = Transform3D(2.22573, 0, 0, 0, 2.22573, 0, 0, 0, 2.22573, 10.152, 0.012, 5.216)
@@ -112,3 +109,11 @@ DestroyOnPickup = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27323, -0.085621, -14.7573)
 Upgrade = 2
 DestroyOnPickup = false
+
+[node name="SimpleCharacterPickup3" parent="." instance=ExtResource("9_un6hj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7603, -0.085621, -14.5932)
+Upgrade = 1
+DestroyOnPickup = false
+
+[node name="PickupDelineator" parent="." instance=ExtResource("16_shahq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4218, 0.341631, -0.882567)

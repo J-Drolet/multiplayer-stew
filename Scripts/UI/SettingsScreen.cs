@@ -22,24 +22,7 @@ public partial class SettingsScreen : Control
     {
         GodotErrorService.ValidateRequiredData(this);
         UI.SettingsScreen = this;
-        SettingInputs = FindSettings(this, new List<SettingInput>());
-    }
-
-    private List<SettingInput> FindSettings(Node parent, List<SettingInput> settingInputs)
-    {
-        foreach(Node child in parent.GetChildren(true))
-        {
-            if (child is SettingInput)
-            {
-                settingInputs = settingInputs.Append((SettingInput)child).ToList();
-            }
-            else
-            {
-                settingInputs = FindSettings(child, settingInputs);
-            }
-        }
-
-        return settingInputs;
+        SettingInputs = GodotNodeFindingService.FindNodes<SettingInput>(this);
     }
 
     public void OnVisibilityChanged()

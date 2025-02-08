@@ -1,6 +1,7 @@
 using Godot;
 using Godot.Collections;
 using System;
+using System.Collections.Generic;
 
 public partial class Config: Node
 {
@@ -63,10 +64,14 @@ public partial class Config: Node
     /// </summary>
     /// <param name="section"></param>
     /// <param name="propertyKey"></param>
+    /// <param name="onlyDefault"></param>
     /// <returns></returns>
-    public static Variant GetValue(string section, string propertyKey)
+    public static Variant GetValue(string section, string propertyKey, bool onlyDefault = false)
     {
-        return UserSettings.GetValue(section, propertyKey, DefaultSettings.GetValue(section, propertyKey));
+        if(onlyDefault)
+            return DefaultSettings.GetValue(section, propertyKey);
+        else
+            return UserSettings.GetValue(section, propertyKey, DefaultSettings.GetValue(section, propertyKey));
     }
 
     /// <summary>

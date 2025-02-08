@@ -26,13 +26,14 @@ properties/4/path = NodePath(".:visible")
 properties/4/spawn = true
 properties/4/replication_mode = 1
 
-[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "ProjectileOrigin", "Head", "Hand", "WeaponSpawner", "Hitboxes", "HealthText")]
+[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "ProjectileOrigin", "Head", "Hand", "CharacterMesh", "WeaponSpawner", "Hitboxes", "HealthText")]
 visible = false
 script = ExtResource("1_n6eoi")
 Camera = NodePath("Head/Camera3D")
 ProjectileOrigin = NodePath("Head/Camera3D/ProjectileOrigin")
 Head = NodePath("Head")
 Hand = NodePath("Head/Camera3D/Hand")
+CharacterMesh = NodePath("CharacterMesh")
 WeaponSpawner = NodePath("Head/Camera3D/Hand/MultiplayerSpawner")
 Hitboxes = [NodePath("Area3D")]
 HealthText = NodePath("Cur Health")
@@ -46,7 +47,7 @@ script = ExtResource("2_4301p")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("CapsuleShape3D_mo30b")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="CharacterMesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_wgmvx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

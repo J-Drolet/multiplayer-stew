@@ -50,16 +50,14 @@ namespace multiplayerstew.Scripts.Base
 			GameManager.Players[GetMultiplayerAuthority()].projectileSpawner.AddSpawnableScene(Projectile.ResourcePath);
 			CurrentAmmo = MaxAmmo;
 
-			// Move local meshes to overlay layer
-			if(IsMultiplayerAuthority())
+			foreach(VisualInstance3D mesh in GodotNodeFindingService.FindNodes<VisualInstance3D>(this))
 			{
-				foreach(VisualInstance3D mesh in FindMeshes(this, new()))
+				if(IsMultiplayerAuthority()) // Move local meshes to overlay layer
 				{
 					mesh.SetLayerMaskValue(1, false);
 					mesh.SetLayerMaskValue(2, true);
 				}
 			}
-
 		}
 
 		public void Fire()
@@ -73,8 +71,10 @@ namespace multiplayerstew.Scripts.Base
 				List<int> angleOffsets = new(); // for each angleOffset a bullet will be fired with that offset
 				if(Upgrades.Contains(WeaponUpgrade.DunceCap))
 				{
-					angleOffsets.Add(-30);
-					angleOffsets.Add(30);
+					foreach(int angle in (int[]) Config.GetValue("upgrade_constants", "dunce_shot_offsets", true))
+					{
+						angleOffsets.Add(angle);
+					}
 				}
 				else
 				{
@@ -122,27 +122,6 @@ namespace multiplayerstew.Scripts.Base
 		{
             MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, soundPath, this.GetPath(), Multiplayer.GetUniqueId(), "SFX");
 		}
-
-		/// <summary>
-		/// Recursively loops through every node under parent and adds any VisualInstance3D nodes to the list. Useful for changing the visibility layer
-		/// </summary>
-		/// <param name="parent"></param>
-		/// <param name="meshes"></param>
-		/// <returns></returns>
-		private List<VisualInstance3D> FindMeshes(Node parent, List<VisualInstance3D> meshes)
-		{
-			foreach(Node child in parent.GetChildren(true))
-			{
-				if (child is VisualInstance3D)
-				{
-					meshes = meshes.Append((VisualInstance3D)child).ToList();
-				}
-
-				meshes = FindMeshes(child, meshes);
-			}
-
-			return meshes;
-		} 
 
 		[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
 		public void AddUpgrade(WeaponUpgrade upgrade)

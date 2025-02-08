@@ -22,9 +22,10 @@ buses/default_bus_layout="res://Assets/audio_buses.tres"
 [autoload]
 
 Ui="*res://Scripts/UI/UI.cs"
-Config="*res://Scripts/Config.cs"
+Config="*res://Scripts/Services/Config.cs"
 SettingsUpdater="*res://Scripts/SettingsUpdater.cs"
 MultiplayerAudioService="*res://Scripts/Services/MultiplayerAudioService.cs"
+MultiplayerPropertyService="*res://Scripts/Services/MultiplayerPropertyService.cs"
 
 [dotnet]
 
