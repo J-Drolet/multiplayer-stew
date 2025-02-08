@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bes21pvfcnqkp"]
-
-[ext_resource type="PackedScene" uid="uid://bnasao0vcfc2b" path="res://Scenes/CharacterModels/cigaretteprototype10.blend" id="1_b572v"]
-
-[node name="cigaretteprototype10" instance=ExtResource("1_b572v")]
-
-[node name="Skeleton3D" parent="Armature" index="0"]
-bones/0/rotation = Quaternion(-3.94003e-09, 8.39428e-08, -0.00701688, 0.999975)
-bones/1/rotation = Quaternion(8.94912e-09, 3.53178e-08, 0.00701688, 0.999975)

@@ -17,16 +17,18 @@ public partial class Character : Entity
 	[Export, ExportRequired]
 	public Node3D Hand { get; set; }
 	[Export, ExportRequired]
-	public GeometryInstance3D CharacterMesh { get; set; }
+	public MeshInstance3D CharacterMesh { get; set; }
 	[Export, ExportRequired]
 	public GpuParticles3D InvisibilitySmokeParticles { get; set; }
 	[Export, ExportRequired]
 	public MultiplayerSpawner WeaponSpawner { get; set; }
+	[Export, ExportRequired]
+	public AudioStream OutlinePlayerSFX { get; set; }
 	public HashSet<CharacterUpgrade> Upgrades { get; set; } = new();
 
 	public bool CanMove { get; set; } = true; // whether or not the local player should be able to manipulate the character
 	private int JumpsSinceHitGround { get; set; } // keeps track of how many jumps the character has done since last hitting the ground
-
+	private double TimeSinceXray { get; set; } // for see through walls upgrade
 
     [Export]
     public UpgradableWeapon EquippedWeapon;
@@ -104,6 +106,41 @@ public partial class Character : Entity
 		InvisibilitySmokeParticles.Emitting = Upgrades.Contains(CharacterUpgrade.Invisibility);
 
 		if(!IsMultiplayerAuthority()) return;
+
+		////////// Outline Players Upgrade
+		if(Upgrades.Contains(CharacterUpgrade.OutlinePlayers))
+		{
+			double beforeFrameTime = TimeSinceXray;
+			TimeSinceXray += delta;
+			double upgradeDuration = (double)Config.GetValue("upgrade_constants", "outline_players_duration", true);
+
+			if(beforeFrameTime < upgradeDuration && TimeSinceXray >= upgradeDuration) // disable effect
+			{
+				foreach(int peerId in GameManager.Players.Keys)
+				{
+					if(peerId != Multiplayer.GetUniqueId()) // only add xray to peers
+					{
+						GameManager.Players[peerId].characterNode.CharacterMesh.Mesh.SurfaceSetMaterial(0, null);
+					}
+				}	
+			}
+
+			// enable effect
+			if(TimeSinceXray >= (double)Config.GetValue("upgrade_constants", "outline_players_cooldown", true))
+			{
+				TimeSinceXray = 0;
+				MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, OutlinePlayerSFX.ResourcePath, this.GetPath(), Multiplayer.GetUniqueId(), "SFX");
+
+				foreach(int peerId in GameManager.Players.Keys)
+				{
+					if(peerId != Multiplayer.GetUniqueId()) // only add xray to peers
+					{
+						Material xrayMaterial = (Material) ResourceLoader.Load("res://Assets/Materials/Upgrades/XRay.tres");
+						GameManager.Players[peerId].characterNode.CharacterMesh.Mesh.SurfaceSetMaterial(0, xrayMaterial);
+					}
+				}
+			}
+		}
 
 		if (EquippedWeapon != null)
 		{
