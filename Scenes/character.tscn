@@ -1,13 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://lcx7afjcynql"]
+[gd_scene load_steps=8 format=3 uid="uid://lcx7afjcynql"]
 
 [ext_resource type="Script" path="res://Scripts/Character.cs" id="1_n6eoi"]
 [ext_resource type="Script" path="res://Scripts/Base/DamageArea.cs" id="2_4301p"]
+[ext_resource type="PackedScene" uid="uid://bu6ksmfk5pwif" path="res://Scenes/Particles/InvisibilitySmoke.tscn" id="3_ffhoh"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dlrkp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mo30b"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_wgmvx"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dlrkp"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_w7qvv"]
 properties/0/path = NodePath(".:position")
@@ -26,7 +27,7 @@ properties/4/path = NodePath(".:visible")
 properties/4/spawn = true
 properties/4/replication_mode = 1
 
-[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "ProjectileOrigin", "Head", "Hand", "CharacterMesh", "WeaponSpawner", "Hitboxes", "HealthText")]
+[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "ProjectileOrigin", "Head", "Hand", "CharacterMesh", "InvisibilitySmokeParticles", "WeaponSpawner", "Hitboxes", "HealthText")]
 visible = false
 script = ExtResource("1_n6eoi")
 Camera = NodePath("Head/Camera3D")
@@ -34,12 +35,18 @@ ProjectileOrigin = NodePath("Head/Camera3D/ProjectileOrigin")
 Head = NodePath("Head")
 Hand = NodePath("Head/Camera3D/Hand")
 CharacterMesh = NodePath("CharacterMesh")
+InvisibilitySmokeParticles = NodePath("CharacterMesh/InvisibilitySmoke")
 WeaponSpawner = NodePath("Head/Camera3D/Hand/MultiplayerSpawner")
 Hitboxes = [NodePath("Area3D")]
-HealthText = NodePath("Cur Health")
+HealthText = NodePath("CharacterMesh/Cur Health")
 metadata/_edit_group_ = true
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_dlrkp")
+
 [node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 collision_layer = 4
 collision_mask = 8
 script = ExtResource("2_4301p")
@@ -48,12 +55,20 @@ script = ExtResource("2_4301p")
 shape = SubResource("CapsuleShape3D_mo30b")
 
 [node name="CharacterMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_wgmvx")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("CapsuleShape3D_dlrkp")
+[node name="Cur Health" type="Label3D" parent="CharacterMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14348, 0)
+billboard = 1
+text = "Text"
+
+[node name="InvisibilitySmoke" parent="CharacterMesh" instance=ExtResource("3_ffhoh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+emitting = false
 
 [node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.577425, -0.203255)
@@ -70,8 +85,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.75163)
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_w7qvv")
-
-[node name="Cur Health" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14348, 0)
-billboard = 1
-text = "Text"

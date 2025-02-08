@@ -19,6 +19,8 @@ public partial class Character : Entity
 	[Export, ExportRequired]
 	public GeometryInstance3D CharacterMesh { get; set; }
 	[Export, ExportRequired]
+	public GpuParticles3D InvisibilitySmokeParticles { get; set; }
+	[Export, ExportRequired]
 	public MultiplayerSpawner WeaponSpawner { get; set; }
 	public HashSet<CharacterUpgrade> Upgrades { get; set; } = new();
 
@@ -92,13 +94,14 @@ public partial class Character : Entity
 			HealthText.Text = CurrentHealth <= 0.0f ? "Dead" : "Health: " + CurrentHealth.ToString();
 		}
 
+		/// For invisibility upgrade
 		float transparency = Upgrades.Contains(CharacterUpgrade.Invisibility)? (float)Config.GetValue("upgrade_constants", "invisibility_transparency", true) : 0;
 		CharacterMesh.Transparency = transparency;
-
 		foreach(GeometryInstance3D mesh in GodotNodeFindingService.FindNodes<GeometryInstance3D>(Hand))
 		{
 			mesh.Transparency = transparency;
 		}
+		InvisibilitySmokeParticles.Emitting = Upgrades.Contains(CharacterUpgrade.Invisibility);
 
 		if(!IsMultiplayerAuthority()) return;
 
