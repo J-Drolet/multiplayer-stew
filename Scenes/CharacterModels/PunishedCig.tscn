@@ -1,10 +1,19 @@
-[gd_scene load_steps=27 format=4 uid="uid://dojkq5cj2jxpk"]
+[gd_scene load_steps=31 format=4 uid="uid://xoxk4e7bn16y"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ek1ls"]
+frequency = 0.0492
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_v6tms"]
+as_normal_map = true
+noise = SubResource("FastNoiseLite_ek1ls")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lnmum"]
 resource_name = "Material"
 cull_mode = 2
 albedo_color = Color(0.670878, 0.670878, 0.670878, 1)
 roughness = 0.5
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_v6tms")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fjpfj"]
 resource_name = "Material.001"
@@ -114,28 +123,18 @@ albedo_color = Color(0.898039, 0.388235, 0.0745098, 1)
 normal_enabled = true
 normal_texture = SubResource("NoiseTexture2D_tdfso")
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_4fhf2"]
-frequency = 0.2803
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wyi4a"]
+albedo_color = Color(0.280295, 0.0883174, 0.00388758, 1)
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_30bk0"]
-as_normal_map = true
-noise = SubResource("FastNoiseLite_4fhf2")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_us2x6"]
-albedo_color = Color(0.0605303, 0.0605303, 0.0605303, 1)
-normal_enabled = true
-normal_texture = SubResource("NoiseTexture2D_30bk0")
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_1syyk"]
-material = SubResource("StandardMaterial3D_us2x6")
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_dc8sm"]
-material = SubResource("StandardMaterial3D_us2x6")
-cap_bottom = false
+[sub_resource type="TorusMesh" id="TorusMesh_cop0h"]
+material = SubResource("StandardMaterial3D_wyi4a")
+inner_radius = 0.001
+outer_radius = 0.94
+rings = 9
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fkvgn"]
 transparency = 1
-albedo_color = Color(0, 0.513726, 0.513726, 0.388235)
+albedo_color = Color(0, 0, 0, 1)
 refraction_enabled = true
 refraction_scale = 1.0
 refraction_texture_channel = 2
@@ -143,16 +142,36 @@ refraction_texture_channel = 2
 [sub_resource type="SphereMesh" id="SphereMesh_ve6x5"]
 material = SubResource("StandardMaterial3D_fkvgn")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u58cd"]
-albedo_color = Color(0.791475, 0.661389, 2.31028e-06, 1)
-metallic = 1.0
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_odfb3"]
+albedo_color = Color(0.169245, 0.169245, 0.169245, 1)
 
 [sub_resource type="TorusMesh" id="TorusMesh_p4no8"]
-material = SubResource("StandardMaterial3D_u58cd")
+material = SubResource("StandardMaterial3D_odfb3")
 inner_radius = 1.228
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_inlhx"]
-material = SubResource("StandardMaterial3D_u58cd")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sp2ee"]
+albedo_color = Color(0.641934, 0.641934, 0.641934, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_6mhjs"]
+material = SubResource("StandardMaterial3D_sp2ee")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kjrlu"]
+albedo_color = Color(0.174216, 0.234686, 0.314672, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_5p1h5"]
+material = SubResource("StandardMaterial3D_kjrlu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3eyju"]
+resource_name = "Material"
+cull_mode = 2
+albedo_color = Color(0.278431, 0.0901961, 0.00392157, 1)
+roughness = 0.5
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_v6tms")
+
+[sub_resource type="TorusMesh" id="TorusMesh_xlgqi"]
+material = SubResource("StandardMaterial3D_3eyju")
+inner_radius = 0.088
 
 [sub_resource type="Animation" id="Animation_mrq4d"]
 resource_name = "JumpTEST"
@@ -327,14 +346,14 @@ tracks/23/keys = PackedFloat32Array(0, 1, 1, 1, 1, 0.0333333, 1, 1, 1, 1, 0.0666
 tracks/24/type = "position_3d"
 tracks/24/imported = false
 tracks/24/enabled = true
-tracks/24/path = NodePath("Funny Hat")
+tracks/24/path = NodePath("Hair")
 tracks/24/interp = 1
 tracks/24/loop_wrap = true
 tracks/24/keys = PackedFloat32Array(0, 1, 0, 2.74026, 0, 0.0333333, 1, 0, 2.74026, 0, 0.0666667, 1, -0.0284382, 2.57682, 0, 0.1, 1, -0.1519, 2.15958, 0, 0.2, 1, -0.320352, 1.56978, -0.00300008, 0.233333, 1, -0.32, 1.99414, -0.003, 0.266667, 1, -0.32, 2.32605, -0.003, 0.466667, 1, -0.276, 4.5, -0.002, 0.533333, 1, -0.262, 4.75, -0.002, 0.6, 1, -0.225, 4.5, -0.002, 1, 1, 0, 2.7, 0)
 tracks/25/type = "value"
 tracks/25/imported = false
 tracks/25/enabled = true
-tracks/25/path = NodePath("Funny Hat:rotation")
+tracks/25/path = NodePath("Hair:rotation")
 tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = {
@@ -346,14 +365,14 @@ tracks/25/keys = {
 tracks/26/type = "position_3d"
 tracks/26/imported = false
 tracks/26/enabled = true
-tracks/26/path = NodePath("Glasses")
+tracks/26/path = NodePath("Face")
 tracks/26/interp = 1
 tracks/26/loop_wrap = true
 tracks/26/keys = PackedFloat32Array(0, 1, 0.286892, 2.40608, 0.130437, 0.0333333, 1, 0.286892, 2.40608, 0.130437, 0.0666667, 1, 0.229528, 2.2284, 0.166223, 0.1, 1, 0.123044, 1.78543, 0.166223, 0.133333, 1, 0.0265964, 1.38225, 0.166223, 0.166667, 1, 0.0215856, 1.14828, 0.166223, 0.2, 1, 0.0215856, 1.38203, 0.166223, 0.233333, 1, 0.139536, 1.67081, 0.16901, 0.266667, 1, 0.139536, 2.06404, 0.16901, 0.3, 1, 0.139536, 2.35511, 0.16901, 0.333333, 1, 0.139352, 2.68338, 0.16901, 0.366667, 1, 0.139352, 2.97108, 0.16901, 0.4, 1, 0.145949, 3.21088, 0.16698, 0.433333, 1, 0.152547, 3.42618, 0.16495, 0.466667, 1, 0.159144, 3.53207, 0.16292, 0.466767, 1, 0.159144, 3.52595, 0.16292, 0.533333, 1, 0.172339, 3.56094, 0.158859, 1, 1, 0.286892, 2.40608, 0.130437)
 tracks/27/type = "value"
 tracks/27/imported = false
 tracks/27/enabled = true
-tracks/27/path = NodePath("Glasses:rotation")
+tracks/27/path = NodePath("Face:rotation")
 tracks/27/interp = 1
 tracks/27/loop_wrap = true
 tracks/27/keys = {
@@ -368,7 +387,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Funny Hat:rotation")
+tracks/0/path = NodePath("Hair:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -380,21 +399,21 @@ tracks/0/keys = {
 tracks/1/type = "position_3d"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Funny Hat")
+tracks/1/path = NodePath("Hair")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = PackedFloat32Array(0, 1, -0.2765, 4.14401, -0.00225)
 tracks/2/type = "position_3d"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Glasses")
+tracks/2/path = NodePath("Face")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = PackedFloat32Array(0, 1, 0.286892, 2.40608, 0.130437)
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Glasses:rotation")
+tracks/3/path = NodePath("Face:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -488,41 +507,79 @@ surface_material_override/1 = SubResource("StandardMaterial3D_bs8wk")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Armature/Skeleton3D/Cylinder"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9095, 0)
 
-[node name="Funny Hat" type="Node3D" parent="."]
+[node name="Hair" type="Node3D" parent="."]
 transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 1, -0.2765, 4.14401, -0.00225)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Funny Hat"]
-transform = Transform3D(0.880211, 0, 0, 0, 0.020344, 0, 0, 0, 0.884646, 0, 0, 0)
-mesh = SubResource("CylinderMesh_1syyk")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.0960966, -0.0965027, 0, 0.215776, 0.0429779, 0, 0, 0, 0.0889036, -0.249926, -0.254564, -0.0971571)
+mesh = SubResource("TorusMesh_cop0h")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Funny Hat"]
-transform = Transform3D(0.521414, 0, 0, 0, 0.249525, 0, 0, 0, 0.521414, 0, 0.233768, 0)
-mesh = SubResource("CylinderMesh_dc8sm")
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.389054, -0.00650211, 0, 0.0175444, 0.144187, 0, 0, 0, 0.289816, -0.0337092, -0.0834432, -0.00529264)
+mesh = SubResource("TorusMesh_cop0h")
 
-[node name="Glasses" type="Node3D" parent="."]
-transform = Transform3D(0.186945, 0.0235537, 0, -0.0235537, 0.186945, 0, 0, 0, 0.188423, 0.286892, 2.40608, 0.130437)
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.0960966, -0.0965027, 0, 0.215776, 0.0429779, 0, 0, 0, 0.0889036, -0.317936, -0.266577, 0.00035198)
+mesh = SubResource("TorusMesh_cop0h")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Glasses"]
-transform = Transform3D(0.147818, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.0960965, -0.0965027, 0, 0.215776, 0.0429778, 0, 0, 0, 0.0889036, -0.294808, -0.282438, 0.138251)
+mesh = SubResource("TorusMesh_cop0h")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.021881, -0.0367294, 0, 0.0491317, 0.0163576, 0, 0, 0, 0.0109702, 0.294971, -0.0828972, 0.0604672)
+mesh = SubResource("TorusMesh_cop0h")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.021881, -0.0367294, 0, 0.0491317, 0.0163576, 0, 0, 0, 0.0109702, 0.294971, -0.0828972, 0.0604672)
+mesh = SubResource("TorusMesh_cop0h")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.0282548, -0.0474285, 0, 0.0634435, 0.0211225, 0, 0, 0, 0.0141657, 0.263268, -0.0828977, 0.0604672)
+mesh = SubResource("TorusMesh_cop0h")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.0364987, -0.0612669, 0, 0.0819546, 0.0272854, 0, 0, 0, 0.0182989, 0.261763, -0.0828984, -0.0919414)
+mesh = SubResource("TorusMesh_cop0h")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.0318923, -0.0535345, 0, 0.0716113, 0.0238418, 0, 0, 0, 0.0159894, 0.307658, -0.0828981, -0.0498564)
+mesh = SubResource("TorusMesh_cop0h")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.0298362, -0.0500832, 0, 0.0669945, 0.0223047, 0, 0, 0, 0.0149586, 0.294971, -0.0828977, 0.0179821)
+mesh = SubResource("TorusMesh_cop0h")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.0289427, -0.0485833, 0, 0.0649882, 0.0216368, 0, 0, 0, 0.0145106, 0.294971, -0.0828977, 0.0394068)
+mesh = SubResource("TorusMesh_cop0h")
+
+[node name="Face" type="Node3D" parent="."]
+transform = Transform3D(0.186945, 0.0235536, 0, -0.0235536, 0.186945, 0, 0, 0, 0.188423, 0.286892, 2.40608, 0.130437)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Face"]
+transform = Transform3D(0.142423, 0, -0.267709, 0, 1, 0, 0.0395722, 0, 0.963499, -0.113778, 0, 0)
 mesh = SubResource("SphereMesh_ve6x5")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Glasses"]
-transform = Transform3D(-1.89644e-08, -0.433854, 0, 0.433854, -1.89644e-08, 0, 0, 0, 0.433854, 0, 0, 0)
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Face"]
+transform = Transform3D(1.16867, -0.204762, -0.769534, -0.039189, -0.546922, 0.655055, -1.00207, -0.217415, -0.923085, -1.54473, 1.12921, -0.701514)
 mesh = SubResource("TorusMesh_p4no8")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Glasses"]
-transform = Transform3D(0.147818, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.3133)
-mesh = SubResource("SphereMesh_ve6x5")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="Glasses"]
-transform = Transform3D(-1.89644e-08, -0.433854, 0, 0.433854, -1.89644e-08, 0, 0, 0, 0.433854, 0, 0, -1.3133)
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Face"]
+transform = Transform3D(1.53996, 0, 0, 0, 3.48473, 0, 0, 0, 1.36871, -1.54473, 1.75937, -0.701514)
 mesh = SubResource("TorusMesh_p4no8")
 
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="Glasses"]
-transform = Transform3D(0.187675, 0, 0, 0, -0.00330637, 0.159898, 0, -0.19711, -0.00268217, -0.0544101, 0.184742, -0.644018)
-mesh = SubResource("CylinderMesh_inlhx")
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Face"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38499, 0, -1.24127)
+mesh = SubResource("SphereMesh_6mhjs")
 
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="Glasses"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Face/MeshInstance3D3"]
+transform = Transform3D(0.64757, 0, 0, 0, 0.64757, 0, 0, 0, 0.64757, 0.203709, 0, 0)
+mesh = SubResource("SphereMesh_5p1h5")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Face"]
+transform = Transform3D(0.548405, 0, 0, 0, 0.531757, -0.134101, 0, 0.134101, 0.531757, -0.398331, 0.323907, -1.18653)
+mesh = SubResource("TorusMesh_xlgqi")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
