@@ -13,6 +13,19 @@ namespace multiplayerstew.Scripts.Services
             Instance = this;
         }
 
+        /// <summary>
+        /// Wrapper for PlaySound. Solves the problem of conditionally spawning a 3D audio or nonlocational audio because the boolean is determined at RPC time
+        /// </summary>
+        /// <param name="audioStreamPath"></param>
+        /// <param name="parentPath"></param>
+        /// <param name="peerToNotBe3D"></param>
+        /// <param name="bus"></param>
+        [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+        public void PlaySound(string audioStreamPath, NodePath parentPath, int peerToNotBe3D, string bus)
+        {
+            PlaySound(audioStreamPath, parentPath, Instance.Multiplayer.GetUniqueId() != peerToNotBe3D, bus);
+        }
+
         [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
         public void PlaySound(string audioStreamPath, NodePath parentPath, bool is3D, string bus)
         {

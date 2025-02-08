@@ -120,7 +120,7 @@ namespace multiplayerstew.Scripts.Base
 
 		public void PlayGunSound(string soundPath)
 		{
-            MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, soundPath, this.GetPath(), !IsMultiplayerAuthority(), "SFX");
+            MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, soundPath, this.GetPath(), Multiplayer.GetUniqueId(), "SFX");
 		}
 
 		/// <summary>

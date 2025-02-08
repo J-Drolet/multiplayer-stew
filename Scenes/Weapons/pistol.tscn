@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_3n8ap"]
 [ext_resource type="PackedScene" uid="uid://g1mopusla6rw" path="res://Scenes/Projectiles/SimpleBullet.tscn" id="2_6tjck"]
 [ext_resource type="PackedScene" uid="uid://cnw8ner8rvd7w" path="res://Scenes/SelfDestroyingParticles/PistolShellParticle.tscn" id="4_6qm8s"]
-[ext_resource type="Texture2D" uid="uid://c4h55agq38hwk" path="res://Assets/Models/Weapons/Lugar_Lugar_tex.png" id="4_qkti2"]
+[ext_resource type="Texture2D" uid="uid://dx2yq5re6ri0f" path="res://Assets/Models/Weapons/Lugar_Lugar_tex.png" id="4_qkti2"]
 [ext_resource type="Script" path="res://Scripts/Base/SelfDestroyingParticle.cs" id="5_k4r3p"]
 
 [sub_resource type="Animation" id="Animation_c27f4"]
@@ -119,7 +119,7 @@ tracks/8/keys = {
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
-"method": &"emitParticles"
+"method": &"EmitParticles"
 }]
 }
 
@@ -490,7 +490,6 @@ WeaponName = "Pistol"
 MaxAmmo = 8
 Projectile = ExtResource("2_6tjck")
 APlayer = NodePath("AnimationPlayer")
-ClickSoundResourcePath = "res://Scenes/Projectiles/9mm Full Size Pistol - Dry Trigger 003.wav"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -534,4 +533,4 @@ mesh = SubResource("BoxMesh_sd4pg")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.140897, -0.103009)
 emitting = false
 script = ExtResource("5_k4r3p")
-particleScene = ExtResource("4_6qm8s")
+ParticleScene = ExtResource("4_6qm8s")

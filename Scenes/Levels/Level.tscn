@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://k3u720y471ax" path="res://Scenes/Pickups/Weapon Pickups/OLD/Mac10Pickup.tscn" id="6_vl5y8"]
 [ext_resource type="PackedScene" uid="uid://7qwn7vvfveyf" path="res://Scenes/Pickups/Character Upgrade Pickups/MentholPickup.tscn" id="8_8i516"]
 [ext_resource type="PackedScene" uid="uid://1fdlt6hucwhx" path="res://Scenes/Pickups/Weapon Pickups/OLD/BoltyPickup.tscn" id="8_xscgj"]
-[ext_resource type="PackedScene" path="res://Scenes/Pickups/SimpleCharacterPickup.tscn" id="9_un6hj"]
+[ext_resource type="PackedScene" uid="uid://00oigava2hm0" path="res://Scenes/Pickups/SimpleCharacterPickup.tscn" id="9_un6hj"]
 [ext_resource type="PackedScene" uid="uid://c1g1i6jf36w1w" path="res://Scenes/Pickups/Health Pickups/HealthPickup.tscn" id="10_wk5ir"]
 [ext_resource type="PackedScene" uid="uid://bxxmlyeymtjud" path="res://Scenes/Pickups/Weapon Upgrade Pickups/DEMOCartonPickup.tscn" id="14_m1uri"]
 
