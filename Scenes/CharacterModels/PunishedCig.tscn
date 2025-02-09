@@ -566,7 +566,7 @@ transform = Transform3D(1.16867, -0.204762, -0.769534, -0.039189, -0.546922, 0.6
 mesh = SubResource("TorusMesh_p4no8")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="Face"]
-transform = Transform3D(1.53996, 0, 0, 0, 3.48473, 0, 0, 0, 1.36871, -1.54473, 1.75937, -0.701514)
+transform = Transform3D(1.53996, 8.9407e-08, 0, -4.47035e-08, 3.48473, 0, 0, 0, 1.36871, -1.65966, 1.36136, -0.701514)
 mesh = SubResource("TorusMesh_p4no8")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Face"]
