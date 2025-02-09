@@ -30,6 +30,7 @@ namespace multiplayerstew.Scripts.Base
         private Vector3 ProjectileGravity = Vector3.Down * 5;
         private float TimeAlive;
         private int HitsLeft;
+        private int BouncesRegistered; // for bouncing projectile upgrade
 
         private int projectileOwner;
         private Random Rng;
@@ -135,7 +136,7 @@ namespace multiplayerstew.Scripts.Base
                 WorldHitDetectionRaycast.ForceRaycastUpdate();
                 if(WorldHitDetectionRaycast.IsColliding())
                 {
-                    if(Upgrades.Contains(Upgrade.W_BouncyProjectile))
+                    if(Upgrades.Contains(Upgrade.W_BouncyProjectile) && BouncesRegistered < (int) Config.GetValue("upgrade_constants", "bounce_max_bounces", true))
                     {
                         Vector3 collisionPoint = WorldHitDetectionRaycast.GetCollisionPoint();
                         Vector3 collisionNormal = WorldHitDetectionRaycast.GetCollisionNormal();
@@ -147,6 +148,7 @@ namespace multiplayerstew.Scripts.Base
                         GlobalPosition = collisionPoint;
                         Velocity = Velocity - 2 * Velocity.Dot(collisionNormal) * collisionNormal;
                         delta = remaingDelta;
+                        BouncesRegistered++;
                     }
                     else // always destroy on hit wall
                     {
