@@ -24,7 +24,7 @@ public partial class Character : Entity
 	public MultiplayerSpawner WeaponSpawner { get; set; }
 	[Export, ExportRequired]
 	public AudioStream OutlinePlayerSFX { get; set; }
-	public HashSet<CharacterUpgrade> Upgrades { get; set; } = new();
+	public HashSet<Upgrade> Upgrades { get; set; } = new();
 
 	public bool CanMove { get; set; } = true; // whether or not the local player should be able to manipulate the character
 	private int JumpsSinceHitGround { get; set; } // keeps track of how many jumps the character has done since last hitting the ground
@@ -97,18 +97,18 @@ public partial class Character : Entity
 		}
 
 		/// For invisibility upgrade
-		float transparency = Upgrades.Contains(CharacterUpgrade.Invisibility)? (float)Config.GetValue("upgrade_constants", "invisibility_transparency", true) : 0;
+		float transparency = Upgrades.Contains(Upgrade.C_Invisibility)? (float)Config.GetValue("upgrade_constants", "invisibility_transparency", true) : 0;
 		CharacterMesh.Transparency = transparency;
 		foreach(GeometryInstance3D mesh in GodotNodeFindingService.FindNodes<GeometryInstance3D>(Hand))
 		{
 			mesh.Transparency = transparency;
 		}
-		InvisibilitySmokeParticles.Emitting = Upgrades.Contains(CharacterUpgrade.Invisibility);
+		InvisibilitySmokeParticles.Emitting = Upgrades.Contains(Upgrade.C_Invisibility);
 
 		if(!IsMultiplayerAuthority()) return;
 
 		////////// Outline Players Upgrade
-		if(Upgrades.Contains(CharacterUpgrade.OutlinePlayers))
+		if(Upgrades.Contains(Upgrade.C_OutlinePlayers))
 		{
 			double beforeFrameTime = TimeSinceXray;
 			TimeSinceXray += delta;
@@ -161,7 +161,7 @@ public partial class Character : Entity
 		double acceleration = BaseSpeed;
 		double deceleration = BaseSpeed;
 		double speed = BaseSpeed;
-		if(Upgrades.Contains(CharacterUpgrade.FastSlide))
+		if(Upgrades.Contains(Upgrade.C_FastSlide))
 		{
 			speed *= 2;
 			acceleration /= 10;
@@ -169,7 +169,7 @@ public partial class Character : Entity
 		}
 
 		int jumpsAllowedInAir = 0;
-		if(Upgrades.Contains(CharacterUpgrade.DoubleJump))
+		if(Upgrades.Contains(Upgrade.C_DoubleJump))
 		{
 			jumpsAllowedInAir = 1;
 		}
@@ -280,13 +280,13 @@ public partial class Character : Entity
 	}
 
 	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-	public void AddUpgrade(CharacterUpgrade upgrade)
+	public void AddUpgrade(Upgrade upgrade)
 	{
 		Upgrades.Add(upgrade);
 	}
 
 	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-	public void RemoveUpgrade(CharacterUpgrade upgrade)
+	public void RemoveUpgrade(Upgrade upgrade)
 	{
 		Upgrades.Remove(upgrade);
 	}

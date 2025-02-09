@@ -32,9 +32,8 @@ namespace multiplayerstew.Scripts.Base
 
         private void PickupAreaEntered(Node3D body) 
         {
-            if(body is Character)
+            if(body is Character character)
             {
-                Character character = body as Character;
                 ActivatePickup(character);
                 if(DestroyOnPickup) 
                 {

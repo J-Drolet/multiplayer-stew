@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://00oigava2hm0"]
 
-[ext_resource type="Script" path="res://Scripts/Pickups/CharacterUpgradePickup.cs" id="1_i0g7e"]
-[ext_resource type="Script" path="res://Scenes/Pickups/SimpleCharacterPickup.cs" id="2_uyvdx"]
+[ext_resource type="Script" path="res://Scripts/Pickups/UpgradePickup.cs" id="1_i0g7e"]
+[ext_resource type="Script" path="res://Scenes/Pickups/SimplePickup.cs" id="2_uyvdx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2bm04"]
 size = Vector3(2, 1, 2)

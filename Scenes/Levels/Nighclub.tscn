@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d3kqoomv25c5t" path="res://Scenes/Levels/LevelAssets/Backrooms/Doorways/DoorwayConcrete.tscn" id="4_8vc51"]
 [ext_resource type="Material" uid="uid://b7saswbexpga0" path="res://Assets/Materials/Backrooms/Concrete.tres" id="5_nctj5"]
 [ext_resource type="PackedScene" uid="uid://b63wwcwx850kr" path="res://Scenes/Levels/LevelAssets/WaffleHouse/GroupOf3Shitters.tscn" id="6_3353m"]
-[ext_resource type="PackedScene" uid="uid://00oigava2hm0" path="res://Scenes/Pickups/SimpleCharacterPickup.tscn" id="7_umkie"]
+[ext_resource type="PackedScene" uid="uid://00oigava2hm0" path="res://Scenes/Pickups/SimplePickup.tscn" id="7_umkie"]
 [ext_resource type="PackedScene" uid="uid://k3u720y471ax" path="res://Scenes/Pickups/Weapon Pickups/OLD/Mac10Pickup.tscn" id="8_8ytmh"]
 
 [node name="Nightclub" type="Node3D"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://7qwn7vvfveyf"]
 
-[ext_resource type="Script" path="res://Scripts/Pickups/CharacterUpgradePickup.cs" id="1_0qske"]
+[ext_resource type="Script" path="res://Scripts/Pickups/UpgradePickup.cs" id="1_0qske"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_uhyuo"]
 noise_type = 2

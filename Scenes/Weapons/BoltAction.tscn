@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_xk3ee"]
 [ext_resource type="PackedScene" uid="uid://diqolrhp5s6sw" path="res://Scenes/Projectiles/BoltyBullet.tscn" id="2_yn8j2"]
-[ext_resource type="Texture2D" uid="uid://cwgatv0pl7vvk" path="res://Assets/Models/Weapons/Rifle_Rifle.png" id="4_o87jq"]
+[ext_resource type="Texture2D" uid="uid://cdeu155ds5qc4" path="res://Assets/Models/Weapons/Rifle_Rifle.png" id="4_o87jq"]
 [ext_resource type="PackedScene" uid="uid://ciaqkt6kkv2l0" path="res://Scenes/Particles/RifleShellParticle.tscn" id="5_7e2ie"]
 [ext_resource type="Script" path="res://Scripts/Base/SelfDestroyingParticle.cs" id="5_m2jef"]
 

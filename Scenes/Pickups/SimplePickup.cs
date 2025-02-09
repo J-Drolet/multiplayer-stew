@@ -3,10 +3,10 @@ using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Services;
 using System;
 
-public partial class SimpleCharacterPickup : Label3D
+public partial class SimplePickup : Label3D
 {
     [Export, ExportRequired]
-    public CharacterUpgradePickup upgradePickup;
+    public UpgradePickup upgradePickup;
 
     public override void _Ready()
     {

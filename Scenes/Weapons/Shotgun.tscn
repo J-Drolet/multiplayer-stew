@@ -1,8 +1,7 @@
-[gd_scene load_steps=23 format=4 uid="uid://cohf65bso617l"]
+[gd_scene load_steps=22 format=4 uid="uid://cohf65bso617l"]
 
 [ext_resource type="Script" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_ekypa"]
 [ext_resource type="PackedScene" uid="uid://chv0b14sstem5" path="res://Scenes/Projectiles/ShotgunPellet.tscn" id="2_67p85"]
-[ext_resource type="AudioStream" uid="uid://cakk5eb7we1et" path="res://Assets/Sounds/SFX/Shotgun Single 003.wav" id="3_gxftm"]
 [ext_resource type="Texture2D" uid="uid://c2u8ie3inrtw" path="res://Assets/Models/Weapons/Double_Barrel_glb_Shotgun_tex.png" id="4_v4e64"]
 [ext_resource type="Texture2D" uid="uid://cf286mioi5bu8" path="res://Assets/Models/Weapons/Ammo_glb_Ammo_tex.png" id="5_mkipk"]
 
@@ -472,7 +471,6 @@ MaxAmmo = 2
 ProjectilePerShot = 24
 Projectile = ExtResource("2_67p85")
 APlayer = NodePath("AnimationPlayer")
-FiringSound = ExtResource("3_gxftm")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -497,7 +495,7 @@ mesh = SubResource("SphereMesh_1tuyb")
 skeleton = NodePath("../../AnimationPlayer")
 
 [node name="Trigger" type="MeshInstance3D" parent="Meshes/Body"]
-transform = Transform3D(0.15355, 0, 0, 0, 0.0483982, 0.0306611, 0, -0.145723, 0.0101833, 0, -0.946951, -0.0123682)
+transform = Transform3D(0.15355, 0, 0, 0, 0.0483988, 0.0306611, 0, -0.145723, 0.0101834, 0, -0.946951, -0.0123682)
 mesh = SubResource("ArrayMesh_otmnp")
 skeleton = NodePath("")
 
@@ -509,12 +507,12 @@ skeleton = NodePath("../../AnimationPlayer")
 [node name="Shells" type="Node3D" parent="Meshes"]
 
 [node name="Shotgun_shell_1" type="MeshInstance3D" parent="Meshes/Shells"]
-transform = Transform3D(0.038, 0, 0, 0, -3.80289e-09, 0.038, 0, -0.087, -1.66103e-09, -0.054, 0.245, 0.01)
+transform = Transform3D(0.038, 0, 0, 0, -3.14939e-07, 0.038, 0, -0.087, -1.3756e-07, -0.054, 0.245, 0.01)
 mesh = SubResource("ArrayMesh_cd3f6")
 skeleton = NodePath("")
 
 [node name="Shotgun_shell_2" type="MeshInstance3D" parent="Meshes/Shells"]
-transform = Transform3D(0.038, 0, 0, 0, -3.80289e-09, 0.038, 0, -0.087, -1.66103e-09, 0.054, 0.245, 0.01)
+transform = Transform3D(0.038, 0, 0, 0, -3.14939e-07, 0.038, 0, -0.087, -1.3756e-07, 0.054, 0.245, 0.01)
 mesh = SubResource("ArrayMesh_cd3f6")
 skeleton = NodePath("")
 
