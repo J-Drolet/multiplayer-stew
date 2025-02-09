@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://bxxmlyeymtjud"]
 
-[ext_resource type="Script" path="res://Scripts/Pickups/CharacterUpgradePickup.cs" id="1_kv7po"]
+[ext_resource type="Script" path="res://Scripts/Pickups/UpgradePickup.cs" id="1_kv7po"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_uhyuo"]
 noise_type = 2
@@ -107,6 +107,7 @@ size = Vector3(2, 2, 2)
 
 [node name="PickupDelineator" type="Node3D" node_paths=PackedStringArray("PickupArea", "APlayer")]
 script = ExtResource("1_kv7po")
+Upgrade = 5
 PickupArea = NodePath("Area3D")
 APlayer = NodePath("AnimationPlayer")
 

@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://k3u720y471ax" path="res://Scenes/Pickups/Weapon Pickups/OLD/Mac10Pickup.tscn" id="6_vl5y8"]
 [ext_resource type="PackedScene" uid="uid://7qwn7vvfveyf" path="res://Scenes/Pickups/Character Upgrade Pickups/MentholPickup.tscn" id="8_8i516"]
 [ext_resource type="PackedScene" uid="uid://1fdlt6hucwhx" path="res://Scenes/Pickups/Weapon Pickups/OLD/BoltyPickup.tscn" id="8_xscgj"]
-[ext_resource type="PackedScene" uid="uid://00oigava2hm0" path="res://Scenes/Pickups/SimpleCharacterPickup.tscn" id="9_un6hj"]
+[ext_resource type="PackedScene" uid="uid://00oigava2hm0" path="res://Scenes/Pickups/SimplePickup.tscn" id="9_un6hj"]
 [ext_resource type="PackedScene" uid="uid://c1g1i6jf36w1w" path="res://Scenes/Pickups/Health Pickups/HealthPickup.tscn" id="10_wk5ir"]
 [ext_resource type="PackedScene" uid="uid://dgbp3hgx35bpy" path="res://Scenes/Pickups/Weapon Upgrade Pickups/SpliffPickup.tscn" id="16_shahq"]
 
@@ -122,3 +122,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4218, 0.341631, -0.882567)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5737, -0.085621, -11.5571)
 Upgrade = 4
 DestroyOnPickup = false
+
+[node name="SimpleCharacterPickup5" parent="." instance=ExtResource("9_un6hj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0407, -0.085621, -13.1481)
+Upgrade = 6

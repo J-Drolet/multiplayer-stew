@@ -37,7 +37,6 @@ namespace multiplayerstew.Scripts.Base
 		public string ClickSoundResourcePath { get; set; }
 
 		private int CurrentAmmo { get; set; }
-		public HashSet<WeaponUpgrade> Upgrades { get; set; } = new();
 
         public override void _EnterTree()
         {
@@ -69,7 +68,7 @@ namespace multiplayerstew.Scripts.Base
 				CurrentAmmo -= 1;
 				
 				List<int> angleOffsets = new(); // for each angleOffset a bullet will be fired with that offset
-				if(Upgrades.Contains(WeaponUpgrade.DunceCap))
+				if(GameManager.Players[GetMultiplayerAuthority()].characterNode.Upgrades.Contains(Upgrade.W_DunceCap))
 				{
 					foreach(int angle in (int[]) Config.GetValue("upgrade_constants", "dunce_shot_offsets", true))
 					{
@@ -121,18 +120,6 @@ namespace multiplayerstew.Scripts.Base
 		public void PlayGunSound(string soundPath)
 		{
             MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, soundPath, this.GetPath(), Multiplayer.GetUniqueId(), "SFX");
-		}
-
-		[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-		public void AddUpgrade(WeaponUpgrade upgrade)
-		{
-			Upgrades.Add(upgrade);
-		}
-
-		[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-		public void RemoveUpgrade(WeaponUpgrade upgrade)
-		{
-			Upgrades.Remove(upgrade);
 		}
 	}
 }

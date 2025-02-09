@@ -2,6 +2,7 @@
 using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Services;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 
@@ -33,11 +34,13 @@ namespace multiplayerstew.Scripts.Base
         private int projectileOwner;
         private Random Rng;
         private RayCast3D HitDetectionRaycast;
+        private HashSet<Upgrade> Upgrades = new(); // projectiles keep track of their own upgrades. Don't want projectile behavior to change mid-flight on upgrade pickup
 
         public override void _EnterTree()
         {
             projectileOwner = Name.ToString().Split('#').First().ToInt();
             Rng = new(Name.ToString().Split('#')[1].ToInt()); // get seed from name
+            Upgrades = new HashSet<Upgrade>(GameManager.Players[projectileOwner].characterNode.Upgrades);
         }
 
         public override void _Ready()
