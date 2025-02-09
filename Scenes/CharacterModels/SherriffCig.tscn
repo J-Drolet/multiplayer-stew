@@ -1,19 +1,10 @@
-[gd_scene load_steps=25 format=4 uid="uid://iw4ipl7676fw"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_4tqrg"]
-frequency = 0.0492
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_v6tms"]
-as_normal_map = true
-noise = SubResource("FastNoiseLite_4tqrg")
+[gd_scene load_steps=38 format=4 uid="uid://0yoi5afpvsnm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lnmum"]
 resource_name = "Material"
 cull_mode = 2
 albedo_color = Color(0.670878, 0.670878, 0.670878, 1)
 roughness = 0.5
-normal_enabled = true
-normal_texture = SubResource("NoiseTexture2D_v6tms")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fjpfj"]
 resource_name = "Material.001"
@@ -123,29 +114,217 @@ albedo_color = Color(0.898039, 0.388235, 0.0745098, 1)
 normal_enabled = true
 normal_texture = SubResource("NoiseTexture2D_tdfso")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvb58"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_4fhf2"]
+frequency = 0.2803
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_30bk0"]
+as_normal_map = true
+noise = SubResource("FastNoiseLite_4fhf2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_us2x6"]
+albedo_color = Color(0.283249, 0.159732, 0.0750031, 1)
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_30bk0")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1syyk"]
+material = SubResource("StandardMaterial3D_us2x6")
+
+[sub_resource type="TorusMesh" id="TorusMesh_uwxr6"]
+material = SubResource("StandardMaterial3D_us2x6")
+inner_radius = 0.487
+outer_radius = 0.47
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_pkqaa"]
+frequency = 0.0565
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_s6svi"]
+as_normal_map = true
+bump_strength = 5.2
+noise = SubResource("FastNoiseLite_pkqaa")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u58cd"]
+albedo_color = Color(0.791475, 0.661389, 2.31028e-06, 1)
+metallic = 1.0
+roughness_texture = SubResource("NoiseTexture2D_s6svi")
+
+[sub_resource type="PrismMesh" id="PrismMesh_5afrr"]
+material = SubResource("StandardMaterial3D_u58cd")
+
+[sub_resource type="SphereMesh" id="SphereMesh_n45x3"]
+material = SubResource("StandardMaterial3D_u58cd")
+
+[sub_resource type="FontFile" id="FontFile_fmrks"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/41/0/ascent = 0.0
+cache/0/41/0/descent = 0.0
+cache/0/41/0/underline_position = 0.0
+cache/0/41/0/underline_thickness = 0.0
+cache/0/41/0/scale = 1.0
+cache/0/51/0/ascent = 0.0
+cache/0/51/0/descent = 0.0
+cache/0/51/0/underline_position = 0.0
+cache/0/51/0/underline_thickness = 0.0
+cache/0/51/0/scale = 1.0
+cache/0/66/0/ascent = 0.0
+cache/0/66/0/descent = 0.0
+cache/0/66/0/underline_position = 0.0
+cache/0/66/0/underline_thickness = 0.0
+cache/0/66/0/scale = 1.0
+cache/0/76/0/ascent = 0.0
+cache/0/76/0/descent = 0.0
+cache/0/76/0/underline_position = 0.0
+cache/0/76/0/underline_thickness = 0.0
+cache/0/76/0/scale = 1.0
+cache/0/96/0/ascent = 0.0
+cache/0/96/0/descent = 0.0
+cache/0/96/0/underline_position = 0.0
+cache/0/96/0/underline_thickness = 0.0
+cache/0/96/0/scale = 1.0
+cache/0/111/0/ascent = 0.0
+cache/0/111/0/descent = 0.0
+cache/0/111/0/underline_position = 0.0
+cache/0/111/0/underline_thickness = 0.0
+cache/0/111/0/scale = 1.0
+cache/0/126/0/ascent = 0.0
+cache/0/126/0/descent = 0.0
+cache/0/126/0/underline_position = 0.0
+cache/0/126/0/underline_thickness = 0.0
+cache/0/126/0/scale = 1.0
+cache/0/127/0/ascent = 0.0
+cache/0/127/0/descent = 0.0
+cache/0/127/0/underline_position = 0.0
+cache/0/127/0/underline_thickness = 0.0
+cache/0/127/0/scale = 1.0
+cache/0/116/0/ascent = 0.0
+cache/0/116/0/descent = 0.0
+cache/0/116/0/underline_position = 0.0
+cache/0/116/0/underline_thickness = 0.0
+cache/0/116/0/scale = 1.0
+cache/0/106/0/ascent = 0.0
+cache/0/106/0/descent = 0.0
+cache/0/106/0/underline_position = 0.0
+cache/0/106/0/underline_thickness = 0.0
+cache/0/106/0/scale = 1.0
+cache/0/91/0/ascent = 0.0
+cache/0/91/0/descent = 0.0
+cache/0/91/0/underline_position = 0.0
+cache/0/91/0/underline_thickness = 0.0
+cache/0/91/0/scale = 1.0
+cache/0/86/0/ascent = 0.0
+cache/0/86/0/descent = 0.0
+cache/0/86/0/underline_position = 0.0
+cache/0/86/0/underline_thickness = 0.0
+cache/0/86/0/scale = 1.0
+cache/0/81/0/ascent = 0.0
+cache/0/81/0/descent = 0.0
+cache/0/81/0/underline_position = 0.0
+cache/0/81/0/underline_thickness = 0.0
+cache/0/81/0/scale = 1.0
+cache/0/71/0/ascent = 0.0
+cache/0/71/0/descent = 0.0
+cache/0/71/0/underline_position = 0.0
+cache/0/71/0/underline_thickness = 0.0
+cache/0/71/0/scale = 1.0
+cache/0/61/0/ascent = 0.0
+cache/0/61/0/descent = 0.0
+cache/0/61/0/underline_position = 0.0
+cache/0/61/0/underline_thickness = 0.0
+cache/0/61/0/scale = 1.0
+cache/0/56/0/ascent = 0.0
+cache/0/56/0/descent = 0.0
+cache/0/56/0/underline_position = 0.0
+cache/0/56/0/underline_thickness = 0.0
+cache/0/56/0/scale = 1.0
+cache/0/46/0/ascent = 0.0
+cache/0/46/0/descent = 0.0
+cache/0/46/0/underline_position = 0.0
+cache/0/46/0/underline_thickness = 0.0
+cache/0/46/0/scale = 1.0
+cache/0/36/0/ascent = 0.0
+cache/0/36/0/descent = 0.0
+cache/0/36/0/underline_position = 0.0
+cache/0/36/0/underline_thickness = 0.0
+cache/0/36/0/scale = 1.0
+cache/0/31/0/ascent = 0.0
+cache/0/31/0/descent = 0.0
+cache/0/31/0/underline_position = 0.0
+cache/0/31/0/underline_thickness = 0.0
+cache/0/31/0/scale = 1.0
+cache/0/26/0/ascent = 0.0
+cache/0/26/0/descent = 0.0
+cache/0/26/0/underline_position = 0.0
+cache/0/26/0/underline_thickness = 0.0
+cache/0/26/0/scale = 1.0
+cache/0/21/0/ascent = 0.0
+cache/0/21/0/descent = 0.0
+cache/0/21/0/underline_position = 0.0
+cache/0/21/0/underline_thickness = 0.0
+cache/0/21/0/scale = 1.0
+cache/0/1/0/ascent = 0.0
+cache/0/1/0/descent = 0.0
+cache/0/1/0/underline_position = 0.0
+cache/0/1/0/underline_thickness = 0.0
+cache/0/1/0/scale = 1.0
+cache/0/6/0/ascent = 0.0
+cache/0/6/0/descent = 0.0
+cache/0/6/0/underline_position = 0.0
+cache/0/6/0/underline_thickness = 0.0
+cache/0/6/0/scale = 1.0
+cache/0/11/0/ascent = 0.0
+cache/0/11/0/descent = 0.0
+cache/0/11/0/underline_position = 0.0
+cache/0/11/0/underline_thickness = 0.0
+cache/0/11/0/scale = 1.0
+cache/0/19/0/ascent = 0.0
+cache/0/19/0/descent = 0.0
+cache/0/19/0/underline_position = 0.0
+cache/0/19/0/underline_thickness = 0.0
+cache/0/19/0/scale = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4nnoq"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_ii5nu"]
+material = SubResource("StandardMaterial3D_4nnoq")
+text = "SHERRIFF
+Cig"
+font = SubResource("FontFile_fmrks")
+font_size = 19
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sp2ee"]
 albedo_color = Color(0.641934, 0.641934, 0.641934, 1)
 
-[sub_resource type="SphereMesh" id="SphereMesh_6mhjs"]
-material = SubResource("StandardMaterial3D_dvb58")
+[sub_resource type="SphereMesh" id="SphereMesh_tv1jh"]
+material = SubResource("StandardMaterial3D_sp2ee")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rq7k8"]
-albedo_color = Color(0.171437, 0.387093, 0.273318, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kjrlu"]
+albedo_color = Color(0.232987, 0.299997, 0.635198, 1)
 
-[sub_resource type="SphereMesh" id="SphereMesh_5p1h5"]
-material = SubResource("StandardMaterial3D_rq7k8")
+[sub_resource type="SphereMesh" id="SphereMesh_a68uk"]
+material = SubResource("StandardMaterial3D_kjrlu")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xa7jg"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ek1ls"]
+frequency = 0.0492
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_l6dlp"]
+as_normal_map = true
+noise = SubResource("FastNoiseLite_ek1ls")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fiabk"]
 resource_name = "Material"
 cull_mode = 2
-albedo_color = Color(0.993426, 0.545175, 0.41457, 1)
+albedo_color = Color(0.493089, 0.24449, 0.0608141, 1)
 roughness = 0.5
 normal_enabled = true
 normal_scale = 0.55
-normal_texture = SubResource("NoiseTexture2D_v6tms")
+normal_texture = SubResource("NoiseTexture2D_l6dlp")
 
-[sub_resource type="TorusMesh" id="TorusMesh_xlgqi"]
-material = SubResource("StandardMaterial3D_xa7jg")
+[sub_resource type="TorusMesh" id="TorusMesh_j4dt7"]
+material = SubResource("StandardMaterial3D_fiabk")
 inner_radius = 0.088
 
 [sub_resource type="Animation" id="Animation_mrq4d"]
@@ -321,17 +500,36 @@ tracks/23/keys = PackedFloat32Array(0, 1, 1, 1, 1, 0.0333333, 1, 1, 1, 1, 0.0666
 tracks/24/type = "position_3d"
 tracks/24/imported = false
 tracks/24/enabled = true
-tracks/24/path = NodePath("Face")
+tracks/24/path = NodePath("CowboyHat")
 tracks/24/interp = 1
 tracks/24/loop_wrap = true
-tracks/24/keys = PackedFloat32Array(0, 1, 0.286892, 2.40608, 0.130437, 0.0333333, 1, 0.286892, 2.40608, 0.130437, 0.0666667, 1, 0.229528, 2.2284, 0.166223, 0.1, 1, 0.123044, 1.78543, 0.166223, 0.133333, 1, 0.0265964, 1.38225, 0.166223, 0.166667, 1, 0.0215856, 1.14828, 0.166223, 0.2, 1, 0.0215856, 1.38203, 0.166223, 0.233333, 1, 0.139536, 1.67081, 0.16901, 0.266667, 1, 0.139536, 2.06404, 0.16901, 0.3, 1, 0.139536, 2.35511, 0.16901, 0.333333, 1, 0.139352, 2.68338, 0.16901, 0.366667, 1, 0.139352, 2.97108, 0.16901, 0.4, 1, 0.145949, 3.21088, 0.16698, 0.433333, 1, 0.152547, 3.42618, 0.16495, 0.466667, 1, 0.159144, 3.53207, 0.16292, 0.466767, 1, 0.159144, 3.52595, 0.16292, 0.533333, 1, 0.172339, 3.56094, 0.158859, 0.566667, 1, 0.180521, 3.47845, 0.156829, 1, 1, 0.286892, 2.40608, 0.130437)
+tracks/24/keys = PackedFloat32Array(0, 1, 0, 2.74026, 0, 0.0333333, 1, 0, 2.74026, 0, 0.0666667, 1, -0.0284382, 2.57682, 0, 0.1, 1, -0.1519, 2.15958, 0, 0.2, 1, -0.320352, 1.56978, -0.00300008, 0.233333, 1, -0.32, 1.99414, -0.003, 0.266667, 1, -0.32, 2.32605, -0.003, 0.466667, 1, -0.276, 4.5, -0.002, 0.533333, 1, -0.262, 4.75, -0.002, 0.6, 1, -0.225, 4.5, -0.002, 1, 1, 0, 2.7, 0)
 tracks/25/type = "value"
 tracks/25/imported = false
 tracks/25/enabled = true
-tracks/25/path = NodePath("Face:rotation")
+tracks/25/path = NodePath("CowboyHat:rotation")
 tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = {
+"times": PackedFloat32Array(0.0666667, 0.1, 0.233333, 0.266667, 0.533333, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0.116937), Vector3(0, 0, -0.0959931), Vector3(0, 0, 0.240855), Vector3(0, 0, 0.565487), Vector3(0, 0, 3.14159), Vector3(0, 0, 6.40012)]
+}
+tracks/26/type = "position_3d"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Star")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = PackedFloat32Array(0, 1, 0.286892, 2.40608, 0.130437, 0.0333333, 1, 0.286892, 2.40608, 0.130437, 0.0666667, 1, 0.229528, 2.2284, 0.166223, 0.1, 1, 0.123044, 1.78543, 0.166223, 0.133333, 1, 0.0265964, 1.38225, 0.166223, 0.166667, 1, 0.0215856, 1.14828, 0.166223, 0.2, 1, 0.0215856, 1.38203, 0.166223, 0.233333, 1, 0.139536, 1.67081, 0.16901, 0.266667, 1, 0.139536, 2.06404, 0.16901, 0.3, 1, 0.139536, 2.35511, 0.16901, 0.333333, 1, 0.139352, 2.68338, 0.16901, 0.366667, 1, 0.139352, 2.97108, 0.16901, 0.4, 1, 0.145949, 3.21088, 0.16698, 0.433333, 1, 0.152547, 3.42618, 0.16495, 0.466667, 1, 0.159144, 3.53207, 0.16292, 0.466767, 1, 0.159144, 3.52595, 0.16292, 0.533333, 1, 0.172339, 3.56094, 0.158859, 1, 1, 0.286892, 2.40608, 0.130437)
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Star:rotation")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
 "times": PackedFloat32Array(0.1, 0.133333, 0.166667, 0.2, 0.233333, 0.266667, 0.533333, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
@@ -340,20 +538,39 @@ tracks/25/keys = {
 
 [sub_resource type="Animation" id="Animation_kpxwu"]
 length = 0.001
-tracks/0/type = "position_3d"
+tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Face")
+tracks/0/path = NodePath("CowboyHat:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0.286892, 2.40608, 0.130437)
-tracks/1/type = "value"
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "position_3d"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Face:rotation")
+tracks/1/path = NodePath("CowboyHat")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/keys = {
+tracks/1/keys = PackedFloat32Array(0, 1, -0.2765, 4.14401, -0.00225)
+tracks/2/type = "position_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Star")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.286892, 2.40608, 0.130437)
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Star:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -444,40 +661,112 @@ surface_material_override/1 = SubResource("StandardMaterial3D_bs8wk")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Armature/Skeleton3D/Cylinder"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9095, 0)
 
-[node name="Face" type="Node3D" parent="."]
-transform = Transform3D(0.186945, 0.0235536, 0, -0.0235536, 0.186945, 0, 0, 0, 0.188423, 0.286892, 2.40608, 0.130437)
+[node name="CowboyHat" type="Node3D" parent="."]
+transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 1, -0.2765, 4.14401, -0.00225)
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Face"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38499, 0, -1.24127)
-mesh = SubResource("SphereMesh_6mhjs")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CowboyHat"]
+transform = Transform3D(0.880211, 0, 0, 0, 0.020344, 0, 0, 0, 0.884646, 0, 0, 0)
+mesh = SubResource("CylinderMesh_1syyk")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Face/MeshInstance3D3"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="CowboyHat"]
+transform = Transform3D(0.913098, 0, 0, 0, 3.92185, 0, 0, 0, 0.913099, 0, 0.0148513, 0)
+mesh = SubResource("TorusMesh_uwxr6")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CowboyHat"]
+transform = Transform3D(0.0163587, 0, -0.698297, 0, 0.698489, 0, 0.698297, 0, 0.0163587, 0.0173551, 0.270195, -0.0246522)
+height = 0.691441
+material = SubResource("StandardMaterial3D_us2x6")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CowboyHat/CSGCylinder3D"]
+transform = Transform3D(-1.38064, 0.0382094, -0.856739, 0.863497, 0.0339123, -1.37014, -0.00893966, -2.62541, -0.0301668, 0.0094515, 0.308105, -0.00239803)
+operation = 2
+radius = 0.277331
+height = 0.419018
+sides = 30
+smooth_faces = false
+material = SubResource("StandardMaterial3D_us2x6")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CowboyHat/CSGCylinder3D"]
+transform = Transform3D(-1.38064, 0.0382094, -0.856739, 0.863497, 0.0339123, -1.37014, -0.00893966, -2.62541, -0.0301668, -0.383612, 0.295882, -0.0116062)
+operation = 2
+radius = 0.202192
+height = 0.419018
+sides = 30
+smooth_faces = false
+material = SubResource("StandardMaterial3D_us2x6")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="CowboyHat/CSGCylinder3D"]
+transform = Transform3D(-1.38064, 0.0382094, -0.856739, 0.863497, 0.0339123, -1.37014, -0.00893966, -2.62541, -0.0301668, 0.416092, 0.36093, 0.0175266)
+operation = 2
+radius = 0.202192
+height = 0.419018
+sides = 30
+smooth_faces = false
+material = SubResource("StandardMaterial3D_us2x6")
+
+[node name="Star" type="Node3D" parent="."]
+transform = Transform3D(0.17084, 0.0215246, 0, -0.0215246, 0.17084, 0, 0, 0, 0.00896638, 0.286892, 2.40608, 0.130437)
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Star"]
+mesh = SubResource("PrismMesh_5afrr")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Star"]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, -0.322237, 0)
+mesh = SubResource("PrismMesh_5afrr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Star"]
+transform = Transform3D(0.182603, 0, 0, 0, 0.182603, 0, 0, 0, 3.34473, 0, 0.516639, 0)
+mesh = SubResource("SphereMesh_n45x3")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Star"]
+transform = Transform3D(0.182603, 0, 0, 0, 0.182603, 0, 0, 0, 3.34473, -0.551213, -0.52489, 0)
+mesh = SubResource("SphereMesh_n45x3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Star"]
+transform = Transform3D(0.182603, 0, 0, 0, 0.182603, 0, 0, 0, 3.34473, 0.535487, -0.533831, 0)
+mesh = SubResource("SphereMesh_n45x3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Star"]
+transform = Transform3D(0.182603, 0, 0, 0, 0.182603, 0, 0, 0, 3.34473, -0.525299, 0.165305, 0)
+mesh = SubResource("SphereMesh_n45x3")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Star"]
+transform = Transform3D(0.182603, 0, 0, 0, 0.182603, 0, 0, 0, 3.34473, 0, -0.823662, 0)
+mesh = SubResource("SphereMesh_n45x3")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Star"]
+transform = Transform3D(0.182603, 0, 0, 0, 0.182603, 0, 0, 0, 3.34473, 0.510086, 0.174824, 0)
+mesh = SubResource("SphereMesh_n45x3")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Star"]
+transform = Transform3D(0.856501, 0, 4.65661e-10, 0, 0.856501, 0, 2.38419e-07, 0, 0.8565, 0.00822127, -0.114967, 1.74588)
+mesh = SubResource("TextMesh_ii5nu")
+
+[node name="Eyes" type="Node3D" parent="."]
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Eyes"]
+transform = Transform3D(0.170563, 0, 0, 0, 0.170563, 0, 0, 0, 0.170563, 0.251643, 2.45283, -0.141308)
+mesh = SubResource("SphereMesh_tv1jh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Eyes/MeshInstance3D3"]
 transform = Transform3D(0.64757, 0, 0, 0, 0.64757, 0, 0, 0, 0.64757, 0.203709, 0, 0)
-mesh = SubResource("SphereMesh_5p1h5")
+mesh = SubResource("SphereMesh_a68uk")
 
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="Face"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38499, 9.53674e-07, -0.1121)
-mesh = SubResource("SphereMesh_6mhjs")
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Eyes"]
+transform = Transform3D(0.170563, 0, 0, 0, 0.170563, 0, 0, 0, 0.170563, 0.251643, 2.45283, 0.0512872)
+mesh = SubResource("SphereMesh_tv1jh")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Face/MeshInstance3D5"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Eyes/MeshInstance3D5"]
 transform = Transform3D(0.64757, 0, 0, 0, 0.64757, 0, 0, 0, 0.64757, 0.203709, 0, 0)
-mesh = SubResource("SphereMesh_5p1h5")
+mesh = SubResource("SphereMesh_a68uk")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="Face"]
-transform = Transform3D(0.542139, 0, 0, 7.45058e-09, 0.505216, 0, 0, 0, 0.548406, -0.445786, 0.321528, -1.26067)
-mesh = SubResource("TorusMesh_xlgqi")
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Eyes"]
+transform = Transform3D(0.108652, 0, 0, 1.41538e-09, 0.0959751, -0.0350179, 4.75749e-10, 0.03226, 0.10418, 0.237375, 2.4954, -0.15489)
+mesh = SubResource("TorusMesh_j4dt7")
 
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="Face"]
-transform = Transform3D(0.536883, -7.45058e-09, 0, 0, 0.531025, 0, 0, 0, 0.548406, -0.448405, 0.342307, -0.100098)
-mesh = SubResource("TorusMesh_xlgqi")
-
-[node name="MeshInstance3D7" type="MeshInstance3D" parent="Face"]
-transform = Transform3D(0.561104, 3.72529e-09, 0, 0, 0.340882, 0, 0, 0, 0.548406, -0.361, -0.319, -0.1)
-mesh = SubResource("TorusMesh_xlgqi")
-
-[node name="MeshInstance3D8" type="MeshInstance3D" parent="Face"]
-transform = Transform3D(0.561104, 7.45058e-09, 0, 0, 0.340883, 0, 0, 0, 0.548406, -0.365133, -0.31862, -1.25379)
-mesh = SubResource("TorusMesh_xlgqi")
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Eyes"]
+transform = Transform3D(0.107598, -1.49319e-09, 0, 0, 0.099624, 0.0386575, 0, -0.0374323, 0.102885, 0.23685, 2.50799, 0.0435368)
+mesh = SubResource("TorusMesh_j4dt7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
