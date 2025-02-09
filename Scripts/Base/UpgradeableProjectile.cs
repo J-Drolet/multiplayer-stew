@@ -140,12 +140,11 @@ namespace multiplayerstew.Scripts.Base
                         Vector3 collisionPoint = WorldHitDetectionRaycast.GetCollisionPoint();
                         Vector3 collisionNormal = WorldHitDetectionRaycast.GetCollisionNormal();
                         
-                        GlobalPosition = collisionPoint;
-
                         float lengthToCollision = (GlobalPosition - collisionPoint).Length();
                         float percentageDeltaToCollision = lengthToCollision / (Velocity * (float)delta).Length();
                         float remaingDelta = (1 - percentageDeltaToCollision) * (float) delta; // only give the remaining delta for moving
                         
+                        GlobalPosition = collisionPoint;
                         Velocity = Velocity - 2 * Velocity.Dot(collisionNormal) * collisionNormal;
                         delta = remaingDelta;
                     }
