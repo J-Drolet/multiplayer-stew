@@ -104,6 +104,44 @@ namespace multiplayerstew.Scripts.Base
             if (!IsMultiplayerAuthority()) return;
 
             Velocity += ProjectileGravity * (float)delta;
+            
+            // for homing upgrade
+            if(Upgrades.Contains(Upgrade.W_Homing))
+            {
+                Character nearestEnemy = null;
+                float maxHomingDistance = (float)Config.GetValue("upgrade_constants", "homing_max_distance", true);
+                foreach(int peerId in GameManager.Players.Keys)
+                {
+                    if(peerId != projectileOwner)
+                    {   
+                        float distance = (GlobalPosition - GameManager.Players[peerId].characterNode.GlobalPosition).Length();
+                        if(nearestEnemy == null && distance <= maxHomingDistance)
+                        {
+                            nearestEnemy = GameManager.Players[peerId].characterNode;
+                        }
+                        else if(nearestEnemy != null)
+                        {
+                            float oldDistance = (GlobalPosition - nearestEnemy.GlobalPosition).Length();
+                            if(distance < oldDistance)
+                            {
+                                nearestEnemy = GameManager.Players[peerId].characterNode;
+                            }
+                        }
+                    }
+                }
+
+                if(nearestEnemy != null)
+                {
+                    float speed = Velocity.Length();
+                    // Define ideal velocity (direction x speed towards player character from current position)
+                    Vector3 idealVelocity = (nearestEnemy.GlobalPosition - GlobalPosition).Normalized() * speed;
+                    // speed to steer = direction vector obtained by idealVelocity - current_velocity x force to steer
+                    Vector3 steering = (idealVelocity - Velocity).Normalized() * (float)Config.GetValue("upgrade_constants", "homing_intensity", true);
+                    Velocity += steering * (float)delta;
+                }
+            }
+                
+
 
             if (Velocity != Vector3.Zero)
             {

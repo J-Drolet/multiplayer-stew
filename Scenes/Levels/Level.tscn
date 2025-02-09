@@ -131,3 +131,8 @@ Upgrade = 6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6956, -0.085621, -7.86981)
 Upgrade = 8
 DestroyOnPickup = false
+
+[node name="SimpleCharacterPickup7" parent="." instance=ExtResource("9_un6hj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0805, -0.0856205, -9.48511)
+Upgrade = 11
+DestroyOnPickup = false
