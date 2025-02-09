@@ -33,7 +33,8 @@ namespace multiplayerstew.Scripts.Base
 
         private int projectileOwner;
         private Random Rng;
-        private RayCast3D HitDetectionRaycast;
+        private RayCast3D WorldHitDetectionRaycast; // for detecting if about to hit a world element
+        private RayCast3D HitboxDetectionRaycast; // for detecting if hitting a hitbox
         private HashSet<Upgrade> Upgrades = new(); // projectiles keep track of their own upgrades. Don't want projectile behavior to change mid-flight on upgrade pickup
 
         public override void _EnterTree()
@@ -63,18 +64,26 @@ namespace multiplayerstew.Scripts.Base
 
             Velocity = directionVector * InitialVelocity;
 
+            // dynamically add world collision hitbox
+            WorldHitDetectionRaycast = new();
+            AddChild(WorldHitDetectionRaycast);
+
+            WorldHitDetectionRaycast.CollideWithAreas = false;
+            WorldHitDetectionRaycast.CollideWithBodies = true;
+            WorldHitDetectionRaycast.HitFromInside = false;
+
             if (!Multiplayer.IsServer()) return;
 
-            // dynamically add raycast
-            HitDetectionRaycast = new();
-            AddChild(HitDetectionRaycast);
-            HitDetectionRaycast.SetCollisionMaskValue(1, false);
-            HitDetectionRaycast.SetCollisionMaskValue(3, true);
-            HitDetectionRaycast.SetCollisionMaskValue(5, true);
+            // dynamically add hitbox raycast
+            HitboxDetectionRaycast = new();
+            AddChild(HitboxDetectionRaycast);
+            HitboxDetectionRaycast.SetCollisionMaskValue(1, false);
+            HitboxDetectionRaycast.SetCollisionMaskValue(3, true);
+            HitboxDetectionRaycast.SetCollisionMaskValue(5, true);
 
-            HitDetectionRaycast.CollideWithAreas = true;
-            HitDetectionRaycast.CollideWithBodies = false;
-            HitDetectionRaycast.HitFromInside = true;
+            HitboxDetectionRaycast.CollideWithAreas = true;
+            HitboxDetectionRaycast.CollideWithBodies = false;
+            HitboxDetectionRaycast.HitFromInside = true;
         }
 
         public override void _Process(double delta)
@@ -101,11 +110,11 @@ namespace multiplayerstew.Scripts.Base
 
                 if(Multiplayer.IsServer()) // only the server cares about hit collision
                 {
-                    HitDetectionRaycast.TargetPosition = ToLocal(GlobalPosition + Velocity * (float)delta);
-                    HitDetectionRaycast.ForceRaycastUpdate();
-                    if(HitDetectionRaycast.IsColliding())
+                    HitboxDetectionRaycast.TargetPosition = ToLocal(GlobalPosition + Velocity * (float)delta);
+                    HitboxDetectionRaycast.ForceRaycastUpdate();
+                    if(HitboxDetectionRaycast.IsColliding())
                     {
-                        GodotObject collider = HitDetectionRaycast.GetCollider();
+                        GodotObject collider = HitboxDetectionRaycast.GetCollider();
                         if(MaxHits > 0 && collider is DamageArea) // we do a max hit check here so server stops hitting even before authority queue frees the projectile
                         {
                             DamageArea damageArea = collider as DamageArea;
@@ -119,6 +128,32 @@ namespace multiplayerstew.Scripts.Base
                             DisableSelf();
                         }
                     }
+                }
+
+                // Collision with world detection
+                WorldHitDetectionRaycast.TargetPosition = ToLocal(GlobalPosition + Velocity * (float)delta);
+                WorldHitDetectionRaycast.ForceRaycastUpdate();
+                if(WorldHitDetectionRaycast.IsColliding())
+                {
+                    if(Upgrades.Contains(Upgrade.W_BouncyProjectile))
+                    {
+                        Vector3 collisionPoint = WorldHitDetectionRaycast.GetCollisionPoint();
+                        Vector3 collisionNormal = WorldHitDetectionRaycast.GetCollisionNormal();
+                        
+                        GlobalPosition = collisionPoint;
+
+                        float lengthToCollision = (GlobalPosition - collisionPoint).Length();
+                        float percentageDeltaToCollision = lengthToCollision / (Velocity * (float)delta).Length();
+                        float remaingDelta = (1 - percentageDeltaToCollision) * (float) delta; // only give the remaining delta for moving
+                        
+                        Velocity = Velocity - 2 * Velocity.Dot(collisionNormal) * collisionNormal;
+                        delta = remaingDelta;
+                    }
+                    else // always destroy on hit wall
+                    {
+                        DisableSelf();
+                    }
+
                 }
 
                 GlobalPosition += Velocity * (float)delta;
