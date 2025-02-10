@@ -66,17 +66,6 @@ public partial class Character : Entity
 
 		if(Input.MouseMode == Input.MouseModeEnum.Captured)
 		{
-			if (EquippedWeapon != null)
-			{
-				if ((EquippedWeapon?.FireMode == FireModes.Single) && @event.IsActionPressed("Fire"))
-				{
-					EquippedWeapon.Fire();
-				}
-				if (@event.IsActionPressed("Reload"))
-				{
-					EquippedWeapon.Reload();
-				}
-			}
 			if(@event is InputEventMouseMotion)
 			{
 				InputEventMouseMotion iEvent = @event as InputEventMouseMotion;
@@ -131,7 +120,7 @@ public partial class Character : Entity
 				TimeSinceXray = 0;
 				MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, OutlinePlayerSFX.ResourcePath, this.GetPath(), Multiplayer.GetUniqueId(), "SFX");
 
-				foreach(int peerId in GameManager.Players.Keys)
+				foreach(long peerId in GameManager.Players.Keys)
 				{
 					if(peerId != Multiplayer.GetUniqueId()) // only add xray to peers
 					{
@@ -142,14 +131,7 @@ public partial class Character : Entity
 			}
 		}
 
-		if (EquippedWeapon != null)
-		{
-			UI.InGameUI.AmmoCount.Text = EquippedWeapon.GetCurrentAmmoText();
-			if (EquippedWeapon?.FireMode == FireModes.Automatic && Input.IsActionPressed("Fire"))
-			{
-				EquippedWeapon.Fire();
-			}
-        }
+		if(EquippedWeapon == null) UI.InGameUI.AmmoCount.Text = "";
 
 		UI.InGameUI.SetHealthBar(CurrentHealth / MaxHealth);
     }

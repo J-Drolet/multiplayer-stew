@@ -25,6 +25,7 @@ namespace multiplayerstew.Scripts.Base
 		public int MaxAmmo { get; set; } = -1;
 		[Export]
 		public FireModes FireMode { get; set; } = FireModes.Single;
+		private FireModes DefaultFireMode { get; set; }
 		[Export]
 		public int ProjectilePerShot { get; set; } = 1;
 		[Export, ExportRequired]
@@ -35,12 +36,16 @@ namespace multiplayerstew.Scripts.Base
 		public AnimationPlayer APlayer { get; set; }
 		[Export]
 		public string ClickSoundResourcePath { get; set; }
+		private Random rng = new();
 
 		private int CurrentAmmo { get; set; }
+		private int StoredAmmo { get; set; } // for charge upgrade
+		private double TimeSinceLastCharge { get; set; } // for charge upgrade
 
         public override void _EnterTree()
         {
             SetMultiplayerAuthority(Name.ToString().Split('#').First().ToInt());
+			DefaultFireMode = FireMode;
         }
 
         public override void _Ready()
@@ -59,41 +64,88 @@ namespace multiplayerstew.Scripts.Base
 			}
 		}
 
-		public void Fire()
+        public override void _Process(double delta)
+        {
+            TimeSinceLastCharge += delta;
+
+			UI.InGameUI.AmmoCount.Text = GetCurrentAmmoText();
+			if(FireMode != FireModes.Single && Input.IsActionPressed("Fire"))
+			{
+				Fire();
+			}
+
+			// The reason why we handle the upgrade like this is to support multiple upgrades that might affect firemode. Aswell as the chance we have a weapon with default of charge
+			if(GameManager.Players[GetMultiplayerAuthority()].characterNode.Upgrades.Contains(Upgrade.W_MagDump))
+			{
+				FireMode = FireModes.Charge;
+			}
+			else
+			{
+				FireMode = DefaultFireMode;
+			}
+        }
+
+		public override void _UnhandledInput(InputEvent @event)
+    	{
+			if(!IsMultiplayerAuthority()) return;
+
+			if(Input.MouseMode == Input.MouseModeEnum.Captured)
+			{
+				if((FireMode == FireModes.Single) && @event.IsActionPressed("Fire"))
+				{
+					Fire();
+				}
+				if (@event.IsActionPressed("Reload"))
+				{
+					Reload();
+				}
+				if(@event.IsActionReleased("Fire"))
+				{
+					FireReleased();
+				}
+			}
+		}
+
+        public void Fire()
 		{   
 			if ((CurrentAmmo > 0 || MaxAmmo < 0) && CanFire) 
 			{	
-				Random rng = new();
-				APlayer.Play("Fire");
-				CurrentAmmo -= 1;
-				
-				List<int> angleOffsets = new(); // for each angleOffset a bullet will be fired with that offset
-				if(GameManager.Players[GetMultiplayerAuthority()].characterNode.Upgrades.Contains(Upgrade.W_DunceCap))
+				if(FireMode != FireModes.Charge)
 				{
-					foreach(int angle in (int[]) Config.GetValue("upgrade_constants", "dunce_shot_offsets", true))
-					{
-						angleOffsets.Add(angle);
-					}
+					CurrentAmmo -= 1;
+					APlayer.Play("Fire");
+					
+					FireProjectile();
 				}
 				else
 				{
-					angleOffsets.Add(0);
-				}
-
-				for (int x = ProjectilePerShot; x > 0; x--)
-				{
-					foreach(int angleOffset in angleOffsets)
+					if(TimeSinceLastCharge > APlayer.GetAnimation("Fire").Length) // we base how much time to charge based on firing time
 					{
-						UpgradeableProjectile projectileInstance = Projectile.Instantiate() as UpgradeableProjectile;
-						projectileInstance.Name = GetMultiplayerAuthority().ToString() + "#" + rng.NextInt64(10000)  + "#" + angleOffset; // encode the owner of the projectile and the RNG seed
-						projectileInstance.GlobalTransform = GameManager.Players[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalTransform; // initial spot for local view
-						GameManager.Players[GetMultiplayerAuthority()].projectileParent.AddChild(projectileInstance, true);
+						CurrentAmmo -= 1;
+						StoredAmmo++;
+						TimeSinceLastCharge = 0;
 					}
-                }
+				}
 			}
 			else if(CurrentAmmo <= 0 && MaxAmmo >= 0 && ClickSoundResourcePath != null)
 			{
 				PlayGunSound(ClickSoundResourcePath);
+			}
+		}
+
+		public void FireReleased()
+		{
+			if(FireMode == FireModes.Charge) 
+			{
+				if(StoredAmmo > 0)
+				{
+					APlayer.Play("Fire");
+					for(int i = 0; i < StoredAmmo; i++)
+					{
+						FireProjectile();
+					}
+					StoredAmmo = 0;
+				}
 			}
 		}
 
@@ -120,6 +172,33 @@ namespace multiplayerstew.Scripts.Base
 		public void PlayGunSound(string soundPath)
 		{
             MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, soundPath, this.GetPath(), Multiplayer.GetUniqueId(), "SFX");
+		}
+
+		private void FireProjectile()
+		{
+			List<int> angleOffsets = new(); // for each angleOffset a bullet will be fired with that offset
+			if(GameManager.Players[GetMultiplayerAuthority()].characterNode.Upgrades.Contains(Upgrade.W_DunceCap))
+			{
+				foreach(int angle in (int[]) Config.GetValue("upgrade_constants", "dunce_shot_offsets", true))
+				{
+					angleOffsets.Add(angle);
+				}
+			}
+			else
+			{
+				angleOffsets.Add(0);
+			}
+
+			for (int x = ProjectilePerShot; x > 0; x--)
+			{
+				foreach(int angleOffset in angleOffsets)
+				{
+					UpgradeableProjectile projectileInstance = Projectile.Instantiate() as UpgradeableProjectile;
+					projectileInstance.Name = GetMultiplayerAuthority().ToString() + "#" + rng.NextInt64(10000)  + "#" + angleOffset; // encode the owner of the projectile and the RNG seed
+					projectileInstance.GlobalTransform = GameManager.Players[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalTransform; // initial spot for local view
+					GameManager.Players[GetMultiplayerAuthority()].projectileParent.AddChild(projectileInstance, true);
+				}
+			}
 		}
 	}
 }
