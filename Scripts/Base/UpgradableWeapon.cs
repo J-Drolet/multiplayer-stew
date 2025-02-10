@@ -67,13 +67,7 @@ namespace multiplayerstew.Scripts.Base
         public override void _Process(double delta)
         {
             TimeSinceLastCharge += delta;
-
-			UI.InGameUI.AmmoCount.Text = GetCurrentAmmoText();
-			if(FireMode != FireModes.Single && Input.IsActionPressed("Fire"))
-			{
-				Fire();
-			}
-
+			
 			// The reason why we handle the upgrade like this is to support multiple upgrades that might affect firemode. Aswell as the chance we have a weapon with default of charge
 			if(GameManager.Players[GetMultiplayerAuthority()].characterNode.Upgrades.Contains(Upgrade.W_MagDump))
 			{
@@ -83,6 +77,12 @@ namespace multiplayerstew.Scripts.Base
 			{
 				FireMode = DefaultFireMode;
 			}
+
+			UI.InGameUI.AmmoCount.Text = GetCurrentAmmoText();
+			if(FireMode != FireModes.Single && Input.IsActionPressed("Fire"))
+			{
+				Fire();
+			}
         }
 
 		public override void _UnhandledInput(InputEvent @event)
@@ -91,9 +91,13 @@ namespace multiplayerstew.Scripts.Base
 
 			if(Input.MouseMode == Input.MouseModeEnum.Captured)
 			{
-				if((FireMode == FireModes.Single) && @event.IsActionPressed("Fire"))
+				if(@event.IsActionPressed("Fire"))
 				{
-					Fire();
+					TimeSinceLastCharge = 0; // Prevents storing a charge 
+					if(FireMode == FireModes.Single)
+					{
+						Fire();
+					}
 				}
 				if (@event.IsActionPressed("Reload"))
 				{
