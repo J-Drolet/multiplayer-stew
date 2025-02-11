@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=4 uid="uid://cwinh54plb5mr"]
+
+[ext_resource type="Texture2D" uid="uid://b7in85gnhrni4" path="res://Assets/Models/Waffle House/Models/Quequis_House_Light.png" id="1_4g870"]
+[ext_resource type="Texture2D" uid="uid://bc64f8u0fg02h" path="res://Assets/Models/Waffle House/Models/Quequis_House_Light_Emissor.png" id="2_8qq3i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wcbew"]
+resource_name = "Light"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_4g870")
+emission_enabled = true
+emission_energy_multiplier = 12.0
+emission_texture = ExtResource("2_8qq3i")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kmegw"]
+_surfaces = [{
+"aabb": AABB(-1, -0.046533, -1, 2, 0.0930659, 2),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQA"),
+"name": "Light",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_01w0k"]
+resource_name = "Quequis_House_Light_004"
+_surfaces = [{
+"aabb": AABB(-1, -0.046533, -1, 2, 0.0930659, 2),
+"attribute_data": PackedByteArray("GxnI/wAA//8bGcj/Gxkn9xsZJ/cbGcj/AAAAAOPmyP8bGSf34+Yn9+PmyP//////GxnI/+PmJ/cbGSf34+bI////AADj5sj/4+Yn9+PmJ/c="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AgAJAAQAAgAHAAkABQASAAgABQAPABIAEQAOABMAEQAMAA4ACgADAA0ACgAAAAMABgALABAABgABAAsA"),
+"material": SubResource("StandardMaterial3D_wcbew"),
+"name": "Light",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAAAAP//AIAAAAAA////PwAAAAD//wAAAAD/////AIAAAP////8AAAAAAAAAAAAAAAAAAAAA/z8AAAAAAAAAAAAA//8AAAAAAAD//wAAAAD//wAA//8AgP//AAD///8///8AAP///7////////8AgP////////+///8AAAAAAAD//wAAAAD/P///AAAAAP+//////wAAAAD/////AAD/v/9///8AAP9//z//f/9/////P/9/////fwAA/3//P/9/////f/8//3//f///AAD/f/9/AAD/f////38AAP///38AAP9//38AAP///3//fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_kmegw")
+
+[node name="FlatCeilingLight" type="Node3D"]
+
+[node name="Light_004" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.64333e-08, 0, 0.389511, 0, 0.389511, 0, -0.389511, 0, -4.64333e-08, 0, -0.0188804, 0)
+mesh = SubResource("ArrayMesh_01w0k")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.406049, 0)

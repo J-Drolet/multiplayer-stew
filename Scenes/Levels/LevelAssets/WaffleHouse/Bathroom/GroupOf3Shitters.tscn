@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b63wwcwx850kr"]
 
-[ext_resource type="PackedScene" uid="uid://cxct8ku15nob6" path="res://Scenes/Levels/LevelAssets/WaffleHouse/ShitterPortion.tscn" id="1_oqsjt"]
-[ext_resource type="PackedScene" uid="uid://c7p1mhm63jn1g" path="res://Scenes/Levels/LevelAssets/WaffleHouse/ShitterWall.tscn" id="2_46vsx"]
+[ext_resource type="PackedScene" uid="uid://cxct8ku15nob6" path="res://Scenes/Levels/LevelAssets/WaffleHouse/Bathroom/ShitterPortion.tscn" id="1_oqsjt"]
+[ext_resource type="PackedScene" uid="uid://c7p1mhm63jn1g" path="res://Scenes/Levels/LevelAssets/WaffleHouse/Bathroom/ShitterWall.tscn" id="2_46vsx"]
 
 [node name="GroupOf3Shitters" type="Node3D"]
 

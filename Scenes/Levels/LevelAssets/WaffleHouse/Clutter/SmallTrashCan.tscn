@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=4 uid="uid://cqan04n78s4l6"]
+
+[ext_resource type="Texture2D" uid="uid://cs6cq7kvgqqh1" path="res://Assets/Models/Waffle House/Models/Quequis_House_trash_can_01.png" id="1_1k3ub"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_23xg4"]
+resource_name = "trash_can_01"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_1k3ub")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xumec"]
+_surfaces = [{
+"aabb": AABB(-0.556751, -0.489994, -0.556752, 1.1135, 1.27721, 1.1135),
+"format": 34896613377,
+"index_count": 228,
+"index_data": PackedByteArray("AAAQABEAAAACABAAAgASABAAAgAEABIABAATABIABAAGABMABgAUABMABgAIABQACAAVABQACAAKABUACgAWABUACgAMABYABwAaAAUABwAbABoADAAXABYADAAOABcADgARABcADgAAABEADgACAAAAAgAGAAQABgAKAAgACgAOAAwADgAGAAIABgAOAAoAAQAQAAMAAQARABAAAwASAAUAAwAQABIABQATAAcABQASABMABwAUAAkABwATABQACQAVAAsACQAUABUACwAWAA0ACwAVABYADQAXAA8ADQAWABcADwARAAEADwAXABEAGgAZABgAGQAeAB8AHgAcAB0AHAAaABsAGgAeABkAHgAaABwAAwAZAAEAAwAYABkAAQAfAA8AAQAZAB8ADQAdAAsADQAeAB0ACQAbAAcACQAcABsABQAYAAMABQAaABgADwAeAA0ADwAfAB4ACwAcAAkACwAdABwAEwAkABQAEwAjACQAFgAnABcAFgAmACcAEAAiABIAEAAgACIAFAAlABUAFAAkACUAFwAhABEAFwAnACEAEQAgABAAEQAhACAAEgAjABMAEgAiACMAFQAmABYAFQAlACYA"),
+"name": "trash_can_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 40,
+"vertex_data": PackedByteArray("/38AAFkPAAD/f///NxsAAKfPAABXMAAAQ8f//7s4AACl8AAA/38AAMfk////fwAAp88AAKfPAABDx///Q8cAAP9/AACl8AAA/3///8fkAABXMAAAp88AALs4//9DxwAAWQ8AAP9/AAA3G////38AAFcwAABXMAAAuzj//7s4AACnz///VzAAAP9///9ZDwAApfD///9/AACnz///p88AAP9///+l8AAAVzD//6fPAABZD////38AAFcw//9XMAAAAbeis/1IAAD/f6KzMzIAAMvNorP/fwAAAbeiswK3AAD/f6Kzy80AAPxIorMCtwAAMzKis/9/AAD8SKKz/UgAAIHaQNZ9JQAA/39A1gAAAAD//0DW/38AAIHaQNaB2gAA/39A1v//AAB9JUDWgdoAAAAAQNb/fwAAfSVA1n0lAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pk0li"]
+resource_name = "Quequis_House_trash_can_01_001"
+_surfaces = [{
+"aabb": AABB(-0.556751, -0.489994, -0.556752, 1.1135, 1.27721, 1.1135),
+"attribute_data": PackedByteArray("0x93/bP6qTniHNMzw4vWQ0zkEVCHAiOMGT13/bIC0zMcqNZDythVxJzEEVCHAt5uKLziV8rYhd41rqk5hwKYUcZ8d/0ovDt0yti1+JL97sOBX3f9Na76GRyoRoiS/b2pnMSSAztCd/3pgXf9w4tGiDzcj4qS/Y2PTOSSAy+fd/24dzt0PNxfcLP6+hmNAnf9dLx3/RI30zO4d+JXPNwvVsepzz/hBj5MHtMd+Rk9j5FvbiOM0x+PkR7T19sYis8/L8A3VickPkxvbt5uL8DmdW1BPkyJxUx6b26YUcZ8j5GBX4+RicWSl8epTYwYik2M2IbiOYnF2LQ7Qo+R6YGPkbFz5nWSaeI5L5+PkbFzN1ZMTOI5HtORvo0Cj5F0vI+RqwiiE2qyelz7+E7K4hyiE/GiAU1qslty+/iF3vGi1IFh3fW9+/i88hCN1IFh3b2pl31bcmHdhpVs/JaEl316XGz8X3AZMaITEI0BTWz8KFzkAqU6hcEa/YXB19snJKU6akWlOiLXT3Yi15KX1YpKKCLX1biSaUooT0hKKIXBlLo="),
+"format": 34896613399,
+"index_count": 228,
+"index_data": PackedByteArray("AAArAC0AAAAGACsABQAyACwABQALADIACwA2ADIACwAPADYAEAA4ADcAEAAUADgAFAA+ADgAFAAZAD4AGgBCAD8AGgAfAEIAEgBOAA0AEgBRAE4AHwBHAEIAHwAkAEcAIwAtAEYAIwAAAC0AIgAEAAEABAAOAAoADgAYABUAGAAiAB4AIgAOAAQADgAiABgAAwAoAAgAAwAvACgACAAwAAwACAAoADAADAAzABEADAAwADMAEQA6ABYAEQAzADoAFgA7ABsAFgA6ADsAGwBAACAAGwA7AEAAIABDACYAIABAAEMAJgAvAAMAJgBDAC8ATQBMAEkATABXAFoAVwBSAFQAUgBNAE8ATQBXAEwAVwBNAFIABwBLAAIABwBIAEsAAgBZACUAAgBLAFkAIQBWABwAIQBYAFYAFwBQABMAFwBTAFAADQBKAAkADQBOAEoAJwBYACEAJwBbAFgAHQBTABcAHQBVAFMANQBiADkANQBhAGIAQQBmAEQAQQBlAGYAKQBfADEAKQBcAF8AOQBkAD0AOQBiAGQARQBeAC4ARQBnAF4ALgBdACoALgBeAF0AMQBgADQAMQBfAGAAPABlAEEAPABjAGUA"),
+"material": SubResource("StandardMaterial3D_23xg4"),
+"name": "trash_can_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 104,
+"vertex_data": PackedByteArray("/38AAFkPAAD/fwAAWQ/lIP9///83G////3///zcb2qynzwAAVzDlIKfPAABXMKrpp88AAFcwAABDx///uzjE+0PH//+7OJqxQ8f//7s4WBul8AAA/3/lIKXwAAD/f1TVx+T///9/DcDH5P///3/lDqfPAACnz+Ugp88AAKfP/MWnzwAAp8//n0PH//9Dx7fOQ8f//0PHRwFDx///Q8fWLv9/AACl8ACA/38AAKXw5SD/f///x+Ti1f9////H5IodVzAAAKfP5SBXMAAAp8//n1cwAACnzwAAuzj//0PHEdS7OP//Q8ekzrs4//9Dx+QNWQ8AAP9/5SBZDwAA/38AADcb////f9jINxv///9/scJXMAAAVzDlIFcwAABXMAAAVzAAAFcwAAC7OP//uzjE+7s4//+7OEy3uzj//7s4gbqnz///VzCMwafP//9XME72p8///1cwPQqnz///VzAAAKfP//9XMKrp/3///1kPAAD/f///WQ/qCP9///9ZD4zBpfD///9/jMGl8P///38U96Xw////f1TVp8///6fPjMGnz///p89+9qfP//+nz8bJp8///6fP/MWnz///p8//n/9///+l8ACA/3///6Xw+MD/f///pfCMwVcw//+nz4zBVzD//6fPoVxXMP//p8+fw1cw//+nz/+fVzD//6fPAABZD////3+MwVkP////fwY/WQ////9/AABXMP//VzCMwVcw//9XMFEgVzD//1cwISBXMP//VzAAAFcw//9XMAAAAbeis/1I5P0Bt6Kz/UgGswG3orP9SK0i/3+iszMy////f6KzMzLuosvNorP/f+HOy82is/9/qhUBt6KzArd93QG3orMCt9gqAbeiswK33wP/f6Kzy81k3/9/orPLzf0W/EiiswK3Kdb8SKKzArc+BfxIorMCt/nUMzKis/9/lsAzMqKz/3+kxfxIorP9SOT9/Eiis/1IS6v8SKKz/Uj8uYHaQNZ9JU72gdpA1n0lPQr/f0DWAADqCP//QNb/fxT3gdpA1oHafvaB2kDWgdrGyf9/QNb///jAfSVA1oHaoVx9JUDWgdqfwwAAQNb/fwY/fSVA1n0lUSB9JUDWfSUhIP///3/xXwZQ/3/4rsjWH4/xXwZQBDUENYHa/39q1vkT8NDgpoCBdLbxXwZQqiqqKivVRa74cHu48V8GUP8c/xz/fwAAj+BVo6LFhRlPvU+y/3////FfBlBd5H2RnbGdsfFfBlD/f///glr/f9nd7oWc2cdXP6fTr/FfBlD/P/9/OdXQfIvTxWnxXwZQ//98pf//fKX4k5SpF9Qme7HPMoKR2zaSXdKPiiIvhzOB2v9/BDUENf///39bu1u7kds2kpHbNpJbu0eJqiqqKpHbNpICo8CKg6l0cv8c/xz/fwAA/3///z2PPY+R2zaSkds2knGYlc/CcaKr/3///4Ja/3+R2zaSPY+C4f8//3+R2zaSCI2p5Q7DQcj//3yl//98pXXeGRjV7tC6WntGsf9/YaZj8/RV+va7tadqU7U0/UNdu8DWuG5g6Ll58NNptbS1tHfUK2FeqkGwms+ZVILDqk0Wx4tjGJiJoV3M2kfhwrF5XdKPiiIvhzNbu1u7W7tHiQKjwIqDqXRyPY89j3GYlc/CcaKrPY+C4QiNqeUOw0HI")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_xumec")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_a8qdv"]
+height = 0.631669
+radius = 0.243484
+
+[node name="SmallTrashCan" type="Node3D"]
+
+[node name="trash_can_01_001" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.492345, 0, 0, 0, 0.492345, 0, 0, 0, 0.492345, 0, 0.24521, 0)
+mesh = SubResource("ArrayMesh_pk0li")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.316334, 0)
+shape = SubResource("CylinderShape3D_a8qdv")
