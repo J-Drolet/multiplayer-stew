@@ -49,6 +49,12 @@ namespace multiplayerstew.Scripts.Base
             }
         }
 
+        /// <summary>
+        /// Only called on the server to handle when a hitbox is hit
+        /// </summary>
+        /// <param name="projectile"></param>
+        /// <param name="hitbox"></param>
+        /// <param name="collisionNormal"></param>
         public void HitboxHit(UpgradeableProjectile projectile, DamageArea hitbox, Vector3 collisionNormal)
         {
             float damage = projectile.Damage * hitbox.DamageMultiplier * (hitbox.TriggerVital ?  projectile.VitalMultiplier : 1);
@@ -57,7 +63,7 @@ namespace multiplayerstew.Scripts.Base
             // for knockback
             if(this is Character character)
             {
-                if(character.Upgrades.Contains(Upgrade.C_SmallerHitbox))
+                if(character.Upgrades.Contains(Upgrade.C_SmallerHitbox) && collisionNormal != Vector3.Zero)
                 {
                     Vector3 knockback = -collisionNormal.Normalized() * damage * (float)Config.GetValue("upgrade_constants", "knockback_strength_per_damage", true);
                     character.RpcId(GetMultiplayerAuthority(), Character.MethodName.AddKnockback, knockback);

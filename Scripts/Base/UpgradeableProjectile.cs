@@ -80,7 +80,6 @@ namespace multiplayerstew.Scripts.Base
             AddChild(HitboxDetectionRaycast);
             HitboxDetectionRaycast.SetCollisionMaskValue(1, false);
             HitboxDetectionRaycast.SetCollisionMaskValue(3, true);
-            HitboxDetectionRaycast.SetCollisionMaskValue(5, true);
 
             HitboxDetectionRaycast.CollideWithAreas = true;
             HitboxDetectionRaycast.CollideWithBodies = false;

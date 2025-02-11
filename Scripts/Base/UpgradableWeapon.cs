@@ -66,6 +66,8 @@ namespace multiplayerstew.Scripts.Base
 
         public override void _Process(double delta)
         {
+			if(!IsMultiplayerAuthority()) return;
+			
             TimeSinceLastCharge += delta;
 			
 			// The reason why we handle the upgrade like this is to support multiple upgrades that might affect firemode. Aswell as the chance we have a weapon with default of charge
