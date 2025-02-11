@@ -157,7 +157,7 @@ namespace multiplayerstew.Scripts.Base
                         if(MaxHits > 0 && collider is DamageArea) // we do a max hit check here so server stops hitting even before authority queue frees the projectile
                         {
                             DamageArea damageArea = collider as DamageArea;
-                            damageArea.HitDamageArea(this);
+                            damageArea.HitDamageArea(this, HitboxDetectionRaycast.GetCollisionNormal());
                         }
                         
                         MaxHits--;

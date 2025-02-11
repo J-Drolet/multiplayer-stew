@@ -35,6 +35,7 @@ public partial class Character : Entity
 
 	public const float BaseSpeed = 5.0f;
 	public const float JumpVelocity = 4.5f;
+	public Vector3 Knockback = Vector3.Zero;
 
 	public override void _EnterTree()
 	{
@@ -85,7 +86,7 @@ public partial class Character : Entity
 			HealthText.Text = CurrentHealth <= 0.0f ? "Dead" : "Health: " + CurrentHealth.ToString();
 		}
 
-		/// For invisibility upgrade
+		////////// Invisibility upgrade
 		float transparency = Upgrades.Contains(Upgrade.C_Invisibility)? (float)Config.GetValue("upgrade_constants", "invisibility_transparency", true) : 0;
 		CharacterMesh.Transparency = transparency;
 		foreach(GeometryInstance3D mesh in GodotNodeFindingService.FindNodes<GeometryInstance3D>(Hand))
@@ -95,6 +96,9 @@ public partial class Character : Entity
 		InvisibilitySmokeParticles.Emitting = Upgrades.Contains(Upgrade.C_Invisibility);
 
 		if(!IsMultiplayerAuthority()) return;
+
+		////////// Small Player Upgrade
+		Scale = Vector3.One * (!Upgrades.Contains(Upgrade.C_SmallerHitbox) ? 1.0f : (float)Config.GetValue("upgrade_constants", "small_hitbox_factor", true));
 
 		////////// Outline Players Upgrade
 		if(Upgrades.Contains(Upgrade.C_OutlinePlayers))
@@ -216,8 +220,10 @@ public partial class Character : Entity
 			velocity.Z = (float)Mathf.MoveToward(Velocity.Z, 0, deceleration);
 		}
 
-		Velocity = velocity;
+		Velocity = velocity + Knockback;
 		MoveAndSlide();
+
+		Knockback = Knockback.Lerp(Vector3.Zero, (float)Config.GetValue("upgrade_constants", "knockback_reduction_strength", true)); // slowly reduce knockback
 	}
 
 	/// <summary>
@@ -271,5 +277,17 @@ public partial class Character : Entity
 	public void RemoveUpgrade(Upgrade upgrade)
 	{
 		Upgrades.Remove(upgrade);
+	}
+
+	/// <summary>
+	/// For use for knockback
+	/// </summary>
+	/// <param name="knockbackAdd"></param>
+	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+	public void AddKnockback(Vector3 knockbackAdd)
+	{
+		if(Multiplayer.GetRemoteSenderId() != 1) return; // only server should broadcast spawn positons
+
+		Knockback += knockbackAdd;
 	}
 }

@@ -20,7 +20,6 @@ namespace multiplayerstew.Scripts.Base
 
         public void Init()
         {
-
             if(IsMultiplayerAuthority())
             {
                 CurrentHealth = MaxHealth;
@@ -31,7 +30,7 @@ namespace multiplayerstew.Scripts.Base
                 // Only server should listen for hits so signals are only hooked up on server
                 foreach (DamageArea hitbox in Hitboxes)
                 {
-                    hitbox.AreaHit += (UpgradeableProjectile projectile) => HitboxHit(projectile, hitbox);
+                    hitbox.AreaHit += (UpgradeableProjectile projectile, Vector3 collisionNormal) => HitboxHit(projectile, hitbox, collisionNormal);
                 }
             }
         }
@@ -50,11 +49,20 @@ namespace multiplayerstew.Scripts.Base
             }
         }
 
-        private void HitboxHit(UpgradeableProjectile projectile, DamageArea hitbox)
+        public void HitboxHit(UpgradeableProjectile projectile, DamageArea hitbox, Vector3 collisionNormal)
         {
-            // layer 5 = vital hitbox
-            float damage = hitbox.GetCollisionLayerValue(5) ? projectile.Damage * projectile.VitalMultiplier : projectile.Damage;
+            float damage = projectile.Damage * hitbox.DamageMultiplier * (hitbox.TriggerVital ?  projectile.VitalMultiplier : 1);
             RpcId(GetMultiplayerAuthority(), MethodName.SetCurrentHealth, Math.Clamp(CurrentHealth - damage, 0.0f, MaxHealth));
+
+            // for knockback
+            if(this is Character character)
+            {
+                if(character.Upgrades.Contains(Upgrade.C_SmallerHitbox))
+                {
+                    Vector3 knockback = -collisionNormal.Normalized() * damage * (float)Config.GetValue("upgrade_constants", "knockback_strength_per_damage", true);
+                    character.RpcId(GetMultiplayerAuthority(), Character.MethodName.AddKnockback, knockback);
+                }
+            }
         }
 
         [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]

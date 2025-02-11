@@ -1,8 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://dustp76kyosr0"]
+[gd_scene load_steps=21 format=3 uid="uid://dustp76kyosr0"]
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_xdbua"]
 [ext_resource type="PackedScene" uid="uid://bwh21gfyr2idt" path="res://Scenes/GodotBox.tscn" id="2_glbo0"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_hmwfx"]
+[ext_resource type="PackedScene" uid="uid://6jntjlknvgow" path="res://Scenes/Levels/LevelAssets/UtilityAssets/DeathBarrier.tscn" id="3_a6llq"]
 [ext_resource type="PackedScene" uid="uid://x7a1ptqtwtmp" path="res://Scenes/Pickups/Weapon Pickups/OLD/PistolPickup.tscn" id="3_ttko1"]
 [ext_resource type="PackedScene" uid="uid://b0ywmvox13rx1" path="res://Scenes/Pickups/Weapon Pickups/OLD/ShotgunPickup.tscn" id="4_4busq"]
 [ext_resource type="PackedScene" uid="uid://cryxnpccnb5vv" path="res://Scenes/Pickups/Character Upgrade Pickups/DoubleJumpPickupDEMO.tscn" id="4_qov8v"]
@@ -31,6 +32,23 @@ size = Vector3(50, 0.25, 50)
 script = ExtResource("1_xdbua")
 PlayerScene = ExtResource("2_hmwfx")
 
+[node name="DeathBarrier" parent="." instance=ExtResource("3_a6llq")]
+transform = Transform3D(200, 0, 0, 0, 1, 0, 0, 0, 200, 0, -6.01375, 0)
+
+[node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.210621, 0)
+metadata/_edit_group_ = true
+
+[node name="FloorMesh" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("BoxMesh_p1auc")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("BoxShape3D_bbwtt")
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="Floor"]
+size = Vector3(50, 0.25, 50)
+
 [node name="HealthPickup" parent="." instance=ExtResource("10_wk5ir")]
 transform = Transform3D(2.22573, 0, 0, 0, 2.22573, 0, 0, 0, 2.22573, 13.403, 0.0122315, 2.0253)
 HealthGained = 10
@@ -50,17 +68,6 @@ transform = Transform3D(2.22573, 0, 0, 0, 2.22573, 0, 0, 0, 2.22573, 16.1034, 0.
 
 [node name="MentholPickup" parent="." instance=ExtResource("8_8i516")]
 transform = Transform3D(2.22573, 0, 0, 0, 2.22573, 0, 0, 0, 2.22573, 10.152, 0.012, 5.216)
-
-[node name="Floor" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.210621, 0)
-metadata/_edit_group_ = true
-
-[node name="FloorMesh" type="MeshInstance3D" parent="Floor"]
-mesh = SubResource("BoxMesh_p1auc")
-skeleton = NodePath("")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
-shape = SubResource("BoxShape3D_bbwtt")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.766896, 0.439592, -0.467578, 0, 0.728574, 0.684967, 0.641771, -0.525299, 0.558741, 0, 0, 0)
@@ -126,6 +133,7 @@ DestroyOnPickup = false
 [node name="SimpleCharacterPickup5" parent="." instance=ExtResource("9_un6hj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0407, -0.085621, -13.1481)
 Upgrade = 6
+DestroyOnPickup = false
 
 [node name="SimpleCharacterPickup6" parent="." instance=ExtResource("9_un6hj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6956, -0.085621, -7.86981)
@@ -140,3 +148,9 @@ DestroyOnPickup = false
 [node name="SimpleCharacterPickup8" parent="." instance=ExtResource("9_un6hj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3012, -0.085621, -13.3573)
 Upgrade = 10
+DestroyOnPickup = false
+
+[node name="SimpleCharacterPickup9" parent="." instance=ExtResource("9_un6hj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5949, -0.085621, -7.30178)
+Upgrade = 3
+DestroyOnPickup = false
