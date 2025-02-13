@@ -4,12 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_m4m6e"]
 [ext_resource type="PackedScene" uid="uid://da5tgs4f5e5a3" path="res://Scenes/Levels/LevelAssets/Level2Assets/waterparticles.tscn" id="3_2wa11"]
 [ext_resource type="PackedScene" uid="uid://cnjqtyat1tb0i" path="res://Scenes/Levels/LevelAssets/Level2Assets/lvl2water.tscn" id="4_3ia18"]
-[ext_resource type="PackedScene" uid="uid://yqxo7dd0068w" path="res://Scenes/Levels/LevelAssets/Level2Assets/sandbag.tscn" id="4_51ga2"]
-[ext_resource type="PackedScene" uid="uid://dxtx8tubrgl7h" path="res://Scenes/Levels/LevelAssets/Level2Assets/arch2.tscn" id="4_xgihm"]
 [ext_resource type="PackedScene" uid="uid://7qwn7vvfveyf" path="res://Scenes/Pickups/Character Upgrade Pickups/MentholPickup.tscn" id="5_fy3rj"]
 [ext_resource type="PackedScene" uid="uid://bdu7h1l1jg443" path="res://Scenes/Levels/LevelAssets/Level2Assets/concretepipe.tscn" id="5_xq3c0"]
-[ext_resource type="PackedScene" uid="uid://dpd0cvtbs8iuo" path="res://Scenes/Target.tscn" id="6_dsuo7"]
+[ext_resource type="PackedScene" uid="uid://bcggbiy26rgtv" path="res://Scenes/Levels/LevelAssets/Level2Assets/Lvl2Pit.tscn" id="6_6nkgw"]
 [ext_resource type="PackedScene" uid="uid://cryxnpccnb5vv" path="res://Scenes/Pickups/Character Upgrade Pickups/DoubleJumpPickupDEMO.tscn" id="6_icyb5"]
+[ext_resource type="PackedScene" uid="uid://doa755g10ey1x" path="res://Scenes/Levels/LevelAssets/Level2Assets/Lvl2Catchall.tscn" id="8_qgrqn"]
+[ext_resource type="PackedScene" uid="uid://cnibv7h3sxoum" path="res://Scenes/Levels/LevelAssets/Level2Assets/lvl2crane.tscn" id="10_xx870"]
 [ext_resource type="PackedScene" uid="uid://ct1krvbviv7j8" path="res://Scenes/Levels/LevelAssets/Level2Assets/ConstructionBuilding.tscn" id="11_p7mw1"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_ciif0"]
@@ -107,6 +107,7 @@ shape = SubResource("BoxShape3D_bbwtt")
 [node name="Assets" type="Node3D" parent="."]
 
 [node name="Spawns" type="Node3D" parent="Assets"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.5282, 0)
 
 [node name="1" type="Node3D" parent="Assets/Spawns" groups=["PlayerSpawnPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.95056, 0, 23.1881)
@@ -123,51 +124,46 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.69138, 0, 22.9489)
 [node name="Pickups" type="Node3D" parent="Assets"]
 
 [node name="Menthol" parent="Assets/Pickups" instance=ExtResource("5_fy3rj")]
-transform = Transform3D(1.9298, 0, 0, 0, 1.9298, 0, 0, 0, 1.9298, -38.4959, 7.87498, 47.8423)
+transform = Transform3D(2.23158, 0, 0, 0, 2.23158, 0, 0, 0, 2.23158, -16.7712, 7.8757, 48.0376)
+DestroyOnPickup = false
 
 [node name="PickupDelineator2" parent="Assets/Pickups" instance=ExtResource("6_icyb5")]
-transform = Transform3D(1.9298, 0, 0, 0, 1.9298, 0, 0, 0, 1.9298, -33.939, 7.86574, 45.3444)
+transform = Transform3D(2.23158, 0, 0, 0, 2.23158, 0, 0, 0, 2.23158, -11.5017, 7.86502, 45.1491)
+DestroyOnPickup = false
 
 [node name="Map Elements" type="Node3D" parent="Assets"]
 
-[node name="Arch2" parent="Assets/Map Elements" instance=ExtResource("4_xgihm")]
-transform = Transform3D(0.118342, 0, -0.901087, -0.256224, 0.871309, -0.0336507, 0.863891, 0.258424, 0.113457, 15.5198, -1.25745, 0.477198)
-
 [node name="Water" parent="Assets/Map Elements" instance=ExtResource("4_3ia18")]
-transform = Transform3D(0.146376, 0, 0, 0, 1.53605, 0, 0, 0, 0.313332, -7.76369, 2.02572, 3.93611)
+transform = Transform3D(11.7601, 0, 0, 0, 11.7601, 0, 0, 0, 11.7601, 0.0065124, -10.9572, -5.57789)
 
-[node name="Sandbag" parent="Assets/Map Elements" instance=ExtResource("4_51ga2")]
-transform = Transform3D(0.148448, 0, -0.504383, 0, 0.525775, 0, 0.504383, 0, 0.148448, -11.7427, 0.510523, -7.59638)
-
-[node name="Sandbag2" parent="Assets/Map Elements" instance=ExtResource("4_51ga2")]
-transform = Transform3D(0.148448, 0, -0.504383, 0, 0.525775, 0, 0.504383, 0, 0.148448, 3.8358, 0.510523, -5.38641)
-
-[node name="Sandbag3" parent="Assets/Map Elements" instance=ExtResource("4_51ga2")]
-transform = Transform3D(0.148448, 0, -0.504383, 0, 0.525775, 0, 0.504383, 0, 0.148448, -4.84246, 0.510523, -4.21123)
+[node name="Lvl2Pit" parent="Assets/Map Elements" instance=ExtResource("6_6nkgw")]
+transform = Transform3D(-4.91861e-07, 0, 10.4098, 0, 12.5198, 0, -11.2525, 0, -4.55028e-07, 0, 11.665, 0)
 
 [node name="ConcretePipe" parent="Assets/Map Elements" instance=ExtResource("5_xq3c0")]
-transform = Transform3D(2.60009, 0, -4.36203, 0, 5.07816, 0, 4.36203, 0, 2.60009, -11.5843, 1.71826, 11.4218)
+transform = Transform3D(4.29464, 0, -4.44581, 0, 5.31179, 0, 4.8761, 0, 3.91565, -12.0994, 16.8832, 11.9331)
+
+[node name="ConcretePipe2" parent="Assets/Map Elements" instance=ExtResource("5_xq3c0")]
+transform = Transform3D(6.49771, 0, 0, 0, 5.31179, 0, 0, 0, 5.92432, 50.66, 2.079, -7.251)
+
+[node name="ConcretePipe3" parent="Assets/Map Elements" instance=ExtResource("5_xq3c0")]
+transform = Transform3D(6.49771, 0, 0, 0, 5.31179, 0, 0, 0, 5.92432, -51.1474, 2.07863, -7.25067)
 
 [node name="ConstructionBuilding" parent="Assets/Map Elements" instance=ExtResource("11_p7mw1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.0835, 5.51749, 45.1925)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.0835, 13.087, 45.1925)
 
 [node name="ConstructionBuilding2" parent="Assets/Map Elements" instance=ExtResource("11_p7mw1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64528, 5.51749, 45.1925)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64528, 12.8194, 45.1925)
 
-[node name="Target" parent="Assets" instance=ExtResource("6_dsuo7")]
-transform = Transform3D(0.835721, 0.000172564, -2.29994, 0.00391944, 2.44707, 0.00160778, 2.29994, -0.00423287, 0.835719, -10.9228, 0.992495, -9.32628)
+[node name="DumpTruckPlaceholder" parent="Assets/Map Elements" instance=ExtResource("8_qgrqn")]
+transform = Transform3D(1.20993, 0, 0, 0, 1.44709, 0, 0, 0, 0.923754, 50.8038, 9.26114, 41.7976)
 
-[node name="Target3" parent="Assets" instance=ExtResource("6_dsuo7")]
-transform = Transform3D(0.835721, 0.000172564, -2.29994, 0.00391944, 2.44707, 0.00160778, 2.29994, -0.00423287, 0.835719, -3.90216, 0.992495, -5.4309)
+[node name="TruckCab" type="CSGBox3D" parent="Assets/Map Elements/DumpTruckPlaceholder"]
+transform = Transform3D(1, 0, 0, 0, 0.836109, 0, 0, 0, 1.62643, -1.00208, 0.954302, -10.4511)
+size = Vector3(3.00415, 3.28271, 2.14954)
 
-[node name="Target4" parent="Assets" instance=ExtResource("6_dsuo7")]
-transform = Transform3D(0.835721, 0.000172564, -2.29994, 0.00391944, 2.44707, 0.00160778, 2.29994, -0.00423287, 0.835719, -3.33352, 0.801077, -3.59638)
+[node name="TruckCabGrill" type="CSGBox3D" parent="Assets/Map Elements/DumpTruckPlaceholder"]
+transform = Transform3D(1, 0, 0, 0, 1.41629, 0, 0, 0, 1.62643, -1.00208, 0.664191, -12.3078)
+size = Vector3(3.00415, 1.5105, 1.72125)
 
-[node name="Target5" parent="Assets" instance=ExtResource("6_dsuo7")]
-transform = Transform3D(0.835721, 0.000172564, -2.29994, 0.00391944, 2.44707, 0.00160778, 2.29994, -0.00423287, 0.835719, 6.02936, 0.70088, -5.27121)
-
-[node name="Target6" parent="Assets" instance=ExtResource("6_dsuo7")]
-transform = Transform3D(0.835721, 0.000172564, -2.29994, 0.00391944, 2.44707, 0.00160778, 2.29994, -0.00423287, 0.835719, 4.34507, 0.992495, -6.79494)
-
-[node name="Target2" parent="Assets" instance=ExtResource("6_dsuo7")]
-transform = Transform3D(0.835721, 0.000172564, -2.29994, 0.00391944, 2.44707, 0.00160778, 2.29994, -0.00423287, 0.835719, -10.1257, 0.992495, -6.95913)
+[node name="Lvl2Crane" parent="Assets/Map Elements" instance=ExtResource("10_xx870")]
+transform = Transform3D(0.404577, 0, -0.0821283, 0, 0.577836, 0, 0.0821283, 0, 0.404577, -14.792, 7.24616, 25.2882)

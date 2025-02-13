@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bcggbiy26rgtv"]
+
+[node name="Lvl2Pit" type="Node3D"]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(13.2352, 0, 0, 0, 2.234, 0, 0, 0, 14.2508, 0, -0.818115, 0)
+size = Vector3(1, 0.45459, 1)
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="CSGCombiner3D"]
+transform = Transform3D(2.61799, 0, 0, 0, 1, 0, 0, 0, 9.99776, -0.690227, -0.92909, 5.00655)
+operation = 2
+polygon = PackedVector2Array(0, 0, -0.539797, 0.790994, 1.58035, 0.801917, 1, 0)
