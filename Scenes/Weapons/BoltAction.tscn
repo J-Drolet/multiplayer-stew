@@ -1,10 +1,17 @@
-[gd_scene load_steps=26 format=4 uid="uid://cl6ckcu4c5ymq"]
+[gd_scene load_steps=33 format=4 uid="uid://cl6ckcu4c5ymq"]
 
 [ext_resource type="Script" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_xk3ee"]
 [ext_resource type="PackedScene" uid="uid://diqolrhp5s6sw" path="res://Scenes/Projectiles/BoltyBullet.tscn" id="2_yn8j2"]
-[ext_resource type="Texture2D" uid="uid://cdeu155ds5qc4" path="res://Assets/Models/Weapons/Rifle_Rifle.png" id="4_o87jq"]
+[ext_resource type="AudioStream" uid="uid://dtitilcjanjym" path="res://Assets/Sounds/SFX/BoltClick.wav" id="3_rnxj3"]
+[ext_resource type="AudioStream" uid="uid://dyjig28ytx0cy" path="res://Assets/Sounds/SFX/BoltFire.wav" id="3_y25xx"]
+[ext_resource type="AudioStream" uid="uid://ffjesj7gp0vv" path="res://Assets/Sounds/SFX/CustomBoltRackLower.wav" id="4_fps64"]
+[ext_resource type="Texture2D" uid="uid://cwgatv0pl7vvk" path="res://Assets/Models/Weapons/Rifle_Rifle.png" id="4_o87jq"]
 [ext_resource type="PackedScene" uid="uid://ciaqkt6kkv2l0" path="res://Scenes/Particles/RifleShellParticle.tscn" id="5_7e2ie"]
 [ext_resource type="Script" path="res://Scripts/Base/SelfDestroyingParticle.cs" id="5_m2jef"]
+[ext_resource type="AudioStream" uid="uid://c4wcbglkmkgcv" path="res://Assets/Sounds/SFX/BoltRack1.wav" id="5_pkrc4"]
+[ext_resource type="AudioStream" uid="uid://dbhaqed3xhxg6" path="res://Assets/Sounds/SFX/BoltUnload.wav" id="6_cyl26"]
+[ext_resource type="AudioStream" uid="uid://cjlg6xkryy0yi" path="res://Assets/Sounds/SFX/BoltLoad.wav" id="7_cfiub"]
+[ext_resource type="AudioStream" uid="uid://csdlgnlh7rc1w" path="res://Assets/Sounds/SFX/BoltRack2.wav" id="8_pnjfs"]
 
 [sub_resource type="Animation" id="Animation_nrxdk"]
 resource_name = "Fire"
@@ -81,10 +88,10 @@ tracks/7/keys = {
 "times": PackedFloat32Array(0, 0.49),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
-"args": ["res://Assets/Sounds/SFX/BoltFire.wav"],
+"args": [ExtResource("3_y25xx")],
 "method": &"PlayGunSound"
 }, {
-"args": ["res://Assets/Sounds/SFX/CustomBoltRackLower.wav"],
+"args": [ExtResource("4_fps64")],
 "method": &"PlayGunSound"
 }]
 }
@@ -259,16 +266,16 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0.3, 0.98, 1.82, 2.25, 2.63),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "values": [{
-"args": ["res://Assets/Sounds/SFX/BoltRack1.wav"],
+"args": [ExtResource("5_pkrc4")],
 "method": &"PlayGunSound"
 }, {
-"args": ["res://Assets/Sounds/SFX/BoltUnload.wav"],
+"args": [ExtResource("6_cyl26")],
 "method": &"PlayGunSound"
 }, {
-"args": ["res://Assets/Sounds/SFX/BoltLoad.wav"],
+"args": [ExtResource("7_cfiub")],
 "method": &"PlayGunSound"
 }, {
-"args": ["res://Assets/Sounds/SFX/BoltRack2.wav"],
+"args": [ExtResource("8_pnjfs")],
 "method": &"PlayGunSound"
 }, {
 "args": [],
@@ -537,6 +544,7 @@ WeaponName = "M1 Garand"
 MaxAmmo = 8
 Projectile = ExtResource("2_yn8j2")
 APlayer = NodePath("AnimationPlayer")
+ClickSound = ExtResource("3_rnxj3")
 metadata/_edit_group_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

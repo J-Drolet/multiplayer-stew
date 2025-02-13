@@ -1,8 +1,15 @@
-[gd_scene load_steps=22 format=4 uid="uid://bfmxfalt2u42"]
+[gd_scene load_steps=29 format=4 uid="uid://bfmxfalt2u42"]
 
 [ext_resource type="Script" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_250w0"]
 [ext_resource type="PackedScene" uid="uid://de6ynjcj4qnom" path="res://Scenes/Projectiles/Submachine gun bullet.tscn" id="2_etlu4"]
-[ext_resource type="Texture2D" uid="uid://ifcd028hdf6q" path="res://Assets/Models/Weapons/Uzi_glb_Uzi_Tex.png" id="3_w4161"]
+[ext_resource type="AudioStream" uid="uid://vv13wj56o404" path="res://Assets/Sounds/SFX/SmgClick.wav" id="3_pcl81"]
+[ext_resource type="Texture2D" uid="uid://o0c7jaah4uaf" path="res://Assets/Models/Weapons/Uzi_glb_Uzi_Tex.png" id="3_w4161"]
+[ext_resource type="AudioStream" uid="uid://ch5y8j76ag7bn" path="res://Assets/Sounds/SFX/SmgFire.wav" id="4_5hsy8"]
+[ext_resource type="AudioStream" uid="uid://cvteofwn8wnpb" path="res://Assets/Sounds/SFX/SmgUnload.wav" id="5_sifnu"]
+[ext_resource type="AudioStream" uid="uid://8qpyt6vgcgf0" path="res://Assets/Sounds/SFX/SmgLoad.wav" id="6_3vdcg"]
+[ext_resource type="AudioStream" uid="uid://5huqbqc3ymj5" path="res://Assets/Sounds/SFX/SmgSlide.wav" id="7_5ieec"]
+[ext_resource type="Script" path="res://Scripts/Base/SelfDestroyingParticle.cs" id="9_qj78t"]
+[ext_resource type="PackedScene" uid="uid://5ca6e2gg4dc1" path="res://Scenes/Particles/SmgShellParticle.tscn" id="10_51g7c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7hig3"]
 resource_name = "Uzi"
@@ -249,6 +256,34 @@ tracks/5/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(3.35056e-08, 0.224315, -0.38326), Vector3(0, 0, 0)]
 }
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [ExtResource("4_5hsy8")],
+"method": &"PlayGunSound"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SelfDestroyingParticle")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.01),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"EmitParticles"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_i6i74"]
 length = 0.001
@@ -363,7 +398,7 @@ tracks/8/keys = {
 
 [sub_resource type="Animation" id="Animation_2y52e"]
 resource_name = "Reload"
-length = 1.9
+length = 1.81
 step = 0.01
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -372,7 +407,7 @@ tracks/0/path = NodePath("ReloadHand:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.44, 0.76, 0.86, 1.01, 1.15, 1.24, 1.49, 1.58, 1.72, 1.78, 1.9),
+"times": PackedFloat32Array(0.38, 0.74, 0.86, 1.01, 1.15, 1.27, 1.36, 1.53, 1.63, 1.69, 1.81),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(-0.0368413, -1.40606, 0.0529303), Vector3(-0.0368413, -0.235075, 0.0529303), Vector3(-0.0368413, -0.235075, 0.0529303), Vector3(-0.304, 0.153, 0.053), Vector3(0.001, 0.616, -0.107), Vector3(0.001, 0.616, -0.107), Vector3(0.001, 0.616, 0.182), Vector3(0.001, 0.616, 0.182), Vector3(0.001, 0.686, 0.644), Vector3(0.001, 0.686, 0.644), Vector3(-1.71474, -0.956605, 0.444137)]
@@ -384,7 +419,7 @@ tracks/1/path = NodePath("ReloadHand:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.44, 1.9),
+"times": PackedFloat32Array(0, 0.38, 1.81),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -396,7 +431,7 @@ tracks/2/path = NodePath(".:CanFire")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.9),
+"times": PackedFloat32Array(0, 1.81),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -408,9 +443,18 @@ tracks/3/path = NodePath(".")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(1.65),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.52, 1.29, 1.56),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "values": [{
+"args": [ExtResource("5_sifnu")],
+"method": &"PlayGunSound"
+}, {
+"args": [ExtResource("6_3vdcg")],
+"method": &"PlayGunSound"
+}, {
+"args": [ExtResource("7_5ieec")],
+"method": &"PlayGunSound"
+}, {
 "args": [],
 "method": &"RefillAmmo"
 }]
@@ -422,7 +466,7 @@ tracks/4/path = NodePath("Body/Mag:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.22, 0.44, 0.76),
+"times": PackedFloat32Array(0.08, 0.26, 0.38, 0.76),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(-0.0300148, -0.827813, -0.553594), Vector3(-0.0300148, -7.87961, -0.553594), Vector3(-0.0300148, -7.87961, -0.553594), Vector3(-0.0300148, -0.827813, -0.553594)]
@@ -434,7 +478,7 @@ tracks/5/path = NodePath("Body/ChargingHandle:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(1.24, 1.49, 1.58, 1.65),
+"times": PackedFloat32Array(1.27, 1.36, 1.53, 1.61),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 1.8392, -0.66121), Vector3(1.45529e-07, 1.8392, -2.32586), Vector3(1.45529e-07, 1.8392, -2.32586), Vector3(0, 1.8392, -0.66121)]
@@ -469,9 +513,6 @@ properties/3/replication_mode = 1
 properties/4/path = NodePath("Body/Trigger:rotation")
 properties/4/spawn = true
 properties/4/replication_mode = 1
-properties/5/path = NodePath("Body/Slide:position")
-properties/5/spawn = true
-properties/5/replication_mode = 1
 
 [node name="Mac10" type="Node3D" node_paths=PackedStringArray("APlayer")]
 script = ExtResource("1_250w0")
@@ -480,6 +521,7 @@ MaxAmmo = 30
 FireMode = 2
 Projectile = ExtResource("2_etlu4")
 APlayer = NodePath("AnimationPlayer")
+ClickSound = ExtResource("3_pcl81")
 
 [node name="Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.177498, 0, -1.55174e-08, 0, 0.177498, 0, 1.55174e-08, 0, -0.177498, 0, 0.0700675, -0.0887221)
@@ -524,3 +566,8 @@ skeleton = NodePath("../AnimationPlayer")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_rglvy")
+
+[node name="SelfDestroyingParticle" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.357159, 0)
+script = ExtResource("9_qj78t")
+ParticleScene = ExtResource("10_51g7c")

@@ -35,7 +35,7 @@ namespace multiplayerstew.Scripts.Base
 		[Export, ExportRequired, AnimationsRequired(new string[] { "Fire" })] 
 		public AnimationPlayer APlayer { get; set; }
 		[Export]
-		public string ClickSoundResourcePath { get; set; }
+		public AudioStream ClickSound { get; set; }
 		private Random rng = new();
 
 		private int CurrentAmmo { get; set; }
@@ -96,7 +96,13 @@ namespace multiplayerstew.Scripts.Base
 				if(@event.IsActionPressed("Fire"))
 				{
 					TimeSinceLastCharge = 0; // Prevents storing a charge 
-					if(FireMode == FireModes.Single)
+
+					// Click sound handled here so automatic guns don't spam the sound
+                    if (CurrentAmmo <= 0 && MaxAmmo >= 0 && ClickSound != null)
+                    {
+                        PlayGunSound(ClickSound);
+                    }
+                    if (FireMode == FireModes.Single)
 					{
 						Fire();
 					}
@@ -132,10 +138,6 @@ namespace multiplayerstew.Scripts.Base
 						TimeSinceLastCharge = 0;
 					}
 				}
-			}
-			else if(CurrentAmmo <= 0 && MaxAmmo >= 0 && ClickSoundResourcePath != null)
-			{
-				PlayGunSound(ClickSoundResourcePath);
 			}
 		}
 
@@ -175,8 +177,10 @@ namespace multiplayerstew.Scripts.Base
 			return $"{CurrentAmmo}/{MaxAmmo}";
 		}
 
-		public void PlayGunSound(string soundPath)
+		// Take in AudioSteam and then convert to string to support moving sound files
+		public void PlayGunSound(AudioStream sound)
 		{
+			string soundPath = sound?.ResourcePath ?? string.Empty;
             MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, soundPath, this.GetPath(), Multiplayer.GetUniqueId(), "SFX");
 		}
 
