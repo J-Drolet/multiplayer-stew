@@ -25,7 +25,6 @@ namespace multiplayerstew.Scripts.Base
 		public int MaxAmmo { get; set; } = -1;
 		[Export]
 		public FireModes FireMode { get; set; } = FireModes.Single;
-		private FireModes DefaultFireMode { get; set; }
 		[Export]
 		public int ProjectilePerShot { get; set; } = 1;
 		[Export, ExportRequired]
@@ -45,7 +44,6 @@ namespace multiplayerstew.Scripts.Base
         public override void _EnterTree()
         {
             SetMultiplayerAuthority(Name.ToString().Split('#').First().ToInt());
-			DefaultFireMode = FireMode;
         }
 
         public override void _Ready()
@@ -69,19 +67,9 @@ namespace multiplayerstew.Scripts.Base
 			if(!IsMultiplayerAuthority()) return;
 			
             TimeSinceLastCharge += delta;
-			
-			// The reason why we handle the upgrade like this is to support multiple upgrades that might affect firemode. Aswell as the chance we have a weapon with default of charge
-			if(GameManager.Players[GetMultiplayerAuthority()].characterNode.Upgrades.Contains(Upgrade.W_MagDump))
-			{
-				FireMode = FireModes.Charge;
-			}
-			else
-			{
-				FireMode = DefaultFireMode;
-			}
 
 			UI.InGameUI.AmmoCount.Text = GetCurrentAmmoText();
-			if(FireMode != FireModes.Single && Input.IsActionPressed("Fire"))
+			if(GetCurrentFireMode() != FireModes.Single && Input.IsActionPressed("Fire"))
 			{
 				Fire();
 			}
@@ -102,7 +90,7 @@ namespace multiplayerstew.Scripts.Base
                     {
                         PlayGunSound(ClickSound);
                     }
-                    if (FireMode == FireModes.Single)
+					else if (GetCurrentFireMode() == FireModes.Single)
 					{
 						Fire();
 					}
@@ -122,7 +110,7 @@ namespace multiplayerstew.Scripts.Base
 		{   
 			if ((CurrentAmmo > 0 || MaxAmmo < 0) && CanFire) 
 			{	
-				if(FireMode != FireModes.Charge)
+				if(GetCurrentFireMode() != FireModes.Charge)
 				{
 					CurrentAmmo -= 1;
 					APlayer.Play("Fire");
@@ -143,7 +131,7 @@ namespace multiplayerstew.Scripts.Base
 
 		public void FireReleased()
 		{
-			if(FireMode == FireModes.Charge) 
+			if(GetCurrentFireMode() == FireModes.Charge) 
 			{
 				if(StoredAmmo > 0)
 				{
@@ -209,6 +197,29 @@ namespace multiplayerstew.Scripts.Base
 					GameManager.Players[GetMultiplayerAuthority()].projectileParent.AddChild(projectileInstance, true);
 				}
 			}
+		}
+
+		private FireModes GetCurrentFireMode() 
+		{
+			FireModes fireMode = FireMode;
+			// The reason why we handle the upgrade like this is to support multiple upgrades that might affect firemode. Aswell as the chance we have a weapon with default of charge
+			if(GameManager.Players[GetMultiplayerAuthority()].characterNode.Upgrades.Contains(Upgrade.W_MagDump))
+			{
+				fireMode = FireModes.Charge;
+			}
+			else if(GameManager.Players[GetMultiplayerAuthority()].characterNode.Upgrades.Contains(Upgrade.W_SwitchFiremode))
+			{
+				if(FireMode == FireModes.Single) 
+				{
+					fireMode = FireModes.Automatic;
+				}
+				else if(FireMode == FireModes.Automatic)
+				{
+					fireMode = FireModes.Single;
+				}
+			}
+
+			return fireMode;
 		}
 	}
 }

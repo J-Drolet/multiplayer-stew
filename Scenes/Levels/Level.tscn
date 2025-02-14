@@ -154,3 +154,8 @@ DestroyOnPickup = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5949, -0.085621, -7.30178)
 Upgrade = 3
 DestroyOnPickup = false
+
+[node name="SimpleCharacterPickup10" parent="." instance=ExtResource("9_un6hj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.4059, -0.085621, -12.6594)
+Upgrade = 7
+DestroyOnPickup = false
