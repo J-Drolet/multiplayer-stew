@@ -538,7 +538,7 @@ properties/6/spawn = true
 properties/6/replication_mode = 1
 
 [node name="BoltAction" type="Node3D" node_paths=PackedStringArray("APlayer")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.961859, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.910289, 0, -1.59283)
 script = ExtResource("1_xk3ee")
 WeaponName = "M1 Garand"
 MaxAmmo = 8

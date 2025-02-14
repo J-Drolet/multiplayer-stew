@@ -1,9 +1,15 @@
-[gd_scene load_steps=22 format=4 uid="uid://cohf65bso617l"]
+[gd_scene load_steps=28 format=4 uid="uid://cohf65bso617l"]
 
 [ext_resource type="Script" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_ekypa"]
 [ext_resource type="PackedScene" uid="uid://chv0b14sstem5" path="res://Scenes/Projectiles/ShotgunPellet.tscn" id="2_67p85"]
-[ext_resource type="Texture2D" uid="uid://c2u8ie3inrtw" path="res://Assets/Models/Weapons/Double_Barrel_glb_Shotgun_tex.png" id="4_v4e64"]
-[ext_resource type="Texture2D" uid="uid://cf286mioi5bu8" path="res://Assets/Models/Weapons/Ammo_glb_Ammo_tex.png" id="5_mkipk"]
+[ext_resource type="AudioStream" uid="uid://dyf64e2425cnd" path="res://Assets/Sounds/SFX/ShotgunFire.wav" id="3_ibh0c"]
+[ext_resource type="AudioStream" uid="uid://j6ddhp0k7ik2" path="res://Assets/Sounds/SFX/ShotgunUnlatch.wav" id="4_odpjs"]
+[ext_resource type="Texture2D" uid="uid://cimyblxjq77k2" path="res://Assets/Models/Weapons/Double_Barrel_glb_Shotgun_tex.png" id="4_v4e64"]
+[ext_resource type="AudioStream" uid="uid://bv7vd4wuysfxc" path="res://Assets/Sounds/SFX/ShotgunLoad.wav" id="5_1jm2x"]
+[ext_resource type="Texture2D" uid="uid://dpmxe81eskxr7" path="res://Assets/Models/Weapons/Ammo_glb_Ammo_tex.png" id="5_mkipk"]
+[ext_resource type="AudioStream" uid="uid://dusrix5x06j8e" path="res://Assets/Sounds/SFX/ShotgunLatch.wav" id="6_ylv44"]
+[ext_resource type="Script" path="res://Scripts/Base/SelfDestroyingParticle.cs" id="9_x08go"]
+[ext_resource type="PackedScene" uid="uid://bjyaanpyul0bx" path="res://Scenes/Particles/ShotgunShellParticle.tscn" id="10_b4gog"]
 
 [sub_resource type="Animation" id="Animation_omih6"]
 resource_name = "Fire"
@@ -16,7 +22,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.16, 0.4),
+"times": PackedFloat32Array(0, 0.08, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 0.102209, 0.833397), Vector3(0, 0, 0)]
@@ -28,7 +34,7 @@ tracks/1/path = NodePath(".:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.16, 0.4),
+"times": PackedFloat32Array(0, 0.08, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0.592487, 0, 0), Vector3(0, 0, 0)]
@@ -56,6 +62,20 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(-1.25013, 0, 0), Vector3(-0.337869, 5.72231e-08, 3.59568e-08), Vector3(-0.337869, 5.72231e-08, 3.59568e-08), Vector3(-1.25013, 0, 0)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [ExtResource("3_ibh0c")],
+"method": &"PlayGunSound"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_hlufq"]
@@ -154,7 +174,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-0.00580737, -0.92126, 0.107284)]
+"values": [Vector3(-0.00580733, -1.40013, 0.232012)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -180,11 +200,35 @@ tracks/9/keys = {
 "update": 0,
 "values": [Vector3(-1.5708, 0, 0)]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Meshes/Shells/Shotgun_shell_1:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Meshes/Shells/Shotgun_shell_2:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_h106b"]
 resource_name = "Reload"
 length = 1.48
-step = 0.02
+step = 0.01
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -218,7 +262,7 @@ tracks/2/path = NodePath("Meshes/Body/Barrels:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.18, 1.3, 1.48),
+"times": PackedFloat32Array(0, 0.18, 1.34, 1.48),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0.654498, 0, 0), Vector3(0.654498, 0, 0), Vector3(0, 0, 0)]
@@ -230,10 +274,10 @@ tracks/3/path = NodePath("Meshes/Shells/Shotgun_shell_1:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.18, 0.3, 0.42, 0.48, 0.84, 0.96, 1.06, 1.3, 1.48),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.48, 0.84, 0.9, 1.06, 1.34, 1.48),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-0.054, 0.245, 0.01), Vector3(-0.054, 0.325, -0.124), Vector3(-0.054, 3.898, 4.135), Vector3(-0.054, 0.028, 7.656), Vector3(0.52223, -0.366717, 0.633729), Vector3(-0.054, 0.603, 0.118), Vector3(-0.054, 0.603, 0.118), Vector3(-0.053744, 0.336016, -0.10446), Vector3(-0.053744, 0.336016, -0.10446), Vector3(-0.054, 0.245, 0.01)]
+"values": [Vector3(0.52223, -0.366717, 0.633729), Vector3(-0.054, 0.603, 0.118), Vector3(-0.054, 0.603, 0.118), Vector3(-0.053744, 0.336016, -0.10446), Vector3(-0.053744, 0.336016, -0.10446), Vector3(-0.054, 0.245, 0.01)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -242,10 +286,10 @@ tracks/4/path = NodePath("Meshes/Shells/Shotgun_shell_1:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.18, 0.3, 0.42, 0.48, 1.3, 1.48),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.48, 1.34, 1.48),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(-1.5708, 0, 0), Vector3(-2.26893, 0, 0), Vector3(1.86776, 0, 0), Vector3(-0.860308, 0, 0), Vector3(-2.26893, 0, 0), Vector3(-2.26893, 0, 0), Vector3(-1.5708, 0, 0)]
+"values": [Vector3(-2.26893, 0, 0), Vector3(-2.26893, 0, 0), Vector3(-1.5708, 0, 0)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -254,10 +298,10 @@ tracks/5/path = NodePath("Meshes/Body/BackHand:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.18, 0.42, 0.84, 0.96, 1.06, 1.2, 1.32, 1.48),
+"times": PackedFloat32Array(0, 0.18, 0.42, 0.84, 0.9, 1.06, 1.2, 1.36, 1.48),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-0.00580737, -0.92126, 0.107284), Vector3(-1.30817, -2.08674, 1.09922), Vector3(-1.30817, -2.08674, 1.09922), Vector3(1.05933e-08, -0.924173, -1.3019), Vector3(1.05933e-08, -0.924173, -1.3019), Vector3(-7.79917e-08, -0.435879, -0.749), Vector3(-0.701117, -0.435879, 0.279035), Vector3(-0.00580737, -0.92126, 0.107284), Vector3(-0.00580737, -0.92126, 0.107284)]
+"values": [Vector3(-0.00580733, -1.40013, 0.232012), Vector3(-1.30817, -2.08674, 1.09922), Vector3(-1.30817, -2.08674, 1.09922), Vector3(1.05933e-08, -0.924173, -1.3019), Vector3(1.05933e-08, -0.924173, -1.3019), Vector3(-7.79917e-08, -0.435879, -0.749), Vector3(-0.701117, -0.435879, 0.279035), Vector3(-0.00580737, -0.92126, 0.107284), Vector3(-0.00580737, -0.92126, 0.107284)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -266,10 +310,10 @@ tracks/6/path = NodePath("Meshes/Shells/Shotgun_shell_2:rotation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.18, 0.3, 0.42, 0.48, 1.3, 1.48),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.48, 1.34, 1.48),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(-1.5708, 0, 0), Vector3(-2.26893, 0, 0), Vector3(1.86776, 0, 0), Vector3(-0.860308, 0, 0), Vector3(-2.26893, 0, 0), Vector3(-2.26893, 0, 0), Vector3(-1.5708, 0, 0)]
+"values": [Vector3(-2.26893, 0, 0), Vector3(-2.26893, 0, 0), Vector3(-1.5708, 0, 0)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -278,10 +322,82 @@ tracks/7/path = NodePath("Meshes/Shells/Shotgun_shell_2:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.18, 0.3, 0.42, 0.48, 0.84, 0.96, 1.06, 1.3, 1.48),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.48, 0.84, 0.9, 1.06, 1.34, 1.48),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0.054, 0.245, 0.01), Vector3(0.054, 0.325, -0.124), Vector3(0.054, 3.898, 4.135), Vector3(0.054, 0.028, 7.656), Vector3(0.656, -0.367, 0.634), Vector3(0.054, 0.603, 0.118), Vector3(0.054, 0.603, 0.118), Vector3(0.054, 0.336, -0.104), Vector3(0.054, 0.336, -0.104), Vector3(0.054, 0.245, 0.01)]
+"values": [Vector3(0.656, -0.367, 0.634), Vector3(0.054, 0.603, 0.118), Vector3(0.054, 0.603, 0.118), Vector3(0.054, 0.336, -0.104), Vector3(0.054, 0.336, -0.104), Vector3(0.054, 0.245, 0.01)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Meshes/Shells/Shotgun_shell_1:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.48),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Meshes/Shells/Shotgun_shell_2:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.48),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.74, 1.38),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [ExtResource("4_odpjs")],
+"method": &"PlayGunSound"
+}, {
+"args": [ExtResource("5_1jm2x")],
+"method": &"PlayGunSound"
+}, {
+"args": [ExtResource("6_ylv44")],
+"method": &"PlayGunSound"
+}]
+}
+tracks/11/type = "method"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("SelfDestroyingParticle")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.18),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"EmitParticles"
+}]
+}
+tracks/12/type = "method"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("SelfDestroyingParticle2")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.18),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"EmitParticles"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mxbmx"]
@@ -463,6 +579,12 @@ properties/4/replication_mode = 1
 properties/5/path = NodePath("Meshes/Body/BackHand:position")
 properties/5/spawn = true
 properties/5/replication_mode = 1
+properties/6/path = NodePath("Meshes/Shells/Shotgun_shell_1:visible")
+properties/6/spawn = true
+properties/6/replication_mode = 1
+properties/7/path = NodePath("Meshes/Shells/Shotgun_shell_2:visible")
+properties/7/spawn = true
+properties/7/replication_mode = 1
 
 [node name="Shotgun" type="Node3D" node_paths=PackedStringArray("APlayer")]
 script = ExtResource("1_ekypa")
@@ -500,7 +622,7 @@ mesh = SubResource("ArrayMesh_otmnp")
 skeleton = NodePath("")
 
 [node name="BackHand" type="MeshInstance3D" parent="Meshes/Body"]
-transform = Transform3D(-0.66, 5.92923e-21, 5.7699e-08, -5.7699e-08, -2.88495e-08, -0.66, 2.52211e-15, -0.66, 2.88495e-08, -0.00580737, -0.92126, 0.107284)
+transform = Transform3D(-0.66, 5.08778e-21, 5.7699e-08, -5.7699e-08, -2.88495e-08, -0.66, 2.52211e-15, -0.66, 2.88495e-08, -0.00580733, -1.40013, 0.232012)
 mesh = SubResource("SphereMesh_1tuyb")
 skeleton = NodePath("../../AnimationPlayer")
 
@@ -518,3 +640,13 @@ skeleton = NodePath("")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_hiusq")
+
+[node name="SelfDestroyingParticle" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -0.0551038, 0.369995, -0.060608)
+script = ExtResource("9_x08go")
+ParticleScene = ExtResource("10_b4gog")
+
+[node name="SelfDestroyingParticle2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0.0534549, 0.369995, -0.060608)
+script = ExtResource("9_x08go")
+ParticleScene = ExtResource("10_b4gog")
