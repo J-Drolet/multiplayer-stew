@@ -82,13 +82,19 @@ namespace multiplayerstew.Scripts.Base
             float damage = projectile.Damage * hitbox.DamageMultiplier * (hitbox.TriggerVital ?  projectile.VitalMultiplier : 1);
             DamageTakenThisFrame += damage;
 
-            // for knockback
             if(this is Character character)
             {
+                // for knockback
                 if(character.Upgrades.Contains(Upgrade.C_SmallerHitbox) && collisionNormal != Vector3.Zero)
                 {
                     Vector3 knockback = -collisionNormal.Normalized() * damage * (float)Config.GetValue("upgrade_constants", "knockback_strength_per_damage", true);
                     KnockbackGainedSinceSync += knockback;
+                }
+
+                // for slowdown projectiles
+                if(GameManager.Players[projectile.projectileOwner].characterNode.Upgrades.Contains(Upgrade.W_SlowTargetBullets))
+                {
+                    character.RpcId(GetMultiplayerAuthority(), Character.MethodName.SetSlowdown, (float)Config.GetValue("upgrade_constants", "slowdown_speed_multiplier", true));
                 }
             }
         }

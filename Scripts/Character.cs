@@ -29,6 +29,7 @@ public partial class Character : Entity
 	public bool CanMove { get; set; } = true; // whether or not the local player should be able to manipulate the character
 	private int JumpsSinceHitGround { get; set; } // keeps track of how many jumps the character has done since last hitting the ground
 	private double TimeSinceXray { get; set; } // for see through walls upgrade
+	public double SlowdownMultiplier { get; set; } = 1.0;
 
     [Export]
     public UpgradableWeapon EquippedWeapon;
@@ -135,6 +136,8 @@ public partial class Character : Entity
 		if(EquippedWeapon == null) UI.InGameUI.AmmoCount.Text = "";
 
 		UI.InGameUI.SetHealthBar(CurrentHealth / MaxHealth);
+
+		SlowdownMultiplier = Mathf.Clamp(SlowdownMultiplier + ((double)Config.GetValue("upgrade_constants", "slowdown_recovery_strength", true) * delta), 0.0f, 1.0f);
     }
 
     public override void _PhysicsProcess(double delta)
@@ -216,8 +219,11 @@ public partial class Character : Entity
 			velocity.X = (float)Mathf.MoveToward(Velocity.X, 0, deceleration);
 			velocity.Z = (float)Mathf.MoveToward(Velocity.Z, 0, deceleration);
 		}
+		// apply slowdown - Only in X and Z - Gravity and jump is unaffected
+		velocity.X *= (float)SlowdownMultiplier;
+		velocity.Z *= (float)SlowdownMultiplier;
 
-		Velocity = velocity + Knockback;
+		Velocity = velocity + Knockback; // apply knockback
 		MoveAndSlide();
 
 		Knockback = Knockback.Lerp(Vector3.Zero, (float)Config.GetValue("upgrade_constants", "knockback_reduction_strength", true)); // slowly reduce knockback
@@ -286,5 +292,15 @@ public partial class Character : Entity
 		if(Multiplayer.GetRemoteSenderId() != 1) return; // only server should broadcast spawn positons
 
 		Knockback += knockbackAdd;
+	}
+
+	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+	public void SetSlowdown(float slowdownMultiplayer)
+	{
+		if(Multiplayer.GetRemoteSenderId() != 1) return; // only server should broadcast spawn positons
+		
+		GD.Print("SETSLOWDOWN " + Multiplayer.GetUniqueId() + " TO: " + slowdownMultiplayer);
+
+		SlowdownMultiplier = slowdownMultiplayer;
 	}
 }

@@ -32,7 +32,7 @@ namespace multiplayerstew.Scripts.Base
         private int HitsLeft;
         private int BouncesRegistered; // for bouncing projectile upgrade
 
-        private int projectileOwner;
+        public int projectileOwner;
         private Random Rng;
         private RayCast3D WorldHitDetectionRaycast; // for detecting if about to hit a world element
         private RayCast3D HitboxDetectionRaycast; // for detecting if hitting a hitbox
