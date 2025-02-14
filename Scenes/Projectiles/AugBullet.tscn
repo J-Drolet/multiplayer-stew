@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=4 uid="uid://djxdqw8pehnas"]
+
+[ext_resource type="Script" path="res://Scripts/Projectiles/SimpleBullet.cs" id="1_ke2li"]
+[ext_resource type="Texture2D" uid="uid://biwrbntj3b2c6" path="res://Assets/Models/Weapons/AugBullet_Ammo_tex.png" id="2_7mr4n"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_s3o7p"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3uye1"]
+resource_name = "Ammo"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("2_7mr4n")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kc6nu"]
+_surfaces = [{
+"aabb": AABB(-0.168849, -0.168849, -0.515784, 0.337698, 0.337698, 0.864365),
+"format": 34359742465,
+"index_count": 66,
+"index_data": PackedByteArray("AQACAAAAAQADAAIAAAACAAgAAgAEAAgAAwAEAAIAAwAFAAQABQAGAAQABQAHAAYABAAGAAgABwAJAAYABwAKAAkABgAJAAgACgALAAkACgAMAAsACQALAAgADAAAAAsADAABAAAACwAAAAgAAQAFAAMABQAKAAcACgABAAwABQABAAoA"),
+"lods": [0.234675, PackedByteArray("AQACAAAAAAACAAgAAgAEAAgAAgAFAAQABQAGAAQABAAGAAgABgAKAAkABgAJAAgACgALAAkACQALAAgACwABAAAACwAAAAgAAQAFAAIABQAKAAYACgABAAsABQABAAoA"), 0.386364, PackedByteArray("CwACAAgABQAGAAIAAgAGAAgACgALAAYABgALAAgABQAKAAYACgACAAsABQACAAoA"), 0.386472, PackedByteArray("CwACAAYABQAGAAIABQALAAYABQACAAsA")],
+"name": "Ammo",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 13,
+"vertex_data": PackedByteArray("3PPBveDzwb3AdYa+UIr8vVCK/L1EebI+jEAPPRLKBL7AdYa+ToY6PbXmLL5EebI+EsoEPoBAD73AdYa+ueYsPj+GOr1EebI+3fPBPeDzwT3AdYa+Sor8PVCK/D1EebI+AGCDMrxUQ7JqCgS/kEAPvRDKBD7AdYa+ToY6vbjmLD5EebI+EcoEvnhADz3AdYa+t+YsvkKGOj1EebI+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kv3pp"]
+resource_name = "AugBullet_Cylinder_002"
+_surfaces = [{
+"aabb": AABB(-0.168849, -0.168849, -0.515784, 0.337698, 0.337698, 0.864365),
+"attribute_data": PackedByteArray("J+H/PnCakD0EKwM/kGCFPuap8T5wmpA9oEbvPpBghT4kSOc+cJqQPVZv3j6QYIU+pR3rPnCakD17p+Q+kGCFPmV/9T4Ao1U85lT5PnCakD3ntvs+kGCFPlLbAT9wmpA9GEcGP5BghT7mqfE+cJqQPeap8T5wmpA95qnxPnCakD1Wb94+kGCFPlZv3j6QYIU+Vm/ePpBghT6lHes+cJqQPaUd6z5wmpA9pR3rPnCakD1S2wE/cJqQPVLbAT9wmpA9UtsBP3CakD3mqfE+cJqQPeap8T5wmpA95qnxPnCakD3mqfE+cJqQPeap8T5wmpA9Vm/ePpBghT5Wb94+kGCFPlZv3j6QYIU+pR3rPnCakD2lHes+cJqQPaUd6z5wmpA9pR3rPnCakD2lHes+cJqQPWV/9T4Ao1U8ZX/1PgCjVTxlf/U+AKNVPOe2+z6QYIU+57b7PpBghT7ntvs+kGCFPue2+z6QYIU+UtsBP3CakD1S2wE/cJqQPVLbAT9wmpA9UtsBP3CakD0n4f8+cJqQPSfh/z5wmpA9J+H/PnCakD0n4f8+cJqQPQQrAz+QYIU+BCsDP5BghT4EKwM/kGCFPgQrAz+QYIU+BCsDP5BghT7mqfE+cJqQPeap8T5wmpA95qnxPnCakD3mqfE+cJqQPeap8T5wmpA9JEjnPnCakD0kSOc+cJqQPSRI5z5wmpA9JEjnPnCakD1Wb94+kGCFPlZv3j6QYIU+Vm/ePpBghT5Wb94+kGCFPlZv3j6QYIU+pR3rPnCakD2lHes+cJqQPaUd6z5wmpA9pR3rPnCakD2lHes+cJqQPWV/9T4Ao1U8ZX/1PgCjVTxlf/U+AKNVPGV/9T4Ao1U8ZX/1PgCjVTxlf/U+AKNVPOZU+T5wmpA95lT5PnCakD3mVPk+cJqQPeZU+T5wmpA957b7PpBghT7ntvs+kGCFPue2+z6QYIU+57b7PpBghT7ntvs+kGCFPlLbAT9wmpA9UtsBP3CakD1S2wE/cJqQPVLbAT9wmpA9UtsBP3CakD0="),
+"format": 34359742487,
+"index_count": 66,
+"index_data": PackedByteArray("AQACAAAAAQADAAIAAAACAAgAAgAEAAgAAwAEAAIAAwAFAAQABQAGAAQABQAHAAYABAAGAAgABwAJAAYABwAKAAkABgAJAAgACgALAAkACgAMAAsACQALAAgADAAAAAsADAABAAAACwAAAAgAAQAFAAMABQAKAAcACgABAAwABQABAAoA"),
+"lods": [0.234675, PackedByteArray("NQA6ADEAMgA7AE0APAA/AE4APQBDAEAARABIAEEAQgBJAE8ASgBXAFMASwBUAFAAWABcAFUAVgBdAFEAXgA2ADMAXwA0AFIANwBFAD4ARgBZAEwAWgA4AGAARwA5AFsA"), 0.386364, PackedByteArray("LQAZACYAHgAhABoAGwAiACcAKQAuACMAJAAvACgAHwAqACUAKwAcADAAIAAdACwA"), 0.386472, PackedByteArray("FgANABMAEAAUAA4AEQAXABUAEgAPABgA")],
+"material": SubResource("StandardMaterial3D_3uye1"),
+"name": "Ammo",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 97,
+"vertex_data": PackedByteArray("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")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_kc6nu")
+
+[node name="AugBullet" type="Node3D" node_paths=PackedStringArray("multiplayerSynchronizer")]
+transform = Transform3D(0.434487, 0, 0, 0, 0.434487, 0, 0, 0, 0.434487, 0, 0, 0)
+script = ExtResource("1_ke2li")
+InitialVelocity = 70.0
+Damage = 10.0
+VitalMultiplier = 3.0
+Lifespan = 2.0
+ShotSpread = 0.01
+multiplayerSynchronizer = NodePath("MultiplayerSynchronizer")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_s3o7p")
+
+[node name="Rifle_caliber_2" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_kv3pp")
+skeleton = NodePath("")
