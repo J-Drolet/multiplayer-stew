@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://doa755g10ey1x"]
 
-[node name="Bus" type="CSGCombiner3D"]
+[node name="Catchall" type="CSGCombiner3D"]
 use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]

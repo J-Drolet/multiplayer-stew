@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://bweim4rpaohqv"]
+
+[ext_resource type="PackedScene" uid="uid://doa755g10ey1x" path="res://Scenes/Levels/LevelAssets/Level2Assets/Lvl2Catchall.tscn" id="1_inx10"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="BridgeMain" parent="." instance=ExtResource("1_inx10")]
+transform = Transform3D(2.02929, 0, 0, 0, 0.419789, 0, 0, 0, 3.88334, 0, 0, 0)
+
+[node name="Leg1" parent="." instance=ExtResource("1_inx10")]
+transform = Transform3D(0.425092, 0, 0, 0, -1.80642e-08, -1, 0, 0.413261, -4.37114e-08, 0.76398, -8.48033, -4.59651)
+
+[node name="Leg2" parent="." instance=ExtResource("1_inx10")]
+transform = Transform3D(0.425092, 0, 0, 0, -1.80642e-08, -1, 0, 0.413261, -4.37114e-08, -4.05966, -8.48033, -4.59651)
+
+[node name="Leg3" parent="." instance=ExtResource("1_inx10")]
+transform = Transform3D(0.425092, 0, 0, 0, -1.80642e-08, -1, 0, 0.413261, -4.37114e-08, 0.597026, -8.48033, -30.642)
+
+[node name="Leg4" parent="." instance=ExtResource("1_inx10")]
+transform = Transform3D(0.425092, 0, 0, 0, -1.80642e-08, -1, 0, 0.413261, -4.37114e-08, -4.05966, -8.48033, -30.4949)
+
+[node name="WallArmor" parent="." instance=ExtResource("1_inx10")]
+transform = Transform3D(0.430617, 0, 0, 0, 1.2285, 0, 0, 0, 1.4858, -4.06124, 0.9365, 1.18599)
+
+[node name="WallArmor2" parent="." instance=ExtResource("1_inx10")]
+transform = Transform3D(0.430617, 0, 0, 0, 1.2285, 0, 0, 0, 1.4858, -3.96811, 0.9365, -21.2302)
+
+[node name="WallArmor3" parent="." instance=ExtResource("1_inx10")]
+transform = Transform3D(0.430617, 0, 0, 0, 1.2285, 0, 0, 0, 3.86344, 0.787372, 0.9365, -0.193886)

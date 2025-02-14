@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://brjaa3l8t8n3w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sd7yi"]
+albedo_color = Color(0, 0.341722, 0.0554736, 1)
+
+[node name="Bus" type="CSGCombiner3D"]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00208, 1.14136, -4.17297)
+size = Vector3(3.00415, 3.28271, 9.34595)
+material = SubResource("StandardMaterial3D_sd7yi")
