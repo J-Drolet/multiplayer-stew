@@ -25,7 +25,7 @@ public partial class DeathBarrier : Node
         {
             Character character = (Character) body;
 
-            character.RpcId(character.GetMultiplayerAuthority(), Character.MethodName.SetCurrentHealth, 0);
+            character.RpcId(character.GetMultiplayerAuthority(), Character.MethodName.ApplyDamage, 100000000);
         }
     }
 }

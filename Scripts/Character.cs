@@ -39,6 +39,7 @@ public partial class Character : Entity
 
 	public override void _EnterTree()
 	{
+		CurrentHealth = MaxHealth; // we have to do this here or else infinite spawns will happen on server side
 		SetMultiplayerAuthority(Name.ToString().Split("#").First().ToInt());
 		GameManager.Players[GetMultiplayerAuthority()].characterNode = this;
 		
@@ -133,7 +134,7 @@ public partial class Character : Entity
 
 		if(EquippedWeapon == null) UI.InGameUI.AmmoCount.Text = "";
 
-		UI.InGameUI.SetHealthBar(PeerCurrentHealth / MaxHealth);
+		UI.InGameUI.SetHealthBar(CurrentHealth / MaxHealth);
     }
 
     public override void _PhysicsProcess(double delta)

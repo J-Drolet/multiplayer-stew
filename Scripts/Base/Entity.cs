@@ -9,7 +9,8 @@ namespace multiplayerstew.Scripts.Base
 {
     public partial class Entity : CharacterBody3D
     {
-        protected float PeerCurrentHealth { get; set; } // this is the current health used by peers to display things
+        [Export]
+        public float CurrentHealth { get; set; }
         [Export, ExportRequired]
         public float MaxHealth { get; set; } = 100.0f;
         [Export, ExportRequired]
@@ -17,14 +18,18 @@ namespace multiplayerstew.Scripts.Base
         [Export]
         public Label3D HealthText { get; set; }
 
-        public float ServerCurrentHealth { get; set; } // server uses this to keep track of the real current health
+        public float DamageTakenThisFrame { get; set; }
         private Vector3 KnockbackGainedSinceSync { get; set; } 
 
         public void Init()
-        {
+        { 
+            if(IsMultiplayerAuthority())
+            {
+                CurrentHealth = MaxHealth;
+            }
+
             if(Multiplayer.IsServer())
             {
-                ServerCurrentHealth = MaxHealth;
                 // Only server should listen for hits so signals are only hooked up on server
                 foreach (DamageArea hitbox in Hitboxes)
                 {
@@ -41,24 +46,28 @@ namespace multiplayerstew.Scripts.Base
 
         public override void _Process(double delta)
         {
-            // For batching updates to peers
-            if(ServerCurrentHealth != PeerCurrentHealth) {
-                Rpc(MethodName.SetCurrentHealth, ServerCurrentHealth);
-            }
-
-            // batch knockback gained
-            if(KnockbackGainedSinceSync != Vector3.Zero)
+            if(Multiplayer.IsServer())
             {
-                if(this is Character character)
-                {
-                    character.RpcId(GetMultiplayerAuthority(), Character.MethodName.AddKnockback, KnockbackGainedSinceSync);
+                // For batching updates to peers
+                if(DamageTakenThisFrame != 0) {
+                    RpcId(GetMultiplayerAuthority(), MethodName.ApplyDamage, DamageTakenThisFrame);
+                    DamageTakenThisFrame = 0;
                 }
-                KnockbackGainedSinceSync = Vector3.Zero;
+
+                // batch knockback gained
+                if(KnockbackGainedSinceSync != Vector3.Zero)
+                {
+                    if(this is Character character)
+                    {
+                        character.RpcId(GetMultiplayerAuthority(), Character.MethodName.AddKnockback, KnockbackGainedSinceSync);
+                    }
+                    KnockbackGainedSinceSync = Vector3.Zero;
+                }
             }
 
             if (HealthText != null)
             {
-                HealthText.Text = PeerCurrentHealth <= 0.0f ? "Dead" : "Health: " + PeerCurrentHealth.ToString();
+                HealthText.Text = CurrentHealth <= 0.0f ? "Dead" : "Health: " + CurrentHealth.ToString();
             }
         }
 
@@ -71,7 +80,7 @@ namespace multiplayerstew.Scripts.Base
         public void HitboxHit(UpgradeableProjectile projectile, DamageArea hitbox, Vector3 collisionNormal)
         {
             float damage = projectile.Damage * hitbox.DamageMultiplier * (hitbox.TriggerVital ?  projectile.VitalMultiplier : 1);
-            ServerCurrentHealth = Math.Clamp(ServerCurrentHealth - damage, 0.0f, MaxHealth);
+            DamageTakenThisFrame += damage;
 
             // for knockback
             if(this is Character character)
@@ -85,11 +94,11 @@ namespace multiplayerstew.Scripts.Base
         }
 
         [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-        public void SetCurrentHealth(float health)
+        public void ApplyDamage(float damage)
         {
             if(Multiplayer.GetRemoteSenderId() != 1) return; // only server should broadcast health values
 
-            PeerCurrentHealth = health;
+            CurrentHealth = Math.Clamp(CurrentHealth - damage, 0.0f, MaxHealth);;
         }
     }
 }

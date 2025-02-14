@@ -11,6 +11,6 @@ public partial class HealthPickup : Pickup
 
     protected override void ActivatePickup(Character character)
     {
-        character.ServerCurrentHealth += HealthGained; // Entity._Process will take care of the sync
+        character.DamageTakenThisFrame -= HealthGained; // Entity._Process will take care of the sync
     }
 }
