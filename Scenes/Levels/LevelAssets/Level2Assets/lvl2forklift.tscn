@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfexvrm6nh5ff"]
+
+[ext_resource type="PackedScene" uid="uid://doa755g10ey1x" path="res://Scenes/Levels/LevelAssets/Level2Assets/Lvl2Catchall.tscn" id="1_inmm2"]
+
+[node name="PickupTruckGreybox" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1.75564, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Body" parent="." instance=ExtResource("1_inmm2")]
+transform = Transform3D(6.31126, 0, 0, 0, -3.0788e-07, -0.654983, 0, 7.04347, -2.86303e-08, 0, 1.94309, -9.90608)
+
+[node name="Prong" parent="." instance=ExtResource("1_inmm2")]
+transform = Transform3D(1.22214, 0, 0, 0, -3.0788e-07, -0.234725, 0, 7.04347, -1.02602e-08, 2.32688, 1.94309, -31.0679)
+
+[node name="Prong2" parent="." instance=ExtResource("1_inmm2")]
+transform = Transform3D(1.22214, 0, 0, 0, -3.0788e-07, -0.234725, 0, 7.04347, -1.02602e-08, -12.8287, 1.94309, -31.0679)
+
+[node name="Prong3" parent="." instance=ExtResource("1_inmm2")]
+transform = Transform3D(-5.34213e-08, 4.89461, -1.02601e-08, 0, -2.1395e-07, -0.234725, -1.22214, -2.1395e-07, 4.48485e-16, -12.8287, 1.94309, -21.8228)
+
+[node name="Cab" parent="." instance=ExtResource("1_inmm2")]
+transform = Transform3D(5.03584, 0, 0, 0, -1.79972e-07, -0.914194, 0, 4.1173, -3.99608e-08, -1.42249, 7.47736, -7.45075)
