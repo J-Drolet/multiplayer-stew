@@ -1,9 +1,10 @@
-[gd_scene load_steps=26 format=3 uid="uid://btavi7m2jh606"]
+[gd_scene load_steps=27 format=3 uid="uid://btavi7m2jh606"]
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_tjnmx"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_m4m6e"]
 [ext_resource type="PackedScene" uid="uid://da5tgs4f5e5a3" path="res://Scenes/Levels/LevelAssets/Level2Assets/waterparticles.tscn" id="3_2wa11"]
 [ext_resource type="PackedScene" uid="uid://cnjqtyat1tb0i" path="res://Scenes/Levels/LevelAssets/Level2Assets/lvl2water.tscn" id="4_3ia18"]
+[ext_resource type="PackedScene" uid="uid://6jntjlknvgow" path="res://Scenes/Levels/LevelAssets/UtilityAssets/DeathBarrier.tscn" id="4_sqfvm"]
 [ext_resource type="PackedScene" uid="uid://bdu7h1l1jg443" path="res://Scenes/Levels/LevelAssets/Level2Assets/concretepipe.tscn" id="5_xq3c0"]
 [ext_resource type="PackedScene" uid="uid://bcggbiy26rgtv" path="res://Scenes/Levels/LevelAssets/Level2Assets/Lvl2Pit.tscn" id="6_6nkgw"]
 [ext_resource type="PackedScene" uid="uid://brjaa3l8t8n3w" path="res://Scenes/Levels/LevelAssets/Level2Assets/Lvl2Boundaries.tscn" id="6_uec52"]
@@ -99,6 +100,9 @@ visible = false
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_pf5uv")
 
+[node name="DeathBarrier" parent="." instance=ExtResource("4_sqfvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -37.9432, 0)
+
 [node name="Floor" type="StaticBody3D" parent="."]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 metadata/_edit_group_ = true
@@ -109,6 +113,9 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
 shape = SubResource("BoxShape3D_bbwtt")
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="Floor"]
+size = Vector3(50, 0.25, 50)
 
 [node name="Assets" type="Node3D" parent="."]
 
@@ -225,6 +232,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.39066, 0)
 
 [node name="SimpleCharacterPickup" parent="Assets/Pickups" instance=ExtResource("12_67vbb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5308, 4.877, -9.50495)
+DestroyOnPickup = false
+
+[node name="SimpleCharacterPickup14" parent="Assets/Pickups" instance=ExtResource("12_67vbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3649, 4.877, -9.50495)
+Upgrade = 11
 DestroyOnPickup = false
 
 [node name="SimpleCharacterPickup6" parent="Assets/Pickups" instance=ExtResource("12_67vbb")]
