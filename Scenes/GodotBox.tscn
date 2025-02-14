@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bwh21gfyr2idt"]
+[gd_scene load_steps=8 format=3 uid="uid://bwh21gfyr2idt"]
 
 [ext_resource type="Script" path="res://Scripts/Base/Entity.cs" id="1_j2x4v"]
 [ext_resource type="Texture2D" uid="uid://b5gav0ulky2i1" path="res://Assets/icon.svg" id="1_srln8"]
@@ -14,11 +14,6 @@ albedo_texture = ExtResource("1_srln8")
 material = SubResource("StandardMaterial3D_ds6qc")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0488x"]
-
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_kl5mg"]
-properties/0/path = NodePath(".:CurrentHealth")
-properties/0/spawn = true
-properties/0/replication_mode = 1
 
 [node name="StaticBody3D" type="CharacterBody3D" node_paths=PackedStringArray("Hitboxes", "HealthText")]
 script = ExtResource("1_j2x4v")
@@ -44,6 +39,3 @@ shape = SubResource("BoxShape3D_0488x")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.838147, 0)
 text = "Health:"
 font_size = 64
-
-[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
-replication_config = SubResource("SceneReplicationConfig_kl5mg")

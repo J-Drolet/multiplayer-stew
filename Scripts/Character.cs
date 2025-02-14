@@ -39,7 +39,6 @@ public partial class Character : Entity
 
 	public override void _EnterTree()
 	{
-		CurrentHealth = MaxHealth; // we have to do this here or else infinite spawns will happen on server side
 		SetMultiplayerAuthority(Name.ToString().Split("#").First().ToInt());
 		GameManager.Players[GetMultiplayerAuthority()].characterNode = this;
 		
@@ -81,10 +80,7 @@ public partial class Character : Entity
 
     public override void _Process(double delta)
     {
-		if (HealthText != null)
-		{
-			HealthText.Text = CurrentHealth <= 0.0f ? "Dead" : "Health: " + CurrentHealth.ToString();
-		}
+		base._Process(delta);
 
 		////////// Invisibility upgrade
 		float transparency = Upgrades.Contains(Upgrade.C_Invisibility)? (float)Config.GetValue("upgrade_constants", "invisibility_transparency", true) : 0;
@@ -137,7 +133,7 @@ public partial class Character : Entity
 
 		if(EquippedWeapon == null) UI.InGameUI.AmmoCount.Text = "";
 
-		UI.InGameUI.SetHealthBar(CurrentHealth / MaxHealth);
+		UI.InGameUI.SetHealthBar(PeerCurrentHealth / MaxHealth);
     }
 
     public override void _PhysicsProcess(double delta)

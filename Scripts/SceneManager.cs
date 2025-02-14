@@ -98,7 +98,7 @@ public partial class SceneManager : Node
 			{
 				//GD.Print("Examining player " + id);
 				if(GameManager.Players[id].characterNode != null) {
-					if(GameManager.Players[id].characterNode.CurrentHealth == 0)
+					if(GameManager.Players[id].characterNode.ServerCurrentHealth == 0)
 					{
 						RespawnPlayer(id);
 					}

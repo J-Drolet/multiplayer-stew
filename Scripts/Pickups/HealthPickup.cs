@@ -11,9 +11,6 @@ public partial class HealthPickup : Pickup
 
     protected override void ActivatePickup(Character character)
     {
-        if (character.CurrentHealth < character.MaxHealth)
-        {
-            character.RpcId(character.GetMultiplayerAuthority(), Character.MethodName.SetCurrentHealth, Mathf.Clamp(character.CurrentHealth + HealthGained, 0, character.MaxHealth));
-        }
+        character.ServerCurrentHealth += HealthGained; // Entity._Process will take care of the sync
     }
 }
