@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://crvrnbwnrsq3b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y6f6h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k0vw5"]
+
+[node name="ForemanBuilding" type="CSGCombiner3D"]
+
+[node name="HouseBody" type="CSGBox3D" parent="."]
+transform = Transform3D(0.663214, 0, 0, 0, 0.712869, 0, 0, 0, 1, 3.26685, 1.33447, -2.40088)
+calculate_tangents = false
+use_collision = true
+size = Vector3(16.5337, 12.6689, 14.8018)
+material = SubResource("StandardMaterial3D_y6f6h")
+
+[node name="BulkInterior" type="CSGBox3D" parent="HouseBody"]
+transform = Transform3D(0.9582, 0, 0, 0, 0.9582, 0, 0, 0, 0.9582, -0.108379, -0.0431721, -0.0892925)
+operation = 2
+size = Vector3(16.9049, 12.9724, 14.6361)
+material = SubResource("StandardMaterial3D_k0vw5")
+
+[node name="F1Opening" type="CSGBox3D" parent="HouseBody"]
+transform = Transform3D(-0.01697, 0, 0.692034, 0, 1, 0, -1.00332, 0, -0.0117048, 8.44721, -2.20153, -2.59662)
+operation = 2
+size = Vector3(3.38287, 8.20925, 2.50179)
+
+[node name="F1Opening2" type="CSGBox3D" parent="HouseBody"]
+transform = Transform3D(1.00346, 0, 0, 0, 1, 0, 0, 0, 0.692124, 0.444304, -1.00779, 7.42329)
+operation = 2
+size = Vector3(3.86334, 5.22848, 2.50179)
+
+[node name="F1Opening3" type="CSGBox3D" parent="HouseBody"]
+transform = Transform3D(-4.38628e-08, 0, 0.692124, 0, 1, 0, -1.00346, 0, -3.02537e-08, 8.14793, -0.853832, 3.66017)
+operation = 2
+size = Vector3(2.96559, 5.38658, 2.50179)

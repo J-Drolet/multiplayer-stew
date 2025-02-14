@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dln1784tovllu"]
+
+[ext_resource type="PackedScene" uid="uid://doa755g10ey1x" path="res://Scenes/Levels/LevelAssets/Level2Assets/Lvl2Catchall.tscn" id="1_ldwyx"]
+
+[node name="PickupTruckGreybox" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1.75564, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Body" parent="." instance=ExtResource("1_ldwyx")]
+transform = Transform3D(6.31126, 0, 0, 0, -7.73693e-07, -0.654983, 0, 17.7, -2.86303e-08, 0, 1.94309, -9.90608)
+
+[node name="Cab" parent="." instance=ExtResource("1_ldwyx")]
+transform = Transform3D(6.1616, 0, 0, 0, -1.79972e-07, -0.914194, 0, 4.1173, -3.99608e-08, 0, 7.47736, -8.72443)

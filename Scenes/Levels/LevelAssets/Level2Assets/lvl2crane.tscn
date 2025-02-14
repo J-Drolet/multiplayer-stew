@@ -9,10 +9,10 @@ transform = Transform3D(1, 0, 0, 0, 1.75564, 0, 0, 0, 1, 0, 0, 0)
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -4.58484, 0, 1, -2.0041e-07, 0, 1.94309, 0)
 
 [node name="CraneArm" parent="." instance=ExtResource("1_yattm")]
-transform = Transform3D(1, 0, 0, 0, 0.618225, 0, 0, 0, 4.58484, 0, 42.6462, 5.14995)
+transform = Transform3D(1, 0, 0, 0, 0.618225, 0, 0, 0, 9.49975, 0, 42.6462, 5.14995)
 
 [node name="CraneCable" parent="." instance=ExtResource("1_yattm")]
-transform = Transform3D(0.234778, 0, 0, 0, -9.11921e-09, 2.46943, 0, -0.208623, -1.07942e-07, -0.410978, 42.6462, -33.2962)
+transform = Transform3D(0.234778, 0, 0, 0, -9.11921e-09, 2.85652, 0, -0.208623, -1.24862e-07, -0.410978, 41.515, -76.6616)
 
 [node name="CraneBase" parent="." instance=ExtResource("1_yattm")]
 transform = Transform3D(4.7067, 0, 0, 0, 1, 0, 0, 0, 1.73214, 4.33407, 0, 8.53785)

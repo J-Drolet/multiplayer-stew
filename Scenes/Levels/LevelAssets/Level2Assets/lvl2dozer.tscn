@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://bu05hh1copbwn"]
+
+[ext_resource type="PackedScene" uid="uid://doa755g10ey1x" path="res://Scenes/Levels/LevelAssets/Level2Assets/Lvl2Catchall.tscn" id="1_io6ph"]
+
+[node name="Lvl2backhoe" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1.75564, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Body" parent="." instance=ExtResource("1_io6ph")]
+transform = Transform3D(3.47239, 0, 0, 0, -3.68366e-07, -0.654983, 0, 8.42723, -2.86303e-08, 0, 1.94309, 0)
+
+[node name="Cab" parent="." instance=ExtResource("1_io6ph")]
+transform = Transform3D(3.47239, 0, 0, 0, -1.17749e-07, -0.654983, 0, 2.69379, -2.86303e-08, 0, 7.47736, -0.455956)
+
+[node name="Plow" parent="." instance=ExtResource("1_io6ph")]
+transform = Transform3D(8.58767, 0, 0, 0, -7.17016e-08, -0.654983, 0, 1.64034, -2.86303e-08, 5.4128, 0.724434, -9.7303)
+
+[node name="Tread" parent="." instance=ExtResource("1_io6ph")]
+transform = Transform3D(1.31095, 0, 0, 0, -3.68366e-07, -0.280346, 0, 8.42723, -1.22543e-08, 5.00368, 1.53259, 0)
+
+[node name="Tread2" parent="." instance=ExtResource("1_io6ph")]
+transform = Transform3D(1.31095, 0, 0, 0, -3.68366e-07, -0.280346, 0, 8.42723, -1.22543e-08, -9.3013, 1.53259, 0)
