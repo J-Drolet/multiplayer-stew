@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_3n8ap"]
 [ext_resource type="PackedScene" uid="uid://g1mopusla6rw" path="res://Scenes/Projectiles/SimpleBullet.tscn" id="2_6tjck"]
 [ext_resource type="AudioStream" uid="uid://d1k8g3txon5y8" path="res://Assets/Sounds/SFX/9mm Micro Pistol - Gunshot B 002.wav" id="3_4ihi6"]
-[ext_resource type="AudioStream" uid="uid://dlm3vrwcwn5nd" path="res://Scenes/Projectiles/9mm Full Size Pistol - Dry Trigger 003.wav" id="3_cawty"]
+[ext_resource type="AudioStream" uid="uid://dlm3vrwcwn5nd" path="res://Assets/Sounds/SFX/9mm Full Size Pistol - Dry Trigger 003.wav" id="3_cawty"]
 [ext_resource type="PackedScene" uid="uid://cnw8ner8rvd7w" path="res://Scenes/Particles/PistolShellParticle.tscn" id="4_6qm8s"]
 [ext_resource type="Texture2D" uid="uid://c4h55agq38hwk" path="res://Assets/Models/Weapons/Lugar_Lugar_tex.png" id="4_qkti2"]
 [ext_resource type="AudioStream" uid="uid://dbw86x4nq2h45" path="res://Assets/Sounds/SFX/9mm Full Size Pistol - Cocking Slide 003.wav" id="5_6y7ut"]
@@ -13,7 +13,7 @@
 
 [sub_resource type="Animation" id="Animation_c27f4"]
 resource_name = "Fire"
-length = 0.19
+length = 0.15
 step = 0.005
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -22,7 +22,7 @@ tracks/0/path = NodePath(".:CanFire")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.19),
+"times": PackedFloat32Array(0, 0.15),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -34,7 +34,7 @@ tracks/1/path = NodePath("Lugar/Trigger:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.19),
+"times": PackedFloat32Array(0, 0.15),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(-0.150579, 3.14159, 1.5708), Vector3(0.5109, 3.14159, 1.5708)]
@@ -46,7 +46,7 @@ tracks/2/path = NodePath("Lugar:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.035, 0.115, 0.19),
+"times": PackedFloat32Array(0.035, 0.085, 0.15),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(0, -0.00839388, -0.387356), Vector3(0, 0.161426, 0.0637157), Vector3(0, -0.00839388, -0.387356)]
@@ -58,7 +58,7 @@ tracks/3/path = NodePath("Lugar:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.035, 0.115, 0.19),
+"times": PackedFloat32Array(0.035, 0.085, 0.15),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 3.14159, 0), Vector3(-0.310686, 3.14159, 4.84823e-08), Vector3(0, 3.14159, 0)]
@@ -70,7 +70,7 @@ tracks/4/path = NodePath("Mag:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.035, 0.115, 0.19),
+"times": PackedFloat32Array(0.035, 0.085, 0.15),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(0, -0.0711069, -0.00460848), Vector3(0, -0.0152954, 0.408967), Vector3(0, -0.0711069, -0.00460848)]
@@ -82,7 +82,7 @@ tracks/5/path = NodePath("Mag:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0.035, 0.115, 0.19),
+"times": PackedFloat32Array(0.035, 0.085, 0.15),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(-0.523599, 0, 0), Vector3(-0.212913, 0, 0), Vector3(-0.523599, 0, 0)]
@@ -94,7 +94,7 @@ tracks/6/path = NodePath("HandMesh:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0.035, 0.115, 0.19),
+"times": PackedFloat32Array(0.035, 0.085, 0.15),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(0, -0.0656728, 0), Vector3(0, -0.0115303, 0.415016), Vector3(0, -0.0656728, 0)]

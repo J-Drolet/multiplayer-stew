@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://g1mopusla6rw"]
 
 [ext_resource type="Script" path="res://Scripts/Projectiles/SimpleBullet.cs" id="1_iga3j"]
-[ext_resource type="Texture2D" uid="uid://sjgngmb63c6o" path="res://Assets/Models/Weapons/PistolBullet_Ammo_tex.png" id="2_7m31k"]
+[ext_resource type="Texture2D" uid="uid://wggjy5cfolrn" path="res://Assets/Models/Weapons/PistolBullet_Ammo_tex.png" id="2_7m31k"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_h0560"]
 properties/0/path = NodePath(".:position")
@@ -18,7 +18,7 @@ cull_mode = 2
 albedo_texture = ExtResource("2_7m31k")
 roughness = 0.5
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_wyovt"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_7msbo"]
 _surfaces = [{
 "aabb": AABB(-0.819204, -0.396685, -0.942375, 1.63841, 0.983646, 1.88475),
 "format": 34359742465,
@@ -50,7 +50,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("EJ83MuADmT65Rzm/0BCYMUway76FP3G/PRAhP+ADmT62R7m+VbdRP0way758P/G+OxAhP+ADmT6/R7k+VbdRP0way76GP/E+hugYtOADmT65Rzk/9pgStEway76BP3E/gHZpMhRDFj8AANMzPRAhv+ADmT62R7k+VrdRv0way75+P/E+ORAhv+ADmT6+R7m+UrdRv0way76EP/G+EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/0BCYMUway76FP3G/0BCYMUway76FP3G/0BCYMUway76FP3G/VbdRP0way76GP/E+VbdRP0way76GP/E+VbdRP0way76GP/E+VrdRv0way75+P/E+VrdRv0way75+P/E+VrdRv0way75+P/E+EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/0BCYMUway76FP3G/0BCYMUway76FP3G/0BCYMUway76FP3G/0BCYMUway76FP3G/OxAhP+ADmT6/R7k+OxAhP+ADmT6/R7k+OxAhP+ADmT6/R7k+OxAhP+ADmT6/R7k+VbdRP0way76GP/E+VbdRP0way76GP/E+VbdRP0way76GP/E+VbdRP0way76GP/E+PRAhv+ADmT62R7k+PRAhv+ADmT62R7k+PRAhv+ADmT62R7k+PRAhv+ADmT62R7k+VrdRv0way75+P/E+VrdRv0way75+P/E+VrdRv0way75+P/E+VrdRv0way75+P/E+EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/EJ83MuADmT65Rzm/0BCYMUway76FP3G/0BCYMUway76FP3G/0BCYMUway76FP3G/0BCYMUway76FP3G/0BCYMUway76FP3G/VbdRP0way758P/G+VbdRP0way758P/G+VbdRP0way758P/G+VbdRP0way758P/G+OxAhP+ADmT6/R7k+OxAhP+ADmT6/R7k+OxAhP+ADmT6/R7k+OxAhP+ADmT6/R7k+OxAhP+ADmT6/R7k+VbdRP0way76GP/E+VbdRP0way76GP/E+VbdRP0way76GP/E+VbdRP0way76GP/E+VbdRP0way76GP/E+9pgStEway76BP3E/9pgStEway76BP3E/9pgStEway76BP3E/9pgStEway76BP3E/gHZpMhRDFj8AANMzgHZpMhRDFj8AANMzPRAhv+ADmT62R7k+PRAhv+ADmT62R7k+PRAhv+ADmT62R7k+PRAhv+ADmT62R7k+PRAhv+ADmT62R7k+PRAhv+ADmT62R7k+VrdRv0way75+P/E+VrdRv0way75+P/E+VrdRv0way75+P/E+VrdRv0way75+P/E+VrdRv0way75+P/E+UrdRv0way76EP/G+UrdRv0way76EP/G+UrdRv0way76EP/G+UrdRv0way76EP/G+o8f//yLoUFWc0QAAyxbe0TLRj8wGAHGXb9pPOQAAcZdus8uu+P+M6E65cFr+/43o/39auNwXryr/f51RM+kfrv9///8AAAAAkEzLrgYAchewRnBa////P8wuj8z4/41ojyVPOf///7/n+Dk0IuhQVbKA4eci6FBV9xIR4yLoUFXK47ciyxbe0eQTvSLLFt7RK5lkAMsW3tGQ5ZBC/v+N6PWTTLj+/43oJKBIKP7/jegecPW9////P64XI0H///8/OWD7J////z8C/JDTIuhQVSDeVLQi6FBVSqIu8SLoUFV1IVzjIuhQVeblxSDLFt7RbQRIWcsW3tGBCv/fyxbe0Q6jhwbLFt7RkMlnpvj/jOiXp+yA+P+M6JduWqj4/4zowZ4O1Pj/jOiW6uw+/v+N6FrlD5H+/43odqUCav7/jeinlJIm/v+N6NNdPqMGAHIXdnOn4AYAcheMH1yZBgByFyscTtkGAHIXwJNhb////z9pUOmN////P2cBI4D///8/GXb0Hv///z85/qLlIuhQVQiwuuYi6FBVcNwtzSLoUFUIJ1rUIuhQVboCHx8i6FBVg1Jf6yLoUFVe6A4Ryxbe0dAa6RfLFt7Ric+JK8sW3tFVMQYqyxbe0WKnyQvLFt7Rne6XIwAAcZep6JS/AABxl2rjM2IAAHGXVdPjMgAAcZfIn6/P+P+M6BfWrcD4/4zoQuL5b/j/jOg0vWR++P+M6DiNa6r4/4zoOdakZ/7/jehyuchw/v+N6D3K0Dv+/43oJ4jXR/7/jejynlc2/v+N6MirAXAz6R+u036spDPpH65qWFpoM+kfrix+mEgz6R+uYZFs/QAAAACch8/YAAAAAG1xc6oGAHIXAkQYhgYAchdreBTTBgByF9UYsX4GAHIXhCnEugYAchcNWtHeBgByF11OVmf///8/eyr+a////z+vbfdL////P8QyEjn///8/vGfZNf///z+wGxRf////v5cc4b////+/BheVJP///7+5LYE4////vw==")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_wyovt")
+shadow_mesh = SubResource("ArrayMesh_7msbo")
 
 [node name="SimpleBullet" type="Node3D" node_paths=PackedStringArray("multiplayerSynchronizer")]
 script = ExtResource("1_iga3j")

@@ -3,8 +3,9 @@
 [ext_resource type="Script" path="res://Scripts/Base/UpgradeableProjectile.cs" id="1_g76ux"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3alw"]
-albedo_color = Color(0.370364, 0.370364, 0.370364, 1)
-metallic = 0.7
+albedo_color = Color(0.564962, 0.564962, 0.564962, 1)
+metallic = 1.0
+metallic_specular = 0.78
 
 [sub_resource type="SphereMesh" id="SphereMesh_k41vp"]
 material = SubResource("StandardMaterial3D_e3alw")
@@ -19,11 +20,11 @@ properties/1/replication_mode = 1
 
 [node name="ShotgunPellet" type="Node3D" node_paths=PackedStringArray("multiplayerSynchronizer")]
 script = ExtResource("1_g76ux")
-ShotSpread = 0.18
+ShotSpread = 0.14
 multiplayerSynchronizer = NodePath("MultiplayerSynchronizer")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.0409161, 0, 0, 0, 0.0409161, 0, 0, 0, 0.0409161, 0, 0, 0)
+transform = Transform3D(0.0232158, 0, 0, 0, 0.0232158, 0, 0, 0, 0.0232158, 0, 0, 0)
 mesh = SubResource("SphereMesh_k41vp")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
