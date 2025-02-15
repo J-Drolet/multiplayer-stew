@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://btavi7m2jh606"]
+[gd_scene load_steps=32 format=3 uid="uid://btavi7m2jh606"]
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_tjnmx"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_m4m6e"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cnjqtyat1tb0i" path="res://Scenes/Levels/LevelAssets/Level2Assets/lvl2water.tscn" id="4_3ia18"]
 [ext_resource type="PackedScene" uid="uid://6jntjlknvgow" path="res://Scenes/Levels/LevelAssets/UtilityAssets/DeathBarrier.tscn" id="4_sqfvm"]
 [ext_resource type="PackedScene" uid="uid://bdu7h1l1jg443" path="res://Scenes/Levels/LevelAssets/Level2Assets/concretepipe.tscn" id="5_xq3c0"]
+[ext_resource type="PackedScene" path="res://Scenes/Pickups/Weapon Pickups/OLD/AugPickup.tscn" id="5_xurq7"]
 [ext_resource type="PackedScene" uid="uid://bcggbiy26rgtv" path="res://Scenes/Levels/LevelAssets/Level2Assets/Lvl2Pit.tscn" id="6_6nkgw"]
 [ext_resource type="PackedScene" uid="uid://brjaa3l8t8n3w" path="res://Scenes/Levels/LevelAssets/Level2Assets/Lvl2Boundaries.tscn" id="6_uec52"]
 [ext_resource type="PackedScene" uid="uid://cm2whm84p0m3u" path="res://Scenes/Pickups/Weapon Pickups/NEW/NEWPistolPickup.tscn" id="6_xa5ff"]
@@ -143,6 +144,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.4437, -13.8719, -7.42581)
 
 [node name="6" type="Node3D" parent="Assets/Spawns" groups=["PlayerSpawnPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.90403, -13.8719, -50.8082)
+
+[node name="AugPickup" parent="Assets/Spawns" instance=ExtResource("5_xurq7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.0444, -20.5764, -10.4069)
 
 [node name="Map Elements" type="Node3D" parent="Assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0648918, -0.0889626, -0.0549355)
