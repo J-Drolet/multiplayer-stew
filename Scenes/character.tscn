@@ -104,7 +104,6 @@ shape = SubResource("CapsuleShape3D_mo30b")
 
 [node name="CharacterMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-visible = false
 material_overlay = SubResource("StandardMaterial3D_jx8bc")
 mesh = SubResource("CapsuleMesh_wgmvx")
 
