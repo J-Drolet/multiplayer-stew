@@ -36,9 +36,9 @@ public partial class Character : Entity
     [Export]
     public UpgradableWeapon EquippedWeapon;
 
-	public const float BaseSpeed = 5.0f;
-	public const float SprintMultiplier = 1.5f;
-	public const float JumpVelocity = 4.5f;
+	public float BaseSpeed = (float)Config.GetValue("upgrade_constants", "base_speed", true);
+	public float SprintMultiplier = (float)Config.GetValue("upgrade_constants", "sprint_multiplier", true);
+	public float JumpVelocity = (float)Config.GetValue("upgrade_constants", "jump_velocity", true);
 	public Vector3 Knockback = Vector3.Zero;
 
 	public override void _EnterTree()
