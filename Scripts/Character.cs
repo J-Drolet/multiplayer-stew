@@ -18,6 +18,8 @@ public partial class Character : Entity
 	public Node3D Hand { get; set; }
 	[Export, ExportRequired]
 	public MeshInstance3D CharacterMesh { get; set; }
+	[Export, ExportRequired, AnimationsRequired(new string[] {"Walk"})]
+	public AnimationPlayer APlayer { get; set; }
 	[Export, ExportRequired]
 	public GpuParticles3D InvisibilitySmokeParticles { get; set; }
 	[Export, ExportRequired]
@@ -35,6 +37,7 @@ public partial class Character : Entity
     public UpgradableWeapon EquippedWeapon;
 
 	public const float BaseSpeed = 5.0f;
+	public const float SprintMultiplier = 1.5f;
 	public const float JumpVelocity = 4.5f;
 	public Vector3 Knockback = Vector3.Zero;
 
@@ -84,8 +87,9 @@ public partial class Character : Entity
     {
 		base._Process(delta);
 
-		////////// Invisibility upgrade
-		float transparency = Upgrades.Contains(Upgrade.C_Invisibility)? (float)Config.GetValue("upgrade_constants", "invisibility_transparency", true) : 0;
+        #region UpgradeLogic
+        ////////// Invisibility upgrade
+        float transparency = Upgrades.Contains(Upgrade.C_Invisibility)? (float)Config.GetValue("upgrade_constants", "invisibility_transparency", true) : 0;
 		CharacterMesh.Transparency = transparency;
 		foreach(GeometryInstance3D mesh in GodotNodeFindingService.FindNodes<GeometryInstance3D>(Hand))
 		{
@@ -132,8 +136,9 @@ public partial class Character : Entity
 				}
 			}
 		}
+		#endregion
 
-		if(EquippedWeapon == null) UI.InGameUI.AmmoCount.Text = "";
+		if (EquippedWeapon == null) UI.InGameUI.AmmoCount.Text = "";
 
 		UI.InGameUI.SetHealthBar(CurrentHealth / MaxHealth);
 
@@ -147,6 +152,12 @@ public partial class Character : Entity
 		double acceleration = BaseSpeed;
 		double deceleration = BaseSpeed;
 		double speed = BaseSpeed;
+
+        if (Input.IsActionPressed("Sprint"))
+		{
+			speed *= SprintMultiplier;
+		}
+
 		if(Upgrades.Contains(Upgrade.C_FastSlide))
 		{
 			speed *= 2;
@@ -227,14 +238,26 @@ public partial class Character : Entity
 		MoveAndSlide();
 
 		Knockback = Knockback.Lerp(Vector3.Zero, (float)Config.GetValue("upgrade_constants", "knockback_reduction_strength", true)); // slowly reduce knockback
-	}
 
-	/// <summary>
-	/// Moves the character to a spawn position. It is setup this way because local player has authority over its position, but server also needs to set an initial position
-	/// </summary>
-	/// <param name="spawnPosition"></param>
-	/// <param name="spawnRotation"></param>
-	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+        #region MovementAnimationHandling
+        bool isMoving = Input.GetVector("Left", "Right", "Forward", "Back") != Vector2.Zero;
+        if (isMoving && JumpsSinceHitGround == 0)
+        {
+            APlayer.Play("Walk", -1, (float)speed * 0.28f);
+        }
+        else
+        {
+            APlayer.Pause();
+        }
+        #endregion
+    }
+
+    /// <summary>
+    /// Moves the character to a spawn position. It is setup this way because local player has authority over its position, but server also needs to set an initial position
+    /// </summary>
+    /// <param name="spawnPosition"></param>
+    /// <param name="spawnRotation"></param>
+    [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
 	public void SetSpawnPoint(Vector3 spawnPosition, Vector3 spawnRotation)
 	{
 		if(Multiplayer.GetRemoteSenderId() != 1) return; // only server should broadcast spawn positons
