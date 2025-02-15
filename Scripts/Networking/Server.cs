@@ -6,7 +6,7 @@ public partial class Server : Node
     public static Server Instance { get; private set; }
     
     // Define the maximum number of clients allowed
-    private const int MaxClients = 10;
+    private const int MaxClients = 6;
     private string levelFilepath;
     private ENetMultiplayerPeer Peer;
     private bool AcceptingConnections { get; set; } = true; // whether or not the server is accepting connections or not

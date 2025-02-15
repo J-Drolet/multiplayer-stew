@@ -107,7 +107,7 @@ public partial class Client : Node
     // called only on clients
     private void ConnectionFailed()
     {
-        GD.Print("Failed Connection");
+        UI.ErrorMessage.DisplayError("Failed Connection");
     }
 
     // this gets called on the server and client when someone connects
