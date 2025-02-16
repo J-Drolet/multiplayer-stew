@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://chv0b14sstem5"]
+[gd_scene load_steps=6 format=3 uid="uid://chv0b14sstem5"]
 
 [ext_resource type="Script" path="res://Scripts/Base/UpgradeableProjectile.cs" id="1_g76ux"]
 
@@ -18,6 +18,11 @@ properties/1/path = NodePath(".:rotation")
 properties/1/spawn = true
 properties/1/replication_mode = 1
 
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_73647"]
+properties/0/path = NodePath(".:SyncBegan")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
 [node name="ShotgunPellet" type="Node3D" node_paths=PackedStringArray("multiplayerSynchronizer")]
 script = ExtResource("1_g76ux")
 ShotSpread = 0.14
@@ -29,3 +34,6 @@ mesh = SubResource("SphereMesh_k41vp")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_sjcrr")
+
+[node name="SyncFlag" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_73647")

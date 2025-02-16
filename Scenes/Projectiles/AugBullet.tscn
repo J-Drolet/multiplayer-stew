@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://djxdqw8pehnas"]
+[gd_scene load_steps=8 format=4 uid="uid://x45b1orurjwf"]
 
 [ext_resource type="Script" path="res://Scripts/Projectiles/SimpleBullet.cs" id="1_ke2li"]
-[ext_resource type="Texture2D" uid="uid://biwrbntj3b2c6" path="res://Assets/Models/Weapons/AugBullet_Ammo_tex.png" id="2_7mr4n"]
+[ext_resource type="Texture2D" uid="uid://bb03f1klyoqfk" path="res://Assets/Models/Weapons/AugBullet_Ammo_tex.png" id="2_7mr4n"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_s3o7p"]
 properties/0/path = NodePath(".:position")
@@ -10,6 +10,11 @@ properties/0/replication_mode = 1
 properties/1/path = NodePath(".:rotation")
 properties/1/spawn = true
 properties/1/replication_mode = 1
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_pftul"]
+properties/0/path = NodePath(".:SyncBegan")
+properties/0/spawn = true
+properties/0/replication_mode = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3uye1"]
 resource_name = "Ammo"
@@ -64,6 +69,9 @@ multiplayerSynchronizer = NodePath("MultiplayerSynchronizer")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_s3o7p")
+
+[node name="SyncFlag" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_pftul")
 
 [node name="Rifle_caliber_2" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_kv3pp")

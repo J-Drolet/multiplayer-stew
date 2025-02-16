@@ -25,6 +25,8 @@ namespace multiplayerstew.Scripts.Base
         public float ShotSpread { get; set; } = 0.0f;
         [Export, ExportRequired]
         public MultiplayerSynchronizer multiplayerSynchronizer { get; set; }
+        [Export] 
+        bool SyncBegan = false;
 
         private Vector3 Velocity = Vector3.Zero;
         private Vector3 ProjectileGravity = Vector3.Down * 5;
@@ -43,6 +45,7 @@ namespace multiplayerstew.Scripts.Base
             projectileOwner = Name.ToString().Split('#').First().ToInt();
             Rng = new(Name.ToString().Split('#')[1].ToInt()); // get seed from name
             Upgrades = new HashSet<Upgrade>(GameManager.Players[projectileOwner].characterNode.Upgrades);
+            if(IsMultiplayerAuthority()) SyncBegan = true;
         }
 
         public override void _Ready()
@@ -50,11 +53,11 @@ namespace multiplayerstew.Scripts.Base
             GodotErrorService.ValidateRequiredData(this);
 
             // disable syncing on projectileOwner
-            Func<int, bool> syncFilter = (int peerId) => { return peerId != projectileOwner; };
-            multiplayerSynchronizer.AddVisibilityFilter(Callable.From(syncFilter));
-            multiplayerSynchronizer.UpdateVisibility();
+            if(Multiplayer.GetUniqueId() == projectileOwner) {
+                multiplayerSynchronizer.SetVisibilityFor(1, false);
+            }
 
-            if(!IsMultiplayerAuthority()) return;
+            if(!HasRightToMoveProjectile()) return;
 
             GlobalTransform = GameManager.Players[projectileOwner].characterNode.ProjectileOrigin.GlobalTransform;
 
@@ -88,6 +91,11 @@ namespace multiplayerstew.Scripts.Base
 
         public override void _Process(double delta)
         {
+            if(SyncBegan && multiplayerSynchronizer.GetVisibilityFor(1) == false)
+            {
+                multiplayerSynchronizer.SetVisibilityFor(1, true);
+            }
+
             if (!Multiplayer.IsServer()) return; // only the server is concerned with destroying bullets
 
             TimeAlive += (float)delta;
@@ -100,7 +108,7 @@ namespace multiplayerstew.Scripts.Base
 
         public override void _PhysicsProcess(double delta)
         {
-            if (!IsMultiplayerAuthority()) return;
+            if (!HasRightToMoveProjectile()) return;
 
             Velocity += ProjectileGravity * (float)delta;
             
@@ -203,6 +211,8 @@ namespace multiplayerstew.Scripts.Base
         /// </summary>                        
         private void DisableSelf()
         {
+            if(!Multiplayer.IsServer()) return;
+
             RpcId(projectileOwner, MethodName.NotifyOfDestruction);
             SetMultiplayerAuthority(projectileOwner); // stops server from syncing position - stops errors from desync between time that projectileOwner queueFree and the server gets the message
         }
@@ -214,6 +224,11 @@ namespace multiplayerstew.Scripts.Base
             {
                 QueueFree();
             }
+        }
+
+        private bool HasRightToMoveProjectile()
+        {
+            return IsMultiplayerAuthority() || (SyncBegan = false && Multiplayer.GetUniqueId() == projectileOwner);
         }
     }
 }
