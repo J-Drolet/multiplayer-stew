@@ -112,7 +112,7 @@ namespace multiplayerstew.Scripts.Base
             {
                 // Calculate the difference between the local and true global positions
                 Vector3 positionDifference = TrueGlobalPosition - GlobalPosition;
-                Vector3 forward = -GlobalTransform.Basis.Z; // Bullet's forward direction
+                Vector3 forward = -GlobalTransform.Basis.Z.Normalized(); // Bullet's forward direction
                 Vector3 forwardDisplacement = positionDifference.Project(forward);
                 Vector3 diffAfterForward = positionDifference - forwardDisplacement;
 

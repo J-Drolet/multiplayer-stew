@@ -1,0 +1,178 @@
+[gd_scene load_steps=17 format=3 uid="uid://b1638ox18o0fr"]
+
+[ext_resource type="Script" path="res://Scripts/Pickups/TimedHealthPickup.cs" id="1_0e8g2"]
+[ext_resource type="Texture2D" uid="uid://cnbfw8yt3ogh2" path="res://Assets/Textures/ProgressBar/Border.png" id="2_ytf08"]
+[ext_resource type="Texture2D" uid="uid://hlk0h74umyuk" path="res://Assets/Textures/ProgressBar/Fill.png" id="3_lymcp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p8ly1"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_taqes"]
+viewport_path = NodePath("MeshParent/Sprite3D/SubViewport")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_uhyuo"]
+noise_type = 2
+frequency = 0.0256
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4sfrr"]
+bump_strength = 32.0
+normalize = false
+noise = SubResource("FastNoiseLite_uhyuo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7pn1x"]
+albedo_color = Color(0, 1, 0, 1)
+albedo_texture = SubResource("NoiseTexture2D_4sfrr")
+metallic = 1.0
+metallic_specular = 1.0
+emission_energy_multiplier = 16.0
+
+[sub_resource type="TorusMesh" id="TorusMesh_rgiq4"]
+material = SubResource("StandardMaterial3D_7pn1x")
+inner_radius = 0.401
+outer_radius = 0.268
+rings = 15
+ring_segments = 16
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dhoc3"]
+emission_shape = 1
+emission_sphere_radius = 2.19
+angle_min = -57.8
+angle_max = 358.2
+turbulence_enabled = true
+turbulence_noise_strength = 20.0
+turbulence_noise_scale = 0.225
+turbulence_noise_speed_random = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_781ao"]
+transparency = 1
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6q887"]
+material = SubResource("StandardMaterial3D_781ao")
+size = Vector3(0.05, 0.05, 0.05)
+
+[sub_resource type="Animation" id="Animation_qswgr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshParent:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_spb4a"]
+resource_name = "Rotation"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshParent:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 0.0002, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a5ig8"]
+_data = {
+"RESET": SubResource("Animation_qswgr"),
+"Rotation": SubResource("Animation_spb4a")
+}
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_tvmkb"]
+properties/0/path = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar:visible")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:TimeSinceLastActive")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+
+[node name="TimedUpgradePickup" type="Node3D" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar")]
+script = ExtResource("1_0e8g2")
+HealthGained = 25
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(0.387666, 0, 0, 0, 0.387666, 0, 0, 0, 0.387666, -0.0311243, 0.387011, 0)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_p8ly1")
+
+[node name="MeshParent" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.605148, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="MeshParent"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.16994, 0)
+billboard = 1
+texture = SubResource("ViewportTexture_taqes")
+
+[node name="SubViewport" type="SubViewport" parent="MeshParent/Sprite3D"]
+transparent_bg = true
+size = Vector2i(256, 256)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="MeshParent/Sprite3D/SubViewport"]
+visible = false
+custom_minimum_size = Vector2(256, 256)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 1.0
+step = 0.01
+fill_mode = 4
+texture_under = ExtResource("2_ytf08")
+texture_progress = ExtResource("3_lymcp")
+tint_under = Color(0, 1, 0, 1)
+tint_progress = Color(0, 1, 0, 0.592157)
+
+[node name="BottomRing" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0719045, 0)
+mesh = SubResource("TorusMesh_rgiq4")
+
+[node name="FlavorParticles" type="GPUParticles3D" parent="."]
+transform = Transform3D(0.200548, 0, 0, 0, 0.170077, 0, 0, 0, 0.200548, 0, 0.508665, 0)
+amount = 50
+lifetime = 0.25
+interp_to_end = 0.07
+preprocess = 3.0
+speed_scale = 0.2
+explosiveness = 0.01
+fixed_fps = 60
+interpolate = false
+trail_lifetime = 3.0
+process_material = SubResource("ParticleProcessMaterial_dhoc3")
+draw_pass_1 = SubResource("BoxMesh_6q887")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.61824, 0)
+light_color = Color(0, 1, 0, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 16.0
+light_size = 1.0
+light_specular = 16.0
+spot_range = 2.0
+spot_angle = 20.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_a5ig8")
+}
+autoplay = "Rotation"
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_tvmkb")
