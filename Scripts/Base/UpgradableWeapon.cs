@@ -31,6 +31,8 @@ namespace multiplayerstew.Scripts.Base
 		public PackedScene Projectile { get; set; }
 		[Export]
 		public bool CanFire = true; // Trigger this in the Animation to set the rate of fire
+		[Export]
+		public bool IsPassive = false; // Basically another CanFire used for sprinting or anytime you are "passive"
 		[Export, ExportRequired, AnimationsRequired(new string[] { "Fire" })] 
 		public AnimationPlayer APlayer { get; set; }
 		[Export]
@@ -108,7 +110,7 @@ namespace multiplayerstew.Scripts.Base
 
         public void Fire()
 		{   
-			if ((CurrentAmmo > 0 || MaxAmmo < 0) && CanFire) 
+			if ((CurrentAmmo > 0 || MaxAmmo < 0) && CanFire && !IsPassive) 
 			{	
 				if(GetCurrentFireMode() != FireModes.Charge)
 				{

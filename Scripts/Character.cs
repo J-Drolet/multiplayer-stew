@@ -20,6 +20,8 @@ public partial class Character : Entity
 	public MeshInstance3D CharacterMesh { get; set; }
 	[Export, ExportRequired, AnimationsRequired(new string[] {"Walk"})]
 	public AnimationPlayer APlayer { get; set; }
+    [Export, ExportRequired]
+    public AnimationTree ATree { get; set; }
 	[Export, ExportRequired]
 	public GpuParticles3D InvisibilitySmokeParticles { get; set; }
 	[Export, ExportRequired]
@@ -81,6 +83,31 @@ public partial class Character : Entity
 				
             }
 		}
+
+        #region MovementAnimationHandling
+        AnimationNodeStateMachinePlayback stateMachine = (AnimationNodeStateMachinePlayback)ATree.Get("parameters/playback");
+        bool isMoving = Input.GetVector("Left", "Right", "Forward", "Back") != Vector2.Zero;
+		bool isPassive = false;
+        if (isMoving && !Input.IsActionPressed("Sprint"))
+		{
+            stateMachine.Travel("Walk");
+
+        }
+		else if(isMoving && Input.IsActionPressed("Sprint"))
+		{
+			stateMachine.Travel("Sprint");
+			isPassive = true;
+		}
+		else if(!isMoving)
+		{
+            stateMachine.Travel("Idle");
+        }
+
+		if (EquippedWeapon != null) 
+		{ 
+		EquippedWeapon.IsPassive = isPassive;
+		}
+        #endregion
     }
 
     public override void _Process(double delta)
@@ -238,18 +265,6 @@ public partial class Character : Entity
 		MoveAndSlide();
 
 		Knockback = Knockback.Lerp(Vector3.Zero, (float)Config.GetValue("upgrade_constants", "knockback_reduction_strength", true)); // slowly reduce knockback
-
-        #region MovementAnimationHandling
-        bool isMoving = Input.GetVector("Left", "Right", "Forward", "Back") != Vector2.Zero;
-        if (isMoving && JumpsSinceHitGround == 0)
-        {
-            APlayer.Play("Walk", -1, (float)speed * 0.28f);
-        }
-        else
-        {
-            APlayer.Pause();
-        }
-        #endregion
     }
 
     /// <summary>

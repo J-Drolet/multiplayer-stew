@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://lcx7afjcynql"]
+[gd_scene load_steps=30 format=3 uid="uid://lcx7afjcynql"]
 
 [ext_resource type="Script" path="res://Scripts/Character.cs" id="1_n6eoi"]
 [ext_resource type="Script" path="res://Scripts/Base/DamageArea.cs" id="2_4301p"]
@@ -34,6 +34,12 @@ properties/4/replication_mode = 1
 properties/5/path = NodePath(".:CurrentHealth")
 properties/5/spawn = true
 properties/5/replication_mode = 1
+properties/6/path = NodePath("Head/Camera3D/Hand:position")
+properties/6/spawn = true
+properties/6/replication_mode = 1
+properties/7/path = NodePath("Head/Camera3D/Hand:rotation")
+properties/7/spawn = true
+properties/7/replication_mode = 1
 
 [sub_resource type="Animation" id="Animation_w0yip"]
 length = 0.001
@@ -48,6 +54,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(0.368436, -0.486425, -1.21339)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/Camera3D/Hand:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_3qdto"]
@@ -67,13 +85,109 @@ tracks/0/keys = {
 "values": [Vector3(0.368436, -0.486425, -1.21339), Vector3(0.262308, -0.551025, -1.21339), Vector3(0.15618, -0.486425, -1.21339), Vector3(0.262308, -0.551025, -1.21339), Vector3(0.368436, -0.486425, -1.21339)]
 }
 
+[sub_resource type="Animation" id="Animation_donu8"]
+resource_name = "Passive"
+length = 0.4
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Camera3D/Hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.368436, -0.486425, -1.21339), Vector3(0.238589, -0.914533, -1.21339)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/Camera3D/Hand:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.504035, 1.87086, -0.148332)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_47ep3"]
 _data = {
+"Passive": SubResource("Animation_donu8"),
 "RESET": SubResource("Animation_w0yip"),
 "Walk": SubResource("Animation_3qdto")
 }
 
-[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "ProjectileOrigin", "Head", "Hand", "CharacterMesh", "APlayer", "InvisibilitySmokeParticles", "WeaponSpawner", "Hitboxes", "HealthText")]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6iite"]
+animation = &"RESET"
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_p7pvc"]
+nodes/Animation/node = SubResource("AnimationNodeAnimation_6iite")
+nodes/Animation/position = Vector2(380, 140)
+nodes/output/position = Vector2(600, 140)
+node_connections = [&"output", 0, &"Animation"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_2cmew"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_euek1"]
+animation = &"Passive"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_x0oql"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_64fpg"]
+animation = &"Walk"
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_diu0y"]
+graph_offset = Vector2(-216.074, 9.95628)
+nodes/Add2/node = SubResource("AnimationNodeAdd2_2cmew")
+nodes/Add2/position = Vector2(220, 260)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_euek1")
+nodes/Animation/position = Vector2(20, 340)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_x0oql")
+nodes/TimeScale/position = Vector2(480, 240)
+nodes/Walk/node = SubResource("AnimationNodeAnimation_64fpg")
+nodes/Walk/position = Vector2(20, 140)
+nodes/output/position = Vector2(700, 240)
+node_connections = [&"Add2", 0, &"Walk", &"Add2", 1, &"Animation", &"TimeScale", 0, &"Add2", &"output", 0, &"TimeScale"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_52f80"]
+animation = &"Walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uyc7b"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hr1ek"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0a1m0"]
+xfade_time = 0.5
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ixqql"]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_24ak6"]
+xfade_time = 0.1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n1s64"]
+xfade_time = 0.1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_u4lto"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_7261l"]
+states/End/position = Vector2(645, 94)
+states/Idle/node = SubResource("AnimationNodeBlendTree_p7pvc")
+states/Idle/position = Vector2(339, 94)
+states/Sprint/node = SubResource("AnimationNodeBlendTree_diu0y")
+states/Sprint/position = Vector2(418, 274)
+states/Start/position = Vector2(198, 94)
+states/Walk/node = SubResource("AnimationNodeAnimation_52f80")
+states/Walk/position = Vector2(481, 94)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_uyc7b"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_hr1ek"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_0a1m0"), "Sprint", "Idle", SubResource("AnimationNodeStateMachineTransition_ixqql"), "Sprint", "Walk", SubResource("AnimationNodeStateMachineTransition_24ak6"), "Walk", "Sprint", SubResource("AnimationNodeStateMachineTransition_n1s64"), "Idle", "Sprint", SubResource("AnimationNodeStateMachineTransition_u4lto")]
+graph_offset = Vector2(-85, 3)
+
+[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "ProjectileOrigin", "Head", "Hand", "CharacterMesh", "APlayer", "ATree", "InvisibilitySmokeParticles", "WeaponSpawner", "Hitboxes", "HealthText")]
 visible = false
 script = ExtResource("1_n6eoi")
 Camera = NodePath("Head/Camera3D")
@@ -82,6 +196,7 @@ Head = NodePath("Head")
 Hand = NodePath("Head/Camera3D/Hand")
 CharacterMesh = NodePath("CharacterMesh")
 APlayer = NodePath("AnimationPlayer")
+ATree = NodePath("AnimationTree")
 InvisibilitySmokeParticles = NodePath("CharacterMesh/InvisibilitySmoke")
 WeaponSpawner = NodePath("Head/Camera3D/Hand/MultiplayerSpawner")
 OutlinePlayerSFX = ExtResource("2_b0fus")
@@ -139,3 +254,9 @@ replication_config = SubResource("SceneReplicationConfig_w7qvv")
 libraries = {
 "": SubResource("AnimationLibrary_47ep3")
 }
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_7261l")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Sprint/Add2/add_amount = 1.0
+parameters/Sprint/TimeScale/scale = 2.0
