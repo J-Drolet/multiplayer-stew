@@ -11,11 +11,6 @@ properties/1/path = NodePath(".:rotation")
 properties/1/spawn = true
 properties/1/replication_mode = 1
 
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_pftul"]
-properties/0/path = NodePath(".:SyncBegan")
-properties/0/spawn = true
-properties/0/replication_mode = 1
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3uye1"]
 resource_name = "Ammo"
 transparency = 4
@@ -57,6 +52,11 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_kc6nu")
 
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_fabpj"]
+properties/0/path = NodePath(".:TrueGlobalPosition")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
 [node name="AugBullet" type="Node3D" node_paths=PackedStringArray("multiplayerSynchronizer")]
 transform = Transform3D(0.434487, 0, 0, 0, 0.434487, 0, 0, 0, 0.434487, 0, 0, 0)
 script = ExtResource("1_ke2li")
@@ -70,9 +70,9 @@ multiplayerSynchronizer = NodePath("MultiplayerSynchronizer")
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_s3o7p")
 
-[node name="SyncFlag" type="MultiplayerSynchronizer" parent="."]
-replication_config = SubResource("SceneReplicationConfig_pftul")
-
 [node name="Rifle_caliber_2" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_kv3pp")
 skeleton = NodePath("")
+
+[node name="PeerSync" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_fabpj")

@@ -53,7 +53,7 @@ properties/1/spawn = true
 properties/1/replication_mode = 1
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_vugfn"]
-properties/0/path = NodePath(".:SyncBegan")
+properties/0/path = NodePath(".:TrueGlobalPosition")
 properties/0/spawn = true
 properties/0/replication_mode = 1
 
@@ -71,5 +71,5 @@ skeleton = NodePath("")
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_m7mpy")
 
-[node name="SyncFlag" type="MultiplayerSynchronizer" parent="."]
+[node name="PeerSync" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_vugfn")

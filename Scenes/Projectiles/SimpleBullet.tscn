@@ -52,8 +52,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7msbo")
 
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_c4y8h"]
-properties/0/path = NodePath(".:SyncBegan")
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_qv0gi"]
+properties/0/path = NodePath(".:TrueGlobalPosition")
 properties/0/spawn = true
 properties/0/replication_mode = 1
 
@@ -74,5 +74,5 @@ transform = Transform3D(0.049, 0, 0, 0, -4.41485e-09, 0.049, 0, -0.101, -2.14186
 mesh = SubResource("ArrayMesh_lshal")
 skeleton = NodePath("")
 
-[node name="SyncFlag" type="MultiplayerSynchronizer" parent="."]
-replication_config = SubResource("SceneReplicationConfig_c4y8h")
+[node name="PeerSync" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_qv0gi")

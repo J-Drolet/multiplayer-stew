@@ -25,8 +25,8 @@ namespace multiplayerstew.Scripts.Base
         public float ShotSpread { get; set; } = 0.0f;
         [Export, ExportRequired]
         public MultiplayerSynchronizer multiplayerSynchronizer { get; set; }
-        [Export] 
-        bool SyncBegan = false;
+        [Export]
+        private Vector3 TrueGlobalPosition = Vector3.Zero;
 
         private Vector3 Velocity = Vector3.Zero;
         private Vector3 ProjectileGravity = Vector3.Down * 5;
@@ -45,7 +45,6 @@ namespace multiplayerstew.Scripts.Base
             projectileOwner = Name.ToString().Split('#').First().ToInt();
             Rng = new(Name.ToString().Split('#')[1].ToInt()); // get seed from name
             Upgrades = new HashSet<Upgrade>(GameManager.Players[projectileOwner].characterNode.Upgrades);
-            if(IsMultiplayerAuthority()) SyncBegan = true;
         }
 
         public override void _Ready()
@@ -57,7 +56,7 @@ namespace multiplayerstew.Scripts.Base
                 multiplayerSynchronizer.SetVisibilityFor(1, false);
             }
 
-            if(!HasRightToMoveProjectile()) return;
+            if(!HasRightToMoveProjectile()) return; // server and local peer continue
 
             GlobalTransform = GameManager.Players[projectileOwner].characterNode.ProjectileOrigin.GlobalTransform;
 
@@ -91,11 +90,6 @@ namespace multiplayerstew.Scripts.Base
 
         public override void _Process(double delta)
         {
-            if(SyncBegan && multiplayerSynchronizer.GetVisibilityFor(1) == false)
-            {
-                multiplayerSynchronizer.SetVisibilityFor(1, true);
-            }
-
             if (!Multiplayer.IsServer()) return; // only the server is concerned with destroying bullets
 
             TimeAlive += (float)delta;
@@ -109,6 +103,19 @@ namespace multiplayerstew.Scripts.Base
         public override void _PhysicsProcess(double delta)
         {
             if (!HasRightToMoveProjectile()) return;
+
+            if(!Multiplayer.IsServer() && TrueGlobalPosition != Vector3.Zero) // interpolation logic
+            {
+                if(GlobalPosition.DistanceTo(TrueGlobalPosition) >= (float)Config.GetValue("upgrade_constants", "multiplayer_sync_interpolation_distance", true))
+                {
+                    GlobalPosition = GlobalPosition.Lerp(TrueGlobalPosition, (float)(delta * (float)Config.GetValue("upgrade_constants", "multiplayer_sync_interpolation_smoothing", true)));
+                }
+                else
+                {
+                    GlobalPosition = TrueGlobalPosition;
+                }
+                return; // if we are interpolating then we return here
+            }
 
             Velocity += ProjectileGravity * (float)delta;
             
@@ -203,6 +210,9 @@ namespace multiplayerstew.Scripts.Base
                 }
 
                 GlobalPosition += Velocity * (float)delta;
+                if(Multiplayer.IsServer()) {
+                    TrueGlobalPosition = GlobalPosition;
+                }
             }
         }
 
@@ -228,7 +238,7 @@ namespace multiplayerstew.Scripts.Base
 
         private bool HasRightToMoveProjectile()
         {
-            return IsMultiplayerAuthority() || (SyncBegan = false && Multiplayer.GetUniqueId() == projectileOwner);
+            return IsMultiplayerAuthority() || Multiplayer.GetUniqueId() == projectileOwner;
         }
     }
 }
