@@ -78,6 +78,11 @@ namespace multiplayerstew.Scripts.Base
             return null;
         }
 
+        protected virtual bool CanPickup(Character character) // marked virtual so I can put it in _Process
+        {
+            return true;
+        }
+
         private void RespawnPickup()
         {
             UpgradeMesh = (Node3D)GetRespawn().Instantiate();
@@ -91,13 +96,16 @@ namespace multiplayerstew.Scripts.Base
             {
                 if(body is Character character)
                 {
-                    ActivatePickup(character);
-                    TimeSinceLastActive = 0;
-                    Active = false;
-                    ProgressBar.Show();
+                    if(CanPickup(character))
+                    {
+                        ActivatePickup(character);
+                        TimeSinceLastActive = 0;
+                        Active = false;
+                        ProgressBar.Show();
 
-                    UpgradeMesh.QueueFree();
-                    UpgradeMesh = null;
+                        UpgradeMesh.QueueFree();
+                        UpgradeMesh = null;
+                    }
                 }  
             }
         }

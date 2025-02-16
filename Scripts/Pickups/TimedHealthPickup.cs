@@ -41,5 +41,10 @@ namespace multiplayerstew.Scripts.Pickups
                 return ResourceLoader.Load<PackedScene>(sceneFilePath);
             }
         }
+
+        protected override bool CanPickup(Character character) // marked virtual so I can put it in _Process
+        {
+            return character.CurrentHealth < character.MaxHealth;
+        }
     }
 }
