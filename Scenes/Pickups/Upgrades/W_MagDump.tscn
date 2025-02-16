@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ckhw488qkp4hy"]
+
+[node name="WMagDump" type="Node3D"]
+
+[node name="Label3D" type="Label3D" parent="."]
+text = "Mag Dump"

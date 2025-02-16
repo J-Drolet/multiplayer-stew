@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://y4735b1c473b"]
+
+[node name="CDoubleJump" type="Node3D"]
+
+[node name="Label3D" type="Label3D" parent="."]
+text = "Double Jump"

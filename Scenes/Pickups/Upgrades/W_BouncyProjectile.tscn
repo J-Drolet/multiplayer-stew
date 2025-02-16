@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://j0vj6qln4rkc"]
+
+[node name="WBouncyProjectile" type="Node3D"]
+
+[node name="Label3D" type="Label3D" parent="."]
+text = "Bouncy Projectile"

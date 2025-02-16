@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cganloul7c0kr"]
+
+[node name="WDunceCap" type="Node3D"]
+
+[node name="Label3D" type="Label3D" parent="."]
+text = "Dunce Cap"

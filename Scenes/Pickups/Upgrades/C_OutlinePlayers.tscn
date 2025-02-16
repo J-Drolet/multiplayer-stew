@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c2pplbje58lyh"]
+
+[node name="COutlinePlayers" type="Node3D"]
+
+[node name="Label3D" type="Label3D" parent="."]
+text = "Outline Players"

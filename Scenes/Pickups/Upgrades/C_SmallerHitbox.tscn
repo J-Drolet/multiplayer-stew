@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://pir5t2hvtjuo"]
+
+[node name="CSmallerHitbox" type="Node3D"]
+
+[node name="Label3D" type="Label3D" parent="."]
+text = "Smaller hitbox"

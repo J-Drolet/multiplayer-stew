@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d0p72qi2501xs"]
+
+[node name="WHoming" type="Node3D"]
+
+[node name="Label3D" type="Label3D" parent="."]
+text = "Homing"

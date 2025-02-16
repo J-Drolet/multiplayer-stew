@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dsaaox0mxj5hl"]
+
+[node name="CInvisibility" type="Node3D"]
+
+[node name="Label3D" type="Label3D" parent="."]
+text = "Invisibility"
