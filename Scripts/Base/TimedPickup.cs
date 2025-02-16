@@ -1,7 +1,6 @@
 using Godot;
 using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Services;
-using System;
 using System.Collections.Generic;
 
 
@@ -16,11 +15,11 @@ namespace multiplayerstew.Scripts.Base
         [Export, ExportRequired]
         public Node3D MeshParent { get; set; } // the node where upgrade meshes and cooldown sprite will live
         [Export, ExportRequired]
-        public MultiplayerSpawner multiplayerSpawner { get; set; }
+        public Range ProgressBar { get; set; }
 
         private bool Active = true;
-        private double TimeSinceLastActive;
-        private Node3D RespawnProgress;
+        [Export]
+        public double TimeSinceLastActive;
         private Node3D UpgradeMesh;
         protected RandomNumberGenerator rng;
 
@@ -48,12 +47,21 @@ namespace multiplayerstew.Scripts.Base
 
         public override void _Process(double delta)
         {
-            if(!IsMultiplayerAuthority()) return;
+            if(!IsMultiplayerAuthority()) 
+            {
+                if(ProgressBar != null)
+                {
+                    ProgressBar.Value = TimeSinceLastActive / RespawnTime;
+                }
+
+                return;
+            }
 
             TimeSinceLastActive += delta;
 
             if(!Active && TimeSinceLastActive > RespawnTime)
             {
+                ProgressBar.Hide();
                 Active = true;
                 
                 RespawnPickup();
@@ -85,6 +93,7 @@ namespace multiplayerstew.Scripts.Base
                     ActivatePickup(character);
                     TimeSinceLastActive = 0;
                     Active = false;
+                    ProgressBar.Show();
 
                     UpgradeMesh.QueueFree();
                     UpgradeMesh = null;

@@ -9,6 +9,7 @@ public partial class Root : Node
 	public static readonly string LevelsFilepath = "res://Scenes/Levels/";
 	public static readonly string WeaponsFilepath = "res://Scenes/Weapons/";
 	public static readonly string WeaponPickupFilepath = "res://Scenes/Pickups/Weapons/";
+	public static readonly string UpgradePickupFilepath = "res://Scenes/Pickups/Upgrades/";
 
 	[Export, ExportRequired]
 	public PackedScene ClientScene { get; set; }

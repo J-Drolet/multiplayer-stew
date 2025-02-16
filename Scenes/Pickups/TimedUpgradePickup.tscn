@@ -1,8 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://bmejhchhhu7w8"]
+[gd_scene load_steps=17 format=3 uid="uid://dlk2kennbolq8"]
 
-[ext_resource type="Script" path="res://Scripts/Pickups/TimedWeaponPickup.cs" id="1_g3l2s"]
-[ext_resource type="Texture2D" uid="uid://cnbfw8yt3ogh2" path="res://Assets/Textures/ProgressBar/Border.png" id="2_1w3ge"]
-[ext_resource type="Texture2D" uid="uid://hlk0h74umyuk" path="res://Assets/Textures/ProgressBar/Fill.png" id="3_yaemf"]
+[ext_resource type="Script" path="res://Scripts/Pickups/TimedUpgradePickup.cs" id="1_ip3vc"]
+[ext_resource type="Texture2D" uid="uid://cnbfw8yt3ogh2" path="res://Assets/Textures/ProgressBar/Border.png" id="2_yf5s6"]
+[ext_resource type="Texture2D" uid="uid://hlk0h74umyuk" path="res://Assets/Textures/ProgressBar/Fill.png" id="3_ofemt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p8ly1"]
 size = Vector3(2, 2, 2)
@@ -14,15 +14,16 @@ viewport_path = NodePath("MeshParent/Sprite3D/SubViewport")
 noise_type = 2
 frequency = 0.0256
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vub7n"]
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4sfrr"]
+bump_strength = 32.0
+normalize = false
 noise = SubResource("FastNoiseLite_uhyuo")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndh8k"]
-albedo_color = Color(0.739789, 1.93726e-06, 9.62615e-07, 1)
-albedo_texture = SubResource("NoiseTexture2D_vub7n")
+albedo_color = Color(1, 1, 0, 1)
+albedo_texture = SubResource("NoiseTexture2D_4sfrr")
 metallic = 1.0
 metallic_specular = 1.0
-emission_enabled = true
 emission_energy_multiplier = 16.0
 
 [sub_resource type="TorusMesh" id="TorusMesh_mctui"]
@@ -44,7 +45,7 @@ turbulence_noise_speed_random = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cde7f"]
 transparency = 1
-albedo_color = Color(1, 0, 0, 0.4)
+albedo_color = Color(1, 1, 0, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_6q887"]
 material = SubResource("StandardMaterial3D_cde7f")
@@ -96,10 +97,9 @@ properties/1/path = NodePath(".:TimeSinceLastActive")
 properties/1/spawn = true
 properties/1/replication_mode = 1
 
-[node name="TimedWeaponPickup" type="Node3D" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar")]
-script = ExtResource("1_g3l2s")
+[node name="TimedUpgradePickup" type="Node3D" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar")]
+script = ExtResource("1_ip3vc")
 PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
 MeshParent = NodePath("MeshParent")
 ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
@@ -133,10 +133,10 @@ grow_vertical = 2
 max_value = 1.0
 step = 0.01
 fill_mode = 4
-texture_under = ExtResource("2_1w3ge")
-texture_progress = ExtResource("3_yaemf")
-tint_under = Color(1, 0, 0, 1)
-tint_progress = Color(1, 0, 0, 0.592157)
+texture_under = ExtResource("2_yf5s6")
+texture_progress = ExtResource("3_ofemt")
+tint_under = Color(1, 1, 0, 1)
+tint_progress = Color(1, 1, 0, 0.592157)
 
 [node name="BottomRing" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0719045, 0)
@@ -158,7 +158,7 @@ draw_pass_1 = SubResource("BoxMesh_6q887")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.61824, 0)
-light_color = Color(1, 0, 0, 1)
+light_color = Color(1, 1, 0, 1)
 light_energy = 16.0
 light_indirect_energy = 16.0
 light_volumetric_fog_energy = 16.0

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Godot;
@@ -8,12 +9,17 @@ public static class EnumServices {
         return StringExtensions.GetFile(filePath).Split(".").First().ToUpper();
     }
 
-    public static string GetFilePath(Weapon weapon, string parentFilepath)
+    public static string GetFilePath<T>(T enumValue, string parentFilepath) where T : struct, IConvertible
     {
-        List<string> weaponPickupScenes = GodotSceneFindingService.GetScenesAtFilepath(parentFilepath);
-        foreach(string filePath in weaponPickupScenes)
+        if (!typeof(T).IsEnum) 
         {
-            if(GetFileName(filePath).ToUpper() == weapon.ToString().ToUpper())
+            throw new ArgumentException("T must be an enumerated type");
+        }
+
+        List<string> scenePaths = GodotSceneFindingService.GetScenesAtFilepath(parentFilepath);
+        foreach(string filePath in scenePaths)
+        {
+            if(GetFileName(filePath).ToUpper() == enumValue.ToString().ToUpper())
             {
                 return ProjectSettings.GlobalizePath(filePath);
             }
