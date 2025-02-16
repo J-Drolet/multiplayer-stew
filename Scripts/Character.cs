@@ -58,7 +58,7 @@ public partial class Character : Entity
     {
         base._Ready();
 
-		List<string> files = Root.GetScenesAtFilepath(Root.WeaponsFilepath);
+		List<string> files = GodotSceneFindingService.GetScenesAtFilepath(Root.WeaponsFilepath);
 		foreach(string filepath in files) 
 		{
 			WeaponSpawner.AddSpawnableScene(filepath);
@@ -271,12 +271,15 @@ public partial class Character : Entity
 
 	
 	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-	public void SetWeapon(string scenePath)
+	public void SetWeapon(Weapon weaponUpgrade)
 	{
 		if (EquippedWeapon != null)
 		{
 			EquippedWeapon.QueueFree();
 		}
+
+		string scenePath = EnumServices.GetFilePath(weaponUpgrade, Root.WeaponsFilepath);
+		GD.Print(scenePath);
 
 		if(scenePath != null)
 		{
@@ -289,7 +292,7 @@ public partial class Character : Entity
 			Hand.AddChild(EquippedWeapon);
 
 			// toggle ammo count display of local player
-				UI.InGameUI.AmmoCount.Visible = EquippedWeapon != null;
+			UI.InGameUI.AmmoCount.Visible = EquippedWeapon != null;
 		}
 	}
 
@@ -321,8 +324,6 @@ public partial class Character : Entity
 	public void SetSlowdown(float slowdownMultiplayer)
 	{
 		if(Multiplayer.GetRemoteSenderId() != 1) return; // only server should broadcast spawn positons
-		
-		GD.Print("SETSLOWDOWN " + Multiplayer.GetUniqueId() + " TO: " + slowdownMultiplayer);
 
 		SlowdownMultiplier = slowdownMultiplayer;
 	}
