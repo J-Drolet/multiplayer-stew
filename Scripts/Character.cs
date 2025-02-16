@@ -53,6 +53,7 @@ public partial class Character : Entity
 		{
 			SceneManager.Instance.RpcId(1, SceneManager.MethodName.RequestSpawnPoint);
 			UI.InGameUI.AmmoCount.Visible = EquippedWeapon != null; // hide ammoCount on respawn
+			ATree.Active = true;
 		}
 	}
 

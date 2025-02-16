@@ -36,7 +36,6 @@ namespace multiplayerstew.Scripts.Base
             foreach(string path in GetSpawnPaths())
             {
                 multiplayerSpawner.AddSpawnableScene(path);
-                GD.Print(path);
             }
 
             if(!Multiplayer.IsServer()) return; // pickups are handled server-side
@@ -50,11 +49,6 @@ namespace multiplayerstew.Scripts.Base
             if(!IsMultiplayerAuthority()) return;
 
             TimeSinceLastActive += delta;
-
-            if(UpgradeMesh!= null)
-            {
-                GD.Print(UpgradeMesh.Name);
-            }
 
             if(!Active && TimeSinceLastActive > RespawnTime)
             {
