@@ -112,23 +112,12 @@ namespace multiplayerstew.Scripts.Base
             {
                 // Calculate the difference between the local and true global positions
                 Vector3 positionDifference = TrueGlobalPosition - GlobalPosition;
-
-                // Project the difference onto the X and Y axes, relative to the bullet's forward direction (Basis.Z)
                 Vector3 forward = -GlobalTransform.Basis.Z; // Bullet's forward direction
-                Vector3 right = GlobalTransform.Basis.X;   // Bullet's right direction
-                Vector3 up = GlobalTransform.Basis.Y;      // Bullet's up direction
+                Vector3 forwardDisplacement = positionDifference.Project(forward);
+                Vector3 diffAfterForward = positionDifference - forwardDisplacement;
 
-                // Project the difference onto the X and Y plane, relative to the forward direction
-                float dotForward = positionDifference.Dot(forward);
-                
-                // Calculate the forward displacement (no interpolation)
-                Vector3 forwardDisplacement = forward * dotForward;
-
-                Vector3 projectedOnXY = positionDifference - forward * dotForward; // Remove any forward component
-
- 
                 // Interpolate the X and Y components only
-                GlobalPosition += projectedOnXY.Normalized() * (float)(delta * 0.000000001);//(float)(delta * (float)Config.GetValue("upgrade_constants", "multiplayer_sync_interpolation_smoothing", true));
+                GlobalPosition += diffAfterForward.Normalized() * (float)(delta * 0.000000001);//(float)(delta * (float)Config.GetValue("upgrade_constants", "multiplayer_sync_interpolation_smoothing", true));
                 GlobalPosition += forwardDisplacement;
  
                 return; // if we are interpolating then we return here
