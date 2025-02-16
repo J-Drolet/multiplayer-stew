@@ -15,18 +15,30 @@ namespace multiplayerstew.Scripts.Pickups
 
 		[Export, ExportRequired]
 		private Array<Upgrade> UpgradeSpawnList { get; set; } = new();
+        [Export, ExportRequired]
+        public Array<int> SpawnWeights = new();
 
         public Upgrade PickupUpgrade;
 
+        public override void _Ready()
+        {
+            // if we forget some weights we add 1 to avoid bugs
+            for(int i = SpawnWeights.Count; i < UpgradeSpawnList.Count; i++)
+            {
+                SpawnWeights.Add(1);
+            }
+
+            base._Ready();
+        }
 
 		protected override void ActivatePickup(Character character)
 		{
             character.Rpc(Character.MethodName.AddUpgrade, (int)PickupUpgrade);
 		}
 
-        protected override List<string> GetSpawnPaths()
+        protected override Array<string> GetSpawnPaths()
         {   
-            List<string> spawnPaths = new();
+            Array<string> spawnPaths = new();
             foreach(Upgrade upgrade in GetSpawnList())
             {
                 spawnPaths.Add(EnumServices.GetFilePath(upgrade, Root.UpgradePickupFilepath));
@@ -38,8 +50,30 @@ namespace multiplayerstew.Scripts.Pickups
         protected override PackedScene GetRespawn() // marked virtual so I can put it in _Process
         {
             Array<Upgrade> spawnList = GetSpawnList();
-
-            PickupUpgrade = spawnList[rng.RandiRange(0, spawnList.Count - 1)];
+            if(UpgradeSpawnList.Count == 0) // in the case we are in every Upgrade mode
+            {
+                PickupUpgrade = spawnList[rng.RandiRange(0, spawnList.Count - 1)];
+            }
+            else
+            {   
+                int totalWeight = 0;
+                for(int i = 0; i < spawnList.Count; i++)
+                {
+                    totalWeight += SpawnWeights[i];
+                }
+                int selection = rng.RandiRange(0, totalWeight); // get a weight value for selection
+                int culWeight = 0;
+                // find what weapon the weight comes from
+                for(int i = 0; i < spawnList.Count; i++)
+                {
+                    culWeight += SpawnWeights[i];
+                    if(selection <= culWeight) 
+                    {
+                        PickupUpgrade = spawnList[i];
+                        break;
+                    }
+                }
+            }
 
             string sceneFilePath = EnumServices.GetFilePath(PickupUpgrade, Root.UpgradePickupFilepath);
             if(sceneFilePath == null)

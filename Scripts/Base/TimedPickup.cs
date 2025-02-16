@@ -1,4 +1,5 @@
 using Godot;
+using Godot.Collections;
 using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Services;
 using System.Collections.Generic;
@@ -70,7 +71,7 @@ namespace multiplayerstew.Scripts.Base
 
         protected abstract void ActivatePickup(Character character);
 
-        protected abstract List<string> GetSpawnPaths();
+        protected abstract Array<string> GetSpawnPaths();
 
         protected virtual PackedScene GetRespawn() // marked virtual so I can put it in _Process
         {
