@@ -172,3 +172,4 @@ DestroyOnPickup = false
 
 [node name="TimedWeaponPickup" parent="." instance=ExtResource("19_1ndxl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.0605, -0.085621, 20.9079)
+WeaponSpawnList = [2, 4]

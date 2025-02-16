@@ -15,6 +15,8 @@ namespace multiplayerstew.Scripts.Base
         public float RespawnTime { get; set;} = 10; // in seconds
         [Export, ExportRequired]
         public Node3D MeshParent { get; set; } // the node where upgrade meshes and cooldown sprite will live
+        [Export, ExportRequired]
+        public MultiplayerSpawner multiplayerSpawner { get; set; }
 
         private bool Active = true;
         private double TimeSinceLastActive;
@@ -35,7 +37,7 @@ namespace multiplayerstew.Scripts.Base
 
             foreach(string path in GetSpawnPaths())
             {
-                multiplayerSpawner.AddSpawnableScene(path);
+                multiplayerSpawner.AddSpawnableScene(ProjectSettings.LocalizePath(path));
             }
 
             if(!Multiplayer.IsServer()) return; // pickups are handled server-side

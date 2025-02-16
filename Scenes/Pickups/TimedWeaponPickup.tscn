@@ -45,6 +45,21 @@ albedo_color = Color(1, 0, 0, 0.4)
 material = SubResource("StandardMaterial3D_cde7f")
 size = Vector3(0.05, 0.05, 0.05)
 
+[sub_resource type="Animation" id="Animation_qswgr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshParent:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_spb4a"]
 resource_name = "Rotation"
 length = 3.0
@@ -60,21 +75,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_qswgr"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MeshParent:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a5ig8"]
@@ -97,7 +97,7 @@ collision_layer = 2
 shape = SubResource("BoxShape3D_p8ly1")
 
 [node name="MeshParent" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.236, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.419644, 0)
 
 [node name="BottomRing" type="MeshInstance3D" parent="."]
 mesh = SubResource("TorusMesh_mctui")
@@ -131,3 +131,4 @@ spot_angle = 38.2143
 libraries = {
 "": SubResource("AnimationLibrary_a5ig8")
 }
+autoplay = "Rotation"
