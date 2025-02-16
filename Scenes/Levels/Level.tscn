@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dustp76kyosr0"]
+[gd_scene load_steps=23 format=3 uid="uid://dustp76kyosr0"]
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_xdbua"]
 [ext_resource type="PackedScene" uid="uid://bwh21gfyr2idt" path="res://Scenes/GodotBox.tscn" id="2_glbo0"]
@@ -8,16 +8,17 @@
 [ext_resource type="PackedScene" uid="uid://b0ywmvox13rx1" path="res://Scenes/Pickups/Weapon Pickups/OLD/ShotgunPickup.tscn" id="4_4busq"]
 [ext_resource type="PackedScene" uid="uid://cryxnpccnb5vv" path="res://Scenes/Pickups/Character Upgrade Pickups/DoubleJumpPickupDEMO.tscn" id="4_qov8v"]
 [ext_resource type="PackedScene" uid="uid://dpd0cvtbs8iuo" path="res://Scenes/Target.tscn" id="5_5mb3y"]
-[ext_resource type="PackedScene" path="res://Scenes/Pickups/Weapon Pickups/NEW/NEWPistolPickup.tscn" id="5_iy05k"]
+[ext_resource type="PackedScene" uid="uid://cm2whm84p0m3u" path="res://Scenes/Pickups/Weapon Pickups/NEW/NEWPistolPickup.tscn" id="5_iy05k"]
 [ext_resource type="PackedScene" uid="uid://df6qunsrn6l0l" path="res://Scenes/Pickups/Character Upgrade Pickups/Five-Nine.tscn" id="5_vubge"]
-[ext_resource type="PackedScene" path="res://Scenes/Pickups/Weapon Pickups/NEW/NEWShotgunPickup.tscn" id="6_jf0qt"]
+[ext_resource type="PackedScene" uid="uid://b1f7iivgyecvp" path="res://Scenes/Pickups/Weapon Pickups/NEW/NEWShotgunPickup.tscn" id="6_jf0qt"]
 [ext_resource type="PackedScene" uid="uid://k3u720y471ax" path="res://Scenes/Pickups/Weapon Pickups/OLD/Mac10Pickup.tscn" id="6_vl5y8"]
 [ext_resource type="PackedScene" uid="uid://7qwn7vvfveyf" path="res://Scenes/Pickups/Character Upgrade Pickups/MentholPickup.tscn" id="8_8i516"]
 [ext_resource type="PackedScene" uid="uid://1fdlt6hucwhx" path="res://Scenes/Pickups/Weapon Pickups/OLD/BoltyPickup.tscn" id="8_xscgj"]
-[ext_resource type="PackedScene" path="res://Scenes/Pickups/SimplePickup.tscn" id="9_un6hj"]
+[ext_resource type="PackedScene" uid="uid://00oigava2hm0" path="res://Scenes/Pickups/SimplePickup.tscn" id="9_un6hj"]
 [ext_resource type="PackedScene" uid="uid://c1g1i6jf36w1w" path="res://Scenes/Pickups/Health Pickups/HealthPickup.tscn" id="10_wk5ir"]
 [ext_resource type="PackedScene" uid="uid://dgbp3hgx35bpy" path="res://Scenes/Pickups/Weapon Upgrade Pickups/SpliffPickup.tscn" id="16_shahq"]
-[ext_resource type="PackedScene" uid="uid://cnmij8ncsvx2f" path="res://Scenes/Pickups/Weapon Pickups/OLD/AugPickup.tscn" id="16_sqpdk"]
+[ext_resource type="PackedScene" uid="uid://ddf8p3b2p3co2" path="res://Scenes/Pickups/Weapon Pickups/OLD/AugPickup.tscn" id="16_sqpdk"]
+[ext_resource type="PackedScene" uid="uid://bmejhchhhu7w8" path="res://Scenes/Pickups/TimedWeaponPickup.tscn" id="19_1ndxl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4e45f"]
 albedo_color = Color(0.239473, 0.128064, 0.00900927, 1)
@@ -168,3 +169,6 @@ DestroyOnPickup = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1363, -0.085621, -14.4925)
 Upgrade = 12
 DestroyOnPickup = false
+
+[node name="TimedWeaponPickup" parent="." instance=ExtResource("19_1ndxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.0605, -0.085621, 20.9079)

@@ -1,14 +1,10 @@
-[gd_scene load_steps=14 format=4 uid="uid://b0ywmvox13rx1"]
+[gd_scene load_steps=9 format=4 uid="uid://ctk0asm13xr0i"]
 
-[ext_resource type="Script" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_rhqx7"]
-[ext_resource type="Texture2D" uid="uid://c2u8ie3inrtw" path="res://Assets/Models/Weapons/Double_Barrel_glb_Shotgun_tex.png" id="3_mqo73"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_vmxku"]
-size = Vector3(2, 1, 2)
+[ext_resource type="Texture2D" uid="uid://c2u8ie3inrtw" path="res://Assets/Models/Weapons/Double_Barrel_glb_Shotgun_tex.png" id="1_fpnpm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7x6x5"]
 resource_name = "Double Barrel"
-albedo_texture = ExtResource("3_mqo73")
+albedo_texture = ExtResource("1_fpnpm")
 roughness = 0.5
 texture_filter = 2
 
@@ -27,7 +23,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_ghe1a"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_efsau"]
 resource_name = "Double_Barrel_glb_Cylinder"
 _surfaces = [{
 "aabb": AABB(-0.199186, -2.48863, -0.629471, 0.398372, 2.76251, 1.27221),
@@ -61,7 +57,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_2c13b"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_rurkn"]
 resource_name = "Double_Barrel_glb_Cylinder_001"
 _surfaces = [{
 "aabb": AABB(-0.329456, -1.02843, -0.578949, 0.658911, 4.49289, 0.704063),
@@ -95,7 +91,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_dbuow"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_m4qnt"]
 resource_name = "Double_Barrel_glb_Cube_002"
 _surfaces = [{
 "aabb": AABB(-0.154242, -1.68076, -2.20145, 0.308483, 2.36351, 4.74241),
@@ -114,74 +110,19 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_lka0q")
 
-[sub_resource type="Animation" id="Animation_fdsld"]
-resource_name = "PickupIdle"
-length = 2.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Shotgun:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
-}
+[node name="Shotgun" type="Node3D"]
 
-[sub_resource type="Animation" id="Animation_wds57"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Shotgun:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_57bpt"]
-_data = {
-"PickupIdle": SubResource("Animation_fdsld"),
-"RESET": SubResource("Animation_wds57")
-}
-
-[node name="ShotgunPickup" type="Node3D" node_paths=PackedStringArray("PickupArea", "APlayer")]
-script = ExtResource("1_rhqx7")
-weapon = 2
-PickupArea = NodePath("Area3D")
-APlayer = NodePath("AnimationPlayer")
-
-[node name="Area3D" type="Area3D" parent="."]
-collision_layer = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-shape = SubResource("BoxShape3D_vmxku")
-
-[node name="Shotgun" type="Node3D" parent="."]
-
-[node name="Body" type="MeshInstance3D" parent="Shotgun"]
+[node name="Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.5, -4.37114e-08, 1.91069e-15, 0, -2.18557e-08, -0.5, 4.37114e-08, -0.5, 2.18557e-08, 0, 0.016571, -0.142085)
-mesh = SubResource("ArrayMesh_ghe1a")
+mesh = SubResource("ArrayMesh_efsau")
 skeleton = NodePath("")
 
-[node name="Barrels" type="MeshInstance3D" parent="Shotgun/Body"]
+[node name="Barrels" type="MeshInstance3D" parent="Body"]
 transform = Transform3D(0.677858, 0, 0, 0, 0.677858, 0, 0, 0, 0.677858, 0, 0.0766358, -0.192528)
-mesh = SubResource("ArrayMesh_2c13b")
+mesh = SubResource("ArrayMesh_rurkn")
 skeleton = NodePath("")
 
-[node name="Trigger" type="MeshInstance3D" parent="Shotgun/Body"]
+[node name="Trigger" type="MeshInstance3D" parent="Body"]
 transform = Transform3D(0.15355, 0, 0, 0, 0.0483982, 0.0306611, 0, -0.145723, 0.0101833, 0, -0.946951, -0.0123682)
-mesh = SubResource("ArrayMesh_dbuow")
+mesh = SubResource("ArrayMesh_m4qnt")
 skeleton = NodePath("")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_57bpt")
-}

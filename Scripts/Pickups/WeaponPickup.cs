@@ -9,12 +9,12 @@ namespace multiplayerstew.Scripts.Pickups
 	public partial class WeaponPickup : Pickup
 	{
 		[Export, ExportRequired]
-		private PackedScene Weapon { get; set; }
+		private Weapon weapon { get; set; }
 
 
 		protected override void ActivatePickup(Character character)
 		{
-			character.RpcId(character.GetMultiplayerAuthority(), Character.MethodName.SetWeapon, Weapon.ResourcePath);
+			character.RpcId(character.GetMultiplayerAuthority(), Character.MethodName.SetWeapon, (int)weapon);
 		}
 	}
 }

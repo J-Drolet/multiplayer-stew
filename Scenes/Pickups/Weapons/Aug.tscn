@@ -1,53 +1,11 @@
-[gd_scene load_steps=22 format=4 uid="uid://ddf8p3b2p3co2"]
+[gd_scene load_steps=18 format=4 uid="uid://c0tj2skj1wy7b"]
 
-[ext_resource type="Script" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_xpi2w"]
-[ext_resource type="Texture2D" uid="uid://ct2wlxgrgafag" path="res://Assets/Models/Weapons/AUG_AUG.png" id="3_8mw27"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_vmxku"]
-size = Vector3(1.69287, 1.11157, 3.13022)
-
-[sub_resource type="Animation" id="Animation_fdsld"]
-resource_name = "PickupIdle"
-length = 2.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Meshes:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_wds57"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Meshes:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_57bpt"]
-_data = {
-"PickupIdle": SubResource("Animation_fdsld"),
-"RESET": SubResource("Animation_wds57")
-}
+[ext_resource type="Texture2D" uid="uid://ct2wlxgrgafag" path="res://Assets/Models/Weapons/AUG_AUG.png" id="1_5f33b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_foiew"]
 resource_name = "Material"
 cull_mode = 2
-albedo_texture = ExtResource("3_8mw27")
+albedo_texture = ExtResource("1_5f33b")
 roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_heucs"]
@@ -65,7 +23,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_mhm6s"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_8yutg"]
 resource_name = "AUG_Cube"
 _surfaces = [{
 "aabb": AABB(-0.100522, -0.609332, -0.863676, 0.201044, 0.961467, 3.14048),
@@ -99,7 +57,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_c144y"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_nycym"]
 resource_name = "AUG_Cylinder"
 _surfaces = [{
 "aabb": AABB(-0.866025, -1.91599, -1, 1.73205, 2.91599, 2),
@@ -133,7 +91,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_36kem"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_7x86r"]
 resource_name = "AUG_Cube_003"
 _surfaces = [{
 "aabb": AABB(-0.0516614, -0.262054, -0.169183, 0.103323, 0.533746, 0.32348),
@@ -167,7 +125,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_mr7hf"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_fto4x"]
 resource_name = "AUG_Cylinder_001"
 _surfaces = [{
 "aabb": AABB(-1.27108, -14.1392, -1.21711, 2.54217, 24.935, 6.62006),
@@ -200,7 +158,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_pv5b4"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_201yc"]
 resource_name = "AUG_Cylinder_002"
 _surfaces = [{
 "aabb": AABB(-1.32188, 0.690047, -3.98523, 2.64376, 0.606549, 0.845381),
@@ -233,7 +191,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_k7cnt"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_e3ni0"]
 resource_name = "AUG_Cube_001"
 _surfaces = [{
 "aabb": AABB(-1, -0.921459, -1.0597, 2, 2.21039, 2.03245),
@@ -267,7 +225,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_knsvp"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_lu1m4"]
 resource_name = "AUG_Cube_002"
 _surfaces = [{
 "aabb": AABB(-0.163786, -0.545777, -0.571046, 0.327571, 1.09155, 0.571046),
@@ -286,58 +244,47 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_vlq3d")
 
-[node name="AugPickup" type="Node3D" node_paths=PackedStringArray("PickupArea", "APlayer")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.570983, 0)
-script = ExtResource("1_xpi2w")
-weapon = 1
-PickupArea = NodePath("Area3D")
-APlayer = NodePath("AnimationPlayer")
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_x3rio"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
 
-[node name="Area3D" type="Area3D" parent="."]
-collision_layer = 2
+[node name="Aug" type="Node3D"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00170898, -0.0306396, -0.116836)
-shape = SubResource("BoxShape3D_vmxku")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_57bpt")
-}
-
-[node name="Meshes" type="Node3D" parent="."]
-
-[node name="AUG" type="MeshInstance3D" parent="Meshes"]
+[node name="AUG" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.655935, 0, 0, 0, 0.655935, 0, 0, 0, 0.655935, 0, 0, 0)
-mesh = SubResource("ArrayMesh_mhm6s")
+mesh = SubResource("ArrayMesh_8yutg")
 skeleton = NodePath("")
 
-[node name="Cylinder" type="MeshInstance3D" parent="Meshes/AUG"]
+[node name="Cylinder" type="MeshInstance3D" parent="AUG"]
 transform = Transform3D(0.0777308, 0, 0, 0, 0, -0.0777308, 0, 0.860509, 0, 0, 0.211119, -0.671475)
-mesh = SubResource("ArrayMesh_c144y")
+mesh = SubResource("ArrayMesh_nycym")
 skeleton = NodePath("")
 
-[node name="Charging Handle" type="MeshInstance3D" parent="Meshes/AUG/Cylinder"]
+[node name="Charging Handle" type="MeshInstance3D" parent="AUG/Cylinder"]
 transform = Transform3D(-1.4554, 4.55604, -1.255e-07, 3.79078e-07, 1.11586e-06, 0.574495, 6.1911, 1.07103, -6.46783e-08, -1.80151, 0.0719449, 0.0135172)
-mesh = SubResource("ArrayMesh_36kem")
+mesh = SubResource("ArrayMesh_7x86r")
 skeleton = NodePath("")
 
-[node name="Cylinder_001" type="MeshInstance3D" parent="Meshes/AUG/Cylinder"]
+[node name="Cylinder_001" type="MeshInstance3D" parent="AUG/Cylinder"]
 transform = Transform3D(0.835361, 0, 0, 0, 0.0754592, 0, 0, 0, 0.835361, 0, 0.902585, -5.09918)
-mesh = SubResource("ArrayMesh_mr7hf")
+mesh = SubResource("ArrayMesh_fto4x")
 skeleton = NodePath("")
 
-[node name="Back Sight" type="MeshInstance3D" parent="Meshes/AUG/Cylinder/Cylinder_001"]
+[node name="Back Sight" type="MeshInstance3D" parent="AUG/Cylinder/Cylinder_001"]
 transform = Transform3D(0.271739, 0, 0, 0, 0.271739, 0, 0, 0, 0.271739, 0, 10.3225, -0.173357)
-mesh = SubResource("ArrayMesh_pv5b4")
+mesh = SubResource("ArrayMesh_201yc")
 skeleton = NodePath("")
 
-[node name="Mag" type="MeshInstance3D" parent="Meshes/AUG"]
+[node name="Mag" type="MeshInstance3D" parent="AUG"]
 transform = Transform3D(0.0587599, 0, 0, 0, 0.35514, -0.0401045, 0, 0.0671289, 0.21217, 0, -0.4883, 1.04387)
-mesh = SubResource("ArrayMesh_k7cnt")
+mesh = SubResource("ArrayMesh_e3ni0")
 skeleton = NodePath("")
 
-[node name="Trigger" type="MeshInstance3D" parent="Meshes/AUG"]
+[node name="Trigger" type="MeshInstance3D" parent="AUG"]
 transform = Transform3D(0.123538, 0, 0, 0, 0.123538, 0, 0, 0, 0.123538, 0, -0.0376187, 0.182118)
-mesh = SubResource("ArrayMesh_knsvp")
+mesh = SubResource("ArrayMesh_lu1m4")
 skeleton = NodePath("")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_x3rio")
