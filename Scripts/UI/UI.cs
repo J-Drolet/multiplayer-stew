@@ -5,6 +5,7 @@ public partial class UI: Node
 {
     public static MainMenu MainMenu { get; set; }
     public static Lobby Lobby { get; set; }
+    public static ServerBrowser ServerBrowser { get; set; }
     public static PauseMenu PauseMenu { get; set; }
     public static ErrorMessage ErrorMessage { get; set; }
     public static Control Spinner { get; set; }
@@ -27,6 +28,11 @@ public partial class UI: Node
             else if(!MainMenu.Visible) // if in game we can toggle the pause menu
             {
                 PauseMenu.ToggleView();
+            }
+
+            if(ServerBrowser.Visible) 
+            {
+                ServerBrowser.Hide();
             }
         }
     }

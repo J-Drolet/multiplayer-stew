@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://emhg32smyqx0"]
+[gd_scene load_steps=7 format=3 uid="uid://emhg32smyqx0"]
 
 [ext_resource type="Script" path="res://Scripts/UI/MainMenu.cs" id="1_8m0rs"]
 [ext_resource type="Theme" uid="uid://y8ujbi36xquh" path="res://Assets/Themes/MainMenu.tres" id="1_c0h8v"]
 [ext_resource type="PackedScene" uid="uid://ck74o0nreiu38" path="res://Scenes/UI/Main Menu/joinInformation.tscn" id="3_svqof"]
 [ext_resource type="PackedScene" uid="uid://cyk5w16gxy3dv" path="res://Scenes/UI/Main Menu/lobby.tscn" id="4_tv7ky"]
-[ext_resource type="AudioStream" uid="uid://d0ae4wec6gosa" path="res://Assets/Sounds/Music/Electronic Vol5 Golden Gates Main.wav" id="5_batqw"]
+[ext_resource type="AudioStream" uid="uid://dhrsn7p8mxbxj" path="res://Assets/Sounds/Music/Electronic Vol5 Golden Gates Main.wav" id="5_batqw"]
+[ext_resource type="PackedScene" uid="uid://3epym377x1iu" path="res://Scenes/UI/Main Menu/ServerBrowser.tscn" id="5_g6thw"]
 
 [node name="MainMenu" type="Control" node_paths=PackedStringArray("JoinInformation", "LobbyPage", "MainMenuMusic")]
 layout_mode = 3
@@ -14,7 +15,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8m0rs")
-JoinInformation = NodePath("JoinInformation")
+JoinInformation = NodePath("ServerBrowser")
 LobbyPage = NodePath("Lobby")
 MainMenuMusic = NodePath("MainMenuMusic")
 
@@ -97,6 +98,11 @@ LobbyPage = NodePath("../Lobby")
 [node name="Lobby" parent="." instance=ExtResource("4_tv7ky")]
 visible = false
 layout_mode = 1
+
+[node name="ServerBrowser" parent="." node_paths=PackedStringArray("LobbyPage") instance=ExtResource("5_g6thw")]
+visible = false
+layout_mode = 1
+LobbyPage = NodePath("../Lobby")
 
 [node name="MainMenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_batqw")

@@ -1,0 +1,265 @@
+[gd_scene load_steps=4 format=3 uid="uid://3epym377x1iu"]
+
+[ext_resource type="Script" path="res://Scripts/UI/ServerBrowser.cs" id="1_ppla7"]
+[ext_resource type="Script" path="res://Scripts/UI/ServerUiElement.cs" id="2_jebab"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_116hc"]
+
+[node name="ServerBrowser" type="Control" node_paths=PackedStringArray("ServerPrototype", "ServerNameInput", "IpAddressInput", "PortInput")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ppla7")
+ServerPrototype = NodePath("Background/ServerList/VBoxContainer/ServerInfoPrototype")
+ServerNameInput = NodePath("Background/AddServer/VBoxContainer/ServerName/TextEdit")
+IpAddressInput = NodePath("Background/AddServer/VBoxContainer/IpAddress/TextEdit")
+PortInput = NodePath("Background/AddServer/VBoxContainer/Port/TextEdit")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_116hc")
+
+[node name="Title" type="Label" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.293
+anchor_bottom = 0.14
+offset_left = 42.0
+offset_top = 36.0
+offset_right = -0.536011
+offset_bottom = 0.279999
+theme_override_font_sizes/font_size = 40
+text = "Server Browser"
+
+[node name="ServerList" type="Panel" parent="Background"]
+custom_minimum_size = Vector2(800, 400)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.191
+anchor_right = 0.753
+anchor_bottom = 0.809
+offset_left = 67.0
+offset_top = 0.231987
+offset_right = -0.456055
+offset_bottom = -0.231995
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/ServerList"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 2
+
+[node name="ServerInfoPrototype" type="Panel" parent="Background/ServerList/VBoxContainer" node_paths=PackedStringArray("ServerName", "IpAddress", "PortNumber", "JoinButton", "DeleteButton")]
+visible = false
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+script = ExtResource("2_jebab")
+ServerName = NodePath("ServerInfo/VBoxContainer/ServerName/Value")
+IpAddress = NodePath("ServerInfo/VBoxContainer/IP/Value")
+PortNumber = NodePath("ServerInfo/VBoxContainer/Port/Value")
+JoinButton = NodePath("Buttons/VBoxContainer/JoinServerButton")
+DeleteButton = NodePath("Buttons/VBoxContainer/DeleteServerButton")
+
+[node name="ServerInfo" type="Control" parent="Background/ServerList/VBoxContainer/ServerInfoPrototype"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 1
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/ServerList/VBoxContainer/ServerInfoPrototype/ServerInfo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ServerName" type="HBoxContainer" parent="Background/ServerList/VBoxContainer/ServerInfoPrototype/ServerInfo/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background/ServerList/VBoxContainer/ServerInfoPrototype/ServerInfo/VBoxContainer/ServerName"]
+layout_mode = 2
+text = "Server Name:  "
+
+[node name="Value" type="Label" parent="Background/ServerList/VBoxContainer/ServerInfoPrototype/ServerInfo/VBoxContainer/ServerName"]
+layout_mode = 2
+
+[node name="IP" type="HBoxContainer" parent="Background/ServerList/VBoxContainer/ServerInfoPrototype/ServerInfo/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background/ServerList/VBoxContainer/ServerInfoPrototype/ServerInfo/VBoxContainer/IP"]
+layout_mode = 2
+text = "IP Address:  "
+
+[node name="Value" type="Label" parent="Background/ServerList/VBoxContainer/ServerInfoPrototype/ServerInfo/VBoxContainer/IP"]
+layout_mode = 2
+
+[node name="Port" type="HBoxContainer" parent="Background/ServerList/VBoxContainer/ServerInfoPrototype/ServerInfo/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background/ServerList/VBoxContainer/ServerInfoPrototype/ServerInfo/VBoxContainer/Port"]
+layout_mode = 2
+text = "Port:  "
+
+[node name="Value" type="Label" parent="Background/ServerList/VBoxContainer/ServerInfoPrototype/ServerInfo/VBoxContainer/Port"]
+layout_mode = 2
+
+[node name="Buttons" type="Control" parent="Background/ServerList/VBoxContainer/ServerInfoPrototype"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/ServerList/VBoxContainer/ServerInfoPrototype/Buttons"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="JoinServerButton" type="Button" parent="Background/ServerList/VBoxContainer/ServerInfoPrototype/Buttons/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Join Server"
+
+[node name="DeleteServerButton" type="Button" parent="Background/ServerList/VBoxContainer/ServerInfoPrototype/Buttons/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Delete"
+
+[node name="AddServer" type="Panel" parent="Background"]
+custom_minimum_size = Vector2(200, 400)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.797
+anchor_top = 0.191
+anchor_right = 1.0
+anchor_bottom = 0.809
+offset_left = -0.144043
+offset_top = 0.231987
+offset_right = -34.0
+offset_bottom = -0.231995
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Background/AddServer"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Add Server"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/AddServer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.072
+anchor_right = 1.0
+anchor_bottom = 0.873
+offset_left = 10.0
+offset_top = 0.199999
+offset_right = -10.0
+offset_bottom = 4.79999
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 19
+
+[node name="ServerName" type="HBoxContainer" parent="Background/AddServer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background/AddServer/VBoxContainer/ServerName"]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Server Name"
+vertical_alignment = 1
+
+[node name="TextEdit" type="LineEdit" parent="Background/AddServer/VBoxContainer/ServerName"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 10
+
+[node name="IpAddress" type="HBoxContainer" parent="Background/AddServer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background/AddServer/VBoxContainer/IpAddress"]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "IP Address"
+vertical_alignment = 1
+
+[node name="TextEdit" type="LineEdit" parent="Background/AddServer/VBoxContainer/IpAddress"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Port" type="HBoxContainer" parent="Background/AddServer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background/AddServer/VBoxContainer/Port"]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Port"
+vertical_alignment = 1
+
+[node name="TextEdit" type="LineEdit" parent="Background/AddServer/VBoxContainer/Port"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "3333"
+virtual_keyboard_type = 2
+
+[node name="AddServerButton" type="Button" parent="Background/AddServer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.892
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 0.199982
+offset_right = -10.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Add Server"
+
+[node name="BackButton" type="Button" parent="Background"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -62.0
+offset_right = 75.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Main Menu"
+
+[connection signal="pressed" from="Background/AddServer/AddServerButton" to="." method="OnAddServerButtonPressed"]
+[connection signal="pressed" from="Background/BackButton" to="." method="hide"]
