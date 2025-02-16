@@ -54,7 +54,11 @@ namespace multiplayerstew.Scripts.Base
             // disable syncing on projectileOwner
             if(Multiplayer.GetUniqueId() == projectileOwner) {
                 multiplayerSynchronizer.SetVisibilityFor(1, false);
+                multiplayerSynchronizer.QueueFree();
             }
+            //if(Multiplayer.GetUniqueId() == 1) {
+            //    multiplayerSynchronizer.SetVisibilityFor(projectileOwner, false);
+            //}
 
             if(!HasRightToMoveProjectile()) return; // server and local peer continue
 
@@ -106,14 +110,27 @@ namespace multiplayerstew.Scripts.Base
 
             if(!Multiplayer.IsServer() && TrueGlobalPosition != Vector3.Zero) // interpolation logic
             {
-                if(GlobalPosition.DistanceTo(TrueGlobalPosition) >= (float)Config.GetValue("upgrade_constants", "multiplayer_sync_interpolation_distance", true))
-                {
-                    GlobalPosition = GlobalPosition.Lerp(TrueGlobalPosition, (float)(delta * (float)Config.GetValue("upgrade_constants", "multiplayer_sync_interpolation_smoothing", true)));
-                }
-                else
-                {
-                    GlobalPosition = TrueGlobalPosition;
-                }
+                // Calculate the difference between the local and true global positions
+                Vector3 positionDifference = TrueGlobalPosition - GlobalPosition;
+
+                // Project the difference onto the X and Y axes, relative to the bullet's forward direction (Basis.Z)
+                Vector3 forward = -GlobalTransform.Basis.Z; // Bullet's forward direction
+                Vector3 right = GlobalTransform.Basis.X;   // Bullet's right direction
+                Vector3 up = GlobalTransform.Basis.Y;      // Bullet's up direction
+
+                // Project the difference onto the X and Y plane, relative to the forward direction
+                float dotForward = positionDifference.Dot(forward);
+                
+                // Calculate the forward displacement (no interpolation)
+                Vector3 forwardDisplacement = forward * dotForward;
+
+                Vector3 projectedOnXY = positionDifference - forward * dotForward; // Remove any forward component
+
+ 
+                // Interpolate the X and Y components only
+                GlobalPosition += projectedOnXY.Normalized() * (float)(delta * 0.000000001);//(float)(delta * (float)Config.GetValue("upgrade_constants", "multiplayer_sync_interpolation_smoothing", true));
+                GlobalPosition += forwardDisplacement;
+ 
                 return; // if we are interpolating then we return here
             }
 
@@ -154,8 +171,28 @@ namespace multiplayerstew.Scripts.Base
                     Velocity += steering * (float)delta;
                 }
             }
-                
 
+            /*
+            if(!Multiplayer.IsServer() && TrueGlobalPosition != Vector3.Zero) // add homing towards real position
+            {
+                float speed = Velocity.Length();
+                
+                float distanceToTarget = (TrueGlobalPosition - GlobalPosition).Length();
+                Vector3 directionToTarget = (TrueGlobalPosition - GlobalPosition).Normalized();
+                // Define ideal velocity (direction x speed towards player character from current position)
+                Vector3 idealVelocity = directionToTarget * speed;
+                
+                // Ensure that the ideal velocity doesn't make us overshoot the target
+                if (distanceToTarget < speed * delta) {
+                    idealVelocity = directionToTarget * (float)(distanceToTarget / delta); // Adjust to stop right at the target
+                }
+
+                // speed to steer = direction vector obtained by idealVelocity - current_velocity x force to steer
+                Vector3 steering = (idealVelocity - Velocity).Normalized() * (float)Config.GetValue("upgrade_constants", "ping_correction_homing_intensity", true);
+                Velocity += steering * (float)delta;
+            }
+            */
+                
 
             if (Velocity != Vector3.Zero)
             {
