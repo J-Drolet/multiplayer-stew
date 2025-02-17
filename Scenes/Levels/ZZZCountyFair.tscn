@@ -1,0 +1,122 @@
+[gd_scene load_steps=12 format=3 uid="uid://cif1rylh3ul7d"]
+
+[ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_aiq0j"]
+[ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_4bfgx"]
+[ext_resource type="PackedScene" uid="uid://6jntjlknvgow" path="res://Scenes/Levels/LevelAssets/UtilityAssets/DeathBarrier.tscn" id="3_8dtge"]
+[ext_resource type="PackedScene" uid="uid://fj713mjkemj4" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/Road1.tscn" id="4_eup74"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_appl5"]
+albedo_color = Color(0.217731, 0.350609, 0.108918, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_noe2u"]
+material = SubResource("StandardMaterial3D_appl5")
+size = Vector3(50, 0.25, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bbwtt"]
+size = Vector3(50, 0.25, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_67dpp"]
+albedo_color = Color(0.32105, 0.276194, 0.176701, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_p1auc"]
+material = SubResource("StandardMaterial3D_67dpp")
+size = Vector3(50, 0.25, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afd3o"]
+render_priority = 1
+transparency = 4
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_aq4tj"]
+
+[node name="Fair" type="Node3D"]
+script = ExtResource("1_aiq0j")
+PlayerScene = ExtResource("2_4bfgx")
+
+[node name="DeathBarrier" parent="." instance=ExtResource("3_8dtge")]
+transform = Transform3D(200, 0, 0, 0, 1, 0, 0, 0, 200, 0, -6.01375, 0)
+
+[node name="Ground" type="Node3D" parent="."]
+
+[node name="Grass" type="Node3D" parent="Ground"]
+transform = Transform3D(7.10828, 0, 0, 0, 1, 0, 0, 0, 1.77198, -52.334, 0, -37.7799)
+metadata/_edit_group_ = true
+
+[node name="Floor" type="StaticBody3D" parent="Ground/Grass"]
+
+[node name="FloorMesh" type="MeshInstance3D" parent="Ground/Grass/Floor"]
+transform = Transform3D(0.837786, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_noe2u")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/Grass/Floor"]
+shape = SubResource("BoxShape3D_bbwtt")
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="Ground/Grass/Floor"]
+size = Vector3(50, 0.25, 50)
+
+[node name="Dirt" type="Node3D" parent="Ground"]
+transform = Transform3D(9.17548, 0, 0, 0, 1, 0, 0, 0, 1.77198, 0, 0, 50.6982)
+metadata/_edit_group_ = true
+
+[node name="Floor" type="StaticBody3D" parent="Ground/Dirt"]
+
+[node name="FloorMesh" type="MeshInstance3D" parent="Ground/Dirt/Floor"]
+transform = Transform3D(0.837786, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_p1auc")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/Dirt/Floor"]
+shape = SubResource("BoxShape3D_bbwtt")
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="Ground/Dirt/Floor"]
+size = Vector3(50, 0.25, 50)
+
+[node name="Dirt2" type="Node3D" parent="Ground"]
+transform = Transform3D(2.28845, 0, 0, 0, 0.986313, 0, 0, 0, 1.78218, 144.583, 0, -37.5887)
+metadata/_edit_group_ = true
+
+[node name="Floor" type="StaticBody3D" parent="Ground/Dirt2"]
+
+[node name="FloorMesh" type="MeshInstance3D" parent="Ground/Dirt2/Floor"]
+transform = Transform3D(0.837786, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_p1auc")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/Dirt2/Floor"]
+shape = SubResource("BoxShape3D_bbwtt")
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="Ground/Dirt2/Floor"]
+size = Vector3(50, 0.25, 50)
+
+[node name="Road1" parent="Ground" instance=ExtResource("4_eup74")]
+transform = Transform3D(-2.31445e-08, 0, 0.656517, 0, 1, 0, -0.529484, 0, -2.86973e-08, -75.8758, 0.186252, 11.6374)
+
+[node name="Road2" parent="Ground" instance=ExtResource("4_eup74")]
+transform = Transform3D(-0.368979, 0, 0.146483, 0, 1, 0, -0.379747, 0, -0.142329, 156.517, 0.188586, -48.5597)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.766896, 0.439592, -0.467578, 0, 0.728574, 0.684967, 0.641771, -0.525299, 0.558741, 0, 0, 0)
+
+[node name="Spawns" type="Node3D" parent="."]
+
+[node name="1" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0889, 0, 0)
+
+[node name="2" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1707, 0, 0)
+
+[node name="3" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.2456)
+
+[node name="4" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20.0295)
+
+[node name="CharacterMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2809, 1.71353, 0)
+material_overlay = SubResource("StandardMaterial3D_afd3o")
+mesh = SubResource("CapsuleMesh_aq4tj")
+
+[node name="Cur Health" type="Label3D" parent="CharacterMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14348, 0)
+billboard = 1
+text = "Text"

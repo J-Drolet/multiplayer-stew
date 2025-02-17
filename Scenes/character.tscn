@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Character.cs" id="1_n6eoi"]
 [ext_resource type="Script" path="res://Scripts/Base/DamageArea.cs" id="2_4301p"]
-[ext_resource type="AudioStream" uid="uid://b4o2ftef65g1l" path="res://Assets/Sounds/SFX/Voice B Pain Grunt 002.wav" id="2_b0fus"]
+[ext_resource type="AudioStream" uid="uid://dbvro82au5vr5" path="res://Assets/Sounds/SFX/Voice B Pain Grunt 002.wav" id="2_b0fus"]
 [ext_resource type="PackedScene" uid="uid://bu6ksmfk5pwif" path="res://Scenes/Particles/InvisibilitySmoke.tscn" id="3_ffhoh"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dlrkp"]
@@ -157,6 +157,7 @@ node_connections = [&"Add2", 0, &"Walk", &"Add2", 1, &"Animation", &"TimeScale",
 animation = &"Walk"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uyc7b"]
+advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hr1ek"]
 

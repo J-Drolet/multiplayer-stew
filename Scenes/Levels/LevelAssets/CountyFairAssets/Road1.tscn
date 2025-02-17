@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=4 uid="uid://fj713mjkemj4"]
+
+[ext_resource type="Texture2D" uid="uid://3bt3q22hjbfg" path="res://Assets/Models/Waffle House/Models/Quequis_House_Road.jpg" id="1_uyhbc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ik1ke"]
+resource_name = "Road"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_uyhbc")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_20heo"]
+_surfaces = [{
+"aabb": AABB(-6.70175, 0, -430.483, 30.5574, 1e-05, 694.031),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AQACAAAAAQADAAIAAwAEAAIAAwAFAAQA"),
+"name": "Road",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAAAAAAAAAKVkAAD//wAApWQAAAAAAAD+/wAA//8AAP//AAAAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_j6qog"]
+resource_name = "Quequis_House_Road_001"
+_surfaces = [{
+"aabb": AABB(-6.70175, 0, -430.483, 30.5574, 1e-05, 694.031),
+"attribute_data": PackedByteArray("gzgshP7/LISDOP//gzjhsf7/4bH///7/gzhwuf//cLk="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AQADAAAAAQAEAAMABQAGAAIABQAHAAYA"),
+"material": SubResource("StandardMaterial3D_ik1ke"),
+"name": "Road",
+"primitive": 3,
+"uv_scale": Vector4(29.1762, 4.86412, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAAAAAABU1aVkAAD//6oqpWQAAP//VNWlZAAAAABU1aVkAAAAAKoq/v8AAP//qir//wAAAACqKlTVqipU1aoqVNWqKlTVqipU1aoqVNWqKlTVqipU1aoq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_20heo")
+
+[node name="Road1" type="Node3D"]
+
+[node name="Road_001" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_j6qog")
+skeleton = NodePath("")
