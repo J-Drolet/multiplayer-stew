@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://brf3s5cipo7pk"]
+[gd_scene load_steps=15 format=3 uid="uid://brf3s5cipo7pk"]
 
 [ext_resource type="Script" path="res://Scripts/Pickups/UpgradePickup.cs" id="1_0a4hl"]
 
@@ -43,18 +43,6 @@ albedo_color = Color(0, 0.219608, 1, 1)
 material = SubResource("StandardMaterial3D_cde7f")
 size = Vector3(0.05, 0.05, 0.05)
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_gvg84"]
-noise_type = 3
-seed = 3
-frequency = 0.0034
-fractal_type = 2
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ldh5r"]
-seamless = true
-as_normal_map = true
-bump_strength = 10.6
-noise = SubResource("FastNoiseLite_gvg84")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xmk3o"]
 transparency = 1
 albedo_color = Color(0, 1, 1, 0.27451)
@@ -63,7 +51,6 @@ metallic_specular = 0.0
 roughness = 0.0
 normal_enabled = true
 normal_scale = -0.38
-normal_texture = SubResource("NoiseTexture2D_ldh5r")
 subsurf_scatter_strength = 0.09
 refraction_enabled = true
 refraction_scale = -0.26
