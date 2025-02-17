@@ -100,5 +100,10 @@ namespace multiplayerstew.Scripts.Pickups
 
             return spawnList;
         }
+
+        protected override bool CanPickup(Character character) // marked virtual so I can put it in _Process
+        {
+            return !character.Upgrades.Contains(PickupUpgrade);
+        }
     }
 }

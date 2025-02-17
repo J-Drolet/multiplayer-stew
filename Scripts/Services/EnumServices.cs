@@ -9,13 +9,8 @@ public static class EnumServices {
         return StringExtensions.GetFile(filePath).Split(".").First().ToUpper();
     }
 
-    public static string GetFilePath<T>(T enumValue, string parentFilepath) where T : struct, IConvertible
+    public static string GetFilePath<T>(T enumValue, string parentFilepath)
     {
-        if (!typeof(T).IsEnum) 
-        {
-            throw new ArgumentException("T must be an enumerated type");
-        }
-
         List<string> scenePaths = GodotSceneFindingService.GetScenesAtFilepath(parentFilepath);
         foreach(string filePath in scenePaths)
         {

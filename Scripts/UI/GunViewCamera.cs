@@ -13,7 +13,7 @@ public partial class GunViewCamera : Camera3D
     public override void _Ready()
     {
         GodotErrorService.ValidateRequiredData(this);
-        UI.gunViewCamera = this;
+        UI.GunViewCamera = this;
     }
 
     public override void _Process(double delta)

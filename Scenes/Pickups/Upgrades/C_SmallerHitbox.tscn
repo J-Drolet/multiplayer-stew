@@ -1,6 +1,70 @@
-[gd_scene format=3 uid="uid://pir5t2hvtjuo"]
+[gd_scene load_steps=7 format=3 uid="uid://pir5t2hvtjuo"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_gvg84"]
+noise_type = 3
+seed = 3
+frequency = 0.0034
+fractal_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6aunj"]
+seamless = true
+as_normal_map = true
+bump_strength = 10.6
+noise = SubResource("FastNoiseLite_gvg84")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qtd1a"]
+albedo_color = Color(0.52223, 0.347328, 0.132623, 1)
+metallic = 0.6
+metallic_specular = 0.0
+roughness = 0.0
+normal_scale = -0.38
+normal_texture = SubResource("NoiseTexture2D_6aunj")
+subsurf_scatter_strength = 0.09
+refraction_scale = -0.26
+
+[sub_resource type="BoxMesh" id="BoxMesh_xit0w"]
+material = SubResource("StandardMaterial3D_qtd1a")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_67pkd"]
+albedo_color = Color(0, 0, 0, 1)
+metallic_specular = 0.01
+
+[sub_resource type="BoxMesh" id="BoxMesh_m3yjh"]
+material = SubResource("StandardMaterial3D_67pkd")
 
 [node name="CSmallerHitbox" type="Node3D"]
 
-[node name="Label3D" type="Label3D" parent="."]
-text = "Smaller hitbox"
+[node name="Ruler" type="Node3D" parent="."]
+
+[node name="PLACEHOLDER" type="MeshInstance3D" parent="Ruler"]
+transform = Transform3D(0.112604, -0.19539, 0, 0.057382, 0.383425, 0, 0, 0, 0.0383445, 0, 0.275359, 0)
+mesh = SubResource("BoxMesh_xit0w")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ruler"]
+transform = Transform3D(0.00245438, 0.0510457, 0, -0.00424, 0.0295485, 0, 0, 0, 0.0168782, -0.0504761, 0.449415, 0.0130905)
+mesh = SubResource("BoxMesh_m3yjh")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Ruler"]
+transform = Transform3D(0.00245438, 0.0510457, 0, -0.00424, 0.0295485, 0, 0, 0, 0.0168782, 0.0333676, 0.286424, 0.0130905)
+mesh = SubResource("BoxMesh_m3yjh")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Ruler"]
+transform = Transform3D(0.00245438, 0.0510457, 0, -0.00424, 0.0295485, 0, 0, 0, 0.0168782, 0.0664911, 0.218444, 0.0143776)
+mesh = SubResource("BoxMesh_m3yjh")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Ruler"]
+transform = Transform3D(0.00245438, 0.0510457, 0, -0.00424, 0.0295485, 0, 0, 0, 0.0168782, 0.0981914, 0.159586, 0.0143776)
+mesh = SubResource("BoxMesh_m3yjh")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Ruler"]
+transform = Transform3D(0.00245438, 0.0510457, 0, -0.00424, 0.0295485, 0, 0, 0, 0.0168782, 0.0981914, 0.159586, 0.0143776)
+mesh = SubResource("BoxMesh_m3yjh")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Ruler"]
+transform = Transform3D(0.00245438, 0.0510457, 0, -0.00424, 0.0295485, 0, 0, 0, 0.0168782, 2.2158e-05, 0.344751, 0.0130905)
+mesh = SubResource("BoxMesh_m3yjh")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Ruler"]
+transform = Transform3D(0.00245438, 0.0510457, 0, -0.00424, 0.0295485, 0, 0, 0, 0.0168782, -0.0249048, 0.398206, 0.0130905)
+mesh = SubResource("BoxMesh_m3yjh")

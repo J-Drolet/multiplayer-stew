@@ -12,6 +12,12 @@ public static class GameManager
         public Node3D projectileParent;
         public Node3D spawnPoint;
         public MultiplayerSpawner projectileSpawner;
+
+        // Game stats
+        public int kills;
+        public int deaths;
+        public int maxPowerLevel;
+        public int aura;
     }
 
     public static long GameHost { get; set; } = -1;
@@ -19,7 +25,7 @@ public static class GameManager
     public static Dictionary<long, PlayerInfo> Players = new Dictionary<long, PlayerInfo>();
 
     public static Node CurrentLevel { get; set; }
-    public static int GameDurationSeconds {get; set; }
+    public static int GameDurationSeconds { get; set; }
     public static int MaxAura {get; set; }
 
     public static void RemovePlayer(long id)
@@ -44,6 +50,7 @@ public static class GameManager
         UI.MainMenu.OpenMainMenu();
         UI.PauseMenu.Hide();
         UI.InGameUI.Hide();
+        UI.EndOfGame.Hide();
         Input.MouseMode = Input.MouseModeEnum.Visible;
     }
 }

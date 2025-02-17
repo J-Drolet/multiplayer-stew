@@ -69,7 +69,7 @@ public partial class Client : Node
             CloseServer();
         }
 
-        UI.gunViewCamera.active = false;
+        UI.GunViewCamera.active = false;
         GameManager.Players.Clear();
         Peer.Close();
     }
@@ -142,7 +142,7 @@ public partial class Client : Node
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyStartGame(string filepath, int durationInSeconds, int maxAura)
     {
-        UI.gunViewCamera.active = true;
+        UI.GunViewCamera.active = true;
         UI.MainMenu.CloseMainMenu();
         GameManager.GameDurationSeconds = durationInSeconds;
         GameManager.MaxAura = maxAura;

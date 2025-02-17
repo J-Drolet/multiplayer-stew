@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4wr0n7pacuhv"]
+
+[ext_resource type="Theme" uid="uid://bj4ywnld62bs4" path="res://Assets/Themes/Leaderboard.tres" id="1_08q68"]
+[ext_resource type="Script" path="res://Scripts/UI/EndOfGame.cs" id="1_gi827"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_riyg7"]
+bg_color = Color(0.0509804, 0.0509804, 0.0509804, 0.627451)
+
+[node name="EndOfGame" type="Control" node_paths=PackedStringArray("NextGameButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gi827")
+NextGameButton = NodePath("Buttons/NextGameButton")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_riyg7")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.106
+offset_bottom = 0.311996
+grow_horizontal = 2
+theme = ExtResource("1_08q68")
+theme_type_variation = &"HeaderLarge"
+text = "End of Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.952
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -28.896
+offset_right = -3.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="LeaveGameButton" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Leave Game"
+
+[node name="NextGameButton" type="Button" parent="Buttons"]
+layout_mode = 2
+disabled = true
+text = "Next Game in 1..."
+
+[connection signal="pressed" from="Buttons/LeaveGameButton" to="." method="OnLeaveButtonPressed"]

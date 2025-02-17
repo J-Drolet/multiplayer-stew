@@ -31,6 +31,7 @@ public partial class Character : Entity
 	public HashSet<Upgrade> Upgrades { get; set; } = new();
 
 	public bool CanMove { get; set; } = true; // whether or not the local player should be able to manipulate the character
+	public bool CanLook { get; set; } = true; // whether or not the local player should be able to manipulate the character
 	private int JumpsSinceHitGround { get; set; } // keeps track of how many jumps the character has done since last hitting the ground
 	private double TimeSinceXray { get; set; } // for see through walls upgrade
 	public double SlowdownMultiplier { get; set; } = 1.0;
@@ -41,7 +42,6 @@ public partial class Character : Entity
 	public float BaseSpeed = (float)Config.GetValue("upgrade_constants", "base_speed", true);
 	public float SprintMultiplier = (float)Config.GetValue("upgrade_constants", "sprint_multiplier", true);
 	public float JumpVelocity = (float)Config.GetValue("upgrade_constants", "jump_velocity", true);
-	public Vector3 Knockback = Vector3.Zero;
 
 	public override void _EnterTree()
 	{
@@ -72,7 +72,7 @@ public partial class Character : Entity
     {
 		if(!IsMultiplayerAuthority()) return;
 
-		if(Input.MouseMode == Input.MouseModeEnum.Captured)
+		if(CanLook)
 		{
 			if(@event is InputEventMouseMotion)
 			{
@@ -84,6 +84,7 @@ public partial class Character : Entity
 				
             }
 		}
+			
 
         #region MovementAnimationHandling
         AnimationNodeStateMachinePlayback stateMachine = (AnimationNodeStateMachinePlayback)ATree.Get("parameters/playback");
@@ -262,11 +263,23 @@ public partial class Character : Entity
 		velocity.X *= (float)SlowdownMultiplier;
 		velocity.Z *= (float)SlowdownMultiplier;
 
-		Velocity = velocity + Knockback; // apply knockback
+		Velocity = velocity; 
 		MoveAndSlide();
 
-		Knockback = Knockback.Lerp(Vector3.Zero, (float)Config.GetValue("upgrade_constants", "knockback_reduction_strength", true)); // slowly reduce knockback
     }
+
+	public int CalculatePowerLevel()
+	{
+		int powerLevel = 0;
+
+		foreach(Upgrade upgrade in Upgrades)
+		{
+			// @TODO add logic
+			powerLevel++;
+		}
+
+		return powerLevel;
+	}
 
     /// <summary>
     /// Moves the character to a spawn position. It is setup this way because local player has authority over its position, but server also needs to set an initial position
@@ -316,6 +329,17 @@ public partial class Character : Entity
 	public void AddUpgrade(Upgrade upgrade)
 	{
 		Upgrades.Add(upgrade);
+
+		if(Multiplayer.IsServer())
+		{
+			int characterOwner = GetMultiplayerAuthority();
+			int powerLevel = CalculatePowerLevel();
+			if(powerLevel > GameManager.Players[characterOwner].maxPowerLevel)
+			{
+				GameManager.Players[characterOwner].maxPowerLevel = powerLevel;
+				SceneManager.Instance.SendPlayerStats(characterOwner);
+			}
+		}
 	}
 
 	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
@@ -333,7 +357,7 @@ public partial class Character : Entity
 	{
 		if(Multiplayer.GetRemoteSenderId() != 1) return; // only server should broadcast spawn positons
 
-		Knockback += knockbackAdd;
+		Velocity += knockbackAdd;
 	}
 
 	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]

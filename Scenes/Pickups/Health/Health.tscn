@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://cn46vequ2xgdr"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_tokv4"]
+noise_type = 2
+frequency = 0.048
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_r6qge"]
+as_normal_map = true
+bump_strength = 32.0
+noise = SubResource("FastNoiseLite_tokv4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sf30d"]
+albedo_color = Color(0, 0.872664, 0, 1)
+albedo_texture = SubResource("NoiseTexture2D_r6qge")
+metallic_specular = 0.2
+
+[sub_resource type="BoxMesh" id="BoxMesh_esqyt"]
+material = SubResource("StandardMaterial3D_sf30d")
+size = Vector3(0.25, 1, 0.25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rnojw"]
+material = SubResource("StandardMaterial3D_sf30d")
+size = Vector3(0.25, 1, 0.25)
+
+[node name="Health" type="Node3D"]
+
+[node name="PLACEHOLDER" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.272043, 0, 1.77636e-15, 0, 0.272043, 0, 0, 0, 0.277866, 0, 0.333637, 0)
+mesh = SubResource("BoxMesh_esqyt")
+skeleton = NodePath("../../..")
+
+[node name="PLACEHOLDER2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.18914e-08, -0.272043, 0, 0.272043, -1.18914e-08, 0, 0, 0, 0.272043, 0, 0.333637, 0)
+mesh = SubResource("BoxMesh_rnojw")
+skeleton = NodePath("../../..")

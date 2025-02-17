@@ -20,6 +20,7 @@ namespace multiplayerstew.Scripts.Base
 
         public float DamageTakenThisFrame { get; set; }
         private Vector3 KnockbackGainedSinceSync { get; set; } 
+	    public int LastDamagedBy { get; set; }
 
         public void Init()
         { 
@@ -81,6 +82,7 @@ namespace multiplayerstew.Scripts.Base
         {
             float damage = projectile.Damage * hitbox.DamageMultiplier * (hitbox.TriggerVital ?  projectile.VitalMultiplier : 1);
             DamageTakenThisFrame += damage;
+            LastDamagedBy = projectile.projectileOwner;
 
             if(this is Character character)
             {
@@ -104,7 +106,7 @@ namespace multiplayerstew.Scripts.Base
         {
             if(Multiplayer.GetRemoteSenderId() != 1) return; // only server should broadcast health values
 
-            CurrentHealth = Math.Clamp(CurrentHealth - damage, 0.0f, MaxHealth);;
+            CurrentHealth = Math.Clamp(CurrentHealth - damage, 0.0f, MaxHealth);
         }
     }
 }

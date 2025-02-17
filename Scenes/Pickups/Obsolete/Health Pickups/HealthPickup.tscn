@@ -43,26 +43,26 @@ _data = {
 "Rotation": SubResource("Animation_0vvxu")
 }
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_tokv4"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_r5s7f"]
 noise_type = 2
 frequency = 0.048
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hg1p2"]
 as_normal_map = true
 bump_strength = 32.0
-noise = SubResource("FastNoiseLite_tokv4")
+noise = SubResource("FastNoiseLite_r5s7f")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sf30d"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8esgh"]
 albedo_color = Color(0, 0.872664, 0, 1)
 albedo_texture = SubResource("NoiseTexture2D_hg1p2")
 metallic_specular = 0.2
 
 [sub_resource type="BoxMesh" id="BoxMesh_t0a5r"]
-material = SubResource("StandardMaterial3D_sf30d")
+material = SubResource("StandardMaterial3D_8esgh")
 size = Vector3(0.25, 1, 0.25)
 
 [sub_resource type="BoxMesh" id="BoxMesh_8xnlx"]
-material = SubResource("StandardMaterial3D_sf30d")
+material = SubResource("StandardMaterial3D_8esgh")
 size = Vector3(0.25, 1, 0.25)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_uhyuo"]

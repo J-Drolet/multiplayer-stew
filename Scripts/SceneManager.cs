@@ -2,6 +2,7 @@ using Godot;
 using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Services;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -13,6 +14,8 @@ public partial class SceneManager : Node
 	[Export]
 	public bool ChangingSpawns { get; set; } = true;
 
+	private bool GameOver = false;
+
 	private Random RNG = new();
 
 	public List<Node3D> SpawnPoints;
@@ -20,6 +23,9 @@ public partial class SceneManager : Node
 	private Node3D PlayerContainer;
 
 	public static SceneManager Instance;
+
+	private double GameTime; // keeps track on the server if the game is over yet
+	private double BetweenRoundTime; // server keeps track of time between end game and kick back to lobby
 
 	public override void _Ready() 
 	{   
@@ -41,13 +47,22 @@ public partial class SceneManager : Node
 			}
 
 			SetupPlayerStructure(key); // everyone needs to have this structure to sync projectiles
+			GameManager.Players[key].kills = 0;
+			GameManager.Players[key].deaths = 0;
+			GameManager.Players[key].maxPowerLevel = 0;
+			GameManager.Players[key].aura = 0;
 		}
+		GameTime = 0;
 
 		
 		if(!Multiplayer.IsServer()) 
 		{
 			UI.InGameUI.Show();
 			Input.MouseMode = Input.MouseModeEnum.Captured;
+		}
+		else 
+		{
+			GameOver = false; // mark the game as not over
 		}
 	}
 
@@ -92,17 +107,50 @@ public partial class SceneManager : Node
 
     public override void _Process(double delta)
     {
+		if(GameOver) {
+			BetweenRoundTime += delta;
+			if(BetweenRoundTime >= (double)Config.GetValue("game_constants", "seconds_between_games", true))
+			{
+				Rpc(MethodName.ReturnToLobby);
+				QueueFree(); // delete scene when we return to lobby
+			}
+
+			return;
+		}
+
 		if(Multiplayer.IsServer())
 		{
+			int maxAura = 0;
 			foreach(long id in GameManager.Players.Keys)
 			{
-				//GD.Print("Examining player " + id);
-				if(GameManager.Players[id].characterNode != null) {
-					if(GameManager.Players[id].characterNode.CurrentHealth == 0)
+				maxAura += GameManager.Players[id].aura;
+				Character character = GameManager.Players[id].characterNode;
+				if(character != null) {
+					if(character.CurrentHealth == 0)
 					{
+						GameManager.Players[id].deaths += 1;
+
+						if(GameManager.Players.ContainsKey(character.LastDamagedBy))
+						{
+							GameManager.Players[character.LastDamagedBy].kills += 1;
+							GameManager.Players[character.LastDamagedBy].aura += GameManager.Players[id].characterNode.CalculatePowerLevel();
+						}
+
 						RespawnPlayer(id);
+
+						SendPlayerStats((int)id);
+						SendPlayerStats(character.LastDamagedBy);
 					}
 				}
+			}
+
+			GameTime += delta;
+			// End game code
+			if(GameTime >= GameManager.GameDurationSeconds || maxAura >= GameManager.MaxAura) 
+			{
+				GameOver = true;
+				Rpc(MethodName.NotifyEndGame);
+				BetweenRoundTime = 0;
 			}
 		}
     }
@@ -112,5 +160,49 @@ public partial class SceneManager : Node
 	{
 		long peerId = Multiplayer.GetRemoteSenderId();
 		GameManager.Players[peerId].characterNode.RpcId(peerId, Character.MethodName.SetSpawnPoint, GameManager.Players[peerId].spawnPoint.GlobalPosition, GameManager.Players[peerId].spawnPoint.GlobalRotation);
+	}
+
+	public void SendPlayerStats(int peerId)
+	{
+		Rpc(MethodName.SetPlayerStats, peerId, GameManager.Players[peerId].kills, GameManager.Players[peerId].deaths, GameManager.Players[peerId].maxPowerLevel, GameManager.Players[peerId].aura);
+	}
+
+	[Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+	public void SetPlayerStats(int peerId, int kills, int deaths, int maxPowerLevel, int aura)
+	{
+		if(GameManager.Players.ContainsKey(peerId))
+		{
+			GameManager.Players[peerId].kills = kills;
+			GameManager.Players[peerId].deaths = deaths;
+			GameManager.Players[peerId].maxPowerLevel = maxPowerLevel;
+			GameManager.Players[peerId].aura = aura;
+		}
+	}
+
+	[Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+	public void NotifyEndGame()
+	{
+		Character localCharacter = GameManager.Players[Multiplayer.GetUniqueId()].characterNode;
+		localCharacter.CanLook = false;
+		localCharacter.CanMove = false;
+
+		UI.EndOfGame.Show();
+	}
+
+	[Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+	public void ReturnToLobby()
+	{
+		foreach(GameManager.PlayerInfo playerInfo in GameManager.Players.Values)
+		{
+			if(playerInfo.characterNode != null)
+			{
+				playerInfo.characterNode.QueueFree();
+				playerInfo.characterNode = null;
+			}
+		}
+		UI.EndOfGame.Hide();
+		UI.InGameUI.Hide();
+		UI.MainMenu.OpenMainMenu();
+		UI.Lobby.Show();
 	}
 }

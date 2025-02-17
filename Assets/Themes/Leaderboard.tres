@@ -1,0 +1,18 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bj4ywnld62bs4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05efn"]
+bg_color = Color(0.203479, 0.490423, 0.253062, 0.290196)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[resource]
+HeaderLarge/base_type = &"Label"
+HeaderLarge/font_sizes/font_size = 50
+Panel/styles/panel = SubResource("StyleBoxFlat_05efn")
