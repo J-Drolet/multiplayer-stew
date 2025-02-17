@@ -16,11 +16,13 @@ public partial class PauseMenu : Control
         {
             Input.MouseMode = Input.MouseModeEnum.Visible;
             GameManager.Players[Multiplayer.GetUniqueId()].characterNode.CanMove = false;
+            GameManager.Players[Multiplayer.GetUniqueId()].characterNode.CanLook = false;
         }
         else
         {
             Input.MouseMode = Input.MouseModeEnum.Captured;
             GameManager.Players[Multiplayer.GetUniqueId()].characterNode.CanMove = true;
+            GameManager.Players[Multiplayer.GetUniqueId()].characterNode.CanLook = true;
         }
     }
 

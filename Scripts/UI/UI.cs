@@ -11,7 +11,8 @@ public partial class UI: Node
     public static Control Spinner { get; set; }
     public static SettingsScreen SettingsScreen { get; set; }
     public static InGameUI InGameUI { get; set; }
-    public static GunViewCamera gunViewCamera { get; set; }
+    public static GunViewCamera GunViewCamera { get; set; }
+    public static Scoreboard Scoreboard { get; set; }
     
     public static void DisplayError(string errorText) 
     {   
@@ -35,6 +36,20 @@ public partial class UI: Node
                 ServerBrowser.Hide();
             }
         }
+    }
+
+    public override void _Process(double delta)
+    {
+        if(MainMenu.Visible || !Input.IsActionPressed("ViewScoreboard"))
+        {
+            Scoreboard.Hide();
+        }
+        else if(Input.IsActionJustPressed("ViewScoreboard"))
+        {
+            Scoreboard.RefreshScoreboard();
+            Scoreboard.Show();
+        }
+
     }
 
     public static void ToggleSpinner(bool visibility) 

@@ -31,6 +31,7 @@ public partial class Character : Entity
 	public HashSet<Upgrade> Upgrades { get; set; } = new();
 
 	public bool CanMove { get; set; } = true; // whether or not the local player should be able to manipulate the character
+	public bool CanLook { get; set; } = true; // whether or not the local player should be able to manipulate the character
 	private int JumpsSinceHitGround { get; set; } // keeps track of how many jumps the character has done since last hitting the ground
 	private double TimeSinceXray { get; set; } // for see through walls upgrade
 	public double SlowdownMultiplier { get; set; } = 1.0;
@@ -72,7 +73,7 @@ public partial class Character : Entity
     {
 		if(!IsMultiplayerAuthority()) return;
 
-		if(Input.MouseMode == Input.MouseModeEnum.Captured)
+		if(CanLook)
 		{
 			if(@event is InputEventMouseMotion)
 			{
@@ -84,6 +85,7 @@ public partial class Character : Entity
 				
             }
 		}
+			
 
         #region MovementAnimationHandling
         AnimationNodeStateMachinePlayback stateMachine = (AnimationNodeStateMachinePlayback)ATree.Get("parameters/playback");

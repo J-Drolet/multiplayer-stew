@@ -1,0 +1,268 @@
+[gd_scene load_steps=8 format=3 uid="uid://b2wqxmis36qbr"]
+
+[ext_resource type="Theme" uid="uid://bj4ywnld62bs4" path="res://Assets/Themes/Leaderboard.tres" id="1_n4w03"]
+[ext_resource type="Script" path="res://Scripts/UI/Scoreboard/Scoreboard.cs" id="1_nbp7v"]
+[ext_resource type="Script" path="res://Scripts/UI/Scoreboard/ScoreboardInfo.cs" id="3_isil7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_scopn"]
+bg_color = Color(0.309804, 0.309804, 0.309804, 0.482353)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ro6eg"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_right = 1
+border_color = Color(0, 0, 0, 0.572549)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jccr6"]
+bg_color = Color(0.815686, 0.501961, 0, 0.407843)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="FontVariation" id="FontVariation_o87q0"]
+variation_embolden = 1.0
+
+[node name="Leaderboard" type="Control" node_paths=PackedStringArray("PeerPrototype")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_nbp7v")
+PeerPrototype = NodePath("Panel/Panel/ScrollContainer/VBoxContainer/PeerPrototype")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("1_n4w03")
+
+[node name="Title" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.106
+offset_bottom = 0.311996
+grow_horizontal = 2
+theme = ExtResource("1_n4w03")
+theme_type_variation = &"HeaderLarge"
+text = "Leaderboard"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.153
+anchor_top = 0.191
+anchor_right = 0.847
+anchor_bottom = 0.809
+offset_left = -0.256012
+offset_top = 0.231987
+offset_right = 0.25592
+offset_bottom = -0.231995
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("1_n4w03")
+theme_override_styles/panel = SubResource("StyleBoxFlat_scopn")
+
+[node name="Header" type="Panel" parent="Panel/Panel"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+mouse_filter = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Panel/Header"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_n4w03")
+
+[node name="Name" type="Label" parent="Panel/Panel/Header/HBoxContainer"]
+custom_minimum_size = Vector2(66, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_n4w03")
+theme_override_constants/outline_size = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_ro6eg")
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Aura" type="Label" parent="Panel/Panel/Header/HBoxContainer"]
+custom_minimum_size = Vector2(66, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_n4w03")
+theme_override_constants/outline_size = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_ro6eg")
+text = "Aura"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Kills" type="Label" parent="Panel/Panel/Header/HBoxContainer"]
+custom_minimum_size = Vector2(66, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_n4w03")
+theme_override_constants/outline_size = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_ro6eg")
+text = "Kills"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Deaths" type="Label" parent="Panel/Panel/Header/HBoxContainer"]
+custom_minimum_size = Vector2(66, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_n4w03")
+theme_override_constants/outline_size = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_ro6eg")
+text = "Deaths"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaxPowerLevel" type="Label" parent="Panel/Panel/Header/HBoxContainer"]
+custom_minimum_size = Vector2(66, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_n4w03")
+theme_override_constants/outline_size = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_ro6eg")
+text = "Max PL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ping" type="Label" parent="Panel/Panel/Header/HBoxContainer"]
+custom_minimum_size = Vector2(66, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_n4w03")
+theme_override_constants/outline_size = 6
+text = "Ping"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.085
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PeerPrototype" type="Panel" parent="Panel/Panel/ScrollContainer/VBoxContainer" node_paths=PackedStringArray("nameLabel", "killsLabel", "deathsLabel", "maxPowerLevelLabel", "auraLabel", "pingLabel")]
+visible = false
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jccr6")
+script = ExtResource("3_isil7")
+nameLabel = NodePath("HBoxContainer/Name")
+killsLabel = NodePath("HBoxContainer/Kills")
+deathsLabel = NodePath("HBoxContainer/Deaths")
+maxPowerLevelLabel = NodePath("HBoxContainer/MaxPowerLevel")
+auraLabel = NodePath("HBoxContainer/Aura")
+pingLabel = NodePath("HBoxContainer/Ping")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Panel/ScrollContainer/VBoxContainer/PeerPrototype"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Name" type="Label" parent="Panel/Panel/ScrollContainer/VBoxContainer/PeerPrototype/HBoxContainer"]
+custom_minimum_size = Vector2(66, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_n4w03")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_ro6eg")
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Aura" type="Label" parent="Panel/Panel/ScrollContainer/VBoxContainer/PeerPrototype/HBoxContainer"]
+custom_minimum_size = Vector2(66, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_n4w03")
+theme_override_fonts/font = SubResource("FontVariation_o87q0")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_ro6eg")
+text = "Aura"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Kills" type="Label" parent="Panel/Panel/ScrollContainer/VBoxContainer/PeerPrototype/HBoxContainer"]
+custom_minimum_size = Vector2(66, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_n4w03")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_ro6eg")
+text = "Kills"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Deaths" type="Label" parent="Panel/Panel/ScrollContainer/VBoxContainer/PeerPrototype/HBoxContainer"]
+custom_minimum_size = Vector2(66, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_n4w03")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_ro6eg")
+text = "Deaths"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaxPowerLevel" type="Label" parent="Panel/Panel/ScrollContainer/VBoxContainer/PeerPrototype/HBoxContainer"]
+custom_minimum_size = Vector2(66, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_n4w03")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_ro6eg")
+text = "Max Power Level"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ping" type="Label" parent="Panel/Panel/ScrollContainer/VBoxContainer/PeerPrototype/HBoxContainer"]
+custom_minimum_size = Vector2(66, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_n4w03")
+theme_override_font_sizes/font_size = 12
+text = "Ping"
+horizontal_alignment = 1
+vertical_alignment = 1
