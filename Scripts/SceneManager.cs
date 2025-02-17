@@ -96,11 +96,22 @@ public partial class SceneManager : Node
 		{
 			foreach(long id in GameManager.Players.Keys)
 			{
-				//GD.Print("Examining player " + id);
-				if(GameManager.Players[id].characterNode != null) {
-					if(GameManager.Players[id].characterNode.CurrentHealth == 0)
+				Character character = GameManager.Players[id].characterNode;
+				if(character != null) {
+					if(character.CurrentHealth == 0)
 					{
+						GameManager.Players[id].deaths += 1;
+
+						if(GameManager.Players.ContainsKey(character.LastDamagedBy))
+						{
+							GameManager.Players[character.LastDamagedBy].kills += 1;
+							GameManager.Players[character.LastDamagedBy].aura += GameManager.Players[id].characterNode.CalculatePowerLevel();
+						}
+
 						RespawnPlayer(id);
+
+						SendPlayerStats((int)id);
+						SendPlayerStats(character.LastDamagedBy);
 					}
 				}
 			}
@@ -112,5 +123,22 @@ public partial class SceneManager : Node
 	{
 		long peerId = Multiplayer.GetRemoteSenderId();
 		GameManager.Players[peerId].characterNode.RpcId(peerId, Character.MethodName.SetSpawnPoint, GameManager.Players[peerId].spawnPoint.GlobalPosition, GameManager.Players[peerId].spawnPoint.GlobalRotation);
+	}
+
+	public void SendPlayerStats(int peerId)
+	{
+		Rpc(MethodName.SetPlayerStats, peerId, GameManager.Players[peerId].kills, GameManager.Players[peerId].deaths, GameManager.Players[peerId].maxPowerLevel, GameManager.Players[peerId].aura);
+	}
+
+	[Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+	public void SetPlayerStats(int peerId, int kills, int deaths, int maxPowerLevel, int aura)
+	{
+		if(GameManager.Players.ContainsKey(peerId))
+		{
+			GameManager.Players[peerId].kills = kills;
+			GameManager.Players[peerId].deaths = deaths;
+			GameManager.Players[peerId].maxPowerLevel = maxPowerLevel;
+			GameManager.Players[peerId].aura = aura;
+		}
 	}
 }

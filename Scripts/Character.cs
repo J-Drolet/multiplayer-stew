@@ -268,6 +268,19 @@ public partial class Character : Entity
 		Knockback = Knockback.Lerp(Vector3.Zero, (float)Config.GetValue("upgrade_constants", "knockback_reduction_strength", true)); // slowly reduce knockback
     }
 
+	public int CalculatePowerLevel()
+	{
+		int powerLevel = 0;
+
+		foreach(Upgrade upgrade in Upgrades)
+		{
+			// @TODO add logic
+			powerLevel++;
+		}
+
+		return powerLevel;
+	}
+
     /// <summary>
     /// Moves the character to a spawn position. It is setup this way because local player has authority over its position, but server also needs to set an initial position
     /// </summary>
@@ -316,6 +329,17 @@ public partial class Character : Entity
 	public void AddUpgrade(Upgrade upgrade)
 	{
 		Upgrades.Add(upgrade);
+
+		if(Multiplayer.IsServer())
+		{
+			int characterOwner = GetMultiplayerAuthority();
+			int powerLevel = CalculatePowerLevel();
+			if(powerLevel > GameManager.Players[characterOwner].maxPowerLevel)
+			{
+				GameManager.Players[characterOwner].maxPowerLevel = powerLevel;
+				SceneManager.Instance.SendPlayerStats(characterOwner);
+			}
+		}
 	}
 
 	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]

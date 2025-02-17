@@ -12,6 +12,12 @@ public static class GameManager
         public Node3D projectileParent;
         public Node3D spawnPoint;
         public MultiplayerSpawner projectileSpawner;
+
+        // Game stats
+        public int kills;
+        public int deaths;
+        public int maxPowerLevel;
+        public int aura;
     }
 
     public static long GameHost { get; set; } = -1;
