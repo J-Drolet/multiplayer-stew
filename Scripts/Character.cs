@@ -42,7 +42,6 @@ public partial class Character : Entity
 	public float BaseSpeed = (float)Config.GetValue("upgrade_constants", "base_speed", true);
 	public float SprintMultiplier = (float)Config.GetValue("upgrade_constants", "sprint_multiplier", true);
 	public float JumpVelocity = (float)Config.GetValue("upgrade_constants", "jump_velocity", true);
-	public Vector3 Knockback = Vector3.Zero;
 
 	public override void _EnterTree()
 	{
@@ -264,10 +263,9 @@ public partial class Character : Entity
 		velocity.X *= (float)SlowdownMultiplier;
 		velocity.Z *= (float)SlowdownMultiplier;
 
-		Velocity = velocity + Knockback; // apply knockback
+		Velocity = velocity; 
 		MoveAndSlide();
 
-		Knockback = Knockback.Lerp(Vector3.Zero, (float)Config.GetValue("upgrade_constants", "knockback_reduction_strength", true)); // slowly reduce knockback
     }
 
 	public int CalculatePowerLevel()
@@ -359,7 +357,7 @@ public partial class Character : Entity
 	{
 		if(Multiplayer.GetRemoteSenderId() != 1) return; // only server should broadcast spawn positons
 
-		Knockback += knockbackAdd;
+		Velocity += knockbackAdd;
 	}
 
 	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
