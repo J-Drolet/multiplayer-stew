@@ -13,6 +13,7 @@ public partial class UI: Node
     public static InGameUI InGameUI { get; set; }
     public static GunViewCamera GunViewCamera { get; set; }
     public static Scoreboard Scoreboard { get; set; }
+    public static EndOfGame EndOfGame { get; set; }
     
     public static void DisplayError(string errorText) 
     {   
@@ -28,7 +29,7 @@ public partial class UI: Node
             }
             else if(!MainMenu.Visible) // if in game we can toggle the pause menu
             {
-                PauseMenu.ToggleView();
+                PauseMenu.Visible = !PauseMenu.Visible;
             }
 
             if(ServerBrowser.Visible) 
@@ -40,13 +41,14 @@ public partial class UI: Node
 
     public override void _Process(double delta)
     {
-        if(MainMenu.Visible || !Input.IsActionPressed("ViewScoreboard"))
+        if(Multiplayer.IsServer()) return;
+        
+        if(MainMenu.Visible || (!Input.IsActionPressed("ViewScoreboard") && !EndOfGame.Visible))
         {
             Scoreboard.Hide();
         }
         else if(Input.IsActionJustPressed("ViewScoreboard"))
         {
-            Scoreboard.RefreshScoreboard();
             Scoreboard.Show();
         }
 

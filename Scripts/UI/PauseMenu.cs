@@ -6,12 +6,11 @@ public partial class PauseMenu : Control
     public override void _Ready()
     {
         UI.PauseMenu = this;
+        VisibilityChanged += OnVisibilityChanged;
     }
 
-    public void ToggleView()
+    private void OnVisibilityChanged()
     {
-        Visible = !Visible;
-
         if(Visible)
         {
             Input.MouseMode = Input.MouseModeEnum.Visible;
@@ -26,10 +25,9 @@ public partial class PauseMenu : Control
         }
     }
 
-
     public void OnReturnButtonPressed()
     {
-        ToggleView();
+        Hide();
     }
 
     public void OnSettingsButtonPressed()

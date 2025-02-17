@@ -48,6 +48,27 @@ theme = ExtResource("1_c0h8v")
 theme_override_font_sizes/font_size = 100
 text = "Multiplayer Stew"
 
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.479
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.191956
+grow_horizontal = 0
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+world_3d = SubResource("World3D_quggo")
+transparent_bg = true
+handle_input_locally = false
+msaa_3d = 2
+size = Vector2i(600, 648)
+render_target_update_mode = 4
+
+[node name="MainMenuScene" parent="SubViewportContainer/SubViewport" instance=ExtResource("7_xli4m")]
+
 [node name="Buttons" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -114,27 +135,6 @@ LobbyPage = NodePath("../Lobby")
 stream = ExtResource("5_batqw")
 autoplay = true
 bus = &"Music"
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.479
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 0.191956
-grow_horizontal = 0
-grow_vertical = 2
-stretch = true
-
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
-world_3d = SubResource("World3D_quggo")
-transparent_bg = true
-handle_input_locally = false
-msaa_3d = 2
-size = Vector2i(600, 648)
-render_target_update_mode = 4
-
-[node name="MainMenuScene" parent="SubViewportContainer/SubViewport" instance=ExtResource("7_xli4m")]
 
 [connection signal="pressed" from="Buttons/Host" to="." method="OnHostPressed"]
 [connection signal="pressed" from="Buttons/Join" to="." method="OnJoinPressed"]

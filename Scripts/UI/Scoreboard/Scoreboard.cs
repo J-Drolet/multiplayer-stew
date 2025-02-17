@@ -16,6 +16,15 @@ public partial class Scoreboard : Control
         GodotErrorService.ValidateRequiredData(this);
 
         UI.Scoreboard = this;
+        VisibilityChanged += OnVisibilityChanged;
+    }
+
+    private void OnVisibilityChanged()
+    {
+        if(Visible)
+        {
+            RefreshScoreboard();
+        }
     }
 
     public void RefreshScoreboard()
