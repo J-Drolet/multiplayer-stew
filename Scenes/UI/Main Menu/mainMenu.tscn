@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://emhg32smyqx0"]
+[gd_scene load_steps=10 format=3 uid="uid://emhg32smyqx0"]
 
 [ext_resource type="Script" path="res://Scripts/UI/MainMenu.cs" id="1_8m0rs"]
 [ext_resource type="Theme" uid="uid://y8ujbi36xquh" path="res://Assets/Themes/MainMenu.tres" id="1_c0h8v"]
@@ -6,6 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://cyk5w16gxy3dv" path="res://Scenes/UI/Main Menu/lobby.tscn" id="4_tv7ky"]
 [ext_resource type="AudioStream" uid="uid://dhrsn7p8mxbxj" path="res://Assets/Sounds/Music/Electronic Vol5 Golden Gates Main.wav" id="5_batqw"]
 [ext_resource type="PackedScene" uid="uid://3epym377x1iu" path="res://Scenes/UI/Main Menu/ServerBrowser.tscn" id="5_g6thw"]
+[ext_resource type="PackedScene" uid="uid://cudk3xia134co" path="res://Scenes/UI/Main Menu/MainMenuScene.tscn" id="7_xli4m"]
+
+[sub_resource type="Environment" id="Environment_hjl3j"]
+
+[sub_resource type="World3D" id="World3D_quggo"]
+environment = SubResource("Environment_hjl3j")
 
 [node name="MainMenu" type="Control" node_paths=PackedStringArray("JoinInformation", "LobbyPage", "MainMenuMusic")]
 layout_mode = 3
@@ -27,7 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.447059, 0.490196, 0.45098, 1)
+color = Color(0.263981, 0.29494, 0.266843, 1)
 
 [node name="Label" type="Label" parent="Background"]
 layout_mode = 1
@@ -108,6 +114,27 @@ LobbyPage = NodePath("../Lobby")
 stream = ExtResource("5_batqw")
 autoplay = true
 bus = &"Music"
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.479
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.191956
+grow_horizontal = 0
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+world_3d = SubResource("World3D_quggo")
+transparent_bg = true
+handle_input_locally = false
+msaa_3d = 2
+size = Vector2i(600, 648)
+render_target_update_mode = 4
+
+[node name="MainMenuScene" parent="SubViewportContainer/SubViewport" instance=ExtResource("7_xli4m")]
 
 [connection signal="pressed" from="Buttons/Host" to="." method="OnHostPressed"]
 [connection signal="pressed" from="Buttons/Join" to="." method="OnJoinPressed"]
