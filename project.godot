@@ -33,7 +33,7 @@ project/assembly_name="multiplayer-stew"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/AssetPlacer_1.4.0/assetplacer/plugin.cfg", "res://addons/assetplacer/plugin.cfg")
+enabled=PackedStringArray("res://addons/assetplacer/plugin.cfg")
 
 [global_group]
 

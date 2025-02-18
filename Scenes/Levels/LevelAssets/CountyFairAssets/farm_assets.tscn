@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd6r211d1fkdw"]
+
+[ext_resource type="PackedScene" uid="uid://bk07cxk2h0ca3" path="res://Assets/Models/TEST/Farm-Assets.glb" id="1_3udbm"]
+
+[node name="Farm-Assets" instance=ExtResource("1_3udbm")]

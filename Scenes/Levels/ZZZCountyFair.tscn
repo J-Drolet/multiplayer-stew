@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cif1rylh3ul7d"]
+[gd_scene load_steps=19 format=3 uid="uid://cif1rylh3ul7d"]
 
 [ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_aiq0j"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_4bfgx"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://ym1rv5fryhph" path="res://Assets/Textures/Fair/grass_7.png" id="4_cv60m"]
 [ext_resource type="PackedScene" uid="uid://cblot42ihgprm" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/tent1.tscn" id="5_8y381"]
 [ext_resource type="PackedScene" uid="uid://we5j62fteymy" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/tent2.tscn" id="6_e21cy"]
+[ext_resource type="PackedScene" uid="uid://gr5wk6mlmrwm" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/rv_1.tscn" id="7_wepmo"]
+[ext_resource type="PackedScene" uid="uid://c2hjfaispr4gm" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/tractor.tscn" id="8_xthw8"]
+[ext_resource type="PackedScene" uid="uid://dc0s6rskik3o3" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/storage_variant_3.tscn" id="9_sfgm3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afd3o"]
 render_priority = 1
@@ -87,9 +90,23 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FairGround/StaticBody3D"]
 shape = SubResource("BoxShape3D_14sks")
 
-[node name="tent1_tscn" type="Node3D" parent="." instance=ExtResource("5_8y381")]
+[node name="tent1_tscn" parent="." instance=ExtResource("5_8y381")]
 transform = Transform3D(87.7473, -47.9626, -4.21833e-06, 0, -4.37114e-06, 201.207, -47.9626, -87.7473, -7.71741e-06, -17.8676, 0, -11.8236)
 
-[node name="tent2_tscn" type="Node3D" parent="." instance=ExtResource("6_e21cy")]
+[node name="tent2_tscn" parent="." instance=ExtResource("6_e21cy")]
 transform = Transform3D(81.9152, 57.3576, 0, 2.50718e-06, -3.58063e-06, 201.207, 57.3576, -81.9152, -8.79504e-06, 7.3022, -5.8801e-07, -9.97697)
-metadata/_edit_group_ = true
+
+[node name="rv_1_tscn" type="Node3D" parent="." instance=ExtResource("7_wepmo")]
+transform = Transform3D(1.71082, 0, -0.539341, 0, 0.712958, 0, 1.61615, 0, 0.570936, -26.3357, -9.53674e-07, -6.55139)
+
+[node name="tractor_tscn" type="Node3D" parent="." instance=ExtResource("8_xthw8")]
+transform = Transform3D(-0.0171416, -0.00567965, 2.48265e-10, 0, -7.8934e-10, -0.018058, 0.00567965, -0.0171416, 7.49281e-10, 10.1536, 0, -2.19059)
+
+[node name="storage_variant_3_tscn" type="Node3D" parent="." instance=ExtResource("9_sfgm3")]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.01, 0, 0.01, -4.37114e-10, -10.4708, 0.00698096, -9.93194)
+
+[node name="storage_variant_3_tscn2" type="Node3D" parent="." instance=ExtResource("9_sfgm3")]
+transform = Transform3D(0.0085785, -0.00513901, 2.24633e-10, 0, -4.37114e-10, -0.01, 0.00513901, 0.0085785, -3.74978e-10, -10.5152, 0.283658, -9.94883)
+
+[node name="storage_variant_3_tscn3" type="Node3D" parent="." instance=ExtResource("9_sfgm3")]
+transform = Transform3D(0.00891782, 0.00452466, -1.97779e-10, 0, -4.37114e-10, -0.01, -0.00452466, 0.00891782, -3.8981e-10, -10.4124, 0.560336, -10.3066)
