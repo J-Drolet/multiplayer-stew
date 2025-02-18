@@ -10,6 +10,11 @@ public partial class LevelManager : Node
 {   
 	[Export]
 	public string PlayerStatJson;
+	[Export]
+	private double GameTime; // keeps track on the server if the game is over yet
+	[Export]
+	private double BetweenRoundTime; // server keeps track of time between end game and kick back to lobby
+	private bool GameOver = false;
 
 	public Dictionary<long, PlayerStat> PlayerStats = new();
 
@@ -21,18 +26,11 @@ public partial class LevelManager : Node
 	[Export]
 	public bool ChangingSpawns { get; set; } = true;
 
-	private bool GameOver = false;
-
-	private Random RNG = new();
+	private Random RNG = new(); // easier to keep here for randomizing spawns
 
 	public List<Node3D> SpawnPoints;
 
-	private Node3D PlayerContainer;
-
 	public static LevelManager Instance;
-
-	private double GameTime; // keeps track on the server if the game is over yet
-	private double BetweenRoundTime; // server keeps track of time between end game and kick back to lobby
 
 	public override void _Ready() 
 	{   
@@ -119,20 +117,19 @@ public partial class LevelManager : Node
 
     public override void _Process(double delta)
     {
-		if(GameOver) {
-			BetweenRoundTime += delta;
-			if(BetweenRoundTime >= (double)Config.GetValue("game_constants", "seconds_between_games", true))
-			{
-				Rpc(MethodName.ReturnToLobby);
-				QueueFree(); // delete scene when we return to lobby
-			}
-
-			return;
-		}
-
 		if(Multiplayer.IsServer())
 		{
 			PlayerStatJson = JsonSerializer.Serialize(PlayerStats);
+			if(GameOver) {
+				BetweenRoundTime += delta;
+				if(BetweenRoundTime >= (double)Config.GetValue("game_constants", "seconds_between_games", true))
+				{
+					Rpc(MethodName.ReturnToLobby);
+					QueueFree(); // delete scene when we return to lobby
+				}
+
+				return;
+			}
 
 			int maxAura = 0;
 			foreach(long id in LevelPeerInfo.Keys)
@@ -153,11 +150,6 @@ public partial class LevelManager : Node
 						}
 
 						RespawnPlayer(id);
-
-						/*
-						SendPlayerStats((int)id);
-						SendPlayerStats(character.LastDamagedBy);
-						*/
 					}
 				}
 			}
@@ -171,7 +163,7 @@ public partial class LevelManager : Node
 				BetweenRoundTime = 0;
 			}
 		}
-		else 
+		else // Only local peer code
 		{
 			if(PlayerStatJson.Length != 0)
 			{
@@ -186,24 +178,6 @@ public partial class LevelManager : Node
 		long peerId = Multiplayer.GetRemoteSenderId();
 		LevelPeerInfo[peerId].characterNode.RpcId(peerId, Character.MethodName.SetSpawnPoint, LevelPeerInfo[peerId].spawnPoint.GlobalPosition, LevelPeerInfo[peerId].spawnPoint.GlobalRotation);
 	}
-/*
-	public void SendPlayerStats(int peerId)
-	{
-		Rpc(MethodName.SetPlayerStats, peerId, GameManager.Players[peerId].kills, GameManager.Players[peerId].deaths, GameManager.Players[peerId].maxPowerLevel, GameManager.Players[peerId].aura);
-	}
-
-	[Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-	public void SetPlayerStats(int peerId, int kills, int deaths, int maxPowerLevel, int aura)
-	{
-		if(GameManager.Players.ContainsKey(peerId))
-		{
-			GameManager.Players[peerId].kills = kills;
-			GameManager.Players[peerId].deaths = deaths;
-			GameManager.Players[peerId].maxPowerLevel = maxPowerLevel;
-			GameManager.Players[peerId].aura = aura;
-		}
-	}
-	*/
 
 	[Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
 	public void NotifyEndGame()
