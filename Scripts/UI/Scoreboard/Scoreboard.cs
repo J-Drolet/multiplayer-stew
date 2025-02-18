@@ -38,16 +38,18 @@ public partial class Scoreboard : Control
             }
         }
 
-        foreach(KeyValuePair<long, GameManager.PlayerInfo> peer in GameManager.Players.OrderBy(x => x.Value.aura).ThenByDescending(x => x.Value.deaths).ThenBy(x => x.Value.name))
+        Dictionary<long, PlayerStat> playerStats = LevelManager.Instance.PlayerStats;
+        List<long> peers = playerStats.Keys.OrderBy(x => playerStats[x].aura).ThenByDescending(x => playerStats[x].deaths).ThenBy(x => GameSessionManager.ConnectedPeers[x].name).ToList();
+        foreach(long peerId in peers)
         {
             ScoreboardInfo peerInfo = (ScoreboardInfo) PeerPrototype.Duplicate();
-            peerInfo.Name = peer.Key.ToString();
+            peerInfo.Name = peerId.ToString();
 
-            peerInfo.nameLabel.Text = peer.Value.name;
-            peerInfo.killsLabel.Text = peer.Value.kills.ToString();
-            peerInfo.deathsLabel.Text = peer.Value.deaths.ToString();
-            peerInfo.maxPowerLevelLabel.Text = peer.Value.maxPowerLevel.ToString();
-            peerInfo.auraLabel.Text = peer.Value.aura.ToString();
+            peerInfo.nameLabel.Text = GameSessionManager.ConnectedPeers[peerId].name;
+            peerInfo.killsLabel.Text = LevelManager.Instance.PlayerStats[peerId].kills.ToString();
+            peerInfo.deathsLabel.Text = LevelManager.Instance.PlayerStats[peerId].deaths.ToString();
+            peerInfo.maxPowerLevelLabel.Text = LevelManager.Instance.PlayerStats[peerId].maxPowerLevel.ToString();
+            peerInfo.auraLabel.Text = LevelManager.Instance.PlayerStats[peerId].aura.ToString();
             //peerInfo.pingLabel.Text = peer.Value.ping;
 
             PeerPrototype.AddSibling(peerInfo);

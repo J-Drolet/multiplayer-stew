@@ -64,13 +64,13 @@ public partial class Client : Node
     /// </summary>
     public void Disconnect()
     {
-        if (GameManager.GameHost == Multiplayer.GetUniqueId()) // if client is the host, close the server
+        if (GameSessionManager.GameHost == Multiplayer.GetUniqueId()) // if client is the host, close the server
         {
             CloseServer();
         }
 
         UI.GunViewCamera.active = false;
-        GameManager.Players.Clear();
+        GameSessionManager.ConnectedPeers.Clear();
         Peer.Close();
     }
 
@@ -120,11 +120,11 @@ public partial class Client : Node
     private void PeerDisconnected(long id)
     {
         GD.Print($"Peer {Multiplayer.GetUniqueId()} received message: Player disconnected: {id}");
-        GameManager.Players.Remove(id);        
+        GameSessionManager.ConnectedPeers.Remove(id);        
         UI.Lobby.RefreshLobby();
         if (id == 1) // if the server disconnected we get kicked back to main menu
         {
-            GameManager.LeaveJoinedGame();
+            GameSessionManager.LeaveJoinedGame();
             UI.ErrorMessage.DisplayError("Server disconnected");
         }
     }
@@ -135,22 +135,21 @@ public partial class Client : Node
 
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyPlayerConnected(long id, string name, int sequenceNumber) {
-        GameManager.Players.Add(id, new GameManager.PlayerInfo{ name = name, sequenceNumber = sequenceNumber });
+        GameSessionManager.ConnectedPeers.Add(id, new PeerInfo{ name = name, sequenceNumber = sequenceNumber });
         UI.Lobby.RefreshLobby();
     }
 
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyStartGame(string filepath, int durationInSeconds, int maxAura)
     {
-        UI.GunViewCamera.active = true;
         UI.MainMenu.CloseMainMenu();
-        GameManager.GameDurationSeconds = durationInSeconds;
-        GameManager.MaxAura = maxAura;
+        GameSessionManager.GameDurationSeconds = durationInSeconds;
+        GameSessionManager.MaxAura = maxAura;
     }
 
     [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyCurrentHost(long hostId) {
-        GameManager.GameHost = hostId;
+        GameSessionManager.GameHost = hostId;
         UI.Lobby.SetHost(hostId);
     }
 
@@ -162,7 +161,7 @@ public partial class Client : Node
     public void NotifyConnectionRefused(string reason) {
         GD.Print("Client.NotifyConnectionRefused - Connection refused: " + reason);
         Peer.Close();
-        GameManager.LeaveJoinedGame();
+        GameSessionManager.LeaveJoinedGame();
         UI.DisplayError(reason);
     }
 }

@@ -20,9 +20,9 @@ public partial class GunViewCamera : Camera3D
     {
         if(!active) return;
 
-        if(GameManager.Players.ContainsKey(Multiplayer.GetUniqueId()))
+        if(LevelManager.Instance.LevelPeerInfo.ContainsKey(Multiplayer.GetUniqueId()))
         {
-            Character character = GameManager.Players[Multiplayer.GetUniqueId()].characterNode;
+            Character character = LevelManager.Instance.LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode;
             if(character != null)
             {
                 GlobalTransform = character.Camera.GlobalTransform;

@@ -2,12 +2,19 @@ using Godot;
 using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Services;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 
-public partial class SceneManager : Node
+public partial class LevelManager : Node
 {   
+	[Export]
+	public string PlayerStatJson;
+
+	public Dictionary<long, PlayerStat> PlayerStats = new();
+
+	public Dictionary<long, LevelPeerInfo> LevelPeerInfo = new();
+
 	[Export, ExportRequired]
 	public PackedScene PlayerScene { get; set; }
 
@@ -22,7 +29,7 @@ public partial class SceneManager : Node
 
 	private Node3D PlayerContainer;
 
-	public static SceneManager Instance;
+	public static LevelManager Instance;
 
 	private double GameTime; // keeps track on the server if the game is over yet
 	private double BetweenRoundTime; // server keeps track of time between end game and kick back to lobby
@@ -32,41 +39,46 @@ public partial class SceneManager : Node
 		GodotErrorService.ValidateRequiredData(this);
 		Instance = this;
 
-		if(GameManager.CurrentLevel == null)
-		{
-			GameManager.CurrentLevel = this;
-		}
-
 		SpawnPoints = GetTree().GetNodesInGroup("PlayerSpawnPoint").Select(s => s as Node3D).ToList();
 
-		foreach(long key in GameManager.Players.Keys)
+		foreach(long peerId in GameSessionManager.ConnectedPeers.Keys)
 		{   
+			SetupPlayerStructure(peerId); // everyone needs to have this structure to sync projectiles
+
 			if(Multiplayer.IsServer()) // only server needs to handle respawns
 			{
-				RespawnPlayer(key);
+				// Setup player stats
+				PlayerStats.Add(peerId, new());
+				PlayerStats[peerId].kills = 0;
+				PlayerStats[peerId].deaths = 0;
+				PlayerStats[peerId].maxPowerLevel = 0;
+				PlayerStats[peerId].aura = 0;
+				PlayerStats[peerId].spawnNumber = 0;
+
+				RespawnPlayer(peerId);
 			}
 
-			SetupPlayerStructure(key); // everyone needs to have this structure to sync projectiles
-			GameManager.Players[key].kills = 0;
-			GameManager.Players[key].deaths = 0;
-			GameManager.Players[key].maxPowerLevel = 0;
-			GameManager.Players[key].aura = 0;
 		}
-		GameTime = 0;
-
 		
-		if(!Multiplayer.IsServer()) 
+		if(Multiplayer.IsServer())
 		{
-			UI.InGameUI.Show();
-			Input.MouseMode = Input.MouseModeEnum.Captured;
-		}
-		else 
-		{
+			GameTime = 0;
 			GameOver = false; // mark the game as not over
 		}
+
+		TreeExiting += OnLevelClose;
 	}
 
-	public void SetupPlayerStructure(long peerId)
+    private void OnLevelClose()
+    {
+		// clean up character nodes (they are not a child of the level)
+        foreach(LevelPeerInfo peerInfo in LevelPeerInfo.Values)
+		{
+			peerInfo.characterNode?.QueueFree();
+		}
+    }
+
+    public void SetupPlayerStructure(long peerId)
 	{
 		Node3D projectileParent = new();
 		MultiplayerSpawner projectileSpawner = new();
@@ -78,30 +90,30 @@ public partial class SceneManager : Node
 		projectileParent.Name = "PP" + peerId;
 
 		projectileSpawner.SpawnPath = projectileParent.GetPath();
-		GameManager.Players[peerId].projectileSpawner = projectileSpawner;
-		GameManager.Players[peerId].projectileParent = projectileParent;
+		LevelPeerInfo.Add(peerId, new());
+		LevelPeerInfo[peerId].projectileSpawner = projectileSpawner;
+		LevelPeerInfo[peerId].projectileParent = projectileParent;
 	}
-
 
 
 	public void RespawnPlayer(long peerId)
 	{
-		GD.Print("SceneManager.RespawnPlayer - Spawning peer: " + peerId);
+		GD.Print("LevelManager.RespawnPlayer - Spawning peer: " + peerId);
 		
-		Character oldCharacter = GameManager.Players[peerId].characterNode;
+		Character oldCharacter = LevelPeerInfo[peerId].characterNode;
 		if(oldCharacter != null)
 		{
 			oldCharacter.QueueFree();
 		}
 
 		Character newPlayer = (Character) PlayerScene.Instantiate();
-		newPlayer.Name = $"{peerId.ToString()}#{++GameManager.Players[peerId].spawnNumber}";
+		newPlayer.Name = $"{peerId.ToString()}#{++PlayerStats[peerId].spawnNumber}";
 		Root.Instance.AddChild(newPlayer, true);
 
-		if(ChangingSpawns || GameManager.Players[peerId].spawnPoint == null) // give option to have ever moving spawns or static spawns
+		if(ChangingSpawns || LevelPeerInfo[peerId].spawnPoint == null) // give option to have ever moving spawns or static spawns
 		{
 			Node3D spawnPoint = SpawnPoints[RNG.Next(SpawnPoints.Count)];
-			GameManager.Players[peerId].spawnPoint = spawnPoint;
+			LevelPeerInfo[peerId].spawnPoint = spawnPoint;
 		}
 	}
 
@@ -120,37 +132,50 @@ public partial class SceneManager : Node
 
 		if(Multiplayer.IsServer())
 		{
+			PlayerStatJson = JsonSerializer.Serialize(PlayerStats);
+
 			int maxAura = 0;
-			foreach(long id in GameManager.Players.Keys)
+			foreach(long id in LevelPeerInfo.Keys)
 			{
-				maxAura += GameManager.Players[id].aura;
-				Character character = GameManager.Players[id].characterNode;
+				int playerAura = PlayerStats[id].aura;
+				maxAura = playerAura > maxAura ? playerAura : maxAura;
+
+				Character character = LevelPeerInfo[id].characterNode;
 				if(character != null) {
 					if(character.CurrentHealth == 0)
 					{
-						GameManager.Players[id].deaths += 1;
+						PlayerStats[id].deaths++;
 
-						if(GameManager.Players.ContainsKey(character.LastDamagedBy))
+						if(PlayerStats.ContainsKey(character.LastDamagedBy))
 						{
-							GameManager.Players[character.LastDamagedBy].kills += 1;
-							GameManager.Players[character.LastDamagedBy].aura += GameManager.Players[id].characterNode.CalculatePowerLevel();
+							PlayerStats[character.LastDamagedBy].kills++;
+							PlayerStats[character.LastDamagedBy].aura += LevelPeerInfo[id].characterNode.CalculatePowerLevel();
 						}
 
 						RespawnPlayer(id);
 
+						/*
 						SendPlayerStats((int)id);
 						SendPlayerStats(character.LastDamagedBy);
+						*/
 					}
 				}
 			}
 
 			GameTime += delta;
 			// End game code
-			if(GameTime >= GameManager.GameDurationSeconds || maxAura >= GameManager.MaxAura) 
+			if(GameTime >= GameSessionManager.GameDurationSeconds || maxAura >= GameSessionManager.MaxAura) 
 			{
 				GameOver = true;
 				Rpc(MethodName.NotifyEndGame);
 				BetweenRoundTime = 0;
+			}
+		}
+		else 
+		{
+			if(PlayerStatJson.Length != 0)
+			{
+				PlayerStats = JsonSerializer.Deserialize<Dictionary<long, PlayerStat>>(PlayerStatJson);
 			}
 		}
     }
@@ -159,9 +184,9 @@ public partial class SceneManager : Node
 	public void RequestSpawnPoint()
 	{
 		long peerId = Multiplayer.GetRemoteSenderId();
-		GameManager.Players[peerId].characterNode.RpcId(peerId, Character.MethodName.SetSpawnPoint, GameManager.Players[peerId].spawnPoint.GlobalPosition, GameManager.Players[peerId].spawnPoint.GlobalRotation);
+		LevelPeerInfo[peerId].characterNode.RpcId(peerId, Character.MethodName.SetSpawnPoint, LevelPeerInfo[peerId].spawnPoint.GlobalPosition, LevelPeerInfo[peerId].spawnPoint.GlobalRotation);
 	}
-
+/*
 	public void SendPlayerStats(int peerId)
 	{
 		Rpc(MethodName.SetPlayerStats, peerId, GameManager.Players[peerId].kills, GameManager.Players[peerId].deaths, GameManager.Players[peerId].maxPowerLevel, GameManager.Players[peerId].aura);
@@ -178,11 +203,12 @@ public partial class SceneManager : Node
 			GameManager.Players[peerId].aura = aura;
 		}
 	}
+	*/
 
 	[Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
 	public void NotifyEndGame()
 	{
-		Character localCharacter = GameManager.Players[Multiplayer.GetUniqueId()].characterNode;
+		Character localCharacter = LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode;
 		localCharacter.CanLook = false;
 		localCharacter.CanMove = false;
 
@@ -192,12 +218,12 @@ public partial class SceneManager : Node
 	[Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
 	public void ReturnToLobby()
 	{
-		foreach(GameManager.PlayerInfo playerInfo in GameManager.Players.Values)
+		foreach(LevelPeerInfo peerInfo in LevelPeerInfo.Values)
 		{
-			if(playerInfo.characterNode != null)
+			if(peerInfo.characterNode != null)
 			{
-				playerInfo.characterNode.QueueFree();
-				playerInfo.characterNode = null;
+				peerInfo.characterNode.QueueFree();
+				peerInfo.characterNode = null;
 			}
 		}
 		UI.EndOfGame.Hide();

@@ -44,17 +44,17 @@ public partial class Server : Node
     {
         GD.Print("Server.PeerDisconnected - Player disconnected: " + id);
         
-        GameManager.RemovePlayer(id);
+        GameSessionManager.RemovePlayer(id);
     }
 
     private void PeerConnected(long id) {
         GD.Print("Server.PeerConnected - Player connected: " + id);
 
-        if (GameManager.GameHost == -1) { // First peer connected becomes host
-            GameManager.GameHost = id;
+        if (GameSessionManager.GameHost == -1) { // First peer connected becomes host
+            GameSessionManager.GameHost = id;
         }
         
-        RpcId(id, MethodName.NotifyCurrentHost, GameManager.GameHost);
+        RpcId(id, MethodName.NotifyCurrentHost, GameSessionManager.GameHost);
         
         if(AcceptingConnections == false)
         {
@@ -71,7 +71,7 @@ public partial class Server : Node
     public void SendPlayerInfo(long id, string name) {
         if(AcceptingConnections)
         {
-            Rpc(MethodName.NotifyPlayerConnected, id, name, GameManager.Players.Count);
+            Rpc(MethodName.NotifyPlayerConnected, id, name, GameSessionManager.ConnectedPeers.Count);
         }
     }
 
@@ -83,12 +83,12 @@ public partial class Server : Node
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyPlayerConnected(long id, string name, int sequenceNumber) {
         // For the peer that connected, we have to tell them about all other players that joined before them
-        foreach(long peerId in GameManager.Players.Keys)
+        foreach(long peerId in GameSessionManager.ConnectedPeers.Keys)
         {
-            RpcId(id, MethodName.NotifyPlayerConnected, peerId, GameManager.Players[peerId].name, GameManager.Players[peerId].sequenceNumber);
+            RpcId(id, MethodName.NotifyPlayerConnected, peerId, GameSessionManager.ConnectedPeers[peerId].name, GameSessionManager.ConnectedPeers[peerId].sequenceNumber);
         }
 
-        GameManager.Players.Add(id, new GameManager.PlayerInfo{ name = name, sequenceNumber = sequenceNumber });
+        GameSessionManager.ConnectedPeers.Add(id, new PeerInfo{ name = name, sequenceNumber = sequenceNumber });
     }
 
     /// <summary>
@@ -97,7 +97,7 @@ public partial class Server : Node
     /// <param name="filepath"></param>
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyStartGame(string filepath, int durationInSeconds, int maxAura) {
-        if(Multiplayer.GetRemoteSenderId() == GameManager.GameHost)
+        if(Multiplayer.GetRemoteSenderId() == GameSessionManager.GameHost)
         {
             GD.Print("Server.NotifyStartGame - Telling clients to start their games");
             AcceptingConnections = false;
@@ -106,9 +106,8 @@ public partial class Server : Node
             PackedScene levelPackedScene = (PackedScene)ResourceLoader.Load(filepath);
             Node level = levelPackedScene.Instantiate();
             Root.Instance.AddChild(level); // using Root.Instance just to access tree
-            GameManager.CurrentLevel = level;
-            GameManager.GameDurationSeconds = durationInSeconds;
-            GameManager.MaxAura = maxAura;
+            GameSessionManager.GameDurationSeconds = durationInSeconds;
+            GameSessionManager.MaxAura = maxAura;
         }
     }
 

@@ -14,14 +14,14 @@ public partial class PauseMenu : Control
         if(Visible)
         {
             Input.MouseMode = Input.MouseModeEnum.Visible;
-            GameManager.Players[Multiplayer.GetUniqueId()].characterNode.CanMove = false;
-            GameManager.Players[Multiplayer.GetUniqueId()].characterNode.CanLook = false;
+            LevelManager.Instance.LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode.CanMove = false;
+            LevelManager.Instance.LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode.CanLook = false;
         }
         else
         {
             Input.MouseMode = Input.MouseModeEnum.Captured;
-            GameManager.Players[Multiplayer.GetUniqueId()].characterNode.CanMove = true;
-            GameManager.Players[Multiplayer.GetUniqueId()].characterNode.CanLook = true;
+            LevelManager.Instance.LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode.CanMove = true;
+            LevelManager.Instance.LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode.CanLook = true;
         }
     }
 
@@ -37,7 +37,7 @@ public partial class PauseMenu : Control
 
     public void OnLeaveButtonPressed()
     {
-        GameManager.LeaveJoinedGame();
+        GameSessionManager.LeaveJoinedGame();
     }
 
     public void OnExitButtonPressed()

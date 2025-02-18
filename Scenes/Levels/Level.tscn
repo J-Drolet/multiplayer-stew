@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://dustp76kyosr0"]
+[gd_scene load_steps=13 format=3 uid="uid://dustp76kyosr0"]
 
-[ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_xdbua"]
+[ext_resource type="Script" path="res://Scripts/GameLogic/LevelManager.cs" id="1_filpv"]
 [ext_resource type="PackedScene" uid="uid://bwh21gfyr2idt" path="res://Scenes/GodotBox.tscn" id="2_glbo0"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_hmwfx"]
 [ext_resource type="PackedScene" uid="uid://6jntjlknvgow" path="res://Scenes/Levels/LevelAssets/UtilityAssets/DeathBarrier.tscn" id="3_a6llq"]
@@ -8,6 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://b1638ox18o0fr" path="res://Scenes/Pickups/TimedHealthPickup.tscn" id="8_rl71a"]
 [ext_resource type="PackedScene" uid="uid://bmejhchhhu7w8" path="res://Scenes/Pickups/TimedWeaponPickup.tscn" id="19_1ndxl"]
 [ext_resource type="PackedScene" uid="uid://dlk2kennbolq8" path="res://Scenes/Pickups/TimedUpgradePickup.tscn" id="20_7qb6e"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_dc35v"]
+properties/0/path = NodePath(".:PlayerStatJson")
+properties/0/spawn = true
+properties/0/replication_mode = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4e45f"]
 albedo_color = Color(0.239473, 0.128064, 0.00900927, 1)
@@ -20,8 +25,11 @@ size = Vector3(50, 0.25, 50)
 size = Vector3(50, 0.25, 50)
 
 [node name="Level" type="Node3D"]
-script = ExtResource("1_xdbua")
+script = ExtResource("1_filpv")
 PlayerScene = ExtResource("2_hmwfx")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_dc35v")
 
 [node name="DeathBarrier" parent="." instance=ExtResource("3_a6llq")]
 transform = Transform3D(200, 0, 0, 0, 1, 0, 0, 0, 200, 0, -6.01375, 0)

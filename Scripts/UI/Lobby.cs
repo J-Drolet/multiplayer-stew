@@ -61,17 +61,17 @@ public partial class Lobby : Control
             }
         }
 
-        foreach(long id in GameManager.Players.Keys.OrderBy(x => GameManager.Players[x].sequenceNumber))
+        foreach(long id in GameSessionManager.ConnectedPeers.Keys.OrderBy(x => GameSessionManager.ConnectedPeers[x].sequenceNumber))
         {
-            AddPlayer(id, GameManager.Players[id].name);
+            AddPlayer(id, GameSessionManager.ConnectedPeers[id].name);
         }
     }
 
     private void AddPlayer(long id, string name)
     {
         Control player = PlayerPrototype.Duplicate() as Control;
-        string symbol = id == GameManager.GameHost ? "♔" : "";
-        player.GetNode<Label>("Name").Text = $"{name} ({id}) Sequence: {GameManager.Players[id].sequenceNumber} {symbol}";
+        string symbol = id == GameSessionManager.GameHost ? "♔" : "";
+        player.GetNode<Label>("Name").Text = $"{name} ({id}) Sequence: {GameSessionManager.ConnectedPeers[id].sequenceNumber} {symbol}";
         PlayerPrototype.GetParent().AddChild(player);
         player.Show();
     }

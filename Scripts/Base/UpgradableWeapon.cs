@@ -51,7 +51,7 @@ namespace multiplayerstew.Scripts.Base
         public override void _Ready()
 		{
 			GodotErrorService.ValidateRequiredData(this);
-			GameManager.Players[GetMultiplayerAuthority()].projectileSpawner.AddSpawnableScene(Projectile.ResourcePath);
+			LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].projectileSpawner.AddSpawnableScene(Projectile.ResourcePath);
 			CurrentAmmo = MaxAmmo;
 
 			foreach(VisualInstance3D mesh in GodotNodeFindingService.FindNodes<VisualInstance3D>(this))
@@ -177,7 +177,7 @@ namespace multiplayerstew.Scripts.Base
 		private void FireProjectile()
 		{
 			List<int> angleOffsets = new(); // for each angleOffset a bullet will be fired with that offset
-			if(GameManager.Players[GetMultiplayerAuthority()].characterNode.Upgrades.Contains(Upgrade.W_DunceCap))
+			if(LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode.Upgrades.Contains(Upgrade.W_DunceCap))
 			{
 				foreach(int angle in (int[]) Config.GetValue("upgrade_constants", "dunce_shot_offsets", true))
 				{
@@ -195,8 +195,8 @@ namespace multiplayerstew.Scripts.Base
 				{
 					UpgradeableProjectile projectileInstance = Projectile.Instantiate() as UpgradeableProjectile;
 					projectileInstance.Name = GetMultiplayerAuthority().ToString() + "#" + rng.NextInt64(10000)  + "#" + angleOffset; // encode the owner of the projectile and the RNG seed
-					projectileInstance.GlobalTransform = GameManager.Players[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalTransform; // initial spot for local view
-					GameManager.Players[GetMultiplayerAuthority()].projectileParent.AddChild(projectileInstance, true);
+					projectileInstance.GlobalTransform = LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalTransform; // initial spot for local view
+					LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].projectileParent.AddChild(projectileInstance, true);
 				}
 			}
 		}
@@ -205,11 +205,11 @@ namespace multiplayerstew.Scripts.Base
 		{
 			FireModes fireMode = FireMode;
 			// The reason why we handle the upgrade like this is to support multiple upgrades that might affect firemode. Aswell as the chance we have a weapon with default of charge
-			if(GameManager.Players[GetMultiplayerAuthority()].characterNode.Upgrades.Contains(Upgrade.W_MagDump))
+			if(LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode.Upgrades.Contains(Upgrade.W_MagDump))
 			{
 				fireMode = FireModes.Charge;
 			}
-			else if(GameManager.Players[GetMultiplayerAuthority()].characterNode.Upgrades.Contains(Upgrade.W_SwitchFiremode))
+			else if(LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode.Upgrades.Contains(Upgrade.W_SwitchFiremode))
 			{
 				if(FireMode == FireModes.Single) 
 				{

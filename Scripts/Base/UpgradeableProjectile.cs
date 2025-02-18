@@ -44,7 +44,7 @@ namespace multiplayerstew.Scripts.Base
         {
             projectileOwner = Name.ToString().Split('#').First().ToInt();
             Rng = new(Name.ToString().Split('#')[1].ToInt()); // get seed from name
-            Upgrades = new HashSet<Upgrade>(GameManager.Players[projectileOwner].characterNode.Upgrades);
+            Upgrades = new HashSet<Upgrade>(LevelManager.Instance.LevelPeerInfo[projectileOwner].characterNode.Upgrades);
         }
 
         public override void _Ready()
@@ -62,7 +62,7 @@ namespace multiplayerstew.Scripts.Base
 
             if(!HasRightToMoveProjectile()) return; // server and local peer continue
 
-            GlobalTransform = GameManager.Players[projectileOwner].characterNode.ProjectileOrigin.GlobalTransform;
+            GlobalTransform = LevelManager.Instance.LevelPeerInfo[projectileOwner].characterNode.ProjectileOrigin.GlobalTransform;
 
             Vector3 directionVector = -GlobalTransform.Basis.Z;
             int yAngleOffset = Name.ToString().Split('#')[2].ToInt();
@@ -110,7 +110,7 @@ namespace multiplayerstew.Scripts.Base
 
             if(!Multiplayer.IsServer() && TrueGlobalPosition != Vector3.Zero) // interpolation logic
             {
-                float interpolationStrength = 1.5f * InitialVelocity; // interpolation strength is a function of the bullet speed
+                float interpolationStrength = 1.00f * InitialVelocity; // interpolation strength is a function of the bullet speed
                 Vector3 positionDifference = TrueGlobalPosition - GlobalPosition;
                 Vector3 movementVector = positionDifference.Normalized() * (float)(interpolationStrength * delta);
                 if(positionDifference.LengthSquared() <= movementVector.LengthSquared()) {
@@ -141,21 +141,21 @@ namespace multiplayerstew.Scripts.Base
             {
                 Character nearestEnemy = null;
                 float maxHomingDistance = (float)Config.GetValue("upgrade_constants", "homing_max_distance", true);
-                foreach(int peerId in GameManager.Players.Keys)
+                foreach(int peerId in LevelManager.Instance.LevelPeerInfo.Keys)
                 {
                     if(peerId != projectileOwner)
                     {   
-                        float distance = (GlobalPosition - GameManager.Players[peerId].characterNode.GlobalPosition).Length();
+                        float distance = (GlobalPosition - LevelManager.Instance.LevelPeerInfo[peerId].characterNode.GlobalPosition).Length();
                         if(nearestEnemy == null && distance <= maxHomingDistance)
                         {
-                            nearestEnemy = GameManager.Players[peerId].characterNode;
+                            nearestEnemy = LevelManager.Instance.LevelPeerInfo[peerId].characterNode;
                         }
                         else if(nearestEnemy != null)
                         {
                             float oldDistance = (GlobalPosition - nearestEnemy.GlobalPosition).Length();
                             if(distance < oldDistance)
                             {
-                                nearestEnemy = GameManager.Players[peerId].characterNode;
+                                nearestEnemy = LevelManager.Instance.LevelPeerInfo[peerId].characterNode;
                             }
                         }
                     }
