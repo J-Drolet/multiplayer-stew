@@ -94,7 +94,7 @@ namespace multiplayerstew.Scripts.Base
                 }
 
                 // for slowdown projectiles
-                if(GameManager.Players[projectile.projectileOwner].characterNode.Upgrades.Contains(Upgrade.W_SlowTargetBullets))
+                if(LevelManager.Instance.LevelPeerInfo[projectile.projectileOwner].characterNode.Upgrades.Contains(Upgrade.W_SlowTargetBullets))
                 {
                     character.RpcId(GetMultiplayerAuthority(), Character.MethodName.SetSlowdown, (float)Config.GetValue("upgrade_constants", "slowdown_speed_multiplier", true));
                 }

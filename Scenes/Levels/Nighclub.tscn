@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://ceuyck7863ti8"]
+[gd_scene load_steps=10 format=3 uid="uid://ceuyck7863ti8"]
 
-[ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_l6pac"]
+[ext_resource type="Script" path="res://Scripts/GameLogic/LevelManager.cs" id="1_244da"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_68ubw"]
 [ext_resource type="PackedScene" uid="uid://b7w6gpd64ty7w" path="res://Scenes/Levels/LevelAssets/Backrooms/Primatives/Concrete.tscn" id="3_kkfn0"]
 [ext_resource type="PackedScene" uid="uid://d3kqoomv25c5t" path="res://Scenes/Levels/LevelAssets/Backrooms/Doorways/DoorwayConcrete.tscn" id="4_8vc51"]
@@ -9,9 +9,23 @@
 [ext_resource type="PackedScene" uid="uid://00oigava2hm0" path="res://Scenes/Pickups/Obsolete/SimplePickup.tscn" id="7_umkie"]
 [ext_resource type="PackedScene" uid="uid://k3u720y471ax" path="res://Scenes/Pickups/Obsolete/Weapon Pickups/OLD/Mac10Pickup.tscn" id="8_8ytmh"]
 
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_mv8h5"]
+properties/0/path = NodePath(".:PlayerStatJson")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:GameTime")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath(".:BetweenRoundTime")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+
 [node name="Nightclub" type="Node3D"]
-script = ExtResource("1_l6pac")
+script = ExtResource("1_244da")
 PlayerScene = ExtResource("2_68ubw")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_mv8h5")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.377954, 0.925824, 0, -0.925824, 0.377954, 0, 7.49752, 0)

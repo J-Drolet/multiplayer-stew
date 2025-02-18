@@ -36,6 +36,6 @@ public partial class EndOfGame : Control
 
     public void OnLeaveButtonPressed()
     {
-        GameManager.LeaveJoinedGame();
+        GameSessionManager.LeaveJoinedGame();
     }
 }

@@ -1,9 +1,9 @@
 [gd_scene load_steps=19 format=3 uid="uid://cif1rylh3ul7d"]
 
-[ext_resource type="Script" path="res://Scripts/SceneManager.cs" id="1_aiq0j"]
+[ext_resource type="Script" path="res://Scripts/GameLogic/SceneManager.cs" id="1_aiq0j"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_4bfgx"]
 [ext_resource type="PackedScene" uid="uid://6jntjlknvgow" path="res://Scenes/Levels/LevelAssets/UtilityAssets/DeathBarrier.tscn" id="3_8dtge"]
-[ext_resource type="Texture2D" uid="uid://ym1rv5fryhph" path="res://Assets/Textures/Fair/grass_7.png" id="4_cv60m"]
+[ext_resource type="Texture2D" uid="uid://c1eacio7o37of" path="res://Assets/Textures/Fair/grass_7.png" id="4_cv60m"]
 [ext_resource type="PackedScene" uid="uid://cblot42ihgprm" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/tent1.tscn" id="5_8y381"]
 [ext_resource type="PackedScene" uid="uid://we5j62fteymy" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/tent2.tscn" id="6_e21cy"]
 [ext_resource type="PackedScene" uid="uid://gr5wk6mlmrwm" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/rv_1.tscn" id="7_wepmo"]

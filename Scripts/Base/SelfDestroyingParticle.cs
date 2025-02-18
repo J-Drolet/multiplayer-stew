@@ -36,7 +36,7 @@ namespace multiplayerstew.Scripts.Base
                 switch(ParticleSpawnMode)
                 {
                     case SpawnMode.Global:
-                        SceneManager.Instance.AddChild(particle3DInstance);
+                        LevelManager.Instance.AddChild(particle3DInstance);
                         break;
                     case SpawnMode.Local:
                         AddChild(particle3DInstance);

@@ -47,13 +47,17 @@ public partial class Character : Entity
 	{
 		CurrentHealth = MaxHealth; // we have to do this here or else infinite spawns will happen on server side
 		SetMultiplayerAuthority(Name.ToString().Split("#").First().ToInt());
-		GameManager.Players[GetMultiplayerAuthority()].characterNode = this;
+		LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode = this;
 		
 		if(IsMultiplayerAuthority()) // local client requests its spawn point from server
 		{
-			SceneManager.Instance.RpcId(1, SceneManager.MethodName.RequestSpawnPoint);
+			LevelManager.Instance.RpcId(1, LevelManager.MethodName.RequestSpawnPoint);
 			UI.InGameUI.AmmoCount.Visible = EquippedWeapon != null; // hide ammoCount on respawn
 			ATree.Active = true;
+
+			UI.InGameUI.Show();
+			Input.MouseMode = Input.MouseModeEnum.Captured;
+        	UI.GunViewCamera.active = true;
 		}
 	}
 
@@ -140,11 +144,11 @@ public partial class Character : Entity
 
 			if(beforeFrameTime < upgradeDuration && TimeSinceXray >= upgradeDuration) // disable effect
 			{
-				foreach(int peerId in GameManager.Players.Keys)
+				foreach(int peerId in LevelManager.Instance.LevelPeerInfo.Keys)
 				{
 					if(peerId != Multiplayer.GetUniqueId()) // only add xray to peers
 					{
-						GameManager.Players[peerId].characterNode.CharacterMesh.Mesh.SurfaceSetMaterial(0, null);
+						LevelManager.Instance.LevelPeerInfo[peerId].characterNode.CharacterMesh.Mesh.SurfaceSetMaterial(0, null);
 					}
 				}	
 			}
@@ -155,12 +159,12 @@ public partial class Character : Entity
 				TimeSinceXray = 0;
 				MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, OutlinePlayerSFX.ResourcePath, this.GetPath(), Multiplayer.GetUniqueId(), "SFX");
 
-				foreach(long peerId in GameManager.Players.Keys)
+				foreach(long peerId in LevelManager.Instance.LevelPeerInfo.Keys)
 				{
 					if(peerId != Multiplayer.GetUniqueId()) // only add xray to peers
 					{
 						Material xrayMaterial = (Material) ResourceLoader.Load("res://Assets/Materials/Upgrades/XRay.tres");
-						GameManager.Players[peerId].characterNode.CharacterMesh.Mesh.SurfaceSetMaterial(0, xrayMaterial);
+						LevelManager.Instance.LevelPeerInfo[peerId].characterNode.CharacterMesh.Mesh.SurfaceSetMaterial(0, xrayMaterial);
 					}
 				}
 			}
@@ -334,10 +338,10 @@ public partial class Character : Entity
 		{
 			int characterOwner = GetMultiplayerAuthority();
 			int powerLevel = CalculatePowerLevel();
-			if(powerLevel > GameManager.Players[characterOwner].maxPowerLevel)
+			if(powerLevel > LevelManager.Instance.PlayerStats[characterOwner].maxPowerLevel)
 			{
-				GameManager.Players[characterOwner].maxPowerLevel = powerLevel;
-				SceneManager.Instance.SendPlayerStats(characterOwner);
+				LevelManager.Instance.PlayerStats[characterOwner].maxPowerLevel = powerLevel;
+				//SceneManager.Instance.SendPlayerStats(characterOwner);
 			}
 		}
 	}
