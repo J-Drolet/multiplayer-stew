@@ -50,7 +50,7 @@ public partial class Scoreboard : Control
             peerInfo.deathsLabel.Text = LevelManager.Instance.PlayerStats[peerId].deaths.ToString();
             peerInfo.maxPowerLevelLabel.Text = LevelManager.Instance.PlayerStats[peerId].maxPowerLevel.ToString();
             peerInfo.auraLabel.Text = LevelManager.Instance.PlayerStats[peerId].aura.ToString();
-            //peerInfo.pingLabel.Text = peer.Value.ping;
+            peerInfo.pingLabel.Text = LevelManager.Instance.PlayerStats[peerId].ping.ToString();
 
             PeerPrototype.AddSibling(peerInfo);
             peerInfo.Show();
