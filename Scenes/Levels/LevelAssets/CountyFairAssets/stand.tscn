@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://bsxgul867axc7"]
 
-[ext_resource type="Texture2D" uid="uid://u0ow3f7d65ve" path="res://Assets/Models/IMPORT/AllCircus_0.png" id="1_jp6fg"]
+[ext_resource type="Texture2D" uid="uid://u0ow3f7d65ve" path="res://Assets/Textures/Fair/AllCircus_0.png" id="1_jp6fg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bgfmp"]
 resource_name = "Material.001"
