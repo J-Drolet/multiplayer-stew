@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://d1k8g3txon5y8" path="res://Assets/Sounds/SFX/9mm Micro Pistol - Gunshot B 002.wav" id="3_4ihi6"]
 [ext_resource type="AudioStream" uid="uid://dlm3vrwcwn5nd" path="res://Assets/Sounds/SFX/9mm Full Size Pistol - Dry Trigger 003.wav" id="3_cawty"]
 [ext_resource type="PackedScene" uid="uid://cnw8ner8rvd7w" path="res://Scenes/Particles/PistolShellParticle.tscn" id="4_6qm8s"]
-[ext_resource type="Texture2D" uid="uid://c4h55agq38hwk" path="res://Assets/Models/Weapons/Lugar_Lugar_tex.png" id="4_qkti2"]
+[ext_resource type="Texture2D" uid="uid://c4h55agq38hwk" path="res://Assets/Textures/Weapons/Lugar_Lugar_tex.png" id="4_qkti2"]
 [ext_resource type="AudioStream" uid="uid://dbw86x4nq2h45" path="res://Assets/Sounds/SFX/9mm Full Size Pistol - Cocking Slide 003.wav" id="5_6y7ut"]
 [ext_resource type="AudioStream" uid="uid://bb3x6devmxqbm" path="res://Assets/Sounds/SFX/9mm Micro Pistol - Dropping Magazine 003.wav" id="5_2028r"]
 [ext_resource type="AudioStream" uid="uid://k2v7uq6scb35" path="res://Assets/Sounds/SFX/9mm Micro Pistol - Loading Magazine 002.wav" id="5_fu7wm"]

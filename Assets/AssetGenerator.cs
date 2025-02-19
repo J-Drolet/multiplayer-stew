@@ -12,6 +12,8 @@ public partial class AssetGenerator : Node3D
 	public string ASSET_FOLDER { get; set; } = "res://Assets/Models/TEST/";
     [Export, ExportRequired]
     public string EXPORT_FOLDER { get; set; } = "res://Assets/Models/EXPORT/";
+    [Export, ExportRequired]
+    public bool GenerateCollisionShapes { get; set; } = true;
     public override void _Ready()
 	{
 		GodotErrorService.ValidateRequiredData(this);
@@ -95,6 +97,35 @@ public partial class AssetGenerator : Node3D
         staticBody.SetOwner(root);
         newMesh.SetOwner(root);
 
+        if (GenerateCollisionShapes)
+        {
+            // Autogenerate collision shape
+            newMesh.CreateConvexCollision(true, true);
+            CollisionShape3D collisionShape = newMesh.GetChildren()?.Where(c => c is StaticBody3D).FirstOrDefault()?.GetChild(0) as CollisionShape3D;
+
+            if (collisionShape == null)
+            {
+                GD.PrintErr($"Error: Could not generate collision shape for {mesh.Name}");
+            }
+            else
+            {
+                Node parent = collisionShape.GetParent();
+                collisionShape.Reparent(newMesh.GetParent());
+                parent.Free();
+
+                /*// Set mesh flush to XZ plane from CollisionShape
+                Aabb aabb = collisionShape.Shape.GetDebugMesh().GetAabb();
+
+                // Calculate the bottom Y-coordinate of the AABB in global space
+                float bottomY = staticBody.GlobalTransform.Origin.Y + aabb.Position.Y - aabb.Size.Y / 2;
+
+                // Adjust the position of the StaticBody3D so the bottom touches the XZ plane (Y = 0)
+                var newPosition = staticBody.GlobalTransform.Origin;
+                newPosition.Y -= bottomY;
+                staticBody.GlobalTransform = new Transform3D(staticBody.GlobalTransform.Basis, newPosition);*/
+
+            }
+        }
         return root;
     }
 }

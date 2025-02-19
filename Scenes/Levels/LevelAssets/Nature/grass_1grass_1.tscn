@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Models/GLB/grass_1_grass_1.png" id="1_0fmf7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8qb37"]
+resource_name = "grass_1"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_0fmf7")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lnpc8"]
+_surfaces = [{
+"aabb": AABB(-0.240893, -0.326934, -0.653871, 0.481786, 0.653869, 0.653871),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AAADAAEAAAACAAMABAAHAAUABAAGAAcACAALAAkACAAKAAsA"),
+"name": "grass_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AADPtv//AAD//y9J//8AAAAAz7bUJQAA//8vSdQlAAB/fwAA//8AAH+A/////wAAf38AAAAAAAB/gP//AAAAADALok7//wAAzvRcsf//AAAwC6JOjzkAAM70XLGPOQAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xm4vk"]
+resource_name = "grass_1_grass_1"
+_surfaces = [{
+"aabb": AABB(-0.240893, -0.326934, -0.653871, 0.481786, 0.653869, 0.653871),
+"attribute_data": PackedByteArray("AAD///////8AAAAA//8AAAAA////////AAAAAP//AAAAAP///////wAAAAD//wAA"),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AAADAAEAAAACAAMABAAHAAUABAAGAAcACAALAAkACAAKAAsA"),
+"material": SubResource("StandardMaterial3D_8qb37"),
+"name": "grass_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AADPtv//wcL//y9J///BwgAAz7bUJcHC//8vSdQlwcJ/fwAA//9D1X+A/////0PVf38AAAAAQ9V/gP//AABD1TALok7//7LCzvRcsf//ssIwC6JOjzmyws70XLGPObLCK9OVaSvTlWkr05VpK9OVaV7VP9Ve1T/VXtU/1V7VP9W/6X2sv+l9rL/pfay/6X2s")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_lnpc8")
+
+[node name="@Node3D@8" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@9" type="StaticBody3D" parent="."]
+
+[node name="grass_1" type="MeshInstance3D" parent="@StaticBody3D@9"]
+mesh = SubResource("ArrayMesh_xm4vk")
+skeleton = NodePath("")

@@ -1,0 +1,163 @@
+[gd_resource type="Resource" load_steps=25 format=3]
+
+[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetPersistentData.cs" id="1_olp2d"]
+[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetLibrary.cs" id="2_q70wl"]
+
+[sub_resource type="Resource" id="Resource_a5lmq"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/fern_1fern_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_y47am"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/fern_2fern_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_h1oa6"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/fern_3fern_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_28iwu"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/grass_1grass_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_04yg6"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/grass_2grass_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2rsan"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/grass_3grass_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_qpvqi"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/grass_4grass_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xbcl0"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/rockrock.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ilsr0"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/stone_1stone_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_bou4v"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/stone_2stone_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_qb6k6"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/tree_1tree_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_c2ofp"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/tree_2tree_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_bw27n"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/tree_3tree_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_n0t7u"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/tree_4tree_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_52c1d"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/tree_5tree_5.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_bdbq8"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/tree_6tree_6.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_kkrrw"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/tree_7tree_7.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_oojwr"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/tree_8tree_8.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_j1rjd"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/tree_9tree_9.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4vg7n"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/tree_10tree_10.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_cpmdh"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/tree_log_1tree_log_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8kyjk"]
+script = ExtResource("1_olp2d")
+path = "res://Scenes/Levels/LevelAssets/Nature/tree_stump_1tree_stump_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[resource]
+script = ExtResource("2_q70wl")
+assetData = [SubResource("Resource_a5lmq"), SubResource("Resource_y47am"), SubResource("Resource_h1oa6"), SubResource("Resource_28iwu"), SubResource("Resource_04yg6"), SubResource("Resource_2rsan"), SubResource("Resource_qpvqi"), SubResource("Resource_xbcl0"), SubResource("Resource_ilsr0"), SubResource("Resource_bou4v"), SubResource("Resource_qb6k6"), SubResource("Resource_c2ofp"), SubResource("Resource_bw27n"), SubResource("Resource_n0t7u"), SubResource("Resource_52c1d"), SubResource("Resource_bdbq8"), SubResource("Resource_kkrrw"), SubResource("Resource_oojwr"), SubResource("Resource_j1rjd"), SubResource("Resource_4vg7n"), SubResource("Resource_cpmdh"), SubResource("Resource_8kyjk")]
+previewPerspective = 0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://cnw8ner8rvd7w"]
 
-[ext_resource type="Texture2D" uid="uid://dqr4jvf6hnfl6" path="res://Assets/Models/Weapons/PistolCasing_Ammo_tex.png" id="1_cbxi2"]
+[ext_resource type="Texture2D" uid="uid://dqr4jvf6hnfl6" path="res://Assets/Textures/Weapons/PistolCasing_Ammo_tex.png" id="1_cbxi2"]
 
 [sub_resource type="Curve" id="Curve_kdu1n"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.15534, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]

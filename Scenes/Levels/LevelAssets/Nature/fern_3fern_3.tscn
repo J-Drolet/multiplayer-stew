@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Models/GLB/fern_3_fern_3.png" id="1_gvy63"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qeyb2"]
+resource_name = "fern_3"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_gvy63")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xaavj"]
+_surfaces = [{
+"aabb": AABB(-0.739234, -1.06175, -1.82416, 1.67103, 1.81372, 2.18227),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AAADAAEAAAACAAMABAAHAAUABAAGAAcACAALAAkACAAKAAsA"),
+"name": "fern_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("vkYAACfnAAAogErZJ+cAAL5GAAB1OwAAKIBK2XU7AAD+/1jhw+YAAE0yknTD5gAA//9Y4QE/AABNMpJ0AT8AAOTZRATBvAAAEUH/zv//AADTmEM1AAAAAAAA//89QwAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ixs5b"]
+resource_name = "fern_3_fern_3"
+_surfaces = [{
+"aabb": AABB(-0.739234, -1.06175, -1.82416, 1.67103, 1.81372, 2.18227),
+"attribute_data": PackedByteArray("AAD///////8AAAAA//8AAAAA////////AAAAAP//AAAAAP///////wAAAAD//wAA"),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AAADAAEAAAACAAMABAAHAAUABAAGAAcACAALAAkACAAKAAsA"),
+"material": SubResource("StandardMaterial3D_qeyb2"),
+"name": "fern_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("vkYAACfn9M8ogErZJ+f0z75GAAB1O/TPKIBK2XU79M/+/1jhw+YS8U0yknTD5hLx//9Y4QE/EvFNMpJ0AT8S8eTZRATBvJjbEUH/zv//mNvTmEM1AACY2wAA//89Q5jb4tg4zuLYOM7i2DjO4tg4zg2PhkcNj4ZHDY+GRw2Phkf2xsnt9sbJ7fbGye32xsnt")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_xaavj")
+
+[node name="@Node3D@6" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@7" type="StaticBody3D" parent="."]
+
+[node name="fern_3" type="MeshInstance3D" parent="@StaticBody3D@7"]
+mesh = SubResource("ArrayMesh_ixs5b")
+skeleton = NodePath("")

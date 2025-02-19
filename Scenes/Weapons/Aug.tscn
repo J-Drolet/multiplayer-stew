@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://daw5qe551ka2g" path="res://Assets/Sounds/SFX/AugUnload.wav" id="5_h75v2"]
 [ext_resource type="AudioStream" uid="uid://bl4bww2i3nurm" path="res://Assets/Sounds/SFX/AugLoad.wav" id="6_eysib"]
 [ext_resource type="AudioStream" uid="uid://cgfphekfrcnbf" path="res://Assets/Sounds/SFX/AugSlide.wav" id="7_kbijw"]
-[ext_resource type="Texture2D" uid="uid://p0l0ll4ivc2q" path="res://Assets/Models/Weapons/AUG_AUG.png" id="8_xdqq6"]
+[ext_resource type="Texture2D" uid="uid://p0l0ll4ivc2q" path="res://Assets/Textures/Weapons/AUG_AUG.png" id="8_xdqq6"]
 [ext_resource type="Script" path="res://Scripts/Base/SelfDestroyingParticle.cs" id="9_3if1e"]
 [ext_resource type="PackedScene" uid="uid://m5ohhp5uxd8" path="res://Scenes/Particles/AugShellParticle.tscn" id="10_7fcci"]
 

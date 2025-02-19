@@ -4,3 +4,6 @@
 
 [node name="AssetGenerator" type="Node3D"]
 script = ExtResource("1_0f7dn")
+ASSET_FOLDER = "res://Assets/Models/GLB/"
+EXPORT_FOLDER = "res://Scenes/Levels/LevelAssets/Nature/"
+GenerateCollisionShapes = false

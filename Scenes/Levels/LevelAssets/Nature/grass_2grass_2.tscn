@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Models/GLB/grass_2_grass_2.png" id="1_6qlfy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fk1uj"]
+resource_name = "grass_2"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_6qlfy")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1cq3m"]
+_surfaces = [{
+"aabb": AABB(-0.349444, -0.316393, -0.96, 0.755712, 0.672725, 1),
+"format": 34896613377,
+"index_count": 72,
+"index_data": PackedByteArray("AAAGAAEAAAAFAAYABAADAAcABAACAAMABQAHAAYABQAEAAcACAAOAAkACAANAA4ADAALAA8ADAAKAAsADQAPAA4ADQAMAA8AEAAWABEAEAAVABYAFAATABcAFAASABMAFQAXABYAFQAUABcAGAAeABkAGAAdAB4AHAAbAB8AHAAaABsAHQAfAB4AHQAcAB8A"),
+"name": "grass_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("EgWRcf//AAD//5Fx//8AABIFJjUAAAAA//8mNQAAAAASBRBUVFUAABIFVGapqgAA//9UZqmqAAD//xBUVFUAAGiJAADU/gAAaIn9+tT+AAD/1QAAaB8AAP/V/fpoHwAA97MAAENpAADqmwAA2LMAAOqb/frYswAA97P9+kNpAACE4QN8vP4AAB4EA3y8/gAAhOEO1jMiAAAeBA7WMyIAAIThmK4BawAAhOE5kqS0AAAeBDmSpLQAAB4EmK4BawAA14FH6sT9AAA/Vs0PxP0AAJcr//8EOwAAAACEJQQ7AACqT+n28XoAACRr/u8IvAAAjD+EFQi8AAASJG8c8XoAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3dceb"]
+resource_name = "grass_2_grass_2"
+_surfaces = [{
+"aabb": AABB(-0.349444, -0.316393, -0.96, 0.755712, 0.672725, 1),
+"attribute_data": PackedByteArray("AAD///////8AAAAA//8AAAAAVVUAAKqq//+pqv//VFUAAP///////wAAAAD//wAAAABVVQAAqqr//6mq//9UVQAA////////AAAAAP//AAAAAFVVAACqqv//qar//1RVAAD///////8AAAAA//8AAAAAVVUAAKqq//+pqv//VFU="),
+"format": 34896613399,
+"index_count": 72,
+"index_data": PackedByteArray("AAAGAAEAAAAFAAYABAADAAcABAACAAMABQAHAAYABQAEAAcACAAOAAkACAANAA4ADAALAA8ADAAKAAsADQAPAA4ADQAMAA8AEAAWABEAEAAVABYAFAATABcAFAASABMAFQAXABYAFQAUABcAGAAeABkAGAAdAB4AHAAbAB8AHAAaABsAHQAfAB4AHQAcAB8A"),
+"material": SubResource("StandardMaterial3D_fk1uj"),
+"name": "grass_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("EgWRcf//mcP//5Fx//+ZwxIFJjUAALzJ//8mNQAAvMkSBRBUVFXHxxIFVGapqrbE//9UZqmqtsT//xBUVFXHx2iJAADU/svZaIn9+tT+y9n/1QAAaB+a3f/V/fpoH5rd97MAAENpYNzqmwAA2LN52uqb/frYs3na97P9+kNpYNyE4QN8vP7//x4EA3y8/v//hOEO1jMi//8eBA7WMyL//4ThmK4Ba///hOE5kqS0//8eBDmSpLT//x4EmK4Ba///14FH6sT9LuA/Vs0PxP0u4Jcr//8EO4njAACEJQQ7ieOqT+n28Xpz4iRr/u8IvMfgjD+EFQi8x+ASJG8c8Xpz4v///3////9/////f////3////9/////f////3////9/x9LH0sfSx9LG0MbQxtDG0GjRaNFp0mnSadJp0mjRaNGbuf//m7n//7G0//+xtP//Rbb//7m4//+5uP//Rbb//+anKU7mpylOvqncS76p3EsoqZZMPKi9TTyovU0oqZZM")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1cq3m")
+
+[node name="@Node3D@10" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@11" type="StaticBody3D" parent="."]
+
+[node name="grass_2" type="MeshInstance3D" parent="@StaticBody3D@11"]
+mesh = SubResource("ArrayMesh_3dceb")
+skeleton = NodePath("")
