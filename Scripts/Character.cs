@@ -336,6 +336,7 @@ public partial class Character : Entity
 		if (EquippedWeapon != null)
 		{
 			EquippedWeapon.QueueFree();
+			EquippedWeapon = null;
 		}
 
 		string scenePath = EnumServices.GetFilePath(weaponUpgrade, Root.WeaponsFilepath);

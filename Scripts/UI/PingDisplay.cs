@@ -22,7 +22,7 @@ public partial class PingDisplay : Label
     {
         if(Visible)
         {
-            if(LevelManager.Instance != null)
+            if(LevelManager.Instance != null && LevelManager.Instance.PlayerStats.ContainsKey(Multiplayer.GetUniqueId()))
             {
                 Text = LevelManager.Instance.PlayerStats[Multiplayer.GetUniqueId()].ping.ToString() + "ms";
             }
