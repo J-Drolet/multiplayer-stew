@@ -165,7 +165,7 @@ namespace multiplayerstew.Scripts.Base
                 {
                     float speed = Velocity.Length();
                     // Define ideal velocity (direction x speed towards player character from current position)
-                    Vector3 idealVelocity = (nearestEnemy.GlobalPosition - GlobalPosition).Normalized() * speed;
+                    Vector3 idealVelocity = (nearestEnemy.Head.GlobalPosition - GlobalPosition).Normalized() * speed;
                     // speed to steer = direction vector obtained by idealVelocity - current_velocity x force to steer
                     Vector3 steering = (idealVelocity - Velocity).Normalized() * (float)Config.GetValue("upgrade_constants", "homing_intensity", true);
                     Velocity += steering * (float)delta;
