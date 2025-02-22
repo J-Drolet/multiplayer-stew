@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://ciaqkt6kkv2l0"]
 
-[ext_resource type="Texture2D" uid="uid://do37v2y73f6ao" path="res://Assets/Models/Weapons/RifleBulletSeperate_Ammo_tex.png" id="1_e5fk4"]
+[ext_resource type="Texture2D" uid="uid://cohcg4lejpdtj" path="res://Assets/Textures/Weapons/RifleBulletSeperate_Ammo_tex.png" id="1_e5fk4"]
 
 [sub_resource type="Curve" id="Curve_kdu1n"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.15534, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
