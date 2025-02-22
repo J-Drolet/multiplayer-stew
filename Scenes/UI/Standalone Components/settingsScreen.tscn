@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://mujxr1ewuap1"]
+[gd_scene load_steps=7 format=3 uid="uid://mujxr1ewuap1"]
 
 [ext_resource type="Script" path="res://Scripts/UI/SettingsScreen.cs" id="1_cvm75"]
 [ext_resource type="Theme" uid="uid://emuxwpv1i0mt" path="res://Assets/Themes/SettingsMenu.tres" id="2_oyqlb"]
 [ext_resource type="Script" path="res://Scripts/UI/SettingInputTypes/LineEditSettingInput.cs" id="3_7u800"]
 [ext_resource type="Script" path="res://Scripts/UI/SettingInputTypes/SliderSettingInput.cs" id="4_j6ui4"]
-[ext_resource type="Script" path="res://Scripts/UI/OptionButtonBasedOnEnum.cs" id="5_7lvaf"]
 [ext_resource type="Script" path="res://Scripts/UI/SettingInputTypes/ButtonSettingInput.cs" id="5_aka8e"]
 [ext_resource type="Script" path="res://Scripts/UI/SettingInputTypes/OptionsButtonSettingInput.cs" id="6_45gcu"]
 
@@ -174,7 +173,6 @@ popup/item_1/text = "Windowed"
 popup/item_1/id = 1
 popup/item_2/text = "Borderless Fullscreen"
 popup/item_2/id = 2
-script = ExtResource("5_7lvaf")
 
 [node name="FaceOption" type="HBoxContainer" parent="Tabs/GameTab/VBoxContainer/Character Customization/VBoxContainer" node_paths=PackedStringArray("Input")]
 layout_mode = 2

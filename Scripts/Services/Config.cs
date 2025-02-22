@@ -22,13 +22,18 @@ public partial class Config: Node
     public override void _EnterTree()
     {   
         Instance = this;
-        
         DefaultSettings = new ConfigFile();
-        DefaultSettings.Load(DefaultSettingsFilepath);
+        Error defaultError = DefaultSettings.Load(DefaultSettingsFilepath);
+        if(defaultError != Error.Ok) {
+            GD.PrintErr("Config._EnterTree - Failed to load default config with Status code: " + defaultError.ToString());
+        }
+
 
         UserSettings = new ConfigFile();
-        UserSettings.Load(UserSettingsFilepath);
-        GD.Print(ProjectSettings.GlobalizePath(UserSettingsFilepath));
+        Error usrError = UserSettings.Load(UserSettingsFilepath);
+        if(usrError != Error.Ok) {
+            GD.PrintErr("Config._EnterTree - Failed to load user config with Status code: " + usrError.ToString());
+        }
     }
 
     /// <summary>
@@ -105,4 +110,13 @@ public partial class Config: Node
         UserSettings.Save(UserSettingsFilepath);
     }
 
+    public static void PrintConfigFile(ConfigFile configFile)
+    {
+        foreach(string section in configFile.GetSections())
+        {
+            foreach(string sectionKey in configFile.GetSectionKeys(section)) {
+                GD.Print($"{section}[{sectionKey}] = {configFile.GetValue(section, sectionKey)}");
+            }
+        }
+    }
 }

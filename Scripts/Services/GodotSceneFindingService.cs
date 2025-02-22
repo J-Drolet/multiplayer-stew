@@ -13,10 +13,11 @@ public partial class GodotSceneFindingService : Node
 		foreach(string filename in dir.GetFiles()) 
 		{
 			string filepath = parentFilepath + filename;
-			string extension = GetExtension(filepath);
+			string removedRemapFile = filepath.Replace (".remap", ""); // export adds unnecessary .remap extension
+			string extension = GetExtension(removedRemapFile);
 			if(extension == "tscn" || extension == "scn" || extension == "escn")
 			{
-				scenes.Add(filepath);
+				scenes.Add(removedRemapFile);
 			}
 		}
 
