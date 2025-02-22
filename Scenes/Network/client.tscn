@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://eoi8ks6agami"]
+[gd_scene load_steps=13 format=3 uid="uid://eoi8ks6agami"]
 
 [ext_resource type="Script" path="res://Scripts/Networking/Client.cs" id="1_i1rml"]
 [ext_resource type="PackedScene" uid="uid://emhg32smyqx0" path="res://Scenes/UI/Main Menu/mainMenu.tscn" id="2_518qk"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ccp21mmc3ysnv" path="res://Scenes/UI/Pause Menu/pauseMenu.tscn" id="5_7ucih"]
 [ext_resource type="Theme" uid="uid://bv5j88dwfwb7f" path="res://Assets/Themes/DebugInfo.tres" id="7_gtoaa"]
 [ext_resource type="Script" path="res://Scripts/UI/FpsCounter.cs" id="8_vsq7u"]
+[ext_resource type="Script" path="res://Scripts/UI/PingDisplay.cs" id="10_750w8"]
 [ext_resource type="PackedScene" uid="uid://c4wr0n7pacuhv" path="res://Scenes/UI/Standalone Components/EndOfGame.tscn" id="10_lyo1v"]
 [ext_resource type="PackedScene" uid="uid://b2wqxmis36qbr" path="res://Scenes/UI/Scoreboard/Scoreboard.tscn" id="10_ueqgi"]
 
@@ -32,12 +33,25 @@ visible = false
 [node name="Spinner" parent="." instance=ExtResource("4_ryq63")]
 visible = false
 
-[node name="FPS Counter" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Diagnostics" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(100, 0)
+anchors_preset = -1
+anchor_right = 0.087
+anchor_bottom = 0.062
+offset_right = -60.224
+offset_bottom = -0.176003
+
+[node name="FPS Counter" type="Label" parent="Diagnostics"]
+layout_mode = 2
 theme = ExtResource("7_gtoaa")
 text = "FPS: "
 script = ExtResource("8_vsq7u")
+
+[node name="Ping Display" type="Label" parent="Diagnostics"]
+layout_mode = 2
+theme = ExtResource("7_gtoaa")
+text = "ms"
+script = ExtResource("10_750w8")
 
 [node name="EndOfGame" parent="." instance=ExtResource("10_lyo1v")]
 visible = false
