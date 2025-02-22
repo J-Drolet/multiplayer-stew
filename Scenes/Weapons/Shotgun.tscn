@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cf286mioi5bu8" path="res://Assets/Models/Weapons/Ammo_glb_Ammo_tex.png" id="5_mkipk"]
 [ext_resource type="AudioStream" uid="uid://bbtjx13gjcshc" path="res://Assets/Sounds/SFX/ShotgunLatch.wav" id="6_ylv44"]
 [ext_resource type="Script" path="res://Scripts/Base/SelfDestroyingParticle.cs" id="9_x08go"]
-[ext_resource type="PackedScene" path="res://Scenes/Particles/ShotgunShellParticle.tscn" id="10_b4gog"]
+[ext_resource type="PackedScene" uid="uid://bjyaanpyul0bx" path="res://Scenes/Particles/ShotgunShellParticle.tscn" id="10_b4gog"]
 
 [sub_resource type="Animation" id="Animation_omih6"]
 resource_name = "Fire"

@@ -29,6 +29,7 @@ public partial class Character : Entity
 	[Export, ExportRequired]
 	public AudioStream OutlinePlayerSFX { get; set; }
 	public HashSet<Upgrade> Upgrades { get; set; } = new();
+	public Weapon? WeaponType = null;
 
 	public bool CanMove { get; set; } = true; // whether or not the local player should be able to manipulate the character
 	public bool CanLook { get; set; } = true; // whether or not the local player should be able to manipulate the character
@@ -281,7 +282,24 @@ public partial class Character : Entity
 			powerLevel += PowerLevelService.GetPowerLevel(upgrade);
 		}
 
+		if(WeaponType != null) {
+			powerLevel += PowerLevelService.GetPowerLevel((Weapon) WeaponType);
+		}
+
 		return powerLevel;
+	}
+
+	private void OnPowerLevelChange() 
+	{
+		if(Multiplayer.IsServer())
+		{
+			int characterOwner = GetMultiplayerAuthority();
+			int powerLevel = CalculatePowerLevel();
+			if(powerLevel > LevelManager.Instance.PlayerStats[characterOwner].maxPowerLevel)
+			{
+				LevelManager.Instance.PlayerStats[characterOwner].maxPowerLevel = powerLevel;
+			}
+		}
 	}
 
     /// <summary>
@@ -305,13 +323,17 @@ public partial class Character : Entity
 	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
 	public void SetWeapon(Weapon weaponUpgrade)
 	{
+		WeaponType = weaponUpgrade; // every peer sets the type
+		OnPowerLevelChange();
+
+		if(!IsMultiplayerAuthority()) return;
+
 		if (EquippedWeapon != null)
 		{
 			EquippedWeapon.QueueFree();
 		}
 
 		string scenePath = EnumServices.GetFilePath(weaponUpgrade, Root.WeaponsFilepath);
-		GD.Print(scenePath);
 
 		if(scenePath != null)
 		{
@@ -325,6 +347,7 @@ public partial class Character : Entity
 
 			// toggle ammo count display of local player
 			UI.InGameUI.AmmoCount.Visible = EquippedWeapon != null;
+		
 		}
 	}
 
@@ -332,17 +355,7 @@ public partial class Character : Entity
 	public void AddUpgrade(Upgrade upgrade)
 	{
 		Upgrades.Add(upgrade);
-
-		if(Multiplayer.IsServer())
-		{
-			int characterOwner = GetMultiplayerAuthority();
-			int powerLevel = CalculatePowerLevel();
-			if(powerLevel > LevelManager.Instance.PlayerStats[characterOwner].maxPowerLevel)
-			{
-				LevelManager.Instance.PlayerStats[characterOwner].maxPowerLevel = powerLevel;
-				//SceneManager.Instance.SendPlayerStats(characterOwner);
-			}
-		}
+		OnPowerLevelChange();
 	}
 
 	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
