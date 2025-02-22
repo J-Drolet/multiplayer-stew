@@ -29,7 +29,6 @@ public partial class LevelManager : Node
 
 	private Random RNG = new(); // easier to keep here for randomizing spawns
 
-	private double timer = 0;
 	public List<Node3D> SpawnPoints;
 
 	public static LevelManager Instance;
@@ -119,12 +118,6 @@ public partial class LevelManager : Node
 
     public override void _Process(double delta)
     {
-		timer += delta;
-		if(timer > 1) {
-			GD.Print(PlayerStatJson);
-			timer = 0;
-		}
-
 		if(Multiplayer.IsServer())
 		{
 			PlayerStatJson = JsonSerializer.Serialize(PlayerStats);

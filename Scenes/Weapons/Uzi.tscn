@@ -523,6 +523,7 @@ properties/6/replication_mode = 1
 [node name="Mac10" type="Node3D" node_paths=PackedStringArray("APlayer")]
 script = ExtResource("1_owfg8")
 WeaponName = "Mac 10"
+WeaponType = 4
 MaxAmmo = 30
 FireMode = 2
 Projectile = ExtResource("2_lm1gr")

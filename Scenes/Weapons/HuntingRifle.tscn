@@ -541,6 +541,7 @@ properties/6/replication_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.910289, 0, -1.59283)
 script = ExtResource("1_22ate")
 WeaponName = "M1 Garand"
+WeaponType = 3
 MaxAmmo = 8
 Projectile = ExtResource("2_1wu46")
 APlayer = NodePath("AnimationPlayer")

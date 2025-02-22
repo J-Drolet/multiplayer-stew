@@ -14,7 +14,7 @@ namespace multiplayerstew.Scripts.Pickups
 
 		protected override void ActivatePickup(Character character)
 		{
-			character.Rpc(Character.MethodName.SetWeapon, (int)weapon);
+			character.SetWeapon(weapon);
 		}
 	}
 }

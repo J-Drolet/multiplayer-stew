@@ -32,7 +32,7 @@ namespace multiplayerstew.Scripts.Pickups
 
         protected override void ActivatePickup(Character character)
 		{
-			character.Rpc(Character.MethodName.SetWeapon, (int)WeaponUpgrade);
+			character.SetWeapon(WeaponUpgrade);
 		}
 
         protected override Array<string> GetSpawnPaths()

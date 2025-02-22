@@ -561,6 +561,7 @@ shadow_mesh = SubResource("ArrayMesh_bypow")
 transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
 script = ExtResource("1_afhbb")
 WeaponName = "AUG"
+WeaponType = 1
 MaxAmmo = 30
 FireMode = 2
 Projectile = ExtResource("2_bl7sb")

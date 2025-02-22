@@ -198,7 +198,7 @@ CharacterMesh = NodePath("CharacterMesh")
 APlayer = NodePath("AnimationPlayer")
 ATree = NodePath("AnimationTree")
 InvisibilitySmokeParticles = NodePath("CharacterMesh/InvisibilitySmoke")
-WeaponSpawner = NodePath("Head/Camera3D/Hand/MultiplayerSpawner")
+WeaponSpawner = NodePath("Head/Camera3D/Hand/WeaponParent/MultiplayerSpawner")
 OutlinePlayerSFX = ExtResource("2_b0fus")
 Hitboxes = [NodePath("Area3D")]
 HealthText = NodePath("CharacterMesh/Cur Health")
@@ -241,7 +241,9 @@ cull_mask = 1048573
 [node name="Hand" type="Node3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.368436, -0.486425, -1.21339)
 
-[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="Head/Camera3D/Hand"]
+[node name="WeaponParent" type="Node3D" parent="Head/Camera3D/Hand"]
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="Head/Camera3D/Hand/WeaponParent"]
 spawn_path = NodePath("..")
 
 [node name="ProjectileOrigin" type="Node3D" parent="Head/Camera3D"]

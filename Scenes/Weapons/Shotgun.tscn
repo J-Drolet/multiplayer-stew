@@ -595,6 +595,7 @@ properties/9/replication_mode = 1
 [node name="Shotgun" type="Node3D" node_paths=PackedStringArray("APlayer")]
 script = ExtResource("1_ekypa")
 WeaponName = "Shotgun"
+WeaponType = 2
 MaxAmmo = 2
 ProjectilePerShot = 24
 Projectile = ExtResource("2_67p85")

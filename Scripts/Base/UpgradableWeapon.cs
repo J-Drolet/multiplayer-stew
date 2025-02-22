@@ -21,6 +21,8 @@ namespace multiplayerstew.Scripts.Base
 		// Define new weapon parameters + projectile as Godot Properties
 		[Export]
 		public string WeaponName { get; set; } = "Unknown";
+		[Export, ExportRequired]
+		public Weapon WeaponType;
 		[Export]
 		public int MaxAmmo { get; set; } = -1;
 		[Export]

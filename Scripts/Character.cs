@@ -29,7 +29,6 @@ public partial class Character : Entity
 	[Export, ExportRequired]
 	public AudioStream OutlinePlayerSFX { get; set; }
 	public HashSet<Upgrade> Upgrades { get; set; } = new();
-	public Weapon? WeaponType = null;
 
 	public bool CanMove { get; set; } = true; // whether or not the local player should be able to manipulate the character
 	public bool CanLook { get; set; } = true; // whether or not the local player should be able to manipulate the character
@@ -48,8 +47,11 @@ public partial class Character : Entity
 	{
 		CurrentHealth = MaxHealth; // we have to do this here or else infinite spawns will happen on server side
 		SetMultiplayerAuthority(Name.ToString().Split("#").First().ToInt());
+		WeaponSpawner.GetParent().SetMultiplayerAuthority(1); // weapon spawning is server responsibility
 		LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode = this;
-		
+		WeaponSpawner.Spawned += OnWeaponSpawned; // used to sync up EquippedWeapon
+		WeaponSpawner.Despawned += OnWeaponDespawned;
+
 		if(IsMultiplayerAuthority()) // local client requests its spawn point from server
 		{
 			LevelManager.Instance.RpcId(1, LevelManager.MethodName.RequestSpawnPoint);
@@ -61,6 +63,7 @@ public partial class Character : Entity
         	UI.GunViewCamera.active = true;
 		}
 	}
+
 
     public override void _Ready()
     {
@@ -132,6 +135,8 @@ public partial class Character : Entity
 		InvisibilitySmokeParticles.Emitting = Upgrades.Contains(Upgrade.C_Invisibility);
 
 		if(!IsMultiplayerAuthority()) return;
+
+		UI.InGameUI.AmmoCount.Visible = EquippedWeapon != null;
 
 		////////// Small Player Upgrade
 		Scale = Vector3.One * (!Upgrades.Contains(Upgrade.C_SmallerHitbox) ? 1.0f : (float)Config.GetValue("upgrade_constants", "small_hitbox_factor", true));
@@ -282,8 +287,8 @@ public partial class Character : Entity
 			powerLevel += PowerLevelService.GetPowerLevel(upgrade);
 		}
 
-		if(WeaponType != null) {
-			powerLevel += PowerLevelService.GetPowerLevel((Weapon) WeaponType);
+		if(EquippedWeapon != null) {
+			powerLevel += PowerLevelService.GetPowerLevel(EquippedWeapon.WeaponType);
 		}
 
 		return powerLevel;
@@ -319,14 +324,13 @@ public partial class Character : Entity
 		Camera.MakeCurrent(); // dont want to see a split second before spawn is set
 	}
 
-	
-	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+	/// <summary>
+	/// Only Called on Server. MultiplayerSpawner will sync the spawned weapon and peers will populate EquippedWeapon from the Event
+	/// </summary>
+	/// <param name="weaponUpgrade"></param>
 	public void SetWeapon(Weapon weaponUpgrade)
 	{
-		WeaponType = weaponUpgrade; // every peer sets the type
-		OnPowerLevelChange();
-
-		if(!IsMultiplayerAuthority()) return;
+		if(!Multiplayer.IsServer()) return;
 
 		if (EquippedWeapon != null)
 		{
@@ -343,13 +347,26 @@ public partial class Character : Entity
             EquippedWeapon = weapon;
 			EquippedWeapon.Name = GetMultiplayerAuthority().ToString() + "#" + nameGenerator.NextInt64(10000);
 			
-			Hand.AddChild(EquippedWeapon);
-
-			// toggle ammo count display of local player
-			UI.InGameUI.AmmoCount.Visible = EquippedWeapon != null;
-		
+			WeaponSpawner.GetParent().AddChild(EquippedWeapon);
 		}
+		OnPowerLevelChange();
 	}
+
+	private void OnWeaponDespawned(Node node)
+    {
+        if(node == EquippedWeapon)
+		{
+			EquippedWeapon = null;
+		}
+    }
+
+    private void OnWeaponSpawned(Node node)
+    {
+        if(node is UpgradableWeapon weapon)
+		{
+			EquippedWeapon = weapon;
+		}
+    }
 
 	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
 	public void AddUpgrade(Upgrade upgrade)
