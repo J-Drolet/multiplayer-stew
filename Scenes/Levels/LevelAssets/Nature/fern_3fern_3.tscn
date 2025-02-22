@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/fern_3_fern_3.png" id="1_gvy63"]
+[ext_resource type="Texture2D" uid="uid://c856goile7sws" path="res://Assets/Textures/Nature/fern_3_fern_3.png" id="1_gvy63"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qeyb2"]
 resource_name = "fern_3"

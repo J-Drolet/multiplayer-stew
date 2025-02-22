@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://cdobvt6xdqqre"]
 
-[ext_resource type="Texture2D" uid="uid://chsntqo7r8jhl" path="res://Assets/Models/GLB/tree_1_tree_1.png" id="1_ljrd2"]
+[ext_resource type="Texture2D" uid="uid://chsntqo7r8jhl" path="res://Assets/Textures/Nature/tree_1_tree_1.png" id="1_ljrd2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a3ea7"]
 resource_name = "tree_1"

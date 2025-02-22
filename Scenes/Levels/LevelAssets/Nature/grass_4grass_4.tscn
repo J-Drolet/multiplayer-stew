@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/grass_4_grass_4.png" id="1_8ua8f"]
+[ext_resource type="Texture2D" uid="uid://dciqkh5ujxgcl" path="res://Assets/Textures/Nature/grass_4_grass_4.png" id="1_8ua8f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_laujj"]
 resource_name = "grass_4"

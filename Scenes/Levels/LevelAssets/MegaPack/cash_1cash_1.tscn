@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Models/GLB/cash_1_cash_1.png" id="1_1ftc7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xt60k"]
+resource_name = "cash_1"
+cull_mode = 2
+albedo_texture = ExtResource("1_1ftc7")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_c3jxa"]
+_surfaces = [{
+"aabb": AABB(-0.064152, -0.14256, -0.039204, 0.128832, 0.28512, 0.039204),
+"format": 34896613377,
+"index_count": 60,
+"index_data": PackedByteArray("AAADAAEAAAACAAMACAAHAAkACAAGAAcABgAFAAcABgAEAAUACgABAAsACgAAAAEACAAEAAYACAAKAAQACQABAAMACQALAAEABwALAAkABwAFAAsAAgAKAAgAAgAAAAoABAALAAUABAAKAAsAAgAJAAMAAgAIAAkA"),
+"name": "cash_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAD///7/AAAAAP//AAAAAAAAAAD//wAAAAAAAAAAAAD//////v8AAP////8AAAAA//8AAP//AAD//wAAAAAAAIWAAAD//wAAhYAAAAAAAACFgP///v8AAIWA//8AAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4gafa"]
+resource_name = "cash_1_cash_1"
+_surfaces = [{
+"aabb": AABB(-0.064152, -0.14256, -0.039204, 0.128832, 0.28512, 0.039204),
+"attribute_data": PackedByteArray("AAD/ZwAA//8AAP//AAAAAAAA/9sAAP/bAAD//////2f/////AAD/2///AAD////bAAD/0wAA////////AAD/awAA/9v////b////0///////////////a////9v////b/z////+///////+j////o/8//9v/v//b////N////zcAAP+jAAD/o/8/////v///AAD/NwAA/zf/P//b/7//2w=="),
+"format": 34896613399,
+"index_count": 60,
+"index_data": PackedByteArray("AQALAAQAAQAIAAsAGQAWAB0AGQATABYAFAAQABcAFAANABAAIgAFACYAIgACAAUAGgAMABIAGgAgAAwAHwADAAoAHwAlAAMAFQAkAB4AFQAPACQABwAhABsABwAAACEADgAnABEADgAjACcABgAcAAkABgAYABwA"),
+"material": SubResource("StandardMaterial3D_xt60k"),
+"name": "cash_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 40,
+"vertex_data": PackedByteArray("AAD///7//z8AAP///v+qKgAA///+//+/AAD//wAA//8AAP//AACqKgAA//8AAP+/AAAAAP///z8AAAAA////PwAAAAD//6oqAAAAAAAA/z8AAAAAAAD//wAAAAAAAKoq//////7//z///////v9U1f/////+//+//////wAA////////AABU1f////8AAP+///8AAP///z///wAA////P///AAD//1TV//8AAAAA/////wAAAAD/P///AAAAAFTVhYAAAP///z+FgAAA////P4WAAAD///8/hYAAAP///z+FgAAAAAD/P4WAAAAAAP8/hYAAAAAA//+FgAAAAAD//4WA///+//8/hYD///7//z+FgP///v//v4WA///+//+/hYD//wAA//+FgP//AAD//4WA//8AAP+/hYD//wAA/7//f/9/VFWqqv///3//P/+/VFWqqv///38AAP9//3//f1RVqqoAAP9//z//v1RVqqr/f/9/qqpUVf///3//P/+/qqpUVf///3//f/9/AAD/f6qqVFX/P/+/AAD/f6qqVFUAAP9/AAD/f/9//3//f/9/AAD/fwAA/3//P/+//z//v/9//3//f/9/////f////3//P/+//z//v////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_c3jxa")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kcpqn"]
+points = PackedVector3Array(0.064819, 0.144863, 0.00380635, -0.0664635, -0.144863, -0.0414635, -0.0664635, -0.144863, 0.00380635, -0.0664635, 0.144863, -0.0414635, 0.064819, -0.144863, -0.0414635, 0.064819, -0.144863, 0.00380635, -0.0664635, 0.144863, 0.00380635, 0.064819, 0.144863, -0.0414635)
+
+[node name="@Node3D@52" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@53" type="StaticBody3D" parent="."]
+
+[node name="cash_1" type="MeshInstance3D" parent="@StaticBody3D@53"]
+mesh = SubResource("ArrayMesh_4gafa")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@53"]
+shape = SubResource("ConvexPolygonShape3D_kcpqn")

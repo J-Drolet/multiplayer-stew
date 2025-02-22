@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://1xvcjnucwlsf"]
 
-[ext_resource type="Texture2D" uid="uid://34l7nud520ko" path="res://Assets/Models/GLB/tree_8_pine_bark_2_dead.png" id="1_hmqer"]
+[ext_resource type="Texture2D" uid="uid://34l7nud520ko" path="res://Assets/Textures/Nature/tree_8_pine_bark_2_dead.png" id="1_hmqer"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_exkox"]
 resource_name = "pine_bark_2_dead"

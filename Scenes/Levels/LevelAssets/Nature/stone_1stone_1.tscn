@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://3s5ax5iwfvm6"]
 
-[ext_resource type="Texture2D" uid="uid://bpq7ukxaa0qol" path="res://Assets/Models/GLB/stone_1_stone_1.png" id="1_1rh2o"]
+[ext_resource type="Texture2D" uid="uid://bpq7ukxaa0qol" path="res://Assets/Textures/Nature/stone_1_stone_1.png" id="1_1rh2o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4qt4y"]
 resource_name = "stone_1"

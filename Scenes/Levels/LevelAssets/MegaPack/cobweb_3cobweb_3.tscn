@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Models/GLB/cobweb_3_cobweb_3.png" id="1_060lk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c15gr"]
+resource_name = "cobweb_3"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_060lk")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7btoy"]
+_surfaces = [{
+"aabb": AABB(-1.99826, 0, -0.56, 3.99652, 1e-05, 1.12),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"name": "cobweb_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mv7ox"]
+resource_name = "cobweb_3_cobweb_3"
+_surfaces = [{
+"aabb": AABB(-1.99826, 0, -0.56, 3.99652, 1e-05, 1.12),
+"attribute_data": PackedByteArray(0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"material": SubResource("StandardMaterial3D_c15gr"),
+"name": "cobweb_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_7btoy")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fgsps"]
+points = PackedVector3Array(2.01403, -0.0157346, 0.588629, -2.01403, -0.0157346, -0.575735, 2.01403, -0.0157346, -0.575735, -2.01403, -0.0157346, 0.588629)
+
+[node name="@Node3D@98" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@99" type="StaticBody3D" parent="."]
+
+[node name="cobweb_3" type="MeshInstance3D" parent="@StaticBody3D@99"]
+mesh = SubResource("ArrayMesh_mv7ox")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@99"]
+shape = SubResource("ConvexPolygonShape3D_fgsps")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4 uid="uid://bik86ejoam37u"]
 
-[ext_resource type="Texture2D" uid="uid://boj5acsukyg8b" path="res://Assets/Models/GLB/tree_2_pine_bark_1.png" id="1_5s0f6"]
-[ext_resource type="Texture2D" uid="uid://b65fqgjlm48xe" path="res://Assets/Models/GLB/tree_2_pine_branch_1.png" id="2_iaiij"]
+[ext_resource type="Texture2D" uid="uid://boj5acsukyg8b" path="res://Assets/Textures/Nature/tree_2_pine_bark_1.png" id="1_5s0f6"]
+[ext_resource type="Texture2D" uid="uid://b65fqgjlm48xe" path="res://Assets/Textures/Nature/tree_2_pine_branch_1.png" id="2_iaiij"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jspty"]
 resource_name = "pine_bark_1"
