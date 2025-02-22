@@ -6,7 +6,7 @@ using System;
 public partial class InGameUI : Control
 {
     [Export, ExportRequired]
-    public AmmoLabel AmmoCount { get; set; }
+    public AmmoDisplay AmmoCount { get; set; }
     [Export, ExportRequired]
     public TextureRect HealthBar { get; set; } = new TextureRect();
 

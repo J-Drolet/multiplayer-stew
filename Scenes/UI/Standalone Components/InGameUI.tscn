@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/UI/InGameUI.cs" id="1_8bj3a"]
 [ext_resource type="Texture2D" uid="uid://bh2w5lp527x68" path="res://Assets/Crosshair.png" id="2_k7omr"]
 [ext_resource type="Script" path="res://Scripts/UI/GunViewCamera.cs" id="2_v6n63"]
-[ext_resource type="Script" path="res://Scripts/UI/InGameUI/AmmoLabel.cs" id="4_ojlqa"]
+[ext_resource type="Script" path="res://Scripts/UI/InGameUI/AmmoDisplay.cs" id="4_ojlqa"]
 [ext_resource type="Texture2D" uid="uid://bg3qetf4osqrt" path="res://Assets/Textures/UI/Ammo/Rifle_Unfired.png" id="5_0b2f7"]
 [ext_resource type="Texture2D" uid="uid://dqscko1lqgsya" path="res://Assets/Textures/UI/Ammo/Rifle_Fired.png" id="6_jnuv4"]
 
@@ -110,18 +110,38 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_yipwk")
 custom_minimum_size = Vector2(700, 30)
 layout_mode = 2
 
-[node name="Ammo Display" type="Panel" parent="."]
-custom_minimum_size = Vector2(100, 300)
+[node name="Ammo Display" type="Panel" parent="." node_paths=PackedStringArray("AmmoContainer", "MarginContainer")]
+custom_minimum_size = Vector2(40, 0)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.913
-anchor_top = 0.537
+anchor_left = 0.942
+anchor_top = 0.958
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 0.223999
-offset_top = 300.024
+offset_left = 14.8159
+offset_top = 0.215942
+offset_right = -27.0
+offset_bottom = -27.0
 grow_horizontal = 0
 grow_vertical = 0
 script = ExtResource("4_ojlqa")
 UnfiredAmmoTexture = ExtResource("5_0b2f7")
 FiredAmmoTexture = ExtResource("6_jnuv4")
+AmmoContainer = NodePath("MarginContainer/VBoxContainer")
+MarginContainer = NodePath("MarginContainer")
+
+[node name="MarginContainer" type="MarginContainer" parent="Ammo Display"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 87.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Ammo Display/MarginContainer"]
+layout_mode = 2
