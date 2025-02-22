@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dker47ss6f07g"]
+[gd_scene load_steps=10 format=3 uid="uid://dker47ss6f07g"]
 
 [ext_resource type="Script" path="res://Scripts/UI/InGameUI.cs" id="1_8bj3a"]
 [ext_resource type="Texture2D" uid="uid://bh2w5lp527x68" path="res://Assets/Crosshair.png" id="2_k7omr"]
 [ext_resource type="Script" path="res://Scripts/UI/GunViewCamera.cs" id="2_v6n63"]
+[ext_resource type="Script" path="res://Scripts/UI/InGameUI/AmmoLabel.cs" id="4_ojlqa"]
+[ext_resource type="Texture2D" uid="uid://bg3qetf4osqrt" path="res://Assets/Textures/UI/Ammo/Rifle_Unfired.png" id="5_0b2f7"]
+[ext_resource type="Texture2D" uid="uid://dqscko1lqgsya" path="res://Assets/Textures/UI/Ammo/Rifle_Fired.png" id="6_jnuv4"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_q5dko"]
 viewport_path = NodePath("GunView/SubViewport")
@@ -27,7 +30,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_8bj3a")
-AmmoCount = NodePath("AmmoCount")
+AmmoCount = NodePath("Ammo Display")
 HealthBar = NodePath("PanelContainer/HealthBar")
 
 [node name="GunView" type="TextureRect" parent="."]
@@ -106,3 +109,19 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_yipwk")
 [node name="HealthBar" type="TextureRect" parent="PanelContainer"]
 custom_minimum_size = Vector2(700, 30)
 layout_mode = 2
+
+[node name="Ammo Display" type="Panel" parent="."]
+custom_minimum_size = Vector2(100, 300)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.913
+anchor_top = 0.537
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.223999
+offset_top = 300.024
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("4_ojlqa")
+UnfiredAmmoTexture = ExtResource("5_0b2f7")
+FiredAmmoTexture = ExtResource("6_jnuv4")

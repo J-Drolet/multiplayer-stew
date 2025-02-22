@@ -177,7 +177,8 @@ public partial class Character : Entity
 		}
 		#endregion
 
-		if (EquippedWeapon == null) UI.InGameUI.AmmoCount.Text = "";
+		//if (EquippedWeapon == null) UI.InGameUI.AmmoCount.Text = "";
+		if (EquippedWeapon == null) UI.InGameUI.AmmoCount.Hide();
 
 		UI.InGameUI.SetHealthBar(CurrentHealth / MaxHealth);
 

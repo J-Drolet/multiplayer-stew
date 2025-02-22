@@ -72,7 +72,9 @@ namespace multiplayerstew.Scripts.Base
 			
             TimeSinceLastCharge += delta;
 
-			UI.InGameUI.AmmoCount.Text = GetCurrentAmmoText();
+			UI.InGameUI.AmmoCount.Show();
+			UI.InGameUI.AmmoCount.SetAmmo(CurrentAmmo, MaxAmmo);
+			
 			if(GetCurrentFireMode() != FireModes.Single && Input.IsActionPressed("Fire"))
 			{
 				Fire();

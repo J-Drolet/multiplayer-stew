@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://bmejhchhhu7w8"]
 
 [ext_resource type="Script" path="res://Scripts/Pickups/TimedWeaponPickup.cs" id="1_g3l2s"]
-[ext_resource type="Texture2D" uid="uid://cnbfw8yt3ogh2" path="res://Assets/Textures/ProgressBar/Border.png" id="2_1w3ge"]
-[ext_resource type="Texture2D" uid="uid://hlk0h74umyuk" path="res://Assets/Textures/ProgressBar/Fill.png" id="3_yaemf"]
+[ext_resource type="Texture2D" uid="uid://cnbfw8yt3ogh2" path="res://Assets/Textures/UI/ProgressBar/Border.png" id="2_1w3ge"]
+[ext_resource type="Texture2D" uid="uid://hlk0h74umyuk" path="res://Assets/Textures/UI/ProgressBar/Fill.png" id="3_yaemf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p8ly1"]
 size = Vector3(2, 2, 2)
