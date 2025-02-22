@@ -278,8 +278,7 @@ public partial class Character : Entity
 
 		foreach(Upgrade upgrade in Upgrades)
 		{
-			// @TODO add logic
-			powerLevel++;
+			powerLevel += PowerLevelService.GetPowerLevel(upgrade);
 		}
 
 		return powerLevel;
