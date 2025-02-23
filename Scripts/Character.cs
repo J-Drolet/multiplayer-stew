@@ -56,6 +56,7 @@ public partial class Character : Entity
 		{
 			LevelManager.Instance.RpcId(1, LevelManager.MethodName.RequestSpawnPoint);
 			UI.InGameUI.AmmoCount.Visible = EquippedWeapon != null; // hide ammoCount on respawn
+			UI.InGameUI.FlavorTextDisplay.HideDisplay();
 			ATree.Active = true;
 
 			UI.InGameUI.Show();
@@ -177,7 +178,6 @@ public partial class Character : Entity
 		}
 		#endregion
 
-		//if (EquippedWeapon == null) UI.InGameUI.AmmoCount.Text = "";
 		if (EquippedWeapon == null) UI.InGameUI.AmmoCount.Hide();
 
 		UI.InGameUI.SetHealthBar(CurrentHealth / MaxHealth);
@@ -367,6 +367,10 @@ public partial class Character : Entity
         if(node is UpgradableWeapon weapon)
 		{
 			EquippedWeapon = weapon;
+			if(IsMultiplayerAuthority())
+			{
+				UI.InGameUI.FlavorTextDisplay.DisplayFlavorTextFor(weapon.WeaponType);
+			}
 		}
     }
 
@@ -375,6 +379,10 @@ public partial class Character : Entity
 	{
 		Upgrades.Add(upgrade);
 		OnPowerLevelChange();
+		if(IsMultiplayerAuthority())
+		{
+			UI.InGameUI.FlavorTextDisplay.DisplayFlavorTextFor(upgrade);
+		}
 	}
 
 	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]

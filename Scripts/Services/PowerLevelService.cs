@@ -8,11 +8,11 @@ public static class PowerLevelService
 {
     public static int GetPowerLevel(Upgrade upgrade)
     {
-        return (int) Config.GetValue("power_levels", "Upgrade." + upgrade.ToString());
+        return (int) Config.GetValue("Upgrade." + upgrade.ToString(), "power_level", true);
     }
 
     public static int GetPowerLevel(Weapon weapon)
     {
-        return (int) Config.GetValue("power_levels", "Weapon." + weapon.ToString());
+        return (int) Config.GetValue("Weapon." + weapon.ToString(), "power_level", true);
     }
 }

@@ -8,6 +8,8 @@ public partial class InGameUI : Control
     public AmmoDisplay AmmoCount { get; set; }
     [Export, ExportRequired]
     public Range HealthBar { get; set; }
+    [Export, ExportRequired]
+    public FlavorTextDisplay FlavorTextDisplay { get; set; }
 
     public override void _Ready()
     {

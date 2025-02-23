@@ -10,7 +10,7 @@ public partial class Config: Node
 
     // File paths for settings
     private static readonly string UserSettingsFilepath = "user://MultiplayerStewSettings.cfg";
-    private static readonly string DefaultSettingsFilepath = "res://Config/defaults.cfg";
+    private static readonly string DefaultSettingsFilepath = "res://Config/constants.cfg";
 
     // We use an instance purely so we can emit events
     public static Config Instance;

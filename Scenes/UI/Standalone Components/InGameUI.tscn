@@ -1,8 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://dker47ss6f07g"]
+[gd_scene load_steps=15 format=3 uid="uid://dker47ss6f07g"]
 
 [ext_resource type="Script" path="res://Scripts/UI/InGameUI.cs" id="1_8bj3a"]
 [ext_resource type="Texture2D" uid="uid://bh2w5lp527x68" path="res://Assets/Crosshair.png" id="2_k7omr"]
 [ext_resource type="Script" path="res://Scripts/UI/GunViewCamera.cs" id="2_v6n63"]
+[ext_resource type="Script" path="res://Scripts/UI/InGameUI/FlavorTextDisplay.cs" id="3_kgdjc"]
+[ext_resource type="Theme" uid="uid://dorbb2kl66u26" path="res://Assets/Themes/FlavorText.tres" id="3_uu0oa"]
 [ext_resource type="Texture2D" uid="uid://dvtb4ffopis17" path="res://Assets/Textures/UI/HealthBar/CigaretteOutline.png" id="4_0nvln"]
 [ext_resource type="Script" path="res://Scripts/UI/InGameUI/AmmoDisplay.cs" id="4_ojlqa"]
 [ext_resource type="Texture2D" uid="uid://bg3qetf4osqrt" path="res://Assets/Textures/UI/Ammo/Rifle_Unfired.png" id="5_0b2f7"]
@@ -11,6 +13,10 @@
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_q5dko"]
 viewport_path = NodePath("GunView/SubViewport")
+
+[sub_resource type="Curve" id="Curve_1onke"]
+_data = [Vector2(1e-05, 1), 0.0, 0.0, 0, 0, Vector2(0.896629, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
 
 [sub_resource type="LabelSettings" id="LabelSettings_1vvx4"]
 font_size = 36
@@ -27,7 +33,7 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[node name="InGameUi" type="Control" node_paths=PackedStringArray("AmmoCount", "HealthBar")]
+[node name="InGameUi" type="Control" node_paths=PackedStringArray("AmmoCount", "HealthBar", "FlavorTextDisplay")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,6 +44,7 @@ mouse_filter = 1
 script = ExtResource("1_8bj3a")
 AmmoCount = NodePath("Ammo Display")
 HealthBar = NodePath("HealthBar")
+FlavorTextDisplay = NodePath("UpgradeFlavorText")
 
 [node name="GunView" type="TextureRect" parent="."]
 layout_mode = 1
@@ -56,17 +63,41 @@ cull_mask = 2
 script = ExtResource("2_v6n63")
 linkedViewport = NodePath("..")
 
-[node name="Game Name" type="Label" parent="."]
+[node name="UpgradeFlavorText" type="Control" parent="." node_paths=PackedStringArray("TitleLabel", "SubTitleLabel")]
+custom_minimum_size = Vector2(0, 200)
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -576.0
-offset_right = 576.0
-offset_bottom = 23.0
+anchors_preset = 10
+anchor_right = 1.0
 grow_horizontal = 2
-text = "MULTIPLAYER-STEW"
+script = ExtResource("3_kgdjc")
+TitleLabel = NodePath("VBoxContainer/Title")
+SubTitleLabel = NodePath("VBoxContainer/SubTitle")
+TotalDisplayTime = 3.0
+OpacityCurve = SubResource("Curve_1onke")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UpgradeFlavorText"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="UpgradeFlavorText/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_uu0oa")
+theme_override_font_sizes/font_size = 20
+text = "Title"
 horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubTitle" type="Label" parent="UpgradeFlavorText/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_uu0oa")
+theme_override_font_sizes/font_size = 12
+text = "SubTitle"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -126,7 +157,7 @@ anchor_bottom = 1.0
 offset_left = -70.0
 offset_top = -30.0
 offset_right = -30.0
-offset_bottom = -30.0
+offset_bottom = -16.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_oxs0c")
@@ -141,7 +172,6 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = 87.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 5
