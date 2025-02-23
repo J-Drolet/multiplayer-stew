@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cb1w1yrkt2our"]
+[gd_scene load_steps=16 format=3 uid="uid://cb1w1yrkt2our"]
 
 [ext_resource type="PackedScene" uid="uid://ddwtikg73ufqn" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/Cell.tscn" id="1_78hm4"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/floor_2floor_2.tscn" id="2_7fhm2"]
@@ -12,6 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://xit0es56088l" path="res://Scenes/Levels/LevelAssets/MegaPack/lamp_3_onlamp_3_on.tscn" id="9_p2nfw"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/pillar_1pillar_1.tscn" id="9_uu7ak"]
 [ext_resource type="PackedScene" uid="uid://b2hy2s2suld4s" path="res://Scenes/Levels/LevelAssets/MegaPack/ceiling_lamp_1_onceiling_lamp_1_on.tscn" id="10_nr42o"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/wall_element_1_bottom_shortwall_element_1_bottom_short.tscn" id="13_ufnja"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/wall_element_1wall_element_1.tscn" id="14_uyeb0"]
+[ext_resource type="PackedScene" uid="uid://blwlihg7ry13y" path="res://Scenes/Levels/LevelAssets/MegaPack/beam_2beam_2.tscn" id="15_dwlwg"]
 
 [node name="Prison" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.66473, 0, 0)
@@ -551,6 +554,185 @@ transform = Transform3D(-1, 1.50996e-07, -6.60024e-15, 0, -4.37114e-08, -1, -1.5
 
 [node name="lamp_3_onlamp_3_on_tscn3" parent="Lights" instance=ExtResource("9_p2nfw")]
 transform = Transform3D(-1, 1.50996e-07, -6.60024e-15, 0, -4.37114e-08, -1, -1.50996e-07, -1, 4.37114e-08, -23.2971, 2.40446, 11.9064)
+
+[node name="Exterior" type="Node3D" parent="."]
+
+[node name="wall_element_1_bottom_shortwall_element_1_bottom_short_tscn" parent="Exterior" instance=ExtResource("13_ufnja")]
+transform = Transform3D(3.0598e-07, 1, -2.18557e-07, 2.62268e-07, 2.18557e-07, 1, 1, -3.0598e-07, -2.62268e-07, 24.4516, 4.09452, 6)
+
+[node name="wall_element_1_bottom_shortwall_element_1_bottom_short_tscn2" parent="Exterior" instance=ExtResource("13_ufnja")]
+transform = Transform3D(3.0598e-07, 1, -2.18557e-07, 2.62268e-07, 2.18557e-07, 1, 1, -3.0598e-07, -2.62268e-07, 24.4516, 4.09452, 7)
+
+[node name="wall_element_1wall_element_1_tscn" parent="Exterior" instance=ExtResource("14_uyeb0")]
+transform = Transform3D(3.0598e-07, 1, -4.37114e-08, -1, 3.0598e-07, 2.18557e-07, 2.18557e-07, 4.37114e-08, 1, 24.4403, 4.59439, 8)
+
+[node name="beam_2beam_2_tscn" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-7.53066e-07, -0.999999, 4.37114e-08, 0, -4.37114e-08, -1, 3.44563, -2.18557e-07, 9.55343e-15, 24.4062, 6.094, 6.5)
+
+[node name="beam_2beam_2_tscn9" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(3.20522, -1.74845e-07, 1.11955e-14, 2.48876e-21, -4.37114e-08, -1, 5.60419e-07, 1, -4.37114e-08, 18.6959, 6.094, 12.441)
+
+[node name="beam_2beam_2_tscn2" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.07382, 2.62268e-07, -1.14641e-14, 0, -4.37114e-08, -1, -2.8163e-07, -1, 4.37114e-08, 22.7023, 6.08456, 0.523307)
+
+[node name="beam_2beam_2_tscn3" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(3.45641e-07, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1.12962, 3.0598e-07, -1.33748e-14, 20.9604, 6.07297, -1.76756)
+
+[node name="beam_2beam_2_tscn4" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(2.38518, -3.49691e-07, 1.52855e-14, 0, -4.37114e-08, -1, 8.34077e-07, 1, -4.37114e-08, 16.946, 6.10926, -3.58475)
+
+[node name="beam_2beam_2_tscn5" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-4.57174e-07, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1.1621, -3.93403e-07, 1.71962e-14, 12.9577, 6.1101, -5.6764)
+
+[node name="beam_2beam_2_tscn6" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.86354, 4.37114e-07, -1.91069e-14, 0, -4.37114e-08, -1, -8.1458e-07, -1, 4.37114e-08, 9.83766, 6.11563, -7.55633)
+
+[node name="beam_2beam_2_tscn10" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.52427, 3.49691e-07, -8.74228e-08, 1.33256e-07, 4.37113e-08, -1, -5.33024e-07, -1, -4.37114e-08, 4.03768, 6.11318, 0.377541)
+
+[node name="beam_2beam_2_tscn11" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(9.33801e-07, 1, 4.37114e-08, 2.07512e-07, 4.37113e-08, -1, -2.37365, 3.93402e-07, -8.74228e-08, 6.71281, 6.10929, -3.49163)
+
+[node name="beam_2beam_2_tscn12" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(9.33801e-07, 1, 4.37114e-08, 2.07512e-07, 4.37113e-08, -1, -2.37365, 3.93402e-07, -8.74228e-08, 1.35876, 6.10929, -3.49163)
+
+[node name="beam_2beam_2_tscn7" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.86354, 4.37114e-07, -1.91069e-14, 0, -4.37114e-08, -1, -8.1458e-07, -1, 4.37114e-08, -1.77923, 6.11563, -7.55633)
+
+[node name="beam_2beam_2_tscn13" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.52427, 3.49691e-07, -8.74228e-08, 1.33256e-07, 4.37113e-08, -1, -5.33024e-07, -1, -4.37114e-08, -7.57921, 6.11318, 0.377541)
+
+[node name="beam_2beam_2_tscn14" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(9.33801e-07, 1, 4.37114e-08, 2.07512e-07, 4.37113e-08, -1, -2.37365, 3.93402e-07, -8.74228e-08, -4.90408, 6.10929, -3.49163)
+
+[node name="beam_2beam_2_tscn8" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.86354, 4.37114e-07, -1.91069e-14, 0, -4.37114e-08, -1, -8.1458e-07, -1, 4.37114e-08, -13.4019, 6.11563, -7.55633)
+
+[node name="beam_2beam_2_tscn16" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-3.86342, 3.49691e-07, -8.74228e-08, 3.37751e-07, 4.37113e-08, -1, -1.351e-06, -0.999999, -4.37114e-08, -23.6145, 6.11318, 0.377541)
+
+[node name="beam_2beam_2_tscn17" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(9.33801e-07, 1, 4.37114e-08, 2.07512e-07, 4.37113e-08, -1, -2.37365, 3.93402e-07, -8.74228e-08, -16.5267, 6.10929, -3.49163)
+
+[node name="beam_2beam_2_tscn15" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(9.33801e-07, 1, 4.37114e-08, 2.07512e-07, 4.37113e-08, -1, -2.37365, 3.93402e-07, -8.74228e-08, -10.2581, 6.10929, -3.49163)
+
+[node name="beam_2beam_2_tscn25" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.52427, 4.37114e-07, -1.74846e-07, -2.66512e-07, -4.37113e-08, 1, 6.6628e-07, 1, 4.37114e-08, -7.57921, 6.11105, 12.5062)
+
+[node name="beam_2beam_2_tscn26" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.86354, 5.24537e-07, -8.74228e-08, -1.62916e-07, 4.37114e-08, 1, 9.77496e-07, 1, -4.37114e-08, -13.4019, 6.1086, 20.44)
+
+[node name="beam_2beam_2_tscn28" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(1.14131e-06, 1, -4.37114e-08, -2.07511e-07, 4.37114e-08, 1, 2.37365, -4.80825e-07, 8.74228e-08, -16.5267, 6.11494, 16.3753)
+
+[node name="beam_2beam_2_tscn29" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(1.14131e-06, 1, -4.37114e-08, -2.07511e-07, 4.37114e-08, 1, 2.37365, -4.80825e-07, 8.74228e-08, -10.2581, 6.11494, 16.3753)
+
+[node name="beam_2beam_2_tscn18" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.14131e-06, -1, -4.37114e-08, 2.07512e-07, 4.37113e-08, -1, 2.37365, -4.80825e-07, 8.74228e-08, -4.85149, 6.10929, 16.5314)
+
+[node name="beam_2beam_2_tscn19" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(1.86354, -5.24537e-07, 2.29282e-14, 3.15696e-21, -4.37114e-08, -1, 9.77496e-07, 1, -4.37114e-08, -1.7135, 6.11563, 20.5961)
+
+[node name="beam_2beam_2_tscn20" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(1.52427, -4.37114e-07, 8.74228e-08, 1.33256e-07, 4.37113e-08, -1, 6.6628e-07, 1, 4.37114e-08, 4.08648, 6.11318, 12.6623)
+
+[node name="beam_2beam_2_tscn21" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.14131e-06, -1, -4.37114e-08, 2.07512e-07, 4.37113e-08, -1, 2.37365, -4.80825e-07, 8.74228e-08, 1.41135, 6.10929, 16.5314)
+
+[node name="beam_2beam_2_tscn22" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(1.86354, -5.24537e-07, 2.29282e-14, 3.15696e-21, -4.37114e-08, -1, 9.77496e-07, 1, -4.37114e-08, 9.90916, 6.11563, 20.5961)
+
+[node name="beam_2beam_2_tscn23" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.14131e-06, -1, -4.37114e-08, 2.07512e-07, 4.37113e-08, -1, 2.37365, -4.80825e-07, 8.74228e-08, 13.034, 6.10929, 16.5314)
+
+[node name="beam_2beam_2_tscn24" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.14131e-06, -1, -4.37114e-08, 2.07512e-07, 4.37113e-08, -1, 2.37365, -4.80825e-07, 8.74228e-08, 6.7654, 6.10929, 16.5314)
+
+[node name="beam_2beam_2_tscn27" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-7.53066e-07, -0.999999, 4.37114e-08, 0, -4.37114e-08, -1, 3.44563, -2.18557e-07, 9.55343e-15, 24.4062, 3.0571, 6.5)
+
+[node name="beam_2beam_2_tscn30" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(3.20522, -1.74845e-07, 1.11955e-14, 2.48876e-21, -4.37114e-08, -1, 5.60419e-07, 1, -4.37114e-08, 18.6959, 3.0571, 12.441)
+
+[node name="beam_2beam_2_tscn31" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.07382, 2.62268e-07, -1.14641e-14, 0, -4.37114e-08, -1, -2.8163e-07, -1, 4.37114e-08, 22.7023, 3.04766, 0.523307)
+
+[node name="beam_2beam_2_tscn32" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(3.45641e-07, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1.12962, 3.0598e-07, -1.33748e-14, 20.9604, 3.03607, -1.76756)
+
+[node name="beam_2beam_2_tscn33" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(2.38518, -3.49691e-07, 1.52855e-14, 0, -4.37114e-08, -1, 8.34077e-07, 1, -4.37114e-08, 16.946, 3.07237, -3.58475)
+
+[node name="beam_2beam_2_tscn34" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-4.57174e-07, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1.1621, -3.93403e-07, 1.71962e-14, 12.9577, 3.0732, -5.6764)
+
+[node name="beam_2beam_2_tscn35" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.86354, 4.37114e-07, -1.91069e-14, 0, -4.37114e-08, -1, -8.1458e-07, -1, 4.37114e-08, 9.83766, 3.07873, -7.55633)
+
+[node name="beam_2beam_2_tscn36" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.52427, 3.49691e-07, -8.74228e-08, 1.33256e-07, 4.37113e-08, -1, -5.33024e-07, -1, -4.37114e-08, 4.03768, 3.07629, 0.377541)
+
+[node name="beam_2beam_2_tscn37" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(9.33801e-07, 1, 4.37114e-08, 2.07512e-07, 4.37113e-08, -1, -2.37365, 3.93402e-07, -8.74228e-08, 6.71281, 3.07239, -3.49163)
+
+[node name="beam_2beam_2_tscn38" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(9.33801e-07, 1, 4.37114e-08, 2.07512e-07, 4.37113e-08, -1, -2.37365, 3.93402e-07, -8.74228e-08, 1.35876, 3.07239, -3.49163)
+
+[node name="beam_2beam_2_tscn39" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.86354, 4.37114e-07, -1.91069e-14, 0, -4.37114e-08, -1, -8.1458e-07, -1, 4.37114e-08, -1.77923, 3.07873, -7.55633)
+
+[node name="beam_2beam_2_tscn40" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.52427, 3.49691e-07, -8.74228e-08, 1.33256e-07, 4.37113e-08, -1, -5.33024e-07, -1, -4.37114e-08, -7.57921, 3.07629, 0.377541)
+
+[node name="beam_2beam_2_tscn41" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(9.33801e-07, 1, 4.37114e-08, 2.07512e-07, 4.37113e-08, -1, -2.37365, 3.93402e-07, -8.74228e-08, -4.90408, 3.07239, -3.49163)
+
+[node name="beam_2beam_2_tscn42" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.86354, 4.37114e-07, -1.91069e-14, 0, -4.37114e-08, -1, -8.1458e-07, -1, 4.37114e-08, -13.4019, 3.07873, -7.55633)
+
+[node name="beam_2beam_2_tscn43" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-3.86342, 3.49691e-07, -8.74228e-08, 3.37751e-07, 4.37113e-08, -1, -1.351e-06, -0.999999, -4.37114e-08, -23.6145, 3.07629, 0.377541)
+
+[node name="beam_2beam_2_tscn44" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(9.33801e-07, 1, 4.37114e-08, 2.07512e-07, 4.37113e-08, -1, -2.37365, 3.93402e-07, -8.74228e-08, -16.5267, 3.07239, -3.49163)
+
+[node name="beam_2beam_2_tscn45" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(9.33801e-07, 1, 4.37114e-08, 2.07512e-07, 4.37113e-08, -1, -2.37365, 3.93402e-07, -8.74228e-08, -10.2581, 3.07239, -3.49163)
+
+[node name="beam_2beam_2_tscn46" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.52427, 4.37114e-07, -1.74846e-07, -2.66512e-07, -4.37113e-08, 1, 6.6628e-07, 1, 4.37114e-08, -7.57921, 3.07415, 12.5062)
+
+[node name="beam_2beam_2_tscn47" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.86354, 5.24537e-07, -8.74228e-08, -1.62916e-07, 4.37114e-08, 1, 9.77496e-07, 1, -4.37114e-08, -13.4019, 3.0717, 20.44)
+
+[node name="beam_2beam_2_tscn48" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(1.14131e-06, 1, -4.37114e-08, -2.07511e-07, 4.37114e-08, 1, 2.37365, -4.80825e-07, 8.74228e-08, -16.5267, 3.07804, 16.3753)
+
+[node name="beam_2beam_2_tscn49" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(1.14131e-06, 1, -4.37114e-08, -2.07511e-07, 4.37114e-08, 1, 2.37365, -4.80825e-07, 8.74228e-08, -10.2581, 3.07805, 16.3753)
+
+[node name="beam_2beam_2_tscn50" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.14131e-06, -1, -4.37114e-08, 2.07512e-07, 4.37113e-08, -1, 2.37365, -4.80825e-07, 8.74228e-08, -4.85149, 3.07239, 16.5314)
+
+[node name="beam_2beam_2_tscn51" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(1.86354, -5.24537e-07, 2.29282e-14, 3.15696e-21, -4.37114e-08, -1, 9.77496e-07, 1, -4.37114e-08, -1.7135, 3.07873, 20.5961)
+
+[node name="beam_2beam_2_tscn52" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(1.52427, -4.37114e-07, 8.74228e-08, 1.33256e-07, 4.37113e-08, -1, 6.6628e-07, 1, 4.37114e-08, 4.08648, 3.07629, 12.6623)
+
+[node name="beam_2beam_2_tscn53" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.14131e-06, -1, -4.37114e-08, 2.07512e-07, 4.37113e-08, -1, 2.37365, -4.80825e-07, 8.74228e-08, 1.41135, 3.07239, 16.5314)
+
+[node name="beam_2beam_2_tscn54" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(1.86354, -5.24537e-07, 2.29282e-14, 3.15696e-21, -4.37114e-08, -1, 9.77496e-07, 1, -4.37114e-08, 9.90916, 3.07873, 20.5961)
+
+[node name="beam_2beam_2_tscn55" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.14131e-06, -1, -4.37114e-08, 2.07512e-07, 4.37113e-08, -1, 2.37365, -4.80825e-07, 8.74228e-08, 13.034, 3.07239, 16.5314)
+
+[node name="beam_2beam_2_tscn56" parent="Exterior" instance=ExtResource("15_dwlwg")]
+transform = Transform3D(-1.14131e-06, -1, -4.37114e-08, 2.07512e-07, 4.37113e-08, -1, 2.37365, -4.80825e-07, 8.74228e-08, 6.7654, 3.07239, 16.5314)
 
 [editable path="catwalk_tscn"]
 [editable path="catwalk_tscn2"]

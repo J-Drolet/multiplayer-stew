@@ -1,0 +1,779 @@
+[gd_resource type="Resource" load_steps=113 format=3]
+
+[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetPersistentData.cs" id="1_cm5xd"]
+[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetLibrary.cs" id="2_b5xlw"]
+
+[sub_resource type="Resource" id="Resource_ns7cl"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/BridgeRoads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_3nb4q"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Bridge_001Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7thdj"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Bridge_002Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xysb7"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Bridge_003Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4w85g"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Bridge_004Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_nwqm3"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Bridge_005Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_1l7vn"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Bridge_006Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_o3my2"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Bridge_007Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_vrdu4"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Bridge_008Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_l4of2"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Bridge_009Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_iuyed"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Bridge_010Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_b1rsb"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Bridge_011Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4t1l3"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Bridge_012Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_316ws"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Bridge_013Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_3eynh"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Bridge_014Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7pkak"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Bridge_015Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_te54e"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Bridge_016Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_lqo6p"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Bridge_017Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ihg4n"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Bridge_018Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_jsrng"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/roadRoads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_oyln6"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_001Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_vqc4g"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_002Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_l2wh6"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_003Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_qxfow"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_004Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_31olg"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_005Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ogooc"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_006Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_l40oe"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_007Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_wtrpr"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_008Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_u2j7t"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_009Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_gsek1"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_010Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_c5ssp"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_011Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_jx8gn"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_012Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ktupj"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_013Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_uojqm"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_014Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0w8j1"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_015Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_isrkh"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_016Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6fbf5"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_017Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_wkv6p"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_018Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ryt8i"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_019Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2mhxa"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_020Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_m1j3w"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_021Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ljtj1"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_022Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_bclrt"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_023Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6w1op"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_024Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5rsri"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_025Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_dubp8"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_026Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8l55s"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_027Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_40oug"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_028Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_767wh"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_029Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_iqg1b"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_030Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_suk2p"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_031Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7a6lp"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_032Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_3s737"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_033Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_a0g1s"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_034Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0dt36"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_035Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7u6tt"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_036Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_01f7s"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_037Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_g4q8g"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_038Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_epj5f"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_039Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ovjuu"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_040Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7uriv"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_041Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_i4v1m"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_042Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_i1bqb"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_043Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2plud"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_044Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_x3h86"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_045Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_jphlk"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_046Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_qnf5g"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_047Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_hqeku"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_048Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ebl75"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_049Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_io0cy"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_050Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ucbuc"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_051Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_yehd2"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_052Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_kxp1n"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_053Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_o7tlj"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_054Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6kuq8"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_055Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_dgnon"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_056Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7biaa"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_057Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_pe0bq"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_058Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_mhedo"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_059Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ax24i"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_060Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_wqecb"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_061Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_edy0o"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_062Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_87yf5"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_063Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7r2av"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_064Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_dljkk"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_065Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_15nhq"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_066Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_jeccd"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_067Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_227nr"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_068Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_48w6a"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_069Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_jolam"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_070Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_y2hnm"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/road_071Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_w0h06"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/SignRoads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_w2hff"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Sign_001Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_vtgoh"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Sign_002Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5dsnh"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Sign_003Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_udqrw"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Sign_004Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_npyf0"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Sign_005Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_wan4i"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Sign_006Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_j6sl5"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Sign_007Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_j7x1s"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Sign_008Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_gk2ho"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Sign_009Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_51e5t"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Sign_010Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7w3md"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Sign_011Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_k1q8a"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Sign_012Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4qel3"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Sign_013Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_p31qj"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/Sign_014Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_en7tj"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/treeRoads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_x8362"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/tree_001Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_n0r86"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/tree_002Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8p6ja"]
+script = ExtResource("1_cm5xd")
+path = "res://Scenes/Levels/LevelAssets/Roads/tree_003Roads.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[resource]
+script = ExtResource("2_b5xlw")
+assetData = [SubResource("Resource_ns7cl"), SubResource("Resource_3nb4q"), SubResource("Resource_7thdj"), SubResource("Resource_xysb7"), SubResource("Resource_4w85g"), SubResource("Resource_nwqm3"), SubResource("Resource_1l7vn"), SubResource("Resource_o3my2"), SubResource("Resource_vrdu4"), SubResource("Resource_l4of2"), SubResource("Resource_iuyed"), SubResource("Resource_b1rsb"), SubResource("Resource_4t1l3"), SubResource("Resource_316ws"), SubResource("Resource_3eynh"), SubResource("Resource_7pkak"), SubResource("Resource_te54e"), SubResource("Resource_lqo6p"), SubResource("Resource_ihg4n"), SubResource("Resource_jsrng"), SubResource("Resource_oyln6"), SubResource("Resource_vqc4g"), SubResource("Resource_l2wh6"), SubResource("Resource_qxfow"), SubResource("Resource_31olg"), SubResource("Resource_ogooc"), SubResource("Resource_l40oe"), SubResource("Resource_wtrpr"), SubResource("Resource_u2j7t"), SubResource("Resource_gsek1"), SubResource("Resource_c5ssp"), SubResource("Resource_jx8gn"), SubResource("Resource_ktupj"), SubResource("Resource_uojqm"), SubResource("Resource_0w8j1"), SubResource("Resource_isrkh"), SubResource("Resource_6fbf5"), SubResource("Resource_wkv6p"), SubResource("Resource_ryt8i"), SubResource("Resource_2mhxa"), SubResource("Resource_m1j3w"), SubResource("Resource_ljtj1"), SubResource("Resource_bclrt"), SubResource("Resource_6w1op"), SubResource("Resource_5rsri"), SubResource("Resource_dubp8"), SubResource("Resource_8l55s"), SubResource("Resource_40oug"), SubResource("Resource_767wh"), SubResource("Resource_iqg1b"), SubResource("Resource_suk2p"), SubResource("Resource_7a6lp"), SubResource("Resource_3s737"), SubResource("Resource_a0g1s"), SubResource("Resource_0dt36"), SubResource("Resource_7u6tt"), SubResource("Resource_01f7s"), SubResource("Resource_g4q8g"), SubResource("Resource_epj5f"), SubResource("Resource_ovjuu"), SubResource("Resource_7uriv"), SubResource("Resource_i4v1m"), SubResource("Resource_i1bqb"), SubResource("Resource_2plud"), SubResource("Resource_x3h86"), SubResource("Resource_jphlk"), SubResource("Resource_qnf5g"), SubResource("Resource_hqeku"), SubResource("Resource_ebl75"), SubResource("Resource_io0cy"), SubResource("Resource_ucbuc"), SubResource("Resource_yehd2"), SubResource("Resource_kxp1n"), SubResource("Resource_o7tlj"), SubResource("Resource_6kuq8"), SubResource("Resource_dgnon"), SubResource("Resource_7biaa"), SubResource("Resource_pe0bq"), SubResource("Resource_mhedo"), SubResource("Resource_ax24i"), SubResource("Resource_wqecb"), SubResource("Resource_edy0o"), SubResource("Resource_87yf5"), SubResource("Resource_7r2av"), SubResource("Resource_dljkk"), SubResource("Resource_15nhq"), SubResource("Resource_jeccd"), SubResource("Resource_227nr"), SubResource("Resource_48w6a"), SubResource("Resource_jolam"), SubResource("Resource_y2hnm"), SubResource("Resource_w0h06"), SubResource("Resource_w2hff"), SubResource("Resource_vtgoh"), SubResource("Resource_5dsnh"), SubResource("Resource_udqrw"), SubResource("Resource_npyf0"), SubResource("Resource_wan4i"), SubResource("Resource_j6sl5"), SubResource("Resource_j7x1s"), SubResource("Resource_gk2ho"), SubResource("Resource_51e5t"), SubResource("Resource_7w3md"), SubResource("Resource_k1q8a"), SubResource("Resource_4qel3"), SubResource("Resource_p31qj"), SubResource("Resource_en7tj"), SubResource("Resource_x8362"), SubResource("Resource_n0r86"), SubResource("Resource_8p6ja")]
+previewPerspective = 0

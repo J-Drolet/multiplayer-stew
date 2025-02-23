@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Roads/Roads_2.jpg" id="1_ybwt6"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Roads/Roads_Asphalt010_2K_Color.jpg" id="2_a78f0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iyd8o"]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_ybwt6")
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8wvb"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("2_a78f0")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tukaf"]
+_surfaces = [{
+"aabb": AABB(-8.61809, -0.125069, -2.40409, 9.61809, 0.134947, 4.80818),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AgAHAAMAAgAGAAcAAQAEAAAAAQAFAAQABgALAAcABgAKAAsABQAIAAQABQAJAAgA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAD//+PlAAD/////4+UAAAAA//8bGgAA/////xsaAAAAAGu4AfYAAP//a7gB9gAAAABruP0JAAD//2u4/QkAAAAAAAD//wAA//8AAP//AAAAAAAAAAAAAP//AAAAAAAA")
+}, {
+"aabb": AABB(-8.61809, 0.00987729, -1.91373, 9.61809, 1e-05, 3.82746),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAADAAEAAAACAAMA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ob72d"]
+resource_name = "Roads_Plane_058"
+_surfaces = [{
+"aabb": AABB(-8.61809, -0.125069, -2.40409, 9.61809, 0.134947, 4.80818),
+"attribute_data": PackedByteArray("/v/+/xaA//8AGn37xpp9+///TeHHGhbnFoBN4a+aFucAGoHgABqB4MaageDHGor5r5qJ+QAaLvvGmi77"),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AgAKAAMAAgAJAAoAAQAEAAAAAQAGAAQACAAOAAoACAANAA4ABwALAAUABwAMAAsA"),
+"material": SubResource("StandardMaterial3D_iyd8o"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(9.56002, 1.249, 0, 0),
+"vertex_count": 15,
+"vertex_data": PackedByteArray("AAD//+Pl////////4+X//wAA//8bGobC/////xsahsIAAGu4Afb//wAAa7gB9ruz//9ruAH2/////2u4Afa7swAAa7j9CbszAABruP0JQ8z//2u4/Qm7MwAAAAD//4Ws//8AAP//hawAAAAAAACGLP//AAAAAIYs/38Cvv9/Ar7///9/////f/9/Srb+//9//39Ktv7//3////9/////f////3/+//9//v//f////3////9/")
+}, {
+"aabb": AABB(-8.61809, 0.00987729, -1.91373, 9.61809, 1e-05, 3.82746),
+"attribute_data": PackedByteArray("AAD//5qh/v8AAAoLmqEKCw=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAADAAEAAAACAAMA"),
+"material": SubResource("StandardMaterial3D_p8wvb"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(7.61809, 2, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//eL3//wAA//94vQAAAAAAAIbC//8AAAAAhsL///9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_tukaf")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8nywc"]
+points = PackedVector3Array(1.07633, 0.103902, 2.40495, -8.69443, -0.201434, -2.48043, -8.69443, -0.201434, 2.40495, 1.07633, -0.201434, -2.48043, -8.69443, 0.103902, -2.32693, 1.07633, -0.201434, 2.40495, -8.69443, 0.103902, 2.40495, 1.07633, 0.103902, -2.32693)
+
+[node name="@Node3D@30" type="Node3D"]
+
+[node name="@StaticBody3D@31" type="StaticBody3D" parent="."]
+
+[node name="road_014" type="MeshInstance3D" parent="@StaticBody3D@31"]
+mesh = SubResource("ArrayMesh_ob72d")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@31"]
+shape = SubResource("ConvexPolygonShape3D_8nywc")

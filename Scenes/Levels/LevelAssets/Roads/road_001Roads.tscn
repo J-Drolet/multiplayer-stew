@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Roads/Roads_Asphalt010_2K_Color.jpg" id="1_hfcpy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8wvb"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_hfcpy")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_e058s"]
+_surfaces = [{
+"aabb": AABB(-3.44267, -0.122608, -1.17853, 4.44267, 0.134947, 2.35706),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAAAFAAQAAAABAAUAAwAGAAcAAwACAAYA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD//5vsAAD/////m+wAAAAA//9jEwAA/////2MTAAAAAAAA//8AAP//AAD//wAAAAAAAAAAAAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6ruhk"]
+resource_name = "Roads_Plane_051"
+_surfaces = [{
+"aabb": AABB(-3.44267, -0.122608, -1.17853, 4.44267, 0.134947, 2.35706),
+"attribute_data": PackedByteArray("AABN9ij7TfYAALGJAACxiSj7sYkAAP//KPv//wAA/38o+/9/"),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AAAEAAEAAAACAAQAAAAGAAUAAAABAAYABAAHAAgABAADAAcA"),
+"material": SubResource("StandardMaterial3D_p8wvb"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(1.92116, 2, 0, 0),
+"vertex_count": 9,
+"vertex_data": PackedByteArray("AAD//5vsz7L/////m+zPsgAA//9jEy7NAAD//2MTLs3/////YxMuzQAAAAD//5+l//8AAP//n6UAAAAAAABe2v//AAAAAF7a////f////3////9/////f////3////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_e058s")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_f4p4l"]
+points = PackedVector3Array(1.03526, 0.0536976, 1.04284, -3.47796, -0.15786, -1.21376, -3.47796, -0.15786, 1.18389, 1.03526, -0.15786, -1.21376, -3.47796, 0.0536976, -1.07247, 1.03526, -0.15786, 1.18389, -3.47796, 0.0536976, 1.04284, 1.03526, 0.0536976, -1.07247, -3.47796, -0.0168352, 1.18389, 1.03526, -0.0168352, 1.18389)
+
+[node name="@Node3D@16" type="Node3D"]
+
+[node name="@StaticBody3D@17" type="StaticBody3D" parent="."]
+
+[node name="road_001" type="MeshInstance3D" parent="@StaticBody3D@17"]
+mesh = SubResource("ArrayMesh_6ruhk")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@17"]
+shape = SubResource("ConvexPolygonShape3D_f4p4l")

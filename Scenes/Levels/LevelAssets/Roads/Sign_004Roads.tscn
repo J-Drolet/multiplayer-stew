@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Roads/Roads_TexturesCom_SignPedestrians0016_2_masked_S.jpg" id="1_0xm8g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6leji"]
+resource_name = "Material.014"
+cull_mode = 2
+albedo_texture = ExtResource("1_0xm8g")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_agh6r"]
+_surfaces = [{
+"aabb": AABB(-0.121377, -0.0147644, -0.240738, 1.52064, 0.0451363, 0.481476),
+"format": 34896613377,
+"index_count": 75,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAFAAMAAgAEAAUABAAHAAUABAAGAAcABQABAAMAAQAHAAkAAQAFAAcABgAJAAcABgAIAAkACAABAAkACAAAAAEACgANAAsACgAMAA0ADAARAA0ADAAQABEAEAAPABEAEAAOAA8ADgALAA8ADgAKAAsADAAOABAADAAKAA4AEQALAA0AEQAPAAsA"),
+"name": "Material.014",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("AACFnUp2AABh7IadSnYAAAAADDv/fAAAYewNO/98AAAAAKlg2YcAAGHsqmDZhwAAAABh2tmHAABh7GLa2YcAAAAA/v//fAAAYez///98AAB310tO//8AAP//S07/fwAA8K5LTv9/AAB310tOAAAAAHfXAAD//wAA//8AAP9/AADwrgAA/38AAHfXAAAAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_havyv"]
+resource_name = "Roads_Cylinder_012"
+_surfaces = [{
+"aabb": AABB(-0.121377, -0.0147644, -0.240738, 1.52064, 0.0451363, 0.481476),
+"attribute_data": PackedByteArray("AkF29EQzuvxkOQv550BG9ANBePQpM4r8RDO8/Gg5yPjjQD/08UBZ9CUzg/wzM538pTm8+ONAP/QTQZX0JTOD/FQz2fzHOfj4A0F49B1Bp/REM7z8XzPr/J85Kfn6MlL5ZDTZ+2Q02fsWMlz9CTJE/QkyRP3ONob6wTZt+sE2bfrqNZH+ZDTZ+2Q02fs68/9/TjSz+040s/t6ffUF8zEd/fMxHf16fQn6qzZH+qs2R/q6B/9/TjSz+040s/s="),
+"format": 34896613399,
+"index_count": 75,
+"index_data": PackedByteArray("AAAFAAEAAAADAAUABAAKAAYABAAIAAoACQAQAAsACQAOABAADAACAAcAAgARABYAAgAMABEADQAUAA8ADQASABQAEwABABUAEwAAAAEAFwAgABoAFwAdACAAHwAuACIAHwArAC4AKQAmACwAKQAjACYAJAAbACcAJAAYABsAHgAlACoAHgAZACUALQAcACEALQAoABwA"),
+"material": SubResource("StandardMaterial3D_6leji"),
+"name": "Material.014",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 47,
+"vertex_data": PackedByteArray("AACFnUp2AABh7IadSna5GGHshp1Kdtn2AAAMO/980QsAAAw7/3xGCmHsDTv/fGclYewNO/98oB5h7A07/3yv4QAAqWDZh7EQAACpYNmHCvBh7Kpg2YfPH2HsqmDZhwrxYeyqYNmHltgAAGHa2YdN7wAAYdrZhwrwYexi2tmHL+Bh7GLa2YfN6GHsYtrZh3X/AAD+//98uPUAAP7//3y7C2Hs////fF7hYez///98VAlh7P///3zg8HfXS07//8nxd9dLTv//RPJ310tO//878v//S07/f83x//9LTv9/RPL//0tO/39wH/CuS07/f8Xx8K5LTv9/PPLwrktO/39vH3fXS04AAMnxd9dLTgAAcB9310tOAABvH3fXAAD//6oqd9cAAP//RPJ31wAA//878v//AAD/f6oq//8AAP9/RPL//wAA/39wH/CuAAD/f6oq8K4AAP9/PPLwrgAA/39vH3fXAAAAAKoqd9cAAAAAcB931wAAAABvH9GZLObRWbIckRy9SplvXD+XcTU+5nQxNJeBDTKiEq69eXk1YtwdwfltkYldohAS36sFidU04oYGIuI9BnUibhHmHoYUOZwJljS+aA5IkLPA8U2XAfk1vxt6sQ+iL8dgDpAGkSNq+W7cLcddDpAGkSOBZbsSMcdkDmr5btyKmjntL8dgDoBlvBKLmjntqipU1ZAGkSNq+W7cqipU1ZAGkSOBZbsSqipU1Wr5btyKmjntqipU1YBlvBKLmjnt")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_agh6r")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bo804"]
+points = PackedVector3Array(1.40451, -0.0200079, -0.00631291, 1.14388, -0.0200079, -0.245908, 0.914869, -0.0200079, -0.0167593, -0.126608, 0.0320709, 0.0248344, 1.28985, 0.0320709, -0.0167593, 1.17535, -0.0200079, 0.243633, -0.126608, -0.00958295, 0.014436, 1.17535, 0.000831785, 0.243633, 1.14388, 0.000831785, -0.245908, -0.126608, 0.0216511, -0.0271577, 1.28985, 0.0320709, 0.0248344, -0.126608, -0.00958295, -0.0167593, 1.40451, 0.000831785, 0.014436, 1.14388, -0.0200079, 0.243633, 1.16471, 0.000831785, -0.245908, 1.40451, 0.000831785, -0.00631291, 1.14388, 0.000831785, 0.243633, 1.16471, -0.0200079, -0.245908, 1.40451, -0.0200079, 0.014436, 0.914869, -0.0200079, 0.014436, 1.21702, 0.000831785, -0.19382)
+
+[node name="@Node3D@202" type="Node3D"]
+transform = Transform3D(3.13916e-07, -1, 0, 1, 3.13916e-07, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="@StaticBody3D@203" type="StaticBody3D" parent="."]
+
+[node name="Sign_004" type="MeshInstance3D" parent="@StaticBody3D@203"]
+mesh = SubResource("ArrayMesh_havyv")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@203"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_bo804")

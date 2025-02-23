@@ -1,0 +1,23 @@
+[gd_resource type="Resource" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetPersistentData.cs" id="1_y0e77"]
+[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetLibrary.cs" id="2_guiy6"]
+
+[sub_resource type="Resource" id="Resource_yh03c"]
+script = ExtResource("1_y0e77")
+path = "res://Scenes/Levels/LevelAssets/CountyFairAssets/Cell.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_v6jha"]
+script = ExtResource("1_y0e77")
+path = "res://Scenes/Levels/LevelAssets/CountyFairAssets/catwalk.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[resource]
+script = ExtResource("2_guiy6")
+assetData = [SubResource("Resource_yh03c"), SubResource("Resource_v6jha")]
+previewPerspective = 0

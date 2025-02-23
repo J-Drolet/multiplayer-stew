@@ -1,0 +1,226 @@
+[gd_resource type="Resource" load_steps=34 format=3]
+
+[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetPersistentData.cs" id="1_0k4j6"]
+[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetLibrary.cs" id="2_mnr0o"]
+
+[sub_resource type="Resource" id="Resource_ri04w"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/button_offbutton_off.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_l0gst"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/column_1column_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_o6vt2"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/column_2column_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_vdp5i"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/column_3column_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ajyrp"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/column_4column_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_lfih8"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/column_6column_6.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_hb875"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/corner_1corner_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_da1wp"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/crate_1crate_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_dohod"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/doorway_slim_1doorway_slim_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ip6ii"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/doorway_wide_1doorway_wide_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_lrow6"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/door_slim_1door_slim_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ftp1c"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/door_wide_1door_wide_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8utff"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/floor_1floor_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ak31c"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/floor_1_001floor_1_001.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_oea0o"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/floor_2floor_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_y45l7"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/floor_3floor_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_1hrv0"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/metal_barrel_1metal_barrel_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_uaqfg"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/platform_1platform_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_u22us"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/platform_2platform_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4s8xp"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/stairs_1stairs_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4xyuu"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/tunnel_1tunnel_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_06oeh"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/tunnel_1_002tunnel_1_002.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ixywp"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/tunnel_1_cornertunnel_1_corner.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5samc"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/wall_2wall_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_kpnnv"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/wall_3wall_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0gh4c"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/wall_4wall_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_nw3kh"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/wall_5wall_5.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2hwmc"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/wall_6wall_6.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_fdfup"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/wall_7wall_7.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ku0ih"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/wall_8wall_8.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ks3f5"]
+script = ExtResource("1_0k4j6")
+path = "res://Scenes/Levels/LevelAssets/ModularFPS/wall_small_1wall_small_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[resource]
+script = ExtResource("2_mnr0o")
+assetData = [SubResource("Resource_ri04w"), SubResource("Resource_l0gst"), SubResource("Resource_o6vt2"), SubResource("Resource_vdp5i"), SubResource("Resource_ajyrp"), SubResource("Resource_lfih8"), SubResource("Resource_hb875"), SubResource("Resource_da1wp"), SubResource("Resource_dohod"), SubResource("Resource_ip6ii"), SubResource("Resource_lrow6"), SubResource("Resource_ftp1c"), SubResource("Resource_8utff"), SubResource("Resource_ak31c"), SubResource("Resource_oea0o"), SubResource("Resource_y45l7"), SubResource("Resource_1hrv0"), SubResource("Resource_uaqfg"), SubResource("Resource_u22us"), SubResource("Resource_4s8xp"), SubResource("Resource_4xyuu"), SubResource("Resource_06oeh"), SubResource("Resource_ixywp"), SubResource("Resource_5samc"), SubResource("Resource_kpnnv"), SubResource("Resource_0gh4c"), SubResource("Resource_nw3kh"), SubResource("Resource_2hwmc"), SubResource("Resource_fdfup"), SubResource("Resource_ku0ih"), SubResource("Resource_ks3f5")]
+previewPerspective = 0

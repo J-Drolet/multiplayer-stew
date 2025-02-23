@@ -108,7 +108,7 @@ transform = Transform3D(-8.73681e-08, 1, -4.37114e-08, 7.33646e-22, -4.37114e-08
 transform = Transform3D(1.45314, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -3)
 
 [node name="window_metal_bars_doublewindow_metal_bars_double_tscn" parent="Walls" instance=ExtResource("4_ptgle")]
-transform = Transform3D(1.5266, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -3)
+transform = Transform3D(-1.5266, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -1.3346e-07, -1, 4.37114e-08, 0, 0, -3)
 
 [node name="bars_metal_4bars_metal_4_tscn" parent="Walls" instance=ExtResource("7_ghxql")]
 transform = Transform3D(1.70638, 0, 0, 0, -4.37114e-08, -1.10849, 0, 1, -4.84538e-08, 0, 0, 5)

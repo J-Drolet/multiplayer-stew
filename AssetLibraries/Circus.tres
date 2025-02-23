@@ -1,79 +1,86 @@
-[gd_resource type="Resource" load_steps=13 format=3]
+[gd_resource type="Resource" load_steps=14 format=3]
 
 [ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetPersistentData.cs" id="1_8au56"]
 [ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetLibrary.cs" id="2_c0vrn"]
 
-[sub_resource type="Resource" id="Resource_eicho"]
+[sub_resource type="Resource" id="Resource_gauop"]
 script = ExtResource("1_8au56")
 path = "res://Scenes/Levels/LevelAssets/CountyFairAssets/tent1.tscn"
 isMesh = false
 previewPerspective = 0
 customPreview = Vector3(-1, -1, -1)
 
-[sub_resource type="Resource" id="Resource_uk0x3"]
+[sub_resource type="Resource" id="Resource_rysh2"]
 script = ExtResource("1_8au56")
 path = "res://Scenes/Levels/LevelAssets/CountyFairAssets/stand.tscn"
 isMesh = false
 previewPerspective = 0
 customPreview = Vector3(-1, -1, -1)
 
-[sub_resource type="Resource" id="Resource_3660a"]
+[sub_resource type="Resource" id="Resource_3qeyt"]
 script = ExtResource("1_8au56")
 path = "res://Scenes/Levels/LevelAssets/CountyFairAssets/tent2.tscn"
 isMesh = false
 previewPerspective = 0
 customPreview = Vector3(-1, -1, -1)
 
-[sub_resource type="Resource" id="Resource_euybr"]
+[sub_resource type="Resource" id="Resource_x2bly"]
 script = ExtResource("1_8au56")
 path = "res://Scenes/Levels/LevelAssets/CountyFairAssets/balloon1.tscn"
 isMesh = false
 previewPerspective = 0
 customPreview = Vector3(-1, -1, -1)
 
-[sub_resource type="Resource" id="Resource_o0qyh"]
+[sub_resource type="Resource" id="Resource_puqll"]
 script = ExtResource("1_8au56")
 path = "res://Scenes/Levels/LevelAssets/CountyFairAssets/popcorn_stand.tscn"
 isMesh = false
 previewPerspective = 0
 customPreview = Vector3(-1, -1, -1)
 
-[sub_resource type="Resource" id="Resource_i16gx"]
+[sub_resource type="Resource" id="Resource_gnq4j"]
 script = ExtResource("1_8au56")
 path = "res://Scenes/Levels/LevelAssets/CountyFairAssets/pin.tscn"
 isMesh = false
 previewPerspective = 0
 customPreview = Vector3(-1, -1, -1)
 
-[sub_resource type="Resource" id="Resource_x8tdj"]
+[sub_resource type="Resource" id="Resource_d73vu"]
 script = ExtResource("1_8au56")
 path = "res://Scenes/Levels/LevelAssets/CountyFairAssets/ticket_booth.tscn"
 isMesh = false
 previewPerspective = 0
 customPreview = Vector3(-1, -1, -1)
 
-[sub_resource type="Resource" id="Resource_811s2"]
+[sub_resource type="Resource" id="Resource_hktii"]
 script = ExtResource("1_8au56")
 path = "res://Scenes/Levels/LevelAssets/CountyFairAssets/cannon.tscn"
 isMesh = false
 previewPerspective = 0
 customPreview = Vector3(-1, -1, -1)
 
-[sub_resource type="Resource" id="Resource_spedf"]
+[sub_resource type="Resource" id="Resource_nf31i"]
 script = ExtResource("1_8au56")
 path = "res://Scenes/Levels/LevelAssets/CountyFairAssets/cannonball_stack.tscn"
 isMesh = false
 previewPerspective = 0
 customPreview = Vector3(-1, -1, -1)
 
-[sub_resource type="Resource" id="Resource_klc4i"]
+[sub_resource type="Resource" id="Resource_pt63c"]
 script = ExtResource("1_8au56")
 path = "res://Scenes/Levels/LevelAssets/CountyFairAssets/platform.tscn"
 isMesh = false
 previewPerspective = 0
 customPreview = Vector3(-1, -1, -1)
 
+[sub_resource type="Resource" id="Resource_4pmuu"]
+script = ExtResource("1_8au56")
+path = "res://Scenes/Levels/LevelAssets/CountyFairAssets/ladder.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
 [resource]
 script = ExtResource("2_c0vrn")
-assetData = [SubResource("Resource_eicho"), SubResource("Resource_uk0x3"), SubResource("Resource_3660a"), SubResource("Resource_euybr"), SubResource("Resource_o0qyh"), SubResource("Resource_i16gx"), SubResource("Resource_x8tdj"), SubResource("Resource_811s2"), SubResource("Resource_spedf"), SubResource("Resource_klc4i")]
+assetData = [SubResource("Resource_gauop"), SubResource("Resource_rysh2"), SubResource("Resource_3qeyt"), SubResource("Resource_x2bly"), SubResource("Resource_puqll"), SubResource("Resource_gnq4j"), SubResource("Resource_d73vu"), SubResource("Resource_hktii"), SubResource("Resource_nf31i"), SubResource("Resource_pt63c"), SubResource("Resource_4pmuu")]
 previewPerspective = 0

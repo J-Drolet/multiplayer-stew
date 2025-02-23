@@ -1,0 +1,583 @@
+[gd_resource type="Resource" load_steps=85 format=3]
+
+[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetPersistentData.cs" id="1_me2ws"]
+[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetLibrary.cs" id="2_40cc1"]
+
+[sub_resource type="Resource" id="Resource_6la2b"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/bars_metal_3bars_metal_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ylbp0"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/bars_metal_4bars_metal_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_chylv"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/beam_6beam_6.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_euu43"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/beam_7beam_7.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_hqjhx"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/blast_door_1_frameblast_door_1_frame.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8ggvy"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/bunker_entrance_1bunker_entrance_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_owdun"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/button_11button_11.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_kauar"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/canned_food_3canned_food_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5yooo"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/canned_food_4canned_food_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8h834"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/canned_food_5canned_food_5.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_tvmbg"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/ceiling_peace_1ceiling_peace_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_r2i1e"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/chair_wooden_1chair_wooden_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_f5mnx"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/computer_1computer_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_vayqm"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/cpu_1cpu_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_76jcs"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/doorway_2_plaindoorway_2_plain.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xny3c"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/doorway_3_plaindoorway_3_plain.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_aw1we"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/doorway_4_plaindoorway_4_plain.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_h844t"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/drain_cover_2drain_cover_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8jsbw"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/drain_cover_3drain_cover_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_q5ewe"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/floor_1floor_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_tsmtp"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/floor_manhole_shaft_end_1floor_manhole_shaft_end_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_l6i2j"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/floppy_disc_2floppy_disc_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xuep0"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/floppy_disc_3floppy_disc_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ynlcq"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/floppy_disc_4floppy_disc_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4jcxm"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/generator_1generator_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ka5fu"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/kids_computer_1kids_computer_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5uelr"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/lamp_0lamp_0.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6i74m"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/machinery_1machinery_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0wh6r"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/machinery_2machinery_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_1kopf"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/machinery_3machinery_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ioktk"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/manhole_shaft_middle_1manhole_shaft_middle_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_tkf4s"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/metal_crate_3metal_crate_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_3x3bv"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/metal_shelf_1metal_shelf_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5n7c4"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/metal_shelf_2metal_shelf_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ekd7y"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/military_radio_1military_radio_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_e4aem"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/military_radio_2military_radio_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_kqctm"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/mre_1mre_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_keyb6"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/note_1note_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6vnsf"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/pcb_1pcb_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_c7dfw"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/pcb_2pcb_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_fgg2m"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/pcb_4pcb_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_pep3s"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/pcb_5pcb_5.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_yfco7"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/pillar_11pillar_11.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2qrmp"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/pipe_1pipe_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5vlda"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/pipe_1_anclepipe_1_ancle.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_d7byh"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/pipe_1_shortpipe_1_short.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_f18xi"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/pipe_2pipe_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_kam47"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/power_supply_1power_supply_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_41jje"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/scanner_1scanner_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_w1a08"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/sign_1sign_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_p6a4l"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/sign_2sign_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_nhf37"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/sign_3sign_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_dotml"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/sign_4sign_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_85prj"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/supply_box_1supply_box_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2x1s0"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/table_large_3table_large_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_yh2at"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/trash_1trash_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xrp57"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/trash_2trash_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_u4l3s"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/trash_3trash_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ayhn1"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/trash_4trash_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ude6a"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/trash_5trash_5.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0u7cl"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/trash_6trash_6.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_3sjy4"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/tunnel_ancletunnel_ancle.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0m2xp"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/tunnel_hole_2tunnel_hole_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ga2mo"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/tunnel_junction_four_waytunnel_junction_four_way.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_akbpo"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/tunnel_junction_three_waytunnel_junction_three_way.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_qpmc0"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/tunnel_manhole_shaft_beginning_1tunnel_manhole_shaft_beginning_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_78yo3"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/tunnel_manhole_shaft_end_1tunnel_manhole_shaft_end_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_na7fr"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/tunnel_straighttunnel_straight.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_1rpp1"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/tunnel_straight_down_1tunnel_straight_down_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_f8sfv"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/tunnel_straight_down_2tunnel_straight_down_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6e7p8"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/vent_4vent_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_he7k1"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/wall_1_plainwall_1_plain.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_nvrbh"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/wall_1_roundwall_1_round.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_yo6gq"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/wall_box_1wall_box_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_racg1"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/wall_box_2wall_box_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_338jt"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/wall_box_3wall_box_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ehsht"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/wall_peace_1wall_peace_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_fe2xp"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/water_barrel_1water_barrel_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_kri5l"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/wooden_crate_8wooden_crate_8.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0fh2a"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/wooden_crate_9wooden_crate_9.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ajjjs"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/wood_pallet_1wood_pallet_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_y7dwa"]
+script = ExtResource("1_me2ws")
+path = "res://Scenes/Levels/LevelAssets/Bunker/wood_pallet_2wood_pallet_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[resource]
+script = ExtResource("2_40cc1")
+assetData = [SubResource("Resource_6la2b"), SubResource("Resource_ylbp0"), SubResource("Resource_chylv"), SubResource("Resource_euu43"), SubResource("Resource_hqjhx"), SubResource("Resource_8ggvy"), SubResource("Resource_owdun"), SubResource("Resource_kauar"), SubResource("Resource_5yooo"), SubResource("Resource_8h834"), SubResource("Resource_tvmbg"), SubResource("Resource_r2i1e"), SubResource("Resource_f5mnx"), SubResource("Resource_vayqm"), SubResource("Resource_76jcs"), SubResource("Resource_xny3c"), SubResource("Resource_aw1we"), SubResource("Resource_h844t"), SubResource("Resource_8jsbw"), SubResource("Resource_q5ewe"), SubResource("Resource_tsmtp"), SubResource("Resource_l6i2j"), SubResource("Resource_xuep0"), SubResource("Resource_ynlcq"), SubResource("Resource_4jcxm"), SubResource("Resource_ka5fu"), SubResource("Resource_5uelr"), SubResource("Resource_6i74m"), SubResource("Resource_0wh6r"), SubResource("Resource_1kopf"), SubResource("Resource_ioktk"), SubResource("Resource_tkf4s"), SubResource("Resource_3x3bv"), SubResource("Resource_5n7c4"), SubResource("Resource_ekd7y"), SubResource("Resource_e4aem"), SubResource("Resource_kqctm"), SubResource("Resource_keyb6"), SubResource("Resource_6vnsf"), SubResource("Resource_c7dfw"), SubResource("Resource_fgg2m"), SubResource("Resource_pep3s"), SubResource("Resource_yfco7"), SubResource("Resource_2qrmp"), SubResource("Resource_5vlda"), SubResource("Resource_d7byh"), SubResource("Resource_f18xi"), SubResource("Resource_kam47"), SubResource("Resource_41jje"), SubResource("Resource_w1a08"), SubResource("Resource_p6a4l"), SubResource("Resource_nhf37"), SubResource("Resource_dotml"), SubResource("Resource_85prj"), SubResource("Resource_2x1s0"), SubResource("Resource_yh2at"), SubResource("Resource_xrp57"), SubResource("Resource_u4l3s"), SubResource("Resource_ayhn1"), SubResource("Resource_ude6a"), SubResource("Resource_0u7cl"), SubResource("Resource_3sjy4"), SubResource("Resource_0m2xp"), SubResource("Resource_ga2mo"), SubResource("Resource_akbpo"), SubResource("Resource_qpmc0"), SubResource("Resource_78yo3"), SubResource("Resource_na7fr"), SubResource("Resource_1rpp1"), SubResource("Resource_f8sfv"), SubResource("Resource_6e7p8"), SubResource("Resource_he7k1"), SubResource("Resource_nvrbh"), SubResource("Resource_yo6gq"), SubResource("Resource_racg1"), SubResource("Resource_338jt"), SubResource("Resource_ehsht"), SubResource("Resource_fe2xp"), SubResource("Resource_kri5l"), SubResource("Resource_0fh2a"), SubResource("Resource_ajjjs"), SubResource("Resource_y7dwa")]
+previewPerspective = 0

@@ -1,9 +1,9 @@
-[gd_scene load_steps=11 format=4]
+[gd_scene load_steps=11 format=4 uid="uid://cp6ov8nyojtyt"]
 
-[ext_resource type="Texture2D" uid="uid://c5h5cnt0uurl" path="res://Assets/Textures/Fair/window_2_single_wall_3.png" id="1_s1wsx"]
-[ext_resource type="Texture2D" uid="uid://bdjsqtvfw4g20" path="res://Assets/Textures/Fair/window_2_single_wood_2.png" id="2_lk22x"]
-[ext_resource type="Texture2D" uid="uid://5qi2vi80mtaw" path="res://Assets/Textures/Fair/window_2_single_window_2.png" id="3_8pggx"]
-[ext_resource type="Texture2D" uid="uid://cix0pxmnjnaj6" path="res://Assets/Textures/Fair/window_2_single_window_2_emission.png" id="4_tjqg8"]
+[ext_resource type="Texture2D" uid="uid://b2w618qh0xknf" path="res://Assets/Textures/Fair/window_2_single_wall_3.png" id="1_s1wsx"]
+[ext_resource type="Texture2D" uid="uid://bb1qejh7crbjy" path="res://Assets/Textures/Fair/window_2_single_wood_2.png" id="2_lk22x"]
+[ext_resource type="Texture2D" uid="uid://cgsfbrq887kjj" path="res://Assets/Textures/Fair/window_2_single_window_2.png" id="3_8pggx"]
+[ext_resource type="Texture2D" uid="uid://bnualh2kber65" path="res://Assets/Textures/Fair/window_2_single_window_2_emission.png" id="4_tjqg8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cba4j"]
 resource_name = "wall_3"
@@ -19,7 +19,9 @@ texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dajqy"]
 resource_name = "window_2"
+transparency = 1
 cull_mode = 2
+albedo_color = Color(1, 1, 1, 0.403922)
 albedo_texture = ExtResource("3_8pggx")
 emission_enabled = true
 emission_texture = ExtResource("4_tjqg8")
@@ -106,7 +108,7 @@ shadow_mesh = SubResource("ArrayMesh_avvf2")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_l4edy"]
 points = PackedVector3Array(2.07746, 0.137222, 0.0188093, -2.07746, 0.0722762, -3.03246, -2.07746, 0.137222, 0.0188093, -2.07746, -0.12246, 0.0188093, 2.01239, -0.12246, -3.03246, 2.07746, -0.12246, 0.0188093, 0.649105, 0.137222, -2.57788, 2.07746, 0.0722762, -3.03246, -2.01239, -0.12246, -3.03246, -0.649105, 0.137222, -2.57788, -2.07746, 0.137222, -0.176226, 2.07746, 0.137222, -0.176226, 2.07746, -0.12246, -0.176226, -2.07746, -0.12246, -0.176226)
 
-[node name="@Node3D@294" type="Node3D"]
+[node name="_Node3D_294" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@295" type="StaticBody3D" parent="."]

@@ -169,7 +169,7 @@ transform = Transform3D(0.96696, -0.22956, 1.00344e-08, 0, -4.34419e-08, -0.9938
 transform = Transform3D(0.634837, 1.44579, -6.31974e-08, 0, -6.90214e-08, -1.57902, -1.44579, 0.634837, -2.77496e-08, -8.80176, 0.00297129, -7.32544)
 
 [node name="Prison" parent="." instance=ExtResource("18_qm04v")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.66473, 0, 54.9834)
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -36.2883, 0, 39.1148)
 
 [node name="PrisonOffice" parent="." instance=ExtResource("19_d3oyw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.39935, 0, 13.8162)

@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Roads/Roads_TexturesCom_SignDeadEnd0001_S.jpg" id="1_3kww3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uo8sn"]
+resource_name = "Material.018"
+cull_mode = 2
+albedo_texture = ExtResource("1_3kww3")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4wwp8"]
+_surfaces = [{
+"aabb": AABB(-0.0522609, -0.0152865, -0.106618, 1.45245, 0.0426381, 0.213236),
+"format": 34896613377,
+"index_count": 75,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAFAAMAAgAEAAUABAAHAAUABAAGAAcABQABAAMAAQAHAAkAAQAFAAcABgAJAAcABgAIAAkACAABAAkACAAAAAEACgANAAsACgAMAA0ADAARAA0ADAAQABEAEAAPABEAEAAOAA8ADgALAA8ADgAKAAsADAAOABAADAAKAA4AEQALAA0AEQAPAAsA"),
+"name": "Material.018",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("AADAlxRqAAB698GXFGoAAAAAgi85eQAAeveDLzl5AAAAAFNXupEAAHr3VFe6kQAAAAAt2LqRAAB69y3YupEAAAAA/v85eQAAevf//zl5AADQx4o7//8AAP//ijv//wAA0MeKOwAAAAD//4o7AAAAANDHAAD//wAA//8AAP//AADQxwAAAAAAAP//AAAAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1ld2a"]
+resource_name = "Roads_Cylinder_016"
+_surfaces = [{
+"aabb": AABB(-0.0522609, -0.0152865, -0.106618, 1.45245, 0.0426381, 0.213236),
+"attribute_data": PackedByteArray("nYIwbp2CcpedglK7xYEwbrGCMG7FgcCWxYFSu7GCUru0gTBuF4IwbrSBUrsXgqGVF4JSu7SBMG4igzButIFSuyKDoZUig1K7sYIwbnSDMG6xglK7dIPAlnSDUrvegXesxnp3rN6Bx43egfq9xnr6vd6Bx43egXesEYp3rN6BHJ/egfq9EYr6vd6BHJ9jgXesFxOd82OBx41jgfq9FxPnCGOBx41jgXes5+yd82OBHJ9jgfq95+znCGOBHJ8="),
+"format": 34896613399,
+"index_count": 75,
+"index_data": PackedByteArray("AAAGAAIAAAADAAYABAAKAAcABAAIAAoACQARAAwACQAOABEACwABAAUAAQAQABUAAQALABAADQAUAA8ADQASABQAEwACABYAEwAAAAIAGAAhABsAGAAeACEAHQAsACAAHQApACwAKgAnAC0AKgAkACcAIwAaACYAIwAXABoAHwAlACsAHwAZACUALgAcACIALgAoABwA"),
+"material": SubResource("StandardMaterial3D_uo8sn"),
+"name": "Material.018",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 47,
+"vertex_data": PackedByteArray("AADAlxRqAAB698GXFGrF7Xr3wZcUajkSAACCLzl57SIAAIIvOXntInr3gy85eTPLeveDLzl5BzV694MvOXlrLAAAU1e6kRo8AABTV7qR5MN691RXupGoTHr3VFe6kaHAevdUV7qRocAAAC3YupHkwwAALdi6keTDevct2LqRVrN69y3YupHmzXr3Ldi6keXNAAD+/zl5Ed0AAP7/OXntInr3//85eZPTevf//zl5Lfd69///OXmyB9DHijv///+/0MeKO///VNXQx4o7//+qKv//ijv///+///+KO///VNX//4o7//9U1dDHijsAAAAA0MeKOwAAVNXQx4o7AACqKv//ijsAAAAA//+KOwAAVNX//4o7AABU1dDHAAD///+/0McAAP//VNXQxwAA//+qKv//AAD///+///8AAP//VNX//wAA//9U1dDHAAAAAAAA0McAAAAAVNXQxwAAAACqKv//AAAAAAAA//8AAAAAVNX//wAAAABU1f+//7/tNu027TbtNg1RDVENUQ1RISgbTNVGIkNlZuU4ymbKZjUZyeZ/dA1GhAq+MIQKvjDJ5jUZyeY1GQ3GgAurK2wJqytsCQ3R8S7xrvGu5biZGYg1OhzJqjCo/////1TVqipU1VTV/////1TVqiqqKqoq/7/+v1TVqipU1VTV/7//v1TVqiqqKqoq/////1VVVFVU1VTV/////1RVVFWqKqoq/7/+v1VVVFVU1VTV/7//v1RVVFWqKqoq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_4wwp8")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ebu7l"]
+points = PackedVector3Array(1.35339, 0.0314178, 0.00802949, 1.07295, -0.0195471, -0.110847, -0.056547, -0.0110513, -0.0173931, 1.40445, -0.0195471, 0.110001, -0.056547, 0.0314178, -0.00889729, 1.40445, -0.00255545, -0.110847, 1.07295, -0.00255545, 0.110001, -0.056547, -0.0110513, 0.0165253, 1.40445, -0.0195471, -0.110847, 1.07295, -0.0195471, 0.110001, -0.056547, 0.022922, 0.0165253, 1.35339, 0.0314178, -0.00889729, 1.40445, -0.00255545, 0.110001, 1.07295, -0.00255545, -0.110847, -0.056547, 0.00593538, -0.0258889)
+
+[node name="@Node3D@210" type="Node3D"]
+transform = Transform3D(3.13916e-07, -1, 0, 1, 3.13916e-07, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="@StaticBody3D@211" type="StaticBody3D" parent="."]
+
+[node name="Sign_001" type="MeshInstance3D" parent="@StaticBody3D@211"]
+mesh = SubResource("ArrayMesh_1ld2a")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@211"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_ebu7l")

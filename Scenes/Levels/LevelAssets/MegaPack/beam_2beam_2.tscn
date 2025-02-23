@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=5 format=4 uid="uid://blwlihg7ry13y"]
 
 [ext_resource type="Texture2D" uid="uid://ju66tw56jalj" path="res://Assets/Textures/Fair/beam_2_concrete_1.jpg" id="1_j2e6k"]
 
@@ -40,10 +40,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_q14rv")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_c46vh"]
-points = PackedVector3Array(-1.82857, -0.258571, -0.258571, 1.82857, 0.255714, 0.255714, 1.82857, 0.255714, -0.258571, -1.82857, 0.255714, 0.255714, 1.82857, -0.258571, 0.255714, 1.82857, -0.258571, -0.258571, -1.82857, 0.255714, -0.258571, -1.82857, -0.258571, 0.255714)
-
-[node name="@Node3D@20" type="Node3D"]
+[node name="_Node3D_20" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@21" type="StaticBody3D" parent="."]
@@ -51,6 +48,3 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 
 [node name="beam_2" type="MeshInstance3D" parent="@StaticBody3D@21"]
 mesh = SubResource("ArrayMesh_qggwn")
 skeleton = NodePath("")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@21"]
-shape = SubResource("ConvexPolygonShape3D_c46vh")

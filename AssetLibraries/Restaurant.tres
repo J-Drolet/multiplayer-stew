@@ -1,0 +1,618 @@
+[gd_resource type="Resource" load_steps=90 format=3]
+
+[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetPersistentData.cs" id="1_wj0rm"]
+[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetLibrary.cs" id="2_iuylb"]
+
+[sub_resource type="Resource" id="Resource_salp3"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/ArmchairQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_j0mku"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/bag_garlicQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_bpxx2"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/bag_onionsQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_oqkx1"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Base_018Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_k5cp1"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Base_019Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_unxl2"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Base_020Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_3odjs"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/BoardQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_qkrlt"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Box_BQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_aook0"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Box_B_01Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6t6a4"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Box_B_02Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_d07bg"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Box_B_03Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_gvv06"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Branches_014Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_p75u6"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/broccoli_bagQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_drhpl"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Bush_020Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ec5g8"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Bush_021Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_au80l"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/cactus_005Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_jsf1m"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/carrot_bagQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_nokxv"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Cash_registerQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_273hs"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/ChairQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_wxgi2"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Chair_PQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_3tccw"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/CheckerQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0sg1k"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Coffee_jarQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_iag1i"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Coffee_maker_001Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_n4s0v"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/flour_bagQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_n47fs"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/flour_bag_01Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_utdv5"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Garbage_deposit_002Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_axt0a"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Gas_station_001Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_lcgia"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Gas_station_002Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8udfr"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Grill_003Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ndeho"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Houses_01_009Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_pgpjt"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Houses_009Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5amfy"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/ketchupQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6kk3f"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/kitchen_objectQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_r885a"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/kitchen_object_01Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_phd74"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/kitchen_object_02Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_aqdbe"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/kitchen_object_03Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ckpo0"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/kitchen_object_tQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_acqw1"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/KnifeQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_lvpgc"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/LadleQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_s56ek"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/lettuce_bagQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_jqf0t"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Mayonnaise_JarQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_x3xfo"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/mustardQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5sm23"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Mustard_JarQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_rg66t"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/NapkinholderQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_dehq4"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/PaintingQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_rjy0u"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Painting_01Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_fqkdd"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Painting_02Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_pnr6d"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Painting_03Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xbar0"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Painting_04Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_uyry2"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Painting_05Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_o6dfa"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Painting_06Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8bxya"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Painting_07Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_h5cga"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/PepperQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_p2pgj"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/PhoneQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_kk21d"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Pickle_JarQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_cgpq5"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Plastic_box_01Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ix7al"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/plastic_cups_005Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ug841"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/plastic_cups_006Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6obo2"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/plastic_cups_007Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8jqlq"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/plastic_cups_008Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_pxeee"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Plates_004Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_nmclg"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/sack_flourQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_kq63y"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/sack_potatoesQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_i0muh"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/SaltQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_076xu"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/SauceQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0phc1"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Sauce_01Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_178hb"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Sauce_02Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xc13b"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Shelf_FR_I_001Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_bacld"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Shelving_007Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_wi1v1"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/sign_001Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5ev0f"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/sign_01_001Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ql5j1"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/soap_dispenserQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ybonu"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Soda_07_033Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xv55b"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Soda_fountain_01_001Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_pqnhr"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/SpatulaQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_rujjp"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/TableQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_suuo7"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Table_TQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_04s86"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/trash_canQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_hg6h8"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/trash_can_01Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_hdwvw"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Tree_046Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_r5v02"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Tree_047Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_wodnm"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Vegetation_474Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_jq0ph"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Vegetation_475Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_cxmwl"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Vegetation_476Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_24fmw"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Vegetation_477Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0o413"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Waffle_maker_001Quequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_64lrq"]
+script = ExtResource("1_wj0rm")
+path = "res://Scenes/Levels/LevelAssets/Restuarant/Washbasin_MQuequis_House_Props.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[resource]
+script = ExtResource("2_iuylb")
+assetData = [SubResource("Resource_salp3"), SubResource("Resource_j0mku"), SubResource("Resource_bpxx2"), SubResource("Resource_oqkx1"), SubResource("Resource_k5cp1"), SubResource("Resource_unxl2"), SubResource("Resource_3odjs"), SubResource("Resource_qkrlt"), SubResource("Resource_aook0"), SubResource("Resource_6t6a4"), SubResource("Resource_d07bg"), SubResource("Resource_gvv06"), SubResource("Resource_p75u6"), SubResource("Resource_drhpl"), SubResource("Resource_ec5g8"), SubResource("Resource_au80l"), SubResource("Resource_jsf1m"), SubResource("Resource_nokxv"), SubResource("Resource_273hs"), SubResource("Resource_wxgi2"), SubResource("Resource_3tccw"), SubResource("Resource_0sg1k"), SubResource("Resource_iag1i"), SubResource("Resource_n4s0v"), SubResource("Resource_n47fs"), SubResource("Resource_utdv5"), SubResource("Resource_axt0a"), SubResource("Resource_lcgia"), SubResource("Resource_8udfr"), SubResource("Resource_ndeho"), SubResource("Resource_pgpjt"), SubResource("Resource_5amfy"), SubResource("Resource_6kk3f"), SubResource("Resource_r885a"), SubResource("Resource_phd74"), SubResource("Resource_aqdbe"), SubResource("Resource_ckpo0"), SubResource("Resource_acqw1"), SubResource("Resource_lvpgc"), SubResource("Resource_s56ek"), SubResource("Resource_jqf0t"), SubResource("Resource_x3xfo"), SubResource("Resource_5sm23"), SubResource("Resource_rg66t"), SubResource("Resource_dehq4"), SubResource("Resource_rjy0u"), SubResource("Resource_fqkdd"), SubResource("Resource_pnr6d"), SubResource("Resource_xbar0"), SubResource("Resource_uyry2"), SubResource("Resource_o6dfa"), SubResource("Resource_8bxya"), SubResource("Resource_h5cga"), SubResource("Resource_p2pgj"), SubResource("Resource_kk21d"), SubResource("Resource_cgpq5"), SubResource("Resource_ix7al"), SubResource("Resource_ug841"), SubResource("Resource_6obo2"), SubResource("Resource_8jqlq"), SubResource("Resource_pxeee"), SubResource("Resource_nmclg"), SubResource("Resource_kq63y"), SubResource("Resource_i0muh"), SubResource("Resource_076xu"), SubResource("Resource_0phc1"), SubResource("Resource_178hb"), SubResource("Resource_xc13b"), SubResource("Resource_bacld"), SubResource("Resource_wi1v1"), SubResource("Resource_5ev0f"), SubResource("Resource_ql5j1"), SubResource("Resource_ybonu"), SubResource("Resource_xv55b"), SubResource("Resource_pqnhr"), SubResource("Resource_rujjp"), SubResource("Resource_suuo7"), SubResource("Resource_04s86"), SubResource("Resource_hg6h8"), SubResource("Resource_hdwvw"), SubResource("Resource_r5v02"), SubResource("Resource_wodnm"), SubResource("Resource_jq0ph"), SubResource("Resource_cxmwl"), SubResource("Resource_24fmw"), SubResource("Resource_0o413"), SubResource("Resource_64lrq")]
+previewPerspective = 0
