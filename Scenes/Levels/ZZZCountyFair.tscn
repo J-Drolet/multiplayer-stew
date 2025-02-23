@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cif1rylh3ul7d"]
+[gd_scene load_steps=29 format=3 uid="uid://cif1rylh3ul7d"]
 
 [ext_resource type="Script" path="res://Scripts/GameLogic/LevelManager.cs" id="1_aiq0j"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_4bfgx"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/chair_2chair_2.tscn" id="16_6etf8"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/wooden_crate_2wooden_crate_2.tscn" id="17_8no84"]
 [ext_resource type="PackedScene" uid="uid://cb1w1yrkt2our" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/Prison.tscn" id="18_qm04v"]
+[ext_resource type="PackedScene" uid="uid://cmurqy8owxnfc" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/PrisonOffice.tscn" id="19_d3oyw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afd3o"]
 render_priority = 1
@@ -169,3 +170,6 @@ transform = Transform3D(0.634837, 1.44579, -6.31974e-08, 0, -6.90214e-08, -1.579
 
 [node name="Prison" parent="." instance=ExtResource("18_qm04v")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.66473, 0, 54.9834)
+
+[node name="PrisonOffice" parent="." instance=ExtResource("19_d3oyw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.39935, 0, 13.8162)

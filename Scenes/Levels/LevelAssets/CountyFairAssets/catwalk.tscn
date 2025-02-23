@@ -47,10 +47,10 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -25.66
 
 [node name="Rail" type="Node3D" parent="."]
 
-[node name="hand_rail_3hand_rail_3_tscn" type="Node3D" parent="Rail" instance=ExtResource("2_a6juc")]
+[node name="hand_rail_3hand_rail_3_tscn" parent="Rail" instance=ExtResource("2_a6juc")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -17.8, -1.19209e-07, -0.836349)
 
-[node name="hand_rail_3hand_rail_3_tscn2" type="Node3D" parent="Rail" instance=ExtResource("2_a6juc")]
+[node name="hand_rail_3hand_rail_3_tscn2" parent="Rail" instance=ExtResource("2_a6juc")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -15.7, 0, -0.836349)
 
 [node name="hand_rail_3hand_rail_3_tscn3" parent="Rail" instance=ExtResource("2_a6juc")]

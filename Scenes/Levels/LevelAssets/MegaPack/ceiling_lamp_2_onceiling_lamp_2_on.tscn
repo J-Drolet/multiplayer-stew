@@ -1,9 +1,9 @@
-[gd_scene load_steps=11 format=4]
+[gd_scene load_steps=11 format=4 uid="uid://b6mcfykmocjij"]
 
-[ext_resource type="Texture2D" uid="uid://da0yfw506xn8w" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_metal_mp_1.png" id="1_1pqpr"]
-[ext_resource type="Texture2D" uid="uid://yj811eppbifd" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_metal_mp_4.png" id="2_ibpdc"]
-[ext_resource type="Texture2D" uid="uid://byglyfcv6gape" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_ceiling_lamp_1_on.png" id="3_7aofw"]
-[ext_resource type="Texture2D" uid="uid://teyllvpesusb" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_ceiling_lamp_1_on_emission.png" id="4_01gsm"]
+[ext_resource type="Texture2D" uid="uid://nl4i3yh65utg" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_metal_mp_1.png" id="1_1pqpr"]
+[ext_resource type="Texture2D" uid="uid://bmnohntc4l0pf" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_metal_mp_4.png" id="2_ibpdc"]
+[ext_resource type="Texture2D" uid="uid://c2tv6m1joiimu" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_ceiling_lamp_1_on.png" id="3_7aofw"]
+[ext_resource type="Texture2D" uid="uid://bmjwpdqp1wxg0" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_ceiling_lamp_1_on_emission.png" id="4_01gsm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kroog"]
 resource_name = "metal_mp_1"
@@ -104,7 +104,7 @@ shadow_mesh = SubResource("ArrayMesh_cnk3y")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_knbdx"]
 points = PackedVector3Array(0.0192811, 0.511604, 0.173333, -0.228254, -0.412634, 0.0247716, -0.195225, -0.511604, -0.00825396, 0.217409, -0.412634, 0.173333, 0.200939, 0.511604, -0.00825396, -0.195225, 0.511604, -0.00825396, -0.21174, -0.412634, 0.173333, 0.200939, -0.511604, -0.00825396, -0.228254, 0.412634, 0.156803, 0.233968, 0.412634, 0.156803, -0.013612, -0.528254, 0.156803, 0.233968, -0.412634, 0.0412844, -0.228254, 0.412634, 0.0247716, -0.21174, 0.412634, 0.173333, 0.233968, 0.412634, 0.0412844, 0.217409, 0.412634, 0.173333, -0.013612, 0.528254, 0.156803, -0.228254, -0.412634, 0.156803, 0.233968, -0.412634, 0.156803, 0.200939, 0.511604, 0.0577794, 0.200939, -0.511604, 0.0577794, -0.195225, 0.511604, 0.0577794, -0.195225, -0.511604, 0.0577794, 0.0192811, -0.511604, 0.173333, 0.0192811, -0.528254, 0.156803, 0.0192811, 0.528254, 0.156803, -0.013612, 0.511604, 0.173333, -0.013612, -0.511604, 0.173333)
 
-[node name="@Node3D@68" type="Node3D"]
+[node name="_Node3D_68" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@69" type="StaticBody3D" parent="."]
@@ -115,3 +115,10 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@69"]
 shape = SubResource("ConvexPolygonShape3D_knbdx")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0)
+light_color = Color(1, 1, 0.811765, 1)
+light_energy = 3.0
+spot_range = 12.8175
+spot_angle = 63.8343
