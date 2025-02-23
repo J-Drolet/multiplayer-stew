@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/cassette_tape_1_cassette_tape_1.png" id="1_44eik"]
+[ext_resource type="Texture2D" uid="uid://c3yt07nehkrqy" path="res://Assets/Textures/Fair/cassette_tape_1_cassette_tape_1.png" id="1_44eik"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kagus"]
 resource_name = "cassette_tape_1"

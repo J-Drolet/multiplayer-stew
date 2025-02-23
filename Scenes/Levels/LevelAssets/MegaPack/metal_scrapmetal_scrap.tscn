@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/metal_scrap_scifi_texture_1.png" id="1_7dnqg"]
+[ext_resource type="Texture2D" uid="uid://dnjfn2myy1nie" path="res://Assets/Textures/Fair/metal_scrap_scifi_texture_1.png" id="1_7dnqg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_flt1h"]
 resource_name = "scifi_texture_1"

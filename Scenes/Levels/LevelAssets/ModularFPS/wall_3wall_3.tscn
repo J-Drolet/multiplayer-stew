@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" uid="uid://ds56y2wj0so8o" path="res://Assets/Textures/Fair/wall_3_wall_3.png" id="1_0d53r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g121d"]
+resource_name = "wall_3"
+cull_mode = 2
+albedo_texture = ExtResource("1_0d53r")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_oyugf"]
+_surfaces = [{
+"aabb": AABB(-1, -0.1, -2, 2, 0.1, 2),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("BAADAAUABAACAAMABgAFAAcABgAEAAUAAAAHAAEAAAAGAAcA"),
+"name": "wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("//8AAP//AAAAAAAA//8AAP///v8AAAAAAAD//wAAAAD///7//38AAAAA/v//fwAA//8AAP+/AAAAAAAA/78AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2sv38"]
+resource_name = "wall_3_wall_3"
+_surfaces = [{
+"aabb": AABB(-1, -0.1, -2, 2, 0.1, 2),
+"attribute_data": PackedByteArray("AAD///////8AAAAA//8AAAAA/3////9/AAD/v////78="),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("BAADAAUABAACAAMABgAFAAcABgAEAAUAAAAHAAEAAAAGAAcA"),
+"material": SubResource("StandardMaterial3D_g121d"),
+"name": "wall_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("//8AAP////8AAAAA/////////v8AAP//AAD//wAA//////7//3///wAA/v//f/////8AAP+///8AAAAA/7////9//z//f/8//7////+////WvP//1rz//9a8///WvP//")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_oyugf")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ymckh"]
+points = PackedVector3Array(1.01587, -0.0841208, 0.0154753, -1.01587, -0.0206536, -2.01548, -1.01587, 0.0110863, -2.01548, 1.01587, -0.0206536, -2.01548, -1.01587, -0.115848, -0.587407, -1.01587, 0.0110863, -0.87314, 1.01587, 0.0110863, -0.87314, 1.01587, -0.115848, -0.587407, -1.01587, -0.115848, 0.0154753, 1.01587, 0.0110863, -2.01548, -1.01587, -0.0841208, 0.0154753, 1.01587, -0.115848, 0.0154753)
+
+[node name="@Node3D@50" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@51" type="StaticBody3D" parent="."]
+
+[node name="wall_3" type="MeshInstance3D" parent="@StaticBody3D@51"]
+mesh = SubResource("ArrayMesh_2sv38")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@51"]
+shape = SubResource("ConvexPolygonShape3D_ymckh")

@@ -179,7 +179,7 @@ public partial class LevelManager : Node
 		}
 		else // Only local peer code
 		{
-			if(PlayerStatJson.Length != 0)
+			if (!String.IsNullOrEmpty(PlayerStatJson) &&  PlayerStatJson.Length != 0)
 			{
 				PlayerStats = JsonSerializer.Deserialize<Dictionary<long, PlayerStat>>(PlayerStatJson);
 			}

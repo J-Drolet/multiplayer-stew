@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/door_4_door_4.png" id="1_dnj15"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/door_4_metal_6.png" id="2_hdhn2"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/door_4_metal_mp_4.png" id="3_5rtw8"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/door_4_door_handle_1.png" id="4_cpw7e"]
+[ext_resource type="Texture2D" uid="uid://dbs6i6x5dbc6i" path="res://Assets/Textures/Fair/door_4_door_4.png" id="1_dnj15"]
+[ext_resource type="Texture2D" uid="uid://bv3t4aq0syj35" path="res://Assets/Textures/Fair/door_4_metal_6.png" id="2_hdhn2"]
+[ext_resource type="Texture2D" uid="uid://4lqckq540lh6" path="res://Assets/Textures/Fair/door_4_metal_mp_4.png" id="3_5rtw8"]
+[ext_resource type="Texture2D" uid="uid://ditlaf8p8i5hm" path="res://Assets/Textures/Fair/door_4_door_handle_1.png" id="4_cpw7e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mu3vd"]
 resource_name = "door_4"

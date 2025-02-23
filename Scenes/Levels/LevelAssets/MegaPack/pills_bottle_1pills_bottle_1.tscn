@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/pills_bottle_1_pills_bottle_1.png" id="1_dwgul"]
+[ext_resource type="Texture2D" uid="uid://bs5e8rcus36pv" path="res://Assets/Textures/Fair/pills_bottle_1_pills_bottle_1.png" id="1_dwgul"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8sye2"]
 resource_name = "pills_bottle_1"

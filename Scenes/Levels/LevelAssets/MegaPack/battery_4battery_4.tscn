@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/battery_4_battery_2.png" id="1_nf52s"]
+[ext_resource type="Texture2D" uid="uid://d1ohn2a4puk33" path="res://Assets/Textures/Fair/battery_4_battery_2.png" id="1_nf52s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y1bh1"]
 resource_name = "battery_2"

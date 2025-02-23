@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/matchbox_2_matchbox_2.png" id="1_qspp1"]
+[ext_resource type="Texture2D" uid="uid://cx5ibctx04epu" path="res://Assets/Textures/Fair/matchbox_2_matchbox_2.png" id="1_qspp1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ejvo6"]
 resource_name = "matchbox_2"

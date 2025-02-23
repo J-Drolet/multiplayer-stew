@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Sauces_condiments.png" id="1_r7c6p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e784y"]
+resource_name = "Sauces_condiments"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_r7c6p")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dlih8"]
+_surfaces = [{
+"aabb": AABB(-0.179291, -0.10555, -0.207028, 0.358583, 1.33928, 0.414056),
+"format": 34896613377,
+"index_count": 192,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAFAAMAAgAEAAUABAAHAAUABAAGAAcABgAJAAcABgAIAAkABQABAAMAAQAJAAsACQAFAAcAAQAFAAkACAALAAkACAAKAAsACgABAAsACgAAAAEACgACAAAAAgAGAAQABgAKAAgAAgAKAAYADAAOAA0ADgAQAA8AEAAMABEADgAMABAAFwAcABYAFwAdABwADAAXABEADAATABcAEAAVAA8AEAAWABUADgASAA0ADgAUABIAEQAWABAAEQAXABYADwAUAA4ADwAVABQADQATAAwADQASABMAGQAjAB0AGQAfACMAFQAaABQAFQAbABoAEgAZABMAEgAYABkAEwAdABcAEwAZAB0AFgAbABUAFgAcABsAFAAYABIAFAAaABgAIAAfAB4AHwAiACMAIgAgACEAHwAgACIAHAAhABsAHAAiACEAGgAeABgAGgAgAB4AHQAiABwAHQAjACIAGwAgABoAGwAhACAAGAAfABkAGAAeAB8A"),
+"name": "Sauces_condiments",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("/38AAAAAAAD/f2PAAAAAAP//AAD/PwAA//9jwP8/AAD//wAA/78AAP//Y8D/vwAA/38AAP//AAD/f2PA//8AAAAAAAD/vwAAAABjwP+/AAAAAAAA/z8AAAAAY8D/PwAA/3+PvHMmAACL2Y+8OVMAAIvZj7zFrAAA/3+PvIvZAABzJo+8xawAAHMmj7w5UwAAi9ne0DlTAAD/f97QcyYAAIvZ3tDFrAAA/3/e0IvZAABzJt7QxawAAHMm3tA5UwAAcZPe0EZ2AAD/f97QjWwAAHGT3tC4iQAA/3/e0HKTAACNbN7QuIkAAI1s3tBGdgAAkYn//zZ7AAD/f///bXYAAJGJ///IhAAA/3///5GJAABtdv//yIQAAG12//82ewAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tqm7j"]
+resource_name = "Quequis_House_Props_ketchup"
+_surfaces = [{
+"aabb": AABB(-0.179291, -0.10555, -0.207028, 0.358583, 1.33928, 0.414056),
+"attribute_data": PackedByteArray("nALbikC+uiJKX9uKVsp9SVDRuiKcAl2bsZ9i/djaBVNKX12bsZ+0oNjaPDOII2L9oYxi/djaFWaII7SgoYy0oAUTYv1Q0b5DBRO0oFbKnW9Avr5DgwJi/Zp0Yv3TuRVmgwK0oJp0tKC4tDwznAJYeqqHYv3TuQVTSl9YeqqHtKCTlx0MQeD8aM3rp29NPMMPBowdDM3r/XxNPG0Cu+qTn7vqB5RB4KiDtNT9fLvqeohs9ORetNSnbx+jHQxs9DpsieSNj6REww8GjHQUk5d0FPzY4oiJ5OOcpERtAhLzk58S8weU/NiOo2/N45wS83qIw/zkXm/NjY8fo3QUw/w6bH7bxZQVvtIP0+ouU1XtLlP82FKTftuql/dOHQwVvuwMelEdDPzYHZl61qqXvAK7DfxTHQx61sWUvAKgENfvLlP3vDlLydQVDxns4mlV7eJp97zMSbu78Es9UNEiydSoDXpR0SJ/ujlLf7rMSXAZdw62UtEiu7sWSXAZ5A+R7uJp"),
+"format": 34896613399,
+"index_count": 192,
+"index_data": PackedByteArray("AAAIAAIAAAAFAAgABgAPAAkABgAMAA8ACwASAA4ACwAQABIAEAAYABIAEAAVABgADQADAAcAAwAXAB0AFwANABMAAwANABcAFgAfABkAFgAcAB8AGwACAB4AGwAAAAIAGgAEAAEABAARAAoAEQAaABQABAAaABEAIQAlACIAJQAqACkAKgAhAC0AJQAhACoAPQBKADoAPQBNAEoAIAA+AC4AIAAzAD4AKwA4ACgAKwA7ADgAJgAxACMAJgA2ADEALwA8ACwALwA/ADwAKAA3ACcAKAA4ADcAJAAzACAAJAAyADMAQwBfAE8AQwBTAF8AOQBFADUAOQBJAEUAMABEADQAMABAAEQANABNAD0ANABEAE0AOgBJADkAOgBKAEkANQBAADAANQBFAEAAVQBUAFAAVABaAF0AWgBVAFkAVABVAFoATABYAEgATABcAFgARwBRAEEARwBXAFEATgBbAEsATgBeAFsASABWAEYASABYAFYAQgBTAEMAQgBSAFMA"),
+"material": SubResource("StandardMaterial3D_e784y"),
+"name": "Sauces_condiments",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 96,
+"vertex_data": PackedByteArray("/38AAAAAAAD/fwAAAABEPf9/Y8AAAAAA/39jwAAA/7///wAA/z9EPf//AAD/P3Id//8AAP8/VNX//2PA/z//v///Y8D/P3Id//9jwP8/VNX//wAA/79EPf//AAD/v6mq//8AAP+/qar//2PA/7//v///Y8D/v6mq//9jwP+/qar/fwAA//8AgP9/AAD//0Q9/39jwP//AID/f2PA////vwAAAAD/v0Q9AAAAAP+/qaoAAAAA/78AAAAAY8D/v/+/AABjwP+/qaoAAGPA/78AAAAAAAD/P0Q9AAAAAP8/ch0AAAAA/z8AAAAAY8D/P/+/AABjwP8/ch0AAGPA/z8AAP9/j7xzJgAA/3+PvHMm/z+L2Y+8OVP/P4vZj7w5U4zii9mPvDlTqiqL2Y+8xaz/P4vZj7zFrErKi9mPvMWsSsr/f4+8i9n/v/9/j7yL2f8/cyaPvMWs/z9zJo+8xaxKynMmj7zFrLQ1cyaPvDlT/z9zJo+8OVOqKnMmj7w5U3Idi9ne0DlT/7+L2d7QOVOM4ovZ3tA5U6oq/3/e0HMmAAD/f97Qcyb/v4vZ3tDFrP+/i9ne0MWsSsqL2d7QxaxKyv9/3tCL2f+//3/e0IvZ/79zJt7Qxaz/v3Mm3tDFrErKcybe0MWstDVzJt7QOVP/v3Mm3tA5U6oqcybe0DlTch1xk97QRnb/v3GT3tBGdtbjcZPe0EZ2lSr/f97QjWwAAP9/3tCNbP+/cZPe0LiJ/79xk97QuIn//3GT3tC4iWPM/3/e0HKT////f97QcpP/v41s3tC4if+/jWze0LiJujeNbN7QuIn//41s3tBGdv+/jWze0EZ2vx6NbN7QRnaVKpGJ//82e0rKkYn//zZ71uORif//NnuVKv9///9tdgAA/3///212SsqRif//yIRKypGJ///IhP//kYn//8iEY8z/f///kYn///9///+RiUrKbXb//8iESsptdv//yIS6N212///IhP//bXb//zZ7Ssptdv//Nnu/Hm12//82e5Uq/7//v1QWqKz/v/+//v//f1QWqKypMakx/38AAP7//3+pMakx/38AAFQWqKz/fwAA/38AAP7//3//fwAA/38AAP9///9UFqis/3///////39UFqis/3///yVR/3////9//3///yVR/39UFqisVc5Vzv//2a7+//9/Vc5Vzv//2a7/f///AAD/fwAA/3+pMakx/38AAAAA/39LIksiSyJLIv////8AAP9/AAD/f7Pds92z3bPdAAD/f/9///9VzlXO/v//f6kxqTH/fwAA/3///////3////9/SyJLIksiSyL/////////f/7//3+z3bPds92z3f///3//f///Vc5Vzv7//3/MMpQvS4UAAP9/+/v+//9//v//f4ytb4M3I2Eg/38BhP7//3/+//9/nd6x24/8jC3+//9/gs88zACAtPqy3Wc7zDKUL0uFAAD/f/v7st1nO7LdZzuNrW+DNyNhIP9/AYSz3Wc7st1nO53esduP/I0tst1nO4LPPMwAgLT6")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dlih8")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5hax8"]
+points = PackedVector3Array(-0.147352, -0.116129, -0.153832, 0.0392542, 0.867018, 0.184341, -0.0367695, 0.869312, 0.185775, -0.0177608, 0.870685, -0.196748, 0.192625, -0.116129, 0.122452, -0.189854, -0.116129, 0.122452, -0.177555, 0.882216, -0.104507, 0.178914, 0.879706, -0.103723, 0.171393, -0.116129, -0.132567, 0.0226179, 1.24433, 0.0161667, 0.0438875, -0.116129, 0.207514, -0.169721, 0.86829, 0.109029, 0.171207, 0.866004, 0.108172, 0.0226179, -0.116129, -0.217629, -0.0198465, 1.24433, -0.026281, -0.177555, -0.0723819, -0.104507, -0.12612, -0.116129, 0.164942, 0.0203812, 0.868266, -0.195235, 0.0226179, 0.989176, 0.164942, -0.0198465, 1.22302, 0.0374322, 0.0226179, 1.24433, -0.026281, 0.107621, -0.116129, -0.175056, 0.128891, -0.116129, 0.164942, -0.0198465, 0.989176, 0.164942, 0.178914, -0.0673596, -0.103723, 0.0226179, 1.22302, 0.0374322, -0.0198465, 1.24433, 0.0161667)
+
+[node name="@Node3D@36" type="Node3D"]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 0, 0, 0)
+
+[node name="@StaticBody3D@37" type="StaticBody3D" parent="."]
+
+[node name="ketchup" type="MeshInstance3D" parent="@StaticBody3D@37"]
+mesh = SubResource("ArrayMesh_tqm7j")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@37"]
+shape = SubResource("ConvexPolygonShape3D_5hax8")

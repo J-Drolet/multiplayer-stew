@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" uid="uid://cxnydbj3tg66t" path="res://Assets/Textures/Fair/crate_1_wooden_crate_3.png" id="1_guubc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_andkr"]
+resource_name = "crate_1"
+cull_mode = 2
+albedo_texture = ExtResource("1_guubc")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_uos1y"]
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -1, 1, 1, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "crate_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD/////AAAAAP//AAAAAAAAAAD//wAAAAAAAAAAAAD///////8AAP////8AAAAA//8AAP//AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o77re"]
+resource_name = "crate_1_crate_1"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -1, 1, 1, 1),
+"attribute_data": PackedByteArray("AAD//wAA//8AAP//AAAAAAAAAAAAAP//AAAAAAAA////////AAAAAAAAAAD//wAAAAD/////////////AAAAAP//AAD///////8AAP////////////8AAP//AAD//wAA"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAALAAMAAAAIAAsABwAVAAkABwATABUAFAAPABcAFAAMAA8ADgAEABAADgACAAQABgANABIABgABAA0AFgAFAAoAFgARAAUA"),
+"material": SubResource("StandardMaterial3D_andkr"),
+"name": "crate_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAD/////qioAAP/////+fwAA//////+/AAD//wAAqioAAP//AAD/vwAA//8AAP//AAAAAP///n8AAAAA////PwAAAAD//6oqAAAAAAAA/z8AAAAAAAD//wAAAAAAAKoq////////VNX////////+f/////////+//////wAAVNX/////AAD/v/////8AAP////8AAP///n///wAA////P///AAD//1TV//8AAAAA/z///wAAAAD/////AAAAAFTVVFWqqv9///////9/VFWqqv///3////9//3///wAA/39UVaqqAAD/f////39UVaqqqqpUVf9///////9/qqpUVf///3////9//3///wAA/3+qqlRVAAD/f////3+qqlRV")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_uos1y")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tflwd"]
+points = PackedVector3Array(-0.5, -0.5, -0.999804, 0.5, 0.5, -0.000195793, 0.5, -0.5, -0.000195793, 0.5, 0.5, -0.999804, -0.5, 0.5, -0.000195793, 0.5, -0.5, -0.999804, -0.5, -0.5, -0.000195793, -0.5, 0.5, -0.999804)
+
+[node name="@Node3D@16" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@17" type="StaticBody3D" parent="."]
+
+[node name="crate_1" type="MeshInstance3D" parent="@StaticBody3D@17"]
+mesh = SubResource("ArrayMesh_o77re")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@17"]
+shape = SubResource("ConvexPolygonShape3D_tflwd")

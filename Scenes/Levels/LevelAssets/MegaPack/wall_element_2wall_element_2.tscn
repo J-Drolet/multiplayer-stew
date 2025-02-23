@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/wall_element_2_concrete_2.jpg" id="1_3tbwb"]
+[ext_resource type="Texture2D" uid="uid://ciduk5jqiteiw" path="res://Assets/Textures/Fair/wall_element_2_concrete_2.jpg" id="1_3tbwb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q2h6w"]
 resource_name = "concrete_2"

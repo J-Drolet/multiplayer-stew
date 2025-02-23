@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" uid="uid://b8keniu1bjuij" path="res://Assets/Textures/Fair/button_off_button_off.png" id="1_wuqj0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7c0l8"]
+resource_name = "button_off"
+cull_mode = 2
+albedo_texture = ExtResource("1_wuqj0")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_uovpp"]
+_surfaces = [{
+"aabb": AABB(-0.333333, -0.133333, -0.5, 0.666667, 0.0666667, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAIAAAABAAMABQAHAAYABQAEAAcAAAAGAAEAAAAFAAYAAQAHAAMAAQAGAAcAAgAFAAAAAgAEAAUAAwAEAAIAAwAHAAQA"),
+"name": "button_off",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD/////AAD///////8AAAAA//8AAAAA/////wAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ygatt"]
+resource_name = "button_off_button_off"
+_surfaces = [{
+"aabb": AABB(-0.333333, -0.133333, -0.5, 0.666667, 0.0666667, 1),
+"attribute_data": PackedByteArray("AAD/7wAA////5wAA/+cAAP///+//////AAAAAAAA/+//5////+f/////AAD////vAAAAAAAA////////AAD//wAA/////wAA//8AAP////////////8AAP//////////"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AQAKAAYAAQAFAAoAEAAVABQAEAAMABUAAAATAAQAAAAPABMAAwAWAAkAAwASABYACAARAAIACAAOABEACwANAAcACwAXAA0A"),
+"material": SubResource("StandardMaterial3D_7c0l8"),
+"name": "button_off",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAD/////AAAAAP//////PwAA/////6oq////////VNX///////8AAP////////8/AAD//wAA/z8AAP//AAAAgAAA//8AAKoq/////wAAVNX/////AAD/P/////8AAACAAAAAAAAA/78AAAAAAAAAgAAAAAAAAKoqAAAAAP//AAAAAAAA////vwAAAAD//6oq//8AAP//VNX//wAA//8AAP//AAD///+///8AAAAA/7///wAAAABU1f//AAAAAACA////fwAA/3+qqlRVVFWqqv///38AAP9/AAD/f/9///+qqlRVVFWqqgAA/3//f///////f/9///+qqlRV////f////3+qqlRVVFWqqv///3////9/////f1RVqqr/f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_uovpp")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wujac"]
+points = PackedVector3Array(-0.341237, -0.141236, -0.507937, 0.341303, -0.0618714, 0.507937, 0.341303, -0.141236, 0.507937, 0.341303, -0.0618714, -0.507937, -0.341237, -0.0618714, 0.507937, -0.341237, -0.141236, 0.507937, 0.341303, -0.141236, -0.507937, -0.341237, -0.0618714, -0.507937)
+
+[node name="@Node3D@2" type="Node3D"]
+transform = Transform3D(-1, -1.50996e-07, 6.60024e-15, 0, -4.37114e-08, -1, 1.50996e-07, -1, 4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@3" type="StaticBody3D" parent="."]
+
+[node name="button_off" type="MeshInstance3D" parent="@StaticBody3D@3"]
+mesh = SubResource("ArrayMesh_ygatt")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@3"]
+shape = SubResource("ConvexPolygonShape3D_wujac")

@@ -1,9 +1,9 @@
-[gd_scene load_steps=11 format=4]
+[gd_scene load_steps=10 format=4 uid="uid://b2hy2s2suld4s"]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/ceiling_lamp_1_on_metal_mp_1.png" id="1_h26h3"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/ceiling_lamp_1_on_metal_mp_4.png" id="2_o6xnn"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/ceiling_lamp_1_on_ceiling_lamp_1_on.png" id="3_268qw"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/ceiling_lamp_1_on_ceiling_lamp_1_on_emission.png" id="4_ycj7o"]
+[ext_resource type="Texture2D" uid="uid://cp57tavgmd5w7" path="res://Assets/Textures/Fair/ceiling_lamp_1_on_metal_mp_1.png" id="1_h26h3"]
+[ext_resource type="Texture2D" uid="uid://w7ykqfwnrilv" path="res://Assets/Textures/Fair/ceiling_lamp_1_on_metal_mp_4.png" id="2_o6xnn"]
+[ext_resource type="Texture2D" uid="uid://bv4npbse3tads" path="res://Assets/Textures/Fair/ceiling_lamp_1_on_ceiling_lamp_1_on.png" id="3_268qw"]
+[ext_resource type="Texture2D" uid="uid://cgpv835p4vd02" path="res://Assets/Textures/Fair/ceiling_lamp_1_on_ceiling_lamp_1_on_emission.png" id="4_ycj7o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_see5v"]
 resource_name = "metal_mp_1"
@@ -101,10 +101,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hg75j")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_c2635"]
-points = PackedVector3Array(0.41661, 0.521667, 0.158333, 0.533333, 0.421662, 0.158333, 0.499924, 0.504914, -0.00833333, -0.49995, 0.504914, -0.00833333, 0.499924, -0.51158, -0.00833333, -0.416636, -0.528333, 0.158333, -0.533255, 0.421662, 0.158333, 0.41661, -0.528333, 0.158333, -0.49995, -0.51158, -0.00833333, 0.533333, -0.411575, 0.158333, -0.533255, -0.411575, 0.158333, -0.416636, 0.521667, 0.158333, -0.518734, -0.400459, 0.0263741, 0.518642, -0.400329, 0.0263901, 0.512426, 0.405, 0.0269728, -0.512347, 0.405, 0.0269728)
-
-[node name="@Node3D@64" type="Node3D"]
+[node name="_Node3D_64" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@65" type="StaticBody3D" parent="."]
@@ -113,5 +110,9 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 
 mesh = SubResource("ArrayMesh_8qtiv")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@65"]
-shape = SubResource("ConvexPolygonShape3D_c2635")
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0)
+light_color = Color(1, 1, 0.811765, 1)
+light_energy = 3.0
+spot_range = 13.0
+spot_angle = 50.0

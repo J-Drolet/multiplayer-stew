@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://byvl7txcuq6jc"]
+
+[ext_resource type="PackedScene" uid="uid://cd3gyolk6fylo" path="res://Scenes/Levels/LevelAssets/MegaPack/doorway_1doorway_1.tscn" id="1_bedwd"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/wall_1wall_1.tscn" id="2_6u4fi"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/floor_1floor_1.tscn" id="3_2x4a5"]
+[ext_resource type="PackedScene" uid="uid://dyqjxklpufiih" path="res://Scenes/Levels/LevelAssets/MegaPack/stairs_2stairs_2.tscn" id="4_jeitx"]
+[ext_resource type="PackedScene" uid="uid://b2akyc7dowx5a" path="res://Scenes/Levels/LevelAssets/MegaPack/stairs_1stairs_1.tscn" id="5_2xpgw"]
+[ext_resource type="PackedScene" uid="uid://xit0es56088l" path="res://Scenes/Levels/LevelAssets/MegaPack/lamp_3_onlamp_3_on.tscn" id="6_by1yy"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/vending_machine_1vending_machine_1.tscn" id="7_im8dl"]
+[ext_resource type="PackedScene" uid="uid://clohcq7snxptu" path="res://Scenes/Levels/LevelAssets/Restuarant/trash_can_01Quequis_House_Props.tscn" id="8_mgl50"]
+
+[node name="Stairway" type="Node3D"]
+
+[node name="doorway_1doorway_1_tscn" parent="." instance=ExtResource("1_bedwd")]
+transform = Transform3D(1.43469, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.87027, 0, 1.9)
+
+[node name="doorway_1doorway_1_tscn2" parent="." instance=ExtResource("1_bedwd")]
+transform = Transform3D(1.43469, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.87027, 3, 1.9)
+
+[node name="wall_1wall_1_tscn" parent="." instance=ExtResource("2_6u4fi")]
+transform = Transform3D(0.604419, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.31395, 0, 1.9)
+
+[node name="wall_1wall_1_tscn3" parent="." instance=ExtResource("2_6u4fi")]
+transform = Transform3D(0.604419, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.31395, 3, 1.9)
+
+[node name="floor_1floor_1_tscn" parent="." instance=ExtResource("3_2x4a5")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -3.26473, 0, -0.1)
+
+[node name="floor_1floor_1_tscn2" parent="." instance=ExtResource("3_2x4a5")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.735273, -2.38419e-07, -0.1)
+
+[node name="wall_1wall_1_tscn2" parent="." instance=ExtResource("2_6u4fi")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 2.73527, 0, -0.1)
+
+[node name="wall_1wall_1_tscn4" parent="." instance=ExtResource("2_6u4fi")]
+transform = Transform3D(1, 0, 0, -4.07287e-29, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.735273, 0, -2.1)
+
+[node name="wall_1wall_1_tscn5" parent="." instance=ExtResource("2_6u4fi")]
+transform = Transform3D(1, 0, 0, -4.07287e-29, -4.37114e-08, -1, 0, 1, -4.37114e-08, -3.26473, 0, -2.1)
+
+[node name="wall_1wall_1_tscn6" parent="." instance=ExtResource("2_6u4fi")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 2.73527, 3, -0.1)
+
+[node name="wall_1wall_1_tscn7" parent="." instance=ExtResource("2_6u4fi")]
+transform = Transform3D(1, 0, 0, -4.07287e-29, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.735273, 3, -2.1)
+
+[node name="wall_1wall_1_tscn8" parent="." instance=ExtResource("2_6u4fi")]
+transform = Transform3D(1, 0, 0, -4.07287e-29, -4.37114e-08, -1, 0, 1, -4.37114e-08, -3.26473, 3, -2.1)
+
+[node name="stairs_2stairs_2_tscn" parent="." instance=ExtResource("4_jeitx")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -1.26473, 0, -0.1)
+
+[node name="stairs_1stairs_1_tscn" parent="." instance=ExtResource("5_2xpgw")]
+transform = Transform3D(1.31134e-07, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, 1.31134e-07, -5.73206e-15, 0.735273, 1.5, -0.1)
+
+[node name="lamp_3_onlamp_3_on_tscn" parent="." instance=ExtResource("6_by1yy")]
+transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -1.50996e-07, -1, -1.74846e-07, 8.74228e-08, 1.74846e-07, -1, 1.87868, 2.39688, 1.80408)
+
+[node name="lamp_3_onlamp_3_on_tscn2" parent="." instance=ExtResource("6_by1yy")]
+transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -1.50996e-07, -1, -1.74846e-07, 8.74228e-08, 1.74846e-07, -1, 1.89013, 5.39446, 1.84146)
+
+[node name="lamp_3_onlamp_3_on_tscn3" parent="." instance=ExtResource("6_by1yy")]
+transform = Transform3D(7.54979e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 7.54979e-08, -3.30012e-15, -5.18354, 4.26099, -0.171062)
+
+[node name="vending_machine_1vending_machine_1_tscn" parent="." instance=ExtResource("7_im8dl")]
+transform = Transform3D(7.54979e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 7.54979e-08, -3.30012e-15, -4.85991, 1.5031, 1.18972)
+
+[node name="trash_can_01Quequis_House_Props_tscn" parent="." instance=ExtResource("8_mgl50")]
+transform = Transform3D(0.492345, 0, 0, 0, 0.492345, 0, 0, 0, 0.492345, -4.83543, 1.50337, 0.33804)

@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Spatula.png" id="1_xh7j4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgu7g"]
+resource_name = "Spatula"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_xh7j4")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qv1wb"]
+_surfaces = [{
+"aabb": AABB(-0.0806089, -0.0550979, -0.32778, 0.161302, 0.294936, 0.565378),
+"format": 34896613377,
+"index_count": 108,
+"index_data": PackedByteArray("AAADAAEAAAACAAMABgAAAAEAAAAFAAQABQAGAAcAAAAGAAUACAADAAIACAAJAAMACAAMAAkADAALAA0ACwAIAAoADAAIAAsAAAAIAAIAAwAJAAEAAQAMAAYAAQAJAAwABAAIAAAABAAKAAgABQAKAAQABQALAAoABwALAAUABwANAAsABgANAAcABgAMAA0ADgARAA8ADgAQABEAEAAVABEAEAAUABUAFAATABUAFAASABMAEgAPABMAEgAOAA8AEAASABQAEAAOABIAFQAPABEAFQATAA8A"),
+"name": "Spatula",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 22,
+"vertex_data": PackedByteArray("AABMBnF9AAD//0wGcX0AAAAAAAAAAAAA//8AAAAAAABtF4Qp2Y4AADJedT40mQAAkeiEKdmOAADMoXU+NJkAAAAAawCffgAA//9rAJ9+AABtFy4lPJEAADJeHzqWmwAAkeguJTyRAADMoR86lpsAAEZTq/T//wAARlP//xb6AADoY7YxS5oAAOhjCT1ilAAAN6yr9P//AAA3rP//FvoAAJSbtjFLmgAAlJsJPWKUAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_w7xkm"]
+resource_name = "Quequis_House_Props_Spatula"
+_surfaces = [{
+"aabb": AABB(-0.0806089, -0.0550979, -0.32778, 0.161302, 0.294936, 0.565378),
+"attribute_data": PackedByteArray("+ACzMPgABv+iNctHojXLR/d3szD3dwb/ojXLR6I1y0f4AKMyWAUu/ioxZfL3d6MyPXMu/qI1ZfLcC8QSnk4eMJ5OHjDBLPgAwy17e3pdCiIUbcQSnk4eMJ5OHjAuTPgAwy21lXpdCiJYBaU/WAWlP3cxMEZ3MTBGPXOlPz1zpT93MTBGdzEwRmYPbxeLS98si0vfLIUqe3vILckAZ1rLHi9pbxeLS98si0vfLIUqtZXNSskAZ1rLHjOXEpaWea38M5cQTkueEpboeQb/S54QTjiBURUzl9ebM5fu/KOBrhRLntebS57u/DOX7LRnoq38M5cQTkue7LRAowb/S54QTsWaURUzlyevM5fu/ISbrhRLnievS57u/A=="),
+"format": 34896613399,
+"index_count": 108,
+"index_data": PackedByteArray("AQALAAUAAQAIAAsAFAAAAAQAAAARAA4AEQAUABcAAAAUABEAGwAMAAkAGwAfAAwAGgAoAB4AKAAmACwAJgAaACIAKAAaACYAAwAdAAoADQAhAAcABgAqABYABgAgACoAEAAcAAIAEAAkABwAEwAjAA8AEwAnACMAGAAlABIAGAArACUAFQAtABkAFQApAC0AMAA5ADMAMAA2ADkANQBEADgANQBBAEQAQgA/AEUAQgA8AD8AOgAxAD0AOgAuADEANAA7AEAANAAvADsAQwAyADcAQwA+ADIA"),
+"material": SubResource("StandardMaterial3D_qgu7g"),
+"name": "Spatula",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 70,
+"vertex_data": PackedByteArray("AABMBnF95h4AAEwGcX0QwQAATAZxfRUzAABMBnF9qir//0wGcX3mHv//TAZxfRDB//9MBnF9P9T//0wGcX1U1QAAAAAAABDBAAAAAAAA7b8AAAAAAACqKv//AAAAABDB//8AAAAA7b///wAAAABU1W0XhCnZjuYebReEKdmOI01tF4Qp2Y51MzJedT40meYeMl51PjSZYsYyXnU+NJkjTZHohCnZjuYekeiEKdmOhOOR6IQp2Y6/1MyhdT40meYezKF1PjSZYsbMoXU+NJmE4wAAawCffkSfAABrAJ9+7b8AAGsAn34fMwAAawCffqoq//9rAJ9+RJ///2sAn37tv///awCffjbU//9rAJ9+VNVtFy4lPJFEn20XLiU8kSNNbRcuJTyRfDMyXh86lptixjJeHzqWm0SfMl4fOpabI02R6C4lPJFEn5HoLiU8kYTjkeguJTyRtdTMoR86lptixsyhHzqWm0SfzKEfOpabhONGU6v0///8xUZTq/T///9fRlOr9P//ahVGU///Fvr8xUZT//8W+v/fRlP//xb6ahXoY7YxS5r/X+hjtjFLmlQW6GO2MUuaahXoYwk9YpT/3+hjCT1ilFQW6GMJPWKUahU3rKv0///8xTesq/T///9fN6yr9P//ecY3rP//Fvr8xTes//8W+v/fN6z//xb6ecaUm7YxS5r/X5SbtjFLmlQWlJu2MUuaecaUmwk9YpT/35SbCT1ilFQWlJsJPWKUecb///9/////f47aTdRU1VTV////f////392KYYjqiqqKv///38AAP9/VNVU1f///38AAP9/qiqqKv7//3+F5/7FIdp11P///39m4pgdhef+xf///38AJ3UQ/yjFI////39m4pgdACd1EAAA/38AAP9/gtpS1FTVVNUAAP9/AAD/f34pgiOqKqoqAQD+f4Xn/sUZ2njUZuKYHQAA/3+F5/7FAAD/fwAndRAJKcAjZuKYHQAA/38AJ3UQ/+L/HAAA/39Q6frK/+L/HP///39Q6frKAAD/f/pK+kpQ6frK////f/pK+kpQ6frK/+L/HAAA/384Rgke/+L/HP///384RgkeAAD/f/pK+ko4Rgke////f/pK+ko4Rgke")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qv1wb")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8pwaj"]
+points = PackedVector3Array(0.0315676, 0.236559, 0.242087, -0.0850873, -0.0595873, -0.332287, -0.0850873, -0.050567, -0.332287, 0.0854302, -0.0595873, -0.332287, -0.0760027, -0.0433306, -0.0371633, 0.0763526, -0.0433432, -0.0371626, -0.0312247, 0.245549, 0.215156, -0.0312247, 0.218578, 0.242087, 0.0854302, -0.050567, -0.332287, -0.0850873, -0.032616, -0.0271649, 0.0854302, -0.032616, -0.0362168, 0.0315676, 0.245549, 0.215156, 0.0315676, 0.218578, 0.242087, -0.0312247, 0.245549, 0.233092, -0.0312247, 0.236559, 0.242087, 0.0315676, 0.245549, 0.233092, -0.0850873, -0.032616, -0.0451, 0.0854302, -0.032616, -0.0451)
+
+[node name="@Node3D@102" type="Node3D"]
+transform = Transform3D(0.514984, 0, 0, 0, 0.514984, 0, 0, 0, 0.514984, 0, 0, 0)
+
+[node name="@StaticBody3D@103" type="StaticBody3D" parent="."]
+
+[node name="Spatula" type="MeshInstance3D" parent="@StaticBody3D@103"]
+mesh = SubResource("ArrayMesh_w7xkm")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@103"]
+shape = SubResource("ConvexPolygonShape3D_8pwaj")

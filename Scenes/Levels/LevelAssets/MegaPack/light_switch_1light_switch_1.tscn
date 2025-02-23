@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/light_switch_1_light_switch_1.png" id="1_labuk"]
+[ext_resource type="Texture2D" uid="uid://cty27fcldl0nr" path="res://Assets/Textures/Fair/light_switch_1_light_switch_1.png" id="1_labuk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjqwj"]
 resource_name = "light_switch_1"

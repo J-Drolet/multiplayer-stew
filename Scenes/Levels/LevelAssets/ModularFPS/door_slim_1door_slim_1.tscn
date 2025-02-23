@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" uid="uid://fmu6y3vinqqj" path="res://Assets/Textures/Fair/door_slim_1_door_1.png" id="1_7ddsa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_olrpj"]
+resource_name = "door_1"
+cull_mode = 2
+albedo_texture = ExtResource("1_7ddsa")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8gmyt"]
+_surfaces = [{
+"aabb": AABB(-0.47, -0.0300001, -1.67, 0.47, 0.0600001, 1.67),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AgAHAAMAAgAGAAcABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABgAFAAcABgAEAAUA"),
+"name": "door_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD/////AAAAAP7/AAAAAAAAAAD//wAAAAAAAAAAAAD///////8AAP///v8AAAAA//8AAP//AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wr04o"]
+resource_name = "door_slim_1_door_slim_1"
+_surfaces = [{
+"aabb": AABB(-0.47, -0.0300001, -1.67, 0.47, 0.0600001, 1.67),
+"attribute_data": PackedByteArray("Rm7/e0Zu//9GbgAARm7/g0Zu//9GbgAAJmb//////3v/////JmYAAP//AADYef//////g//////YeQAA//8AAA=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("BAAPAAUABAANAA8ACAACAAoACAABAAIAAwAHAAwAAwAAAAcACwAJAA4ACwAGAAkA"),
+"material": SubResource("StandardMaterial3D_olrpj"),
+"name": "door_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AAD/////AIAAAP//////vwAA/v8AAP+/AAAAAP//AIAAAAAA////PwAAAAAAAP8/////////VNX///////8AgP////////+////+/wAAVNX///7/AAD/v///AAD//1TV//8AAP//AID//wAA////P///AAAAAFTV//8AAAAA/z//f///////f////3//f///AAD/fwAA/3+qqlRV/3///////3+qqlRV////f6qqVFX/f///AAD/f6qqVFUAAP9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_8gmyt")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ioijq"]
+points = PackedVector3Array(-0.483254, -0.043254, -1.68325, 0.0203968, 0.0362698, 0.0132539, 0.0203968, -0.043254, 0.0132539, 0.0203968, 0.0362698, -1.68325, -0.483254, 0.0362698, 0.0132539, -0.483254, -0.043254, 0.0132539, 0.0203968, -0.043254, -1.68325, -0.483254, 0.0362698, -1.68325)
+
+[node name="@Node3D@22" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@23" type="StaticBody3D" parent="."]
+
+[node name="door_slim_1" type="MeshInstance3D" parent="@StaticBody3D@23"]
+mesh = SubResource("ArrayMesh_wr04o")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@23"]
+shape = SubResource("ConvexPolygonShape3D_ioijq")

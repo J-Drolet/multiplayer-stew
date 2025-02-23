@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Texture2D" uid="uid://pqb84a443mng" path="res://Assets/Textures/Fair/corner_1_floor_2.png" id="1_3ek2n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c31cn"]
+resource_name = "floor_2"
+cull_mode = 2
+albedo_texture = ExtResource("1_3ek2n")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wqh0w"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -2, 1, 1, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(1, 0, 2, 0, 3, 0, 1, 0, 0, 0, 2, 0),
+"name": "floor_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rpv35"]
+resource_name = "corner_1_corner_1"
+_surfaces = [{
+"aabb": AABB(-1, -1, -2, 1, 1, 2),
+"attribute_data": PackedByteArray(255, 63, 255, 255, 255, 255, 255, 255, 255, 63, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(1, 0, 2, 0, 3, 0, 1, 0, 0, 0, 2, 0),
+"material": SubResource("StandardMaterial3D_c31cn"),
+"name": "floor_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(254, 255, 0, 0, 255, 255, 170, 233, 0, 0, 255, 255, 255, 255, 170, 233, 255, 255, 0, 0, 0, 0, 170, 233, 0, 0, 254, 255, 0, 0, 170, 233, 250, 202, 8, 234, 250, 202, 8, 234, 250, 202, 8, 234, 250, 202, 8, 234)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_wqh0w")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0kvw3"]
+points = PackedVector3Array(-1.01587, -0.0318331, -2.01548, 0.031746, -0.984084, 0.0154753, 0.031746, -1.01587, 0.0154753, -1.01587, -0.0318331, 0.0154753, -0.984084, 0.031746, -2.01548, -0.0318331, -1.01587, -2.01548, 0.031746, -0.984084, -2.01548, -0.984084, 0.031746, 0.0154753, -0.0318331, -1.01587, 0.0154753, -1.01587, 0.031746, 0.0154753, 0.031746, -1.01587, -2.01548, -1.01587, 0.031746, -2.01548)
+
+[node name="@Node3D@14" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@15" type="StaticBody3D" parent="."]
+
+[node name="corner_1" type="MeshInstance3D" parent="@StaticBody3D@15"]
+mesh = SubResource("ArrayMesh_rpv35")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@15"]
+shape = SubResource("ConvexPolygonShape3D_0kvw3")

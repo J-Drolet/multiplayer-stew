@@ -1,9 +1,9 @@
-[gd_scene load_steps=27 format=3 uid="uid://cif1rylh3ul7d"]
+[gd_scene load_steps=28 format=3 uid="uid://cif1rylh3ul7d"]
 
 [ext_resource type="Script" path="res://Scripts/GameLogic/LevelManager.cs" id="1_aiq0j"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_4bfgx"]
 [ext_resource type="PackedScene" uid="uid://6jntjlknvgow" path="res://Scenes/Levels/LevelAssets/UtilityAssets/DeathBarrier.tscn" id="3_8dtge"]
-[ext_resource type="Texture2D" uid="uid://ym1rv5fryhph" path="res://Assets/Textures/Fair/grass_7.png" id="4_cv60m"]
+[ext_resource type="Texture2D" uid="uid://cxx7w1jrp3hqn" path="res://Assets/Textures/Fair/grass_7.png" id="4_cv60m"]
 [ext_resource type="PackedScene" uid="uid://cblot42ihgprm" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/tent1.tscn" id="5_8y381"]
 [ext_resource type="PackedScene" uid="uid://we5j62fteymy" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/tent2.tscn" id="6_e21cy"]
 [ext_resource type="PackedScene" uid="uid://gr5wk6mlmrwm" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/rv_1.tscn" id="7_wepmo"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://1xvcjnucwlsf" path="res://Scenes/Levels/LevelAssets/Nature/tree_8tree_8.tscn" id="15_1tftt"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/chair_2chair_2.tscn" id="16_6etf8"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/wooden_crate_2wooden_crate_2.tscn" id="17_8no84"]
+[ext_resource type="PackedScene" uid="uid://cb1w1yrkt2our" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/Prison.tscn" id="18_qm04v"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afd3o"]
 render_priority = 1
@@ -66,15 +67,6 @@ transform = Transform3D(0.766896, 0.439592, -0.467578, 0, 0.728574, 0.684967, 0.
 
 [node name="1" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0889, 0, 0)
-
-[node name="2" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1707, 0, 0)
-
-[node name="3" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.2456)
-
-[node name="4" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20.0295)
 
 [node name="CharacterMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2809, 0.895013, 0)
@@ -174,3 +166,6 @@ transform = Transform3D(0.96696, -0.22956, 1.00344e-08, 0, -4.34419e-08, -0.9938
 
 [node name="wooden_crate_2wooden_crate_2_tscn" parent="FairArea" instance=ExtResource("17_8no84")]
 transform = Transform3D(0.634837, 1.44579, -6.31974e-08, 0, -6.90214e-08, -1.57902, -1.44579, 0.634837, -2.77496e-08, -8.80176, 0.00297129, -7.32544)
+
+[node name="Prison" parent="." instance=ExtResource("18_qm04v")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.66473, 0, 54.9834)

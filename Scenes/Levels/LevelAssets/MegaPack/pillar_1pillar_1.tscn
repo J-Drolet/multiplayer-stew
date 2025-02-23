@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/pillar_1_wall_3.png" id="1_hoegp"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/pillar_1_wood_2.png" id="2_rnlcy"]
+[ext_resource type="Texture2D" uid="uid://f1f37qbuo4vn" path="res://Assets/Textures/Fair/pillar_1_wall_3.png" id="1_hoegp"]
+[ext_resource type="Texture2D" uid="uid://b1w728jtubqlr" path="res://Assets/Textures/Fair/pillar_1_wood_2.png" id="2_rnlcy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rf1mj"]
 resource_name = "wall_3"

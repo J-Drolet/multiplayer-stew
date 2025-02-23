@@ -1,10 +1,10 @@
 [gd_scene load_steps=14 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/elevator_doorway_1_wall_3.png" id="1_q1nq3"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/elevator_doorway_1_wood_2.png" id="2_c1ky5"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/elevator_doorway_1_metal_mp_3.png" id="3_qrhfl"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/elevator_doorway_1_metal_mp_1.png" id="4_tf1f2"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/elevator_doorway_1_metal_mp_4.png" id="5_co6ru"]
+[ext_resource type="Texture2D" uid="uid://b5ig1si5ljhkd" path="res://Assets/Textures/Fair/elevator_doorway_1_wall_3.png" id="1_q1nq3"]
+[ext_resource type="Texture2D" uid="uid://6g8kkdy8ac48" path="res://Assets/Textures/Fair/elevator_doorway_1_wood_2.png" id="2_c1ky5"]
+[ext_resource type="Texture2D" uid="uid://giry0rly5b8p" path="res://Assets/Textures/Fair/elevator_doorway_1_metal_mp_3.png" id="3_qrhfl"]
+[ext_resource type="Texture2D" uid="uid://ba6baypdyxj8b" path="res://Assets/Textures/Fair/elevator_doorway_1_metal_mp_1.png" id="4_tf1f2"]
+[ext_resource type="Texture2D" uid="uid://dch0c3env7p6h" path="res://Assets/Textures/Fair/elevator_doorway_1_metal_mp_4.png" id="5_co6ru"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxex7"]
 resource_name = "wall_3"

@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Coffee_jar.png" id="1_0pce0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8e4vb"]
+resource_name = "Coffee_jar"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_0pce0")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_57oud"]
+_surfaces = [{
+"aabb": AABB(-1, -1.1358, -1, 2, 2.6111, 2),
+"format": 34896613377,
+"index_count": 84,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAFAAMAAgAEAAUABAAHAAUABAAGAAcABgAJAAcABgAIAAkACAALAAkACAAKAAsACgANAAsACgAMAA0ABQABAAMAAQANAA8ADQAJAAsACQAFAAcABQANAAEADQAFAAkADAAPAA0ADAAOAA8ADgABAA8ADgAAAAEADgACAAAAAgAGAAQABgAKAAgACgAOAAwADgAGAAIABgAOAAoA"),
+"name": "Coffee_jar",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("/38AAAAAAAD/f///AAAAAIHaAAB9JQAAgdr//30lAAD//wAA/38AAP//////fwAAgdoAAIHaAACB2v//gdoAAP9/AAD//wAA/3//////AAB9JQAAgdoAAH0l//+B2gAAAAAAAP9/AAAAAP///38AAH0lAAB9JQAAfSX//30lAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_k8sgj"]
+resource_name = "Quequis_House_Props_Coffee_jar"
+_surfaces = [{
+"aabb": AABB(-1, -1.1358, -1, 2, 2.6111, 2),
+"attribute_data": PackedByteArray("fX7EZG2QzP5B+8z+bZAxgbu/zX5B+zGBdGTNfnGyzP7Z1sz+6ZrNfnGyMYHZ1jGBNSPNfqI/zX7VtMz+NSMyAeGAxGTVtDGBMgHNfpklxGQJjsz+MgEyAeGA8z8JjjGBmSXzP6FpzP4FbMz+oWkxgQVsMYHpmuolMgHM/qI/6iWdR8z+MgExgZ1HMYG7v+olNSPM/nRk6iU1IzGBxNnzPzlFzP59fvM/PdnM/jlFMYE92TGBxNnEZA=="),
+"format": 34896613399,
+"index_count": 84,
+"index_data": PackedByteArray("AQAKAAMAAQAHAAoACAARAAsACAAOABEADAAVAA8ADAASABUAFAAcABcAFAAaABwAGQAiABsAGQAgACIAHgAmACEAHgAkACYAEAAEAAkABAAnAC0AJwAdACMAHQAQABYAEAAnAAQAJwAQAB0AJAArACYAJAAoACsAKgAFACwAKgACAAUAKQAGAAAABgATAA0AEwAfABgAHwApACUAKQATAAYAEwApAB8A"),
+"material": SubResource("StandardMaterial3D_8e4vb"),
+"name": "Coffee_jar",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 46,
+"vertex_data": PackedByteArray("/38AAAAA/Qz/fwAAAACMG/9/AAAAAIwb/3///wAAjBv/f///AACG/P9///8AAIwbgdoAAH0lRSGB2gAAfSVXHYHaAAB9Jbnegdr//30ll+WB2v//fSVXHYHa//99Jbne//8AAP9/0sH//wAA/3+gN///AAD/f17I//////9/0sH//////3+71///////f17IgdoAAIHanq2B2gAAgdrSP4HaAACB2liogdr//4Hanq2B2v//gdoa54Ha//+B2lio/38AAP//zCX/fwAA//+Ynf9/AAD//5id/3//////mJ3/f/////+Ynf9//////zH2fSUAAIHakBN9JQAAgdqQE30lAACB2liofSX//4HakBN9Jf//gdpYqH0l//+B2rD+AAAAAP9/cxMAAAAA/389DAAA////f3MTAAD///9/J/d9JQAAfSV5FX0lAAB9JTcIfSUAAH0lVx19Jf//fSV5FX0l//99JVcdfSX//30lA/KMW208/w32kvYSAHII7f6NsqkUC//xCG1gaWYvsQE/o2BpZi/FpaUBvtywgWWvnhbUWpU2fG/AM3xvwDOUtiolK0NoCr+zgxDCWjxHL3SJSVQ+qEQ7xz0lXCcqD6jEq0EncKBiBgsaqhsq+HTj1QaL+PTkVZDfKQQ5XtdpOV7XaVY7U77W6cUhqsFWu+niRxqkSbZszE4XZ7XsWzY8XIun0zZ2a7xKSlhAI05+dessSU3+v1x+Z2LD")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_57oud")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_34q5t"]
+points = PackedVector3Array(0.961428, 1.43241, 0.0931182, -0.973391, -1.0947, -0.0642377, -0.730057, -1.08424, -0.651679, -0.973391, 1.4342, -0.0642377, 0.0932998, -1.09281, 0.961353, 0.699611, -1.11942, -0.710202, 0.0540934, 1.43969, -0.977593, -0.103461, 1.42681, 0.957144, 0.730403, -1.10316, 0.650843, -0.658591, -1.09728, 0.727194, 0.650718, 1.44242, 0.730455, 0.699611, 1.45892, -0.710202, 0.0540934, -1.10019, -0.977593, -0.651816, 1.42364, -0.73, -0.733203, 1.42918, 0.644083, 0.957219, -1.08741, -0.10328, -0.977593, -1.10019, 0.0540933, -0.0646073, -1.0945, -0.973238, 0.961428, -1.09291, 0.0931182, 0.0932998, 1.43231, 0.961353, 0.957219, 1.42691, -0.10328, -0.103461, -1.08731, 0.957144, -0.977593, 1.43969, 0.0540933, -0.658591, 1.43678, 0.727194, 0.650718, -1.10292, 0.730455, 0.730403, 1.44266, 0.650843, -0.651816, -1.08414, -0.73, -0.730057, 1.42374, -0.651679, -0.0646073, 1.434, -0.973238, -0.733203, -1.08968, 0.644083, 0.7272, 1.43712, -0.658576, 0.7272, -1.09762, -0.658576)
+
+[node name="@Node3D@30" type="Node3D"]
+transform = Transform3D(0.121941, 0, 0, 0, 0.121941, 0, 0, 0, 0.121941, 0, 0, 0)
+
+[node name="@StaticBody3D@31" type="StaticBody3D" parent="."]
+
+[node name="Coffee_jar" type="MeshInstance3D" parent="@StaticBody3D@31"]
+mesh = SubResource("ArrayMesh_k8sgj")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@31"]
+shape = SubResource("ConvexPolygonShape3D_34q5t")

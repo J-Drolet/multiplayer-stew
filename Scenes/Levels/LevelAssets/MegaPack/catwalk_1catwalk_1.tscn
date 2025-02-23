@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://4t4uydtx3wd4"]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/catwalk_1_metal_mesh_1.png" id="1_pl1i3"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/catwalk_1_metal_mp_5.png" id="2_mmoqf"]
+[ext_resource type="Texture2D" uid="uid://cck10kceu3nfx" path="res://Assets/Textures/Fair/catwalk_1_metal_mesh_1.png" id="1_pl1i3"]
+[ext_resource type="Texture2D" uid="uid://ci8fo8d8x5ord" path="res://Assets/Textures/Fair/catwalk_1_metal_mp_5.png" id="2_mmoqf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uqsbf"]
 resource_name = "metal_mesh_1"
@@ -70,10 +70,10 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ygrtw")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vk6o5"]
-points = PackedVector3Array(-2.03175, -1.03175, 0.109712, 2.03175, 1.06349, -0.0807274, 2.03175, -1.03175, 0.109712, 2.03175, -1.03175, -0.0807274, -2.03175, 1.06349, -0.0807274, -2.03175, 0.999913, 0.109712, -2.03175, -1.03175, -0.0807274, 2.03175, 0.999913, 0.109712)
+[sub_resource type="BoxShape3D" id="BoxShape3D_2c1eg"]
+size = Vector3(4.00684, 1.99707, 0.103516)
 
-[node name="@Node3D@60" type="Node3D"]
+[node name="_Node3D_60" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@61" type="StaticBody3D" parent="."]
@@ -83,4 +83,4 @@ mesh = SubResource("ArrayMesh_ilnxe")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@61"]
-shape = SubResource("ConvexPolygonShape3D_vk6o5")
+shape = SubResource("BoxShape3D_2c1eg")

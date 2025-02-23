@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/cig_1_cigs_packet_1.png" id="1_wcklc"]
+[ext_resource type="Texture2D" uid="uid://ddb454e8ceqdf" path="res://Assets/Textures/Fair/cig_1_cigs_packet_1.png" id="1_wcklc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nvwgd"]
 resource_name = "cigs_packet_1"

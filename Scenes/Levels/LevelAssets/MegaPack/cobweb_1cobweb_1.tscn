@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/cobweb_1_cobweb_1.png" id="1_3o3er"]
+[ext_resource type="Texture2D" uid="uid://divwcvm6j1jhg" path="res://Assets/Textures/Fair/cobweb_1_cobweb_1.png" id="1_3o3er"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gru7l"]
 resource_name = "cobweb_1"

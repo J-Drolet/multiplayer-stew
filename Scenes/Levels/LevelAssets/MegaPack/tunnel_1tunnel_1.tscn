@@ -1,13 +1,13 @@
 [gd_scene load_steps=20 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/tunnel_1_wall_5.png" id="1_m3fsd"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/tunnel_1_metal_mp_3.png" id="2_8joc8"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/tunnel_1_metal_mp_4.png" id="3_x5kc5"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/tunnel_1_plastic_1.png" id="4_raob1"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/tunnel_1_plastic_2.png" id="5_8gsf5"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/tunnel_1_plastic_3.png" id="6_quq0m"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/tunnel_1_cable_1.png" id="7_b6sjw"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/tunnel_1_concrete_2.jpg" id="8_wo48i"]
+[ext_resource type="Texture2D" uid="uid://b1fgkjr5busog" path="res://Assets/Textures/Fair/tunnel_1_wall_5.png" id="1_m3fsd"]
+[ext_resource type="Texture2D" uid="uid://gqqdtkqkhoor" path="res://Assets/Textures/Fair/tunnel_1_metal_mp_3.png" id="2_8joc8"]
+[ext_resource type="Texture2D" uid="uid://dem60jhd7n57y" path="res://Assets/Textures/Fair/tunnel_1_metal_mp_4.png" id="3_x5kc5"]
+[ext_resource type="Texture2D" uid="uid://d3ei3vkl2mwel" path="res://Assets/Textures/Fair/tunnel_1_plastic_1.png" id="4_raob1"]
+[ext_resource type="Texture2D" uid="uid://bi1bwn8dosqlc" path="res://Assets/Textures/Fair/tunnel_1_plastic_2.png" id="5_8gsf5"]
+[ext_resource type="Texture2D" uid="uid://b7ouvccgb5n43" path="res://Assets/Textures/Fair/tunnel_1_plastic_3.png" id="6_quq0m"]
+[ext_resource type="Texture2D" uid="uid://rsqnft54811c" path="res://Assets/Textures/Fair/tunnel_1_cable_1.png" id="7_b6sjw"]
+[ext_resource type="Texture2D" uid="uid://bp0ffimi74qls" path="res://Assets/Textures/Fair/tunnel_1_concrete_2.jpg" id="8_wo48i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tafou"]
 resource_name = "wall_5"

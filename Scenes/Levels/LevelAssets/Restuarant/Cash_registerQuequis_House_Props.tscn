@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Cash_register.png" id="1_dubmp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qlf0i"]
+resource_name = "Cash_register"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_dubmp")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_egal2"]
+_surfaces = [{
+"aabb": AABB(-0.471977, -0.186915, -0.411178, 0.943955, 0.517137, 0.792476),
+"format": 34896613377,
+"index_count": 120,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEADgAKAA8ADgAJAAoACQANAAoACQAMAA0ACwARABAAEQAXABYAFwALABMAEQALABcADgALABAADgAIAAsADQAPAAoADQARAA8ACQAQAAwACQAOABAADAARAA0ADAAQABEACwASABMACwAIABIADgASAAgAEgAVABQAFQAOAA8AEgAOABUAEQAVAA8AEQAWABUAFgAUABUAFgAXABQAFwASABQAFwATABIA"),
+"name": "Cash_register",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//AAAAALll//8AAAAAAAAAAAAAAAC5ZQAAAAD//wAA//8AAP//uWX//wAA//8AAAAAAAD//7llAAAAAIoZTVw06AAAihlNXMoXAACKGV2QyhcAAHTmTVw06AAAdOZNXMoXAAB05l2QyhcAAIoZTVz/fwAAihkA0P9/AAB05k1c/38AAHTmAND/fwAAihkT0DToAAB05hPQNOgAAIoZAP+C1wAAihn//8u0AAB05v//y7QAAHTmAP+C1wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mrean"]
+resource_name = "Quequis_House_Props_Cash_register"
+_surfaces = [{
+"aabb": AABB(-0.471977, -0.186915, -0.411178, 0.943955, 0.517137, 0.792476),
+"attribute_data": PackedByteArray("PJRtR/kBwmv0CN9nPJTNZusBcWv0CDtGIXhOaqB0wmuwit9ngZdOajZ1cWuwijtGyAFtR/kBNv70CN9nyAHNZusBtv70CDtGIXjC/KB0Nv6wit9ngZfC/DZ1tv6wijtGi5t2H/8f/z8wXzMU/1//v/8f/3/ZATMU6Gj/v+Lw0ZDZAWoji5vHjP9f/z98znIv/1//f/9f/398zsqM6Gj/f+LwIv6z3cqM/x//X4UwMxQ2wtGQhTADNv9f/198zh5eNsIi/kzwHl5ivXYfMF8JNmK9x4xS8HIvBJvRkBnLdh+2V8BDkKrRkCpICkSQqiL+U/55RgSbIv4Zy8eMCf7tNg=="),
+"format": 34896613399,
+"index_count": 120,
+"index_data": PackedByteArray("AgALAAUAAgAIAAsABgAVAAkABgASABUAFAARABcAFAAOABEADAADAA8ADAAAAAMABwANABMABwABAA0AFgAEAAoAFgAQAAQAKwAgAC0AKwAdACAAGwAnAB4AGwAkACcAIwAxAC8AMQA/ADwAPwAjADUAMQAjAD8AKgAiAC4AKgAZACIAKAAsAB8AKAAwACwAHAAuACUAHAAqAC4AJgAxACkAJgAvADEAIQAyADQAIQAYADIAKwAzABoAMwA6ADgAOgArAC0AMwArADoAMAA5ACwAMAA7ADkAOwA2ADkAOwA9ADYAPgAyADcAPgA0ADIA"),
+"material": SubResource("StandardMaterial3D_qlf0i"),
+"name": "Cash_register",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 64,
+"vertex_data": PackedByteArray("AAAAAP////8AAAAA//+qKgAAAAD//wAAAAC5Zf////8AALll//9U1QAAuWX//wAAAAAAAAAAAAAAAAAAAACqKgAAAAAAAAAAAAC5ZQAAAAAAALllAABU1QAAuWUAAAAA//8AAP///////wAA//+qKv//AAD///+///+5Zf///////7ll//9U1f//uWX///+///8AAAAAAAD//wAAAACqKv//AAAAAP+///+5ZQAAAAD//7llAABU1f//uWUAAP+/ihlNXDTo/7+KGU1cNOj/v4oZTVw06P8/ihlNXMoX//+KGU1cyhf/v4oZTVzKF/8/ihldkMoX//+KGV2Qyhe/3ooZXZDKF/8/dOZNXDTo/7905k1cNOj/v3TmTVw06FTVdOZNXMoX//905k1cyhf/v3TmTVzKF1TVdOZdkMoX//905l2Qyhe/3nTmXZDKF1TVihlNXP9//7+KGU1c/3//P4oZAND/f8rgihkA0P9//z905k1c/3//v3TmTVz/f1TVdOYA0P9/yuB05gDQ/39U1YoZE9A06KDAihkT0DTo/z905hPQNOigwHTmE9A06FTVihkA/4LX58mKGQD/gtfnyYoZAP+C1/8/ihn//8u0pduKGf//y7T/P3Tm///LtKXbdOb//8u0VNV05gD/gtfnyXTmAP+C1+fJdOYA/4LXVNX/f/9/VFVUVf8//3//f/9/VNWqKv8//3//v/+/VFVUVf8//3//v/+/VNWqKv8//3//f/9/VFVUVf9/AAD/f/9/VNWqKv9/AAD/v/+/VFVUVf9/AAD/v/+/VNWqKv9/AAD/////AAD/f/9//v//v/+/AAD/f/9/////v/+/M9DLL/9/////////AAD/f6oqqir/v/+/AAD/f6oqqir/v/+/M9DLL6oqqioAAP9//3///y/PzzD/f/7/AAD/f6oqqiovz88wqiqqKijz1gz/f/7/KPPWDKoqqioZ3uUhGd7lIf9////J0TUu/3///8nRNS6qKqoqGd7lIRne5SGqKqoq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_egal2")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4cgqq"]
+points = PackedVector3Array(0.479492, 0.0303874, 0.390451, -0.466173, -0.1869, -0.407454, -0.466173, -0.1869, 0.379213, -0.367855, 0.330068, 0.155618, 0.466264, -0.1869, -0.407531, 0.479492, 0.0303874, -0.418692, 0.375264, 0.32069, 0.260087, 0.466264, -0.1869, 0.37929, -0.479492, 0.0304402, -0.418692, -0.479492, 0.0304402, 0.390451, 0.349679, 0.115656, -0.310015, 0.367943, 0.330068, 0.155618, -0.375173, 0.32069, 0.260087, -0.349595, 0.115656, -0.310015, 0.371573, 0.246811, 0.3003, -0.371483, 0.246811, 0.3003)
+
+[node name="@Node3D@22" type="Node3D"]
+transform = Transform3D(0.549545, 0, 0, 0, 0.588087, 0, 0, 0, 0.588087, 0, 0, 0)
+
+[node name="@StaticBody3D@23" type="StaticBody3D" parent="."]
+
+[node name="Cash_register" type="MeshInstance3D" parent="@StaticBody3D@23"]
+mesh = SubResource("ArrayMesh_mrean")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@23"]
+shape = SubResource("ConvexPolygonShape3D_4cgqq")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/vhs_tape_1_vhs_tape_1.png" id="1_wuohe"]
+[ext_resource type="Texture2D" uid="uid://2pio3p4i6vyo" path="res://Assets/Textures/Fair/vhs_tape_1_vhs_tape_1.png" id="1_wuohe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7lvil"]
 resource_name = "vhs_tape_1"

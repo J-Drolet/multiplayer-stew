@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=7 format=4 uid="uid://b2akyc7dowx5a"]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/stairs_1_concrete_1.jpg" id="1_ggdva"]
+[ext_resource type="Texture2D" uid="uid://dn31twhueuhst" path="res://Assets/Textures/Fair/stairs_1_concrete_1.jpg" id="1_ggdva"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_am6t8"]
 resource_name = "concrete_1"
@@ -40,10 +40,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_fokon")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2n6uh"]
-points = PackedVector3Array(0.190128, 0.444295, -1.53175, 1.9999, 1.9999, 0.169105, 2.03175, 1.84082, 0.18254, -2.03175, -2.03175, -1.27752, 2.03175, -2.03175, -1.27752, -2.03175, 0.0632435, -1.53175, 0.190128, 2.03175, 0.18254, 2.03175, 0.444295, -1.53175, 0.190128, 2.03175, -0.325403, 1.9565, -1.9565, -1.5, -1.9565, -1.9565, -1.5, 2.03175, 2.03175, -0.325403, -2.03175, 0.0632435, -1.27752, 0.190128, 1.84122, 0.18254, 0.190128, 1.206, -0.960038, 2.03175, 1.206, -0.960038)
+[sub_resource type="BoxShape3D" id="BoxShape3D_gesy8"]
+size = Vector3(1.75879, 0.35199, 2.32178)
 
-[node name="@Node3D@244" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_dymi2"]
+size = Vector3(3.99097, 2.12939, 0.199707)
+
+[node name="_Node3D_244" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@245" type="StaticBody3D" parent="."]
@@ -53,4 +56,9 @@ mesh = SubResource("ArrayMesh_qq5cm")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@245"]
-shape = SubResource("ConvexPolygonShape3D_2n6uh")
+transform = Transform3D(1, 0, 0, 0, 0.60042, 0.799685, 0, -0.799685, 0.60042, 1.11505, 1.14477, -0.661807)
+shape = SubResource("BoxShape3D_gesy8")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="@StaticBody3D@245"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00305176, -0.925537, -1.39438)
+shape = SubResource("BoxShape3D_dymi2")

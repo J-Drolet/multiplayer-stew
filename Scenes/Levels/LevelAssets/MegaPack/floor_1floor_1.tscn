@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/floor_1_floor_1.png" id="1_856c0"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/floor_1_concrete_1.jpg" id="2_uip8k"]
+[ext_resource type="Texture2D" uid="uid://dkv3nmlrorp2h" path="res://Assets/Textures/Fair/floor_1_floor_1.png" id="1_856c0"]
+[ext_resource type="Texture2D" uid="uid://dqy0j18mkmjup" path="res://Assets/Textures/Fair/floor_1_concrete_1.jpg" id="2_uip8k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5er16"]
 resource_name = "floor_1"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/padlock_2_padlock_2.png" id="1_jtfp3"]
+[ext_resource type="Texture2D" uid="uid://cl70h0ftmqold" path="res://Assets/Textures/Fair/padlock_2_padlock_2.png" id="1_jtfp3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y1ul0"]
 resource_name = "padlock_2"

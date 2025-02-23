@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/flashlight_1_flashlight_1.png" id="1_6n553"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/flashlight_1_flashlight_1_emission.png" id="2_tkhpr"]
+[ext_resource type="Texture2D" uid="uid://c2jy5ho2if8aq" path="res://Assets/Textures/Fair/flashlight_1_flashlight_1.png" id="1_6n553"]
+[ext_resource type="Texture2D" uid="uid://5fk1na6e1rkc" path="res://Assets/Textures/Fair/flashlight_1_flashlight_1_emission.png" id="2_tkhpr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3m3c1"]
 resource_name = "flashlight_1"

@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/lamp_2_on_metal_mp_1.png" id="1_wgaob"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/lamp_2_on_lamp_1_dim.png" id="2_gcc8l"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/lamp_2_on_metal_mp_4.png" id="3_h1r2g"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/lamp_2_on_metal_mp_3.png" id="4_qy6xe"]
+[ext_resource type="Texture2D" uid="uid://e2ujisewe4q" path="res://Assets/Textures/Fair/lamp_2_on_metal_mp_1.png" id="1_wgaob"]
+[ext_resource type="Texture2D" uid="uid://ddy23du1qkdkd" path="res://Assets/Textures/Fair/lamp_2_on_lamp_1_dim.png" id="2_gcc8l"]
+[ext_resource type="Texture2D" uid="uid://d01ghqltna4ox" path="res://Assets/Textures/Fair/lamp_2_on_metal_mp_4.png" id="3_h1r2g"]
+[ext_resource type="Texture2D" uid="uid://bh6ty273ej04y" path="res://Assets/Textures/Fair/lamp_2_on_metal_mp_3.png" id="4_qy6xe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xcfmp"]
 resource_name = "metal_mp_1"

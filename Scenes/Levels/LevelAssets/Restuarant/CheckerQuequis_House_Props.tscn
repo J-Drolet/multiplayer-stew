@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Checker-Checker.png" id="1_d17cr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vuqad"]
+resource_name = "Checker"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_d17cr")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_iqq4t"]
+_surfaces = [{
+"aabb": AABB(-0.207734, -0.230586, -0.207734, 0.415468, 0.534684, 0.319354),
+"format": 34896613377,
+"index_count": 162,
+"index_data": PackedByteArray("CAADAAEACAAJAAMACQAHAAMACQAKAAcACgAFAAcACgALAAUACwABAAUACwAIAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEADgAIAAsADgAPAAgADQALAAoADQAOAAsADAAKAAkADAANAAoADwAJAAgADwAMAAkAFAAMAA8AFAAVAAwAFQANAAwAFQAWAA0AFgAOAA0AFgAXAA4AFwAPAA4AFwAUAA8ABAATABIABAAAABMABgASABEABgAEABIAAgARABAAAgAGABEAAAAQABMAAAACABAAEgAUABcAEgATABQAEQAXABYAEQASABcAEAAWABUAEAARABYAEwAVABQAEwAQABUAGAAbABkAGAAaABsAGgAfABsAGgAeAB8AHgAdAB8AHgAcAB0AHAAZAB0AHAAYABkAHwAZABsAHwAdABkA"),
+"name": "Checker",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAJTh//8AAAAAAAAAAAAAAACU4QAAAAD//wAA//8AAP//lOH//wAA//8AAAAAAAD//5ThAAAAAAAAxVr//wAAAADFWgAAAAD//8VaAAAAAP//xVr//wAAAAAdUEgUAAD//x1QSBQAAP///Ej//wAAAAD8SP//AAAAAJJAAAAAAP//kkAAAAAA//+SQP//AAAAAJJA//8AAAAAx0T//wAAAADHROJ3AAD//8dE4ncAAP//x0T//wAAEDwQ3uSMAAASQP//2YsAABA8EN6VaQAAEkD//6BqAADvwxDe5IwAAOy////ZiwAA78MQ3pVpAADsv///oGoAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_khi38"]
+resource_name = "Quequis_House_Props_Checker"
+_surfaces = [{
+"aabb": AABB(-0.207734, -0.230586, -0.207734, 0.415468, 0.534684, 0.319354),
+"attribute_data": PackedByteArray("dCqg13Qq/c2xJkrXdCp1sXQq/c2xJomwGP7s+XQqHrSJCErXsPrLAHQqHrSJCImw0QOg19ED/c2xJkrX0QN1sdED/c2xJomw5gHs+dEDHrSJCErXTgXLANEDHrSJCImwdCpEyLEmssew+i2TN/qtlYkIssdOBS2TxwWtlYkIssfRA0TIsSayxzf6caGw83Gh7QqGyccFcaFODHGh7QqGydEDR8uxJsDKdCpHy7EmwMoY/pyysPOcsokIMszmAZyyTgycsokIMszRA7PMsSYyzHQqs8yxJjLMdCr9y7EmecuxJnnLsPN2q7Dzn4upFnnLqRZ5y04MdqtODJ+LqRZ5y9ED/cuxJnnLaP32pGj916Yk/xmlxP0ZpST/3qZo/fakaP3HpyT/GaXH/hmlJP/Ap2j9qKlo/demJP+FqcT9hakk/96maP2oqWj9x6ck/4Wpx/6FqST/wKc="),
+"format": 34896613399,
+"index_count": 162,
+"index_data": PackedByteArray("GQALAAUAGQAcAAsAGgAVAAkAGgAdABUAHwARABcAHwAhABEAIAADAA8AIAAYAAMABwANABMABwABAA0AFgAEAAoAFgAQAAQAKAAYACAAKAAqABgAJwAhAB8AJwApACEAIgAeABsAIgAlAB4AKwAcABkAKwAkABwANwAkACsANwA7ACQAOgAmACMAOgA+ACYAPwApACcAPwBBACkAQAAqACgAQAA2ACoADAA0ADIADAAAADQAFAAzADEAFAAOADMABgAvACwABgASAC8AAgAuADUAAgAIAC4AMgA2AEAAMgA0ADYAMQBBAD8AMQAzAEEALQA9ADkALQAwAD0ANQA8ADgANQAuADwAQwBLAEYAQwBIAEsARwBTAEkARwBRAFMAUgBQAFUAUgBNAFAATABEAE4ATABCAEQAVABFAEoAVABPAEUA"),
+"material": SubResource("StandardMaterial3D_vuqad"),
+"name": "Checker",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 86,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAAAA/////wAAAAD///+/AACU4f//AAAAAJTh//8AAAAAlOH///+/AAAAAAAA//8AAAAAAAD//wAAAAAAAP+/AACU4QAA//8AAJThAAAAAAAAlOEAAP+///8AAP//AAD//wAA////////AAD//wAA//+U4f//AAD//5Th//8AAP//lOH//wAA//8AAAAA/////wAAAAD/////AAAAAAAA//+U4QAA/////5ThAAAAAP//lOEAAAAAAADFWv//AAAAAMVa////vwAAxVoAAP//AADFWgAA//8AAMVaAAD/v///xVoAAP/////FWgAA/////8VaAAAAAP//xVr//wAA///FWv//AAAAAB1QSBT//wAAHVBIFAAAAAAdUEgU/7///x1QSBT/////HVBIFAAA//8dUEgUAAD///xI//8AAP///Ej//wAAAAD8SP//AAAAAPxI////vwAAkkAAAP//AACSQAAA//8AAJJAAAD/v///kkAAAP////+SQAAA/////5JAAAAAAP//kkD//wAA//+SQP//AAAAAJJA//8AAAAAkkD///+/AADHRP//AAAAAMdE////vwAAx0T///+/AADHROJ3//8AAMdE4ncAAAAAx0Tid/+/AADHROJ3/7///8dE4nf/////x0TidwAA///HROJ3AAD//8dE//8AAP//x0T//wAAEDwQ3uSMAMAQPBDe5IzJLBJA///ZiwDAEkD//9mLVNUSQP//2YvJLBA8EN6VaYYAEDwQ3pVpySwSQP//oGqGABJA//+galTVEkD//6BqySzvwxDe5Iz/v+/DEN7kjIPX7L///9mL/7/sv///2YtU1ey////Zi4PX78MQ3pVphgDvwxDelWmD1+y///+gaoYA7L///6BqVNXsv///oGqD1/9//3//f/8//3////9//3//f/+//3////9/////f/8//3////9/////f/+//3////9//3//f/8//7//f/9//3//f/+//7//f/9/////f/8//7//f/9/////f/+//7//f/9//3//f////3///9qn////f////3///9qn////v/9//3//f/+//3/ap///9Ln///9////ap///9Ln+//+//3//f/9//7//f/9//3//f////3////9/4MH/f////3////9/4MH/v/9//3//f/+//3//f/9//3////9//3//f////3////9/4MH0uf///3////9/////f+DB9Ln+//+//3//f/9//7//f9j+JgGn1q/S2P4mAVTVqiqn1q/StL+0v6fWr9K0v7S/VNWqKqfWr9LY/iYB8isZKNj+JgFU1aoq8isZKLS/tL/yKxkotL+0v1TVqiryKxko")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_iqq4t")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_d4qcr"]
+points = PackedVector3Array(0.110567, 0.308344, -0.0252554, -0.206544, -0.227932, -0.2077, -0.202418, -0.222651, 0.1116, 0.207021, -0.227932, -0.2077, -0.203643, 0.2406, -0.205438, 0.202896, -0.222651, 0.1116, -0.202418, 0.239375, 0.1116, 0.204121, 0.2406, -0.205438, 0.202896, 0.239375, 0.1116, -0.110048, 0.308344, -0.0252554, -0.104633, 0.29501, -0.0746576, 0.104659, 0.293799, -0.0745254)
+
+[node name="@Node3D@28" type="Node3D"]
+
+[node name="@StaticBody3D@29" type="StaticBody3D" parent="."]
+
+[node name="Checker" type="MeshInstance3D" parent="@StaticBody3D@29"]
+mesh = SubResource("ArrayMesh_khi38")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@29"]
+shape = SubResource("ConvexPolygonShape3D_d4qcr")

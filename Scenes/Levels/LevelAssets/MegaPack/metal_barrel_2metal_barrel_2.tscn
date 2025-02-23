@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/metal_barrel_2_metal_barrel_2.png" id="1_okvew"]
+[ext_resource type="Texture2D" uid="uid://cf77yet722772" path="res://Assets/Textures/Fair/metal_barrel_2_metal_barrel_2.png" id="1_okvew"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_31mhc"]
 resource_name = "metal_barrel_2"

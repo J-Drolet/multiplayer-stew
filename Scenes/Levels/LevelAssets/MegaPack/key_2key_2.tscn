@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/key_2_key_2.png" id="1_noaij"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/key_2_metal_mp_1.png" id="2_j8t4k"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/key_2_keychain_1.png" id="3_j7gum"]
+[ext_resource type="Texture2D" uid="uid://dp3b37mwhtpmh" path="res://Assets/Textures/Fair/key_2_key_2.png" id="1_noaij"]
+[ext_resource type="Texture2D" uid="uid://qcl8rq1jcqx0" path="res://Assets/Textures/Fair/key_2_metal_mp_1.png" id="2_j8t4k"]
+[ext_resource type="Texture2D" uid="uid://bxsqcv3m1n5aa" path="res://Assets/Textures/Fair/key_2_keychain_1.png" id="3_j7gum"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o58o8"]
 resource_name = "key_2"

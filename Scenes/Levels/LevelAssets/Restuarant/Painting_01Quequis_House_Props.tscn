@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Paintings.png" id="1_3lxti"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_js4n5"]
+resource_name = "Paintings"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_3lxti")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_i28ne"]
+_surfaces = [{
+"aabb": AABB(-1.05146, -0.930482, -0.0507272, 2.10292, 1.86096, 0.101454),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Paintings",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_omd5l"]
+resource_name = "Quequis_House_Props_Painting_01"
+_surfaces = [{
+"aabb": AABB(-1.05146, -0.930482, -0.0507272, 2.10292, 1.86096, 0.101454),
+"attribute_data": PackedByteArray("8K8I841YRQjGo49P8K/tuY1YRQjGoykEjViPT41YKQTLp49PjVgpBI1YKQTLpykEC+8I89+rRQjGo49PC+/tud+rRQjGoykE36uPT9+rKQTLp49P36spBN+rKQTLpykE"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AgALAAUAAgAIAAsABgAVAAkABgASABUAFAARABcAFAAOABEADAADAA8ADAAAAAMABwANABMABwABAA0AFgAEAAoAFgAQAAQA"),
+"material": SubResource("StandardMaterial3D_js4n5"),
+"name": "Paintings",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//AIAAAAAA////PwAAAAD//wAAAAD/////AIAAAP//////vwAA/////wAAAAAAAAAAAAAAAAAAAAD/PwAAAAAAAAAAAAD//wAAAAAAAP//AAD/vwAA//8AAAAA//8AAP//AID//wAA////P///AAD///+/////////AID/////////v/////////+///8AAAAAAAD//wAAAAD/P///AAAAAP+//////wAAAAD/////AAD/v/////8AAP+//3///wAA/3//P/9//3////7//3//P/9/////fwAA/3//P/9/////f/7//3//P/9//3///wAA/3//fwAA/3///////3//fwAA////fwAA/3//fwAA////f////3//fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_i28ne")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_j8wwn"]
+points = PackedVector3Array(-1.06819, -0.94719, -0.0673905, 1.06819, 0.955524, 0.0661333, 1.06819, 0.955524, -0.0673905, -1.06819, 0.955524, 0.0661333, 1.06819, -0.94719, 0.0661333, 1.06819, -0.94719, -0.0673905, -1.06819, 0.955524, -0.0673905, -1.06819, -0.94719, 0.0661333)
+
+[node name="@Node3D@64" type="Node3D"]
+transform = Transform3D(0.186129, 0, 0, 0, 0.186129, 0, 0, 0, 0.186129, 0, 0, 0)
+
+[node name="@StaticBody3D@65" type="StaticBody3D" parent="."]
+
+[node name="Painting_01" type="MeshInstance3D" parent="@StaticBody3D@65"]
+mesh = SubResource("ArrayMesh_omd5l")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@65"]
+shape = SubResource("ConvexPolygonShape3D_j8wwn")

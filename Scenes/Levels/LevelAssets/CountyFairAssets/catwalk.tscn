@@ -1,0 +1,207 @@
+[gd_scene load_steps=3 format=3 uid="uid://n3p3i20wj1rd"]
+
+[ext_resource type="PackedScene" uid="uid://4t4uydtx3wd4" path="res://Scenes/Levels/LevelAssets/MegaPack/catwalk_1catwalk_1.tscn" id="1_gxs1k"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/hand_rail_3hand_rail_3.tscn" id="2_a6juc"]
+
+[node name="Catwalk2" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.4, 0, 0, -0.129112)
+
+[node name="catwalk_1catwalk_1_tscn" parent="." instance=ExtResource("1_gxs1k")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.3353, 0, 0.0714285)
+
+[node name="catwalk_1catwalk_1_tscn2" parent="." instance=ExtResource("1_gxs1k")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.3353, 0, 0.0714285)
+
+[node name="catwalk_1catwalk_1_tscn3" parent="." instance=ExtResource("1_gxs1k")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.33527, 0, 0.0714285)
+
+[node name="catwalk_1catwalk_1_tscn13" parent="." instance=ExtResource("1_gxs1k")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 22.3353, 0, 0.0714285)
+
+[node name="catwalk_1catwalk_1_tscn14" parent="." instance=ExtResource("1_gxs1k")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 18.3353, 0, 0.0714285)
+
+[node name="catwalk_1catwalk_1_tscn4" parent="." instance=ExtResource("1_gxs1k")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.33527, 0, 0.0714285)
+
+[node name="catwalk_1catwalk_1_tscn5" parent="." instance=ExtResource("1_gxs1k")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.66473, 0, 0.0714285)
+
+[node name="catwalk_1catwalk_1_tscn6" parent="." instance=ExtResource("1_gxs1k")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -5.66473, 0, 0.0714285)
+
+[node name="catwalk_1catwalk_1_tscn7" parent="." instance=ExtResource("1_gxs1k")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -9.66473, 0, 0.0714285)
+
+[node name="catwalk_1catwalk_1_tscn8" parent="." instance=ExtResource("1_gxs1k")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -13.6647, 0, 0.0714285)
+
+[node name="catwalk_1catwalk_1_tscn9" parent="." instance=ExtResource("1_gxs1k")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -17.6647, 0, 0.0714285)
+
+[node name="catwalk_1catwalk_1_tscn10" parent="." instance=ExtResource("1_gxs1k")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -21.6647, 0, 0.0714285)
+
+[node name="catwalk_1catwalk_1_tscn11" parent="." instance=ExtResource("1_gxs1k")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -25.6647, 0, 0.0714285)
+
+[node name="Rail" type="Node3D" parent="."]
+
+[node name="hand_rail_3hand_rail_3_tscn" type="Node3D" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -17.8, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn2" type="Node3D" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -15.7, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn3" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -13.6, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn18" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -24, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn21" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -26, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn19" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -21.9, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn20" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -19.8, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn4" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -11.5, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn5" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -9.4, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn6" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -7.3, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn7" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -5.2, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn8" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -3.1, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn9" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -1, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn10" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 1.1, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn11" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 3.2, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn12" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 5.3, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn13" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 7.4, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn14" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 9.5, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn15" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 11.6, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn16" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 13.7, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn17" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 15.8, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn22" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 17.8, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn23" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 19.9, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn24" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 22, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn25" parent="Rail" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 24.1, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn26" parent="." instance=ExtResource("2_a6juc")]
+transform = Transform3D(-4.37114e-08, -0.714286, 3.12224e-08, 0, -4.37114e-08, -1, 1, -3.12224e-08, 1.36478e-15, 24.3, 0, 0.991188)
+
+[node name="hand_rail_3hand_rail_3_tscn27" parent="." instance=ExtResource("2_a6juc")]
+transform = Transform3D(-4.37114e-08, -0.714286, 3.12224e-08, 0, -4.37114e-08, -1, 1, -3.12224e-08, 1.36478e-15, -27.6, 0, 0.991188)
+
+[node name="Rail2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.85714)
+
+[node name="hand_rail_3hand_rail_3_tscn" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -17.8, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn2" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -15.7, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn3" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -13.6, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn18" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -24, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn21" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -26, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn19" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -21.9, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn20" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -19.8, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn4" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -11.5, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn5" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -9.4, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn6" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -7.3, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn7" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -5.2, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn8" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -3.1, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn9" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, -1, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn10" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 1.1, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn11" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 3.2, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn12" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 5.3, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn13" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 7.4, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn14" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 9.5, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn15" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 11.6, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn16" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 13.7, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn17" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 15.8, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn22" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 17.8, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn23" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 19.9, -1.19209e-07, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn24" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 22, 0, -0.836349)
+
+[node name="hand_rail_3hand_rail_3_tscn25" parent="Rail2" instance=ExtResource("2_a6juc")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 0.714286, -3.12224e-08, 24.1, 0, -0.836349)

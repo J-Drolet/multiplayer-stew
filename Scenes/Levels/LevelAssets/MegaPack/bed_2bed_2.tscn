@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/bed_2_metal_mp_5.png" id="1_m0xmv"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/bed_2_old_mattress_mx_1.png" id="2_0vi2u"]
+[ext_resource type="Texture2D" uid="uid://clbhw3vefrvw" path="res://Assets/Textures/Fair/bed_2_metal_mp_5.png" id="1_m0xmv"]
+[ext_resource type="Texture2D" uid="uid://co2y4j551urcd" path="res://Assets/Textures/Fair/bed_2_old_mattress_mx_1.png" id="2_0vi2u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ep77"]
 resource_name = "metal_mp_5"

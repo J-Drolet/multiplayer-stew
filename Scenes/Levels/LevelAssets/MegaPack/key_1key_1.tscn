@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/key_1_key_1.png" id="1_lgn55"]
+[ext_resource type="Texture2D" uid="uid://c1k78sq14ko1q" path="res://Assets/Textures/Fair/key_1_key_1.png" id="1_lgn55"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mcqcv"]
 resource_name = "key_1"

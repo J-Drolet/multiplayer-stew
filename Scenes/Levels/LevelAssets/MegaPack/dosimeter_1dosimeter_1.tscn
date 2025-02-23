@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/dosimeter_1_dosimeter_1.png" id="1_wuksd"]
+[ext_resource type="Texture2D" uid="uid://bxao53nyaxct0" path="res://Assets/Textures/Fair/dosimeter_1_dosimeter_1.png" id="1_wuksd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_coa3f"]
 resource_name = "dosimeter_1"

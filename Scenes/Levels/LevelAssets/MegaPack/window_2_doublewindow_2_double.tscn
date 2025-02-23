@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=4 uid="uid://dp22f5w3wr0ex"]
 
-[ext_resource type="Texture2D" uid="uid://jsa7wrroq5ea" path="res://Assets/Models/GLB/window_2_double_wall_3.png" id="1_q1pbu"]
-[ext_resource type="Texture2D" uid="uid://5vqp1jrr45fx" path="res://Assets/Models/GLB/window_2_double_wood_2.png" id="2_jwmgx"]
-[ext_resource type="Texture2D" uid="uid://7kfnc75h8njm" path="res://Assets/Models/GLB/window_2_double_window_2.png" id="3_ljs8n"]
-[ext_resource type="Texture2D" uid="uid://dh2qitdfv0vdn" path="res://Assets/Models/GLB/window_2_double_window_2_emission.png" id="4_6sf7x"]
+[ext_resource type="Texture2D" uid="uid://jsa7wrroq5ea" path="res://Assets/Textures/Fair/window_2_double_wall_3.png" id="1_q1pbu"]
+[ext_resource type="Texture2D" uid="uid://5vqp1jrr45fx" path="res://Assets/Textures/Fair/window_2_double_wood_2.png" id="2_jwmgx"]
+[ext_resource type="Texture2D" uid="uid://7kfnc75h8njm" path="res://Assets/Textures/Fair/window_2_double_window_2.png" id="3_ljs8n"]
+[ext_resource type="Texture2D" uid="uid://dh2qitdfv0vdn" path="res://Assets/Textures/Fair/window_2_double_window_2_emission.png" id="4_6sf7x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b6um5"]
 resource_name = "wall_3"
@@ -22,6 +22,7 @@ resource_name = "window_2"
 cull_mode = 2
 albedo_texture = ExtResource("3_ljs8n")
 emission_enabled = true
+emission_energy_multiplier = 2.0
 emission_texture = ExtResource("4_6sf7x")
 texture_filter = 2
 

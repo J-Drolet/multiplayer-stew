@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/wall_1_plain_wall_4.png" id="1_n051e"]
+[ext_resource type="Texture2D" uid="uid://cfjqoqohbi6bx" path="res://Assets/Textures/Fair/wall_1_plain_wall_4.png" id="1_n051e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j8fyt"]
 resource_name = "wall_4"

@@ -1,11 +1,11 @@
 [gd_scene load_steps=16 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/elevator_1_floor_3_metal.png" id="1_ctlom"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/elevator_1_wall_5.png" id="2_wy01b"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/elevator_1_wood_2.png" id="3_1gru2"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/elevator_1_metal_mp_3.png" id="4_8fb8j"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/elevator_1_metal_mp_4.png" id="5_jt5e1"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/elevator_1_concrete_2.jpg" id="6_2dndk"]
+[ext_resource type="Texture2D" uid="uid://fvg6ibyn8vl5" path="res://Assets/Textures/Fair/elevator_1_floor_3_metal.png" id="1_ctlom"]
+[ext_resource type="Texture2D" uid="uid://budyxfggoy2vy" path="res://Assets/Textures/Fair/elevator_1_wall_5.png" id="2_wy01b"]
+[ext_resource type="Texture2D" uid="uid://d2b5jspecemxj" path="res://Assets/Textures/Fair/elevator_1_wood_2.png" id="3_1gru2"]
+[ext_resource type="Texture2D" uid="uid://bifxwga0klbmw" path="res://Assets/Textures/Fair/elevator_1_metal_mp_3.png" id="4_8fb8j"]
+[ext_resource type="Texture2D" uid="uid://cmqs8rnvx00b0" path="res://Assets/Textures/Fair/elevator_1_metal_mp_4.png" id="5_jt5e1"]
+[ext_resource type="Texture2D" uid="uid://cvcdpgvt5x0hp" path="res://Assets/Textures/Fair/elevator_1_concrete_2.jpg" id="6_2dndk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j8dns"]
 resource_name = "floor_elevator_1"

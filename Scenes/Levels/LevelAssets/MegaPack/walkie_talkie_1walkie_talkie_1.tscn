@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/walkie_talkie_1_walkie_talkie_1.png" id="1_a30tu"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/walkie_talkie_1_plastic_4.png" id="2_4cfgh"]
+[ext_resource type="Texture2D" uid="uid://cpk3p2v435pcf" path="res://Assets/Textures/Fair/walkie_talkie_1_walkie_talkie_1.png" id="1_a30tu"]
+[ext_resource type="Texture2D" uid="uid://wbyr12npkmev" path="res://Assets/Textures/Fair/walkie_talkie_1_plastic_4.png" id="2_4cfgh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e8ge3"]
 resource_name = "walkie_talkie_1"

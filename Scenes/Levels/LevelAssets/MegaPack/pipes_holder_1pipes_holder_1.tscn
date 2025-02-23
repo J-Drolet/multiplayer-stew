@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/pipes_holder_1_metal_4.png" id="1_xoeo3"]
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/pipes_holder_1_metal_6.png" id="2_ycwp6"]
+[ext_resource type="Texture2D" uid="uid://blmvirgg0fhvy" path="res://Assets/Textures/Fair/pipes_holder_1_metal_4.png" id="1_xoeo3"]
+[ext_resource type="Texture2D" uid="uid://dh3t26rmn7dls" path="res://Assets/Textures/Fair/pipes_holder_1_metal_6.png" id="2_ycwp6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0odrk"]
 resource_name = "metal_4"

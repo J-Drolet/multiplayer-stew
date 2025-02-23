@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/pipe_2_pipe_1.jpg" id="1_tjek3"]
+[ext_resource type="Texture2D" uid="uid://uiiueiskhlp8" path="res://Assets/Textures/Fair/pipe_2_pipe_1.jpg" id="1_tjek3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ruvdw"]
 resource_name = "pipe_1"

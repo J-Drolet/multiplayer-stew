@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" path="res://Assets/Models/GLB/cardboard_box_3_cardboard_box_2.png" id="1_udhgs"]
+[ext_resource type="Texture2D" uid="uid://dvkajs86syubi" path="res://Assets/Textures/Fair/cardboard_box_3_cardboard_box_2.png" id="1_udhgs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1a2q4"]
 resource_name = "cardboard_box_2"
