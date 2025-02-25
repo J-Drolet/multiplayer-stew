@@ -127,7 +127,7 @@ namespace multiplayerstew.Scripts.Base
                 Vector3 diffAfterForward = positionDifference - forwardDisplacement;
 
                 // Interpolate the X and Y components only
-                GlobalPosition += diffAfterForward.Normalized() * (float)(delta * 0.000000001);//(float)(delta * (float)Config.GetValue("upgrade_constants", "multiplayer_sync_interpolation_smoothing", true));
+                GlobalPosition += diffAfterForward.Normalized() * (float)(delta * 0.000000001);//(float)(delta * (float)Config.GetValue("game_constants", "multiplayer_sync_interpolation_smoothing", true));
                 GlobalPosition += forwardDisplacement;
                 */
  
@@ -140,7 +140,7 @@ namespace multiplayerstew.Scripts.Base
             if(Upgrades.Contains(Upgrade.W_Homing))
             {
                 Character nearestEnemy = null;
-                float maxHomingDistance = (float)Config.GetValue("upgrade_constants", "homing_max_distance", true);
+                float maxHomingDistance = (float)Config.GetValue("game_constants", "homing_max_distance", true);
                 foreach(int peerId in LevelManager.Instance.LevelPeerInfo.Keys)
                 {
                     if(peerId != projectileOwner)
@@ -167,7 +167,7 @@ namespace multiplayerstew.Scripts.Base
                     // Define ideal velocity (direction x speed towards player character from current position)
                     Vector3 idealVelocity = (nearestEnemy.Head.GlobalPosition - GlobalPosition).Normalized() * speed;
                     // speed to steer = direction vector obtained by idealVelocity - current_velocity x force to steer
-                    Vector3 steering = (idealVelocity - Velocity).Normalized() * (float)Config.GetValue("upgrade_constants", "homing_intensity", true);
+                    Vector3 steering = (idealVelocity - Velocity).Normalized() * (float)Config.GetValue("Upgrade.W_Homing", "homing_intensity", true);
                     Velocity += steering * (float)delta;
                 }
             }
@@ -188,7 +188,7 @@ namespace multiplayerstew.Scripts.Base
                 }
 
                 // speed to steer = direction vector obtained by idealVelocity - current_velocity x force to steer
-                Vector3 steering = (idealVelocity - Velocity).Normalized() * (float)Config.GetValue("upgrade_constants", "ping_correction_homing_intensity", true);
+                Vector3 steering = (idealVelocity - Velocity).Normalized() * (float)Config.GetValue("game_constants", "ping_correction_homing_intensity", true);
                 Velocity += steering * (float)delta;
             }
             */
@@ -225,7 +225,7 @@ namespace multiplayerstew.Scripts.Base
                 WorldHitDetectionRaycast.ForceRaycastUpdate();
                 if(WorldHitDetectionRaycast.IsColliding())
                 {
-                    if(Upgrades.Contains(Upgrade.W_BouncyProjectile) && BouncesRegistered < (int) Config.GetValue("upgrade_constants", "bounce_max_bounces", true))
+                    if(Upgrades.Contains(Upgrade.W_BouncyProjectile) && BouncesRegistered < (int) Config.GetValue("Upgrade.W_BouncyProjectile", "bounce_max_bounces", true))
                     {
                         Vector3 collisionPoint = WorldHitDetectionRaycast.GetCollisionPoint();
                         Vector3 collisionNormal = WorldHitDetectionRaycast.GetCollisionNormal();

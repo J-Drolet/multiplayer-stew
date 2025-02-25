@@ -120,6 +120,7 @@ namespace multiplayerstew.Scripts.Base
 				{
 					CurrentAmmo -= 1;
 					APlayer.Play("Fire");
+					CanFire = false;
 					
 					FireProjectile();
 				}
@@ -183,7 +184,7 @@ namespace multiplayerstew.Scripts.Base
 			List<int> angleOffsets = new(); // for each angleOffset a bullet will be fired with that offset
 			if(LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode.Upgrades.Contains(Upgrade.W_DunceCap))
 			{
-				foreach(int angle in (int[]) Config.GetValue("upgrade_constants", "dunce_shot_offsets", true))
+				foreach(int angle in (int[]) Config.GetValue("Upgrade.W_DunceCap", "dunce_shot_offsets", true))
 				{
 					angleOffsets.Add(angle);
 				}
