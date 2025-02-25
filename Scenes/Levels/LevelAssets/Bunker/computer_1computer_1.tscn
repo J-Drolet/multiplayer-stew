@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://gjf54p3r2sw3"]
 
-[ext_resource type="Texture2D" uid="uid://cs53700520mrs" path="res://Assets/Textures/Fair/computer_1_pc_1.png" id="1_shrey"]
-[ext_resource type="Texture2D" uid="uid://ip7pbc1iwdwp" path="res://Assets/Textures/Fair/computer_1_keyboard_1.png" id="2_8e3g6"]
+[ext_resource type="Texture2D" uid="uid://dax7o1yv7dk8j" path="res://Assets/Textures/Fair/computer_1_pc_1.png" id="1_shrey"]
+[ext_resource type="Texture2D" uid="uid://cqe0lbk4sp2cy" path="res://Assets/Textures/Fair/computer_1_keyboard_1.png" id="2_8e3g6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2m8bw"]
 resource_name = "pc_1"
@@ -76,7 +76,7 @@ shadow_mesh = SubResource("ArrayMesh_r0ew8")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3gmlk"]
 points = PackedVector3Array(0.295867, 0.00893284, -0.768791, 0.285645, 0.813386, -0.00204665, -0.293563, 0.81156, -0.00378693, 0.285645, 0.00561447, -0.00204664, -0.3038, 0.422449, -0.7835, -0.293563, 0.00744034, -0.00378692, 0.3072, 0.422449, -0.7835, -0.294205, 0.00656521, -0.771047, 0.3072, 0.8255, -0.0425076, -0.3038, 0.8255, -0.0425076, 0.296361, 0.00825916, -0.0171454, 0.294162, 0.8255, -0.0555484, -0.290762, 0.8255, -0.0555484, 0.295359, 0.796851, -0.00586763, 0.295359, 0.0222272, -0.00586763)
 
-[node name="@Node3D@26" type="Node3D"]
+[node name="_Node3D_26" type="Node3D"]
 transform = Transform3D(0.999714, -0.0238905, 1.04429e-09, 0, -4.37114e-08, -1, 0.0238905, 0.999714, -4.36989e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@27" type="StaticBody3D" parent="."]

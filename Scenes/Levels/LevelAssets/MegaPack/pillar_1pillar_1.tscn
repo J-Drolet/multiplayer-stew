@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://btpxdjfvvh804"]
 
-[ext_resource type="Texture2D" uid="uid://f1f37qbuo4vn" path="res://Assets/Textures/Fair/pillar_1_wall_3.png" id="1_hoegp"]
-[ext_resource type="Texture2D" uid="uid://b1w728jtubqlr" path="res://Assets/Textures/Fair/pillar_1_wood_2.png" id="2_rnlcy"]
+[ext_resource type="Texture2D" uid="uid://cdriwphjey7h2" path="res://Assets/Textures/Fair/pillar_1_wall_3.png" id="1_hoegp"]
+[ext_resource type="Texture2D" uid="uid://djy3eh8muvuyy" path="res://Assets/Textures/Fair/pillar_1_wood_2.png" id="2_rnlcy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rf1mj"]
 resource_name = "wall_3"
@@ -72,7 +72,7 @@ shadow_mesh = SubResource("ArrayMesh_x8yfh")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rfl28"]
 points = PackedVector3Array(-0.283754, -0.236107, -0.167096, 0.287563, 0.239916, 0.0235112, 0.287563, -0.236107, 0.0235112, 0.239916, 0.239916, -3.02321, -0.236107, 0.287563, 0.0235112, -0.215, -0.215, -2.88812, -0.213095, 0.216905, -2.87593, 0.216905, -0.213095, -2.87593, -0.236107, -0.283754, 0.0235112, 0.239916, -0.283754, -0.167096, -0.283754, 0.239916, -0.167096, 0.239916, 0.287563, -0.167096, 0.287563, -0.236107, -0.167096, -0.236107, 0.287563, -0.167096, -0.283754, 0.239916, 0.0235112, -0.236107, -0.283754, -0.167096, 0.287563, 0.239916, -0.167096, -0.283754, -0.236107, 0.0235112, 0.239916, -0.283754, 0.0235112, 0.239916, 0.287563, 0.0235112)
 
-[node name="@Node3D@218" type="Node3D"]
+[node name="_Node3D_218" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@219" type="StaticBody3D" parent="."]

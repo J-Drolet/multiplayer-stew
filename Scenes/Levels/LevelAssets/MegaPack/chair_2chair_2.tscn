@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=4]
+[gd_scene load_steps=10 format=4 uid="uid://d0jng73tjd8h6"]
 
-[ext_resource type="Texture2D" uid="uid://bd4miut2f65y5" path="res://Assets/Textures/Fair/chair_2_metal_8.png" id="1_b1pns"]
-[ext_resource type="Texture2D" uid="uid://dtekmmfr3o8wq" path="res://Assets/Textures/Fair/chair_2_fabric_2.png" id="2_b02l7"]
-[ext_resource type="Texture2D" uid="uid://cu8xyyrefgll3" path="res://Assets/Textures/Fair/chair_2_metal_mp_4.png" id="3_876xe"]
+[ext_resource type="Texture2D" uid="uid://bm5fi1gh77gpi" path="res://Assets/Textures/Fair/chair_2_metal_8.png" id="1_b1pns"]
+[ext_resource type="Texture2D" uid="uid://dw22poa061i7u" path="res://Assets/Textures/Fair/chair_2_fabric_2.png" id="2_b02l7"]
+[ext_resource type="Texture2D" uid="uid://cuk70q4m0dkcm" path="res://Assets/Textures/Fair/chair_2_metal_mp_4.png" id="3_876xe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_edy5c"]
 resource_name = "metal_8"
@@ -105,7 +105,7 @@ shadow_mesh = SubResource("ArrayMesh_76ypv")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_obtdh"]
 points = PackedVector3Array(-0.182686, -0.32805, -1.17488, -0.365036, 0.345852, -0.00920521, 0.362969, -0.327666, -0.0104049, -0.363652, -0.327095, -0.0114199, -0.377542, 0.225798, -0.856071, 0.364762, 0.346844, -0.00753557, 0.282004, -0.283023, -1.17652, -0.358713, -0.264164, -1.00685, 0.376224, 0.225798, -0.856071, -0.222567, 0.289816, -0.643418, 0.25089, -0.341781, -1.14931, -0.226758, -0.283023, -1.19541, 0.357396, -0.283023, -1.04463, -0.268855, -0.340129, -1.12869, 0.221344, 0.289939, -0.643439, -0.127543, -0.344895, -1.17257, -0.375167, -0.142981, -0.859764, 0.374186, -0.143109, -0.860004, 0.22544, -0.283023, -1.19541, -0.358713, 0.263444, -0.76185, -0.30215, -0.283023, -1.15762, -0.306026, -0.323684, -1.0772, 0.305527, -0.32455, -1.0785, 0.126241, -0.344937, -1.17264, 0.376766, 0.197321, -0.843832, 0.300832, -0.283023, -1.15762, -0.352357, 0.333806, -0.152677, 0.349829, 0.262505, -0.662354, -0.283321, -0.283023, -1.17652, -0.321056, -0.283023, -1.11996, 0.350462, 0.333257, -0.153399, -0.358713, 0.244586, -0.818406)
 
-[node name="@Node3D@76" type="Node3D"]
+[node name="_Node3D_76" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@77" type="StaticBody3D" parent="."]

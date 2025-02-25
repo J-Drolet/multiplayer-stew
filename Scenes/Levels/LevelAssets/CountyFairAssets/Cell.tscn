@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/electrical_outlet_1electrical_outlet_1.tscn" id="12_intop"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/vent_1vent_1.tscn" id="13_hbmvy"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/keypad_1keypad_1.tscn" id="14_0n0v0"]
-[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/clock_2clock_2.tscn" id="15_demiw"]
+[ext_resource type="PackedScene" uid="uid://dtto4u4tp7tr2" path="res://Scenes/Levels/LevelAssets/MegaPack/clock_2clock_2.tscn" id="15_demiw"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/door_4door_4.tscn" id="16_w8f6l"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/table_small_2table_small_2.tscn" id="17_p47k3"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/light_switch_1light_switch_1.tscn" id="18_835qm"]

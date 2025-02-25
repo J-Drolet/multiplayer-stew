@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=5 format=4 uid="uid://dtto4u4tp7tr2"]
 
-[ext_resource type="Texture2D" uid="uid://c2tgmjqw77gb" path="res://Assets/Textures/Fair/clock_2_clock_2.png" id="1_1rske"]
+[ext_resource type="Texture2D" uid="uid://cv6nde70l167r" path="res://Assets/Textures/Fair/clock_2_clock_2.png" id="1_1rske"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bgffv"]
 resource_name = "clock_2"
@@ -46,10 +46,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_fsses")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_j6yye"]
-points = PackedVector3Array(0.00987072, -0.0331929, 0.201393, -0.0219728, -0.0331929, -0.207293, -0.0602971, -0.0331929, -0.200892, -0.0283736, 0.00512143, -0.200892, 0.201492, 0.00512143, -0.0348736, -0.162469, 0.00512143, 0.111943, 0.201492, -0.0331929, -0.0667971, -0.200793, -0.0331929, -0.0284729, 0.118443, 0.00512143, 0.163069, -0.162469, 0.00512143, -0.117883, 0.175929, -0.0331929, 0.111943, 0.118443, 0.00512143, -0.168969, -0.168829, -0.0331929, 0.111943, -0.0538964, 0.00512143, 0.188591, 0.0673571, -0.0331929, -0.200892, -0.194392, 0.00512143, 0.0225329, 0.195091, 0.00512143, 0.0608571, -0.162469, -0.0331929, -0.130644, -0.08582, -0.0331929, 0.182231, 0.169569, -0.0331929, -0.130644, 0.207893, -0.0331929, 0.0161321, 0.09292, -0.0331929, 0.182231, -0.111383, 0.00512143, -0.168969, 0.0609564, 0.00512143, 0.188591, 0.169569, 0.00512143, -0.117883, -0.194392, -0.0331929, 0.0608571, -0.187991, 0.00512143, -0.0667971, 0.0354336, 0.00512143, -0.200892, -0.111383, 0.00512143, 0.163069, 0.169569, 0.00512143, 0.111943, -0.124144, -0.0331929, -0.168969, 0.131204, -0.0331929, -0.168969)
-
-[node name="@Node3D@92" type="Node3D"]
+[node name="_Node3D_92" type="Node3D"]
 transform = Transform3D(0.7, 0, 0, 0, -3.0598e-08, -0.7, 0, 0.7, -3.0598e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@93" type="StaticBody3D" parent="."]
@@ -57,6 +54,3 @@ transform = Transform3D(0.7, 0, 0, 0, -3.0598e-08, -0.7, 0, 0.7, -3.0598e-08, 0,
 [node name="clock_2" type="MeshInstance3D" parent="@StaticBody3D@93"]
 mesh = SubResource("ArrayMesh_ok4xd")
 skeleton = NodePath("")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@93"]
-shape = SubResource("ConvexPolygonShape3D_j6yye")

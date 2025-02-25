@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://cmurqy8owxnfc"]
+[gd_scene load_steps=50 format=3 uid="uid://cmurqy8owxnfc"]
 
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/floor_1floor_1.tscn" id="1_lxww0"]
 [ext_resource type="PackedScene" uid="uid://cp6ov8nyojtyt" path="res://Scenes/Levels/LevelAssets/MegaPack/window_2_singlewindow_2_single.tscn" id="2_y6yih"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/wall_1_tunnel_holewall_1_tunnel_hole.tscn" id="7_0hwr0"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/beam_1beam_1.tscn" id="8_pe0wr"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/ModularFPS/wall_5wall_5.tscn" id="9_mtfen"]
-[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/computer_1computer_1.tscn" id="10_geaqj"]
+[ext_resource type="PackedScene" uid="uid://gjf54p3r2sw3" path="res://Scenes/Levels/LevelAssets/Bunker/computer_1computer_1.tscn" id="10_geaqj"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/chair_wooden_1chair_wooden_1.tscn" id="11_o8fc3"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/military_radio_2military_radio_2.tscn" id="12_4w00m"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/floppy_disc_3floppy_disc_3.tscn" id="13_8njvg"]
@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/pcb_1pcb_1.tscn" id="16_qktuj"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/note_1note_1.tscn" id="17_n72qa"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/table_large_1table_large_1.tscn" id="18_4hwa3"]
-[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/chair_2chair_2.tscn" id="19_yysqj"]
+[ext_resource type="PackedScene" uid="uid://d0jng73tjd8h6" path="res://Scenes/Levels/LevelAssets/MegaPack/chair_2chair_2.tscn" id="19_yysqj"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/chair_4chair_4.tscn" id="20_huqvu"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/table_small_1table_small_1.tscn" id="21_gjk5v"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/keyboard_1keyboard_1.tscn" id="22_udatl"]
@@ -29,7 +29,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/cig_3cig_3.tscn" id="27_f17sr"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/cigs_packet_1cigs_packet_1.tscn" id="28_1du6h"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/cell_phone_2cell_phone_2.tscn" id="29_vket6"]
-[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/clock_2clock_2.tscn" id="30_xefv8"]
+[ext_resource type="PackedScene" uid="uid://dtto4u4tp7tr2" path="res://Scenes/Levels/LevelAssets/MegaPack/clock_2clock_2.tscn" id="30_xefv8"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/light_switch_1light_switch_1.tscn" id="31_bhkun"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/matchbox_1matchbox_1.tscn" id="32_1oei7"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/notebook_1notebook_1.tscn" id="33_h5v8e"]
@@ -47,6 +47,8 @@
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/pipe_1pipe_1.tscn" id="45_hq8sk"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/pipe_1_cornerpipe_1_corner.tscn" id="46_vwak3"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/vent_4vent_4.tscn" id="47_5sydx"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/glass_bottle_1glass_bottle_1.tscn" id="48_2ljna"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/floppy_disc_1floppy_disc_1.tscn" id="49_8htra"]
 
 [node name="PrisonOffice" type="Node3D"]
 
@@ -327,3 +329,9 @@ transform = Transform3D(-4.01118, 6.05671e-07, -2.64747e-14, 0, -1.75334e-07, -4
 
 [node name="vent_4vent_4_tscn" parent="." instance=ExtResource("47_5sydx")]
 transform = Transform3D(-1.71175, 2.58466e-07, -1.12979e-14, 0, -7.48228e-08, -1.71175, -2.58466e-07, -1.71175, 7.48228e-08, 6.46853, 1.79427, -4.12246)
+
+[node name="glass_bottle_1glass_bottle_1_tscn" parent="." instance=ExtResource("48_2ljna")]
+transform = Transform3D(-0.309258, -0.950978, 4.15686e-08, 0, -4.37114e-08, -1, 0.950978, -0.309258, 1.35181e-08, 1.51282, 0.687298, 1.15474)
+
+[node name="floppy_disc_1floppy_disc_1_tscn" parent="." instance=ExtResource("49_8htra")]
+transform = Transform3D(-0.0412218, -0.999149, 0.000187857, 0.000187813, -0.000195765, -1, 0.99915, -0.0412217, 0.000195724, 2.2813, 0.687354, 1.45323)

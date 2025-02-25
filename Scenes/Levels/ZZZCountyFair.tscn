@@ -1,24 +1,19 @@
-[gd_scene load_steps=29 format=3 uid="uid://cif1rylh3ul7d"]
+[gd_scene load_steps=17 format=3 uid="uid://cif1rylh3ul7d"]
 
 [ext_resource type="Script" path="res://Scripts/GameLogic/LevelManager.cs" id="1_aiq0j"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_4bfgx"]
+[ext_resource type="Terrain3DMaterial" uid="uid://dp62vxmnreevq" path="res://TerrainData/Fair/fair_terrain_3d_material.tres" id="3_7xky1"]
 [ext_resource type="PackedScene" uid="uid://6jntjlknvgow" path="res://Scenes/Levels/LevelAssets/UtilityAssets/DeathBarrier.tscn" id="3_8dtge"]
-[ext_resource type="Texture2D" uid="uid://cxx7w1jrp3hqn" path="res://Assets/Textures/Fair/grass_7.png" id="4_cv60m"]
-[ext_resource type="PackedScene" uid="uid://cblot42ihgprm" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/tent1.tscn" id="5_8y381"]
-[ext_resource type="PackedScene" uid="uid://we5j62fteymy" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/tent2.tscn" id="6_e21cy"]
-[ext_resource type="PackedScene" uid="uid://gr5wk6mlmrwm" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/rv_1.tscn" id="7_wepmo"]
-[ext_resource type="PackedScene" uid="uid://c2hjfaispr4gm" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/tractor.tscn" id="8_xthw8"]
-[ext_resource type="PackedScene" uid="uid://dc0s6rskik3o3" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/storage_variant_3.tscn" id="9_sfgm3"]
-[ext_resource type="PackedScene" uid="uid://bik86ejoam37u" path="res://Scenes/Levels/LevelAssets/Nature/tree_2tree_2.tscn" id="10_nwnso"]
-[ext_resource type="PackedScene" uid="uid://dkiqvgfxghqvp" path="res://Scenes/Levels/LevelAssets/Nature/stone_2stone_2.tscn" id="11_rhsyj"]
-[ext_resource type="PackedScene" uid="uid://do66aypfoswod" path="res://Scenes/Levels/LevelAssets/Nature/tree_stump_1tree_stump_1.tscn" id="12_wl1f3"]
-[ext_resource type="PackedScene" uid="uid://brj0emj1xrow3" path="res://Scenes/Levels/LevelAssets/Nature/tree_log_1tree_log_1.tscn" id="13_pkaum"]
-[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Nature/fern_1fern_1.tscn" id="14_n5i2k"]
-[ext_resource type="PackedScene" uid="uid://1xvcjnucwlsf" path="res://Scenes/Levels/LevelAssets/Nature/tree_8tree_8.tscn" id="15_1tftt"]
-[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/chair_2chair_2.tscn" id="16_6etf8"]
-[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/wooden_crate_2wooden_crate_2.tscn" id="17_8no84"]
-[ext_resource type="PackedScene" uid="uid://cb1w1yrkt2our" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/Prison.tscn" id="18_qm04v"]
-[ext_resource type="PackedScene" uid="uid://cmurqy8owxnfc" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/PrisonOffice.tscn" id="19_d3oyw"]
+[ext_resource type="Terrain3DAssets" uid="uid://bw0fnm1c0yxu" path="res://TerrainData/Fair/fair_terrain_3d_assets.tres" id="4_cccqf"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Roads/road_015Roads.tscn" id="6_v57s0"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Roads/road_031Roads.tscn" id="7_dhfhn"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Roads/road_066Roads.tscn" id="8_dk86o"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Roads/road_045Roads.tscn" id="9_tmqtq"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Roads/road_039Roads.tscn" id="10_ji0sc"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Roads/road_029Roads.tscn" id="11_177pq"]
+[ext_resource type="PackedScene" uid="uid://cb1w1yrkt2our" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/Prison.tscn" id="13_lgu3c"]
+[ext_resource type="PackedScene" uid="uid://cmurqy8owxnfc" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/PrisonOffice.tscn" id="14_a2qgv"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Roads/Sign_007Roads.tscn" id="14_uc0h3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afd3o"]
 render_priority = 1
@@ -26,37 +21,16 @@ transparency = 4
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_aq4tj"]
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_m17if"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_7vpa7"]
-frequency = 0.3162
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8neoq"]
-as_normal_map = true
-bump_strength = 25.7
-noise = SubResource("FastNoiseLite_7vpa7")
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vehhs"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6th4v"]
-albedo_texture = ExtResource("4_cv60m")
-metallic_specular = 0.05
-roughness_texture = SubResource("NoiseTexture2D_vehhs")
-normal_enabled = true
-normal_texture = SubResource("NoiseTexture2D_8neoq")
-heightmap_scale = 2.2
-detail_albedo = SubResource("NoiseTexture2D_m17if")
-uv1_scale = Vector3(20.915, 20.915, 20.915)
-uv1_triplanar = true
-
-[sub_resource type="BoxMesh" id="BoxMesh_il5yj"]
-material = SubResource("StandardMaterial3D_6th4v")
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_14sks"]
-
 [node name="Fair" type="Node3D"]
 script = ExtResource("1_aiq0j")
 PlayerScene = ExtResource("2_4bfgx")
+
+[node name="Terrain3D" type="Terrain3D" parent="."]
+data_directory = "res://TerrainData/Fair"
+material = ExtResource("3_7xky1")
+assets = ExtResource("4_cccqf")
+top_level = true
+metadata/_edit_lock_ = true
 
 [node name="DeathBarrier" parent="." instance=ExtResource("3_8dtge")]
 transform = Transform3D(200, 0, 0, 0, 1, 0, 0, 0, 200, 0, -6.01375, 0)
@@ -70,7 +44,7 @@ transform = Transform3D(0.766896, 0.439592, -0.467578, 0, 0.728574, 0.684967, 0.
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0889, 0, 0)
 
 [node name="CharacterMesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2809, 0.895013, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.0565, 5.29007, 34.5254)
 material_overlay = SubResource("StandardMaterial3D_afd3o")
 mesh = SubResource("CapsuleMesh_aq4tj")
 
@@ -79,97 +53,49 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14348, 0)
 billboard = 1
 text = "Text"
 
-[node name="FairArea" type="Node3D" parent="."]
+[node name="Road" type="Node3D" parent="."]
 
-[node name="FairGround" type="Node3D" parent="FairArea"]
-transform = Transform3D(85.905, 0, 0, 0, 0.285, 0, 0, 0, 46.96, 0, -0.143799, 0)
+[node name="road_015Roads_tscn" parent="Road" instance=ExtResource("6_v57s0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0.591426, -3)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="FairArea/FairGround"]
+[node name="road_015Roads_tscn2" parent="Road" instance=ExtResource("6_v57s0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0.591426, -3)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="FairArea/FairGround/StaticBody3D"]
-mesh = SubResource("BoxMesh_il5yj")
-skeleton = NodePath("../..")
+[node name="road_015Roads_tscn3" parent="Road" instance=ExtResource("6_v57s0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63, 0.591426, -3)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="FairArea/FairGround/StaticBody3D"]
-shape = SubResource("BoxShape3D_14sks")
+[node name="road_015Roads_tscn4" parent="Road" instance=ExtResource("6_v57s0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 0.591426, -3)
 
-[node name="tent1_tscn" parent="FairArea" instance=ExtResource("5_8y381")]
-transform = Transform3D(87.7473, -47.9626, -4.21833e-06, 0, -4.37114e-06, 201.207, -47.9626, -87.7473, -7.71741e-06, -17.8676, 0, -11.8236)
+[node name="road_031Roads_tscn" parent="Road" instance=ExtResource("7_dhfhn")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 87, 0.591426, -3)
 
-[node name="tent2_tscn" parent="FairArea" instance=ExtResource("6_e21cy")]
-transform = Transform3D(81.9152, 57.3576, 0, 2.50718e-06, -3.58063e-06, 201.207, 57.3576, -81.9152, -8.79504e-06, 7.3022, -5.8801e-07, -9.97697)
+[node name="road_066Roads_tscn" parent="Road" instance=ExtResource("8_dk86o")]
+transform = Transform3D(1.12124, 0, 0, 0, 1.08544, 0, 0, 0, 1.08544, 111.438, 2.52506, -3.00629)
 
-[node name="rv_1_tscn" parent="FairArea" instance=ExtResource("7_wepmo")]
-transform = Transform3D(1.71082, 0, -0.539341, 0, 0.712958, 0, 1.61615, 0, 0.570936, -26.3357, -0.095439, -6.55139)
+[node name="road_045Roads_tscn" parent="Road" instance=ExtResource("9_tmqtq")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 115.117, 2.54903, -3)
 
-[node name="tractor_tscn" parent="FairArea" instance=ExtResource("8_xthw8")]
-transform = Transform3D(-0.0171416, -0.00567965, 2.48265e-10, 0, -7.8934e-10, -0.018058, 0.00567965, -0.0171416, 7.49281e-10, 10.1536, 0, -2.19059)
+[node name="road_039Roads_tscn" parent="Road" instance=ExtResource("10_ji0sc")]
+transform = Transform3D(1, 0, -3.49691e-07, 0, 1, 0, 3.49691e-07, 0, 1, 142.663, 2.54515, -30.7228)
 
-[node name="storage_variant_3_tscn" parent="FairArea" instance=ExtResource("9_sfgm3")]
-transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.01, 0, 0.01, -4.37114e-10, -10.4708, 0.00698096, -9.93194)
+[node name="road_031Roads_tscn2" parent="Road" instance=ExtResource("7_dhfhn")]
+transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 145.396, 2.53681, -30.8314)
 
-[node name="storage_variant_3_tscn2" parent="FairArea" instance=ExtResource("9_sfgm3")]
-transform = Transform3D(0.0085785, -0.00513901, 2.24633e-10, 0, -4.37114e-10, -0.01, 0.00513901, 0.0085785, -3.74978e-10, -10.5152, 0.283658, -9.94883)
+[node name="road_031Roads_tscn3" parent="Road" instance=ExtResource("7_dhfhn")]
+transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 168.488, 4.46303, -30.8335)
 
-[node name="storage_variant_3_tscn3" parent="FairArea" instance=ExtResource("9_sfgm3")]
-transform = Transform3D(0.00891782, 0.00452466, -1.97779e-10, 0, -4.37114e-10, -0.01, -0.00452466, 0.00891782, -3.8981e-10, -10.4124, 0.560336, -10.3066)
+[node name="road_015Roads_tscn5" parent="Road" instance=ExtResource("6_v57s0")]
+transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 190.706, 6.39222, -30.8269)
 
-[node name="tree_2tree_2_tscn" parent="FairArea" instance=ExtResource("10_nwnso")]
-transform = Transform3D(4.69544, 3.0873, -1.3495e-07, 0, -2.45635e-07, -5.61948, -3.0873, 4.69544, -2.05244e-07, 16.2026, -0.00129901, -11.9606)
+[node name="road_029Roads_tscn" parent="Road" instance=ExtResource("11_177pq")]
+transform = Transform3D(4.13816e-08, 0, 1, 0, 1, 0, -0.548116, 0, 7.54979e-08, 111.428, 2.51778, 1.24126)
 
-[node name="tree_2tree_2_tscn2" parent="FairArea" instance=ExtResource("10_nwnso")]
-transform = Transform3D(4.01417, -3.93256, 1.71898e-07, 0, -2.45635e-07, -5.61948, 3.93256, 4.01417, -1.75465e-07, -9.29504, -0.0013001, -15.6539)
+[node name="Prison_tscn" parent="." instance=ExtResource("13_lgu3c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.9321, 4.4113, 18.0796)
 
-[node name="tree_2tree_2_tscn3" parent="FairArea" instance=ExtResource("10_nwnso")]
-transform = Transform3D(-0.210781, -5.61553, 2.45462e-07, 0, -2.45635e-07, -5.61948, 5.61553, -0.210781, 9.21354e-09, -25.6467, -0.00129901, -13.0491)
+[node name="PrisonOffice_tscn" parent="." instance=ExtResource("14_a2qgv")]
+transform = Transform3D(7.54979e-08, 0, 1, 0, 1, 0, -1, 0, 7.54979e-08, 97.0868, 4.4199, 21.2981)
 
-[node name="stone_2stone_2_tscn" parent="FairArea" instance=ExtResource("11_rhsyj")]
-transform = Transform3D(0.538771, -0.842452, 3.68248e-08, 0, -4.37114e-08, -1, 0.842452, 0.538771, -2.35504e-08, -1.62371, -0.00129901, -9.02091)
-
-[node name="tree_stump_1tree_stump_1_tscn" parent="FairArea" instance=ExtResource("12_wl1f3")]
-transform = Transform3D(2.09268, 0, 0, 0, -9.14739e-08, -2.09268, 0, 2.09268, -9.14739e-08, -2.84575, -0.0332768, -15.8047)
-
-[node name="tree_log_1tree_log_1_tscn" parent="FairArea" instance=ExtResource("13_pkaum")]
-transform = Transform3D(0.239732, 1.98249, -8.66575e-08, 0, -8.72888e-08, -1.99693, -1.98249, 0.239732, -1.0479e-08, -5.55681, -0.134344, 2.23681)
-
-[node name="fern_1fern_1_tscn" parent="FairArea" instance=ExtResource("14_n5i2k")]
-transform = Transform3D(3.28837, 0, 0, 0, -1.43739e-07, -3.28837, 0, 3.28837, -1.43739e-07, 21.0889, -0.866256, -5.69686)
-
-[node name="fern_1fern_1_tscn2" parent="FairArea" instance=ExtResource("14_n5i2k")]
-transform = Transform3D(1.89726, -2.68585, 1.17402e-07, 0, -1.43739e-07, -3.28837, 2.68585, 1.89726, -8.29318e-08, 20.084, -0.866256, 3.45602)
-
-[node name="fern_1fern_1_tscn3" parent="FairArea" instance=ExtResource("14_n5i2k")]
-transform = Transform3D(0.388616, -3.26533, 1.42732e-07, 0, -1.43739e-07, -3.28837, 3.26533, 0.388616, -1.69869e-08, 21.7972, -0.866256, -0.921805)
-
-[node name="fern_1fern_1_tscn4" parent="FairArea" instance=ExtResource("14_n5i2k")]
-transform = Transform3D(-1.21619, -3.05521, 1.33547e-07, 0, -1.43739e-07, -3.28837, 3.05521, -1.21619, 5.31612e-08, 18.1367, -0.866256, 0.140413)
-
-[node name="fern_1fern_1_tscn5" parent="FairArea" instance=ExtResource("14_n5i2k")]
-transform = Transform3D(1.17898, -3.06976, 1.34183e-07, 0, -1.43739e-07, -3.28837, 3.06976, 1.17898, -5.1535e-08, 18.5653, -0.866256, -4.04365)
-
-[node name="fern_1fern_1_tscn6" parent="FairArea" instance=ExtResource("14_n5i2k")]
-transform = Transform3D(-2.22941, -2.41726, 1.05662e-07, 0, -1.43739e-07, -3.28837, 2.41726, -2.22941, 9.74506e-08, 14.0124, -0.866256, 3.73978)
-
-[node name="fern_1fern_1_tscn7" parent="FairArea" instance=ExtResource("14_n5i2k")]
-transform = Transform3D(-2.22941, -2.41726, 1.05662e-07, 0, -1.43739e-07, -3.28837, 2.41726, -2.22941, 9.74506e-08, -25.6235, -0.866256, -1.44818)
-
-[node name="fern_1fern_1_tscn8" parent="FairArea" instance=ExtResource("14_n5i2k")]
-transform = Transform3D(-3.19479, -0.778924, 3.40479e-08, 0, -1.43739e-07, -3.28837, 0.778924, -3.19479, 1.39649e-07, -29.0673, -0.866256, -3.14952)
-
-[node name="tree_stump_1tree_stump_1_tscn2" parent="FairArea" instance=ExtResource("12_wl1f3")]
-transform = Transform3D(2.09268, 0, 0, 0, -9.14739e-08, -2.09268, 0, 2.09268, -9.14739e-08, -27.659, 0.00839037, -1.05697)
-
-[node name="tree_8tree_8_tscn" parent="FairArea" instance=ExtResource("15_1tftt")]
-transform = Transform3D(0.36499, 0.562926, -2.46063e-08, 0, -2.93259e-08, -0.670898, -0.562926, 0.36499, -1.59542e-08, -32.7696, 0.263084, -6.5851)
-
-[node name="chair_2chair_2_tscn" parent="FairArea" instance=ExtResource("16_6etf8")]
-transform = Transform3D(0.96696, -0.22956, 1.00344e-08, 0, -4.34419e-08, -0.993836, 0.22956, 0.96696, -4.22672e-08, -31.4271, 0.263084, -5.87601)
-
-[node name="wooden_crate_2wooden_crate_2_tscn" parent="FairArea" instance=ExtResource("17_8no84")]
-transform = Transform3D(0.634837, 1.44579, -6.31974e-08, 0, -6.90214e-08, -1.57902, -1.44579, 0.634837, -2.77496e-08, -8.80176, 0.00297129, -7.32544)
-
-[node name="Prison" parent="." instance=ExtResource("18_qm04v")]
-transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -36.2883, 0, 39.1148)
-
-[node name="PrisonOffice" parent="." instance=ExtResource("19_d3oyw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.39935, 0, 13.8162)
+[node name="Sign_007Roads_tscn2" parent="." instance=ExtResource("14_uc0h3")]
+transform = Transform3D(-3.13916e-07, 1, 6.27833e-07, 1, 3.13916e-07, -1.74846e-07, -1.74846e-07, 6.27833e-07, -1, 108.4, 2.51043, -0.29338)
