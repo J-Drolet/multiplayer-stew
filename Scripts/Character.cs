@@ -39,9 +39,9 @@ public partial class Character : Entity
     [Export]
     public UpgradableWeapon EquippedWeapon;
 
-	public float BaseSpeed = (float)Config.GetValue("upgrade_constants", "base_speed", true);
-	public float SprintMultiplier = (float)Config.GetValue("upgrade_constants", "sprint_multiplier", true);
-	public float JumpVelocity = (float)Config.GetValue("upgrade_constants", "jump_velocity", true);
+	public float BaseSpeed = (float)Config.GetValue("game_constants", "base_speed", true);
+	public float SprintMultiplier = (float)Config.GetValue("game_constants", "sprint_multiplier", true);
+	public float JumpVelocity = (float)Config.GetValue("game_constants", "jump_velocity", true);
 
 	public override void _EnterTree()
 	{
@@ -127,7 +127,7 @@ public partial class Character : Entity
 
         #region UpgradeLogic
         ////////// Invisibility upgrade
-        float transparency = Upgrades.Contains(Upgrade.C_Invisibility)? (float)Config.GetValue("upgrade_constants", "invisibility_transparency", true) : 0;
+        float transparency = Upgrades.Contains(Upgrade.C_Invisibility)? (float)Config.GetValue("Upgrade.C_Invisibility", "invisibility_transparency", true) : 0;
 		CharacterMesh.Transparency = transparency;
 		foreach(GeometryInstance3D mesh in GodotNodeFindingService.FindNodes<GeometryInstance3D>(Hand))
 		{
@@ -140,14 +140,14 @@ public partial class Character : Entity
 		UI.InGameUI.AmmoCount.Visible = EquippedWeapon != null;
 
 		////////// Small Player Upgrade
-		Scale = Vector3.One * (!Upgrades.Contains(Upgrade.C_SmallerHitbox) ? 1.0f : (float)Config.GetValue("upgrade_constants", "small_hitbox_factor", true));
+		Scale = Vector3.One * (!Upgrades.Contains(Upgrade.C_SmallerHitbox) ? 1.0f : (float)Config.GetValue("Upgrade.C_SmallerHitbox", "small_hitbox_factor", true));
 
 		////////// Outline Players Upgrade
 		if(Upgrades.Contains(Upgrade.C_OutlinePlayers))
 		{
 			double beforeFrameTime = TimeSinceXray;
 			TimeSinceXray += delta;
-			double upgradeDuration = (double)Config.GetValue("upgrade_constants", "outline_players_duration", true);
+			double upgradeDuration = (double)Config.GetValue("Upgrade.C_OutlinePlayers", "outline_players_duration", true);
 
 			if(beforeFrameTime < upgradeDuration && TimeSinceXray >= upgradeDuration) // disable effect
 			{
@@ -161,7 +161,7 @@ public partial class Character : Entity
 			}
 
 			// enable effect
-			if(TimeSinceXray >= (double)Config.GetValue("upgrade_constants", "outline_players_cooldown", true))
+			if(TimeSinceXray >= (double)Config.GetValue("Upgrade.C_OutlinePlayers", "outline_players_cooldown", true))
 			{
 				TimeSinceXray = 0;
 				MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, OutlinePlayerSFX.ResourcePath, this.GetPath(), Multiplayer.GetUniqueId(), "SFX");
@@ -182,7 +182,7 @@ public partial class Character : Entity
 
 		UI.InGameUI.SetHealthBar(CurrentHealth / MaxHealth);
 
-		SlowdownMultiplier = Mathf.Clamp(SlowdownMultiplier + ((double)Config.GetValue("upgrade_constants", "slowdown_recovery_strength", true) * delta), 0.0f, 1.0f);
+		SlowdownMultiplier = Mathf.Clamp(SlowdownMultiplier + ((double)Config.GetValue("Upgrade.W_SlowTargetBullets", "slowdown_recovery_strength", true) * delta), 0.0f, 1.0f);
     }
 
     public override void _PhysicsProcess(double delta)
