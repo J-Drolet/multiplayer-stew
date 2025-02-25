@@ -120,6 +120,7 @@ namespace multiplayerstew.Scripts.Base
 				{
 					CurrentAmmo -= 1;
 					APlayer.Play("Fire");
+					CanFire = false;
 					
 					FireProjectile();
 				}
