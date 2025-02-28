@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Haybale_Variant_3_Base_color.png" id="1_fgedo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bylyf"]
+resource_name = "Haybale_Variant_3"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_fgedo")
+roughness = 0.4
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_u3j88"]
+_surfaces = [{
+"aabb": AABB(-119.912, -55.6227, -58.2917, 229.711, 117.596, 113.841),
+"format": 34896613377,
+"index_count": 84,
+"index_data": PackedByteArray("AAADAAEAAAACAAMACAAHAAsACAAGAAcABgAFAAcABgAEAAUADAABAA8ADAAAAAEACAAEAAYACAANAAQACgABAAMACgAPAAEABwAOAAsABwAFAA4ACwAPAAoACwAOAA8AAgAMAAkAAgAAAAwACQANAAgACQAMAA0ABAAOAAUABAANAA4ADQAPAA4ADQAMAA8AAgAKAAMAAgAJAAoACQALAAoACQAIAAsA"),
+"lods": [7.38951, PackedByteArray("AAADAAEAAAACAAMACAAHAAoACAAGAAcAAgAIAAoAAgAKAAMABgAFAAcABgAEAAUADQABAA8ADQAAAAEABAANAA8ABAAPAAUACAAEAAYACAANAAQAAgANAAgAAgAAAA0ACgABAAMACgAPAAEABwAPAAoABwAFAA8A")],
+"name": "Haybale_Variant_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("NQ897R3/AAA1Dz3tDAoAADUPAAAd/wAAAAAAAAwKAAD//1DvGvQAADr8BdYAAAAAcPzbEa/2AADm+6AgqA4AAMauAAAd/wAA/l4AAB3/AAD+XgAADAoAAMauAAAMCgAA3F+i5P//AADGrj3tHf8AAMauPe0MCgAA/l7//wwKAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8dkxj"]
+resource_name = "Farm-Assets_Cube_016"
+_surfaces = [{
+"aabb": AABB(-119.912, -55.6227, -58.2917, 229.711, 117.596, 113.841),
+"attribute_data": PackedByteArray("68xMexiHUv/IuPcEIrUNN41E9P2FuGdHqQDi9lqKBns4+/cEd72deTlDP/96++1H9MxP/76GW3upALkAkUToexBDIAc1M4k90o4W/QEDyHSpAOU+EkLidKI/DzpoM3lwqQCPn/2JdtL9iXbSqQCPnyuKvqapADjLZomdeTlDQsusXZ15OUOZnzlDmZ+sXZ15Usp7p0WIF9NFiBfTjsy90tmI56eOzL3S2Yjnp61dDTdPRommT0aJpq1dDTdnickxUkVb0lJFW9I="),
+"format": 34896613399,
+"index_count": 84,
+"index_data": PackedByteArray("AgALAAUAAgAIAAsAGwAVACIAGwATABUAFAAQABYAFAAOABAAJgAEADEAJgABAAQAGgAMABIAGgApAAwAHgADAAkAHgAvAAMAFwAuACMAFwARAC4AIAAvAB4AIAArAC8ABwAkABwABwAAACQAHAAnABkAHAAkACcADQAtAA8ADQAqAC0AKAAwACwAKAAlADAABgAfAAoABgAdAB8AHQAhAB8AHQAYACEA"),
+"lods": [7.38951, PackedByteArray("AgALAAUAAgAIAAsAGAAVAB8AGAATABUABgAYAB8ABgAfAAoAFAAQABYAFAAOABAAKAAEADAAKAABAAQADQAoADAADQAwAA8AGQAMABIAGQAnAAwABwAnABkABwAAACcAHgADAAkAHgAvAAMAFwAvAB4AFwARAC8A")],
+"material": SubResource("StandardMaterial3D_bylyf"),
+"name": "Haybale_Variant_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 50,
+"vertex_data": PackedByteArray("NQ897R3/KsA1Dz3tHf+z0jUPPe0d/1PVNQ897QwK//81Dz3tDArL0jUPPe0MClPVNQ8AAB3/UNU1DwAAHf8qwDUPAAAd/1PVAAAAAAwK//8AAAAADApQ1QAAAAAMClPV//9Q7xr0NMD//1DvGvSp1///UO8a9LvAOvwF1gAAu9c6/AXWAAC7wDr8BdYAAFP/cPzbEa/2McBw/NsRr/Y60nD82xGv9rvA5vugIKgOU9Lm+6AgqA67wOb7oCCoDlP/xq4AAB3/UNXGrgAAHf8qwMauAAAd/zPAxq4AAB3/SdL+XgAAHf8qwP5eAAAd/1DV/l4AAAwK///+XgAADApQ1cauAAAMCv//xq4AAAwKUNXGrgAADApi0sauAAAMClT/3F+i5P//KsDcX6Lk//9E1NxfouT//8LSxq497R3/KsDGrj3tHf9G1MauPe0d/zXAxq497R3/n9fGrj3tDAr//8auPe0MCkvUxq497QwKsdfGrj3tDApT//5e//8MCv///l7//wwKSNT+Xv//DArZ0rT/7v/5qXuqB1i3qv9//v/cqYmqB1i3qlBVV1W0/+7/B1i3qv9//v9QVVdVB1i3quQDXQPmrE6pdn9tAtCsWql2f20CyH3n/+UDXQMcVx9Qdn9tAkBXD1B2f20CIYL9/1BVV1UQAEsA5QNdAzJXFVAdAOH/UFVXVf9//v9QVVdV/3///1BVV1VUVwdQL4Lv/x0A4f/lqp2o6KmDqhAASwDiqp6o5ANdA/KsR6n/f///3KqhqN2sU6nYffj//3/+/9+qoKjMqZGq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_u3j88")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_x16p5"]
+points = PackedVector3Array(-8.46478, 58.8188, -15.3761, -8.46478, 58.8188, -52.7697, -117.806, -55.4199, -37.0042, 102.911, -47.7787, 50.4517, -102.449, 53.1482, 53.8837, 106.47, 53.2426, 50.4835, -104.045, -55.6227, 54.7958, -102.218, 53.0283, -53.8239, 103.839, 43.1035, -57.9728, -116.11, -54.5456, -53.8239, 43.2429, -54.2526, -53.5575, 49.9292, -54.0099, 53.2318, 103.745, -41.1506, -50.8991, -107.1, 46.7033, 47.493, 66.9907, 52.4708, 53.1361, 107.81, -6.09047, 47.598, -56.4477, 59.2791, -53.1881, 107.808, 43.2645, -8.82409, -105.675, 46.0891, -53.8239, -117.673, -37.7423, -36.9627, -107.219, -55.4244, 47.5506, 103.807, 52.0359, 22.0303, 73.9046, -50.4862, 53.1596, 46.0561, 52.124, -52.8884, 107.493, -6.06578, 50.963, -116.11, -37.1809, -53.8239, -84.071, 55.9695, -53.3179, 18.7768, 55.54, 25.4856, 59.9967, -50.3529, -53.1403)
+
+[node name="@Node3D@68" type="Node3D"]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.01, 0, 0.01, -4.37114e-10, 0, 0, 0)
+
+[node name="@StaticBody3D@69" type="StaticBody3D" parent="."]
+
+[node name="Haybale_Variant_3" type="MeshInstance3D" parent="@StaticBody3D@69"]
+mesh = SubResource("ArrayMesh_8dkxj")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@69"]
+transform = Transform3D(1, 0, 0, 0, 1, -3.55271e-15, 0, 3.55271e-15, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_x16p5")

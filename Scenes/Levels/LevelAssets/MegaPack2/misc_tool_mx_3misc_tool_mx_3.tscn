@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/misc_tool_mx_3_misc_tool_mx_3.png" id="1_aqod2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wr60r"]
+resource_name = "misc_tool_mx_3"
+cull_mode = 2
+albedo_texture = ExtResource("1_aqod2")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o05va"]
+_surfaces = [{
+"aabb": AABB(-0.268009, -0.05, -0.03, 0.536017, 0.1, 0.03),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMABAAHAAYABAAFAAcAAQAHAAUAAQADAAcAAgAEAAYAAgAAAAQAAwAGAAcAAwACAAYAAAAFAAQAAAABAAUA"),
+"name": "misc_tool_mx_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD//wAAAAD/////AAAAAAAAAAAAAAAA//8AAAAAAAAAAP///v8AAP/////+/wAAAAAAAP//AAD//wAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fgcle"]
+resource_name = "misc_tool_mx_3_misc_tool_mx_3"
+_surfaces = [{
+"aabb": AABB(-0.268009, -0.05, -0.03, 0.536017, 0.1, 0.03),
+"attribute_data": PackedByteArray("AABMtgAATLY4aEy2OGhMtv//TLb//0y2AAAAAAAATLbGl0y2xpdMtv//AAD//0y2AABMtgAAmuw4aJrsOGia7P//TLb//5rsAAAAAAAAmuzGl5rsxpea7P//AAD//5rs"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAAKAAQAAAAGAAoADAAWABIADAAQABYAAwAVAA8AAwAJABUACAAOABQACAACAA4ACwATABcACwAHABMAAQARAA0AAQAFABEA"),
+"material": SubResource("StandardMaterial3D_wr60r"),
+"name": "misc_tool_mx_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAD//wAA//8AAP//AAD/vwAA//8AAKoq/////wAAVNX/////AAD///////8AAP+/AAAAAAAA//8AAAAAAAD/PwAAAAAAAKoq//8AAAAAVNX//wAAAAD/////AAAAAP8/AAD///7//n8AAP///v//vwAA///+/6oq//////7/VNX//////v/+f//////+//+/AAAAAP///n8AAAAA////PwAAAAD//6oq//8AAP//VNX//wAA///+f///AAD///8/////f////39UVaqqqqpUVf///3////9/////fwAA/39UVaqqqqpUVf///38AAP9//3///////39UVaqqqqpUVf9///////9//3///wAA/39UVaqqqqpUVf9///8AAP9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_o05va")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o640g"]
+points = PackedVector3Array(-0.272254, -0.054254, -0.0342498, 0.272254, 0.0563492, 0.00828155, 0.272254, 0.0563492, -0.0342498, -0.272254, 0.0563492, 0.00828155, 0.272254, -0.054254, 0.00828155, 0.272254, -0.054254, -0.0342498, -0.272254, 0.0563492, -0.0342498, -0.272254, -0.054254, 0.00828155)
+
+[node name="@Node3D@368" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@369" type="StaticBody3D" parent="."]
+
+[node name="misc_tool_mx_3" type="MeshInstance3D" parent="@StaticBody3D@369"]
+mesh = SubResource("ArrayMesh_fgcle")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@369"]
+shape = SubResource("ConvexPolygonShape3D_o640g")

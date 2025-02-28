@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Harddrive_Base_color.png" id="1_tdn5q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wpvxk"]
+resource_name = "Harddrive"
+cull_mode = 2
+albedo_texture = ExtResource("1_tdn5q")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_q35xj"]
+_surfaces = [{
+"aabb": AABB(-0.163387, -0.0402421, -0.270329, 0.326774, 0.0804842, 0.540658),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Harddrive",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD+/wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD///7/AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2vww5"]
+resource_name = "Misc_Cube_005"
+_surfaces = [{
+"aabb": AABB(-0.163387, -0.0402421, -0.270329, 0.326774, 0.0804842, 0.540658),
+"attribute_data": PackedByteArray("xeG9AK25e48ou0D/xeFFHK25w42w1kD/vQC+AL4Ae48ou1FGvQBFHL4Aw42w1lFG/3G9AK25Qf8s2FFG/3FFHK25/R2z81FGg3C+AL4AQf8s2ED/g3BFHL4A/R2z80D/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AgALAAUAAgAIAAsABgAVAAkABgASABUAFAARABcAFAAOABEADAADAA8ADAAAAAMABwANABMABwABAA0AFgAEAAoAFgAQAAQA"),
+"material": SubResource("StandardMaterial3D_wpvxk"),
+"name": "Harddrive",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP////8AAAAA//9U1QAAAAD//1TVAAD///////8AAP////9U1QAA/////1TVAAAAAAAA//8AAAAAAABU1QAAAAAAAFTVAAD+/wAA//8AAP7/AABU1QAA/v8AAFTV//8AAP///////wAA//9U1f//AAD//1TV//////////////////9U1f///////1TV//8AAAAA/////wAAAABU1f//AAAAAFTV///+/wAA//////7/AABU1f///v8AAFTV/3//f6oqVNVU1VTV/3//f6qqqqpU1VTV/v//f6oqVNVU1VTV/v//f6qqqqpU1VTV/3//f6oqVNWqKqoq/3//f6qqqqqqKqoq/v//f6oqVNWqKqoq/v//f6qqqqqqKqoq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_q35xj")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_y2hoq"]
+points = PackedVector3Array(-0.150958, -0.0402, -0.247131, 0.162602, 0.0402, 0.267429, 0.150234, -0.0402, 0.247131, -0.163326, 0.0402, 0.267429, 0.162602, 0.0402, -0.267429, -0.163326, 0.0402, -0.267429, 0.150234, -0.0402, -0.247131, -0.150958, -0.0402, 0.247131)
+
+[node name="@Node3D@132" type="Node3D"]
+
+[node name="@StaticBody3D@133" type="StaticBody3D" parent="."]
+
+[node name="Harddrive" type="MeshInstance3D" parent="@StaticBody3D@133"]
+mesh = SubResource("ArrayMesh_2vww5")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@133"]
+shape = SubResource("ConvexPolygonShape3D_y2hoq")

@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/concrete_fence_hr_1_pillar_1_concrete_fence_hr_1.png" id="1_p4cbs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pw6sk"]
+resource_name = "concrete_fence_hr_1"
+cull_mode = 2
+albedo_texture = ExtResource("1_p4cbs")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4gwp1"]
+_surfaces = [{
+"aabb": AABB(-0.2, -0.100009, -2.5, 0.4, 0.200009, 2.5),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEABwABAAMABwAFAAEA"),
+"name": "concrete_fence_hr_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAACAP//AAAAAAAAAAAAAP7/AgD//wAA/v8AAAAAAAAAAP///v8AAAAA/P8AAAAA///+//7/AAD///z/AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ndyt3"]
+resource_name = "concrete_fence_hr_1_pillar_1_concrete_fence_hr_1_pillar_1"
+_surfaces = [{
+"aabb": AABB(-0.2, -0.100009, -2.5, 0.4, 0.200009, 2.5),
+"attribute_data": PackedByteArray("ROj//3Lu//9E6AAAcu4AAHLuepRy7v///////3LuAABy7oRr//8AAETo///Q+f//ROgAAND5AADQ+XqU0Pn////////Q+QAA0PmEa///AAA="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAAJAAIAAAAGAAkABQARAAcABQAPABEAEAAMABMAEAAKAAwACwADAA0ACwABAAMAEgAEAAgAEgAOAAQA"),
+"material": SubResource("StandardMaterial3D_pw6sk"),
+"name": "concrete_fence_hr_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAACAP///z8AAAIA//9U1QAAAAAAAP8/AAAAAAAAVNUAAAAAAAD///7/AgD//6oq/v8CAP///z/+/wAAAACqKv7/AAAAAP///v8AAAAA/z8AAP///v//vwAA///+/1TVAAD8/wAA/78AAPz/AABU1QAA/P8AAP/////+//7/qir///7//v//v////P8AAKoq///8/wAA//////z/AAD/vwAA/39U1VTVAAD/f1TVVNX/v/+/qiqqKgAA/3+qKqoq/7//vwAA/3////9/VNVU1f///39U1VTV/7//v6oqqir///9/qiqqKv+//7////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_4gwp1")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_boxb1"]
+points = PackedVector3Array(-0.219841, -0.119841, -2.51984, 0.216667, 0.118254, 0.0198412, 0.216667, -0.119841, 0.0198412, 0.216667, 0.118254, -2.51984, -0.219841, 0.118254, 0.0198412, -0.219841, -0.119841, 0.0198412, 0.216667, -0.119841, -2.51984, -0.219841, 0.118254, -2.51984)
+
+[node name="@Node3D@130" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@131" type="StaticBody3D" parent="."]
+
+[node name="concrete_fence_hr_1_pillar_1" type="MeshInstance3D" parent="@StaticBody3D@131"]
+mesh = SubResource("ArrayMesh_ndyt3")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@131"]
+shape = SubResource("ConvexPolygonShape3D_boxb1")

@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/metal_fence_hr_1_pillar_1_corner_metal_fence_hr_1.png" id="1_n7d45"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ex0op"]
+resource_name = "metal_fence_hr_1"
+cull_mode = 2
+albedo_texture = ExtResource("1_n7d45")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yyabe"]
+_surfaces = [{
+"aabb": AABB(-0.1, -0.100009, -2.5, 0.3, 0.300009, 2.5),
+"format": 34896613377,
+"index_count": 66,
+"index_data": PackedByteArray("BwACAAgABwABAAIAAQAGAAIAAQAFAAYACQAEAAoACQADAAQAAwALAAQAAwAAAAsABgAIAAIABgAKAAgABQAKAAYABQAJAAoAAAANAAsAAAAMAA0ADAAPAA0ADAAOAA8ADgAIAA8ADgAHAAgADwALAA0ADwAIAAsACgALAAgACgAEAAsA"),
+"name": "metal_fence_hr_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("qqoBAP//AACqqv7//v8AAKqq/f8AAAAAAAABAP//AAAAAAAAAAAAAAAA///+/wAAAAD9/wAAAACqqqqq/v8AAKqqqKoAAAAAAACqqv7/AAAAAKiqAAAAAKmqAAAAAAAA/v8CAP//AAD+/wAAAAAAAP//qqr+/wAA//+oqgAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ggfhq"]
+resource_name = "metal_fence_hr_1_pillar_1_corner_metal_fence_hr_1_pillar_1_corner"
+_surfaces = [{
+"aabb": AABB(-0.1, -0.100009, -2.5, 0.3, 0.300009, 2.5),
+"attribute_data": PackedByteArray("cu7//xD6//9y7v///////3LuAABy7oRr//8AADLu///Q+f//Mu4AAND5AADQ+TyK0Pn////////Q+QAA0PmEa///AAAQ+v//EPr//3LuwnVy7sJ10PnCdRD6AAAQ+gAAEPr//xD6///Q+cJ10PnCdRD6AAAQ+gAAcu4AAHLuwnVy7jyKEPoAAHLu////////cu4AAHLuhGv//wAA0Pn////////Q+QAA0PmEa///AAA="),
+"format": 34896613399,
+"index_count": 66,
+"index_data": PackedByteArray("EgAGABcAEgADAAYAAgAOAAQAAgAMAA4AGAAJABwAGAAHAAkACAAeAAoACAAAAB4ADwATAAUADwAbABMADQAdABAADQAZAB0AAQAmACEAAQAjACYAIgApACQAIgAnACkAKAAWACsAKAARABYAKgAfACUAKgAVAB8AGgAgABQAGgALACAA"),
+"material": SubResource("StandardMaterial3D_ex0op"),
+"name": "metal_fence_hr_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 44,
+"vertex_data": PackedByteArray("qqoBAP////+qqgEA////P6qq/v/+/wAAqqr+//7/qiqqqv3/AAAAAKqq/f8AAP//qqr9/wAAqioAAAEA//9U1QAAAQD/////AAAAAAAAVNUAAAAAAAD//wAAAAAAAP//AAD///7/AAAAAP///v9U1QAA/f8AAAAAAAD9/wAA//8AAP3/AABU1aqqqqr+//+/qqqqqv7/qiqqqqiqAAD//6qqqKoAAP//qqqoqgAA//+qqqiqAAD/v6qqqKoAAKoqAACqqv7/VNUAAKqq/v9U1QAAqKoAAP//AACoqgAA//8AAKiqAABU1QAAqKoAAFTVqaoAAAAA//+pqgAAAAD//6mqAAAAAP//qaoAAAAA/z/+/wIA//+qKv7/AgD///8//v8AAAAAqir+/wAAAAD///7/AAAAAP8///+qqv7/qir//6qq/v//v///qKoAAKoq//+oqgAA/////6iqAAD/v/9//z8AAP9//3//v6oqqir/f/+//3/+/6oqqipU1VTV/3//P1TVVNX/f/8//3/+//9//79U1VTV/3//v/9//v9U1VTV/v//f6oqqir/f/7//3/+//+//7/+//9/qiqqKlTVVNVU1VTV/3/+//9//v9U1VTVVNVU1f9//z//v/+//3/+/wAA/3+qKqoqAAD/f6oqqir/v/+/AAD/f6oqqir+//9/qiqqKv+//7/+//9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_yyabe")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lu5ce"]
+points = PackedVector3Array(-0.119841, 0.237302, -2.51984, 0.237302, 0.118231, 0.0198412, 0.237302, -0.119841, 0.0198412, -0.119841, 0.237302, 0.0198412, -0.119841, -0.119841, 0.0198412, 0.237302, -0.119841, -2.51984, -0.119841, -0.119841, -2.51984, 0.118231, 0.237302, -2.51984, 0.237302, 0.118231, -2.51984, 0.118231, 0.237302, 0.0198412)
+
+[node name="@Node3D@360" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@361" type="StaticBody3D" parent="."]
+
+[node name="metal_fence_hr_1_pillar_1_corner" type="MeshInstance3D" parent="@StaticBody3D@361"]
+mesh = SubResource("ArrayMesh_ggfhq")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@361"]
+shape = SubResource("ConvexPolygonShape3D_lu5ce")

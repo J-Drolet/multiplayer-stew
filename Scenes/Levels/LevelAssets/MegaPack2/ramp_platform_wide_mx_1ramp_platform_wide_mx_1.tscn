@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/ramp_platform_wide_mx_1_concrete_hr_4.png" id="1_sabtl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s34ew"]
+resource_name = "concrete_hr_4"
+cull_mode = 2
+albedo_texture = ExtResource("1_sabtl")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_a2174"]
+_surfaces = [{
+"aabb": AABB(-3.7, -2.30001, -1.00001, 3.7, 4.60001, 1.00002),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AQAFAAAAAQAEAAUAAAAFAAMAAgAEAAEAAQADAAIAAQAAAAMA"),
+"name": "concrete_hr_4",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("//8AAAEAAAD///7/AAAAAP/////9/wAA/v8AAP//AAAAAP///f8AAAAAAAD//wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_d157o"]
+resource_name = "ramp_platform_wide_mx_1_ramp_platform_wide_mx_1"
+_surfaces = [{
+"aabb": AABB(-3.7, -2.30001, -1.00001, 3.7, 4.60001, 1.00002),
+"attribute_data": PackedByteArray("HdP/////pqz/////HdMRd///EXf//6Ws3rERd///asrdsf7//v9qyvyEEXf8hGrK/IRqyvyE/v8="),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("BAANAAIABAAKAA0AAQAMAAkABwALAAUAAwAIAAYAAwAAAAgA"),
+"material": SubResource("StandardMaterial3D_s34ew"),
+"name": "concrete_hr_4",
+"primitive": 3,
+"uv_scale": Vector4(1.925, 2.15, 0, 0),
+"vertex_count": 14,
+"vertex_data": PackedByteArray("//8AAAEA/7///wAAAQD/P///AAABAAAA///+/wAA/7////7/AAAAAP///v8AAP+///////3//7///////f//v/7/AAD///+//v8AAP///z8AAP///f8AAAAA///9//+/AAAAAP///z8AAAAA//8AAP9/AAAAAP9//v//jv9/AAD+//+O////f/9/AAD///9//38AAAAA/3/+//+O////fwAA/3/+//+O")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_a2174")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o0jmq"]
+points = PackedVector3Array(-0.158959, 2.33651, -1.03651, -3.73651, -2.33651, -0.0143858, -3.73651, -2.33651, 0.0587301, 0.0603175, -2.33651, -1.03651, 0.0603175, 2.33651, 0.0587301, -3.73651, 2.33651, 0.0587301, 0.0603175, -2.33651, 0.0587301, -3.44402, 2.33651, -0.160403, -0.7432, -2.33651, -0.890383, 0.0603175, 2.33651, -1.03651, -3.44402, -2.33651, -0.160403, -3.66329, 2.33651, -0.0873945, -0.158959, -2.33651, -1.03651, -0.7432, 2.33651, -0.890383, -3.66329, -2.33651, -0.0873945, -3.73651, 2.33651, -0.0143858)
+
+[node name="@Node3D@532" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@533" type="StaticBody3D" parent="."]
+
+[node name="ramp_platform_wide_mx_1" type="MeshInstance3D" parent="@StaticBody3D@533"]
+mesh = SubResource("ArrayMesh_d157o")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@533"]
+shape = SubResource("ConvexPolygonShape3D_o0jmq")

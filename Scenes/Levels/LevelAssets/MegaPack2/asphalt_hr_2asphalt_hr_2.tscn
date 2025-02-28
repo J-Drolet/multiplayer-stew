@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/asphalt_hr_2_asphalt_hr_1.png" id="1_s3od6"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/asphalt_hr_2_hole_hr_1.png" id="2_r2ei6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1dfin"]
+resource_name = "asphalt_hr_1"
+cull_mode = 2
+albedo_texture = ExtResource("1_s3od6")
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_768so"]
+resource_name = "hole_hr_1"
+cull_mode = 2
+albedo_texture = ExtResource("2_r2ei6")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hl0k2"]
+_surfaces = [{
+"aabb": AABB(-2, -2, -6.99237e-06, 4, 4, 0.0200127),
+"format": 34896613377,
+"index_count": 48,
+"index_data": PackedByteArray("AwALAAIAAwAKAAsAAQAEAAAAAQAFAAQAAwAFAAEAAwAGAAUAAgAGAAMAAgAHAAYAAAAHAAIAAAAEAAcAAAAJAAEAAAAIAAkAAgAIAAAAAgALAAgAAQAKAAMAAQAJAAoA"),
+"name": "asphalt_hr_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("MzPMTCAAAADLzMxMIAAAADMzmRkpAAAAy8yZGSkAAAAAAP//AAAAAP////8AAAAA//8AAC0AAAAAAAAALQAAADMzzEz2/wAAy8zMTPb/AADLzJkZ//8AADMzmRn//wAA")
+}, {
+"aabb": AABB(-1.2, -1.6, 0.020003, 2.4, 0.8, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAACAAEAAAADAAIA"),
+"name": "hole_hr_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAD//wAAAAD/////AAAAAP//AAALRAAAAAAAAAtEAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yf04k"]
+resource_name = "asphalt_hr_2_asphalt_hr_2"
+_surfaces = [{
+"aabb": AABB(-2, -2, -6.99237e-06, 4, 4, 0.0200127),
+"attribute_data": PackedByteArray("mZlyzpmZXtIowHLOKMByzmXmcs5l5l7SmZle0pmZeu8owHrvKMB672XmXtJl5nrv/3/WWv//1lr//////3///5mZMtOEv3LOhL9yzmXmMtOEv3rvZeYy05mZMtOEv3rv"),
+"format": 34896613399,
+"index_count": 48,
+"index_data": PackedByteArray("CgAWAAYACgAVABYABAAMAAAABAANAAwACwANAAQACwAOAA0ABwAOAAsABwAPAA4AAAAPAAcAAAAMAA8AAQATAAUAAQAQABMACAARAAIACAAXABEAAwAUAAkAAwASABQA"),
+"material": SubResource("StandardMaterial3D_1dfin"),
+"name": "asphalt_hr_1",
+"primitive": 3,
+"uv_scale": Vector4(2, 1.55, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("MzPMTCAAAAAzM8xMIAACOjMzzEwgAPzFy8zMTCAAVBbLzMxMIAAAAMvMzEwgAAI6MzOZGSkA/MUzM5kZKQAAADMzmRkpAPzFy8yZGSkAVBbLzJkZKQD8xcvMmRkpAAAAAAD//wAAAAD/////AAAAAP//AAAtAAAAAAAAAC0AAAAzM8xM9v8COjMzzEz2//zFy8zMTPb/VBbLzMxM9v8COsvMmRn//1MWy8yZGf///MUzM5kZ///8xTMzmRn///zF/v//f/8cAUYAY/45+koJav7//3/+Of6cAMYAY////3/9uf8cCOoENf/i/bn///9/////f////3////9//v//f/8cAUYAY/45+koJav45/pwI6gQ1/+L9uQDGAGP9uf8c")
+}, {
+"aabb": AABB(-1.2, -1.6, 0.020003, 2.4, 0.8, 1e-05),
+"attribute_data": PackedByteArray("AAAAAP//AAD/////AAD//w=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAACAAEAAAADAAIA"),
+"material": SubResource("StandardMaterial3D_768so"),
+"name": "hole_hr_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAD//wAAAAD/////AAAAAP//AAALRAAAAAAAAAtEAAD///9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_hl0k2")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_exf76"]
+points = PackedVector3Array(-2.03175, -2.03175, -0.031746, 2.03175, 2.03175, 0.031746, 2.03175, 2.03175, -0.031746, -2.03175, 2.03175, 0.031746, 2.03175, -2.03175, 0.031746, 2.03175, -2.03175, -0.031746, -2.03175, 2.03175, -0.031746, -2.03175, -2.03175, 0.031746)
+
+[node name="@Node3D@8" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@9" type="StaticBody3D" parent="."]
+
+[node name="asphalt_hr_2" type="MeshInstance3D" parent="@StaticBody3D@9"]
+mesh = SubResource("ArrayMesh_yf04k")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@9"]
+shape = SubResource("ConvexPolygonShape3D_exf76")

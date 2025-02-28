@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wooden_board_2_wooden_board_hr_2.png" id="1_ip1vo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sc5fo"]
+resource_name = "wooden_board_hr_2"
+cull_mode = 2
+albedo_texture = ExtResource("1_ip1vo")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sxhyq"]
+_surfaces = [{
+"aabb": AABB(-0.524242, -1.9, -0.0300001, 1.04848, 1.9, 0.0300069),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMABQAHAAQABQAGAAcAAQAHAAYAAQADAAcAAgAFAAQAAgAAAAUAAwAEAAcAAwACAAQAAAAGAAUAAAABAAYA"),
+"name": "wooden_board_hr_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD+/wAAAAD///7/AAAAAAAAAAAPAAAA//8AAA8AAAAAAAAA//8AAAAA///v/wAA/////+//AAD//wAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xx83h"]
+resource_name = "wooden_board_2_wooden_board_2"
+_surfaces = [{
+"aabb": AABB(-0.524242, -1.9, -0.0300001, 1.04848, 1.9, 0.0300069),
+"attribute_data": PackedByteArray("AAAAAAAAlv8AAP//AACW////AAD/////AAAAAAAAAAAAAAAAAAAAAP//AAD//wAAAAAAAAAAfQQjCAAAAAB9BAAA//8jCJb/IwiW////fQT/////IwgAAP//AAD//30E"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AgALAAUAAgAIAAsAEAAWAAwAEAAUABYAAwAVABIAAwAJABUABgARAA4ABgABABEACgANABcACgAHAA0AAAATAA8AAAAEABMA"),
+"material": SubResource("StandardMaterial3D_sc5fo"),
+"name": "wooden_board_hr_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAD+/wAA/78AAP7/AAD/PwAA/v8AAP/////+/wAA//////7/AAD/v////v8AAP//AAAAAA8A/z8AAAAADwD/PwAAAAAPAP////8AAA8A/////wAADwD/P///AAAPAP//AAAAAP///n8AAAAA////PwAAAAD///8/AAD//+///78AAP//7//+fwAA///v//8//////+//////////7///v//////v//5///8AAP///////wAA///+f///AAD///8/////f/9//v////9//7//f////3////9//3/+/wAA/3////9//7//fwAA/3////9//3///wAA/3//f/7/////f/9/////f/7//7//f////3//f////7//f/9///8AAP9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_sxhyq")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lsla1"]
+points = PackedVector3Array(0.546435, 0.0150794, 0.0152381, -0.539279, -1.91508, -0.0450794, -0.539279, -1.91508, 0.0152381, -0.539279, 0.0150794, -0.0450794, 0.546435, -1.91508, -0.0450794, 0.546435, -1.91508, 0.0152381, -0.539279, 0.0150794, 0.0152381, 0.546435, 0.0150794, -0.0450794)
+
+[node name="@Node3D@754" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@755" type="StaticBody3D" parent="."]
+
+[node name="wooden_board_2" type="MeshInstance3D" parent="@StaticBody3D@755"]
+mesh = SubResource("ArrayMesh_xx83h")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@755"]
+shape = SubResource("ConvexPolygonShape3D_lsla1")
