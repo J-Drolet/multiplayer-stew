@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://qdxblevuyg8m"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_bag_onions.png" id="1_8g7dl"]
+[ext_resource type="Texture2D" uid="uid://c2d2agfk8ufaj" path="res://Assets/Textures/Restaurant/Quequis_House_Props_bag_onions.png" id="1_8g7dl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jrivt"]
 resource_name = "bag_onions"
@@ -46,15 +46,16 @@ shadow_mesh = SubResource("ArrayMesh_eu41h")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_dry57"]
 points = PackedVector3Array(0.693048, 1.90714, -0.41457, -1.05128, -0.826258, 0.145556, -1.03983, -0.816952, 0.280775, 1.18572, -2.2524, 0.0876773, 0.480343, 1.40956, 0.990409, -0.0103668, -0.968099, -1.03704, -0.789793, 2.05721, -0.557755, -0.438458, -2.05722, 0.719568, -0.799615, -2.14305, -0.49201, -0.441379, 2.00698, 0.867214, 0.89272, 1.32646, -0.687681, 1.09985, 1.25528, 0.28427, 0.822311, -2.07495, -0.548111, -0.0782181, 1.24459, -1.09372, 0.481004, -1.89279, 0.781223, -0.504432, -0.558101, 0.994469, 0.486377, 2.28348, 0.150986, -0.997056, 1.83636, 0.219147, -0.827694, -0.810937, -0.676411, -0.0839481, 2.29621, -0.635492, -0.940974, -2.13878, 0.22323, -0.663255, 2.31572, 0.226461, 1.18572, -2.2524, 0.23789, -0.0122867, -2.21319, -0.706188, 0.96, 0.629892, -0.686046, 0.606781, 0.760597, 0.964394, -0.834849, 1.38233, -0.681363, -0.495632, 1.32469, 0.977965, 0.195507, 0.553263, -1.08549, 0.470693, -0.609955, 0.966281, 0.130538, 2.28921, 0.579904, 1.16866, 0.491675, 0.284038)
 
-[node name="@Node3D@6" type="Node3D"]
+[node name="_Node3D_6" type="Node3D"]
 transform = Transform3D(0.258396, 0, 0, 0, 0.222329, 0, 0, 0, 0.222329, 0, 0, 0)
 
 [node name="@StaticBody3D@7" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 1.21091, 0)
 
 [node name="bag_onions" type="MeshInstance3D" parent="@StaticBody3D@7"]
+transform = Transform3D(-4.37114e-08, -4.37114e-08, 1, -4.37114e-08, 1, 4.37114e-08, -1, -4.37114e-08, -4.37114e-08, 0.222463, 9.72418e-09, 0)
 mesh = SubResource("ArrayMesh_kapxj")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_dry57")
