@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/platform_large_mx_1_concrete_hr_4.png" id="1_ibk6s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8enal"]
+resource_name = "concrete_hr_4"
+cull_mode = 2
+albedo_texture = ExtResource("1_ibk6s")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ss3ly"]
+_surfaces = [{
+"aabb": AABB(-4, -4, -1.00001, 8, 8, 1.00003),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AQAFAAcAAQADAAUAAgAGAAQAAgAAAAYAAQAGAAAAAQAHAAYAAgAFAAMAAgAEAAUAAAADAAEAAAACAAMA"),
+"name": "concrete_hr_4",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD+/wAAAAD///7/AAAAAAAAAAABAAAA//8AAAEAAAAAAAAA//8AAP//AAD//wAAAAD///3/AAD//////f8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ktir5"]
+resource_name = "platform_large_mx_1_platform_large_mx_1"
+_surfaces = [{
+"aabb": AABB(-4, -4, -1.00001, 8, 8, 1.00003),
+"attribute_data": PackedByteArray("IVgAACFYkLKOtgAAjrYAAP7/kLL+/wAAIViQsiFY1fyNttX8jbbV/P7/1fz//5CyIVgr0pKh1vySodb8/v8r0iFYK9KSoQAAkqEAAP//K9I="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AwAOABIAAwAJAA4ACAARAA0ACAACABEABAAQAAEABAATABAABgAPAAsABgAMAA8AAAAKAAUAAAAHAAoA"),
+"material": SubResource("StandardMaterial3D_8enal"),
+"name": "concrete_hr_4",
+"primitive": 3,
+"uv_scale": Vector4(2.90476, 1.92857, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAD+/wAAAAAAAP7/AAD/vwAA/v8AAAAA///+/wAA/7////7/AAD/v////v8AAAAAAAAAAAEA/z8AAAAAAQAAAAAAAAABAAAA//8AAAEA/7///wAAAQAAAP//AAABAP8/AAAAAP///z8AAAAA//8AAP//AAD///+///8AAP///z8AAP///f//vwAA///9/wAA//////3//7///////f//v////3/+//9//z//fwCAAgD+//9//v//fwAA/3////9//z//fwCAAQD///9/AAD/fwAA/3//P/9/AIABAAAA/3/+//9//z//fwCAAgD+//9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ss3ly")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3if7f"]
+points = PackedVector3Array(-4.06349, -4.06349, -1.06338, 4.06349, 4.06349, 0.0792533, 4.06349, 4.06349, -1.06338, -4.06349, 4.06349, 0.0792533, 4.06349, -4.06349, 0.0792533, 4.06349, -4.06349, -1.06338, -4.06349, 4.06349, -1.06338, -4.06349, -4.06349, 0.0792533)
+
+[node name="@Node3D@496" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@497" type="StaticBody3D" parent="."]
+
+[node name="platform_large_mx_1" type="MeshInstance3D" parent="@StaticBody3D@497"]
+mesh = SubResource("ArrayMesh_ktir5")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@497"]
+shape = SubResource("ConvexPolygonShape3D_3if7f")

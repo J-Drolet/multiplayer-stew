@@ -1,0 +1,548 @@
+[gd_resource type="Resource" load_steps=80 format=3]
+
+[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetPersistentData.cs" id="1_65qwh"]
+[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetLibrary.cs" id="2_7gv3c"]
+
+[sub_resource type="Resource" id="Resource_6afq6"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/AppleFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_d1cq3"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/AxeFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7k50p"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Barrel_Variant_1Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_lp5h1"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Barrel_Variant_2Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_oev6p"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Basket_Variant_1Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xu2qw"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Basket_Variant_2Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ohy73"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Bird_HouseFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_u488j"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Campfire_Variant_1Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2hp3t"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Campfire_Variant_2Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_3em4v"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/CarrotFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8p3cd"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Cart_DestroyedFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_avux7"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Cart_Variant_1Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_y23vr"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Chicken-Coop_Variant_1Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4b5k0"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Chicken-Coop_Variant_2Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_yc0ts"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Crate_Variant_1Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_lvue6"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/CucumberFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_sjdwc"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Feeding_Basket_Variant_1Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_yoa2r"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Feeding_Basket_Variant_2Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_g4kuj"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Feeding_Basket_Variant_3Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_1xxtv"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Feeding_Basket_Variant_4Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_erfge"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Fence_Long_Variant_1Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2af35"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Fence_Long_Variant_2Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4ijrp"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Fence_Long_Variant_3Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4l2ne"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Fence_Medium_Variant_1Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ywu2g"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Fence_Medium_Variant_2Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ng20t"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Fence_Medium_Variant_3Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_20poi"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Fence_Short_Variant_1Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_lcytj"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Fence_Short_Variant_2Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_jhsqk"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Fence_Short_Variant_3Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_x4n0q"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Fuel_TankFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_201n2"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/GrainStoreFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_j4kgf"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Haybale_Variant_1Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_vrdfx"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Haybale_Variant_2Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_rbq6t"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Haybale_Variant_3Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6u1xr"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Haybale_Variant_4Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_37c3x"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Haybale_Variant_5Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ywgb7"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/HoeFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_u3yag"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/House_Variant_1Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_uv1gj"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/House_Variant_2Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_af0bo"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/House_Variant_3Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_u1bjl"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/House_Variant_4Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0jmtl"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/House_Variant_5Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_c7we3"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/LampFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_d30wp"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/LogFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0vd3h"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Notice-BoardFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2t6jv"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/PavementFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_gyrvf"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Pile_Variant_1Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_fo4w0"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Pile_Variant_2Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4y5ay"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Pile_Variant_3Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5qitw"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Pile_Variant_4Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_l87ul"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/PumpkinFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_41ppt"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/RakeFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_qvu6j"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Shovel_Variant_1Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_m3l5g"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Shovel_Variant_2Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_bp2jo"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Stones_Variant_1Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8ttg0"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Stones_Variant_2Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_wxlch"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Storage_DestroyedFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2ty1q"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Storage_Variant_1Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_f1ciw"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Storage_Variant_2Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_hkaqa"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Storage_Variant_3Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_t7naj"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Storage_Variant_4Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_mv3aj"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Storage_Variant_5Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_p34ll"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/TomatoFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7dsk6"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/TractorFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5dg6c"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Tractor_DestroyedFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_kocun"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Tree_Logs_Variant_1Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ddtf5"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Tree_Logs_Variant_2Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_u5wym"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Water-PostFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_lnqgk"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Water_WellFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7x6j1"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/WheelbarrowFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2osdn"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Wind-MillFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8ny74"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Wooden_Cart_Variant_1Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_dxtxu"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Wooden_Cart_Variant_2Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4h84a"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Wooden_FrameFarm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8jtgb"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Wooden_Post_Variant_1Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4hdco"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Wooden_Post_Variant_2Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8v5ud"]
+script = ExtResource("1_65qwh")
+path = "res://Scenes/Levels/LevelAssets/Farm/Wooden_Post_Variant_3Farm-Assets.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[resource]
+script = ExtResource("2_7gv3c")
+assetData = [SubResource("Resource_6afq6"), SubResource("Resource_d1cq3"), SubResource("Resource_7k50p"), SubResource("Resource_lp5h1"), SubResource("Resource_oev6p"), SubResource("Resource_xu2qw"), SubResource("Resource_ohy73"), SubResource("Resource_u488j"), SubResource("Resource_2hp3t"), SubResource("Resource_3em4v"), SubResource("Resource_8p3cd"), SubResource("Resource_avux7"), SubResource("Resource_y23vr"), SubResource("Resource_4b5k0"), SubResource("Resource_yc0ts"), SubResource("Resource_lvue6"), SubResource("Resource_sjdwc"), SubResource("Resource_yoa2r"), SubResource("Resource_g4kuj"), SubResource("Resource_1xxtv"), SubResource("Resource_erfge"), SubResource("Resource_2af35"), SubResource("Resource_4ijrp"), SubResource("Resource_4l2ne"), SubResource("Resource_ywu2g"), SubResource("Resource_ng20t"), SubResource("Resource_20poi"), SubResource("Resource_lcytj"), SubResource("Resource_jhsqk"), SubResource("Resource_x4n0q"), SubResource("Resource_201n2"), SubResource("Resource_j4kgf"), SubResource("Resource_vrdfx"), SubResource("Resource_rbq6t"), SubResource("Resource_6u1xr"), SubResource("Resource_37c3x"), SubResource("Resource_ywgb7"), SubResource("Resource_u3yag"), SubResource("Resource_uv1gj"), SubResource("Resource_af0bo"), SubResource("Resource_u1bjl"), SubResource("Resource_0jmtl"), SubResource("Resource_c7we3"), SubResource("Resource_d30wp"), SubResource("Resource_0vd3h"), SubResource("Resource_2t6jv"), SubResource("Resource_gyrvf"), SubResource("Resource_fo4w0"), SubResource("Resource_4y5ay"), SubResource("Resource_5qitw"), SubResource("Resource_l87ul"), SubResource("Resource_41ppt"), SubResource("Resource_qvu6j"), SubResource("Resource_m3l5g"), SubResource("Resource_bp2jo"), SubResource("Resource_8ttg0"), SubResource("Resource_wxlch"), SubResource("Resource_2ty1q"), SubResource("Resource_f1ciw"), SubResource("Resource_hkaqa"), SubResource("Resource_t7naj"), SubResource("Resource_mv3aj"), SubResource("Resource_p34ll"), SubResource("Resource_7dsk6"), SubResource("Resource_5dg6c"), SubResource("Resource_kocun"), SubResource("Resource_ddtf5"), SubResource("Resource_u5wym"), SubResource("Resource_lnqgk"), SubResource("Resource_7x6j1"), SubResource("Resource_2osdn"), SubResource("Resource_8ny74"), SubResource("Resource_dxtxu"), SubResource("Resource_4h84a"), SubResource("Resource_8jtgb"), SubResource("Resource_4hdco"), SubResource("Resource_8v5ud")]
+previewPerspective = 0

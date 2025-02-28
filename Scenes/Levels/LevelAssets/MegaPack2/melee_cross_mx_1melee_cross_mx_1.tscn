@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/melee_cross_mx_1_melee_cross_mx_1.png" id="1_li45e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pulwm"]
+resource_name = "melee_cross_mx_1"
+cull_mode = 2
+albedo_texture = ExtResource("1_li45e")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1tue5"]
+_surfaces = [{
+"aabb": AABB(-0.150002, -0.182001, -0.014, 0.91, 0.364, 0.028),
+"format": 34896613377,
+"index_count": 132,
+"index_data": PackedByteArray("AQAPAAMAAQANAA8ABwASAAYABwATABIABwAJAAUABwALAAkAAAAWAAQAAAAUABYAAgAEAAYAAgAAAAQABwABAAMABwAFAAEACgAJAAsACgAIAAkABgALAAcABgAKAAsABQAIAAQABQAJAAgABAAKAAYABAAIAAoADAAPAA0ADAAOAA8AAgAMAAAAAgAOAAwAAwAOAAIAAwAPAA4AAAANAAEAAAAMAA0AEAATABEAEAASABMABgAQAAIABgASABAAAwATAAcAAwARABMAAgARAAMAAgAQABEAFgAVABcAFgAUABUABQAVAAEABQAXABUABAAXAAUABAAWABcAAQAUAAAAAQAVABQA"),
+"name": "melee_cross_mx_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("sso0l/7/AACyyjSXAAAAALLKymj+/wAAssrKaAAAAABE3DSX/v8AAETcNJcAAAAARNzKaP7/AABE3MpoAAAAAP//NJf+/wAA//80lwAAAAD//8po/v8AAP//ymgAAAAAAAA0l/7/AAAAADSXAAAAAAAAymj+/wAAAADKaAAAAACyygAA//8AALLKAAAAAAAARNwAAP//AABE3AAAAAAAALLK///+/wAAssr//wAAAABE3P///v8AAETc//8AAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_edwlo"]
+resource_name = "melee_cross_mx_1_melee_cross_mx_1"
+_surfaces = [{
+"aabb": AABB(-0.150002, -0.182001, -0.014, 0.91, 0.364, 0.028),
+"attribute_data": PackedByteArray("G5cLNhuXCzYblws2G5eTPqqqCzYblws2G5cLNhuXCzYblws2G5cLNlVVCzbjaAs242gLNuNoCzbjaJM+42gLNuNoCzbjaAs242gLNuNoCzYbl3EcG5dEJBuXRCQbl0QkqqpEJBuXRCQbl0QkG5dEJBuXRCQbl0QkVVVEJONocRzjaEQk42hEJONoRCTjaEQk42hEJONoRCTjaEQk42hEJFU1kx4blwAAqqoAAONIkx4blwAAG5cAAFU1EDFVVQAA42gAAONIEDHjaAAA42gAAFVVwHYbl///qqr//+NowHYbl///G5f//1VVPolVVf//42j//+NoPonjaP//42j//wAACzYAAJM+VVULNgAACzYAAAs242gLNgAAcRwAAEQkVVVEJAAARCQAAEQk42hEJONoWnD//ws2//+TPuNoPmn//ws2//8LNhuXWnD//3Ec//9EJBuXPmn//0Qk//9EJA=="),
+"format": 34896613399,
+"index_count": 132,
+"index_data": PackedByteArray("BgA/ABEABgA4AD8AJwBGAB8AJwBKAEYAJQAsABoAJQAzACwAAABUABUAAABNAFQADAAXACIADAABABcAJAAHABIAJAAZAAcALgArADEALgAoACsAHgAyACMAHgAvADIAHAAqABgAHAAtACoAFgAwACEAFgApADAANAA9ADcANAA6AD0ADQA1AAIADQA8ADUAEAA7AAoAEAA+ADsABAA5AAkABAA2ADkAQgBLAEUAQgBIAEsAIABAAAsAIABHAEAAEwBJACYAEwBEAEkADgBDAA8ADgBBAEMAUgBPAFUAUgBMAE8AGwBRAAgAGwBWAFEAFABXAB0AFABTAFcABQBOAAMABQBQAE4A"),
+"material": SubResource("StandardMaterial3D_pulwm"),
+"name": "melee_cross_mx_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 88,
+"vertex_data": PackedByteArray("sso0l/7//z+yyjSX/v//P7LKNJf+//8/sso0l/7/VNWyyjSX/v9U1bLKNJcAAFTVsso0lwAA//+yyjSXAAD//7LKNJcAAP//sso0lwAAVNWyyspo/v9U1bLKymj+//8/ssrKaP7//z+yyspo/v//P7LKymj+/1TVssrKaAAAVNWyyspoAABU1bLKymgAAP//ssrKaAAA//+yyspoAAD//0TcNJf+/1TVRNw0l/7//z9E3DSX/v//P0TcNJf+//8/RNw0l/7/VNVE3DSXAAD//0TcNJcAAP//RNw0lwAA//9E3DSXAABU1UTcNJcAAFTVRNzKaP7/VNVE3Mpo/v9U1UTcymj+//8/RNzKaP7//z9E3Mpo/v//P0TcymgAAFTVRNzKaAAA//9E3MpoAAD//0TcymgAAP//RNzKaAAAVNX//zSX/v//v///NJf+//8///80l/7/VNX//zSXAAD/v///NJcAAP////80lwAAVNX//8po/v//v///ymj+/1TV///KaP7//z///8poAAD/v///ymgAAFTV///KaAAA//8AADSX/v8AAAAANJf+//8/AAA0l/7/VNUAADSXAAAAAAAANJcAAP//AAA0lwAAVNUAAMpo/v8AAAAAymj+/1TVAADKaP7//z8AAMpoAAAAAAAAymgAAFTVAADKaAAA//+yygAA////P7LKAAD//1TVssoAAP//VNWyygAAAABU1bLKAAAAAP//ssoAAAAAVNVE3AAA//9U1UTcAAD///8/RNwAAP//VNVE3AAAAAD//0TcAAAAAFTVRNwAAAAAVNWyyv///v//v7LK///+//8/ssr///7/VNWyyv//AAD/v7LK//8AAFTVssr//wAA//9E3P///v//v0Tc///+/1TVRNz///7//z9E3P//AAD/v0Tc//8AAP//RNz//wAAVNX//wAA//8AAP//AABU1VTVqqqqqlTVVNX/v/+//7//v/+//7+qqqqqVFVUVf//AAD//wAA//8AAFTVVNVU1VTVVFVUVf+//7//v/+//7//v6oqqir//wAA//8AAP//AACqqqqq/7//v/+//7//v/+/qqqqqqoqqipUVVRVqiqqKv//AAD//wAA//8AAFRVVFX/v/+//7//v/+//7+qKqoq/38AAP//AACqqqqq/38AAP+//7+qqqqq/38AAFRVVFX//wAA/38AAFRVVFX/v/+//z//f///AACqqqqq/z//f/+//7+qqqqq/z//f1RVVFX//wAA/z//f1RVVFX/v/+///8AAFTVVNVUVVRVVNVU1f+//79UVVRVqiqqKv//AABUVVRV/7//v6oqqipUVVRV////f///AABU1VTV////f1TVVNX/v/+/////f6oqqir//wAA////f/+//7+qKqoq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1tue5")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_t07q0"]
+points = PackedVector3Array(0.5665, -0.185792, -0.0177917, 0.634748, 0.185792, 0.020125, 0.763702, 0.0341176, 0.020125, -0.153612, -0.0341176, 0.020125, 0.5665, 0.185792, -0.0177917, -0.153612, 0.0341176, -0.0177917, 0.634748, -0.185792, 0.020125, 0.763702, -0.0341176, -0.0177917, -0.153612, 0.0341176, 0.020125, -0.153612, -0.0341176, -0.0177917, 0.634748, 0.185792, -0.0177917, 0.634748, -0.185792, -0.0177917, 0.5665, -0.185792, 0.020125, 0.5665, 0.185792, 0.020125, 0.763702, -0.0341176, 0.020125, 0.763702, 0.0341176, -0.0177917)
+
+[node name="@Node3D@340" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@341" type="StaticBody3D" parent="."]
+
+[node name="melee_cross_mx_1" type="MeshInstance3D" parent="@StaticBody3D@341"]
+mesh = SubResource("ArrayMesh_edwlo")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@341"]
+shape = SubResource("ConvexPolygonShape3D_t07q0")

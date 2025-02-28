@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/poster_cx_16_poster_cx_16.png" id="1_pi66w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_04nbk"]
+resource_name = "poster_cx_16"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_pi66w")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_iis3t"]
+_surfaces = [{
+"aabb": AABB(-0.404559, -1.05933e-06, -0.287003, 0.809118, 1e-05, 0.574007),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"name": "poster_cx_16",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 9, 51, 152, 240, 0, 0, 126, 248, 60, 54, 255, 255, 0, 0, 128, 7, 0, 0, 0, 0, 0, 0, 255, 255, 51, 3, 102, 15, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nve1q"]
+resource_name = "poster_cx_16_poster_cx_16"
+_surfaces = [{
+"aabb": AABB(-0.404559, -1.05933e-06, -0.287003, 0.809118, 1e-05, 0.574007),
+"attribute_data": PackedByteArray(0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"material": SubResource("StandardMaterial3D_04nbk"),
+"name": "poster_cx_16",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 9, 51, 152, 240, 4, 192, 126, 248, 60, 54, 255, 255, 4, 192, 128, 7, 0, 0, 0, 0, 4, 192, 255, 255, 51, 3, 102, 15, 4, 192, 155, 250, 177, 130, 155, 250, 177, 130, 155, 250, 177, 130, 155, 250, 177, 130)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_iis3t")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lturt"]
+points = PackedVector3Array(0.385273, 0.00642222, 0.297422, -0.385273, -0.00642222, -0.293422, -0.385273, 0.00642222, -0.293422, -0.411022, -0.00642222, 0.258846, 0.411022, -0.00642222, -0.254788, -0.411022, 0.00642222, 0.258846, 0.411022, 0.00642222, -0.254788, 0.385273, -0.00642222, 0.297422, 0.359604, 0.00642222, -0.267686, -0.23118, -0.00642222, -0.293422, -0.269643, 0.00642222, 0.271686, 0.398148, -0.00642222, 0.194649, -0.398148, 0.00642222, -0.190591, 0.359604, -0.00642222, -0.267686, 0.411022, 0.00642222, -0.100658, -0.411022, -0.00642222, 0.104715, -0.269643, -0.00642222, 0.271686, -0.23118, 0.00642222, -0.293422, 0.321061, -0.00642222, 0.297422, 0.398148, 0.00642222, 0.194649, -0.398148, -0.00642222, -0.190591, 0.411022, -0.00642222, -0.100658, -0.411022, 0.00642222, 0.104715, 0.321061, 0.00642222, 0.297422)
+
+[node name="@Node3D@510" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@511" type="StaticBody3D" parent="."]
+
+[node name="poster_cx_16" type="MeshInstance3D" parent="@StaticBody3D@511"]
+mesh = SubResource("ArrayMesh_nve1q")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@511"]
+shape = SubResource("ConvexPolygonShape3D_lturt")

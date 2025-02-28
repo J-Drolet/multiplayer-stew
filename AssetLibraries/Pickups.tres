@@ -1,0 +1,30 @@
+[gd_resource type="Resource" load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetPersistentData.cs" id="1_glrb7"]
+[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetLibrary.cs" id="2_qmws0"]
+
+[sub_resource type="Resource" id="Resource_pr77w"]
+script = ExtResource("1_glrb7")
+path = "res://Scenes/Pickups/TimedHealthPickup.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_baqfy"]
+script = ExtResource("1_glrb7")
+path = "res://Scenes/Pickups/TimedUpgradePickup.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ij35u"]
+script = ExtResource("1_glrb7")
+path = "res://Scenes/Pickups/TimedWeaponPickup.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[resource]
+script = ExtResource("2_qmws0")
+assetData = [SubResource("Resource_pr77w"), SubResource("Resource_baqfy"), SubResource("Resource_ij35u")]
+previewPerspective = 0

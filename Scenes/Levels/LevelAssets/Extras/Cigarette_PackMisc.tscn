@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Cigarette_Pack_1024.png" id="1_psapd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ftpr1"]
+resource_name = "Cigarette_Pack_Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_psapd")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_n30js"]
+_surfaces = [{
+"aabb": AABB(-0.32191, -0.749244, -0.150345, 0.64382, 1.09746, 0.300689),
+"format": 34896613377,
+"index_count": 108,
+"index_data": PackedByteArray("AQAOAAMAAQANAA4ACwASAAoACwATABIABwAQAAUABwAPABAACQAMAAgACQARAAwAAgAEAAYAAgAAAAQABwABAAMABwAFAAEABAAIAAsABAAAAAgABgALAAoABgAEAAsAAgAKAAkAAgAGAAoAAAAJAAgAAAACAAkADAAOAA0ADAARAA4AEQAPAA4AEQASAA8AEgAQAA8AEgATABAAEwANABAAEwAMAA0ABQANAAEABQAQAA0ACgARAAkACgASABEACAATAAsACAAMABMAAwAPAAcAAwAOAA8A"),
+"name": "Cigarette_Pack_Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("2QcAABz1AADZB///HPUAANkHAADiCgAA2Qf+/+IKAAAl+AAAHPUAACX4//8c9QAAJfgAAOIKAAAl+P7/4goAANkH7bQc9QAA2QfttOIKAAAl+O204goAACX47bQc9QAAAADttP//AAAAAP///v8AAAAA/v8AAAAA///+/wAAAAD//////v8AAAAA7bQAAAAA///ttAAAAAD//+20//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dsmfh"]
+resource_name = "Misc_Cube_056"
+_surfaces = [{
+"aabb": AABB(-0.32191, -0.749244, -0.150345, 0.64382, 1.09746, 0.300689),
+"attribute_data": PackedByteArray("5lld/zKbx2dvtKVyJVE3KW+0z7nA4Mdnb7Q0uLOWNynmWc+5Mps5IudZNLglUcVub7Rd/8DgOSLnWaZys5bFbqEAXf/dA8VuKlulcipbz7lrScVuKls0uCpbXf9rSTcpoQCmcqEAz7ndAzcpoQA0uLO1RLWhAApxs7VEtbzaRLXpTfEmvNpEtepNqyXumfEmvNo/aQOYqyXumQpxoQCrJbzaXf/pTQpxpkyrJepNogCmTApxs7U/aQOYogCmTPEmoQChALO1Xf+hAPEmpkyhAA=="),
+"format": 34896613399,
+"index_count": 108,
+"index_data": PackedByteArray("AwAjAAcAAwAgACMAGgAvABcAGgAyAC8ADwApAAsADwAmACkAFAAdABEAFAAsAB0ABQAJAA0ABQABAAkADwADAAcADwALAAMACAAQABkACAAAABAADgAbABgADgAKABsABAAWABMABAAMABYAAgAVABIAAgAGABUAHgAkACEAHgAtACQAKwAlACIAKwAuACUAMAAqACcAMAAzACoAMQAfACgAMQAcAB8ACwAgAAMACwApACAAFwAsABQAFwAvACwAEQAyABoAEQAdADIABwAmAA8ABwAjACYA"),
+"material": SubResource("StandardMaterial3D_ftpr1"),
+"name": "Cigarette_Pack_Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 52,
+"vertex_data": PackedByteArray("2QcAABz1/7/ZBwAAHPVU1dkHAAAc9VTV2Qf//xz1VNXZBwAA4gr//9kHAADiClTV2QcAAOIKVNXZB/7/4gpU1SX4AAAc9f+/JfgAABz1VNUl+AAAHPVU1SX4//8c9VTVJfgAAOIK//8l+AAA4gpU1SX4AADiClTVJfj+/+IKVNXZB+20HPX/v9kH7bQc9VTV2QfttBz1VNXZB+204gr//9kH7bTiClTV2QfttOIKVNUl+O204gr//yX47bTiClTVJfjttOIKVNUl+O20HPX/vyX47bQc9VTVJfjttBz1VNUAAO20////vwAA7bT//1TVAADttP//VNUAAP///v//vwAA///+/1TVAAD///7/VNUAAP7/AAD//wAA/v8AAFTVAAD+/wAAVNX///7/AAD//////v8AAFTV///+/wAA/////////v//v//////+/1TV//////7///8AAO20AAD//wAA7bQAAFTVAADttAAAVNX//+20AAD/////7bQAAFTV///ttAAA/////+20////v///7bT//1TV///ttP//////f/9/VFVUVVRVqqpU1aoq/7//P1VVVFVUVaqqVNWqKv9//39VVVRVqqpVVVTVqir/P/+/VVVUVaqqVVVU1aoq/3//f1VVVFVUVaqq/7//P1RVVVVUVaqq/7//P1VVVFWqqlVV/3//f1VVVFWqqlVV/////1VVVFVU1VTV/////1TVqipU1VTV////f1TVqipU1VTV////f1TVqir/v/9//////1TVqir/v/9/////f1RVVVVU1VTV////f1VVVFX/v/9//////1VVVFX/v/9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_n30js")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tvc5d"]
+points = PackedVector3Array(0.3219, 0.340948, 0.150074, -0.3022, -0.738394, -0.136725, -0.321672, 0.341751, 0.1503, 0.313885, -0.7578, 0.154533, 0.312928, 0.325839, -0.1503, -0.313115, -0.7578, 0.154533, 0.3022, -0.73703, -0.136384, -0.312223, 0.325839, -0.1503)
+
+[node name="@Node3D@108" type="Node3D"]
+
+[node name="@StaticBody3D@109" type="StaticBody3D" parent="."]
+
+[node name="Cigarette_Pack" type="MeshInstance3D" parent="@StaticBody3D@109"]
+mesh = SubResource("ArrayMesh_dsmfh")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@109"]
+shape = SubResource("ConvexPolygonShape3D_tvc5d")

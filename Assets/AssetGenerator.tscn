@@ -4,5 +4,5 @@
 
 [node name="AssetGenerator" type="Node3D"]
 script = ExtResource("1_0f7dn")
-ASSET_FOLDER = "res://Assets/Textures/Roads/"
-EXPORT_FOLDER = "res://Scenes/Levels/LevelAssets/Roads/"
+ASSET_FOLDER = "res://Assets/Textures/Extras/"
+EXPORT_FOLDER = "res://Scenes/Levels/LevelAssets/Extras/"

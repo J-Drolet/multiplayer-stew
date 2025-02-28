@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/floor_ceiling_hr_5_concrete_hr_1.png" id="1_cjc71"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3xw7h"]
+resource_name = "concrete_hr_1"
+cull_mode = 2
+albedo_texture = ExtResource("1_cjc71")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dyhrm"]
+_surfaces = [{
+"aabb": AABB(-2, -2, -7.00355e-06, 4, 4, 0.400014),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAQAFAAcAAQADAAUAAwAEAAUAAwACAAQAAgAGAAQAAgAAAAYAAAAHAAYAAAABAAcA"),
+"name": "concrete_hr_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD+/wAAAAD///7/AAAAAAAAAAACAAAA//8AAAIAAAAAAAAA//8AAP//AAD//wAAAAD///z/AAD//////P8AAA==")
+}, {
+"aabb": AABB(-2, -2, 0.399993, 4, 4, 1.44541e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAADAAEAAAACAAMA"),
+"name": "concrete_hr_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAA//8AAAAA//8AAAAA/////wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2j8y5"]
+resource_name = "floor_ceiling_hr_5_floor_ceiling_hr_5"
+_surfaces = [{
+"aabb": AABB(-2, -2, -7.00355e-06, 4, 4, 0.400014),
+"attribute_data": PackedByteArray("/38AAGXGAABlxgAAZcYAAGXG/////wAA/3///2XGAABlxv//Zcb//2XG////////mLkAAJi5//+Yuf//mLn//5i5AACYuQAAmLkAAJi5//8="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAALAAUAAAAGAAsAAwAPABIAAwAJAA8ACgAMAA4ACgAHAAwACAARAA0ACAACABEAAQATABAAAQAEABMA"),
+"material": SubResource("StandardMaterial3D_3xw7h"),
+"name": "concrete_hr_1",
+"primitive": 3,
+"uv_scale": Vector4(2, 2, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAD+/wAAAAAAAP7/AABU1QAA/v8AAAAA///+/wAA/7////7/AABU1f///v8AAAAAAAAAAAIAAAAAAAAAAgCqKgAAAAACAAAA//8AAAIA/7///wAAAgCqKv//AAACAAAAAAAAAP//qioAAAAA//8AAP//AAD//6oq//8AAP///78AAP///P9U1QAA///8/wAA//////z//7///////P9U1f///39U1aoq/z//f/9/AABU1aoq////f////39VVVVV/z//f/9/AABVVVVV////f1VVVVX/P/9/VVVVVf9/AABU1aoq/z//f/9/AABU1aoq")
+}, {
+"aabb": AABB(-2, -2, 0.399993, 4, 4, 1.44541e-05),
+"attribute_data": PackedByteArray("/3//////////fwAA//8AAA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAADAAEAAAACAAMA"),
+"material": SubResource("StandardMaterial3D_3xw7h"),
+"name": "concrete_hr_1",
+"primitive": 3,
+"uv_scale": Vector4(2, 2, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AID//wAA//8AgAAA//8AAACA/////wAAAID/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dyhrm")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2r14e"]
+points = PackedVector3Array(-2.03175, -2.03175, -0.0317025, 1.91602, 1.91602, 0.4, 1.91602, -1.91602, 0.4, 2.03175, 2.03175, -0.0317025, -1.91602, 1.91602, 0.4, 2.03175, -2.03175, -0.0317025, -2.03175, 2.03175, -0.0317025, -1.91602, -1.91602, 0.4)
+
+[node name="@Node3D@218" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@219" type="StaticBody3D" parent="."]
+
+[node name="floor_ceiling_hr_5" type="MeshInstance3D" parent="@StaticBody3D@219"]
+mesh = SubResource("ArrayMesh_2j8y5")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@219"]
+shape = SubResource("ConvexPolygonShape3D_2r14e")

@@ -11,6 +11,8 @@ public partial class Scoreboard : Control
     [Export, ExportRequired]
     public ScoreboardInfo PeerPrototype;
 
+    private string LastUpdatePlayerStats;
+
     public override void _Ready()
     {
         GodotErrorService.ValidateRequiredData(this);
@@ -19,10 +21,20 @@ public partial class Scoreboard : Control
         VisibilityChanged += OnVisibilityChanged;
     }
 
+    public override void _Process(double delta)
+    {
+        if(LevelManager.Instance?.PlayerStatJson != LastUpdatePlayerStats)
+        {
+            LastUpdatePlayerStats = LevelManager.Instance.PlayerStatJson;
+            RefreshScoreboard();
+        }
+    }
+
     private void OnVisibilityChanged()
     {
-        if(Visible)
+        if(Visible && LevelManager.Instance != null)
         {
+            LastUpdatePlayerStats = LevelManager.Instance.PlayerStatJson;
             RefreshScoreboard();
         }
     }

@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Poster_Missing_1_100.png" id="1_wdjsv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_io5ro"]
+resource_name = "Poster_Missing_Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_wdjsv")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4ra81"]
+_surfaces = [{
+"aabb": AABB(-1, -2.42445e-07, -1.48811, 2, 1e-05, 2.97623),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"name": "Poster_Missing_Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 105, 12, 255, 255, 0, 0, 255, 255, 105, 12, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_01m00"]
+resource_name = "Misc_Plane_002"
+_surfaces = [{
+"aabb": AABB(-1, -2.42445e-07, -1.48811, 2, 1e-05, 2.97623),
+"attribute_data": PackedByteArray(163, 0, 163, 0, 163, 0, 91, 255, 91, 255, 163, 0, 91, 255, 91, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"material": SubResource("StandardMaterial3D_io5ro"),
+"name": "Poster_Missing_Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 105, 12, 255, 255, 84, 213, 255, 255, 105, 12, 255, 255, 84, 213, 0, 0, 0, 0, 0, 0, 84, 213, 255, 255, 0, 0, 0, 0, 84, 213, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_4ra81")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_opra3"]
+points = PackedVector3Array(-1.02362, -0.0236206, -1.51172, 1.00775, 0.0236206, 1.51172, 1.00775, -0.0236206, 1.51172, 1.00775, 0.0236206, -1.51172, -1.02362, 0.0236206, 1.51172, -1.02362, -0.0236206, 1.51172, 1.00775, -0.0236206, -1.51172, -1.02362, 0.0236206, -1.51172)
+
+[node name="@Node3D@94" type="Node3D"]
+
+[node name="@StaticBody3D@95" type="StaticBody3D" parent="."]
+
+[node name="Poster_Missing" type="MeshInstance3D" parent="@StaticBody3D@95"]
+mesh = SubResource("ArrayMesh_01m00")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@95"]
+shape = SubResource("ConvexPolygonShape3D_opra3")

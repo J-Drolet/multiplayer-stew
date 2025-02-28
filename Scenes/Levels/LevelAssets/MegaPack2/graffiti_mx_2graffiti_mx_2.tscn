@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/graffiti_mx_2_graffiti_mx_2.png" id="1_toeyv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i2ihq"]
+resource_name = "graffiti_mx_2"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_toeyv")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_c7cie"]
+_surfaces = [{
+"aabb": AABB(-1.07496, -3.33212e-06, -0.902751, 2.14992, 1e-05, 1.8055),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"name": "graffiti_mx_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(147, 10, 154, 170, 255, 255, 0, 0, 255, 255, 156, 160, 181, 240, 0, 0, 0, 0, 253, 9, 73, 15, 0, 0, 107, 245, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ajvy5"]
+resource_name = "graffiti_mx_2_graffiti_mx_2"
+_surfaces = [{
+"aabb": AABB(-1.07496, -3.33212e-06, -0.902751, 2.14992, 1e-05, 1.8055),
+"attribute_data": PackedByteArray(0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"material": SubResource("StandardMaterial3D_i2ihq"),
+"name": "graffiti_mx_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(147, 10, 154, 170, 255, 255, 6, 192, 255, 255, 156, 160, 181, 240, 6, 192, 0, 0, 253, 9, 73, 15, 6, 192, 107, 245, 0, 0, 0, 0, 6, 192, 209, 252, 163, 121, 209, 252, 163, 121, 209, 252, 163, 121, 209, 252, 163, 121)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_c7cie")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vgfok"]
+points = PackedVector3Array(-0.71664, 0.0170635, 0.922994, 0.648226, -0.0170635, -0.919863, 0.648226, 0.0170635, -0.919863, 1.09206, -0.0170635, 0.820532, -1.09206, -0.0170635, -0.817402, -0.989656, -0.0170635, 0.922994, -1.09206, 0.0170635, -0.817402, 1.09206, 0.0170635, 0.820532, 1.02365, 0.0170635, -0.851496, 1.02365, -0.0170635, -0.851496, -1.02365, 0.0170635, 0.854626, -1.09206, -0.0170635, -0.442012, 1.09206, 0.0170635, 0.445142, 0.989656, -0.0170635, -0.919863, -1.02365, -0.0170635, 0.854626, 0.614232, -0.0170635, 0.854626, -0.648226, -0.0170635, -0.851496, -1.09206, 0.0170635, -0.442012, 1.09206, -0.0170635, 0.445142, 0.989656, 0.0170635, -0.919863, -0.989656, 0.0170635, 0.922994, -0.71664, -0.0170635, 0.922994, -0.648226, 0.0170635, -0.851496, 0.614232, 0.0170635, 0.854626, -0.0339934, -0.0170635, 0.88872, -0.0339934, 0.0170635, 0.88872)
+
+[node name="@Node3D@264" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@265" type="StaticBody3D" parent="."]
+
+[node name="graffiti_mx_2" type="MeshInstance3D" parent="@StaticBody3D@265"]
+mesh = SubResource("ArrayMesh_ajvy5")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@265"]
+shape = SubResource("ConvexPolygonShape3D_vgfok")

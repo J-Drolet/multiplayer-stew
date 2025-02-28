@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/cardboard_box_2_cardboard_box_hr_2.png" id="1_tpfod"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nahqr"]
+resource_name = "cardboard_box_hr_2"
+cull_mode = 2
+albedo_texture = ExtResource("1_tpfod")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_b6yy1"]
+_surfaces = [{
+"aabb": AABB(-0.195, -0.12, -0.125001, 0.395, 0.250001, 0.125001),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "cardboard_box_hr_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAAAA//8AAAAA/v8AAAAAAAD///7/AAD//wAAAAAAAP7/AAD//wAA///+/wAAAAD+/////v8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3ev6v"]
+resource_name = "cardboard_box_2_cardboard_box_2"
+_surfaces = [{
+"aabb": AABB(-0.195, -0.12, -0.125001, 0.395, 0.250001, 0.125001),
+"attribute_data": PackedByteArray("AAB+zAAA/////31lAAB9ZQAAfsxEwn1lAAB9ZQAA/////wAAAAAAAAAAfsxEwgAARMJ+zETC/////31lRMJ9ZUTCfWVEwn7MRMJ9ZUTC/////wAARMIAAETCAABEwn7M"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AgALAAUAAgAIAAsABwAXAAoABwATABcAFAAQABYAFAAOABAADQAEABEADQABAAQABgAMABIABgAAAAwAFQADAAkAFQAPAAMA"),
+"material": SubResource("StandardMaterial3D_nahqr"),
+"name": "cardboard_box_hr_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAAAAAAD/vwAAAAAAAAAAAAAAAP//AIAAAAAA////vwAAAAD//wAAAAD+/wAAAAAAAP7/AAD/PwAA/v8AAAAAAAD///7/AIAAAP///v//PwAA///+/wAA//8AAAAAAAD//wAAAAD/v///AAAAAP+//v8AAP//AID+/wAA////v/7/AAD///+////+/wAAAAD///7/AAD/P////v8AAP+//v////7/AID+/////v//v/7////+//8/////fwAA/3/+//8//3///wAA/3/+//8/////f////3/+//8//3///////3/+//8/////fwAA/3//fwAA/3////9/AAAAAP9/////f////3//fwAA/3////9/AAD///9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_b6yy1")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_v11q0"]
+points = PackedVector3Array(-0.188543, -0.117014, -0.125, 0.192373, 0.127033, -6.93889e-18, 0.192373, -0.11624, -6.93889e-18, 0.193582, 0.127808, -0.125, -0.187334, 0.127033, -6.93889e-18, 0.193582, -0.117014, -0.125, -0.188543, 0.127808, -0.125, -0.187334, -0.11624, -6.93889e-18)
+
+[node name="@Node3D@112" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@113" type="StaticBody3D" parent="."]
+
+[node name="cardboard_box_2" type="MeshInstance3D" parent="@StaticBody3D@113"]
+mesh = SubResource("ArrayMesh_3ev6v")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@113"]
+shape = SubResource("ConvexPolygonShape3D_v11q0")

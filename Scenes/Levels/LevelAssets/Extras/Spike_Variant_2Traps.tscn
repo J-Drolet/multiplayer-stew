@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Traps_Spike_Variant_2.png" id="1_nrgqe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u1lfw"]
+resource_name = "Spike_Variant_5"
+cull_mode = 2
+albedo_texture = ExtResource("1_nrgqe")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_78uq7"]
+_surfaces = [{
+"aabb": AABB(-0.300684, -0.196303, -0.300686, 0.601368, 0.981512, 0.601372),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AAACAAEAAgAEAAEABAADAAEAAwAAAAEAAgADAAQAAgAAAAMA"),
+"name": "Spike_Variant_5",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 5,
+"vertex_data": PackedByteArray("AAAAAAAAAAD/f////38AAP//AAAAAAAAAAAAAP//AAD//wAA/v8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7so3i"]
+resource_name = "Traps_Cube_050"
+_surfaces = [{
+"aabb": AABB(-0.300684, -0.196303, -0.300686, 0.601368, 0.981512, 0.601372),
+"attribute_data": PackedByteArray("hVChV9YABJ3h/tkAabShV5eBKP9dqA48zs1hqKmyoVfWACj/1gAgbVeDKP/6YgSdvJzZAHvlKP/6Yij/1gD8Cg=="),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AAAHAAQACQAPAAUADQAKAAMADAACAAYACAALAA4ACAABAAsA"),
+"material": SubResource("StandardMaterial3D_u1lfw"),
+"name": "Spike_Variant_5",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AAAAAAAA4vMAAAAAAABU1QAAAAAAAHL3/3////9/HIz/f////3/i8/9/////f6Lc/3////9/cvf//wAAAADi8///AAAAAFTV//8AAAAAotwAAAAA//8cjAAAAAD//1TVAAAAAP//cvf//wAA/v8cjP//AAD+/1TV//8AAP7/otz///9/qipU1RT3ijv+//9/////f7kujSIU94o7////f6oqVNW5Lo0i/v//f6oqVNUU94o7/v//f6oqVNW5Lo0i")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_78uq7")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xdcs7"]
+points = PackedVector3Array(-0.297891, -0.187132, -0.297891, -0.285739, -0.167689, 0.291934, 0.299008, -0.157339, -0.30849, 0.291934, -0.167689, 0.291934, -0.0110853, 0.749017, -0.0110853, -0.292874, -0.126107, 0.299008, -0.30849, -0.157339, -0.30849, 0.299008, -0.126107, 0.299008, 0.299008, -0.126107, -0.292874, -0.30849, -0.157339, 0.299008, 0.291934, -0.167689, -0.285739, 0.00309765, 0.775089, 0.00309765, -0.0110853, 0.749017, 0.00309765, 0.00309765, 0.749017, -0.0110853)
+
+[node name="@Node3D@170" type="Node3D"]
+
+[node name="@StaticBody3D@171" type="StaticBody3D" parent="."]
+
+[node name="Spike_Variant_2" type="MeshInstance3D" parent="@StaticBody3D@171"]
+mesh = SubResource("ArrayMesh_7so3i")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@171"]
+shape = SubResource("ConvexPolygonShape3D_xdcs7")

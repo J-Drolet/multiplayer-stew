@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/brick_mx_2_1_bricks_mx_1.png" id="1_7f8re"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_so5s6"]
+resource_name = "bricks_mx_1"
+cull_mode = 2
+albedo_texture = ExtResource("1_7f8re")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wgtkl"]
+_surfaces = [{
+"aabb": AABB(-0.0899997, -0.0699995, -0.09, 0.19, 0.139999, 0.09),
+"format": 34896613377,
+"index_count": 48,
+"index_data": PackedByteArray("BgAAAAEAAAAFAAQAAAAGAAUACAACAAkAAgAHAAMAAgAIAAcAAAADAAEAAAACAAMABwABAAMABwAGAAEABAACAAAABAAJAAIABgAIAAUABgAHAAgACAAEAAUACAAJAAQA"),
+"name": "bricks_mx_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 10,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAIXy/3///wAAGsr/////AAAayv//AAAAAIXy/38AAAAA//8AAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bmwp2"]
+resource_name = "brick_mx_2_1_brick_mx_2_1"
+_surfaces = [{
+"aabb": AABB(-0.0899997, -0.0699995, -0.09, 0.19, 0.139999, 0.09),
+"attribute_data": PackedByteArray("/38AAP9/m1v/f/9//382N/9/m1sHxf9//38AAP9/Njf/f5tb/382N/9/NjcHxZtb/3//f0nWAABJ1ptbg6L/f4Oi/3/50ZsbB8U2NwfFm1sHxf9/B8U2NwfFNjcHxZtbg6KbW4Oim1v50Zsb/3+bW0nWAABJ1jY3"),
+"format": 34896613399,
+"index_count": 48,
+"index_data": PackedByteArray("EgAAAAMAAAARAA0AAAASABEAGgAGABwABgAVAAkABgAaABUAAgALAAUAAgAIAAsAFgAEAAoAFgATAAQADgAHAAEADgAdAAcAFAAYAA8AFAAXABgAGQAMABAAGQAbAAwA"),
+"material": SubResource("StandardMaterial3D_so5s6"),
+"name": "bricks_mx_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 30,
+"vertex_data": PackedByteArray("AAAAAP///n8AAAAA////PwAAAAD//1TVAAD//////n8AAP//////vwAA/////1TVAAAAAAAA//8AAAAAAAD/PwAAAAAAAFTVAAD//wAA//8AAP//AAD/vwAA//8AAFTV//8AAP//QCf//wAA///+f///AAD///8/hfL/f///lCCF8v9///9AJ4Xy/3////5/Gsr//////n8ayv//////vxrK/////5QgGsr//wAA//8ayv//AAD/vxrK//8AAJQghfL/fwAAlCCF8v9/AABAJ4Xy/38AAP////8AAAAAQCf//wAAAAD/////AAAAAP8//3///wAA/39U1VTV/3///////39U1VTV////fwAA/39U1VTV////f////39U1VTVpCy3Jv9///8AAP9/ITC8H6Qstyb/f////3///////38hMLwf/v//f////38hMLwfITC8H6Qstyb+//9/pCy3Jv///38AAP9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_wgtkl")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rrkn3"]
+points = PackedVector3Array(0.0977505, -0.0542538, -0.0896879, 0.0598717, 0.0672299, 6.93889e-18, 0.0625325, 0.0640908, -0.00016723, -0.0874117, -0.0684997, 6.93889e-18, -0.0883948, 0.0679519, -0.09, -0.0883948, -0.0692217, -0.09, 0.0974117, -0.0684997, 0, -0.0874117, 0.0672299, -6.93889e-18, 0.0604554, 0.0679519, -0.09, 0.0983948, -0.0692217, -0.09, 0.0884226, 0.00368053, -0.000163106, 0.0884226, 0.00368053, -0.0893607, 0.0974117, -0.0540579, 6.93889e-18, 0.091954, -0.0136784, -0.0896952, 0.0916224, -0.0136286, 0, 0.0625325, 0.0640908, -0.0893566)
+
+[node name="@Node3D@76" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@77" type="StaticBody3D" parent="."]
+
+[node name="brick_mx_2_1" type="MeshInstance3D" parent="@StaticBody3D@77"]
+mesh = SubResource("ArrayMesh_bmwp2")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@77"]
+shape = SubResource("ConvexPolygonShape3D_rrkn3")

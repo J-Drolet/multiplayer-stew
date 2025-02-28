@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wooden_plank_3_planks_hr_1.png" id="1_wimn3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_56dry"]
+resource_name = "planks_hr_1"
+cull_mode = 2
+albedo_texture = ExtResource("1_wimn3")
+texture_filter = 2
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ysxwo"]
+_surfaces = [{
+"aabb": AABB(-0.410357, -0.0836848, -0.0300003, 0.858396, 0.177881, 0.0300006),
+"format": 34896613377,
+"index_count": 108,
+"index_data": PackedByteArray("AAACAAEAAwAFAAQAAAADAAIACAAAAAkABgAIAAcAAwAGAAUACAADAAAAAwAIAAYADAAKAAsACgASABMAEgAQABEAEAAOAA8ADQAKAAwAEAANAA4ACgAQABIACgANABAAAAALAAoAAAABAAsAAQAMAAsAAQACAAwAAgANAAwAAgADAA0AAwAOAA0AAwAEAA4ABAAPAA4ABAAFAA8ABQAQAA8ABQAGABAABgARABAABgAHABEABwASABEABwAIABIACAATABIACAAJABMACQAKABMACQAAAAoA"),
+"name": "planks_hr_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("pABYAQEAAAAAAG3nAAAAAHQMA/gAAAAAJyWT6wAAAABMRBX6AAAAAJDf/v8AAAAAE+Qf5wAAAACc9ETrAAAAAJH/3d8AAAAA//8AAAEAAACkAFgB/v8AAAAAbef9/wAAdAwD+P3/AAAnJZPr/f8AAExEFfr9/wAAkN////3/AAAT5B/n/f8AAJz0ROv9/wAAkf/d3/3/AAD//wAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_klhf6"]
+resource_name = "wooden_plank_3_wooden_plank_3"
+_surfaces = [{
+"aabb": AABB(-0.410357, -0.0836848, -0.0300003, 0.858396, 0.177881, 0.0300006),
+"attribute_data": PackedByteArray("7QLQamwF/39neP9/ewK9k1YE/3/yWP9/EguxlgQN/38EDf9/Ghx6lEkd/39JHf9/kzEPl/sy/3/7Mv9/m1T/fx2b/3+knByY8lj/f16e/3/An6+TN6n/fzep/38nq2yUCFr/f8+w/3+1smWSZ3j/f+Wx/38Bs5Nq7QLQamwFFYhneBWIewK9k1YEFYjyWBWIEguxlgQNFYgEDRWIGhx6lEkdFYhJHRWIkzEPl/syFYj7MhWIm1QViB2bFYiknByY8lgViF6eFYjAn6+TN6kViDepFYgnq2yUCFoViM+wFYi1smWSZ3gViOWxFYgBs5Nq"),
+"format": 34896613399,
+"index_count": 108,
+"index_data": PackedByteArray("AAAGAAMACQARAAwAAAAJAAYAGgAAAB0AFAAaABcACQAUABEAGgAJAAAACQAaABQAJAAeACEAHgA4ADsAOAAyADUAMgAqAC8AJwAeACQAMgAnACoAHgAyADgAHgAnADIAAgAjACAAAgAFACMABAAlACIABAAHACUACAApACYACAALACkACgArACgACgANACsADgAuACwADgAQAC4ADwAwAC0ADwASADAAEwAzADEAEwAVADMAFgA3ADQAFgAZADcAGAA5ADYAGAAbADkAHAAfADoAHAABAB8A"),
+"material": SubResource("StandardMaterial3D_56dry"),
+"name": "planks_hr_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 60,
+"vertex_data": PackedByteArray("pABYAQEA//+kAFgBAQD/P6QAWAEBAPsqAABt5wAA//8AAG3nAAC7wAAAbecAAPsqdAwD+AAA//90DAP4AAC7wHQMA/gAABvAJyWT6wAA//8nJZPrAAAXwCclk+sAABvATEQV+gAA//9MRBX6AAAXwExEFfoAAP+/kN/+/wAA/caQ3/7/AAD/v5Df/v8AAP//E+Qf5wAA/cYT5B/nAAAGwBPkH+cAAP//nPRE6wAABsCc9ETrAAB0wJz0ROsAAP//kf/d3wAAHNWR/93fAAB0wJH/3d8AAP////8AAAEAHNX//wAAAQD/P///AAABAP//pABYAf7//n+kAFgB/v//P6QAWAH+//sqAABt5/3//n8AAG3n/f+7wAAAbef9//sqdAwD+P3//n90DAP4/f+7wHQMA/j9/xvAJyWT6/3//n8nJZPr/f8XwCclk+v9/xvATEQV+v3//n9MRBX6/f8XwExEFfr9//+/kN////3//caQ3////f//v5Df///9//5/E+Qf5/3//cYT5B/n/f8GwBPkH+f9//5/nPRE6/3/BsCc9ETr/f90wJz0ROv9//5/kf/d3/3/HNWR/93f/f90wJH/3d/9//5///8AAP//HNX//wAA////P///AAD///5/////fyMAEYDyVHiq/v//f1vyRpvyVHiq/v//f1vyRpvu8/d5////f1/6Povu8/d5/v//f1/6Pot+/wCBGcOMYX7/AIH///9/GcOMYdb8UIb///9/1vxQhoDpwHT+//9/7ap2VYDpwHT///9/7ap2VSMAEYD///9//3///yMAEYDyVHiq/3///1vyRpvyVHiq/3///1vyRpvu8/d5/3///1/6Povu8/d5/3///1/6Pot+/wCBGcOMYX7/AIH/f///GcOMYdb8UIb/f///1vxQhoDpwHT/f///7ap2VYDpwHT/f///7ap2VSMAEYD/f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ysxwo")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hwsys"]
+points = PackedVector3Array(-0.417213, -0.0905127, -0.0368127, 0.359296, 0.100243, 0.00406349, 0.454813, 0.0866121, 0.00406349, 0.359296, 0.100243, -0.0368127, 0.454813, -0.0905127, -0.0368127, -0.417213, -0.0905127, 0.00406349, -0.376326, 0.100243, -0.0368127, 0.454813, -0.0905127, 0.00406349, -0.417213, 0.0866121, 0.00406349, 0.454813, 0.0866121, -0.0368127, -0.376326, 0.100243, 0.00406349, -0.417213, 0.0866121, -0.0368127)
+
+[node name="@Node3D@780" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="@StaticBody3D@781" type="StaticBody3D" parent="."]
+
+[node name="wooden_plank_3" type="MeshInstance3D" parent="@StaticBody3D@781"]
+mesh = SubResource("ArrayMesh_klhf6")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@781"]
+shape = SubResource("ConvexPolygonShape3D_hwsys")

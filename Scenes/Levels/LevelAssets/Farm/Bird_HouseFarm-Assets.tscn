@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Bird_House_Base_color.png" id="1_766hh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lbmcc"]
+resource_name = "Bird_House"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_766hh")
+roughness = 0.4
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_n2lu4"]
+_surfaces = [{
+"aabb": AABB(-19.7263, -17.714, -37.3401, 37.9127, 35.4272, 50.1432),
+"format": 34896613377,
+"index_count": 204,
+"index_data": PackedByteArray("EAADAAEAEAARAAMAEQAHAAMAEQASAAcAEgAFAAcAEgATAAUAEwABAAUAEwAQAAEAAgAEAAYAAgAAAAQABQAKAAcABQALAAoACAAPAAsACAAMAA8AAwAIAAEAAwAJAAgAAQALAAUAAQAIAAsABwAJAAMABwAKAAkADgAMAA0ADgAPAAwACgANAAkACgAOAA0ACwAOAAoACwAPAA4ACQAMAAgACQANAAwABAAXAAYABAAZABcAAgAVAAAAAgAUABUAEgAaABMAEgAYABoAEAAWABEAEAAbABYAGQAbABoAGQAVABsAFwAaABgAFwAZABoAFAAYABYAFAAXABgAFQAWABsAFQAUABYAEQAYABIAEQAWABgAEwAbABAAEwAaABsAAAAZAAQAAAAVABkABgAUAAIABgAXABQAHAAfAB0AHAAeAB8AHgAhAB8AHgAgACEAIAAjACEAIAAiACMAIgAlACMAIgAkACUAJAAnACUAJAAmACcAJgAdACcAJgAcAB0AJgAeABwAHgAiACAAIgAmACQAHgAmACIA"),
+"name": "Bird_House",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 40,
+"vertex_data": PackedByteArray("wl/z5/7/AADCX/LnG20AAMJfDBj//wAAwl8MGBttAABi7/Pn/v8AAGLv8ucbbQAAYu8MGP//AABi7wwYG20AACZP//8bbQAAJk8AABttAAD//wAAG20AAP////8bbQAAJk////FJAAAmTwAA8UkAAP//AAAAAAAA/////wAAAADCX/Pn6ewAAMJfDBjp7AAAYu8MGOnsAABi7/Pn6ewAAHNVHwn//wAAc1Xf9v7/AABzVR8J6ewAALH5Hwn//wAAsfkfCensAACx+d/2/v8AALH53/bp7AAAc1Xf9unsAAAAAKlxxt0AAPlpqXHG3QAAAADUeIvmAAD5adR4i+YAAAAAKoeL5gAA+Wkqh4vmAAAAAFWOxt0AAPlpVY7G3QAAAAAqhwDVAAD5aSqHANUAAAAA1HgA1QAA+WnUeADVAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ffbu1"]
+resource_name = "Farm-Assets_Cube_002"
+_surfaces = [{
+"aabb": AABB(-19.7263, -17.714, -37.3401, 37.9127, 35.4272, 50.1432),
+"attribute_data": PackedByteArray("eDpGszNkI/nltmH/kz+Od3g6QWo4rSP5nQCdAJiIjnd9BEazM2Qnw+W2ZsnY0u5ffQRBajitJ8OdAJg204nuX8FbYf8n/zdOSZv5Hqq1Yf/p+8+EYEH5Hqq16bzp+0fHjMqOYcFb6bwn/78LjMp3u6ztN06GWmH/SZt+DW7qz4SdAGH/YEF+DazFR8dPlI5hnQAeuurIvwtPlHe7hloeutFE2n5u9mH/kz8GONaN2n4lQJ0AmIgGONaNp7QlQJg204lmINFEp7Ru9mbJ2NJmIFg+A2VuZTnh4JRLAlg+hLgpowntYEFLAhOT/npuZbbq4JTIC50AA2UpoznhE9QJmBOThLgpo7bqj90JmJ0AhLhuZQntE9SIRJM/hLhuZYX2j92IRJM//nopo4X2YEHIC0ONus5DjbrOjo6K2m5lus5uZbrOqPeM10ONFtMTkebeqPdh/25lFtOx/IzXbmXm3hyW5t6x/GH/Q43m3m5litpuZYraoJiK2kONitpDjYraZKTTzm5lLtYcli7WZKSF9kONLtZtqdPOQ41eyhORLtZtqYX2bmVeyg=="),
+"format": 34896613399,
+"index_count": 204,
+"index_data": PackedByteArray("KgAHAAMAKgAtAAcALAAOAAYALAAvAA4AMAALAA8AMAAzAAsAMgACAAoAMgApAAIABAAIAAwABAAAAAgACQAWAA0ACQAZABYAEQAlABoAEQAcACUABQAQAAEABQATABAAAQAZAAkAAQAQABkADQATAAUADQAWABMAJAAdACAAJAAnAB0AFwAfABQAFwAiAB8AGwAjABgAGwAmACMAFQAeABIAFQAhAB4ACAA9AAwACABDAD0ABAA3AAAABAA0ADcALgBGADEALgBAAEYAKAA6ACsAKABJADoARABKAEcARAA4AEoAPwBIAEIAPwBFAEgANQBBADsANQA+AEEAOQA8AEsAOQA2ADwAKwBAAC4AKwA6AEAAMQBJACgAMQBGAEkAAABDAAgAAAA3AEMADAA0AAQADAA9ADQATABVAE8ATABSAFUAUQBZAFQAUQBWAFkAVwBeAFoAVwBbAF4AXABkAF8AXABhAGQAYABoAGMAYABlAGgAZgBQAGkAZgBNAFAAZwBTAE4AUwBdAFgAXQBnAGIAUwBnAF0A"),
+"material": SubResource("StandardMaterial3D_lbmcc"),
+"name": "Bird_House",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 106,
+"vertex_data": PackedByteArray("wl/z5/7////CX/LnG23/v8Jf8ucbbVTVwl/y5xttVNXCXwwY/////8JfDBgbbf+/wl8MGBttVNXCXwwYG21U1WLv8+f+////Yu/y5xtt/79i7/LnG21U1WLv8ucbbVTVYu8MGP////9i7wwYG23/v2LvDBgbbVTVYu8MGBttVNUmT///G23/vyZP//8bbVTVJk///xttVNUmTwAAG23/vyZPAAAbbVTVJk8AABttVNX//wAAG23/v///AAAbbVTV//8AABtt////////G23/v/////8bbVTV/////xtt//8mT///8UlU1SZP///xSYXxJk////FJVNUmTwAA8UlU1SZPAADxSYXxJk8AAPFJVNX//wAAAABU1f//AAAAAP////8AAAAAhfH/////AABU1f////8AAP///////wAAhfHCX/Pn6ez//8Jf8+fp7FTVwl/z5+nsVNXCXwwY6ez//8JfDBjp7FTVwl8MGOnsVNVi7wwY6ez//2LvDBjp7FTVYu8MGOnsVNVi7/Pn6ez//2Lv8+fp7FTVYu/z5+nsVNVzVR8J/////3NVHwn///+/c1UfCf//VNVzVd/2/v///3NV3/b+////c1Xf9v7/VNVzVR8J6ez//3NVHwnp7P+/c1UfCensVNWx+R8J/////7H5Hwn///+/sfkfCf///7+x+R8J6ez//7H5Hwnp7P+/sfkfCens/7+x+d/2/v///7H53/b+////sfnf9v7//7+x+d/26ez//7H53/bp7P//sfnf9uns/79zVd/26ez//3NV3/bp7P//c1Xf9unsVNUAAKlxxt3//wAAqXHG3f//AACpccbdVNX5aalxxt3///lpqXHG3f//AADUeIvm/78AANR4i+b//wAA1HiL5lTV+WnUeIvm/7/5adR4i+b//wAAKoeL5v+/AAAqh4vmqaoAACqHi+ZU1flpKoeL5v+/+Wkqh4vmqaoAAFWOxt2pqgAAVY7G3VTVAABVjsbdVNX5aVWOxt2pqvlpVY7G3VTVAAAqhwDV//8AACqHANVU1QAAKocA1VTV+WkqhwDV///5aSqHANVU1QAA1HgA1f//AADUeADV//8AANR4ANVU1flp1HgA1f//+WnUeADV////f/9//3//f6qqqqpVVaqq/3//f/9//3+qKlTVVVWqqv9//3//f/9/qqqpqqoqqir/f/9//3//f6oqVNWqKqoq/3//f6qqqqpU1VTV/3//f6oqVNVU1VTV/3//f6oqVNX/v/9//3//f6qqqqr/v/9/qqqqqk/HT8dU1VTVqipU1U/HT8dU1VTVqipU1f+//39Px0/Hqqqqqv+//39Px0/H/z//v6qqqqpVVaqq/7//P6oqVNVUVaqq/z//v6oqVNWqKqoq/7//P6qqqqqqKqoq/3//fwAA/39UVaqq/3//f/9//79UVaqq/7//PwAA/39UVaqq/3//fwAA/3//fwAA/7//PwAA/3//fwAA/3//f/9//7//fwAA/7//P/9//7//fwAA/z//v/9//79UVaqq/38lUdmu//9U1VTV/38lUdmu/v///////38lUVTVVNX//////38lUf/////+//9/VNVU1f/////+//9//v//f////39U1VTV/v//f/7//3//P/+/////f1TVVNX/P/+//v//f/8//7/Zrv//VNVU1f8//7/Zrv7/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_n2lu4")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4btdd"]
+points = PackedVector3Array(3.41604, -16.7112, -29.1722, 18.876, 18.5005, -15.4497, -8.18291, 18.5005, -15.4497, 17.0077, -16.2593, 12.8031, -20.1243, -2.19255, 7.62149, 16.7961, 16.4504, 12.5023, 18.1864, -17.4646, -36.8373, 18.0373, 17.7132, -36.6426, -7.86477, -17.3415, -22.9341, -7.0714, 16.1305, 12.0195, -7.0714, -15.7419, 12.0195, -7.85782, 17.7132, -22.9238, 18.876, -18.112, -15.4497, -20.1243, 1.78551, 3.64748, -8.18291, -18.112, -15.4497, 16.2522, 17.4457, -36.2705, -20.1243, 2.58112, 6.82868, 16.2522, -17.0572, -36.2705, 13.0848, -16.256, 12.8031, -20.1243, -2.19255, 4.44029, 12.9229, 16.4504, 12.5071, -20.1243, 2.58112, 5.23808, -20.1243, -1.39694, 3.64748, -6.9511, 17.3256, -23.4393)
+
+[node name="@Node3D@16" type="Node3D"]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.01, 0, 0.01, -4.37114e-10, 0, 0, 0)
+
+[node name="@StaticBody3D@17" type="StaticBody3D" parent="."]
+
+[node name="Bird_House" type="MeshInstance3D" parent="@StaticBody3D@17"]
+mesh = SubResource("ArrayMesh_ffbu1")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@17"]
+transform = Transform3D(1, 0, 0, 0, 1, -3.55271e-15, 0, 3.55271e-15, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_4btdd")

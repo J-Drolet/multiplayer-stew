@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Pizza_Box_256.png" id="1_607tc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4l1sd"]
+resource_name = "PizzaBox"
+cull_mode = 2
+albedo_texture = ExtResource("1_607tc")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vkj12"]
+_surfaces = [{
+"aabb": AABB(-0.752384, -0.0768035, -0.752384, 1.50477, 0.153607, 1.50477),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "PizzaBox",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD+/wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD///7/AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_myfux"]
+resource_name = "Misc_Cube_054"
+_surfaces = [{
+"aabb": AABB(-0.752384, -0.0768035, -0.752384, 1.50477, 0.153607, 1.50477),
+"attribute_data": PackedByteArray("CKpd/6EAXf8IqotV9lVd/0urilX2VYtVXf9Lq7NUXf8Iqp2pS6tLq13/ilX2VZ2pCKpLq6EAS6uzVJyp9lVLq0urnKmhAJypXf9d/7NUS6uzVIpVS6td/13/nKmhAIpV"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AgALAAUAAgAIAAsABgAVAAkABgASABUAFAARABcAFAAOABEADAADAA8ADAAAAAMABwANABMABwABAA0AFgAEAAoAFgAQAAQA"),
+"material": SubResource("StandardMaterial3D_4l1sd"),
+"name": "PizzaBox",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP///78AAAAA//9U1QAAAAD//1TVAAD//////78AAP////9U1QAA/////1TVAAAAAAAA//8AAAAAAABU1QAAAAAAAFTVAAD+/wAA//8AAP7/AABU1QAA/v8AAFTV//8AAP///7///wAA//9U1f//AAD//1TV/////////7////////9U1f///////1TV//8AAAAA/////wAAAABU1f//AAAAAFTV///+/wAA//////7/AABU1f///v8AAFTV/3//f1RVVVVUVamq/3//f1TVqipUVamq/7//P1RVVFVVVaqq/7//P1TVqipVVaqq/3//f1RVVFWqqlRV/3//f1TVqiqqqlVV/z//v1VVVFWqqlVV/7//P1TVqiqqqlVV")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_vkj12")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vajnr"]
+points = PackedVector3Array(-0.764343, -0.0887429, -0.764343, 0.749176, 0.0768, 0.749192, -0.749192, 0.0768, 0.749192, 0.764326, -0.0887429, 0.764343, 0.749176, 0.0768, -0.749192, -0.764343, -0.0887429, 0.764343, 0.764326, -0.0887429, -0.764343, -0.749192, 0.0768, -0.749192)
+
+[node name="@Node3D@90" type="Node3D"]
+
+[node name="@StaticBody3D@91" type="StaticBody3D" parent="."]
+
+[node name="Cube" type="MeshInstance3D" parent="@StaticBody3D@91"]
+mesh = SubResource("ArrayMesh_myfux")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@91"]
+shape = SubResource("ConvexPolygonShape3D_vajnr")

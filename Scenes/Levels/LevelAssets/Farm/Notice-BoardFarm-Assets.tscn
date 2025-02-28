@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=4]
+
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Notice-Board_Base_color.png" id="1_w33fw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rimwf"]
+resource_name = "Notice-Board"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_w33fw")
+roughness = 0.4
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_p1frt"]
+_surfaces = [{
+"aabb": AABB(-20.1682, -51.8544, -60.4937, 41.101, 103.708, 155.112),
+"format": 34896613377,
+"index_count": 216,
+"index_data": PackedByteArray("GAADABsAGAACAAMAAgAHAAMAAgAGAAcADAAFABcADAAEAAUABAABAAUABAAAAAEABAAVAAAABAARABUAFwABABoAFwAFAAEABwAbAAMABwAPABsADwAaABsADwAXABoAGQANAAwAGQAWAA0AGAAMAA4AGAAZAAwABgAPAAcABgAOAA8ADgAXAA8ADgAMABcABgASAA4ABgAUABIAAAAaAAEAAAAZABoAGAATAAIAGAAQABMAAAAWABkAAAAVABYADgAQABgADgASABAAAgAUAAYAAgATABQADAARAAQADAANABEAEwASABQAEwAQABIACQALAAoACQAIAAsAFgARAA0AFgAVABEACQAYAAgACQAZABgACwAaAAoACwAbABoACgAZAAkACgAaABkACAAbAAsACAAYABsAHAAfAB0AHAAeAB8AJAAjACUAJAAiACMAIgAhACMAIgAgACEAJgAdACcAJgAcAB0AJAAgACIAJAAmACAAJQAdAB8AJQAnAB0AIwAnACUAIwAhACcAHgAmACQAHgAcACYAIAAnACEAIAAmACcAHgAlAB8AHgAkACUA"),
+"name": "Notice-Board",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 40,
+"vertex_data": PackedByteArray("Lmh39BGPAAAuaHf0nwoAAC5ohwsRjwAALmiHC58KAADQl3f0EY8AANCXd/SfCgAA0JeHCxGPAADQl4cLnwoAAC5oqykBiQAALmhT1gGJAAAuaFPWlTAAAC5oqymVMAAA0Jcs3RGPAADQlyzd/v8AANCX0iIRjwAA0JfSIp8KAAAuaNIi//8AANCXd/T+/wAA0JfSIv//AAAuaIcL//8AANCXhwv//wAALmh39P7/AAAuaCzd/v8AANCXLN2fCgAALmjSIhGPAAAuaCzdEY8AAC5oLN2fCgAALmjSIp8KAAAAAP//GTAAAAAA//94IAAAAAAAABkwAAAAAAAAeCAAAP////8ZMAAA/////3ggAAD//wAAGTAAAP//AAB4IAAA/38AAEgLAAD/fwAAAAAAAP9///9ICwAA/3///wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_c4saq"]
+resource_name = "Farm-Assets_Cube_021"
+_surfaces = [{
+"aabb": AABB(-20.1682, -51.8544, -60.4937, 41.101, 103.708, 155.112),
+"attribute_data": PackedByteArray("H2W1FckA35oHvvmYyQC1FckANP94+ampxXbfmge+/iJ4+VNFxXY0/x9lJQxU7t+al8f5mMkAJQxU7jT/6O+pqVh435qXx/4i6O9TRVh4NP+BZ3efDRB3nw0QcuKBZ3LiK8n5mN7d+JiH4t+amGAVNt7dbUOH4lNFK8mWOsoAyQAlhN+al8fKLiWENP9ZCuJBVVZZCvhqU0WYYOJBq7olDFTuU0XJAOJBVVbJACWEU0VZChU2ePk0/8V2U0XJABU26O80/1h4U0UnauJBq7q1FckAU0UnahU2TtRtQ5YMU0WXxyyNh+I0/7rSljrKAFkK+GrfmrrS+ZhO1PiYlgzfmge+LI2WDDT/B77KLvhqNP9b+/8NnKH4mAivUBdb+9YZKQ75mDCjUBcrySQdnKFQFwiv+ZgryfwoKQ5QFzCj+Zj4x/8Nc7z5mARfUBf4x9YZjEH5mJyw+ZiN/CQdc7xQFwRf+JiN/PwojEFQF5ywUBfc4gg5uIVQFyBD+Jjc4pRB2ydQF9snUBeq4eMpuIX4mCBDUBeq4W8y2yf5mNsn+Zg="),
+"format": 34896613399,
+"index_count": 216,
+"index_data": PackedByteArray("PAAJAEMAPAAGAAkABQASAAgABQAPABIAGgAOADkAGgALAA4ACgADAA0ACgAAAAMACgAzAAAACgAnADMAOAACAEAAOAAMAAIAEQBCAAcAEQAhAEIAIQBAAEIAIQA4AEAAPgAcABkAPgA2ABwAOgAYAB4AOgA9ABgAEAAiABMAEAAgACIAIAA5ACIAIAAaADkAEAArACAAEAAxACsAAQBBAAQAAQA/AEEAPAAuAAYAPAAlAC4AAQA3AD8AAQA0ADcAHwAkADsAHwAqACQABQAwAA8ABQAtADAAGgAoAAsAGgAdACgALAApAC8ALAAjACkAFQAXABYAFQAUABcANQAmABsANQAyACYAFQA8ABQAFQA/ADwAFwBBABYAFwBDAEEAFgA/ABUAFgBBAD8AFABDABcAFAA8AEMARgBPAEkARgBMAE8AXABZAF8AXABWAFkAVwBVAFsAVwBRAFUAYgBHAGUAYgBEAEcAXgBSAFgAXgBkAFIAYQBIAE4AYQBnAEgAWgBmAGAAWgBUAGYASwBjAF0ASwBFAGMAUABlAFMAUABiAGUASgBfAE0ASgBcAF8A"),
+"material": SubResource("StandardMaterial3D_rimwf"),
+"name": "Notice-Board",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 104,
+"vertex_data": PackedByteArray("Lmh39BGPVNUuaHf0EY9U1S5od/SfCv//Lmh39J8KVNUuaHf0nwpU1S5ohwsRj///LmiHCxGPVNUuaIcLnwr//y5ohwufCv//LmiHC58KVNXQl3f0EY9U1dCXd/QRj1TV0Jd39J8K///Ql3f0nwpU1dCXd/SfClTV0JeHCxGP///Ql4cLEY9U1dCXhwufCv//0JeHC58K///Ql4cLnwpU1S5oqykBiVTVLmhT1gGJVNUuaFPWlTBU1S5oqymVMFTV0Jcs3RGP///QlyzdEY//v9CXLN0Rj1TV0Jcs3f7////Qlyzd/v//v9CXLN3+/1TV0JfSIhGP///Ql9IiEY9U1dCX0iIRj1TV0JfSIp8K///Ql9IinwpU1S5o0iL/////LmjSIv//VNUuaNIi//9U1dCXd/T+////0Jd39P7/VNXQl3f0/v9U1dCX0iL/////0JfSIv//VNXQl9Ii//9U1S5ohwv/////LmiHC/////8uaIcL//9U1dCXhwv/////0JeHC//////Ql4cL//9U1S5od/T+////Lmh39P7/VNUuaHf0/v9U1S5oLN3+////Lmgs3f7//78uaCzd/v9U1dCXLN2fCv//0Jcs3Z8KVNUuaNIiEY///y5o0iIRj1TVLmjSIhGPVNUuaCzdEY///y5oLN0Rj/+/Lmgs3RGPVNUuaCzdnwr//y5oLN2fClTVLmjSIp8K//8uaNIinwpU1QAA//8ZMP//AAD//xkw//8AAP//GTD/vwAA//94IP//AAD//3gg//8AAP//eCD/vwAAAAAZMP+/AAAAABkw//8AAAAAGTD/vwAAAAB4IP+/AAAAAHgg//8AAAAAeCD/v/////8ZMP///////xkw////////GTCrof////94IP///////3gg////////eCD/////AAAZMP+///8AABkw/////wAAGTCrof//AAB4IP+///8AAHgg/////wAAeCD///9/AABIC/+//38AAEgL////fwAASAurof9/AAAAAP+//38AAAAA////fwAAAAD///9///9IC////3///0gL////f///SAurof9///8AAP///3///wAA////f///AAD//6mqqqpVVaqq////f6qqqqpUVaqq/3//P1VVqqr///9//3//P1RVqqqpqqqqqiqqKv///3+qqqqqqiqqKv9//z+qKqoq////f/9//z+qKqoqVVWqqlRVqqpVVaqqVFWpqv9//38AAP9/qiqqKv9//38AAP9/qiqqKv9//3+qqqqqqiqqKv///3+qKqoq/3//f6qqqqpUVamq/3//f6mqqqqqKqoq/3//f6qqqqqqKqoq/3//f/9//z9UVamq/3//f/9//z+qKqoq/3//f6mqqqpUVamq/3//fwAA/39UVamq////f6oqqir/f/9/qqqqqlVVqqr/f/9/AAD/f1VVqqr///9/VFWqqv///39UVaqq/3//vwOn/3//f////3//v///VFv/f///AAD/fwOn/3//f///AAD/f/7/VFv/f////3//v/+//3//f/7//3//v1Pb/3//v/9/AAD/f/+//3//f///AAD/f1Pb/3//v/9/AAD/fwOn/3//f///AAD/f1Pb/3///1Rb/3//vwOn/3//f/7//3//v1Pb/3///6qk")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_p1frt")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1j8ds"]
+points = PackedVector3Array(5.679, 47.8518, 95.8494, -1.60232, -50.982, -58.594, 3.09565, -50.513, -57.8959, -1.60232, 50.6813, -58.594, 22.9185, 52.7847, -29.704, -4.16409, -48.1526, 95.8494, -21.3992, 52.7847, -29.704, 22.9185, -53.0854, -29.704, -21.3992, -53.0854, -29.704, 5.679, -48.1526, 95.8494, -4.16409, 47.8518, 95.8494, -20.1682, -50.1446, -38.7306, 20.9329, 48.0414, -36.719, -20.1682, 49.8439, -38.7306, 3.09565, 50.2122, -57.8959, 20.9329, -48.3421, -36.719)
+
+[node name="@Node3D@90" type="Node3D"]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.01, 0, 0.01, -4.37114e-10, 0, 0, 0)
+
+[node name="@StaticBody3D@91" type="StaticBody3D" parent="."]
+
+[node name="Notice-Board" type="MeshInstance3D" parent="@StaticBody3D@91"]
+mesh = SubResource("ArrayMesh_c4saq")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@91"]
+transform = Transform3D(1, 0, 0, 0, 1, -3.55271e-15, 0, 3.55271e-15, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_1j8ds")

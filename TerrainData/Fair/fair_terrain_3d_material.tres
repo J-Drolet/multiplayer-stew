@@ -29,9 +29,10 @@ _shader_parameters = {
 "macro_variation2": Color(1, 1, 1, 1),
 "noise1_angle": 0.0,
 "noise1_offset": Vector2(0.5, 0.5),
-"noise1_scale": 0.358,
-"noise2_scale": 0.499,
+"noise1_scale": 0.04,
+"noise2_scale": 0.076,
 "noise3_scale": 0.225,
 "noise_texture": SubResource("NoiseTexture2D_c1ipt"),
 "vertex_normals_distance": 128.0
 }
+world_background = 0

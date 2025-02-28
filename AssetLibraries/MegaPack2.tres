@@ -1,0 +1,2767 @@
+[gd_resource type="Resource" load_steps=397 format=3]
+
+[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetPersistentData.cs" id="1_5ptwh"]
+[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetLibrary.cs" id="2_siysw"]
+
+[sub_resource type="Resource" id="Resource_oynbm"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/ancient_artifact_mx_1ancient_artifact_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ibjgs"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/asphalt_hr_1asphalt_hr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_agq6q"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/asphalt_hr_1_largeasphalt_hr_1_large.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4v5eo"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/asphalt_hr_2asphalt_hr_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_fgdto"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/asphalt_hr_3asphalt_hr_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8hbqe"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/baking_soda_1baking_soda_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_gr6of"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/barricade_a_1barricade_a_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_p5qyu"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/barricade_a_2barricade_a_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_wv4dh"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/barricade_a_3barricade_a_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ydlrj"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/barricade_b_1barricade_b_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_e8jwt"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/barricade_b_2barricade_b_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_shfif"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/barricade_b_3barricade_b_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_wn2ta"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/barricade_b_4barricade_b_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_oq5jm"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/baseball_bat_mx_1baseball_bat_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_3icsv"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/baseball_bat_mx_2baseball_bat_mx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_yds3a"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/beam_hc_horizonatal_1beam_hc_horizonatal_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_vkoqa"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/beam_hc_horizonatal_2beam_hc_horizonatal_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0bkmt"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/beam_hc_vertical_1beam_hc_vertical_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4rnn4"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/beam_hc_vertical_2beam_hc_vertical_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8v61u"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/beam_hl_1beam_hl_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_dacm6"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/boiler_hx_4boiler_hx_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_rbclv"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/bolt_mx_1bolt_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6fjhf"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/bricks_stacked_mx_1bricks_stacked_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_dkjdq"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/bricks_stacked_mx_1_0bricks_stacked_mx_1_0.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_fygq8"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/bricks_stacked_mx_2bricks_stacked_mx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_73d7l"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/bricks_stacked_mx_2_0bricks_stacked_mx_2_0.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_t6agv"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/bricks_stacked_mx_3bricks_stacked_mx_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2r2e8"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/bricks_stacked_mx_3_0bricks_stacked_mx_3_0.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_juyn7"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/bricks_stacked_mx_4bricks_stacked_mx_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_tt0xm"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/bricks_stacked_mx_4_0bricks_stacked_mx_4_0.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2tg82"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_1brick_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8w267"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_1_0brick_mx_1_0.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_f4wqg"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_1_1brick_mx_1_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_n3ap7"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_1_2brick_mx_1_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_rc626"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_1_3brick_mx_1_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_i3hcn"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_2brick_mx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_iacub"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_2_0brick_mx_2_0.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_g2d3b"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_2_1brick_mx_2_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8uk04"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_2_2brick_mx_2_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ifm8b"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_2_3brick_mx_2_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_w51l5"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_3brick_mx_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_45lcx"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_3_0brick_mx_3_0.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_usws6"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_3_1brick_mx_3_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_hdqu3"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_3_2brick_mx_3_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_qg0mh"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_3_3brick_mx_3_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_c81fw"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_4brick_mx_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_bot5d"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_4_0brick_mx_4_0.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2y15x"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_4_1brick_mx_4_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ghu3h"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_4_2brick_mx_4_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_70ql6"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/brick_mx_4_3brick_mx_4_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6k6rx"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/bucket_mx_1bucket_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_apn2m"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/bucket_mx_2bucket_mx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_p4yi0"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/bucket_mx_3bucket_mx_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_yaqet"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/cage_mx_1cage_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_rwdtv"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/cardboard_box_1cardboard_box_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_jxucf"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/cardboard_box_2cardboard_box_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_clyka"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/cell_phone_hammer_mx_1cell_phone_hammer_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_wu5er"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/chimney_a_1chimney_a_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_vjl4r"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/chimney_a_2chimney_a_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7o6vy"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/chimney_a_3chimney_a_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_f4xni"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/chimney_a_4chimney_a_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_26gll"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/clipboard_mx_1clipboard_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_qkayp"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/concrete_block_mx_1concrete_block_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_vf0ub"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/concrete_fence_hr_1concrete_fence_hr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_iqoxy"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/concrete_fence_hr_1_pillar_1concrete_fence_hr_1_pillar_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_uqylb"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/concrete_fence_hr_1_pillar_1_cornerconcrete_fence_hr_1_pillar_1_corner.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_vqnb6"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/concrete_fence_hr_2concrete_fence_hr_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_bihry"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/concrete_pipe_hm_1_endconcrete_pipe_hm_1_end.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5hy2k"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/concrete_pipe_hm_1_end_bars_1concrete_pipe_hm_1_end_bars_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_qocag"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/concrete_pipe_hm_1_middleconcrete_pipe_hm_1_middle.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_o5t15"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/debris_bricks_mx_1debris_bricks_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_hrac6"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/debris_bricks_mx_1_0debris_bricks_mx_1_0.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6to21"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/debris_bricks_mx_2debris_bricks_mx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_imy34"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/debris_bricks_mx_2_0debris_bricks_mx_2_0.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_882xt"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/distillery_mx_1distillery_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_jexd8"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/doorway_hr_1doorway_hr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_qr7wc"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/doorway_hr_1_widedoorway_hr_1_wide.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_s3ev7"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/doorway_hr_2_regulardoorway_hr_2_regular.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_oy0bp"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/doorway_hr_2_widedoorway_hr_2_wide.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ar6xw"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/doorway_hr_3_regulardoorway_hr_3_regular.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_lm4kj"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/doorway_hs_1_regulardoorway_hs_1_regular.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_3px7u"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/doorway_hs_1_widedoorway_hs_1_wide.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_lw4ld"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/doorway_rg_1_regulardoorway_rg_1_regular.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_a6ute"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/doorway_rg_1_widedoorway_rg_1_wide.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xisfw"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/doorway_rg_2_widedoorway_rg_2_wide.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_jnja3"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/doorway_rx_1doorway_rx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_v7uko"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/door_hr_6door_hr_6.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_bba6q"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/door_hr_8door_hr_8.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_pg61f"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/door_hr_12door_hr_12.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_534y2"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/door_hr_13door_hr_13.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_aq0vq"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/door_hr_14door_hr_14.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_lwtw5"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/electrical_equipment_1electrical_equipment_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_mvyo2"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/electrical_equipment_2electrical_equipment_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_l2cwm"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/fence_a_1fence_a_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_k8xcj"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/fence_b_1fence_b_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_shvte"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/fence_b_pillarfence_b_pillar.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_bpv7n"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/fence_e_1fence_e_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ayrnu"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/fence_e_2fence_e_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_f7tcp"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/fence_e_pillar_1fence_e_pillar_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_345cd"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/fence_e_pillar_1_cornerfence_e_pillar_1_corner.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_grk74"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/first_aid_kit_hr_1first_aid_kit_hr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_mfeij"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/first_aid_kit_hr_2first_aid_kit_hr_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_rk5ju"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/first_aid_kit_hr_2_1first_aid_kit_hr_2_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_l4gk8"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/fish_mx_1fish_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_tqncl"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hr_1floor_ceiling_hr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_fyox6"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hr_2floor_ceiling_hr_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_hohjj"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hr_3floor_ceiling_hr_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_3qgq0"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hr_4floor_ceiling_hr_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_61gul"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hr_5floor_ceiling_hr_5.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5ukdr"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hr_6floor_ceiling_hr_6.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_f3h25"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hs_1floor_ceiling_hs_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_hdmwp"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hs_2floor_ceiling_hs_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xgjht"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hs_3floor_ceiling_hs_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4yjhn"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hs_4floor_ceiling_hs_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_m5k1y"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hy_1floor_ceiling_hy_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_oye8r"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_rx_1floor_ceiling_rx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_g3nti"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/garages_block_hr_1garages_block_hr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_qlns2"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/garage_door_frame_hr_1garage_door_frame_hr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_srfsb"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/garage_door_frame_hr_2garage_door_frame_hr_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_1l8xh"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/garage_door_frame_hs_1garage_door_frame_hs_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_e8dnn"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/garage_door_frame_hs_2garage_door_frame_hs_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_p8jl0"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/garage_door_frame_rg_1garage_door_frame_rg_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_e723s"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/garage_door_frame_rg_2garage_door_frame_rg_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ps1ri"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/gas_cylinder_mx_1gas_cylinder_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_vhasp"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/gate_1gate_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_e3wcg"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/gift_box_mx_1gift_box_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xg44y"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/gift_box_mx_1_1gift_box_mx_1_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_52ebn"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/gift_box_mx_1_2gift_box_mx_1_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_bpwp6"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/gift_box_mx_1_3gift_box_mx_1_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_bup8b"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/glass_bottle_mx_1glass_bottle_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_jnupy"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/graffiti_mx_1graffiti_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_n3r1m"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/graffiti_mx_2graffiti_mx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4fknr"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/graffiti_mx_4graffiti_mx_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4neyr"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/graffiti_mx_5graffiti_mx_5.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_jla5o"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/graffiti_mx_7graffiti_mx_7.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xq21i"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/gravel_pile_hr_1gravel_pile_hr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_3lqs4"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/gravel_pile_hr_2gravel_pile_hr_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_wj67n"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/hammer_mx_1hammer_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5ereo"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/hanging_shelf_mx_1hanging_shelf_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_75w56"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/hanging_shelf_mx_1_1hanging_shelf_mx_1_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_007bm"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/hanging_shelf_mx_2hanging_shelf_mx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ip5b2"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/hanging_shelf_mx_2_1hanging_shelf_mx_2_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_pdeqq"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/hanging_shelf_mx_3hanging_shelf_mx_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_16i0v"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/hanging_shelf_mx_3_1hanging_shelf_mx_3_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_cmd2v"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/hexagon_nut_mx_1hexagon_nut_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_tvs1x"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/jerrycan_mx_1jerrycan_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_h6j2t"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/ladder_hr_1_longladder_hr_1_long.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_pf18u"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/ladder_hr_1_shortladder_hr_1_short.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_yeds6"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/lamp_mx_1_offlamp_mx_1_off.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_yualt"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/lamp_mx_1_onlamp_mx_1_on.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_qexmg"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/lamp_mx_2_offlamp_mx_2_off.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_mvu0o"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/lamp_mx_2_onlamp_mx_2_on.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4jg4f"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/lamp_mx_3_offlamp_mx_3_off.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_wj8pl"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/lamp_mx_3_onlamp_mx_3_on.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_u671e"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/lamp_mx_4_offlamp_mx_4_off.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xd4uv"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/lamp_mx_4_onlamp_mx_4_on.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_k0orf"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/machete_mx_1machete_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_iea2o"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/machinery_mx_1machinery_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_vus14"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/makeshift_melee_mx_1makeshift_melee_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_l18bb"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/map_mx_1map_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_x27rd"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/mask_mx_1mask_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_dets2"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/mask_mx_1_1mask_mx_1_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_14ioi"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/mask_mx_2mask_mx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_j8k0k"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/mask_mx_2_1mask_mx_2_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_uhw0v"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/mask_mx_3mask_mx_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_vqu2m"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/mask_mx_3_1mask_mx_3_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_pgxde"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/mask_mx_4mask_mx_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2jqcs"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/mask_mx_5mask_mx_5.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_projw"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/mask_mx_5_1mask_mx_5_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_c6wrw"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/melee_cross_mx_1melee_cross_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xcvcb"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/melee_fish_skewer_mx_1melee_fish_skewer_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_x31qn"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/melee_stale_baguette_mx_1melee_stale_baguette_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_h05r5"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/metal_barrel_hr_1metal_barrel_hr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2iuu4"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/metal_barrel_hr_2metal_barrel_hr_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_eb7cl"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/metal_barrel_hr_3metal_barrel_hr_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_um1ae"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/metal_barrel_hr_4metal_barrel_hr_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7w7p4"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/metal_barrel_hr_4_1metal_barrel_hr_4_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_e7qxo"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/metal_fence_hr_1metal_fence_hr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_1y20u"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/metal_fence_hr_1_pillar_1metal_fence_hr_1_pillar_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_e4ci7"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/metal_fence_hr_1_pillar_1_cornermetal_fence_hr_1_pillar_1_corner.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_j26ah"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/metal_fence_hr_2metal_fence_hr_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5ff3j"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/misc_tool_mx_1misc_tool_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ka8j5"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/misc_tool_mx_2misc_tool_mx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_g8t56"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/misc_tool_mx_3misc_tool_mx_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xq56o"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/misc_tool_mx_5misc_tool_mx_5.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_1c6rb"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/old_mattress_mx_1old_mattress_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5rqvr"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/package_hr_1package_hr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_fm7it"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/paint_brush_mr_1paint_brush_mr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2o2gx"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/paint_can_mx_1paint_can_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_wfvu0"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_ac_3pillar_ac_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ovm0f"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_ax_3pillar_ax_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2kxsv"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_ay_2pillar_ay_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_cnrn1"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_hr_1_brokenpillar_hr_1_broken.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_mpwv6"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_hr_2pillar_hr_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_h2kd2"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_hr_4pillar_hr_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5oju1"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_hr_5pillar_hr_5.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7636g"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_hr_6pillar_hr_6.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_keukc"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_hr_8pillar_hr_8.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2d5nd"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_hs_1_brokenpillar_hs_1_broken.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_vad0j"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_hs_2pillar_hs_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_55i1m"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_hs_4pillar_hs_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_roj26"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_hs_5pillar_hs_5.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_w115m"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_hs_6pillar_hs_6.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_hegh3"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_hs_7pillar_hs_7.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_c53w8"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_hs_8pillar_hs_8.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_423yq"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rgx_1pillar_rgx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0bwqu"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rgx_2pillar_rgx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5ig22"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rgx_3pillar_rgx_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_vj17m"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rg_1_brokenpillar_rg_1_broken.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2kbhx"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rg_2pillar_rg_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_noykw"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rg_4pillar_rg_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6py28"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rg_5pillar_rg_5.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_56xo5"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rg_6pillar_rg_6.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ognpr"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rg_7pillar_rg_7.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_wmcwg"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rg_8pillar_rg_8.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_65rl2"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rg_9pillar_rg_9.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ng2f4"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rg_10pillar_rg_10.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_d40bw"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rx_8pillar_rx_8.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_c5kxr"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipes_hr_1pipes_hr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_hnlc0"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipes_hr_1_elbow_1pipes_hr_1_elbow_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_dpco3"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipes_hr_1_horizontal_middle_1pipes_hr_1_horizontal_middle_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_iover"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipes_hr_1_horizontal_middle_2pipes_hr_1_horizontal_middle_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7g680"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipes_hr_1_vertical_end_1pipes_hr_1_vertical_end_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7qplv"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipes_hr_1_vertical_end_2pipes_hr_1_vertical_end_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4l3dd"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipes_hr_5_middlepipes_hr_5_middle.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_qcvwp"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipe_ax_1pipe_ax_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_a5c1w"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipe_bx_1pipe_bx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_52l8b"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipe_bx_2pipe_bx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_nqcdo"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipe_bx_3pipe_bx_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_w88mf"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipe_bx_4pipe_bx_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_wtpvl"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipe_cx_1pipe_cx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0hsu8"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipe_cx_2pipe_cx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_y41ii"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipe_cx_3pipe_cx_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_d7df5"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipe_cx_4pipe_cx_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xvfev"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipe_cx_5pipe_cx_5.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_jlhh0"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipe_dx_1pipe_dx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6ebem"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipe_dx_2pipe_dx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8n5tg"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipe_e_1pipe_e_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_1fkcu"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipe_e_2pipe_e_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_v271t"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/pipe_e_3pipe_e_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_r4v12"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/platform_ax_1platform_ax_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_h6ggk"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/platform_ax_2platform_ax_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_edysh"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/platform_bx_1platform_bx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_cur2j"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/platform_bx_2platform_bx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7h8w5"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/platform_b_handrail_1platform_b_handrail_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_eyoeb"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/platform_b_handrail_2platform_b_handrail_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6yt2f"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/platform_cx_1platform_cx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_agtm8"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/platform_large_mx_1platform_large_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_txpwu"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/platform_mx_1platform_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_r3cqa"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/platform_small_mx_1platform_small_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_rhlpw"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_4poster_cx_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ib1o3"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_5poster_cx_5.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_y5gbq"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_9poster_cx_9.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6vgav"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_11poster_cx_11.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0ehse"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_12poster_cx_12.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_sgkjd"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_13poster_cx_13.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_pi5ox"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_15poster_cx_15.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_m7y7k"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_16poster_cx_16.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_c8xp4"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/rainwater_downpipe_hl_1_endrainwater_downpipe_hl_1_end.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_d0fld"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/rainwater_downpipe_hl_1_middlerainwater_downpipe_hl_1_middle.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ne534"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/rainwater_pipe_hl_1_end_1rainwater_pipe_hl_1_end_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_qv51x"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/rainwater_pipe_hl_1_end_2rainwater_pipe_hl_1_end_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_kar1s"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/rainwater_pipe_hl_1_middlerainwater_pipe_hl_1_middle.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_wp4ms"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/rainwater_pipe_hl_1_singularrainwater_pipe_hl_1_singular.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_8kh41"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/ramp_platform_slim_mx_1ramp_platform_slim_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_gcbe2"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/ramp_platform_wide_mx_1ramp_platform_wide_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_bwj33"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_bx_1roof_bx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ecfwq"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_bx_1_corner_1roof_bx_1_corner_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_juw6r"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_bx_1_corner_2roof_bx_1_corner_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ccq6m"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_bx_1_sideroof_bx_1_side.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_uy6gp"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_bx_2roof_bx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_lmq5c"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_hr_3_middle_angleroof_hr_3_middle_angle.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_s4t6a"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_hr_3_side_1_angleroof_hr_3_side_1_angle.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_1x4tr"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_hr_3_side_2_angle_corner_1roof_hr_3_side_2_angle_corner_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_u0kka"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_hr_3_side_2_angle_corner_2roof_hr_3_side_2_angle_corner_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_vjlus"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_hr_3_side_2_angle_edge_1roof_hr_3_side_2_angle_edge_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_tfbky"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_hr_3_side_2_angle_edge_2roof_hr_3_side_2_angle_edge_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0pxoa"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_mh_1roof_mh_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_es75e"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_mh_2roof_mh_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xuwvf"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_mh_3roof_mh_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7gt0w"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_mh_4_a_1roof_mh_4_a_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_th2cn"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_mh_4_a_2roof_mh_4_a_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_c3p2x"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_mh_4_a_3roof_mh_4_a_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ct8q0"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_mh_4_a_4roof_mh_4_a_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_gxkwg"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_mh_4_b_1roof_mh_4_b_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_76ey1"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_mh_4_b_2roof_mh_4_b_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_wnbu6"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_mh_4_b_3roof_mh_4_b_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_owr86"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_mh_4_b_4roof_mh_4_b_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_th3p5"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_mx_1roof_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_p6dry"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_small_hr_1roof_small_hr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0ve3v"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_small_hr_2roof_small_hr_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_tyl8j"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/roof_small_hr_3roof_small_hr_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_mby2t"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/rubber_duck_mx_1rubber_duck_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6gbhg"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/rubiks_cube_mx_1rubiks_cube_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2475r"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/rusty_crowbar_mx_1rusty_crowbar_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_75pky"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/saw_blade_1saw_blade_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_pdkcd"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/seam_hl_2seam_hl_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2no44"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/seam_hr_1seam_hr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_fmfck"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/shelf_mx_1shelf_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_lcr3v"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/shelf_mx_2shelf_mx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6dye0"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/shipping_container_mx_1shipping_container_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_qx43y"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/shipping_container_mx_1_hollow_1shipping_container_mx_1_hollow_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5cq16"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/shipping_container_mx_2shipping_container_mx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_hxcav"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/shovel_mx_1shovel_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_d2lam"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/sickle_mx_1sickle_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_c0n0m"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/speaker_mx_1speaker_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_apag4"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/stand_mx_1stand_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_qu4dh"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/stand_mx_2stand_mx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_f20qf"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/stool_mx_1stool_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_18lua"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/structure_piece_rg_1structure_piece_rg_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_vwjwx"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/structure_piece_rg_1_1structure_piece_rg_1_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_pm36n"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/structure_piece_rg_2structure_piece_rg_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5sspn"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/tank_mx_1tank_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_f4hs1"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/tank_system_mx_1tank_system_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2kn5s"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/test_machine_mx_1test_machine_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xwsq0"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/tire_1tire_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_tl4hj"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/tire_2tire_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_mvs1m"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/toolbox_mx_1toolbox_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_uhdb8"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/van_3van_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2510o"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_hr_1wall_hr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7evol"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_hr_1_doublewall_hr_1_double.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2dlnx"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_hr_1_hole_1wall_hr_1_hole_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_12gbf"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_hr_1_hole_2wall_hr_1_hole_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_63oef"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_hr_1_m_2wall_hr_1_m_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_h2jt3"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_hr_1_t_1wall_hr_1_t_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_t708i"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_hr_1_t_2wall_hr_1_t_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2brbs"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_hr_2wall_hr_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_80lbq"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_hr_15wall_hr_15.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_g2ytu"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_hr_15_doublewall_hr_15_double.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5rde7"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_hs_1wall_hs_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_l5m8c"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_hs_1_doublewall_hs_1_double.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0bdco"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_hs_1_hole_1wall_hs_1_hole_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_aiahb"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_hs_1_hole_2wall_hs_1_hole_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_40vb6"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_hs_1_m_2wall_hs_1_m_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_oel8f"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_hs_1_t_1wall_hs_1_t_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_c8k0b"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_hs_1_t_2wall_hs_1_t_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_grq0l"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_hs_15wall_hs_15.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_l04ki"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_hs_15_doublewall_hs_15_double.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_64jp1"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_rg_1wall_rg_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_vwrrh"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_rg_1_anglewall_rg_1_angle.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_e2cct"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_rg_1_doublewall_rg_1_double.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_44l7u"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_rg_1_hole_1wall_rg_1_hole_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_mrp5x"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_rg_1_hole_2wall_rg_1_hole_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_y7qp2"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_rg_1_m_2wall_rg_1_m_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_hvuh3"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_rg_1_t_1wall_rg_1_t_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_n222k"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_rg_1_t_2wall_rg_1_t_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_5g3fy"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_rg_15wall_rg_15.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_1eydg"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_rg_15_doublewall_rg_15_double.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_l1n45"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_rx_1wall_rx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_2ovfb"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_rx_2wall_rx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_7vmie"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_rx_4wall_rx_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_gynni"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_top_part_hr_1wall_top_part_hr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_p6s4a"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_top_part_hr_2wall_top_part_hr_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_0sdvr"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_top_part_hr_3wall_top_part_hr_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_cbf0m"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_top_part_hs_1wall_top_part_hs_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xo4g8"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_top_part_hs_2wall_top_part_hs_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_fcnx7"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_top_part_hs_3wall_top_part_hs_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_fotpl"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_top_part_rg_1wall_top_part_rg_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_eka7x"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_top_part_rg_2wall_top_part_rg_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_6kapx"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wall_top_part_rg_3wall_top_part_rg_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_umbpc"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/warehouse_hl_1warehouse_hl_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xu03n"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/warehouse_hl_1_frame_piecewarehouse_hl_1_frame_piece.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_gpnsj"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/warehouse_hs_1_roof_1warehouse_hs_1_roof_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_n2p48"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/warehouse_hs_1_roof_2warehouse_hs_1_roof_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_awhph"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/water_tower_hm_1water_tower_hm_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_i4v17"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/windows_hr_1windows_hr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_m7afk"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/windows_hr_2windows_hr_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_pp65t"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/windows_hs_1windows_hs_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_pf1ao"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/windows_rg_1windows_rg_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_akbj0"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/window_hr_1window_hr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_f1el3"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/window_hr_2window_hr_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_ujena"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/window_hs_1window_hs_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_r1pgp"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/window_rg_1window_rg_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_j2lu2"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wires_hr_1wires_hr_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_iyotu"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wooden_barrel_1wooden_barrel_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_tnxar"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wooden_board_1wooden_board_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_485re"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wooden_board_2wooden_board_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_3cf7n"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wooden_board_3wooden_board_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_4oatj"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_1wooden_crate_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_t45uo"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_2_awooden_crate_2_a.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_hy3ib"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_2_bwooden_crate_2_b.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_wyh2n"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_2_cwooden_crate_2_c.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_sifkh"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_3wooden_crate_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_q2xus"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_hx_1_1wooden_crate_hx_1_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_05etk"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_hx_1_2wooden_crate_hx_1_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_70wwx"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_hx_2_1wooden_crate_hx_2_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_pso5i"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_hx_2_2wooden_crate_hx_2_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_amah0"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wooden_plank_1wooden_plank_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_px75m"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wooden_plank_2wooden_plank_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_bp72q"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wooden_plank_3wooden_plank_3.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_xjj36"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wooden_plank_4wooden_plank_4.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_nh0ms"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wooden_plank_5wooden_plank_5.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_l6dqw"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wrench_mx_1wrench_mx_1.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[sub_resource type="Resource" id="Resource_o1yf3"]
+script = ExtResource("1_5ptwh")
+path = "res://Scenes/Levels/LevelAssets/MegaPack2/wrench_mx_2wrench_mx_2.tscn"
+isMesh = false
+previewPerspective = 0
+customPreview = Vector3(-1, -1, -1)
+
+[resource]
+script = ExtResource("2_siysw")
+assetData = [SubResource("Resource_oynbm"), SubResource("Resource_ibjgs"), SubResource("Resource_agq6q"), SubResource("Resource_4v5eo"), SubResource("Resource_fgdto"), SubResource("Resource_8hbqe"), SubResource("Resource_gr6of"), SubResource("Resource_p5qyu"), SubResource("Resource_wv4dh"), SubResource("Resource_ydlrj"), SubResource("Resource_e8jwt"), SubResource("Resource_shfif"), SubResource("Resource_wn2ta"), SubResource("Resource_oq5jm"), SubResource("Resource_3icsv"), SubResource("Resource_yds3a"), SubResource("Resource_vkoqa"), SubResource("Resource_0bkmt"), SubResource("Resource_4rnn4"), SubResource("Resource_8v61u"), SubResource("Resource_dacm6"), SubResource("Resource_rbclv"), SubResource("Resource_6fjhf"), SubResource("Resource_dkjdq"), SubResource("Resource_fygq8"), SubResource("Resource_73d7l"), SubResource("Resource_t6agv"), SubResource("Resource_2r2e8"), SubResource("Resource_juyn7"), SubResource("Resource_tt0xm"), SubResource("Resource_2tg82"), SubResource("Resource_8w267"), SubResource("Resource_f4wqg"), SubResource("Resource_n3ap7"), SubResource("Resource_rc626"), SubResource("Resource_i3hcn"), SubResource("Resource_iacub"), SubResource("Resource_g2d3b"), SubResource("Resource_8uk04"), SubResource("Resource_ifm8b"), SubResource("Resource_w51l5"), SubResource("Resource_45lcx"), SubResource("Resource_usws6"), SubResource("Resource_hdqu3"), SubResource("Resource_qg0mh"), SubResource("Resource_c81fw"), SubResource("Resource_bot5d"), SubResource("Resource_2y15x"), SubResource("Resource_ghu3h"), SubResource("Resource_70ql6"), SubResource("Resource_6k6rx"), SubResource("Resource_apn2m"), SubResource("Resource_p4yi0"), SubResource("Resource_yaqet"), SubResource("Resource_rwdtv"), SubResource("Resource_jxucf"), SubResource("Resource_clyka"), SubResource("Resource_wu5er"), SubResource("Resource_vjl4r"), SubResource("Resource_7o6vy"), SubResource("Resource_f4xni"), SubResource("Resource_26gll"), SubResource("Resource_qkayp"), SubResource("Resource_vf0ub"), SubResource("Resource_iqoxy"), SubResource("Resource_uqylb"), SubResource("Resource_vqnb6"), SubResource("Resource_bihry"), SubResource("Resource_5hy2k"), SubResource("Resource_qocag"), SubResource("Resource_o5t15"), SubResource("Resource_hrac6"), SubResource("Resource_6to21"), SubResource("Resource_imy34"), SubResource("Resource_882xt"), SubResource("Resource_jexd8"), SubResource("Resource_qr7wc"), SubResource("Resource_s3ev7"), SubResource("Resource_oy0bp"), SubResource("Resource_ar6xw"), SubResource("Resource_lm4kj"), SubResource("Resource_3px7u"), SubResource("Resource_lw4ld"), SubResource("Resource_a6ute"), SubResource("Resource_xisfw"), SubResource("Resource_jnja3"), SubResource("Resource_v7uko"), SubResource("Resource_bba6q"), SubResource("Resource_pg61f"), SubResource("Resource_534y2"), SubResource("Resource_aq0vq"), SubResource("Resource_lwtw5"), SubResource("Resource_mvyo2"), SubResource("Resource_l2cwm"), SubResource("Resource_k8xcj"), SubResource("Resource_shvte"), SubResource("Resource_bpv7n"), SubResource("Resource_ayrnu"), SubResource("Resource_f7tcp"), SubResource("Resource_345cd"), SubResource("Resource_grk74"), SubResource("Resource_mfeij"), SubResource("Resource_rk5ju"), SubResource("Resource_l4gk8"), SubResource("Resource_tqncl"), SubResource("Resource_fyox6"), SubResource("Resource_hohjj"), SubResource("Resource_3qgq0"), SubResource("Resource_61gul"), SubResource("Resource_5ukdr"), SubResource("Resource_f3h25"), SubResource("Resource_hdmwp"), SubResource("Resource_xgjht"), SubResource("Resource_4yjhn"), SubResource("Resource_m5k1y"), SubResource("Resource_oye8r"), SubResource("Resource_g3nti"), SubResource("Resource_qlns2"), SubResource("Resource_srfsb"), SubResource("Resource_1l8xh"), SubResource("Resource_e8dnn"), SubResource("Resource_p8jl0"), SubResource("Resource_e723s"), SubResource("Resource_ps1ri"), SubResource("Resource_vhasp"), SubResource("Resource_e3wcg"), SubResource("Resource_xg44y"), SubResource("Resource_52ebn"), SubResource("Resource_bpwp6"), SubResource("Resource_bup8b"), SubResource("Resource_jnupy"), SubResource("Resource_n3r1m"), SubResource("Resource_4fknr"), SubResource("Resource_4neyr"), SubResource("Resource_jla5o"), SubResource("Resource_xq21i"), SubResource("Resource_3lqs4"), SubResource("Resource_wj67n"), SubResource("Resource_5ereo"), SubResource("Resource_75w56"), SubResource("Resource_007bm"), SubResource("Resource_ip5b2"), SubResource("Resource_pdeqq"), SubResource("Resource_16i0v"), SubResource("Resource_cmd2v"), SubResource("Resource_tvs1x"), SubResource("Resource_h6j2t"), SubResource("Resource_pf18u"), SubResource("Resource_yeds6"), SubResource("Resource_yualt"), SubResource("Resource_qexmg"), SubResource("Resource_mvu0o"), SubResource("Resource_4jg4f"), SubResource("Resource_wj8pl"), SubResource("Resource_u671e"), SubResource("Resource_xd4uv"), SubResource("Resource_k0orf"), SubResource("Resource_iea2o"), SubResource("Resource_vus14"), SubResource("Resource_l18bb"), SubResource("Resource_x27rd"), SubResource("Resource_dets2"), SubResource("Resource_14ioi"), SubResource("Resource_j8k0k"), SubResource("Resource_uhw0v"), SubResource("Resource_vqu2m"), SubResource("Resource_pgxde"), SubResource("Resource_2jqcs"), SubResource("Resource_projw"), SubResource("Resource_c6wrw"), SubResource("Resource_xcvcb"), SubResource("Resource_x31qn"), SubResource("Resource_h05r5"), SubResource("Resource_2iuu4"), SubResource("Resource_eb7cl"), SubResource("Resource_um1ae"), SubResource("Resource_7w7p4"), SubResource("Resource_e7qxo"), SubResource("Resource_1y20u"), SubResource("Resource_e4ci7"), SubResource("Resource_j26ah"), SubResource("Resource_5ff3j"), SubResource("Resource_ka8j5"), SubResource("Resource_g8t56"), SubResource("Resource_xq56o"), SubResource("Resource_1c6rb"), SubResource("Resource_5rqvr"), SubResource("Resource_fm7it"), SubResource("Resource_2o2gx"), SubResource("Resource_wfvu0"), SubResource("Resource_ovm0f"), SubResource("Resource_2kxsv"), SubResource("Resource_cnrn1"), SubResource("Resource_mpwv6"), SubResource("Resource_h2kd2"), SubResource("Resource_5oju1"), SubResource("Resource_7636g"), SubResource("Resource_keukc"), SubResource("Resource_2d5nd"), SubResource("Resource_vad0j"), SubResource("Resource_55i1m"), SubResource("Resource_roj26"), SubResource("Resource_w115m"), SubResource("Resource_hegh3"), SubResource("Resource_c53w8"), SubResource("Resource_423yq"), SubResource("Resource_0bwqu"), SubResource("Resource_5ig22"), SubResource("Resource_vj17m"), SubResource("Resource_2kbhx"), SubResource("Resource_noykw"), SubResource("Resource_6py28"), SubResource("Resource_56xo5"), SubResource("Resource_ognpr"), SubResource("Resource_wmcwg"), SubResource("Resource_65rl2"), SubResource("Resource_ng2f4"), SubResource("Resource_d40bw"), SubResource("Resource_c5kxr"), SubResource("Resource_hnlc0"), SubResource("Resource_dpco3"), SubResource("Resource_iover"), SubResource("Resource_7g680"), SubResource("Resource_7qplv"), SubResource("Resource_4l3dd"), SubResource("Resource_qcvwp"), SubResource("Resource_a5c1w"), SubResource("Resource_52l8b"), SubResource("Resource_nqcdo"), SubResource("Resource_w88mf"), SubResource("Resource_wtpvl"), SubResource("Resource_0hsu8"), SubResource("Resource_y41ii"), SubResource("Resource_d7df5"), SubResource("Resource_xvfev"), SubResource("Resource_jlhh0"), SubResource("Resource_6ebem"), SubResource("Resource_8n5tg"), SubResource("Resource_1fkcu"), SubResource("Resource_v271t"), SubResource("Resource_r4v12"), SubResource("Resource_h6ggk"), SubResource("Resource_edysh"), SubResource("Resource_cur2j"), SubResource("Resource_7h8w5"), SubResource("Resource_eyoeb"), SubResource("Resource_6yt2f"), SubResource("Resource_agtm8"), SubResource("Resource_txpwu"), SubResource("Resource_r3cqa"), SubResource("Resource_rhlpw"), SubResource("Resource_ib1o3"), SubResource("Resource_y5gbq"), SubResource("Resource_6vgav"), SubResource("Resource_0ehse"), SubResource("Resource_sgkjd"), SubResource("Resource_pi5ox"), SubResource("Resource_m7y7k"), SubResource("Resource_c8xp4"), SubResource("Resource_d0fld"), SubResource("Resource_ne534"), SubResource("Resource_qv51x"), SubResource("Resource_kar1s"), SubResource("Resource_wp4ms"), SubResource("Resource_8kh41"), SubResource("Resource_gcbe2"), SubResource("Resource_bwj33"), SubResource("Resource_ecfwq"), SubResource("Resource_juw6r"), SubResource("Resource_ccq6m"), SubResource("Resource_uy6gp"), SubResource("Resource_lmq5c"), SubResource("Resource_s4t6a"), SubResource("Resource_1x4tr"), SubResource("Resource_u0kka"), SubResource("Resource_vjlus"), SubResource("Resource_tfbky"), SubResource("Resource_0pxoa"), SubResource("Resource_es75e"), SubResource("Resource_xuwvf"), SubResource("Resource_7gt0w"), SubResource("Resource_th2cn"), SubResource("Resource_c3p2x"), SubResource("Resource_ct8q0"), SubResource("Resource_gxkwg"), SubResource("Resource_76ey1"), SubResource("Resource_wnbu6"), SubResource("Resource_owr86"), SubResource("Resource_th3p5"), SubResource("Resource_p6dry"), SubResource("Resource_0ve3v"), SubResource("Resource_tyl8j"), SubResource("Resource_mby2t"), SubResource("Resource_6gbhg"), SubResource("Resource_2475r"), SubResource("Resource_75pky"), SubResource("Resource_pdkcd"), SubResource("Resource_2no44"), SubResource("Resource_fmfck"), SubResource("Resource_lcr3v"), SubResource("Resource_6dye0"), SubResource("Resource_qx43y"), SubResource("Resource_5cq16"), SubResource("Resource_hxcav"), SubResource("Resource_d2lam"), SubResource("Resource_c0n0m"), SubResource("Resource_apag4"), SubResource("Resource_qu4dh"), SubResource("Resource_f20qf"), SubResource("Resource_18lua"), SubResource("Resource_vwjwx"), SubResource("Resource_pm36n"), SubResource("Resource_5sspn"), SubResource("Resource_f4hs1"), SubResource("Resource_2kn5s"), SubResource("Resource_xwsq0"), SubResource("Resource_tl4hj"), SubResource("Resource_mvs1m"), SubResource("Resource_uhdb8"), SubResource("Resource_2510o"), SubResource("Resource_7evol"), SubResource("Resource_2dlnx"), SubResource("Resource_12gbf"), SubResource("Resource_63oef"), SubResource("Resource_h2jt3"), SubResource("Resource_t708i"), SubResource("Resource_2brbs"), SubResource("Resource_80lbq"), SubResource("Resource_g2ytu"), SubResource("Resource_5rde7"), SubResource("Resource_l5m8c"), SubResource("Resource_0bdco"), SubResource("Resource_aiahb"), SubResource("Resource_40vb6"), SubResource("Resource_oel8f"), SubResource("Resource_c8k0b"), SubResource("Resource_grq0l"), SubResource("Resource_l04ki"), SubResource("Resource_64jp1"), SubResource("Resource_vwrrh"), SubResource("Resource_e2cct"), SubResource("Resource_44l7u"), SubResource("Resource_mrp5x"), SubResource("Resource_y7qp2"), SubResource("Resource_hvuh3"), SubResource("Resource_n222k"), SubResource("Resource_5g3fy"), SubResource("Resource_1eydg"), SubResource("Resource_l1n45"), SubResource("Resource_2ovfb"), SubResource("Resource_7vmie"), SubResource("Resource_gynni"), SubResource("Resource_p6s4a"), SubResource("Resource_0sdvr"), SubResource("Resource_cbf0m"), SubResource("Resource_xo4g8"), SubResource("Resource_fcnx7"), SubResource("Resource_fotpl"), SubResource("Resource_eka7x"), SubResource("Resource_6kapx"), SubResource("Resource_umbpc"), SubResource("Resource_xu03n"), SubResource("Resource_gpnsj"), SubResource("Resource_n2p48"), SubResource("Resource_awhph"), SubResource("Resource_i4v17"), SubResource("Resource_m7afk"), SubResource("Resource_pp65t"), SubResource("Resource_pf1ao"), SubResource("Resource_akbj0"), SubResource("Resource_f1el3"), SubResource("Resource_ujena"), SubResource("Resource_r1pgp"), SubResource("Resource_j2lu2"), SubResource("Resource_iyotu"), SubResource("Resource_tnxar"), SubResource("Resource_485re"), SubResource("Resource_3cf7n"), SubResource("Resource_4oatj"), SubResource("Resource_t45uo"), SubResource("Resource_hy3ib"), SubResource("Resource_wyh2n"), SubResource("Resource_sifkh"), SubResource("Resource_q2xus"), SubResource("Resource_05etk"), SubResource("Resource_70wwx"), SubResource("Resource_pso5i"), SubResource("Resource_amah0"), SubResource("Resource_px75m"), SubResource("Resource_bp72q"), SubResource("Resource_xjj36"), SubResource("Resource_nh0ms"), SubResource("Resource_l6dqw"), SubResource("Resource_o1yf3")]
+previewPerspective = 0
