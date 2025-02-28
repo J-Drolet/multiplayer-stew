@@ -1,0 +1,209 @@
+[gd_scene load_steps=21 format=3 uid="uid://ce4mnhuaptjjq"]
+
+[ext_resource type="Script" path="res://Scripts/GameLogic/LevelManager.cs" id="1_3cian"]
+[ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_auvs1"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/floor_1floor_1.tscn" id="3_hc4n7"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/wall_1_plainwall_1_plain.tscn" id="4_y4bfh"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/table_large_3table_large_3.tscn" id="5_djujn"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/military_radio_1military_radio_1.tscn" id="6_hegua"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/military_radio_2military_radio_2.tscn" id="7_l62ts"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/sign_2sign_2.tscn" id="8_q34lv"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/scanner_1scanner_1.tscn" id="9_n6m1v"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/tunnel_ancletunnel_ancle.tscn" id="10_ifot7"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/tunnel_junction_four_waytunnel_junction_four_way.tscn" id="11_ru3ac"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/tunnel_hole_2tunnel_hole_2.tscn" id="12_oeu0v"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/tunnel_straighttunnel_straight.tscn" id="13_8t8hf"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/drain_cover_2drain_cover_2.tscn" id="14_ixswx"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/floor_manhole_shaft_end_1floor_manhole_shaft_end_1.tscn" id="15_fhmlo"]
+[ext_resource type="PackedScene" uid="uid://ddwtikg73ufqn" path="res://Scenes/Levels/LevelAssets/CountyFairAssets/Cell.tscn" id="16_vw81r"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/pillar_11pillar_11.tscn" id="17_chlts"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_klxao"]
+properties/0/path = NodePath(".:PlayerStatJson")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:GameTime")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath(".:BetweenRoundTime")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l5sto"]
+render_priority = 1
+transparency = 4
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_jdp7g"]
+
+[node name="Jackson\'sLevel" type="Node3D"]
+script = ExtResource("1_3cian")
+PlayerScene = ExtResource("2_auvs1")
+
+[node name="Floor" type="Node3D" parent="."]
+transform = Transform3D(25, 0, 0, 0, 0.433, 0, 0, 0, 25, 0, 0, 0)
+
+[node name="floor_1floor_1_tscn" parent="Floor" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(0.04, 0, 0, 0, 0.000110902, 2.30946, 0, -0.0399998, 0.00640893, -1.0581e-05, 0.0166998, -0.000229445)
+
+[node name="floor_1floor_1_tscn2" parent="Floor" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(0.04, 0, 0, 0, -1.0095e-07, 2.30947, 0, -0.04, -1.74845e-09, 0, 0, -0.16)
+
+[node name="floor_1floor_1_tscn3" parent="Floor" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(0.04, 0, 0, 0, -1.0095e-07, 2.30947, 0, -0.04, -1.74845e-09, 0.16, 0, 0)
+
+[node name="floor_1floor_1_tscn4" parent="Floor" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(0.04, 0, 0, 0, -1.0095e-07, 2.30947, 0, -0.04, -1.74845e-09, 0.16, 0, -0.16)
+
+[node name="floor_1floor_1_tscn5" parent="Floor" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(-0.04, 3.49691e-09, 3.0571e-16, -8.82533e-15, 1.0095e-07, -2.30947, -3.49691e-09, -0.04, -1.74845e-09, 0, 0, -0.32)
+
+[node name="floor_1floor_1_tscn6" parent="Floor" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(-0.04, 3.49691e-09, 3.0571e-16, -8.82533e-15, 1.0095e-07, -2.30947, -3.49691e-09, -0.04, -1.74845e-09, 0.16, 0, -0.32)
+
+[node name="floor_1floor_1_tscn7" parent="Floor" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(-0.04, 3.49691e-09, 3.0571e-16, -8.82533e-15, 1.0095e-07, -2.30947, -3.49691e-09, -0.04, -1.74845e-09, 0.32, 0, -0.32)
+
+[node name="floor_1floor_1_tscn8" parent="Floor" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(-0.04, 3.49691e-09, 3.0571e-16, -8.82533e-15, 1.0095e-07, -2.30947, -3.49691e-09, -0.04, -1.74845e-09, 0.32, 0, -0.16)
+
+[node name="floor_1floor_1_tscn9" parent="Floor" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(-0.04, 3.49691e-09, 3.0571e-16, -8.82533e-15, 1.0095e-07, -2.30947, -3.49691e-09, -0.04, -1.74845e-09, 0.32, 0, 0)
+
+[node name="floor_1floor_1_tscn10" parent="Floor" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(-0.04, 3.49691e-09, 3.0571e-16, -8.82533e-15, 1.0095e-07, -2.30947, -3.49691e-09, -0.04, -1.74845e-09, 0.32, 0, 0.16)
+
+[node name="floor_1floor_1_tscn11" parent="Floor" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(-0.04, 3.49691e-09, 3.0571e-16, -8.82533e-15, 1.0095e-07, -2.30947, -3.49691e-09, -0.04, -1.74845e-09, 0.16, 0, 0.16)
+
+[node name="floor_1floor_1_tscn12" parent="Floor" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(-0.04, 3.49691e-09, 3.0571e-16, -8.82533e-15, 1.0095e-07, -2.30947, -3.49691e-09, -0.04, -1.74845e-09, 0, 0, 0.16)
+
+[node name="floor_1floor_1_tscn13" parent="Floor" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(-0.04, 3.49691e-09, 3.0571e-16, -8.82533e-15, 1.0095e-07, -2.30947, -3.49691e-09, -0.04, -1.74845e-09, -0.16, 0, 0.16)
+
+[node name="floor_1floor_1_tscn14" parent="Floor" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(-0.04, 3.49691e-09, 3.0571e-16, -8.82533e-15, 1.0095e-07, -2.30947, -3.49691e-09, -0.04, -1.74845e-09, -0.16, 0, 0)
+
+[node name="floor_1floor_1_tscn15" parent="Floor" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(-0.04, 3.49691e-09, 3.0571e-16, -8.82533e-15, 1.0095e-07, -2.30947, -3.49691e-09, -0.04, -1.74845e-09, -0.160389, 0, -0.161635)
+
+[node name="floor_1floor_1_tscn16" parent="Floor" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(-0.04, 3.49691e-09, 3.0571e-16, -8.82533e-15, 1.0095e-07, -2.30947, -3.49691e-09, -0.04, -1.74845e-09, -0.16, 0, -0.32)
+
+[node name="floor_1floor_1_tscn17" parent="Floor" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(-1.22392e-08, -0.04, 8.74227e-09, 2.019e-07, -5.0475e-07, -2.30947, 0.04, -1.22392e-08, 3.49691e-09, -0.16, 6.86762, -0.08)
+
+[node name="floor_1floor_1_tscn18" parent="Floor" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(-1.22392e-08, -0.04, 8.74227e-09, -4.038e-07, 5.0475e-07, 2.30947, -0.04, 1.22392e-08, -6.99382e-09, -0.16, 6.86762, -0.24)
+
+[node name="floor_1floor_1_tscn19" parent="Floor" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(-1.22392e-08, -0.04, 8.74227e-09, -4.038e-07, 5.0475e-07, 2.30947, -0.04, 1.22392e-08, -6.99382e-09, -0.16, 6.86762, 0.08)
+
+[node name="Walls" type="Node3D" parent="."]
+
+[node name="wall_1_plainwall_1_plain_tscn" parent="Walls" instance=ExtResource("4_y4bfh")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -4, 0, 4)
+
+[node name="wall_1_plainwall_1_plain_tscn2" parent="Walls" instance=ExtResource("4_y4bfh")]
+transform = Transform3D(-4.37114e-08, -1, -3.0598e-07, -1.74845e-07, 3.0598e-07, -1, 1, -4.37114e-08, -1.74845e-07, -6, 0, 2)
+
+[node name="wall_1_plainwall_1_plain_tscn3" parent="Walls" instance=ExtResource("4_y4bfh")]
+transform = Transform3D(-4.37114e-08, -1, -3.0598e-07, -1.74845e-07, 3.0598e-07, -1, 1, -4.37114e-08, -1.74845e-07, -6, 0, -2)
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_klxao")
+
+[node name="Spawns" type="Node3D" parent="."]
+
+[node name="1" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.99284, 1.64468, 0)
+
+[node name="2" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2335, 0, 0)
+
+[node name="3" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.91953)
+
+[node name="4" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.52081)
+
+[node name="5" type="Node3D" parent="Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.72996, 0, 9.44778)
+
+[node name="Props" type="Node3D" parent="."]
+
+[node name="table_large_3table_large_3_tscn2" parent="Props" instance=ExtResource("5_djujn")]
+transform = Transform3D(1, 0, 0, 0, -7.57081e-10, -1, 0, 1, -2.52375e-06, 2.31239, 0.0220635, 0.334531)
+
+[node name="military_radio_1military_radio_1_tscn" parent="Props" instance=ExtResource("6_hegua")]
+transform = Transform3D(1, 0, 0, 0, -7.57081e-10, -1, 0, 1, -2.52375e-06, 2.1783, 0.990188, 0.408905)
+
+[node name="military_radio_2military_radio_2_tscn" parent="Props" instance=ExtResource("7_l62ts")]
+transform = Transform3D(1, 0, 0, 0, -7.57081e-10, -1, 0, 1, -2.52375e-06, 2.14215, 1.16478, 0.417538)
+
+[node name="military_radio_2military_radio_2_tscn2" parent="Props" instance=ExtResource("7_l62ts")]
+transform = Transform3D(0.712638, 0.70153, -1.76996e-06, 5.31115e-10, -5.39525e-10, -1, -0.70153, 0.712638, -1.79874e-06, 2.15977, 1.33936, 0.462546)
+
+[node name="sign_2sign_2_tscn" parent="Props" instance=ExtResource("8_q34lv")]
+transform = Transform3D(7.54979e-08, 1, -2.52375e-06, 0, -7.57081e-10, -1, -1, 7.54979e-08, -1.90538e-13, -5.90778, 2.67218, 3.1522)
+
+[node name="scanner_1scanner_1_tscn" parent="Props" instance=ExtResource("9_n6m1v")]
+transform = Transform3D(-1.74846e-08, -0.4, -1.0095e-06, 0, -3.02833e-10, 0.4, -0.4, 1.74846e-08, 4.41267e-14, -5.90778, 2.60896, 2.74231)
+
+[node name="tunnel_ancletunnel_ancle_tscn" type="Node3D" parent="Props" instance=ExtResource("10_ifot7")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 13, 0, 4)
+
+[node name="tunnel_junction_four_waytunnel_junction_four_way_tscn" type="Node3D" parent="Props" instance=ExtResource("11_ru3ac")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 13, 0, 10)
+
+[node name="tunnel_ancletunnel_ancle_tscn2" type="Node3D" parent="Props" instance=ExtResource("10_ifot7")]
+transform = Transform3D(3.0598e-07, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 3.0598e-07, -1.33748e-14, 7, 4.76837e-07, 10)
+
+[node name="tunnel_hole_2tunnel_hole_2_tscn" type="Node3D" parent="Props" instance=ExtResource("12_oeu0v")]
+transform = Transform3D(-1, 8.74228e-08, -3.49691e-07, 3.49691e-07, 1.31134e-07, -1, -8.74227e-08, -1, -1.31134e-07, 7, 4.76837e-07, 6)
+
+[node name="tunnel_straighttunnel_straight_tscn" type="Node3D" parent="Props" instance=ExtResource("13_8t8hf")]
+transform = Transform3D(-1, 2.16748e-08, -3.82137e-15, 0, -1.08374e-08, -1, -8.74228e-08, -0.247931, 4.37114e-08, 7, 0, 6.6)
+
+[node name="drain_cover_2drain_cover_2_tscn" type="Node3D" parent="Props" instance=ExtResource("14_ixswx")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4, 0.0220635, -3)
+
+[node name="drain_cover_2drain_cover_2_tscn2" type="Node3D" parent="Props" instance=ExtResource("14_ixswx")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -4, 0.0420636, 2)
+
+[node name="floor_manhole_shaft_end_1floor_manhole_shaft_end_1_tscn" type="Node3D" parent="Props" instance=ExtResource("15_fhmlo")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2, 6, 1)
+
+[node name="floor_1floor_1_tscn" type="Node3D" parent="Props" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(2.18557e-07, 1, -2.18557e-07, -3.49691e-07, 2.18557e-07, 1, 1, -2.18557e-07, 3.49691e-07, 6, 6, -2)
+
+[node name="floor_1floor_1_tscn2" type="Node3D" parent="Props" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(2.18557e-07, 1, -2.18557e-07, -3.49691e-07, 2.18557e-07, 1, 1, -2.18557e-07, 3.49691e-07, 6, 6, 2)
+
+[node name="floor_1floor_1_tscn3" type="Node3D" parent="Props" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(2.18557e-07, 1, -2.18557e-07, -3.49691e-07, 2.18557e-07, 1, 1, -2.18557e-07, 3.49691e-07, 3, 6, -6)
+
+[node name="floor_1floor_1_tscn4" type="Node3D" parent="Props" instance=ExtResource("3_hc4n7")]
+transform = Transform3D(2.18557e-07, 1, -2.18557e-07, -3.49691e-07, 2.18557e-07, 1, 1, -2.18557e-07, 3.49691e-07, 7, 6, -6)
+
+[node name="Cell_tscn" type="Node3D" parent="." instance=ExtResource("16_vw81r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4.76837e-07, -15)
+
+[node name="Cell_tscn2" type="Node3D" parent="." instance=ExtResource("16_vw81r")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15, 0, -4)
+
+[node name="pillar_11pillar_11_tscn" type="Node3D" parent="." instance=ExtResource("17_chlts")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10, -4.76837e-07, -10)
+
+[node name="tunnel_hole_2tunnel_hole_2_tscn" type="Node3D" parent="." instance=ExtResource("12_oeu0v")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 1.74846e-07, -4.37114e-08, -1, 1, -4.37114e-08, 1.74846e-07, 10, 0, 4)
+
+[node name="CharacterMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.10242, 1.06194, -11.3218)
+material_overlay = SubResource("StandardMaterial3D_l5sto")
+mesh = SubResource("CapsuleMesh_jdp7g")
+
+[node name="Cur Health" type="Label3D" parent="CharacterMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14348, 0)
+billboard = 1
+text = "Text"
