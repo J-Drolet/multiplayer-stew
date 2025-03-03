@@ -4,6 +4,7 @@ using multiplayerstew.Scripts.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 
 
 namespace multiplayerstew.Scripts.Base
@@ -33,6 +34,8 @@ namespace multiplayerstew.Scripts.Base
         private float TimeAlive;
         private int HitsLeft;
         private int BouncesRegistered; // for bouncing projectile upgrade
+        private double CatchUpTime = 0;
+        private int AngleOffset;
 
         public int projectileOwner;
         private Random Rng;
@@ -42,9 +45,20 @@ namespace multiplayerstew.Scripts.Base
 
         public override void _EnterTree()
         {
-            projectileOwner = Name.ToString().Split('#').First().ToInt();
-            Rng = new(Name.ToString().Split('#')[1].ToInt()); // get seed from name
+            ProjectileSpawnInfo spawnInfo = GodotJson.FromJson<ProjectileSpawnInfo>(Name.ToString());
+
+            projectileOwner = (int)spawnInfo.ProjectileOwner;
+            Rng = new((int)spawnInfo.RandomizerSeed); // get seed from name
             Upgrades = new HashSet<Upgrade>(LevelManager.Instance.LevelPeerInfo[projectileOwner].characterNode.Upgrades);
+
+            if(HasRightToMoveProjectile())
+            {
+                GlobalPosition = spawnInfo.SpawnPosition.ToVector3();
+                GlobalRotation = spawnInfo.SpawnRotation.ToVector3();
+                Transform = Transform.Orthonormalized(); // fix basis if it got non-orthonormalized
+                CatchUpTime = Time.GetUnixTimeFromSystem() - spawnInfo.SpawnTime;
+                AngleOffset = (int)spawnInfo.AngleOffset;
+            }
         }
 
         public override void _Ready()
@@ -62,10 +76,8 @@ namespace multiplayerstew.Scripts.Base
 
             if(!HasRightToMoveProjectile()) return; // server and local peer continue
 
-            GlobalTransform = LevelManager.Instance.LevelPeerInfo[projectileOwner].characterNode.ProjectileOrigin.GlobalTransform;
-
             Vector3 directionVector = -GlobalTransform.Basis.Z;
-            int yAngleOffset = Name.ToString().Split('#')[2].ToInt();
+            int yAngleOffset = AngleOffset;
             directionVector = directionVector.Rotated(Transform.Basis.X, ((float)Rng.NextDouble() * ShotSpread*2) + (-ShotSpread));
             directionVector = directionVector.Rotated(Transform.Basis.Y, ((float)Rng.NextDouble() * ShotSpread*2) + (-ShotSpread) + Mathf.DegToRad(yAngleOffset));
 
@@ -136,6 +148,8 @@ namespace multiplayerstew.Scripts.Base
  
                 return; // if we are interpolating then we return here
             }
+            delta = delta + CatchUpTime; // used to speed up projectile for when it was spawned initially
+            CatchUpTime = 0;
 
             Velocity += ProjectileGravity * (float)delta;
             

@@ -4,6 +4,7 @@ using multiplayerstew.Scripts.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 
 
 namespace multiplayerstew.Scripts.Base
@@ -199,8 +200,17 @@ namespace multiplayerstew.Scripts.Base
 				foreach(int angleOffset in angleOffsets)
 				{
 					UpgradeableProjectile projectileInstance = Projectile.Instantiate() as UpgradeableProjectile;
-					projectileInstance.Name = GetMultiplayerAuthority().ToString() + "#" + rng.NextInt64(10000)  + "#" + angleOffset; // encode the owner of the projectile and the RNG seed
-					projectileInstance.GlobalTransform = LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalTransform; // initial spot for local view
+
+					// Pack spawn info into Name
+					ProjectileSpawnInfo spawnInfo = new();
+					spawnInfo.ProjectileOwner = GetMultiplayerAuthority();
+					spawnInfo.RandomizerSeed = rng.NextInt64(10000);
+					spawnInfo.SpawnPosition = new GodotJson.SerializableVector3(LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalPosition);
+					spawnInfo.SpawnRotation = new GodotJson.SerializableVector3(LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalRotation);
+					spawnInfo.SpawnTime = Time.GetUnixTimeFromSystem();
+    				spawnInfo.AngleOffset = angleOffset;
+					projectileInstance.Name = GodotJson.ToJson(spawnInfo);  
+
 					LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].projectileParent.AddChild(projectileInstance, true);
 				}
 			}

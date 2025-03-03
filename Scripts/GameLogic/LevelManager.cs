@@ -94,8 +94,7 @@ public partial class LevelManager : Node
 		LevelPeerInfo[peerId].projectileParent = projectileParent;
 	}
 
-
-	public void RespawnPlayer(long peerId)
+    public void RespawnPlayer(long peerId)
 	{
 		GD.Print("LevelManager.RespawnPlayer - Spawning peer: " + peerId);
 		
