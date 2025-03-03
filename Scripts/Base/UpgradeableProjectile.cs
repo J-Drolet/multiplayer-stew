@@ -110,7 +110,9 @@ namespace multiplayerstew.Scripts.Base
 
             if(!Multiplayer.IsServer() && TrueGlobalPosition != Vector3.Zero) // interpolation logic
             {
-                float interpolationStrength = 1.00f * InitialVelocity; // interpolation strength is a function of the bullet speed
+                float interpolationStrength = 1.10f * Math.Abs(InitialVelocity); // interpolation strength is a function of the bullet speed
+                GlobalPosition = GlobalPosition.MoveToward(TrueGlobalPosition, (float)(interpolationStrength * delta));
+                /*
                 Vector3 positionDifference = TrueGlobalPosition - GlobalPosition;
                 Vector3 movementVector = positionDifference.Normalized() * (float)(interpolationStrength * delta);
                 if(positionDifference.LengthSquared() <= movementVector.LengthSquared()) {
@@ -118,6 +120,7 @@ namespace multiplayerstew.Scripts.Base
                 }
 
                 GlobalPosition += movementVector;
+                */
 
                 /*
                 // Calculate the difference between the local and true global positions
