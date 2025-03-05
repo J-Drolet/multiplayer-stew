@@ -1,4 +1,5 @@
 
+using System;
 using System.Text.Json;
 using Godot;
 
@@ -29,16 +30,15 @@ public static class GodotJson
         }
     }
 
-    public static T FromJson<T>(string initialJson)
+    public static T FromJson<T>(string base64String)
     {
-        string unescapedJson = initialJson.Replace("𓀀" , "\"").Replace("𓀁" , ":").Replace("𓀂" , ".").Replace("𓀃" , "@").Replace("𓀄" , "/").Replace("𓀅" , "%");
-        return JsonSerializer.Deserialize<T>(unescapedJson);
+        string decodedJson = Convert.FromBase64String(base64String).GetStringFromUtf8();
+        return JsonSerializer.Deserialize<T>(decodedJson);
     }
 
     public static string ToJson<T>(T obj)
     {
-        string initialJson =  JsonSerializer.Serialize(obj);
-        string escapedJson = initialJson.Replace("\"", "𓀀").Replace(":", "𓀁").Replace(".", "𓀂").Replace("@", "𓀃").Replace("/", "𓀄").Replace("%", "𓀅");
-        return escapedJson;
+        string json =  JsonSerializer.Serialize(obj);
+        return Convert.ToBase64String(json.ToUtf8Buffer());
     }
 }
