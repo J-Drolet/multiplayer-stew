@@ -254,7 +254,7 @@ replication_config = SubResource("SceneReplicationConfig_w7qvv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_47ep3")
+&"": SubResource("AnimationLibrary_47ep3")
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]

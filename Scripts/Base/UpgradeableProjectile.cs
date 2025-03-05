@@ -56,7 +56,7 @@ namespace multiplayerstew.Scripts.Base
                 GlobalPosition = spawnInfo.SpawnPosition.ToVector3();
                 GlobalRotation = spawnInfo.SpawnRotation.ToVector3();
                 Transform = Transform.Orthonormalized(); // fix basis if it got non-orthonormalized
-                CatchUpTime = Time.GetUnixTimeFromSystem() - spawnInfo.SpawnTime;
+                //CatchUpTime = Time.GetUnixTimeFromSystem() - spawnInfo.SpawnTime;
                 AngleOffset = (int)spawnInfo.AngleOffset;
             }
         }

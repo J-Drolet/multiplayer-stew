@@ -770,5 +770,5 @@ mesh = SubResource("TorusMesh_j4dt7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_514rf")
+&"": SubResource("AnimationLibrary_514rf")
 }

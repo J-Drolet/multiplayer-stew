@@ -11,5 +11,5 @@ ServerScene = ExtResource("3_4ghm8")
 LevelSpawner = NodePath("MultiplayerSpawner")
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
-_spawnable_scenes = PackedStringArray("res://Scenes/character.tscn")
+_spawnable_scenes = PackedStringArray("uid://lcx7afjcynql")
 spawn_path = NodePath("..")
