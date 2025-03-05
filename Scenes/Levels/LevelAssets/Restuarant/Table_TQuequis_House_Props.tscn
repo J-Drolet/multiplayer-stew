@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://behnge2mnswbp"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Shelf_B.png" id="1_yaea3"]
+[ext_resource type="Texture2D" uid="uid://8ks4wtmyucmj" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Shelf_B.png" id="1_yaea3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1qghv"]
 resource_name = "Shelf_B"
@@ -43,10 +43,11 @@ shadow_mesh = SubResource("ArrayMesh_yum8c")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_t5dvc"]
 points = PackedVector3Array(-0.816986, -0.746782, -0.380111, 0.844346, 0.1762, 0.411026, 0.888793, 0.0893208, 0.43325, 0.888793, 0.0893208, -0.455893, -0.845046, 0.1762, -0.433669, -0.889493, 0.0893208, 0.43325, 0.836334, -0.7581, 0.366522, -0.837034, -0.7581, 0.366522, 0.816286, -0.746782, -0.380111, 0.844346, 0.1762, -0.433669, -0.845046, 0.1762, 0.411026, -0.889493, 0.0893208, -0.455893)
 
-[node name="@Node3D@106" type="Node3D"]
+[node name="_Node3D_106" type="Node3D"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@107" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.747867, 0)
 
 [node name="Table_T" type="MeshInstance3D" parent="@StaticBody3D@107"]
 mesh = SubResource("ArrayMesh_uu5i3")

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://c6778mlfnqb2b"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Napkinholder.png" id="1_adgo4"]
+[ext_resource type="Texture2D" uid="uid://d0r7oatn0hwpc" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Napkinholder.png" id="1_adgo4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d6ig3"]
 resource_name = "Napkinholder"
@@ -44,10 +44,11 @@ shadow_mesh = SubResource("ArrayMesh_8n0ei")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yrkcw"]
 points = PackedVector3Array(0.093487, -0.85533, 0.666932, -0.0475122, -0.85533, -0.672353, -0.1674, -0.537339, -1.00805, 0.304986, 0.837155, -0.954435, -0.329511, 0.801774, 0.949014, 0.587098, -0.784744, 0.349727, 0.199293, 0.942946, 1.12573, -0.57643, -0.85533, 0.349727, -0.329511, 0.801774, -0.954435, 0.199293, -0.608366, 1.12573, 0.199293, -0.608366, -1.13093, 0.587098, -0.85533, -0.355148, -0.57643, -0.85533, -0.355148, -0.188511, 0.942946, -1.13093, 0.304986, 0.837155, 0.949014, -0.1674, -0.537339, 1.00285, -0.188511, 0.942946, 1.12573, 0.199293, 0.942946, -1.13093, -0.57643, -0.784744, 0.349727, 0.516485, -0.85533, 0.420192, 0.587098, -0.784744, -0.355148, -0.188511, -0.85533, 0.596466, -0.57643, -0.784744, -0.355148, 0.12868, -0.85533, -0.63723, -0.329511, 0.766569, -0.954435, -0.329511, 0.766569, 0.949014, -0.541123, -0.85533, -0.39027, -0.0473983, -0.85533, 0.666932, 0.445985, -0.85533, -0.460956, -0.435317, -0.85533, 0.455536, 0.304986, 0.731187, -0.954435, 0.304986, 0.731187, 0.949014)
 
-[node name="@Node3D@60" type="Node3D"]
+[node name="_Node3D_60" type="Node3D"]
 transform = Transform3D(0.106864, 0, 0, 0, 0.106864, 0, 0, 0, 0.106864, 0, 0, 0)
 
 [node name="@StaticBody3D@61" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.835511, 0)
 
 [node name="Napkinholder" type="MeshInstance3D" parent="@StaticBody3D@61"]
 mesh = SubResource("ArrayMesh_3vxxd")

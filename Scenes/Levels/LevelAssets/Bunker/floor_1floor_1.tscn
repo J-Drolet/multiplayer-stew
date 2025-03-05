@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://p4o3o6x1lpw7"]
 
-[ext_resource type="Texture2D" uid="uid://dj7wxxwvg0aw1" path="res://Assets/Textures/Fair/floor_1_concrete_1.png" id="1_120mr"]
+[ext_resource type="Texture2D" uid="uid://c10kapxvwjhjf" path="res://Assets/Textures/Fair/floor_1_concrete_1.png" id="1_120mr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mof3g"]
 resource_name = "concrete_1"
@@ -45,7 +45,7 @@ shadow_mesh = SubResource("ArrayMesh_6vnfq")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_erk0a"]
 points = PackedVector3Array(-2.05206, -2.05206, -0.0420635, 2.05206, 2.05206, 0.0220635, 2.05206, 2.05206, -0.0420635, -2.05206, 2.05206, 0.0220635, 2.05206, -2.05206, 0.0220635, 2.05206, -2.05206, -0.0420635, -2.05206, 2.05206, -0.0420635, -2.05206, -2.05206, 0.0220635)
 
-[node name="@Node3D@40" type="Node3D"]
+[node name="_Node3D_40" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@41" type="StaticBody3D" parent="."]
@@ -55,5 +55,4 @@ mesh = SubResource("ArrayMesh_vkmfj")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@41"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_erk0a")

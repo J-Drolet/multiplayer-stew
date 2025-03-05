@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://niokj56bk6bl"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Washbasin_M.png" id="1_bxq1e"]
+[ext_resource type="Texture2D" uid="uid://dq3dbyg7crwof" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Washbasin_M.png" id="1_bxq1e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4em2q"]
 resource_name = "Washbasin_M"
@@ -46,10 +46,11 @@ shadow_mesh = SubResource("ArrayMesh_sm53a")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5dyxc"]
 points = PackedVector3Array(-0.288864, -0.0273192, -0.276863, -0.288864, -0.0273192, 0.244762, -0.055451, -0.631263, -0.00241786, 0.28767, -0.0273192, -0.276863, 0.28767, -0.0273192, 0.244762, -0.0966481, -0.617504, 0.230976, 0.122938, 0.247263, 0.0387873, -0.288864, 0.041305, 0.203557, 0.0649758, -0.467438, 0.219991, -0.0829346, -0.617504, -0.0297348, -0.281278, -0.00494233, -0.27, 0.191562, 0.206072, 0.162352, 0.232759, 0.206072, 0.134933, 0.280084, -0.00494233, -0.27, -0.055451, -0.631263, 0.230976, 0.150365, 0.247263, 0.121147, 0.0623315, -0.45633, -0.0160508, -0.274979, 0.030068, 0.2322, 0.28767, 0.041305, 0.203557, 0.191562, 0.247263, 0.0936764, 0.273786, 0.030068, 0.2322, 0.109168, 0.247263, 0.0799414, -0.0966481, -0.617504, 0.148617, -0.055451, -0.617504, -0.0297348, 0.150365, 0.247263, 0.0525223)
 
-[node name="@Node3D@112" type="Node3D"]
+[node name="_Node3D_112" type="Node3D"]
 transform = Transform3D(0.904051, 0, 0, 0, 0.904051, 0, 0, 0, 0.904051, 0, 0, 0)
 
 [node name="@StaticBody3D@113" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.613737, -0.21628)
 
 [node name="Washbasin_M" type="MeshInstance3D" parent="@StaticBody3D@113"]
 mesh = SubResource("ArrayMesh_d37hf")

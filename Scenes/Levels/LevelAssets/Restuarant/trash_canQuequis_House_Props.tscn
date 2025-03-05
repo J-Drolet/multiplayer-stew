@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://b4jdqom7nkyif"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_trash_can.png" id="1_51eiu"]
+[ext_resource type="Texture2D" uid="uid://y7a5aig5p1oc" path="res://Assets/Textures/Restaurant/Quequis_House_Props_trash_can.png" id="1_51eiu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1h86x"]
 resource_name = "trash_can"
@@ -46,10 +46,11 @@ shadow_mesh = SubResource("ArrayMesh_72pqs")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lr4nb"]
 points = PackedVector3Array(-0.0286645, -0.755293, -0.452464, 0.0151623, 0.522094, 0.607074, 0.641533, 0.383891, -0.224937, -0.364467, 0.568964, -0.462711, -0.249095, -0.760805, 0.380345, 0.428152, -0.752668, 0.158362, -0.633491, 0.407128, 0.238512, -0.420912, -0.753984, -0.168126, 0.55045, 0.568084, 0.207047, 0.20109, 0.407128, -0.619056, 0.277228, -0.756115, -0.365522, -0.401601, 0.383891, -0.549467, 0.409642, 0.383891, 0.53989, 0.0585603, -0.755113, 0.442771, 0.214168, 0.651657, -0.32555, -0.360948, 0.562991, 0.470857, -0.633491, 0.383891, -0.224937, 0.641533, 0.383891, 0.215359, -0.355173, 0.383891, 0.563043, -0.42561, -0.761696, 0.160477, 0.43441, -0.762942, -0.148174, -0.0537648, 0.407128, -0.665491, -0.565924, 0.569376, 0.185161, 0.386428, 0.383891, -0.549467, -0.272877, -0.765261, -0.370113, -0.0771036, 0.383891, 0.655914, 0.352041, 0.572182, 0.477914, 0.349032, 0.566746, -0.483318, 0.255899, -0.75736, 0.378461, -0.230424, 0.613409, 0.274319, 0.0851449, 0.407128, 0.655914, 0.546463, 0.563526, -0.215079)
 
-[node name="@Node3D@108" type="Node3D"]
+[node name="_Node3D_108" type="Node3D"]
 transform = Transform3D(0.676719, 0, 0, 0, 0.676719, 0, 0, 0, 0.676719, 0, 0, 0)
 
 [node name="@StaticBody3D@109" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.766165, 0)
 
 [node name="trash_can" type="MeshInstance3D" parent="@StaticBody3D@109"]
 mesh = SubResource("ArrayMesh_wgoay")

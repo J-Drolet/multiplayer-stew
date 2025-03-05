@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://c5jrbsxm7l72n"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Toilet_Paper_100.png" id="1_ta534"]
+[ext_resource type="Texture2D" uid="uid://0sdpk3ssx1mm" path="res://Assets/Textures/Extras/Misc_Toilet_Paper_100.png" id="1_ta534"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_flqd6"]
 resource_name = "Toilet_Paper_Material"
@@ -44,9 +44,10 @@ shadow_mesh = SubResource("ArrayMesh_mfpbn")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_utwsa"]
 points = PackedVector3Array(0.0570113, 0.433829, 0.544524, -0.0466316, -0.451994, -0.547305, -0.128606, -0.450916, -0.52534, -0.0466316, 0.436394, -0.547305, 0.807734, -0.470869, 0.0323711, -0.483055, -0.454, 0.280342, 0.807734, 0.455269, 0.0323711, -0.545961, 0.438823, -0.0516468, 0.283128, -0.449833, 0.483265, 0.282794, 0.433338, -0.481905, -0.483055, -0.454, -0.279961, -0.274321, 0.437006, 0.486295, 0.589133, 0.432044, 0.337697, -0.0465252, -0.451708, 0.547333, 0.282794, -0.448938, -0.481905, -0.317861, 0.439254, -0.446839, 0.610801, -0.4488, 0.318046, -0.483944, 0.439059, 0.280756, -0.545332, -0.454, 0.0519787, -0.274321, -0.452606, 0.486295, -0.484204, 0.439252, -0.280496, -0.274574, -0.452893, -0.486227, 0.283128, 0.434233, 0.483265, 0.0569668, -0.449748, -0.544536, -0.0465252, 0.436108, 0.547333, -0.545332, -0.454, -0.0515977, -0.545861, 0.438756, 0.05202, -0.274574, 0.437293, -0.486227, 0.0569668, 0.434148, -0.544536, 0.0570113, -0.449429, 0.544524, 0.589133, -0.447644, 0.337697, 0.783604, 0.439053, 0.0727571)
 
-[node name="@Node3D@100" type="Node3D"]
+[node name="_Node3D_100" type="Node3D"]
 
 [node name="@StaticBody3D@101" type="StaticBody3D" parent="."]
+transform = Transform3D(0.164657, 0, 0, 0, 0.164657, 0, 0, 0, 0.164657, 0, 0.0745906, 0)
 
 [node name="Toilet_Paper" type="MeshInstance3D" parent="@StaticBody3D@101"]
 mesh = SubResource("ArrayMesh_ysrjo")

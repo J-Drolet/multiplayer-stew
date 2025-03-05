@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://byuvlr20w3f2q"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Sauce.png" id="1_c6c4j"]
+[ext_resource type="Texture2D" uid="uid://clud2e2e8ecti" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Sauce.png" id="1_c6c4j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_udss6"]
 resource_name = "Sauce"
@@ -46,10 +46,11 @@ shadow_mesh = SubResource("ArrayMesh_plupe")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5s8fv"]
 points = PackedVector3Array(-0.135859, -0.110488, -0.0835638, 0.00763056, 0.533106, 0.140334, 0.0490631, 1.10407, 0.0672452, 0.128837, -0.171969, -0.112149, 0.148802, -0.171969, 0.107125, -0.0704952, 1.10407, -0.0523288, -0.110367, -0.171969, 0.127098, -0.132758, 0.518763, 0.0767125, 0.0689993, 1.10407, -0.0523288, -0.0306229, -0.171969, -0.171969, 0.0238121, 0.515128, -0.141804, -0.129237, 0.517358, -0.0795908, 0.12512, 0.499584, 0.0897641, -0.0704952, 1.10407, 0.0473051, 0.029127, -0.171969, 0.166979, 0.121481, 0.531078, -0.0758173, -0.0251864, 0.514895, -0.141144, -0.0258572, 0.516235, 0.139957, -0.140098, -0.128574, 0.0811165, -0.130304, -0.171969, -0.112149, 0.029127, -0.171969, -0.171969, -0.0306229, 1.10407, -0.0722688, -0.0306229, -0.171969, 0.166979, 0.0689993, 1.10407, 0.0473051, -0.0592014, 0.499444, -0.127821, 0.0244806, 0.516465, 0.140608, -0.0306229, 1.10407, 0.0672452, 0.106864, 0.51563, -0.0935534, 0.135112, -0.113556, -0.0839953, 0.029127, 1.10407, -0.0722688, 0.124811, 0.53285, 0.0728248, 0.0689993, -0.171969, -0.152029)
 
-[node name="@Node3D@92" type="Node3D"]
+[node name="_Node3D_92" type="Node3D"]
 transform = Transform3D(-8.80268e-09, 0, 0.201382, 0, 0.201382, 0, -0.201382, 0, -8.80268e-09, 0, 0, 0)
 
 [node name="@StaticBody3D@93" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 0, 0.159179, 0)
 
 [node name="Sauce" type="MeshInstance3D" parent="@StaticBody3D@93"]
 mesh = SubResource("ArrayMesh_e2fx0")

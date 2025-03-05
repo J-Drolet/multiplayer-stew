@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=4]
+[gd_scene load_steps=7 format=4 uid="uid://cwrp4ttq1xoaj"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Soda_fountain.png" id="1_ixnn1"]
+[ext_resource type="Texture2D" uid="uid://dng7pq8lmjufn" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Soda_fountain.png" id="1_ixnn1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1jrds"]
 resource_name = "Glass"
@@ -72,10 +72,11 @@ shadow_mesh = SubResource("ArrayMesh_e14a3")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xy1e6"]
 points = PackedVector3Array(0.420511, 0.519269, 0.258638, -0.1832, -0.338772, -0.331635, 0.407823, -0.332309, -0.326689, -0.1832, -0.338772, 0.330788, -0.1832, 0.486189, -0.331635, 0.436324, -0.33507, 0.31458, -0.1832, 0.486189, 0.330788, 0.446466, 0.478665, -0.298819, 0.486188, -0.292446, -0.283331, 0.446715, 0.478986, 0.29822, 0.431039, -0.27861, 0.337622, 0.486188, -0.27861, 0.282483, -0.137492, 0.519082, -0.285936, 0.431039, -0.27861, -0.338469, 0.409085, 0.52238, -0.274799, 0.4607, 0.479821, -0.259776, 0.407774, 0.48026, 0.32578, 0.407267, 0.479505, -0.32599, -0.137772, 0.519499, 0.285369, 0.458336, 0.476903, 0.270201, 0.435814, -0.334312, -0.314871, 0.409347, 0.52281, 0.274226, 0.46021, -0.331077, 0.271835, 0.45858, -0.27861, 0.323854, 0.45858, -0.27861, -0.324701, 0.460004, -0.330796, -0.272503, 0.381681, 0.52123, -0.287379, 0.408283, -0.333064, 0.326419, 0.435899, 0.482261, 0.314116, 0.435336, 0.481503, -0.314349, 0.486188, -0.292446, 0.282483, 0.393647, 0.518887, 0.284958)
 
-[node name="@Node3D@160" type="Node3D"]
+[node name="_Node3D_160" type="Node3D"]
 transform = Transform3D(-4.93531e-08, 0, 1.12907, 0, 1.12907, 0, -1.12907, 0, -4.93531e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@161" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0.338232, 0)
 
 [node name="Soda_fountain_01_001" type="MeshInstance3D" parent="@StaticBody3D@161"]
 mesh = SubResource("ArrayMesh_wdh84")

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://21xann18bhot"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Sauce_01.png" id="1_m520r"]
+[ext_resource type="Texture2D" uid="uid://dmmjrij6k8jd7" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Sauce_01.png" id="1_m520r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_02pjc"]
 resource_name = "Sauce_01"
@@ -46,10 +46,11 @@ shadow_mesh = SubResource("ArrayMesh_13bw2")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nlq4e"]
 points = PackedVector3Array(-0.142289, -1.06578, -1.06578, 0.120574, 6.56451, 0.776064, 0.910064, -1.06578, -0.670996, -0.93178, -1.06578, 0.644195, -0.536945, 6.56451, -0.539333, 0.383797, 6.56451, -0.670996, 0.910064, -1.06578, 0.644195, 0.646841, 6.56451, 0.512738, -0.864469, -0.758071, -0.500884, -0.668557, 6.56451, 0.381074, -0.273901, 1.30375, 1.03919, 0.252185, -1.06578, 1.03919, 0.910064, 1.30375, -0.670996, 0.383797, 7.35408, 0.249617, 0.120574, 6.56451, -0.80266, 0.646841, 6.56451, -0.407876, -0.668557, 1.30375, -0.80266, -0.668557, 6.56451, -0.407876, -0.405513, 7.35408, -0.276212, 0.515229, 1.17188, 0.907522, -0.405513, 6.56451, 0.644195, 0.120574, -1.06578, -1.06578, -0.142289, 6.56451, -0.80266, -0.273901, 7.35408, 0.381074, 0.383797, 7.35408, -0.276212, -0.273901, -1.06578, 1.03919, -0.668557, -1.06578, -0.80266, -0.142289, 6.56451, 0.776064, 0.120574, 7.35408, -0.407876, 0.252185, 7.35408, 0.381074, -0.405513, 7.35408, 0.249617, 0.515229, -1.06578, 0.907522)
 
-[node name="@Node3D@94" type="Node3D"]
+[node name="_Node3D_94" type="Node3D"]
 transform = Transform3D(-1.37881e-09, 0, 0.0315436, 0, 0.0315436, 0, -0.0315436, 0, -1.37881e-09, 0, 0, 0)
 
 [node name="@StaticBody3D@95" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 1, 0, 0.962686, 0)
 
 [node name="Sauce_01" type="MeshInstance3D" parent="@StaticBody3D@95"]
 mesh = SubResource("ArrayMesh_0md46")

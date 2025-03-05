@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://ci2s7wgwurbhg"]
+
+[ext_resource type="Texture2D" uid="uid://bty5donphapkw" path="res://Assets/Textures/TextureSuperPack/snow_1.png" id="1_n0ora"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_px5sg"]
+albedo_color = Color(0.856067, 0.856067, 0.856067, 1)
+albedo_texture = ExtResource("1_n0ora")
+metallic_specular = 0.18
+uv1_scale = Vector3(2.515, 2.515, 2.515)
+uv1_offset = Vector3(-0.74, -0.73, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mkgvw"]
+material = SubResource("StandardMaterial3D_px5sg")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_usce5"]
+size = Vector3(0.0342407, 1.53737, 1.99316)
+
+[node name="Node3D2" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0460503, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.034, 0, 0, 0, 1.538, 0, 0, 0, 2, 0, 0.796912, 0)
+mesh = SubResource("BoxMesh_mkgvw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.15527e-05, 0.797679, 0.00189209)
+shape = SubResource("BoxShape3D_usce5")

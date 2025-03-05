@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://d23ox6v5fqsuw"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Burger_200.png" id="1_2a865"]
+[ext_resource type="Texture2D" uid="uid://4m4r11aykvqj" path="res://Assets/Textures/Extras/Misc_Burger_200.png" id="1_2a865"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_toj2i"]
 resource_name = "Burger_Material"
@@ -44,9 +44,10 @@ shadow_mesh = SubResource("ArrayMesh_birw6")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_j23ak"]
 points = PackedVector3Array(-0.295491, -0.196945, -0.121714, 0.368054, 0.0363751, -0.0514426, -0.0387805, -0.0452312, 0.368699, -0.233755, 0.231985, -0.0740041, 0.113079, -0.208862, -0.285417, 0.218147, -0.208764, 0.21684, 0.145016, 0.230485, 0.189204, 0.00792362, 0.162754, -0.30392, -0.283987, 0.0127207, 0.274768, -0.223227, -0.206372, 0.226155, -0.065017, -0.0238127, -0.382089, -0.34482, 0.0369175, -0.150943, 0.360667, 0.0490635, -0.175254, 0.21444, 0.231328, -0.0967139, 0.287652, 0.0127207, 0.238187, -0.0960845, 0.232968, 0.226251, 0.299436, -0.208418, -0.0282324, -0.369109, 0.0127207, 0.0922444, 0.153879, -0.0360063, 0.372089, 0.0808643, -0.0238127, -0.382089, -0.0270663, -0.208606, 0.31006, -0.200418, -0.206673, -0.236383, -0.0953267, 0.231452, -0.223059, -0.291218, 0.162889, 0.121534, 0.283776, 0.162734, 0.098418, -0.0267104, 0.163414, 0.306856, 0.0769485, 0.255059, -0.062551, -0.296172, -0.20917, 0.111903, -0.223108, 0.151846, -0.224456, 0.111956, 0.163493, -0.282421, 0.204772, -0.206787, -0.224963, 0.288498, -0.185639, 0.123555)
 
-[node name="@Node3D@106" type="Node3D"]
+[node name="_Node3D_106" type="Node3D"]
 
 [node name="@StaticBody3D@107" type="StaticBody3D" parent="."]
+transform = Transform3D(0.319895, 0, 0, 0, 0.319895, 0, 0, 0, 0.319895, 0, 0.0672374, 0)
 
 [node name="Burger" type="MeshInstance3D" parent="@StaticBody3D@107"]
 mesh = SubResource("ArrayMesh_jwc8v")

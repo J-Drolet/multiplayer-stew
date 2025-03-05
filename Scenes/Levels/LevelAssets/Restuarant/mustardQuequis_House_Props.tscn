@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://cn72roe47fe8c"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Sauces_condiments.png" id="1_eva31"]
+[ext_resource type="Texture2D" uid="uid://cercjl0i4bx4k" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Sauces_condiments.png" id="1_eva31"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e784y"]
 resource_name = "Sauces_condiments"
@@ -44,12 +44,13 @@ shadow_mesh = SubResource("ArrayMesh_fpnf0")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_eplae"]
 points = PackedVector3Array(-0.147352, -0.116129, -0.153832, 0.0392542, 0.867018, 0.184341, -0.0367695, 0.869312, 0.185775, -0.0177608, 0.870685, -0.196748, 0.192625, -0.116129, 0.122452, -0.189854, -0.116129, 0.122452, -0.177555, 0.882216, -0.104507, 0.178914, 0.879706, -0.103723, 0.171393, -0.116129, -0.132567, 0.0226179, 1.24433, 0.0161667, 0.0438875, -0.116129, 0.207514, -0.169721, 0.86829, 0.109029, 0.171207, 0.866004, 0.108172, 0.0226179, -0.116129, -0.217629, -0.0198465, 1.24433, -0.026281, -0.177555, -0.0723819, -0.104507, -0.12612, -0.116129, 0.164942, 0.0203812, 0.868266, -0.195235, 0.0226179, 0.989176, 0.164942, -0.0198465, 1.22302, 0.0374322, 0.0226179, 1.24433, -0.026281, 0.107621, -0.116129, -0.175056, 0.128891, -0.116129, 0.164942, -0.0198465, 0.989176, 0.164942, 0.178914, -0.0673596, -0.103723, 0.0226179, 1.22302, 0.0374322, -0.0198465, 1.24433, 0.0161667)
 
-[node name="@Node3D@58" type="Node3D"]
+[node name="_Node3D_58" type="Node3D"]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 0, 0, 0)
 
 [node name="@StaticBody3D@59" type="StaticBody3D" parent="."]
 
 [node name="mustard" type="MeshInstance3D" parent="@StaticBody3D@59"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1046, 0)
 mesh = SubResource("ArrayMesh_13e4v")
 skeleton = NodePath("")
 

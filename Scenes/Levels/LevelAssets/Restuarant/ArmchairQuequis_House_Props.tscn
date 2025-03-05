@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://ck6m0i1d4i8do"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Armchair-Armchair.png" id="1_ft1iu"]
+[ext_resource type="Texture2D" uid="uid://dhcnkb1h6n7qr" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Armchair-Armchair.png" id="1_ft1iu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xpgl"]
 resource_name = "Armchair"
@@ -45,10 +45,11 @@ shadow_mesh = SubResource("ArrayMesh_4s72t")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_a2nnf"]
 points = PackedVector3Array(-0.763194, -0.50369, -0.4783, 0.735551, 0.7742, 0.209693, 0.799073, 0.735914, 0.2162, -0.774649, -0.5133, 0.191489, 0.763304, -0.50369, -0.4783, -0.789838, 0.773659, 0.0961694, 0.774761, -0.5133, 0.191489, 0.815498, 0.0601785, -0.515443, -0.815543, 0.0601785, -0.515443, -0.799118, 0.735914, 0.2162, 0.789953, 0.773659, 0.0961694, 0.770007, -0.2724, 0.203029, -0.770052, -0.2724, 0.203029, -0.815543, 0.748233, 0.0961694, 0.815498, 0.748233, 0.0961694, -0.764453, 0.799214, 0.121635, -0.735596, 0.7742, 0.209693, 0.764408, 0.799214, 0.121635, 0.770007, -0.2724, -0.494829, -0.770052, -0.2724, -0.494829)
 
-[node name="@Node3D@2" type="Node3D"]
+[node name="_Node3D_2" type="Node3D"]
 transform = Transform3D(1, -1.50996e-07, 0, 1.50996e-07, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="@StaticBody3D@3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.73061e-08, 0.511974, 0)
 
 [node name="Armchair" type="MeshInstance3D" parent="@StaticBody3D@3"]
 mesh = SubResource("ArrayMesh_cve2h")

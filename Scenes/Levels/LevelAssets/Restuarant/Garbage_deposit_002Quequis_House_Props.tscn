@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://3g8fwhsf2fom"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Garbage_deposit.png" id="1_xs0vk"]
+[ext_resource type="Texture2D" uid="uid://dlul2em35ro3j" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Garbage_deposit.png" id="1_xs0vk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xkdy3"]
 resource_name = "Garbage_deposit"
@@ -45,12 +45,13 @@ shadow_mesh = SubResource("ArrayMesh_k2ub2")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cox61"]
 points = PackedVector3Array(-1, -0.995127, -1.32033, -1, 0.73562, -1.32033, 0.3722, -0.997686, -1.32374, -1, -0.995127, 0.987331, -1, 0.73562, 0.987331, 0.3722, -0.997686, 0.990742, 0.362828, 0.369522, -1.30796, 0.362828, 0.369522, 0.974957, -0.836972, 0.705671, -1.2804, -0.836975, 0.705676, 0.947407)
 
-[node name="@Node3D@130" type="Node3D"]
+[node name="_Node3D_130" type="Node3D"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@131" type="StaticBody3D" parent="."]
 
 [node name="Garbage_deposit_002" type="MeshInstance3D" parent="@StaticBody3D@131"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.990395, 0)
 mesh = SubResource("ArrayMesh_g6d1o")
 skeleton = NodePath("")
 

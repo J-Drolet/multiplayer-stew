@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://rqtoi5uj4wgv"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Radio_Base_color.png" id="1_oi206"]
+[ext_resource type="Texture2D" uid="uid://c20fugsg2n7mm" path="res://Assets/Textures/Extras/Misc_Radio_Base_color.png" id="1_oi206"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aik0r"]
 resource_name = "Radio_Material.001"
@@ -43,9 +43,10 @@ shadow_mesh = SubResource("ArrayMesh_rbffb")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ei7t3"]
 points = PackedVector3Array(0.495724, 0.126143, -0.00131481, -0.321692, 0.0864975, -0.00131481, 0.4854, -0.364055, 0.113849, 0.431434, -0.335605, -0.2188, -0.302231, -0.3682, 0.115183, -0.268883, 0.0471, -0.225392, -0.268883, 0.0471, 0.170114, -0.216155, 0.468992, -0.119895, -0.287952, -0.352965, -0.1773, 0.442915, 0.0471, -0.225392, 0.442915, 0.0471, 0.170114, 0.287077, -0.278028, 0.1728, 0.469319, 0.205186, -0.00131481, -0.255681, 0.468992, -0.0935301, 0.495724, 0.0734476, -0.185825, -0.257403, -0.335605, -0.2188, 0.474579, -0.352887, -0.1773, -0.246515, -0.323507, 0.1581, -0.30841, 0.073365, -0.185825, -0.30841, 0.073365, 0.117345, 0.495724, 0.0734476, 0.117345, 0.420547, -0.323507, 0.1581, -0.188031, -0.227966, 0.1728, -0.216155, 0.468992, -0.0935301, -0.321692, 0.139275, -0.00131481, 0.424601, -0.140378, 0.1728, 0.294635, -0.3682, 0.115183, -0.187084, -0.040109, 0.172132, -0.088, -0.278028, 0.1728, -0.241698, 0.451777, -0.115861, 0.482522, 0.178838, -0.00131481, 0.374585, -0.240501, 0.1728)
 
-[node name="@Node3D@114" type="Node3D"]
+[node name="_Node3D_114" type="Node3D"]
 
 [node name="@StaticBody3D@115" type="StaticBody3D" parent="."]
+transform = Transform3D(0.66811, 0, 0, 0, 0.668108, 0, 0, 0, 0.66811, 0, 0.24589, 0)
 
 [node name="Radio_001" type="MeshInstance3D" parent="@StaticBody3D@115"]
 mesh = SubResource("ArrayMesh_b05ts")

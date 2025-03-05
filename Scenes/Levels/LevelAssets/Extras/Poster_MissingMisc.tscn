@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://bpodiysncqwlr"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Poster_Missing_1_100.png" id="1_wdjsv"]
+[ext_resource type="Texture2D" uid="uid://dgr7my3hopwt7" path="res://Assets/Textures/Extras/Misc_Poster_Missing_1_100.png" id="1_wdjsv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_io5ro"]
 resource_name = "Poster_Missing_Material"
@@ -43,9 +43,10 @@ shadow_mesh = SubResource("ArrayMesh_4ra81")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_opra3"]
 points = PackedVector3Array(-1.02362, -0.0236206, -1.51172, 1.00775, 0.0236206, 1.51172, 1.00775, -0.0236206, 1.51172, 1.00775, 0.0236206, -1.51172, -1.02362, 0.0236206, 1.51172, -1.02362, -0.0236206, 1.51172, 1.00775, -0.0236206, -1.51172, -1.02362, 0.0236206, -1.51172)
 
-[node name="@Node3D@94" type="Node3D"]
+[node name="_Node3D_94" type="Node3D"]
 
 [node name="@StaticBody3D@95" type="StaticBody3D" parent="."]
+transform = Transform3D(0.164657, 0, 0, 0, 0.164657, 0, 0, 0, 0.164657, 0, 0, 0)
 
 [node name="Poster_Missing" type="MeshInstance3D" parent="@StaticBody3D@95"]
 mesh = SubResource("ArrayMesh_01m00")

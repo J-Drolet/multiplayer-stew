@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=9 format=4 uid="uid://o37m3kkqfveg"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/pipe_bx_3_pipe_hr_3.png" id="1_ytp4c"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/pipe_bx_3_metal_hr_2.png" id="2_0phle"]
+[ext_resource type="Texture2D" uid="uid://duk3alnoteldw" path="res://Assets/Textures/Megapack2/pipe_bx_3_pipe_hr_3.png" id="1_ytp4c"]
+[ext_resource type="Texture2D" uid="uid://bivk4o21bsavd" path="res://Assets/Textures/Megapack2/pipe_bx_3_metal_hr_2.png" id="2_0phle"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u7cun"]
 resource_name = "pipe_hr_3"
@@ -71,10 +71,15 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ltp8e")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_s7nyx"]
-points = PackedVector3Array(1.90696, -0.356555, -0.0967451, 0.348585, 2.01856, 0.125802, 0.348585, 2.01856, -0.133802, -0.244141, -0.244141, -0.0218622, 2.01856, 0.126092, 0.348487, 2.01856, 0.0888941, -0.356487, -0.133831, 2.01856, 0.348487, -0.0966324, 2.01856, -0.356487, -0.0596666, -0.0596666, 0.274235, -0.0224683, -0.0224683, -0.282235, -0.356555, 1.90696, 0.0887451, 2.01856, 0.348585, -0.133802, 1.90696, -0.319357, 0.200053, -0.319357, 1.90696, -0.208053, 1.90696, -0.207995, -0.319361, 2.01856, -0.133831, 0.348487, 0.200257, 2.01856, -0.319361, 0.126092, 2.01856, 0.348487, 2.01856, 0.311619, 0.200053, -0.187518, -0.187518, 0.153982, -0.211734, -0.211734, -0.129766, 2.01856, -0.0966324, -0.356487, -0.319357, 1.90696, 0.200053, -0.207995, 1.90696, -0.319361, 2.01856, 0.200257, -0.319361, 0.200257, 2.01856, 0.311361, 1.90696, -0.133831, 0.348487, -0.133831, 1.90696, 0.348487, 1.90696, -0.0966324, -0.356487, 1.90696, -0.319357, -0.208053, -0.0966324, 1.90696, -0.356487, -0.236774, -0.236774, 0.0493518)
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vdc53"]
+height = 2.24657
+radius = 0.253095
 
-[node name="@Node3D@458" type="Node3D"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_e4por"]
+height = 2.26347
+radius = 0.257055
+
+[node name="_Node3D_458" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@459" type="StaticBody3D" parent="."]
@@ -84,4 +89,9 @@ mesh = SubResource("ArrayMesh_kmw84")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@459"]
-shape = SubResource("ConvexPolygonShape3D_s7nyx")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.877747, -3.83675e-08)
+shape = SubResource("CylinderShape3D_vdc53")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="@StaticBody3D@459"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0.86562, 0.00797689, 0.00144175)
+shape = SubResource("CylinderShape3D_e4por")
