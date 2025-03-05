@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=4]
+[gd_scene load_steps=10 format=4 uid="uid://ba6ydvhfhbuq7"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/barricade_b_4_barricade_hm_2.png" id="1_cpfgj"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/barricade_b_4_steel_beams_hr_1.png" id="2_x60sl"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/barricade_b_4_roof_hr_5.png" id="3_mteci"]
+[ext_resource type="Texture2D" uid="uid://biufwypcdrt24" path="res://Assets/Textures/Megapack2/barricade_b_4_barricade_hm_2.png" id="1_cpfgj"]
+[ext_resource type="Texture2D" uid="uid://d1umymf6o04h5" path="res://Assets/Textures/Megapack2/barricade_b_4_steel_beams_hr_1.png" id="2_x60sl"]
+[ext_resource type="Texture2D" uid="uid://bvja78u03fgfe" path="res://Assets/Textures/Megapack2/barricade_b_4_roof_hr_5.png" id="3_mteci"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_odk35"]
 resource_name = "barricade_hm_2"

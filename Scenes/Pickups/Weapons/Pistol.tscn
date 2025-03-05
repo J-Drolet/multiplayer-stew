@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://ihgc6riowres"]
 
-[ext_resource type="Texture2D" uid="uid://c4h55agq38hwk" path="res://Assets/Textures/Weapons/Lugar_Lugar_tex.png" id="1_1l2xn"]
+[ext_resource type="Texture2D" uid="uid://km4e6utc0m8c" path="res://Assets/Textures/Weapons/Lugar_Lugar_tex.png" id="1_1l2xn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vl6bu"]
 resource_name = "Lugar"

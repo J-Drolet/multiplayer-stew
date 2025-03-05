@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://dlnlsmril4lgx"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Traps_Spinningblade_Variant_1.png" id="1_4jo3o"]
+[ext_resource type="Texture2D" uid="uid://bufweqv14ljps" path="res://Assets/Textures/Extras/Traps_Spinningblade_Variant_1.png" id="1_4jo3o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cct3r"]
 resource_name = "Spinningblade_Variant_3"

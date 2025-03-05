@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=4 uid="uid://1fdlt6hucwhx"]
 
-[ext_resource type="Script" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_4t0va"]
+[ext_resource type="Script" uid="uid://dnr2b41enseqc" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_4t0va"]
 [ext_resource type="Texture2D" uid="uid://cdeu155ds5qc4" path="res://Assets/Models/Weapons/Rifle_Rifle.png" id="3_oqpng"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vmxku"]
@@ -40,8 +40,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_57bpt"]
 _data = {
-"PickupIdle": SubResource("Animation_fdsld"),
-"RESET": SubResource("Animation_wds57")
+&"PickupIdle": SubResource("Animation_fdsld"),
+&"RESET": SubResource("Animation_wds57")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8aokh"]

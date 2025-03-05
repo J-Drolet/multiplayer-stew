@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://diqagfamsnqp4"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Shovel_Variant_1_Base_color.png" id="1_trbwp"]
+[ext_resource type="Texture2D" uid="uid://c7kwrvtsgoh56" path="res://Assets/Textures/Farm/Farm-Assets_Shovel_Variant_1_Base_color.png" id="1_trbwp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nxocs"]
 resource_name = "Shovel_Variant_1"

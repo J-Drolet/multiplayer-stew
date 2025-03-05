@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bngvwke5dn4cd"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Spatula.png" id="1_xh7j4"]
+[ext_resource type="Texture2D" uid="uid://c52wlidg0euny" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Spatula.png" id="1_xh7j4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgu7g"]
 resource_name = "Spatula"

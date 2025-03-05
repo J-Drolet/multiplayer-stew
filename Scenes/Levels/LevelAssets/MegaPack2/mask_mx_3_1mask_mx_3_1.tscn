@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://12os3sskob37"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/mask_mx_3_1_mask_mx_3.png" id="1_p83kw"]
+[ext_resource type="Texture2D" uid="uid://b0apu0d7fbrgf" path="res://Assets/Textures/Megapack2/mask_mx_3_1_mask_mx_3.png" id="1_p83kw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65hvm"]
 resource_name = "mask_mx_3"

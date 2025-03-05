@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bmj3hs84wb3x"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Wooden_Frame_Base_color.png" id="1_g1vts"]
+[ext_resource type="Texture2D" uid="uid://d1to5anb8arh4" path="res://Assets/Textures/Farm/Farm-Assets_Wooden_Frame_Base_color.png" id="1_g1vts"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cjcdp"]
 resource_name = "Wooden_Frame"

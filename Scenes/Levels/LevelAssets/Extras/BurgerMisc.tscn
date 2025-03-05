@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://d23ox6v5fqsuw"]
 
-[ext_resource type="Texture2D" uid="uid://4m4r11aykvqj" path="res://Assets/Textures/Extras/Misc_Burger_200.png" id="1_2a865"]
+[ext_resource type="Texture2D" uid="uid://b38nd5e5ohe2u" path="res://Assets/Textures/Extras/Misc_Burger_200.png" id="1_2a865"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_toj2i"]
 resource_name = "Burger_Material"

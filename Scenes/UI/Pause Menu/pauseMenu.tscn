@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ccp21mmc3ysnv"]
 
-[ext_resource type="Script" path="res://Scripts/UI/PauseMenu.cs" id="1_joty1"]
+[ext_resource type="Script" uid="uid://dainpki7xm47d" path="res://Scripts/UI/PauseMenu.cs" id="1_joty1"]
 [ext_resource type="Theme" uid="uid://f33lu6kyduhe" path="res://Assets/Themes/PauseMenu.tres" id="1_mgfyv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0yp3c"]

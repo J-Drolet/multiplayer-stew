@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://c5jrbsxm7l72n"]
 
-[ext_resource type="Texture2D" uid="uid://0sdpk3ssx1mm" path="res://Assets/Textures/Extras/Misc_Toilet_Paper_100.png" id="1_ta534"]
+[ext_resource type="Texture2D" uid="uid://boghbosl5vcjt" path="res://Assets/Textures/Extras/Misc_Toilet_Paper_100.png" id="1_ta534"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_flqd6"]
 resource_name = "Toilet_Paper_Material"

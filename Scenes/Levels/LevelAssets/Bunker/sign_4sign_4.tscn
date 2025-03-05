@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://crbb1giff1iia"]
 
-[ext_resource type="Texture2D" uid="uid://6h25dmqahvp5" path="res://Assets/Textures/Fair/sign_4_sign_4.png" id="1_gvg63"]
+[ext_resource type="Texture2D" uid="uid://b7sobditobvfq" path="res://Assets/Textures/Fair/sign_4_sign_4.png" id="1_gvg63"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bqtgs"]
 resource_name = "sign_4"

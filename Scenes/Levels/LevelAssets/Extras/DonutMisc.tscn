@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://dn6wxvraa4ehl"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Donut_Base1_color.png" id="1_mb833"]
+[ext_resource type="Texture2D" uid="uid://i1deg2nlma33" path="res://Assets/Textures/Extras/Misc_Donut_Base1_color.png" id="1_mb833"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_el2rf"]
 resource_name = "Donut"

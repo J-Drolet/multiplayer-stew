@@ -1146,12 +1146,12 @@ tracks/23/keys = PackedFloat32Array(0, 1, 1, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_514rf"]
 _data = {
-"BendyBone": SubResource("Animation_4d84e"),
-"BendyBone_001": SubResource("Animation_vra4a"),
-"BendyBone_002": SubResource("Animation_ccpsj"),
-"BendyBone_003": SubResource("Animation_2ycdr"),
-"JumpTEST": SubResource("Animation_mrq4d"),
-"Jumping": SubResource("Animation_u4iny")
+&"BendyBone": SubResource("Animation_4d84e"),
+&"BendyBone_001": SubResource("Animation_vra4a"),
+&"BendyBone_002": SubResource("Animation_ccpsj"),
+&"BendyBone_003": SubResource("Animation_2ycdr"),
+&"JumpTEST": SubResource("Animation_mrq4d"),
+&"Jumping": SubResource("Animation_u4iny")
 }
 
 [node name="CharacterModelv2" type="Node3D"]

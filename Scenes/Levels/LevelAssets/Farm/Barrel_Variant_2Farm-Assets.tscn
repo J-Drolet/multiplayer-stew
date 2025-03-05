@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://d16l1bnilxmob"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Barrel_Variant_2_Base_color.png" id="1_cq56t"]
+[ext_resource type="Texture2D" uid="uid://b1xwh8ro44377" path="res://Assets/Textures/Farm/Farm-Assets_Barrel_Variant_2_Base_color.png" id="1_cq56t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dk5i5"]
 resource_name = "Barrel_Variant_2"

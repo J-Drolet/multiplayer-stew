@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://3yiwmwd6jf5n"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Pizza_Box_256.png" id="1_607tc"]
+[ext_resource type="Texture2D" uid="uid://du76fqvtv6xpf" path="res://Assets/Textures/Extras/Misc_Pizza_Box_256.png" id="1_607tc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4l1sd"]
 resource_name = "PizzaBox"

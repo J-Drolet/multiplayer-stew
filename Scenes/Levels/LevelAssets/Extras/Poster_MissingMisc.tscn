@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bpodiysncqwlr"]
 
-[ext_resource type="Texture2D" uid="uid://dgr7my3hopwt7" path="res://Assets/Textures/Extras/Misc_Poster_Missing_1_100.png" id="1_wdjsv"]
+[ext_resource type="Texture2D" uid="uid://c67hh4bhipvni" path="res://Assets/Textures/Extras/Misc_Poster_Missing_1_100.png" id="1_wdjsv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_io5ro"]
 resource_name = "Poster_Missing_Material"

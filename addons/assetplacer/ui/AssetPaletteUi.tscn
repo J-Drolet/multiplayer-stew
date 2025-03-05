@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=3 uid="uid://crxq1d7601mt6"]
 
-[ext_resource type="Script" path="res://addons/assetplacer/ui/AssetPaletteUi.cs" id="1_yxka5"]
+[ext_resource type="Script" uid="uid://dsv1ln6ciuc3b" path="res://addons/assetplacer/ui/AssetPaletteUi.cs" id="1_yxka5"]
 [ext_resource type="Theme" uid="uid://cdejano5l8vrj" path="res://addons/assetplacer/ui/NormalButton.tres" id="2_ypqa0"]
 [ext_resource type="Theme" uid="uid://b21iaei3olt8o" path="res://addons/assetplacer/ui/SelectedButton.tres" id="3_dn24o"]
 [ext_resource type="PackedScene" uid="uid://b4i54pft0an" path="res://addons/assetplacer/ui/AssetPlacerButton.tscn" id="4_y0xjd"]
 [ext_resource type="PackedScene" uid="uid://bk1h1t456p8qf" path="res://addons/assetplacer/ui/DynamicPreviewPanel.tscn" id="5_66mco"]
-[ext_resource type="Script" path="res://addons/assetplacer/ui/AssetDropPanel.cs" id="5_lqmeo"]
-[ext_resource type="Script" path="res://addons/assetplacer/ui/EditorLineEdit.gd" id="6_jbmxp"]
-[ext_resource type="Script" path="res://addons/assetplacer/ui/SaveAssetLibraryDialog.cs" id="7_epo7r"]
-[ext_resource type="Script" path="res://addons/assetplacer/ui/RightClickPopup.cs" id="8_6yuei"]
+[ext_resource type="Script" uid="uid://su0direbttsj" path="res://addons/assetplacer/ui/AssetDropPanel.cs" id="5_lqmeo"]
+[ext_resource type="Script" uid="uid://bhsgifyutaqms" path="res://addons/assetplacer/ui/EditorLineEdit.gd" id="6_jbmxp"]
+[ext_resource type="Script" uid="uid://dutl1b1v74rep" path="res://addons/assetplacer/ui/SaveAssetLibraryDialog.cs" id="7_epo7r"]
+[ext_resource type="Script" uid="uid://d2do83jw12nsd" path="res://addons/assetplacer/ui/RightClickPopup.cs" id="8_6yuei"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sdpag"]
 

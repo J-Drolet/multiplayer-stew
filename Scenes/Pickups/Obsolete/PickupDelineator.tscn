@@ -76,8 +76,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nubif"]
 _data = {
-"RESET": SubResource("Animation_hgvp4"),
-"Rotation": SubResource("Animation_0vvxu")
+&"RESET": SubResource("Animation_hgvp4"),
+&"Rotation": SubResource("Animation_0vvxu")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o0sq4"]

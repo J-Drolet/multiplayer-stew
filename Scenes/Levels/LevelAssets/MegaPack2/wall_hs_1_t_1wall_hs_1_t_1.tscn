@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bj0xurdyvsck4"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wall_hs_1_t_1_wall_hs_1.png" id="1_cecma"]
+[ext_resource type="Texture2D" uid="uid://brhiiivahfg5q" path="res://Assets/Textures/Megapack2/wall_hs_1_t_1_wall_hs_1.png" id="1_cecma"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tk1e0"]
 resource_name = "wall_hs_1"

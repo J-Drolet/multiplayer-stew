@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://db4roibkict1s"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/lamp_mx_1_on_metal_hr_2.png" id="1_6qp15"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/lamp_mx_1_on_lamp_1_on.png" id="2_gglaa"]
+[ext_resource type="Texture2D" uid="uid://vxghk27yypog" path="res://Assets/Textures/Megapack2/lamp_mx_1_on_metal_hr_2.png" id="1_6qp15"]
+[ext_resource type="Texture2D" uid="uid://v0nf7l7dplys" path="res://Assets/Textures/Megapack2/lamp_mx_1_on_lamp_1_on.png" id="2_gglaa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4d738"]
 resource_name = "metal_hr_2"

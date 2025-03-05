@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://e0fmq188qkyc"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Camera_200x200.png" id="1_s4eyr"]
+[ext_resource type="Texture2D" uid="uid://1sobjbf08dtg" path="res://Assets/Textures/Extras/Misc_Camera_200x200.png" id="1_s4eyr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5otqv"]
 resource_name = "Camera_Material"

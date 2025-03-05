@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/wall_1wall_1.tscn" id="1_deadq"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/ModularFPS/wall_small_1wall_small_1.tscn" id="2_nqnde"]
-[ext_resource type="Texture2D" uid="uid://dk5drqsa8i54s" path="res://Assets/Textures/Fair/wall_small_1_floor_2.png" id="3_gof6p"]
-[ext_resource type="Texture2D" uid="uid://cyb7th0p4tc1y" path="res://Assets/Textures/Fair/wall_small_1_wall_8.png" id="4_y2bq7"]
+[ext_resource type="Texture2D" uid="uid://crfh3yflgf3mi" path="res://Assets/Textures/Fair/wall_small_1_floor_2.png" id="3_gof6p"]
+[ext_resource type="Texture2D" uid="uid://bo3y3dcfft3o2" path="res://Assets/Textures/Fair/wall_small_1_wall_8.png" id="4_y2bq7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0gyoh"]
 resource_name = "floor_2"

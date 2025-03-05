@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://3yy3vug3dvgm"]
 
-[ext_resource type="Script" path="res://Scripts/GameLogic/LevelManager.cs" id="1_dksx5"]
+[ext_resource type="Script" uid="uid://7qt4qpdvopym" path="res://Scripts/GameLogic/LevelManager.cs" id="1_dksx5"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_q20kt"]
 [ext_resource type="PackedScene" uid="uid://dgxtnn2ceyjk5" path="res://Scenes/Levels/LevelAssets/NuketownAssets/temp.tscn" id="8_mp5k1"]
 [ext_resource type="PackedScene" uid="uid://bsyma36nmixdd" path="res://Scenes/Levels/LevelAssets/NuketownAssets/NuketownCatchall.tscn" id="9_3t8kx"]

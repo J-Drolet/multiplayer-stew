@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://durahenjcgmcc"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/pipes_hr_1_elbow_1_steel_beams_hr_1.png" id="1_8hrvx"]
+[ext_resource type="Texture2D" uid="uid://cepepwgw0q8dg" path="res://Assets/Textures/Megapack2/pipes_hr_1_elbow_1_steel_beams_hr_1.png" id="1_8hrvx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jvent"]
 resource_name = "steel_beams_hr_1"

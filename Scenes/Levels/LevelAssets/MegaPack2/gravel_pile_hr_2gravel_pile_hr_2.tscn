@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://cg7xuwl2iqaa2"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/gravel_pile_hr_2_gravel_hr_2.png" id="1_s6gl6"]
+[ext_resource type="Texture2D" uid="uid://d4mnacj5vbhi4" path="res://Assets/Textures/Megapack2/gravel_pile_hr_2_gravel_hr_2.png" id="1_s6gl6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s8yt5"]
 resource_name = "gravel_hr_2"

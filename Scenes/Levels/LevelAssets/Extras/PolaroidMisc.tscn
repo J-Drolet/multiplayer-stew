@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://cysqb2cl3plch"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Polaroid_256x256.png" id="1_5f0xs"]
+[ext_resource type="Texture2D" uid="uid://cmbnp6vks78f3" path="res://Assets/Textures/Extras/Misc_Polaroid_256x256.png" id="1_5f0xs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xng8n"]
 resource_name = "Polaroid_Material"

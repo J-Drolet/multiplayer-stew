@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://ci375djgdvowl"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Metal-Metal.png" id="1_ajaul"]
+[ext_resource type="Texture2D" uid="uid://bw7w4ji1yujua" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Metal-Metal.png" id="1_ajaul"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w3ps6"]
 resource_name = "Metal"

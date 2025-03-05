@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://daybjejeerqs2"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wall_rg_1_t_1_wall_rg_1.png" id="1_qwj0x"]
+[ext_resource type="Texture2D" uid="uid://gcaejypn5g7i" path="res://Assets/Textures/Megapack2/wall_rg_1_t_1_wall_rg_1.png" id="1_qwj0x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vyypy"]
 resource_name = "wall_rg_1"

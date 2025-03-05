@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://ec1pu87dpdhw"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/distillery_mx_1_metal_hr_3.png" id="1_kcnsi"]
+[ext_resource type="Texture2D" uid="uid://c60lmj3nt4gwv" path="res://Assets/Textures/Megapack2/distillery_mx_1_metal_hr_3.png" id="1_kcnsi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eaixg"]
 resource_name = "metal_hr_3"

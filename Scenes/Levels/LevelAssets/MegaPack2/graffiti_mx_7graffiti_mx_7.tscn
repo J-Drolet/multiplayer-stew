@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://bc1jdatsccn31"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/graffiti_mx_7_graffiti_mx_7.png" id="1_nh4o3"]
+[ext_resource type="Texture2D" uid="uid://cw5wfkiymwfqp" path="res://Assets/Textures/Megapack2/graffiti_mx_7_graffiti_mx_7.png" id="1_nh4o3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5i55v"]
 resource_name = "graffiti_mx_7"

@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://e0rdcpjvjv2d"]
 
-[ext_resource type="Texture2D" uid="uid://4hqpd2ljnfq6" path="res://Assets/Textures/Fair/machinery_2_machinery_2.png" id="1_ett7a"]
-[ext_resource type="Texture2D" uid="uid://dfj1q1kvt6ujx" path="res://Assets/Textures/Fair/machinery_2_scifi_texture_1.png" id="2_a7tvx"]
+[ext_resource type="Texture2D" uid="uid://bgh0w6o0ifmm5" path="res://Assets/Textures/Fair/machinery_2_machinery_2.png" id="1_ett7a"]
+[ext_resource type="Texture2D" uid="uid://bd1hk2xugao4v" path="res://Assets/Textures/Fair/machinery_2_scifi_texture_1.png" id="2_a7tvx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vlrc6"]
 resource_name = "machinery_2"

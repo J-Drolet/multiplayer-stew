@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bem1h86o8mjqr"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wooden_plank_4_planks_hr_1.png" id="1_al1q2"]
+[ext_resource type="Texture2D" uid="uid://bjc38d27gyrji" path="res://Assets/Textures/Megapack2/wooden_plank_4_planks_hr_1.png" id="1_al1q2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wfdpa"]
 resource_name = "planks_hr_1"

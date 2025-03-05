@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://dbdbb83olh3tf"]
 
-[ext_resource type="Texture2D" uid="uid://df61gboqleu03" path="res://Assets/Textures/Fair/wall_2_floor_2.png" id="1_7uxfs"]
-[ext_resource type="Texture2D" uid="uid://b5sr5v8lgcab" path="res://Assets/Textures/Fair/wall_2_wall_8.png" id="2_ejm2t"]
+[ext_resource type="Texture2D" uid="uid://b0vd1r8wjf4ra" path="res://Assets/Textures/Fair/wall_2_floor_2.png" id="1_7uxfs"]
+[ext_resource type="Texture2D" uid="uid://whoq8curd76o" path="res://Assets/Textures/Fair/wall_2_wall_8.png" id="2_ejm2t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_leoce"]
 resource_name = "floor_2"

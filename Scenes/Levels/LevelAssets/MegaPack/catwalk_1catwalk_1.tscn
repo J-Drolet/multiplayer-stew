@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4 uid="uid://4t4uydtx3wd4"]
 
-[ext_resource type="Texture2D" uid="uid://cck10kceu3nfx" path="res://Assets/Textures/Fair/catwalk_1_metal_mesh_1.png" id="1_pl1i3"]
-[ext_resource type="Texture2D" uid="uid://ci8fo8d8x5ord" path="res://Assets/Textures/Fair/catwalk_1_metal_mp_5.png" id="2_mmoqf"]
+[ext_resource type="Texture2D" uid="uid://dphm5c64r02p" path="res://Assets/Textures/Fair/catwalk_1_metal_mesh_1.png" id="1_pl1i3"]
+[ext_resource type="Texture2D" uid="uid://ce4mb3i365lhj" path="res://Assets/Textures/Fair/catwalk_1_metal_mp_5.png" id="2_mmoqf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uqsbf"]
 resource_name = "metal_mesh_1"

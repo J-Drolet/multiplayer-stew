@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://cp5rnwp7qawta"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/melee_stale_baguette_mx_1_melee_stale_baguette_mx_1.png" id="1_vye44"]
+[ext_resource type="Texture2D" uid="uid://ldd6xi00fo7c" path="res://Assets/Textures/Megapack2/melee_stale_baguette_mx_1_melee_stale_baguette_mx_1.png" id="1_vye44"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jq3bl"]
 resource_name = "melee_stale_baguette_mx_1"

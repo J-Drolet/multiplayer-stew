@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ck74o0nreiu38"]
 
-[ext_resource type="Script" path="res://Scripts/UI/JoinInformation.cs" id="1_46f1x"]
+[ext_resource type="Script" uid="uid://dklmua2gpa6t2" path="res://Scripts/UI/JoinInformation.cs" id="1_46f1x"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ckfve"]
 bg_color = Color(0.666667, 0.72549, 0.603922, 1)

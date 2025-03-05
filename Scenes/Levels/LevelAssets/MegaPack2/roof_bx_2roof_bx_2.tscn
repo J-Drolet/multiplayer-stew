@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=4]
+[gd_scene load_steps=10 format=4 uid="uid://btxfugwq1jirm"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_bx_2_concrete_hr_1.png" id="1_3hhpv"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_bx_2_wall_hr_2.png" id="2_uyb7g"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_bx_2_roof_hr_5.png" id="3_gs87x"]
+[ext_resource type="Texture2D" uid="uid://c4vhgsgfr7djg" path="res://Assets/Textures/Megapack2/roof_bx_2_concrete_hr_1.png" id="1_3hhpv"]
+[ext_resource type="Texture2D" uid="uid://c5prcqaymypjv" path="res://Assets/Textures/Megapack2/roof_bx_2_wall_hr_2.png" id="2_uyb7g"]
+[ext_resource type="Texture2D" uid="uid://djfrxwueprqo" path="res://Assets/Textures/Megapack2/roof_bx_2_roof_hr_5.png" id="3_gs87x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oj44i"]
 resource_name = "concrete_hr_1"

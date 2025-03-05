@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://j0c3yr113edx"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Brick_Base_color.png" id="1_totj7"]
+[ext_resource type="Texture2D" uid="uid://crou2uk6qudtk" path="res://Assets/Textures/Extras/Misc_Brick_Base_color.png" id="1_totj7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ig22"]
 resource_name = "Brick"

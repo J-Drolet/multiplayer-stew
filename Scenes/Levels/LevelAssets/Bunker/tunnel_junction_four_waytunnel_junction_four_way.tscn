@@ -1,9 +1,9 @@
-[gd_scene load_steps=12 format=4]
+[gd_scene load_steps=12 format=4 uid="uid://cdnoo154il65n"]
 
-[ext_resource type="Texture2D" uid="uid://cb7bple74wh56" path="res://Assets/Textures/Fair/tunnel_junction_four_way_metal_floor_2.png" id="1_0ptds"]
-[ext_resource type="Texture2D" uid="uid://c72s22qqbdb31" path="res://Assets/Textures/Fair/tunnel_junction_four_way_concrete_1.png" id="2_m4h6o"]
-[ext_resource type="Texture2D" uid="uid://i34lffdx3om1" path="res://Assets/Textures/Fair/tunnel_junction_four_way_drain_cover_1.png" id="3_5smu7"]
-[ext_resource type="Texture2D" uid="uid://jpyvr2agegr5" path="res://Assets/Textures/Fair/tunnel_junction_four_way_metal_4.png" id="4_dk2qb"]
+[ext_resource type="Texture2D" uid="uid://cq131baa38hg5" path="res://Assets/Textures/Fair/tunnel_junction_four_way_metal_floor_2.png" id="1_0ptds"]
+[ext_resource type="Texture2D" uid="uid://dfa43wkrd3rx6" path="res://Assets/Textures/Fair/tunnel_junction_four_way_concrete_1.png" id="2_m4h6o"]
+[ext_resource type="Texture2D" uid="uid://6wdda20imay1" path="res://Assets/Textures/Fair/tunnel_junction_four_way_drain_cover_1.png" id="3_5smu7"]
+[ext_resource type="Texture2D" uid="uid://bidvydrkjud8o" path="res://Assets/Textures/Fair/tunnel_junction_four_way_metal_4.png" id="4_dk2qb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8pa0c"]
 resource_name = "metal_floor_2"

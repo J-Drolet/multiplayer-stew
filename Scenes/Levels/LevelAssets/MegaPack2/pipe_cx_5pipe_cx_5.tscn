@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=4]
+[gd_scene load_steps=10 format=4 uid="uid://bd5foj330ibd7"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/pipe_cx_5_metal_hr_2.png" id="1_ypxqj"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/pipe_cx_5_concrete_hr_1.png" id="2_h5ih0"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/pipe_cx_5_pipe_hr_3.png" id="3_3whvf"]
+[ext_resource type="Texture2D" uid="uid://cd4l4rqmdtapa" path="res://Assets/Textures/Megapack2/pipe_cx_5_metal_hr_2.png" id="1_ypxqj"]
+[ext_resource type="Texture2D" uid="uid://cceh23fv62krd" path="res://Assets/Textures/Megapack2/pipe_cx_5_concrete_hr_1.png" id="2_h5ih0"]
+[ext_resource type="Texture2D" uid="uid://wf3041io1p1n" path="res://Assets/Textures/Megapack2/pipe_cx_5_pipe_hr_3.png" id="3_3whvf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bun3o"]
 resource_name = "metal_hr_2"

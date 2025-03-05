@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://d8gnibfeohub"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Houses.png" id="1_qw5bx"]
+[ext_resource type="Texture2D" uid="uid://doknnm04q4jeq" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Houses.png" id="1_qw5bx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pjt7m"]
 resource_name = "Houses"

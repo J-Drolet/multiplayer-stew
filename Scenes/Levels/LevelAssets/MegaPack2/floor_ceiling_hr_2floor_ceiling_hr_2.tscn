@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=4 uid="uid://cqngn4eqsqywq"]
 
-[ext_resource type="Texture2D" uid="uid://v3sklrxhn4vd" path="res://Assets/Textures/Megapack2/floor_ceiling_hr_2_concrete_hr_3.png" id="1_on5y0"]
-[ext_resource type="Texture2D" uid="uid://7472mp2k2mko" path="res://Assets/Textures/Megapack2/floor_ceiling_hr_2_rebar_hr_1.png" id="2_nkimc"]
+[ext_resource type="Texture2D" uid="uid://c25yf7ckjaqnb" path="res://Assets/Textures/Megapack2/floor_ceiling_hr_2_concrete_hr_3.png" id="1_on5y0"]
+[ext_resource type="Texture2D" uid="uid://m5f7jktimhk" path="res://Assets/Textures/Megapack2/floor_ceiling_hr_2_rebar_hr_1.png" id="2_nkimc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2m8xm"]
 resource_name = "concrete_hr_3"

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://b1iyapybrq5hg"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/metal_barrel_hr_4_metal_barrel_hr_4.png" id="1_tverb"]
+[ext_resource type="Texture2D" uid="uid://chqsqbrho4tvf" path="res://Assets/Textures/Megapack2/metal_barrel_hr_4_metal_barrel_hr_4.png" id="1_tverb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n7nlu"]
 resource_name = "metal_barrel_hr_4"

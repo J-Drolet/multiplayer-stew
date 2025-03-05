@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://dpp83s2147luy"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_hr_3_side_2_angle_edge_1_roof_hr_5.png" id="1_exw7w"]
+[ext_resource type="Texture2D" uid="uid://b44dgeyyae0lg" path="res://Assets/Textures/Megapack2/roof_hr_3_side_2_angle_edge_1_roof_hr_5.png" id="1_exw7w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_db188"]
 resource_name = "roof_hr_5"

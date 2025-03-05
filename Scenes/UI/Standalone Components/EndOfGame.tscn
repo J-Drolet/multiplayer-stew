@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c4wr0n7pacuhv"]
 
-[ext_resource type="Theme" uid="uid://bj4ywnld62bs4" path="res://Assets/Themes/Leaderboard.tres" id="1_08q68"]
-[ext_resource type="Script" path="res://Scripts/UI/EndOfGame.cs" id="1_gi827"]
+[ext_resource type="Theme" uid="uid://586eut477gb1" path="res://Assets/Themes/Leaderboard.tres" id="1_08q68"]
+[ext_resource type="Script" uid="uid://os3capmrndw6" path="res://Scripts/UI/EndOfGame.cs" id="1_gi827"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_riyg7"]
 bg_color = Color(0.0509804, 0.0509804, 0.0509804, 0.627451)

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://dxqxb5mjfdvfo"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Cassete_C7-C2.png" id="1_58vhl"]
+[ext_resource type="Texture2D" uid="uid://sl1560qstm3n" path="res://Assets/Textures/Extras/Cassete_C7-C2.png" id="1_58vhl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kmndo"]
 resource_name = "C1"

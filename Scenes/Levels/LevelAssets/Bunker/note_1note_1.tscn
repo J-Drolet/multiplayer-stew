@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bd1uktjb20jrp"]
 
-[ext_resource type="Texture2D" uid="uid://deqx37x6ywiq6" path="res://Assets/Textures/Fair/note_1_note_1.png" id="1_x5hrc"]
+[ext_resource type="Texture2D" uid="uid://v0ype24g0jfj" path="res://Assets/Textures/Fair/note_1_note_1.png" id="1_x5hrc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_frmow"]
 resource_name = "note_1"

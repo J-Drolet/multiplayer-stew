@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://rgnutjkajf4t"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Harddrive_Base_color.png" id="1_tdn5q"]
+[ext_resource type="Texture2D" uid="uid://dnxb2sudlha38" path="res://Assets/Textures/Extras/Misc_Harddrive_Base_color.png" id="1_tdn5q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wpvxk"]
 resource_name = "Harddrive"

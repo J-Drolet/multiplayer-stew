@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=4 uid="uid://cw21p74av05kq"]
 
-[ext_resource type="Texture2D" uid="uid://cyc1xet3hw5fo" path="res://Assets/Textures/Fair/floor_3_floor_1.png" id="1_50yco"]
-[ext_resource type="Texture2D" uid="uid://drvccig7ibptg" path="res://Assets/Textures/Fair/floor_3_floor_2.png" id="2_4qpa6"]
-[ext_resource type="Texture2D" uid="uid://cnr6bga0gnigh" path="res://Assets/Textures/Fair/floor_3_wall_7.png" id="3_wj3fw"]
-[ext_resource type="Texture2D" uid="uid://c6tb87ovu3imp" path="res://Assets/Textures/Fair/floor_3_ceiling_lamp_1.png" id="4_y6ilo"]
-[ext_resource type="Texture2D" uid="uid://cwv54s8syy2te" path="res://Assets/Textures/Fair/floor_3_ceiling_lamp_1_emission.png" id="5_qi51q"]
-[ext_resource type="Texture2D" uid="uid://cwxa666gaubus" path="res://Assets/Textures/Fair/floor_3_wall_8.png" id="6_op5lf"]
+[ext_resource type="Texture2D" uid="uid://ddxp8mp200ou0" path="res://Assets/Textures/Fair/floor_3_floor_1.png" id="1_50yco"]
+[ext_resource type="Texture2D" uid="uid://cp4g21xcifenu" path="res://Assets/Textures/Fair/floor_3_floor_2.png" id="2_4qpa6"]
+[ext_resource type="Texture2D" uid="uid://r0cit5hwsn2d" path="res://Assets/Textures/Fair/floor_3_wall_7.png" id="3_wj3fw"]
+[ext_resource type="Texture2D" uid="uid://cics7166esnv4" path="res://Assets/Textures/Fair/floor_3_ceiling_lamp_1.png" id="4_y6ilo"]
+[ext_resource type="Texture2D" uid="uid://cwc00ivveqqdg" path="res://Assets/Textures/Fair/floor_3_ceiling_lamp_1_emission.png" id="5_qi51q"]
+[ext_resource type="Texture2D" uid="uid://hdyd5fsxvkiq" path="res://Assets/Textures/Fair/floor_3_wall_8.png" id="6_op5lf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xwkyn"]
 resource_name = "floor_1"

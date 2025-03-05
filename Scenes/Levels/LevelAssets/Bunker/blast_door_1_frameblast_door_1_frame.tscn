@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://kr434jidfngs"]
 
-[ext_resource type="Texture2D" uid="uid://3qs3fgfemhdf" path="res://Assets/Textures/Fair/blast_door_1_frame_metal_floor_2.png" id="1_y3cv4"]
-[ext_resource type="Texture2D" uid="uid://i267lfhflgi3" path="res://Assets/Textures/Fair/blast_door_1_frame_metal_4.png" id="2_1x5nl"]
+[ext_resource type="Texture2D" uid="uid://coknjjvuqrrxo" path="res://Assets/Textures/Fair/blast_door_1_frame_metal_floor_2.png" id="1_y3cv4"]
+[ext_resource type="Texture2D" uid="uid://da17hedso3bd4" path="res://Assets/Textures/Fair/blast_door_1_frame_metal_4.png" id="2_1x5nl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_176oi"]
 resource_name = "metal_floor_2"

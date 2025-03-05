@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://cnb23rouww8ge"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_BarkDecidious.jpg" id="1_awll8"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Branches.png" id="2_4m6o7"]
+[ext_resource type="Texture2D" uid="uid://bwfss4n7er61l" path="res://Assets/Textures/Restaurant/Quequis_House_Props_BarkDecidious.jpg" id="1_awll8"]
+[ext_resource type="Texture2D" uid="uid://cf7plwv1k68xu" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Branches.png" id="2_4m6o7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ypwlx"]
 resource_name = "BarkDecidious"

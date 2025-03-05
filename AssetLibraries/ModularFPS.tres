@@ -1,7 +1,7 @@
-[gd_resource type="Resource" load_steps=34 format=3]
+[gd_resource type="Resource" load_steps=34 format=3 uid="uid://cut0fikiiudms"]
 
-[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetPersistentData.cs" id="1_0k4j6"]
-[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetLibrary.cs" id="2_mnr0o"]
+[ext_resource type="Script" uid="uid://dc0u8r20b8a88" path="res://addons/assetplacer/assetPalette/AssetPersistentData.cs" id="1_0k4j6"]
+[ext_resource type="Script" uid="uid://imuglxd8o53k" path="res://addons/assetplacer/assetPalette/AssetLibrary.cs" id="2_mnr0o"]
 
 [sub_resource type="Resource" id="Resource_ri04w"]
 script = ExtResource("1_0k4j6")
@@ -222,5 +222,5 @@ customPreview = Vector3(-1, -1, -1)
 
 [resource]
 script = ExtResource("2_mnr0o")
-assetData = [SubResource("Resource_ri04w"), SubResource("Resource_l0gst"), SubResource("Resource_o6vt2"), SubResource("Resource_vdp5i"), SubResource("Resource_ajyrp"), SubResource("Resource_lfih8"), SubResource("Resource_hb875"), SubResource("Resource_da1wp"), SubResource("Resource_dohod"), SubResource("Resource_ip6ii"), SubResource("Resource_lrow6"), SubResource("Resource_ftp1c"), SubResource("Resource_8utff"), SubResource("Resource_ak31c"), SubResource("Resource_oea0o"), SubResource("Resource_y45l7"), SubResource("Resource_1hrv0"), SubResource("Resource_uaqfg"), SubResource("Resource_u22us"), SubResource("Resource_4s8xp"), SubResource("Resource_4xyuu"), SubResource("Resource_06oeh"), SubResource("Resource_ixywp"), SubResource("Resource_5samc"), SubResource("Resource_kpnnv"), SubResource("Resource_0gh4c"), SubResource("Resource_nw3kh"), SubResource("Resource_2hwmc"), SubResource("Resource_fdfup"), SubResource("Resource_ku0ih"), SubResource("Resource_ks3f5")]
+assetData = Array[ExtResource("1_0k4j6")]([SubResource("Resource_ri04w"), SubResource("Resource_l0gst"), SubResource("Resource_o6vt2"), SubResource("Resource_vdp5i"), SubResource("Resource_ajyrp"), SubResource("Resource_lfih8"), SubResource("Resource_hb875"), SubResource("Resource_da1wp"), SubResource("Resource_dohod"), SubResource("Resource_ip6ii"), SubResource("Resource_lrow6"), SubResource("Resource_ftp1c"), SubResource("Resource_8utff"), SubResource("Resource_ak31c"), SubResource("Resource_oea0o"), SubResource("Resource_y45l7"), SubResource("Resource_1hrv0"), SubResource("Resource_uaqfg"), SubResource("Resource_u22us"), SubResource("Resource_4s8xp"), SubResource("Resource_4xyuu"), SubResource("Resource_06oeh"), SubResource("Resource_ixywp"), SubResource("Resource_5samc"), SubResource("Resource_kpnnv"), SubResource("Resource_0gh4c"), SubResource("Resource_nw3kh"), SubResource("Resource_2hwmc"), SubResource("Resource_fdfup"), SubResource("Resource_ku0ih"), SubResource("Resource_ks3f5")])
 previewPerspective = 0

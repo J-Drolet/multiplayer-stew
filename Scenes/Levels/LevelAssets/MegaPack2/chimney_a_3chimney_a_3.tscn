@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://cdr8q77ei6kxh"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/chimney_a_3_metal_hr_1.png" id="1_cmm3a"]
+[ext_resource type="Texture2D" uid="uid://cpyk6dqbbqccn" path="res://Assets/Textures/Megapack2/chimney_a_3_metal_hr_1.png" id="1_cmm3a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_up13r"]
 resource_name = "metal_hr_1"

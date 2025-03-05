@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c5id1npgnu08s"]
 
-[ext_resource type="Script" path="res://Assets/AssetGenerator.cs" id="1_0f7dn"]
+[ext_resource type="Script" uid="uid://cwm4tf1ibwvuk" path="res://Assets/AssetGenerator.cs" id="1_0f7dn"]
 
 [node name="AssetGenerator" type="Node3D"]
 script = ExtResource("1_0f7dn")

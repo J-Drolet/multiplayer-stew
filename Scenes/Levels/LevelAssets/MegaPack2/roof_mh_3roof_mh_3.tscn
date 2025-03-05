@@ -1,11 +1,11 @@
-[gd_scene load_steps=16 format=4]
+[gd_scene load_steps=16 format=4 uid="uid://d1yym7wdwoftg"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_mh_3_concrete_hr_3.png" id="1_gnl8r"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_mh_3_panel_hs_1.png" id="2_tf1md"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_mh_3_roof_hr_5.png" id="3_ddikg"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_mh_3_planks_hr_3.png" id="4_rfi4a"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_mh_3_wall_hr_2.png" id="5_1tf6p"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_mh_3_steel_beams_hr_1.png" id="6_bqxgf"]
+[ext_resource type="Texture2D" uid="uid://cgheeuwlpdboy" path="res://Assets/Textures/Megapack2/roof_mh_3_concrete_hr_3.png" id="1_gnl8r"]
+[ext_resource type="Texture2D" uid="uid://c0tognudc3f1r" path="res://Assets/Textures/Megapack2/roof_mh_3_panel_hs_1.png" id="2_tf1md"]
+[ext_resource type="Texture2D" uid="uid://c5r6a4c2sx0gf" path="res://Assets/Textures/Megapack2/roof_mh_3_roof_hr_5.png" id="3_ddikg"]
+[ext_resource type="Texture2D" uid="uid://sigo27rrvxwa" path="res://Assets/Textures/Megapack2/roof_mh_3_planks_hr_3.png" id="4_rfi4a"]
+[ext_resource type="Texture2D" uid="uid://b6ayyvyqp1cen" path="res://Assets/Textures/Megapack2/roof_mh_3_wall_hr_2.png" id="5_1tf6p"]
+[ext_resource type="Texture2D" uid="uid://c4ilu13ydeo1x" path="res://Assets/Textures/Megapack2/roof_mh_3_steel_beams_hr_1.png" id="6_bqxgf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_inhb7"]
 resource_name = "concrete_hr_3"

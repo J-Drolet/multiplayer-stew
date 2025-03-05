@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://c5ojphn0j3m3q"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Traps_Log_Spiked_Variant3_Base_color.png" id="1_8u1x7"]
+[ext_resource type="Texture2D" uid="uid://bmxgevx2ykfx4" path="res://Assets/Textures/Extras/Traps_Log_Spiked_Variant3_Base_color.png" id="1_8u1x7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_23o3v"]
 resource_name = "Log_Spiked_Variant3"

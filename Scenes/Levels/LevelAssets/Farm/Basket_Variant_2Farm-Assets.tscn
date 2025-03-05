@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://cis4dgk4jqvas"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Basket_Variant_2_Base_color.png" id="1_ca4uo"]
+[ext_resource type="Texture2D" uid="uid://v28r24repcm4" path="res://Assets/Textures/Farm/Farm-Assets_Basket_Variant_2_Base_color.png" id="1_ca4uo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3o4to"]
 resource_name = "Basket_Variant_2"

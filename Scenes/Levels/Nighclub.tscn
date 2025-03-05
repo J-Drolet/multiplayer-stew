@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://ceuyck7863ti8"]
 
-[ext_resource type="Script" path="res://Scripts/GameLogic/LevelManager.cs" id="1_244da"]
+[ext_resource type="Script" uid="uid://7qt4qpdvopym" path="res://Scripts/GameLogic/LevelManager.cs" id="1_244da"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_68ubw"]
 [ext_resource type="PackedScene" uid="uid://b7w6gpd64ty7w" path="res://Scenes/Levels/LevelAssets/Backrooms/Primatives/Concrete.tscn" id="3_kkfn0"]
 [ext_resource type="PackedScene" uid="uid://d3kqoomv25c5t" path="res://Scenes/Levels/LevelAssets/Backrooms/Doorways/DoorwayConcrete.tscn" id="4_8vc51"]

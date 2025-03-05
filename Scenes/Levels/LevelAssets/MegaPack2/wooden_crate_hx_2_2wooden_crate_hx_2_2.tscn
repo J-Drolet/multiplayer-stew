@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=4]
+[gd_scene load_steps=10 format=4 uid="uid://bj0c7n78lx7xf"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wooden_crate_hx_2_2_wooden_crate_hx_3.png" id="1_f5mc8"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wooden_crate_hx_2_2_plastic_mx_3.png" id="2_81eok"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wooden_crate_hx_2_2_plastic_cover_mx_2.png" id="3_0jyyx"]
+[ext_resource type="Texture2D" uid="uid://du83wjlnpckx0" path="res://Assets/Textures/Megapack2/wooden_crate_hx_2_2_wooden_crate_hx_3.png" id="1_f5mc8"]
+[ext_resource type="Texture2D" uid="uid://dsv21uya0i1ew" path="res://Assets/Textures/Megapack2/wooden_crate_hx_2_2_plastic_mx_3.png" id="2_81eok"]
+[ext_resource type="Texture2D" uid="uid://m7tyofqr1k8q" path="res://Assets/Textures/Megapack2/wooden_crate_hx_2_2_plastic_cover_mx_2.png" id="3_0jyyx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r1upv"]
 resource_name = "wooden_crate_hx_3"

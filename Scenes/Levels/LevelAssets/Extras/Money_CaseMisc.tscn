@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://ban2idume7u64"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Money_Case_Base_color.png" id="1_7koo1"]
+[ext_resource type="Texture2D" uid="uid://cm3i1aoa2s2nc" path="res://Assets/Textures/Extras/Misc_Money_Case_Base_color.png" id="1_7koo1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p0imx"]
 resource_name = "Money_Case_Material"

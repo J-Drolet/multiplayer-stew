@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bvf7wel40xx4n"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/door_hr_13_door_hr_13.png" id="1_varka"]
+[ext_resource type="Texture2D" uid="uid://bo5ct5nl6c70k" path="res://Assets/Textures/Megapack2/door_hr_13_door_hr_13.png" id="1_varka"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qbp7k"]
 resource_name = "door_hr_13"

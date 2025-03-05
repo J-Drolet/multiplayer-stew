@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://bk1h1t456p8qf"]
 
-[ext_resource type="Script" path="res://addons/assetplacer/ui/DynamicPreviewPanel.cs" id="1_w01ae"]
-[ext_resource type="Texture2D" uid="uid://brlhd4ebthybj" path="res://addons/assetplacer/ui/icons/mmb.svg" id="2_3sgrj"]
-[ext_resource type="Shader" path="res://addons/assetplacer/ui/dynamic_preview_background.gdshader" id="2_l5fbl"]
-[ext_resource type="Texture2D" uid="uid://xtuig27160wk" path="res://addons/assetplacer/ui/icons/spacebar.svg" id="3_bbawl"]
+[ext_resource type="Script" uid="uid://da4s4d0wqhmdy" path="res://addons/assetplacer/ui/DynamicPreviewPanel.cs" id="1_w01ae"]
+[ext_resource type="Texture2D" uid="uid://xw73hxinvsc7" path="res://addons/assetplacer/ui/icons/mmb.svg" id="2_3sgrj"]
+[ext_resource type="Shader" uid="uid://e2iwv1m5w247" path="res://addons/assetplacer/ui/dynamic_preview_background.gdshader" id="2_l5fbl"]
+[ext_resource type="Texture2D" uid="uid://bvn50bihwrkah" path="res://addons/assetplacer/ui/icons/spacebar.svg" id="3_bbawl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mkv7j"]
 bg_color = Color(0, 0, 0, 0.392157)

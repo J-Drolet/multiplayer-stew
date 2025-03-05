@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://00oigava2hm0"]
 
-[ext_resource type="Script" path="res://Scripts/Pickups/UpgradePickup.cs" id="1_i0g7e"]
-[ext_resource type="Script" path="res://Scenes/Pickups/Obsolete/SimplePickup.cs" id="2_uyvdx"]
+[ext_resource type="Script" uid="uid://di1bpisgtcm6w" path="res://Scripts/Pickups/UpgradePickup.cs" id="1_i0g7e"]
+[ext_resource type="Script" uid="uid://buvqqqmkpttyu" path="res://Scenes/Pickups/Obsolete/SimplePickup.cs" id="2_uyvdx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2bm04"]
 size = Vector3(2, 1, 2)
@@ -40,8 +40,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_57bpt"]
 _data = {
-"PickupIdle": SubResource("Animation_fdsld"),
-"RESET": SubResource("Animation_wds57")
+&"PickupIdle": SubResource("Animation_fdsld"),
+&"RESET": SubResource("Animation_wds57")
 }
 
 [node name="SimpleCharacterPickup" type="Node3D" node_paths=PackedStringArray("PickupArea", "APlayer")]

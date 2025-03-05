@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://b4i54pft0an"]
 
 [ext_resource type="Theme" uid="uid://cdejano5l8vrj" path="res://addons/assetplacer/ui/NormalButton.tres" id="1_h2oc1"]
-[ext_resource type="Script" path="res://addons/assetplacer/ui/AssetPlacerButton.cs" id="2_gs4jv"]
-[ext_resource type="Texture2D" uid="uid://ko2253j41djo" path="res://addons/assetplacer/ui/icons/asset_icon.svg" id="3_5m80p"]
-[ext_resource type="Texture2D" uid="uid://dhiehpsdn51vb" path="res://addons/assetplacer/ui/icons/ResetTransformIcon.svg" id="4_wef3h"]
+[ext_resource type="Script" uid="uid://bwjv0owmjjy8g" path="res://addons/assetplacer/ui/AssetPlacerButton.cs" id="2_gs4jv"]
+[ext_resource type="Texture2D" uid="uid://bqsew20s7wc80" path="res://addons/assetplacer/ui/icons/asset_icon.svg" id="3_5m80p"]
+[ext_resource type="Texture2D" uid="uid://oa5pcjlc7q7s" path="res://addons/assetplacer/ui/icons/ResetTransformIcon.svg" id="4_wef3h"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kvm3u"]
 

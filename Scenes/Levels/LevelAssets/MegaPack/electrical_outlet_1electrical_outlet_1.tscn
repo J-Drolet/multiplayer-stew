@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://v2lp6ctc8r2y"]
 
-[ext_resource type="Texture2D" uid="uid://dqxed4e8yvqd0" path="res://Assets/Textures/Fair/electrical_outlet_1_electrical_outlet_1.png" id="1_ox0qp"]
+[ext_resource type="Texture2D" uid="uid://i0qck22ybe1m" path="res://Assets/Textures/Fair/electrical_outlet_1_electrical_outlet_1.png" id="1_ox0qp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5878l"]
 resource_name = "electrical_outlet_1"

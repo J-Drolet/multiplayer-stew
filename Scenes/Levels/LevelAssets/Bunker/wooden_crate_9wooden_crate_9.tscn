@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://c5w5xp628qe2f"]
 
-[ext_resource type="Texture2D" uid="uid://832k4q6yk34q" path="res://Assets/Textures/Fair/wooden_crate_9_wooden_crate_9.png" id="1_ojh7o"]
+[ext_resource type="Texture2D" uid="uid://ccifkpbgifyjb" path="res://Assets/Textures/Fair/wooden_crate_9_wooden_crate_9.png" id="1_ojh7o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_28osx"]
 resource_name = "wooden_crate_9"

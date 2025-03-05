@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ducm8wto51iw8"]
 
-[ext_resource type="Script" path="res://addons/assetplacer/gizmos/PlacementPlane.cs" id="1_c580v"]
+[ext_resource type="Script" uid="uid://lgxh2ptv4axa" path="res://addons/assetplacer/gizmos/PlacementPlane.cs" id="1_c580v"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jbma4"]
 transparency = 1

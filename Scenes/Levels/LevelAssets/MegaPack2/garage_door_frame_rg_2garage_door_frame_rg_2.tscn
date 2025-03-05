@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://b7ndduyj1y6d8"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/garage_door_frame_rg_2_wall_rg_1.png" id="1_kui7n"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/garage_door_frame_rg_2_concrete_hr_3.png" id="2_w4b3a"]
+[ext_resource type="Texture2D" uid="uid://fudom712p3n6" path="res://Assets/Textures/Megapack2/garage_door_frame_rg_2_wall_rg_1.png" id="1_kui7n"]
+[ext_resource type="Texture2D" uid="uid://bghkuogxvg63x" path="res://Assets/Textures/Megapack2/garage_door_frame_rg_2_concrete_hr_3.png" id="2_w4b3a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0gcag"]
 resource_name = "wall_rg_1"

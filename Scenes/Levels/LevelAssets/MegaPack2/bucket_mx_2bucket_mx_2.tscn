@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://c3vspv2uycdli"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/bucket_mx_2_bucket_mx_2.png" id="1_utis2"]
+[ext_resource type="Texture2D" uid="uid://dg2u0s664wrdq" path="res://Assets/Textures/Megapack2/bucket_mx_2_bucket_mx_2.png" id="1_utis2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t7p3n"]
 resource_name = "bucket_mx_2"

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://drm5llmx3cych"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Key_2_150.png" id="1_75j4r"]
+[ext_resource type="Texture2D" uid="uid://v0og0fvt7px7" path="res://Assets/Textures/Extras/Misc_Key_2_150.png" id="1_75j4r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hrm10"]
 resource_name = "Key_2_Material"

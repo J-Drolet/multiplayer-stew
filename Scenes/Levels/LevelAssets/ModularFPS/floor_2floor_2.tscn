@@ -1,9 +1,9 @@
-[gd_scene load_steps=12 format=4]
+[gd_scene load_steps=12 format=4 uid="uid://dwfiyit03hlgw"]
 
-[ext_resource type="Texture2D" uid="uid://bnbscgue50klg" path="res://Assets/Textures/Fair/floor_2_floor_1.png" id="1_6ik1m"]
-[ext_resource type="Texture2D" uid="uid://do7caw15b76if" path="res://Assets/Textures/Fair/floor_2_floor_2.png" id="2_r0vm0"]
-[ext_resource type="Texture2D" uid="uid://bmo3bhw5mha5u" path="res://Assets/Textures/Fair/floor_2_wall_7.png" id="3_bokyg"]
-[ext_resource type="Texture2D" uid="uid://ddlpkkxgh0ytw" path="res://Assets/Textures/Fair/floor_2_vent_1.png" id="4_vahvy"]
+[ext_resource type="Texture2D" uid="uid://dja1t16h00glc" path="res://Assets/Textures/Fair/floor_2_floor_1.png" id="1_6ik1m"]
+[ext_resource type="Texture2D" uid="uid://budisfxkbfyqg" path="res://Assets/Textures/Fair/floor_2_floor_2.png" id="2_r0vm0"]
+[ext_resource type="Texture2D" uid="uid://ci0xik532512q" path="res://Assets/Textures/Fair/floor_2_wall_7.png" id="3_bokyg"]
+[ext_resource type="Texture2D" uid="uid://c862pw3ttb6ul" path="res://Assets/Textures/Fair/floor_2_vent_1.png" id="4_vahvy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xsxca"]
 resource_name = "floor_1"

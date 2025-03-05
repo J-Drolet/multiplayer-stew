@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://3epym377x1iu"]
 
-[ext_resource type="Script" path="res://Scripts/UI/ServerBrowser.cs" id="1_ppla7"]
-[ext_resource type="Script" path="res://Scripts/UI/ServerUiElement.cs" id="2_jebab"]
+[ext_resource type="Script" uid="uid://ox5p7g026aif" path="res://Scripts/UI/ServerBrowser.cs" id="1_ppla7"]
+[ext_resource type="Script" uid="uid://doxrpd60reoto" path="res://Scripts/UI/ServerUiElement.cs" id="2_jebab"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_116hc"]
 

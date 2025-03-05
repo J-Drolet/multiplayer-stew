@@ -1,7 +1,7 @@
 [gd_scene load_steps=30 format=3 uid="uid://lcx7afjcynql"]
 
-[ext_resource type="Script" path="res://Scripts/Character.cs" id="1_n6eoi"]
-[ext_resource type="Script" path="res://Scripts/Base/DamageArea.cs" id="2_4301p"]
+[ext_resource type="Script" uid="uid://5yutkv0j58u4" path="res://Scripts/Character.cs" id="1_n6eoi"]
+[ext_resource type="Script" uid="uid://c38dblfxtao7" path="res://Scripts/Base/DamageArea.cs" id="2_4301p"]
 [ext_resource type="AudioStream" uid="uid://b4o2ftef65g1l" path="res://Assets/Sounds/SFX/Voice B Pain Grunt 002.wav" id="2_b0fus"]
 [ext_resource type="PackedScene" uid="uid://bu6ksmfk5pwif" path="res://Scenes/Particles/InvisibilitySmoke.tscn" id="3_ffhoh"]
 
@@ -116,9 +116,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_47ep3"]
 _data = {
-"Passive": SubResource("Animation_donu8"),
-"RESET": SubResource("Animation_w0yip"),
-"Walk": SubResource("Animation_3qdto")
+&"Passive": SubResource("Animation_donu8"),
+&"RESET": SubResource("Animation_w0yip"),
+&"Walk": SubResource("Animation_3qdto")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6iite"]

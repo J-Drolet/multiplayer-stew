@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://dqcnn51jjw55i"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/cardboard_box_2_cardboard_box_hr_2.png" id="1_tpfod"]
+[ext_resource type="Texture2D" uid="uid://dj6nrdxapmmw0" path="res://Assets/Textures/Megapack2/cardboard_box_2_cardboard_box_hr_2.png" id="1_tpfod"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nahqr"]
 resource_name = "cardboard_box_hr_2"

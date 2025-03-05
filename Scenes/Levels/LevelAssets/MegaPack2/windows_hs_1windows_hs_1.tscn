@@ -1,10 +1,10 @@
-[gd_scene load_steps=14 format=4]
+[gd_scene load_steps=14 format=4 uid="uid://ba67nuf1r105h"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/windows_hs_1_wall_hs_1.png" id="1_foq3t"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/windows_hs_1_window_hr_1.png" id="2_tu6uo"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/windows_hs_1_concrete_hr_1.png" id="3_3uo1f"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/windows_hs_1_metal_hr_2.png" id="4_i07ys"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/windows_hs_1_concrete_hr_3.png" id="5_428kd"]
+[ext_resource type="Texture2D" uid="uid://cn08g3kdhmyq1" path="res://Assets/Textures/Megapack2/windows_hs_1_wall_hs_1.png" id="1_foq3t"]
+[ext_resource type="Texture2D" uid="uid://dfqs1gyn7ril7" path="res://Assets/Textures/Megapack2/windows_hs_1_window_hr_1.png" id="2_tu6uo"]
+[ext_resource type="Texture2D" uid="uid://cqynnpb17dcrn" path="res://Assets/Textures/Megapack2/windows_hs_1_concrete_hr_1.png" id="3_3uo1f"]
+[ext_resource type="Texture2D" uid="uid://chglubxffhni4" path="res://Assets/Textures/Megapack2/windows_hs_1_metal_hr_2.png" id="4_i07ys"]
+[ext_resource type="Texture2D" uid="uid://bftx1judaw7l4" path="res://Assets/Textures/Megapack2/windows_hs_1_concrete_hr_3.png" id="5_428kd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8c4uf"]
 resource_name = "wall_hs_1"

@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=4]
+[gd_scene load_steps=10 format=4 uid="uid://bh1fiw4d0jmwi"]
 
-[ext_resource type="Texture2D" uid="uid://dsqgi1tkyrwt8" path="res://Assets/Textures/Fair/wall_1_tunnel_hole_concrete_2.jpg" id="1_vw0b1"]
-[ext_resource type="Texture2D" uid="uid://e21yj6r7x6r6" path="res://Assets/Textures/Fair/wall_1_tunnel_hole_wall_4.png" id="2_2jh0n"]
-[ext_resource type="Texture2D" uid="uid://d1x1wow6vjv3n" path="res://Assets/Textures/Fair/wall_1_tunnel_hole_metal_6.png" id="3_e1mhp"]
+[ext_resource type="Texture2D" uid="uid://drn83sno85s46" path="res://Assets/Textures/Fair/wall_1_tunnel_hole_concrete_2.jpg" id="1_vw0b1"]
+[ext_resource type="Texture2D" uid="uid://bi7s1gj7y26ko" path="res://Assets/Textures/Fair/wall_1_tunnel_hole_wall_4.png" id="2_2jh0n"]
+[ext_resource type="Texture2D" uid="uid://b3vnwc6y7vt76" path="res://Assets/Textures/Fair/wall_1_tunnel_hole_metal_6.png" id="3_e1mhp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2763a"]
 resource_name = "concrete_2"

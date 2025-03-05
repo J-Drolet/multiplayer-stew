@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://cdebbp8uh4eaa"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Pile_Variant_4_Base_color.png" id="1_6mbs0"]
+[ext_resource type="Texture2D" uid="uid://b3gsynq7ir5wb" path="res://Assets/Textures/Farm/Farm-Assets_Pile_Variant_4_Base_color.png" id="1_6mbs0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g8re5"]
 resource_name = "Pile_Variant_4"

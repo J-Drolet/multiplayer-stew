@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4 uid="uid://x45b1orurjwf"]
 
-[ext_resource type="Script" path="res://Scripts/Projectiles/SimpleBullet.cs" id="1_ke2li"]
-[ext_resource type="Texture2D" uid="uid://biwrbntj3b2c6" path="res://Assets/Textures/Weapons/AugBullet_Ammo_tex.png" id="2_7mr4n"]
+[ext_resource type="Script" uid="uid://i5dbdlp27m8b" path="res://Scripts/Projectiles/SimpleBullet.cs" id="1_ke2li"]
+[ext_resource type="Texture2D" uid="uid://yfr8qq3bu53e" path="res://Assets/Textures/Weapons/AugBullet_Ammo_tex.png" id="2_7mr4n"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_s3o7p"]
 properties/0/path = NodePath(".:position")

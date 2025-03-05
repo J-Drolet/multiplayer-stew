@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://c7gi7ivw04wox"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Nail_Base_color.png" id="1_khr7s"]
+[ext_resource type="Texture2D" uid="uid://dpibcs61krqv" path="res://Assets/Textures/Extras/Misc_Nail_Base_color.png" id="1_khr7s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7iwrn"]
 resource_name = "Nail"

@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=4]
+[gd_scene load_steps=10 format=4 uid="uid://dy8ovxcpem00g"]
 
-[ext_resource type="Texture2D" uid="uid://i1o5pgafkh52" path="res://Assets/Textures/Fair/dosimeter_4_dosimeter_3.png" id="1_dpqua"]
-[ext_resource type="Texture2D" uid="uid://dinmjbstvgppe" path="res://Assets/Textures/Fair/dosimeter_4_metal_mp_1.png" id="2_gx5sv"]
-[ext_resource type="Texture2D" uid="uid://dpwavmiyb87fx" path="res://Assets/Textures/Fair/dosimeter_4_metal_mp_4.png" id="3_4tsc0"]
+[ext_resource type="Texture2D" uid="uid://c68a13h7qlg7d" path="res://Assets/Textures/Fair/dosimeter_4_dosimeter_3.png" id="1_dpqua"]
+[ext_resource type="Texture2D" uid="uid://bd48s3lb7rj61" path="res://Assets/Textures/Fair/dosimeter_4_metal_mp_1.png" id="2_gx5sv"]
+[ext_resource type="Texture2D" uid="uid://buk7x8hxnej2c" path="res://Assets/Textures/Fair/dosimeter_4_metal_mp_4.png" id="3_4tsc0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xowbt"]
 resource_name = "dosimeter_3"

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://hwjjgutgbwkt"]
 
-[ext_resource type="Script" path="res://addons/assetplacer/ui/AboutDialog.cs" id="1_faw6c"]
-[ext_resource type="Script" path="res://addons/assetplacer/ui/TagLabel.cs" id="2_gxdc7"]
-[ext_resource type="Script" path="res://addons/assetplacer/ui/LinkButton.cs" id="3_xkax2"]
+[ext_resource type="Script" uid="uid://34hrhgkdmdg1" path="res://addons/assetplacer/ui/AboutDialog.cs" id="1_faw6c"]
+[ext_resource type="Script" uid="uid://dfnrq4jax2xhd" path="res://addons/assetplacer/ui/TagLabel.cs" id="2_gxdc7"]
+[ext_resource type="Script" uid="uid://jab2rdc1o5pu" path="res://addons/assetplacer/ui/LinkButton.cs" id="3_xkax2"]
 
 [node name="AboutDialog" type="AcceptDialog"]
 title = "About"

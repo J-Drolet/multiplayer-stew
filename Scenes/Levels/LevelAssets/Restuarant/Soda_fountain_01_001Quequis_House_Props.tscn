@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://cwrp4ttq1xoaj"]
 
-[ext_resource type="Texture2D" uid="uid://dng7pq8lmjufn" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Soda_fountain.png" id="1_ixnn1"]
+[ext_resource type="Texture2D" uid="uid://cgamevut0u4jq" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Soda_fountain.png" id="1_ixnn1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1jrds"]
 resource_name = "Glass"

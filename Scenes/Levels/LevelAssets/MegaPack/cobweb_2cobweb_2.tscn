@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://dhrqrxtu8xiu7"]
 
-[ext_resource type="Texture2D" uid="uid://b2d8prvq2t3i" path="res://Assets/Textures/Fair/cobweb_2_cobweb_2.png" id="1_u2v6i"]
+[ext_resource type="Texture2D" uid="uid://cjyjtkss6stss" path="res://Assets/Textures/Fair/cobweb_2_cobweb_2.png" id="1_u2v6i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_64cvw"]
 resource_name = "cobweb_2"

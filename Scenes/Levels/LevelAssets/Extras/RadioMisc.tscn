@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://uo1mjbi11hny"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Radio_256x256.png" id="1_muqgc"]
+[ext_resource type="Texture2D" uid="uid://ditpjk7yqa63b" path="res://Assets/Textures/Extras/Misc_Radio_256x256.png" id="1_muqgc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42u1k"]
 resource_name = "Radio_Material"

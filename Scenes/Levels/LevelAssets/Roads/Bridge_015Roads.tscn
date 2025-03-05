@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=4]
+[gd_scene load_steps=10 format=4 uid="uid://cmnbp4g8wtjis"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Roads/Roads_Asphalt010_2K_Color.jpg" id="1_qanop"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Roads/Roads_TexturesCom_ConcretePlatesDirty0007_S.jpg" id="2_cajx5"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Roads/Roads_TexturesCom_BrickMedievalBlocks0329_5_seamless_S.jpg" id="3_rewx3"]
+[ext_resource type="Texture2D" uid="uid://dhec52tmddy04" path="res://Assets/Textures/Roads/Roads_Asphalt010_2K_Color.jpg" id="1_qanop"]
+[ext_resource type="Texture2D" uid="uid://qhsi21pqd26w" path="res://Assets/Textures/Roads/Roads_TexturesCom_ConcretePlatesDirty0007_S.jpg" id="2_cajx5"]
+[ext_resource type="Texture2D" uid="uid://c57nmp2634nq1" path="res://Assets/Textures/Roads/Roads_TexturesCom_BrickMedievalBlocks0329_5_seamless_S.jpg" id="3_rewx3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8wvb"]
 resource_name = "Material.001"

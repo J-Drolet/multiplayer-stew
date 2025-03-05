@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://bwc6belpyc6bq"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_small_hr_3_planks_hr_3.png" id="1_k2q6b"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_small_hr_3_roof_hr_3.png" id="2_uu5t8"]
+[ext_resource type="Texture2D" uid="uid://cxj86bdunv8jr" path="res://Assets/Textures/Megapack2/roof_small_hr_3_planks_hr_3.png" id="1_k2q6b"]
+[ext_resource type="Texture2D" uid="uid://yhbbew0fxett" path="res://Assets/Textures/Megapack2/roof_small_hr_3_roof_hr_3.png" id="2_uu5t8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yul0v"]
 resource_name = "planks_hr_3"

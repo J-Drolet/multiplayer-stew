@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://dv4nav0nw1w2p"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/metal_fence_hr_1_pillar_1_corner_metal_fence_hr_1.png" id="1_n7d45"]
+[ext_resource type="Texture2D" uid="uid://bb2wi2mm4amci" path="res://Assets/Textures/Megapack2/metal_fence_hr_1_pillar_1_corner_metal_fence_hr_1.png" id="1_n7d45"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ex0op"]
 resource_name = "metal_fence_hr_1"

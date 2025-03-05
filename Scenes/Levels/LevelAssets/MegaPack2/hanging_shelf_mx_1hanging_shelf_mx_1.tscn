@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://cwuh2md3jmn74"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/hanging_shelf_mx_1_metal_hr_2.png" id="1_st2kl"]
+[ext_resource type="Texture2D" uid="uid://dfvf75b4xb84i" path="res://Assets/Textures/Megapack2/hanging_shelf_mx_1_metal_hr_2.png" id="1_st2kl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mwhuj"]
 resource_name = "metal_hr_2"

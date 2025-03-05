@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=4 uid="uid://b1f7iivgyecvp"]
 
-[ext_resource type="Script" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_dxq16"]
+[ext_resource type="Script" uid="uid://dnr2b41enseqc" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_dxq16"]
 [ext_resource type="PackedScene" uid="uid://cohf65bso617l" path="res://Scenes/Weapons/Shotgun.tscn" id="2_8mitx"]
 [ext_resource type="Texture2D" uid="uid://c2u8ie3inrtw" path="res://Assets/Models/Weapons/Double_Barrel_glb_Shotgun_tex.png" id="3_b6tyj"]
 
@@ -186,8 +186,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nubif"]
 _data = {
-"RESET": SubResource("Animation_hgvp4"),
-"Rotation": SubResource("Animation_0vvxu")
+&"RESET": SubResource("Animation_hgvp4"),
+&"Rotation": SubResource("Animation_0vvxu")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o0sq4"]

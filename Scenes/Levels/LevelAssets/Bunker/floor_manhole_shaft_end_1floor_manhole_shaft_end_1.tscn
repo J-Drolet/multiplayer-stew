@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://b5amw2da2s665"]
 
-[ext_resource type="Texture2D" uid="uid://b8ngjml7pb4e6" path="res://Assets/Textures/Fair/floor_manhole_shaft_end_1_concrete_1.png" id="1_0lpln"]
-[ext_resource type="Texture2D" uid="uid://dsjc6awrv31ys" path="res://Assets/Textures/Fair/floor_manhole_shaft_end_1_metal_floor_2.png" id="2_13t2w"]
+[ext_resource type="Texture2D" uid="uid://clmur8434fpe3" path="res://Assets/Textures/Fair/floor_manhole_shaft_end_1_concrete_1.png" id="1_0lpln"]
+[ext_resource type="Texture2D" uid="uid://moxrkygotiuu" path="res://Assets/Textures/Fair/floor_manhole_shaft_end_1_metal_floor_2.png" id="2_13t2w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_624xy"]
 resource_name = "concrete_1"

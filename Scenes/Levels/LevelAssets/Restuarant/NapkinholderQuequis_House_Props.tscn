@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://c6778mlfnqb2b"]
 
-[ext_resource type="Texture2D" uid="uid://d0r7oatn0hwpc" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Napkinholder.png" id="1_adgo4"]
+[ext_resource type="Texture2D" uid="uid://b3xvxlemn72bg" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Napkinholder.png" id="1_adgo4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d6ig3"]
 resource_name = "Napkinholder"

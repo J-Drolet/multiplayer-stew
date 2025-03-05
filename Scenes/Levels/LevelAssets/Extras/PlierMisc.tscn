@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bgh1brr6wq4kt"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Plier_200x200.png" id="1_rvkp1"]
+[ext_resource type="Texture2D" uid="uid://ckf7bmglqutaa" path="res://Assets/Textures/Extras/Misc_Plier_200x200.png" id="1_rvkp1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1wym"]
 resource_name = "Plier_Material"

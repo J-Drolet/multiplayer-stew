@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://7jyx5fx44b7v"]
 
-[ext_resource type="Texture2D" uid="uid://d3ulev1v58hgi" path="res://Assets/Textures/Fair/button_11_button_11.png" id="1_3acqn"]
+[ext_resource type="Texture2D" uid="uid://bq0s2p8pfv37a" path="res://Assets/Textures/Fair/button_11_button_11.png" id="1_3acqn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p2chf"]
 resource_name = "button_11"

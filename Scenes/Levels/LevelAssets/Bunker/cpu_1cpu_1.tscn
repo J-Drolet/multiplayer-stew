@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://caxba45nqioai"]
 
-[ext_resource type="Texture2D" uid="uid://bghpo62t2dbxu" path="res://Assets/Textures/Fair/cpu_1_cpu_1.png" id="1_225dy"]
+[ext_resource type="Texture2D" uid="uid://drire5ayhgctx" path="res://Assets/Textures/Fair/cpu_1_cpu_1.png" id="1_225dy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ovxj5"]
 resource_name = "cpu_1"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=4 uid="uid://ctk0asm13xr0i"]
 
-[ext_resource type="Texture2D" uid="uid://cimyblxjq77k2" path="res://Assets/Textures/Weapons/Double_Barrel_glb_Shotgun_tex.png" id="1_fpnpm"]
+[ext_resource type="Texture2D" uid="uid://h4o23p1xwjgl" path="res://Assets/Textures/Weapons/Double_Barrel_glb_Shotgun_tex.png" id="1_fpnpm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7x6x5"]
 resource_name = "Double Barrel"

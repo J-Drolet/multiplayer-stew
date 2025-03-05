@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://badwo7r5cgwnh"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/test_machine_mx_1_metal_hr_3.png" id="1_sqjh4"]
+[ext_resource type="Texture2D" uid="uid://d1rm6bxdtjj7j" path="res://Assets/Textures/Megapack2/test_machine_mx_1_metal_hr_3.png" id="1_sqjh4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32ssj"]
 resource_name = "metal_hr_3"

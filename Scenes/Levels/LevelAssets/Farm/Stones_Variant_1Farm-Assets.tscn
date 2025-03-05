@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://wsowp2c7sjx1"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Stones_Variant_1_Base_color.png" id="1_kuhxk"]
+[ext_resource type="Texture2D" uid="uid://xnekh7betfhd" path="res://Assets/Textures/Farm/Farm-Assets_Stones_Variant_1_Base_color.png" id="1_kuhxk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sr60v"]
 resource_name = "Stones_Variant_1"

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://buxidgm08twkh"]
 
-[ext_resource type="Texture2D" uid="uid://bytu3m1051yl" path="res://Assets/Textures/Fair/cross_1_cross_1.png" id="1_3ije7"]
+[ext_resource type="Texture2D" uid="uid://dyusbknwon352" path="res://Assets/Textures/Fair/cross_1_cross_1.png" id="1_3ije7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kgikn"]
 resource_name = "cross_1"

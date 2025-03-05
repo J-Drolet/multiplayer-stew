@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://c5cbb8wuar2u4"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/rubiks_cube_mx_1_rubiks_cube_mx_1.png" id="1_mwjpi"]
+[ext_resource type="Texture2D" uid="uid://cy8avvo84x6og" path="res://Assets/Textures/Megapack2/rubiks_cube_mx_1_rubiks_cube_mx_1.png" id="1_mwjpi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3h6ge"]
 resource_name = "rubiks_cube_mx_1"

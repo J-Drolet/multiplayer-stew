@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://l46p8yqcv4bd"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Box_B.png" id="1_7oqhk"]
+[ext_resource type="Texture2D" uid="uid://lewlbinba0bu" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Box_B.png" id="1_7oqhk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jx17d"]
 resource_name = "Box_B"

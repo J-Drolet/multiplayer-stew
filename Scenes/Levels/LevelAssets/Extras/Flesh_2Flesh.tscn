@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://d366vc6awx6r5"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Flesh_2.png" id="1_em1e0"]
+[ext_resource type="Texture2D" uid="uid://dne1ak7f151ll" path="res://Assets/Textures/Extras/Flesh_2.png" id="1_em1e0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kufqq"]
 resource_name = "Flesh"

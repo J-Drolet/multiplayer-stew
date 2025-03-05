@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bqxy6j7qwx004"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Money_150x150.png" id="1_yl176"]
+[ext_resource type="Texture2D" uid="uid://dxh0k50nyipqb" path="res://Assets/Textures/Extras/Misc_Money_150x150.png" id="1_yl176"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e4yg7"]
 resource_name = "Money_Material"

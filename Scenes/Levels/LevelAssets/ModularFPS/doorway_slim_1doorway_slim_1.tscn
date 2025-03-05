@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://2y4bxosrqyfq"]
 
-[ext_resource type="Texture2D" uid="uid://dvpml3vmv5k3e" path="res://Assets/Textures/Fair/doorway_slim_1_wall_5.png" id="1_kpr5b"]
-[ext_resource type="Texture2D" uid="uid://c6pwbrwuhk3gm" path="res://Assets/Textures/Fair/doorway_slim_1_door_frame_1.png" id="2_ouixk"]
+[ext_resource type="Texture2D" uid="uid://sfiprgscm1el" path="res://Assets/Textures/Fair/doorway_slim_1_wall_5.png" id="1_kpr5b"]
+[ext_resource type="Texture2D" uid="uid://he30v7o6kqw1" path="res://Assets/Textures/Fair/doorway_slim_1_door_frame_1.png" id="2_ouixk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uacx7"]
 resource_name = "wall_5"

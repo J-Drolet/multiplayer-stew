@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://homamhdekt86"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Roads/Roads_TexturesCom_SignStop0003_S.jpg" id="1_2xj8u"]
+[ext_resource type="Texture2D" uid="uid://d4cjifmm65pfb" path="res://Assets/Textures/Roads/Roads_TexturesCom_SignStop0003_S.jpg" id="1_2xj8u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mfs4t"]
 resource_name = "Material.019"

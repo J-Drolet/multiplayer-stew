@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://dy1cyo73w08u2"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/ramp_platform_slim_mx_1_wall_rg_1_1.png" id="1_y7h6l"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/ramp_platform_slim_mx_1_concrete_hr_4.png" id="2_y718k"]
+[ext_resource type="Texture2D" uid="uid://c1c5tehou7p0l" path="res://Assets/Textures/Megapack2/ramp_platform_slim_mx_1_wall_rg_1_1.png" id="1_y7h6l"]
+[ext_resource type="Texture2D" uid="uid://c51o515q6pc01" path="res://Assets/Textures/Megapack2/ramp_platform_slim_mx_1_concrete_hr_4.png" id="2_y718k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x50gv"]
 resource_name = "wall_rg_1_1"

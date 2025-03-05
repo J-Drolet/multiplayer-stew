@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://dvveecpfhudoa"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Axe_Base_color.png" id="1_3cc84"]
+[ext_resource type="Texture2D" uid="uid://caroqdwhbvjuo" path="res://Assets/Textures/Farm/Farm-Assets_Axe_Base_color.png" id="1_3cc84"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sd8er"]
 resource_name = "Axe.001"

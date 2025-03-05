@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://ddxlppd215h3l"]
 
-[ext_resource type="Texture2D" uid="uid://d08nlctty2nfc" path="res://Assets/Textures/Fair/glass_bottle_1_glass_bottle_1.png" id="1_47xuh"]
+[ext_resource type="Texture2D" uid="uid://ca0i4dw5ipmkr" path="res://Assets/Textures/Fair/glass_bottle_1_glass_bottle_1.png" id="1_47xuh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2rgmu"]
 resource_name = "glass_bottle_1"

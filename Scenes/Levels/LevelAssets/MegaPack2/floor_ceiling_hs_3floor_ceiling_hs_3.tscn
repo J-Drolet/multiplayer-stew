@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://7fpj63md0q7x"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/floor_ceiling_hs_3_tiles_floor_hr_2.png" id="1_dyaxt"]
+[ext_resource type="Texture2D" uid="uid://bn2y6kcqudk34" path="res://Assets/Textures/Megapack2/floor_ceiling_hs_3_tiles_floor_hr_2.png" id="1_dyaxt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qt13"]
 resource_name = "tiles_floor_hr_2"

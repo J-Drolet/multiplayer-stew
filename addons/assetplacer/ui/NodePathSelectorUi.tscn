@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dod1gdi7s27cy"]
 
-[ext_resource type="Script" path="res://addons/assetplacer/ui/NodePathSelectorUi.cs" id="1_7yhf7"]
-[ext_resource type="Script" path="res://addons/assetplacer/ui/NodePathSelectionButton.cs" id="2_owr3c"]
+[ext_resource type="Script" uid="uid://bdbw0b26e320y" path="res://addons/assetplacer/ui/NodePathSelectorUi.cs" id="1_7yhf7"]
+[ext_resource type="Script" uid="uid://dv8b2jet21wgk" path="res://addons/assetplacer/ui/NodePathSelectionButton.cs" id="2_owr3c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w7pr5"]
 content_margin_left = 4.0

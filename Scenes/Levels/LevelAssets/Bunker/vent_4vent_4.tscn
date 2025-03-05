@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://bkpem8rlgx3x2"]
 
-[ext_resource type="Texture2D" uid="uid://cenihknnhqih0" path="res://Assets/Textures/Fair/vent_4_vent_4.png" id="1_p8o8l"]
-[ext_resource type="Texture2D" uid="uid://gk7mh7vb4shy" path="res://Assets/Textures/Fair/vent_4_metal_4.png" id="2_ijsim"]
+[ext_resource type="Texture2D" uid="uid://b4qqhq500b7w8" path="res://Assets/Textures/Fair/vent_4_vent_4.png" id="1_p8o8l"]
+[ext_resource type="Texture2D" uid="uid://eo3ehvjqf2tt" path="res://Assets/Textures/Fair/vent_4_metal_4.png" id="2_ijsim"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mvve1"]
 resource_name = "vent_4"

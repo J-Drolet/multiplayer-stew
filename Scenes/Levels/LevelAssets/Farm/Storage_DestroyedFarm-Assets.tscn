@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://cyedy7ecpfm44"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Storage_Destroyed_Base_color.png" id="1_5x30i"]
+[ext_resource type="Texture2D" uid="uid://cq0lselldekb2" path="res://Assets/Textures/Farm/Farm-Assets_Storage_Destroyed_Base_color.png" id="1_5x30i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0t2jg"]
 resource_name = "Storage_Destroyed"

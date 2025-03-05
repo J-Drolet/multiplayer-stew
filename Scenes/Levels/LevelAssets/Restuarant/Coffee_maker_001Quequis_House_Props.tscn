@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://dpyiuhn6xhxkp"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Coffee_maker.png" id="1_wav5u"]
+[ext_resource type="Texture2D" uid="uid://dkm626bfitwms" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Coffee_maker.png" id="1_wav5u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p6jic"]
 resource_name = "Coffee_maker"

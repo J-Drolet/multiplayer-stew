@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://dysoe3leopyi0"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/baseball_bat_mx_2_baseball_bat_mx_2.png" id="1_f186b"]
+[ext_resource type="Texture2D" uid="uid://p0ggobcyn7rw" path="res://Assets/Textures/Megapack2/baseball_bat_mx_2_baseball_bat_mx_2.png" id="1_f186b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jnly4"]
 resource_name = "baseball_bat_mx_2"

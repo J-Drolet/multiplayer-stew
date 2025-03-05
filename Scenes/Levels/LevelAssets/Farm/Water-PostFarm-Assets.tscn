@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bsxrx50b2if7m"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Water-Post_Base_color.png" id="1_u8pe1"]
+[ext_resource type="Texture2D" uid="uid://cmvnhwqo23j5h" path="res://Assets/Textures/Farm/Farm-Assets_Water-Post_Base_color.png" id="1_u8pe1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p4tk4"]
 resource_name = "Water-Post"

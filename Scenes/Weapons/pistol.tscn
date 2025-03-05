@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=4 uid="uid://b8hpvrno7saob"]
 
-[ext_resource type="Script" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_3n8ap"]
+[ext_resource type="Script" uid="uid://uoy74i0gesrj" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_3n8ap"]
 [ext_resource type="PackedScene" uid="uid://g1mopusla6rw" path="res://Scenes/Projectiles/SimpleBullet.tscn" id="2_6tjck"]
 [ext_resource type="AudioStream" uid="uid://c6xvcmxi218w2" path="res://Assets/Sounds/SFX/9mm Micro Pistol - Gunshot B 002.wav" id="3_4ihi6"]
 [ext_resource type="AudioStream" uid="uid://bcvvqb63qvyb2" path="res://Assets/Sounds/SFX/9mm Full Size Pistol - Dry Trigger 003.wav" id="3_cawty"]
@@ -9,7 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://dv2ul35ht7363" path="res://Assets/Sounds/SFX/9mm Full Size Pistol - Cocking Slide 003.wav" id="5_6y7ut"]
 [ext_resource type="AudioStream" uid="uid://curqfu70jok4e" path="res://Assets/Sounds/SFX/9mm Micro Pistol - Dropping Magazine 003.wav" id="5_2028r"]
 [ext_resource type="AudioStream" uid="uid://br0n1kwnby8i0" path="res://Assets/Sounds/SFX/9mm Micro Pistol - Loading Magazine 002.wav" id="5_fu7wm"]
-[ext_resource type="Script" path="res://Scripts/Base/SelfDestroyingParticle.cs" id="5_k4r3p"]
+[ext_resource type="Script" uid="uid://bl1otymgjtlka" path="res://Scripts/Base/SelfDestroyingParticle.cs" id="5_k4r3p"]
 
 [sub_resource type="Animation" id="Animation_c27f4"]
 resource_name = "Fire"
@@ -317,9 +317,9 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qq742"]
 _data = {
-"Fire": SubResource("Animation_c27f4"),
-"RESET": SubResource("Animation_i6i74"),
-"Reload": SubResource("Animation_sk1b1")
+&"Fire": SubResource("Animation_c27f4"),
+&"RESET": SubResource("Animation_i6i74"),
+&"Reload": SubResource("Animation_sk1b1")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mrl0e"]

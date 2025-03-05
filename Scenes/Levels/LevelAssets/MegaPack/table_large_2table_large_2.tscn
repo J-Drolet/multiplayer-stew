@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://1t8nvpv801xb"]
 
-[ext_resource type="Texture2D" uid="uid://cm4yg8fwktcgm" path="res://Assets/Textures/Fair/table_large_2_metal_mp_4.png" id="1_alch6"]
-[ext_resource type="Texture2D" uid="uid://mneust2ypynr" path="res://Assets/Textures/Fair/table_large_2_metal_mp_3.png" id="2_ao8i1"]
+[ext_resource type="Texture2D" uid="uid://scfv8yeqkprt" path="res://Assets/Textures/Fair/table_large_2_metal_mp_4.png" id="1_alch6"]
+[ext_resource type="Texture2D" uid="uid://dmb0dsm4s7sed" path="res://Assets/Textures/Fair/table_large_2_metal_mp_3.png" id="2_ao8i1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_60elp"]
 resource_name = "metal_mp_4"

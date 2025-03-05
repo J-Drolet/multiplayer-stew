@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://burc07nn0v2mo"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/gift_box_mx_1_3_gift_box_mx_1_3.png" id="1_wvuv3"]
+[ext_resource type="Texture2D" uid="uid://bwsyic8cohe78" path="res://Assets/Textures/Megapack2/gift_box_mx_1_3_gift_box_mx_1_3.png" id="1_wvuv3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3fkv1"]
 resource_name = "gift_box_mx_1_3"

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://celekrd581kwm"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Pickaxe_1024.png" id="1_ifmt4"]
+[ext_resource type="Texture2D" uid="uid://drcxeqpe7uuqp" path="res://Assets/Textures/Extras/Misc_Pickaxe_1024.png" id="1_ifmt4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tq67d"]
 resource_name = "Pickaxe_Material"

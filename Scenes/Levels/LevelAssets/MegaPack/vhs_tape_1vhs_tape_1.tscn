@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://d0ykeaax110n8"]
 
-[ext_resource type="Texture2D" uid="uid://2pio3p4i6vyo" path="res://Assets/Textures/Fair/vhs_tape_1_vhs_tape_1.png" id="1_wuohe"]
+[ext_resource type="Texture2D" uid="uid://w5tl53p3sdk1" path="res://Assets/Textures/Fair/vhs_tape_1_vhs_tape_1.png" id="1_wuohe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7lvil"]
 resource_name = "vhs_tape_1"

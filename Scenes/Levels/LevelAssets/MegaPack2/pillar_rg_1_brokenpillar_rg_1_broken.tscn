@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://7lwmeujm7e0"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/pillar_rg_1_broken_wall_rg_1.png" id="1_s234k"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/pillar_rg_1_broken_rebar_hr_1.png" id="2_nprgs"]
+[ext_resource type="Texture2D" uid="uid://cy6omnnkkrx1k" path="res://Assets/Textures/Megapack2/pillar_rg_1_broken_wall_rg_1.png" id="1_s234k"]
+[ext_resource type="Texture2D" uid="uid://cqo0ax7yaaa0u" path="res://Assets/Textures/Megapack2/pillar_rg_1_broken_rebar_hr_1.png" id="2_nprgs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jt41j"]
 resource_name = "wall_rg_1"

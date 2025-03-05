@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://c8tjd5gn6nlj4"]
 
-[ext_resource type="Texture2D" uid="uid://cl0kbw2toam3q" path="res://Assets/Textures/Fair/book_2_book_2.png" id="1_v0kyy"]
+[ext_resource type="Texture2D" uid="uid://b38ti0gr8i155" path="res://Assets/Textures/Fair/book_2_book_2.png" id="1_v0kyy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n5gte"]
 resource_name = "book_2"

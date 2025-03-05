@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://dqfb2tqkocgje"]
 
-[ext_resource type="Texture2D" uid="uid://1k8eojoovqcx" path="res://Assets/Textures/Fair/wall_box_3_wall_box_3.png" id="1_co8bv"]
+[ext_resource type="Texture2D" uid="uid://bs0wx1p76pdl4" path="res://Assets/Textures/Fair/wall_box_3_wall_box_3.png" id="1_co8bv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_72pgp"]
 resource_name = "wall_box_3"

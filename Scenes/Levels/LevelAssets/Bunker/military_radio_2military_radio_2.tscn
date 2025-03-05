@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://fa0ry0q2as1g"]
 
-[ext_resource type="Texture2D" uid="uid://di6adbkpbv0i" path="res://Assets/Textures/Fair/military_radio_2_military_radio_2.png" id="1_q85bx"]
+[ext_resource type="Texture2D" uid="uid://cqm2jbogfctiw" path="res://Assets/Textures/Fair/military_radio_2_military_radio_2.png" id="1_q85bx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_53lya"]
 resource_name = "military_radio_2"

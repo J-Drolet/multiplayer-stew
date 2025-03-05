@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=4 uid="uid://gr5wk6mlmrwm"]
 
-[ext_resource type="Texture2D" uid="uid://cybnu7uc26p6t" path="res://Assets/Textures/Fair/RV1_RV1.png" id="1_s2luk"]
-[ext_resource type="Texture2D" uid="uid://bmlnopx5iw8h3" path="res://Assets/Textures/Fair/RV1_Tire.png" id="2_kjay5"]
+[ext_resource type="Texture2D" uid="uid://cpknophhpt3pn" path="res://Assets/Textures/Fair/RV1_RV1.png" id="1_s2luk"]
+[ext_resource type="Texture2D" uid="uid://b8ttsqvx2o802" path="res://Assets/Textures/Fair/RV1_Tire.png" id="2_kjay5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l2iwa"]
 resource_name = "RV_1"

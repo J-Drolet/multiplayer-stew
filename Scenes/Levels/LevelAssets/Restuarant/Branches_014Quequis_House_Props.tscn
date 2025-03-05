@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://c6ds66vdq0kla"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Branches.png" id="1_jrvy3"]
+[ext_resource type="Texture2D" uid="uid://cf7plwv1k68xu" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Branches.png" id="1_jrvy3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fr11k"]
 resource_name = "Branches"

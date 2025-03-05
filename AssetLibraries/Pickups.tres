@@ -1,7 +1,7 @@
-[gd_resource type="Resource" load_steps=6 format=3]
+[gd_resource type="Resource" load_steps=6 format=3 uid="uid://ddr1arb7vbuja"]
 
-[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetPersistentData.cs" id="1_glrb7"]
-[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetLibrary.cs" id="2_qmws0"]
+[ext_resource type="Script" uid="uid://dc0u8r20b8a88" path="res://addons/assetplacer/assetPalette/AssetPersistentData.cs" id="1_glrb7"]
+[ext_resource type="Script" uid="uid://imuglxd8o53k" path="res://addons/assetplacer/assetPalette/AssetLibrary.cs" id="2_qmws0"]
 
 [sub_resource type="Resource" id="Resource_pr77w"]
 script = ExtResource("1_glrb7")
@@ -26,5 +26,5 @@ customPreview = Vector3(-1, -1, -1)
 
 [resource]
 script = ExtResource("2_qmws0")
-assetData = [SubResource("Resource_pr77w"), SubResource("Resource_baqfy"), SubResource("Resource_ij35u")]
+assetData = Array[ExtResource("1_glrb7")]([SubResource("Resource_pr77w"), SubResource("Resource_baqfy"), SubResource("Resource_ij35u")])
 previewPerspective = 0

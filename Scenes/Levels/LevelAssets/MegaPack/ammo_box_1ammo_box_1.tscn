@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://b3xhelsi2qwnc"]
 
-[ext_resource type="Texture2D" uid="uid://345xk7ic82im" path="res://Assets/Textures/Fair/ammo_box_1_ammo_box_1.png" id="1_b4sjn"]
+[ext_resource type="Texture2D" uid="uid://bespux5bnj528" path="res://Assets/Textures/Fair/ammo_box_1_ammo_box_1.png" id="1_b4sjn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e6uis"]
 resource_name = "ammo_box_1"

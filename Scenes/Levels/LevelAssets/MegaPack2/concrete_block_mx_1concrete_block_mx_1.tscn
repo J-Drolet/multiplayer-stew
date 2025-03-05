@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://xtv7ueym8usa"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/concrete_block_mx_1_concrete_hr_4.png" id="1_r061q"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/concrete_block_mx_1_metal_hr_2.png" id="2_7rn4o"]
+[ext_resource type="Texture2D" uid="uid://cfjlde02xqmus" path="res://Assets/Textures/Megapack2/concrete_block_mx_1_concrete_hr_4.png" id="1_r061q"]
+[ext_resource type="Texture2D" uid="uid://o70htdxgvri0" path="res://Assets/Textures/Megapack2/concrete_block_mx_1_metal_hr_2.png" id="2_7rn4o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6o1dd"]
 resource_name = "concrete_hr_4"

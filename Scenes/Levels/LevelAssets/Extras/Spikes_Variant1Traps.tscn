@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://e44veg3spnbr"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Traps_Spikes_Variant1_Base_color.png" id="1_80j6k"]
+[ext_resource type="Texture2D" uid="uid://c0s67hethef2p" path="res://Assets/Textures/Extras/Traps_Spikes_Variant1_Base_color.png" id="1_80j6k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hfh4a"]
 resource_name = "Spikes_Variant1"

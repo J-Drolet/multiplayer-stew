@@ -1,9 +1,9 @@
-[gd_scene load_steps=11 format=4]
+[gd_scene load_steps=11 format=4 uid="uid://cxgjj2pdisscg"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Plaster.png" id="1_gnj2n"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Metal_01.png" id="2_xy8e2"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_street_lamps.png" id="3_3043p"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_street_lamps_Emissor.png" id="4_vg253"]
+[ext_resource type="Texture2D" uid="uid://cvohtocgmt71d" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Plaster.png" id="1_gnj2n"]
+[ext_resource type="Texture2D" uid="uid://clt1axre7yl6n" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Metal_01.png" id="2_xy8e2"]
+[ext_resource type="Texture2D" uid="uid://cc5ws46npxd5e" path="res://Assets/Textures/Restaurant/Quequis_House_Props_street_lamps.png" id="3_3043p"]
+[ext_resource type="Texture2D" uid="uid://c3hcmo1li4dfr" path="res://Assets/Textures/Restaurant/Quequis_House_Props_street_lamps_Emissor.png" id="4_vg253"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1o1u4"]
 resource_name = "Plaster"

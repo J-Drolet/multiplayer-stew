@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://db2nwiya4hn76"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/clipboard_mx_1_clipboard_mx_1.png" id="1_nfxo2"]
+[ext_resource type="Texture2D" uid="uid://bd6biaytifbyj" path="res://Assets/Textures/Megapack2/clipboard_mx_1_clipboard_mx_1.png" id="1_nfxo2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rorqn"]
 resource_name = "clipboard_mx_1"

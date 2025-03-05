@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://duke77xyef8vg"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Barn_Base_color.png" id="1_ubr5y"]
+[ext_resource type="Texture2D" uid="uid://dth7hxm5h2s3c" path="res://Assets/Textures/Farm/Farm-Assets_Barn_Base_color.png" id="1_ubr5y"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0sk08"]
 resource_name = "Barn"

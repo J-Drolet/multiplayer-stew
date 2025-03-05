@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://dmkt88htpq0x1"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_CD_Base_color.png" id="1_ooesl"]
+[ext_resource type="Texture2D" uid="uid://dtgwxmom7hi6a" path="res://Assets/Textures/Extras/Misc_CD_Base_color.png" id="1_ooesl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rrapj"]
 resource_name = "CD"

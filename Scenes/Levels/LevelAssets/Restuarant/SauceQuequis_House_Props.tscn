@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://byuvlr20w3f2q"]
 
-[ext_resource type="Texture2D" uid="uid://clud2e2e8ecti" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Sauce.png" id="1_c6c4j"]
+[ext_resource type="Texture2D" uid="uid://c68t0f43nmvcf" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Sauce.png" id="1_c6c4j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_udss6"]
 resource_name = "Sauce"

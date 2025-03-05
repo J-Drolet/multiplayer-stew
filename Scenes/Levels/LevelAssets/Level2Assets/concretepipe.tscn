@@ -67,14 +67,14 @@ shader = SubResource("Shader_c6ksv")
 shader_parameter/albedo = Color(0.462291, 0.462291, 0.462291, 1)
 shader_parameter/point_size = 0.1
 shader_parameter/roughness = 1.0
-shader_parameter/metallic_texture_channel = null
+shader_parameter/metallic_texture_channel = Vector4(0, 0, 0, 0)
+shader_parameter/texture_roughness = SubResource("NoiseTexture2D_1u57p")
 shader_parameter/specular = 0.0
 shader_parameter/metallic = 0.0
 shader_parameter/uv1_scale = Vector3(1, 1, 1)
 shader_parameter/uv1_offset = Vector3(0, 0, 0)
 shader_parameter/uv2_scale = Vector3(1, 1, 1)
 shader_parameter/uv2_offset = Vector3(0, 0, 0)
-shader_parameter/texture_roughness = SubResource("NoiseTexture2D_1u57p")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oj5ma"]
 shading_mode = 2

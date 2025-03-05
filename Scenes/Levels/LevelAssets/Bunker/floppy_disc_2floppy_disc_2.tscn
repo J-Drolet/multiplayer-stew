@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://u0s8cy6m8u2f"]
 
-[ext_resource type="Texture2D" uid="uid://d1s83jw7gvfjh" path="res://Assets/Textures/Fair/floppy_disc_2_floppy_disc_2.png" id="1_ikb1r"]
+[ext_resource type="Texture2D" uid="uid://k54m1awnk1au" path="res://Assets/Textures/Fair/floppy_disc_2_floppy_disc_2.png" id="1_ikb1r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krao3"]
 resource_name = "floppy_disc_2"

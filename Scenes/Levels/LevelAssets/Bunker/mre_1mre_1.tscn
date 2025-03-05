@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bulh3acx3rkbk"]
 
-[ext_resource type="Texture2D" uid="uid://blg71ueqdpi74" path="res://Assets/Textures/Fair/mre_1_mre_1.png" id="1_bhcht"]
+[ext_resource type="Texture2D" uid="uid://cgi5ocn3awdag" path="res://Assets/Textures/Fair/mre_1_mre_1.png" id="1_bhcht"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wi2x6"]
 resource_name = "mre_1"

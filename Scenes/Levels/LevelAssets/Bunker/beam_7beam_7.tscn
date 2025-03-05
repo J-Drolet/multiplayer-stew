@@ -1,10 +1,10 @@
-[gd_scene load_steps=14 format=4]
+[gd_scene load_steps=14 format=4 uid="uid://1385lb7vxqed"]
 
-[ext_resource type="Texture2D" uid="uid://bm7yue8lj8kmk" path="res://Assets/Textures/Fair/beam_7_pipe_3.jpg" id="1_1xn3c"]
-[ext_resource type="Texture2D" uid="uid://do763drbdfsx6" path="res://Assets/Textures/Fair/beam_7_metal_3.png" id="2_vb8sx"]
-[ext_resource type="Texture2D" uid="uid://5qer6hd8121o" path="res://Assets/Textures/Fair/beam_7_plastic_2.png" id="3_6j0ss"]
-[ext_resource type="Texture2D" uid="uid://bwokiv6mgvdk2" path="res://Assets/Textures/Fair/beam_7_pipe_1.jpg" id="4_ifx1u"]
-[ext_resource type="Texture2D" uid="uid://dksvw1fvpnbci" path="res://Assets/Textures/Fair/beam_7_pipe_2.png" id="5_oio4i"]
+[ext_resource type="Texture2D" uid="uid://dooxavcgvboms" path="res://Assets/Textures/Fair/beam_7_pipe_3.jpg" id="1_1xn3c"]
+[ext_resource type="Texture2D" uid="uid://ctmmsxtsswywl" path="res://Assets/Textures/Fair/beam_7_metal_3.png" id="2_vb8sx"]
+[ext_resource type="Texture2D" uid="uid://enb04854a2lk" path="res://Assets/Textures/Fair/beam_7_plastic_2.png" id="3_6j0ss"]
+[ext_resource type="Texture2D" uid="uid://brqmp5uymqej0" path="res://Assets/Textures/Fair/beam_7_pipe_1.jpg" id="4_ifx1u"]
+[ext_resource type="Texture2D" uid="uid://bycnxi1cixbqs" path="res://Assets/Textures/Fair/beam_7_pipe_2.png" id="5_oio4i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u1e82"]
 resource_name = "pipe_3"

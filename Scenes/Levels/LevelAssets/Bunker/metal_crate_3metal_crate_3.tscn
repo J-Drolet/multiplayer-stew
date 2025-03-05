@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://cne1aho5fob8v"]
 
-[ext_resource type="Texture2D" uid="uid://kmx3lmyugnit" path="res://Assets/Textures/Fair/metal_crate_3_metal_crate_3.png" id="1_ic4l5"]
+[ext_resource type="Texture2D" uid="uid://ckbl6gt8q03bw" path="res://Assets/Textures/Fair/metal_crate_3_metal_crate_3.png" id="1_ic4l5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1qfob"]
 resource_name = "metal_crate_3"

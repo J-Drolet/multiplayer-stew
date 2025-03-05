@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=4]
+[gd_scene load_steps=5 format=4 uid="uid://da8mavsusmo20"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_new73"]
 resource_name = "Material.011"

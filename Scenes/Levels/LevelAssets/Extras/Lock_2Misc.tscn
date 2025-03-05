@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://7sapgtcdpq65"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Lock_2_128.png" id="1_y1mpa"]
+[ext_resource type="Texture2D" uid="uid://cxnoa74mfga8a" path="res://Assets/Textures/Extras/Misc_Lock_2_128.png" id="1_y1mpa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4vehq"]
 resource_name = "Lock_2_Material"

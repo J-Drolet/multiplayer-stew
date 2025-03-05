@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bhvq0ii3ewgl"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Storage_Variant_3_Base_color.png" id="1_6rpsy"]
+[ext_resource type="Texture2D" uid="uid://cduucn1i7uol0" path="res://Assets/Textures/Farm/Farm-Assets_Storage_Variant_3_Base_color.png" id="1_6rpsy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y8610"]
 resource_name = "Storage_Variant_3"

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://slq5md6ol4wv"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Guitar_Variant1.png" id="1_afn33"]
+[ext_resource type="Texture2D" uid="uid://bebqxgstxd3ss" path="res://Assets/Textures/Extras/Misc_Guitar_Variant1.png" id="1_afn33"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hig6h"]
 resource_name = "Guitar_Material"

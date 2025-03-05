@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=4 uid="uid://x7a1ptqtwtmp"]
 
-[ext_resource type="Script" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_8dmwd"]
+[ext_resource type="Script" uid="uid://dnr2b41enseqc" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_8dmwd"]
 [ext_resource type="Texture2D" uid="uid://dx2yq5re6ri0f" path="res://Assets/Models/Weapons/Lugar_Lugar_tex.png" id="3_ntyh8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vmxku"]
@@ -110,8 +110,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_57bpt"]
 _data = {
-"PickupIdle": SubResource("Animation_fdsld"),
-"RESET": SubResource("Animation_wds57")
+&"PickupIdle": SubResource("Animation_fdsld"),
+&"RESET": SubResource("Animation_wds57")
 }
 
 [node name="PistolPickup" type="Node3D" node_paths=PackedStringArray("PickupArea", "APlayer")]

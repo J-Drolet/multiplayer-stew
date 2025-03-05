@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://b7dji7iatsk1q"]
 
-[ext_resource type="Script" path="res://Scripts/Pickups/UpgradePickup.cs" id="1_pv3xt"]
+[ext_resource type="Script" uid="uid://di1bpisgtcm6w" path="res://Scripts/Pickups/UpgradePickup.cs" id="1_pv3xt"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_uhyuo"]
 noise_type = 2
@@ -98,8 +98,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nubif"]
 _data = {
-"RESET": SubResource("Animation_hgvp4"),
-"Rotation": SubResource("Animation_0vvxu")
+&"RESET": SubResource("Animation_hgvp4"),
+&"Rotation": SubResource("Animation_0vvxu")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o0sq4"]

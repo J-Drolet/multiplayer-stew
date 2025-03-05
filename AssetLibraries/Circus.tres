@@ -1,7 +1,7 @@
-[gd_resource type="Resource" load_steps=14 format=3]
+[gd_resource type="Resource" load_steps=14 format=3 uid="uid://dk332rvey4gu8"]
 
-[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetPersistentData.cs" id="1_8au56"]
-[ext_resource type="Script" path="res://addons/assetplacer/assetPalette/AssetLibrary.cs" id="2_c0vrn"]
+[ext_resource type="Script" uid="uid://dc0u8r20b8a88" path="res://addons/assetplacer/assetPalette/AssetPersistentData.cs" id="1_8au56"]
+[ext_resource type="Script" uid="uid://imuglxd8o53k" path="res://addons/assetplacer/assetPalette/AssetLibrary.cs" id="2_c0vrn"]
 
 [sub_resource type="Resource" id="Resource_gauop"]
 script = ExtResource("1_8au56")
@@ -82,5 +82,5 @@ customPreview = Vector3(-1, -1, -1)
 
 [resource]
 script = ExtResource("2_c0vrn")
-assetData = [SubResource("Resource_gauop"), SubResource("Resource_rysh2"), SubResource("Resource_3qeyt"), SubResource("Resource_x2bly"), SubResource("Resource_puqll"), SubResource("Resource_gnq4j"), SubResource("Resource_d73vu"), SubResource("Resource_hktii"), SubResource("Resource_nf31i"), SubResource("Resource_pt63c"), SubResource("Resource_4pmuu")]
+assetData = Array[ExtResource("1_8au56")]([SubResource("Resource_gauop"), SubResource("Resource_rysh2"), SubResource("Resource_3qeyt"), SubResource("Resource_x2bly"), SubResource("Resource_puqll"), SubResource("Resource_gnq4j"), SubResource("Resource_d73vu"), SubResource("Resource_hktii"), SubResource("Resource_nf31i"), SubResource("Resource_pt63c"), SubResource("Resource_4pmuu")])
 previewPerspective = 0

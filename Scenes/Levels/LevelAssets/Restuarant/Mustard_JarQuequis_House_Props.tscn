@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://csjrwbv5ffgpk"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Mustard_Jar.png" id="1_qhgp5"]
+[ext_resource type="Texture2D" uid="uid://cvgf1scqxdldt" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Mustard_Jar.png" id="1_qhgp5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0txau"]
 resource_name = "Mustard_Jar"

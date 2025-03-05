@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://donocumdqy0k6"]
 
-[ext_resource type="Texture2D" uid="uid://buvruy3wi0304" path="res://Assets/Textures/Fair/cardboard_box_1_cardboard_box_1.png" id="1_xe5mx"]
+[ext_resource type="Texture2D" uid="uid://di3yx8el784rp" path="res://Assets/Textures/Fair/cardboard_box_1_cardboard_box_1.png" id="1_xe5mx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25br4"]
 resource_name = "cardboard_box_1"

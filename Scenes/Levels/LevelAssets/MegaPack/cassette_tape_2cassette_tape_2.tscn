@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://5c607hq647hl"]
 
-[ext_resource type="Texture2D" uid="uid://csxnivtgf6gqa" path="res://Assets/Textures/Fair/cassette_tape_2_cassette_tape_2.png" id="1_83bhq"]
+[ext_resource type="Texture2D" uid="uid://cia046g3p4oyt" path="res://Assets/Textures/Fair/cassette_tape_2_cassette_tape_2.png" id="1_83bhq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4brtb"]
 resource_name = "cassette_tape_2"

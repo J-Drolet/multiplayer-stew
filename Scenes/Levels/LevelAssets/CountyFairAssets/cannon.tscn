@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://d07m2ixsnutu0"]
 
-[ext_resource type="Texture2D" uid="uid://c6qmgaqmrad6t" path="res://Assets/Textures/Fair/AllCircus_5.png" id="1_6tmsl"]
+[ext_resource type="Texture2D" uid="uid://dny58j64ttnxb" path="res://Assets/Textures/Fair/AllCircus_5.png" id="1_6tmsl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ds56q"]
 resource_name = "Material.006"

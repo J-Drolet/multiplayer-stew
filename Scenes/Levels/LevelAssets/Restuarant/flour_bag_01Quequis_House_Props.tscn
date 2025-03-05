@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://vskf5dhmj6do"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_flour_bag_01.png" id="1_200t3"]
+[ext_resource type="Texture2D" uid="uid://b8ysg7ymdmwvd" path="res://Assets/Textures/Restaurant/Quequis_House_Props_flour_bag_01.png" id="1_200t3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_luim0"]
 resource_name = "flour_bag_01"

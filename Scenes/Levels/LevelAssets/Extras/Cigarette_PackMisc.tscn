@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://cj3to1jc010m4"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Cigarette_Pack_1024.png" id="1_psapd"]
+[ext_resource type="Texture2D" uid="uid://b52kd33iyq2bf" path="res://Assets/Textures/Extras/Misc_Cigarette_Pack_1024.png" id="1_psapd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ftpr1"]
 resource_name = "Cigarette_Pack_Material"

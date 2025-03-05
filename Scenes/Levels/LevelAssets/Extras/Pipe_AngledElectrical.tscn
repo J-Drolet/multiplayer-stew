@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://brf7o15u6w71t"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Electrical_Pipe_Angled.png" id="1_jqlj3"]
+[ext_resource type="Texture2D" uid="uid://bswurne8qord4" path="res://Assets/Textures/Extras/Electrical_Pipe_Angled.png" id="1_jqlj3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1do0i"]
 resource_name = "Pipe_Angled"

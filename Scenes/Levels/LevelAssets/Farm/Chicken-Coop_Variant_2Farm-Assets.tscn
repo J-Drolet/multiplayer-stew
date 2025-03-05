@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://ce41c8xsuceh8"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Chicken-Coop_Variant_2_Base_color.png" id="1_h4lgh"]
+[ext_resource type="Texture2D" uid="uid://colmniru0iflv" path="res://Assets/Textures/Farm/Farm-Assets_Chicken-Coop_Variant_2_Base_color.png" id="1_h4lgh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gamb6"]
 resource_name = "Chicken-Coop_Variant_2"

@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://bsk5cxvr88cfu"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/hanging_shelf_mx_3_metal_hr_2.png" id="1_h8b5g"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/hanging_shelf_mx_3_planks_hr_3.png" id="2_1e6e2"]
+[ext_resource type="Texture2D" uid="uid://cbqlpp21unqr6" path="res://Assets/Textures/Megapack2/hanging_shelf_mx_3_metal_hr_2.png" id="1_h8b5g"]
+[ext_resource type="Texture2D" uid="uid://dlfq8mhsxbx8i" path="res://Assets/Textures/Megapack2/hanging_shelf_mx_3_planks_hr_3.png" id="2_1e6e2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvt44"]
 resource_name = "metal_hr_2"

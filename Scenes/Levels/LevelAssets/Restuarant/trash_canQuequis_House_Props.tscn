@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://b4jdqom7nkyif"]
 
-[ext_resource type="Texture2D" uid="uid://y7a5aig5p1oc" path="res://Assets/Textures/Restaurant/Quequis_House_Props_trash_can.png" id="1_51eiu"]
+[ext_resource type="Texture2D" uid="uid://c1ufkfwe5chwr" path="res://Assets/Textures/Restaurant/Quequis_House_Props_trash_can.png" id="1_51eiu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1h86x"]
 resource_name = "trash_can"

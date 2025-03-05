@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=4]
+[gd_scene load_steps=10 format=4 uid="uid://td13qcg5gbc8"]
 
-[ext_resource type="Texture2D" uid="uid://bvck7fas8q3s7" path="res://Assets/Textures/Fair/ceiling_peace_1_concrete_6.png" id="1_fu38m"]
-[ext_resource type="Texture2D" uid="uid://1yyeyf25ffvn" path="res://Assets/Textures/Fair/ceiling_peace_1_metal_mesh_1.png" id="2_60tcm"]
-[ext_resource type="Texture2D" uid="uid://i5wgegeyc8ej" path="res://Assets/Textures/Fair/ceiling_peace_1_metal_floor_2.png" id="3_xqs5i"]
+[ext_resource type="Texture2D" uid="uid://cxs6f8hge5rgx" path="res://Assets/Textures/Fair/ceiling_peace_1_concrete_6.png" id="1_fu38m"]
+[ext_resource type="Texture2D" uid="uid://dxmtbvxsrlu6a" path="res://Assets/Textures/Fair/ceiling_peace_1_metal_mesh_1.png" id="2_60tcm"]
+[ext_resource type="Texture2D" uid="uid://btlahbry0y1c4" path="res://Assets/Textures/Fair/ceiling_peace_1_metal_floor_2.png" id="3_xqs5i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2huu"]
 resource_name = "concrete_6"

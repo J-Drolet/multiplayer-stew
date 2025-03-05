@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://b2f1fahtxicl2"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Metal_03.jpg" id="1_2aq1f"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Wood.png" id="2_7r4gy"]
+[ext_resource type="Texture2D" uid="uid://og5tis5b7bir" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Metal_03.jpg" id="1_2aq1f"]
+[ext_resource type="Texture2D" uid="uid://sm5s1c0jfe4i" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Wood.png" id="2_7r4gy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8k1lj"]
 resource_name = "Metal_03"

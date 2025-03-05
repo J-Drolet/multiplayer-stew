@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://b14h1pjgrxdbs"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Roads/Roads_Asphalt010_2K_Color.jpg" id="1_bsdsg"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Roads/Roads_TexturesCom_ConcretePlatesDirty0007_S.jpg" id="2_qmly7"]
+[ext_resource type="Texture2D" uid="uid://dhec52tmddy04" path="res://Assets/Textures/Roads/Roads_Asphalt010_2K_Color.jpg" id="1_bsdsg"]
+[ext_resource type="Texture2D" uid="uid://qhsi21pqd26w" path="res://Assets/Textures/Roads/Roads_TexturesCom_ConcretePlatesDirty0007_S.jpg" id="2_qmly7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8wvb"]
 resource_name = "Material.001"

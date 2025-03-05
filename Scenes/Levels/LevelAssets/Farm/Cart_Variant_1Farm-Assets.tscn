@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://b06wr5tabgqqk"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Cart_Variant_1_Base_color.png" id="1_vwqwm"]
+[ext_resource type="Texture2D" uid="uid://gq2sst3bfcb7" path="res://Assets/Textures/Farm/Farm-Assets_Cart_Variant_1_Base_color.png" id="1_vwqwm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kwseu"]
 resource_name = "Cart_Variant_1"

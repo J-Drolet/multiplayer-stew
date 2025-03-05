@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=4 uid="uid://k3u720y471ax"]
 
-[ext_resource type="Script" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_1diif"]
+[ext_resource type="Script" uid="uid://dnr2b41enseqc" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_1diif"]
 [ext_resource type="Texture2D" uid="uid://ifcd028hdf6q" path="res://Assets/Models/Weapons/Uzi_glb_Uzi_Tex.png" id="3_cu8af"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vmxku"]
@@ -209,8 +209,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_57bpt"]
 _data = {
-"PickupIdle": SubResource("Animation_fdsld"),
-"RESET": SubResource("Animation_wds57")
+&"PickupIdle": SubResource("Animation_fdsld"),
+&"RESET": SubResource("Animation_wds57")
 }
 
 [node name="Mac10Pickup" type="Node3D" node_paths=PackedStringArray("PickupArea", "APlayer")]

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://dal3u4c2hclbh"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_soap_dispenser.png" id="1_gw053"]
+[ext_resource type="Texture2D" uid="uid://c71kpyt31ljy4" path="res://Assets/Textures/Restaurant/Quequis_House_Props_soap_dispenser.png" id="1_gw053"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ujayf"]
 resource_name = "soap_dispenser"

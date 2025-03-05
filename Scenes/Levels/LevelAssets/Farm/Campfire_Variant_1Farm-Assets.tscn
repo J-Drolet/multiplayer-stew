@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://de7dylv4ka66v"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Campfire_Variant_1_Base_color.png" id="1_e6pkf"]
+[ext_resource type="Texture2D" uid="uid://d2u3sqn8c3wvt" path="res://Assets/Textures/Farm/Farm-Assets_Campfire_Variant_1_Base_color.png" id="1_e6pkf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ch6lk"]
 resource_name = "Campfire_Variant_1"

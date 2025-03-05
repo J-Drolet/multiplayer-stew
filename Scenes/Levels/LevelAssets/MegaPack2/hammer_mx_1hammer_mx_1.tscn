@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://cy6bi8dsws8ia"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/hammer_mx_1_hammer_mx_1.png" id="1_t8f5o"]
+[ext_resource type="Texture2D" uid="uid://cietirgtcqsdw" path="res://Assets/Textures/Megapack2/hammer_mx_1_hammer_mx_1.png" id="1_t8f5o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qqagw"]
 resource_name = "hammer_mx_1"

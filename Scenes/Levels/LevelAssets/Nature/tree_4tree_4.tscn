@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4 uid="uid://dvkndelsmbua7"]
 
-[ext_resource type="Texture2D" uid="uid://b34uh5d76pqeq" path="res://Assets/Textures/Nature/tree_4_pine_bark_1_winter.png" id="1_0wkdi"]
-[ext_resource type="Texture2D" uid="uid://wbl3mexfx1pa" path="res://Assets/Textures/Nature/tree_4_pine_branch_2_snowy.png" id="2_t7mp4"]
+[ext_resource type="Texture2D" uid="uid://bp6wjc1n2qq0m" path="res://Assets/Textures/Nature/tree_4_pine_bark_1_winter.png" id="1_0wkdi"]
+[ext_resource type="Texture2D" uid="uid://ljwa56svdeb2" path="res://Assets/Textures/Nature/tree_4_pine_branch_2_snowy.png" id="2_t7mp4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2vr8h"]
 resource_name = "pine_bark_1_winter"

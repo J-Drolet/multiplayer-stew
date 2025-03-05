@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://cuwdy4hduopdg"]
 
-[ext_resource type="Texture2D" uid="uid://1fi211xgipp6" path="res://Assets/Textures/Fair/sofa_1_fabric_1.png" id="1_1rpp6"]
-[ext_resource type="Texture2D" uid="uid://cg37ppv7grtdv" path="res://Assets/Textures/Fair/sofa_1_wood_3.png" id="2_2d7jg"]
+[ext_resource type="Texture2D" uid="uid://dcocuwma7s1r0" path="res://Assets/Textures/Fair/sofa_1_fabric_1.png" id="1_1rpp6"]
+[ext_resource type="Texture2D" uid="uid://yr1rpv50a1cn" path="res://Assets/Textures/Fair/sofa_1_wood_3.png" id="2_2d7jg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f237w"]
 resource_name = "fabric_1"

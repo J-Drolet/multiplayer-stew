@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://ccowb18jjdu6y"]
 
-[ext_resource type="Texture2D" uid="uid://8qpw1brjkkql" path="res://Assets/Textures/Fair/column_1_wall_5.png" id="1_ovyk7"]
+[ext_resource type="Texture2D" uid="uid://rv5tdmmls5nf" path="res://Assets/Textures/Fair/column_1_wall_5.png" id="1_ovyk7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mnuvl"]
 resource_name = "wall_5"

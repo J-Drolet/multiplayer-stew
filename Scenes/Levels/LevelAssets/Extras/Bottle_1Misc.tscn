@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://xchjimfaqao4"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Bottle_1_1024.png" id="1_nvnkh"]
+[ext_resource type="Texture2D" uid="uid://erbvem4jra7e" path="res://Assets/Textures/Extras/Misc_Bottle_1_1024.png" id="1_nvnkh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cttmp"]
 resource_name = "Bottle_1_Material"

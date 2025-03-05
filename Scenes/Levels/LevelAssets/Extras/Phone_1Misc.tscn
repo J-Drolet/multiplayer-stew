@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://ctg10eq107wge"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Phone_1_128.png" id="1_sutw5"]
+[ext_resource type="Texture2D" uid="uid://dofa6iucj6rao" path="res://Assets/Textures/Extras/Misc_Phone_1_128.png" id="1_sutw5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v1yqn"]
 resource_name = "Phone_1_Material"

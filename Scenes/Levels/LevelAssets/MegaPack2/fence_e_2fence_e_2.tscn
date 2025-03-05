@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=4]
+[gd_scene load_steps=10 format=4 uid="uid://cilvyxrmyyasb"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/fence_e_2_metal_hr_2.png" id="1_fahde"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/fence_e_2_grate_hm_1.png" id="2_qdciq"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/fence_e_2_barbed_wire_hr_1.png" id="3_gmpev"]
+[ext_resource type="Texture2D" uid="uid://dg7h50s672r0x" path="res://Assets/Textures/Megapack2/fence_e_2_metal_hr_2.png" id="1_fahde"]
+[ext_resource type="Texture2D" uid="uid://b6dutd3qp71fb" path="res://Assets/Textures/Megapack2/fence_e_2_grate_hm_1.png" id="2_qdciq"]
+[ext_resource type="Texture2D" uid="uid://dtqdm5feeqx1w" path="res://Assets/Textures/Megapack2/fence_e_2_barbed_wire_hr_1.png" id="3_gmpev"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p7tle"]
 resource_name = "metal_hr_2"

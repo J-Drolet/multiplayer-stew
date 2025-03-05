@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://dn3xyojlgmp27"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_sack_potatoes.png" id="1_2v3xq"]
+[ext_resource type="Texture2D" uid="uid://csr63dgw0ys41" path="res://Assets/Textures/Restaurant/Quequis_House_Props_sack_potatoes.png" id="1_2v3xq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1g4po"]
 resource_name = "sack_potatoes"

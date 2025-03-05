@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://duh3w2whmiaoc"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Saw_200x200.png" id="1_dntb5"]
+[ext_resource type="Texture2D" uid="uid://cfrpgcqcc4plr" path="res://Assets/Textures/Extras/Misc_Saw_200x200.png" id="1_dntb5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kuu7k"]
 resource_name = "Saw_Material"

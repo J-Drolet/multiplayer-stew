@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://c7sblgojf7txh"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Traps_Stone_Ball_Spiked_Base_color.png" id="1_lxew0"]
+[ext_resource type="Texture2D" uid="uid://dfommdc2327dt" path="res://Assets/Textures/Extras/Traps_Stone_Ball_Spiked_Base_color.png" id="1_lxew0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3lop"]
 resource_name = "Stone_Ball_Spiked"

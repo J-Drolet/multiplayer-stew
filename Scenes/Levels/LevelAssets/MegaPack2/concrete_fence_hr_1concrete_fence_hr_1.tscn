@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://dxnwf0ynhu8te"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/concrete_fence_hr_1_concrete_fence_hr_1.png" id="1_n45sv"]
+[ext_resource type="Texture2D" uid="uid://cbqq3fkfyimsn" path="res://Assets/Textures/Megapack2/concrete_fence_hr_1_concrete_fence_hr_1.png" id="1_n45sv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pe81s"]
 resource_name = "concrete_fence_hr_1"

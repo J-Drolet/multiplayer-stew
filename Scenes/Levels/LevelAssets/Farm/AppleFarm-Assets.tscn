@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://d356tyjjld6c8"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Apple_Base_color.png" id="1_u5go5"]
+[ext_resource type="Texture2D" uid="uid://d3pxqd6tfsafo" path="res://Assets/Textures/Farm/Farm-Assets_Apple_Base_color.png" id="1_u5go5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u22e6"]
 resource_name = "Apple"

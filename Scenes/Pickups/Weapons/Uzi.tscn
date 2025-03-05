@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=4 uid="uid://dkd00oegnv1s8"]
 
-[ext_resource type="Texture2D" uid="uid://o0c7jaah4uaf" path="res://Assets/Textures/Weapons/Uzi_glb_Uzi_Tex.png" id="1_vi47m"]
+[ext_resource type="Texture2D" uid="uid://ndibxcnbyrid" path="res://Assets/Textures/Weapons/Uzi_glb_Uzi_Tex.png" id="1_vi47m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7hig3"]
 resource_name = "Uzi"

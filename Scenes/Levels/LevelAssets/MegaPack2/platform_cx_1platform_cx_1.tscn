@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://ptxs45vt6g4w"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/platform_cx_1_panel_hs_1.png" id="1_mk52u"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/platform_cx_1_steel_beams_hr_1.png" id="2_65vel"]
+[ext_resource type="Texture2D" uid="uid://dlc7jlp3xxgr5" path="res://Assets/Textures/Megapack2/platform_cx_1_panel_hs_1.png" id="1_mk52u"]
+[ext_resource type="Texture2D" uid="uid://puuvqseuuj74" path="res://Assets/Textures/Megapack2/platform_cx_1_steel_beams_hr_1.png" id="2_65vel"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_81wce"]
 resource_name = "panel_hs_1"

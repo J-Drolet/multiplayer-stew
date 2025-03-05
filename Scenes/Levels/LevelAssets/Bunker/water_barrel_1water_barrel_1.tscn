@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bkikj00menmrc"]
 
-[ext_resource type="Texture2D" uid="uid://bidlyaerpnjb2" path="res://Assets/Textures/Fair/water_barrel_1_water_barrel_1.png" id="1_ppr26"]
+[ext_resource type="Texture2D" uid="uid://dforxm5unexpc" path="res://Assets/Textures/Fair/water_barrel_1_water_barrel_1.png" id="1_ppr26"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7roh0"]
 resource_name = "water_barrel_1"

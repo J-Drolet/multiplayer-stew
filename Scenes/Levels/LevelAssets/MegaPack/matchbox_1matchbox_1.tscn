@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://dmipdvrvfxw3r"]
 
-[ext_resource type="Texture2D" uid="uid://cnq50q4hwnsty" path="res://Assets/Textures/Fair/matchbox_1_matchbox_1.png" id="1_nb4u7"]
+[ext_resource type="Texture2D" uid="uid://bt3c3pomg32ky" path="res://Assets/Textures/Fair/matchbox_1_matchbox_1.png" id="1_nb4u7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fykja"]
 resource_name = "matchbox_1"

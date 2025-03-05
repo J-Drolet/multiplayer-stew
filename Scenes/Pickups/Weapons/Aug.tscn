@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=4 uid="uid://c0tj2skj1wy7b"]
 
-[ext_resource type="Texture2D" uid="uid://p0l0ll4ivc2q" path="res://Assets/Textures/Weapons/AUG_AUG.png" id="1_5f33b"]
+[ext_resource type="Texture2D" uid="uid://bvolebrfyhrsi" path="res://Assets/Textures/Weapons/AUG_AUG.png" id="1_5f33b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_foiew"]
 resource_name = "Material"

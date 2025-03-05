@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://dy3irxmbv6d0"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Traps_Spikes_3.png" id="1_j3d66"]
+[ext_resource type="Texture2D" uid="uid://bisrtjiuvyhaw" path="res://Assets/Textures/Extras/Traps_Spikes_3.png" id="1_j3d66"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mrj4u"]
 resource_name = "Spikes_3"

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4 uid="uid://diqolrhp5s6sw"]
 
-[ext_resource type="Script" path="res://Scripts/Base/UpgradeableProjectile.cs" id="1_ot4mb"]
-[ext_resource type="Texture2D" uid="uid://cohcg4lejpdtj" path="res://Assets/Textures/Weapons/RifleBulletSeperate_Ammo_tex.png" id="2_pjhyj"]
+[ext_resource type="Script" uid="uid://nprhfw4hoegg" path="res://Scripts/Base/UpgradeableProjectile.cs" id="1_ot4mb"]
+[ext_resource type="Texture2D" uid="uid://cokmftpmgn2xu" path="res://Assets/Textures/Weapons/RifleBulletSeperate_Ammo_tex.png" id="2_pjhyj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ejcdq"]
 resource_name = "Ammo"

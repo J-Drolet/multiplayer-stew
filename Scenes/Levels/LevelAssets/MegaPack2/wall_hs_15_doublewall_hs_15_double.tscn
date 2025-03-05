@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://x4suqgns72m0"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wall_hs_15_double_wall_hs_1.png" id="1_u2xcg"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wall_hs_15_double_wall_rx_1.png" id="2_5ojpj"]
+[ext_resource type="Texture2D" uid="uid://cn7o7ivrbxtw4" path="res://Assets/Textures/Megapack2/wall_hs_15_double_wall_hs_1.png" id="1_u2xcg"]
+[ext_resource type="Texture2D" uid="uid://pogp3xfijl3a" path="res://Assets/Textures/Megapack2/wall_hs_15_double_wall_rx_1.png" id="2_5ojpj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n8p5p"]
 resource_name = "wall_hs_1"

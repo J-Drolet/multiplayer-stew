@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://cukotip3gxkau"]
 
-[ext_resource type="Texture2D" uid="uid://mwndfun145hp" path="res://Assets/Textures/Fair/table_large_3_wood_1.png" id="1_hul4n"]
+[ext_resource type="Texture2D" uid="uid://du2k6sxm2fm8" path="res://Assets/Textures/Fair/table_large_3_wood_1.png" id="1_hul4n"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_as5tq"]
 resource_name = "wood_1"

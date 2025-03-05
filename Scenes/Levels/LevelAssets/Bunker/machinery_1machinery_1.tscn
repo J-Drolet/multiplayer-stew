@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://qkxi13akg8iu"]
 
-[ext_resource type="Texture2D" uid="uid://751y3fs2p7lp" path="res://Assets/Textures/Fair/machinery_1_machinery_1.png" id="1_8ev3o"]
+[ext_resource type="Texture2D" uid="uid://c5a01mu5o1pho" path="res://Assets/Textures/Fair/machinery_1_machinery_1.png" id="1_8ev3o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_el1y6"]
 resource_name = "machinery_1"

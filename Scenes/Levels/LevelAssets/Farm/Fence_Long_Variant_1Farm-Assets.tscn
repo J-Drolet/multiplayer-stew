@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bnd47uhi3r1c0"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Fence_Long_Variant_1_Base_color.png" id="1_xlsrj"]
+[ext_resource type="Texture2D" uid="uid://dhcvau4we2m1g" path="res://Assets/Textures/Farm/Farm-Assets_Fence_Long_Variant_1_Base_color.png" id="1_xlsrj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1rgae"]
 resource_name = "Fence_Long_Variant_1"

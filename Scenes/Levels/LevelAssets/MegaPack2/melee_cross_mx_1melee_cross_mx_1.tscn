@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://i85xooh38nuq"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/melee_cross_mx_1_melee_cross_mx_1.png" id="1_li45e"]
+[ext_resource type="Texture2D" uid="uid://31qev0k61oqb" path="res://Assets/Textures/Megapack2/melee_cross_mx_1_melee_cross_mx_1.png" id="1_li45e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pulwm"]
 resource_name = "melee_cross_mx_1"

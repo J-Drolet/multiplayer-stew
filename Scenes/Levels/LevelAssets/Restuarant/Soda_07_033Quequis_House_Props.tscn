@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://bl58h1u0bk8ov"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Soda_07.png" id="1_bc3g4"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Plastic_box.png" id="2_53guu"]
+[ext_resource type="Texture2D" uid="uid://s7sco761gto" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Soda_07.png" id="1_bc3g4"]
+[ext_resource type="Texture2D" uid="uid://cvk4hvvg8ajn6" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Plastic_box.png" id="2_53guu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2p51r"]
 resource_name = "Soda_07"

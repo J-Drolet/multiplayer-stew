@@ -1,10 +1,10 @@
-[gd_scene load_steps=14 format=4]
+[gd_scene load_steps=14 format=4 uid="uid://doukkk6oh3bki"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/window_hr_1_wall_hr_2.png" id="1_5lhrc"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/window_hr_1_window_hm_2.png" id="2_adfhp"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/window_hr_1_concrete_hr_1.png" id="3_6i74l"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/window_hr_1_metal_hr_1.png" id="4_huxbj"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/window_hr_1_concrete_hr_3.png" id="5_5la16"]
+[ext_resource type="Texture2D" uid="uid://cbo8i2oo8vwy7" path="res://Assets/Textures/Megapack2/window_hr_1_wall_hr_2.png" id="1_5lhrc"]
+[ext_resource type="Texture2D" uid="uid://bt41imr8esn3r" path="res://Assets/Textures/Megapack2/window_hr_1_window_hm_2.png" id="2_adfhp"]
+[ext_resource type="Texture2D" uid="uid://dj7nvjlt0ldg4" path="res://Assets/Textures/Megapack2/window_hr_1_concrete_hr_1.png" id="3_6i74l"]
+[ext_resource type="Texture2D" uid="uid://bt7536iwc0w7f" path="res://Assets/Textures/Megapack2/window_hr_1_metal_hr_1.png" id="4_huxbj"]
+[ext_resource type="Texture2D" uid="uid://cu7qb3nfca25g" path="res://Assets/Textures/Megapack2/window_hr_1_concrete_hr_3.png" id="5_5la16"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_51n88"]
 resource_name = "wall_hr_2"

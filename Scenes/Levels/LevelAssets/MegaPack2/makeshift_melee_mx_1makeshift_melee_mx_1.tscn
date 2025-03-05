@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://d2kj4m71d306i"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/makeshift_melee_mx_1_makeshift_melee_mx_1.png" id="1_6mwb2"]
+[ext_resource type="Texture2D" uid="uid://dmv584svylnya" path="res://Assets/Textures/Megapack2/makeshift_melee_mx_1_makeshift_melee_mx_1.png" id="1_6mwb2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7gshl"]
 resource_name = "makeshift_melee_mx_1"

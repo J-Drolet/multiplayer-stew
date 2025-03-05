@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://cjg3yomd270sp"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Roads/Roads_Ar (2).png" id="1_jgkii"]
+[ext_resource type="Texture2D" uid="uid://csw08fq8w72g1" path="res://Assets/Textures/Roads/Roads_Ar (2).png" id="1_jgkii"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qomde"]
 resource_name = "Material.026"

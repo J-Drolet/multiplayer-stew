@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://chlnvlmecetne"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/door_hr_14_door_hr_14.png" id="1_acpea"]
+[ext_resource type="Texture2D" uid="uid://chaqwcg2x0fen" path="res://Assets/Textures/Megapack2/door_hr_14_door_hr_14.png" id="1_acpea"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_75ajp"]
 resource_name = "door_hr_14"

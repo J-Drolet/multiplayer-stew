@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://61y27vkjc7tc"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Traps_Blades_Rotating_Base_color.png" id="1_61vew"]
+[ext_resource type="Texture2D" uid="uid://8vosysb6ri0n" path="res://Assets/Textures/Extras/Traps_Blades_Rotating_Base_color.png" id="1_61vew"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v0ajx"]
 resource_name = "Blades_Rotating"

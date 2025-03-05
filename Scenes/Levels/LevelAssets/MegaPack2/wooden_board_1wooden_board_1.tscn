@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://b4fluyenrke2v"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wooden_board_1_wooden_board_hr_1.png" id="1_3al3g"]
+[ext_resource type="Texture2D" uid="uid://ufhxm3qy3pu4" path="res://Assets/Textures/Megapack2/wooden_board_1_wooden_board_hr_1.png" id="1_3al3g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0js7j"]
 resource_name = "wooden_board_hr_1"

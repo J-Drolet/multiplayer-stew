@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://d0n8symlvt52a"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/concrete_pipe_hm_1_end_concrete_hr_1.png" id="1_0tyrm"]
+[ext_resource type="Texture2D" uid="uid://b3br16btab7yb" path="res://Assets/Textures/Megapack2/concrete_pipe_hm_1_end_concrete_hr_1.png" id="1_0tyrm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_38g52"]
 resource_name = "concrete_hr_1"

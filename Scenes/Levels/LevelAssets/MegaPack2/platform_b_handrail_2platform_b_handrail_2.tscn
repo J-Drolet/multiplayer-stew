@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bprbxl2lt54pq"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/platform_b_handrail_2_steel_beams_hr_1.png" id="1_4ry8i"]
+[ext_resource type="Texture2D" uid="uid://cu2t2a1w4mvyn" path="res://Assets/Textures/Megapack2/platform_b_handrail_2_steel_beams_hr_1.png" id="1_4ry8i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_df4lm"]
 resource_name = "steel_beams_hr_1"

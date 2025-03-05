@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://di8140wv6wvhx"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/brick_mx_3_0_bricks_mx_1.png" id="1_yxuc6"]
+[ext_resource type="Texture2D" uid="uid://bmbluhk6uhd4h" path="res://Assets/Textures/Megapack2/brick_mx_3_0_bricks_mx_1.png" id="1_yxuc6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p0oh6"]
 resource_name = "bricks_mx_1"

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://52nvng8pgf3n"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/pipe_e_1_pipe_hr_2.png" id="1_2lcf2"]
+[ext_resource type="Texture2D" uid="uid://dvn3j87u6ugqa" path="res://Assets/Textures/Megapack2/pipe_e_1_pipe_hr_2.png" id="1_2lcf2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0sakp"]
 resource_name = "pipe_hr_2"

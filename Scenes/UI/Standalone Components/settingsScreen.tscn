@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://mujxr1ewuap1"]
 
-[ext_resource type="Script" path="res://Scripts/UI/SettingsScreen.cs" id="1_cvm75"]
+[ext_resource type="Script" uid="uid://cgocmhkfg50vn" path="res://Scripts/UI/SettingsScreen.cs" id="1_cvm75"]
 [ext_resource type="Theme" uid="uid://emuxwpv1i0mt" path="res://Assets/Themes/SettingsMenu.tres" id="2_oyqlb"]
-[ext_resource type="Script" path="res://Scripts/UI/SettingInputTypes/LineEditSettingInput.cs" id="3_7u800"]
-[ext_resource type="Script" path="res://Scripts/UI/SettingInputTypes/SliderSettingInput.cs" id="4_j6ui4"]
-[ext_resource type="Script" path="res://Scripts/UI/SettingInputTypes/ButtonSettingInput.cs" id="5_aka8e"]
-[ext_resource type="Script" path="res://Scripts/UI/SettingInputTypes/OptionsButtonSettingInput.cs" id="6_45gcu"]
+[ext_resource type="Script" uid="uid://icflct6hpykn" path="res://Scripts/UI/SettingInputTypes/LineEditSettingInput.cs" id="3_7u800"]
+[ext_resource type="Script" uid="uid://b0k55cdarcera" path="res://Scripts/UI/SettingInputTypes/SliderSettingInput.cs" id="4_j6ui4"]
+[ext_resource type="Script" uid="uid://b2ppijulutxhp" path="res://Scripts/UI/SettingInputTypes/ButtonSettingInput.cs" id="5_aka8e"]
+[ext_resource type="Script" uid="uid://cm1nmgasd7h55" path="res://Scripts/UI/SettingInputTypes/OptionsButtonSettingInput.cs" id="6_45gcu"]
 
 [node name="SettingsScreen" type="Control" node_paths=PackedStringArray("GameTab", "ControlTab", "VideoTab", "AudioTab")]
 layout_mode = 3

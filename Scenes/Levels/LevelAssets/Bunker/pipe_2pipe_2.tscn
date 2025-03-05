@@ -1,9 +1,9 @@
-[gd_scene load_steps=12 format=4]
+[gd_scene load_steps=12 format=4 uid="uid://cxy13hcjq8ycx"]
 
-[ext_resource type="Texture2D" uid="uid://uiiueiskhlp8" path="res://Assets/Textures/Fair/pipe_2_pipe_1.jpg" id="1_fqaa2"]
-[ext_resource type="Texture2D" uid="uid://ca6y6xanxrdcc" path="res://Assets/Textures/Fair/pipe_2_metal_6.png" id="2_xqvof"]
-[ext_resource type="Texture2D" uid="uid://byodiawu4sms4" path="res://Assets/Textures/Fair/pipe_2_metal_3.png" id="3_v7wyx"]
-[ext_resource type="Texture2D" uid="uid://cag325ayd2c6s" path="res://Assets/Textures/Fair/pipe_2_plastic_2.png" id="4_cre04"]
+[ext_resource type="Texture2D" uid="uid://wyfqce118f10" path="res://Assets/Textures/Fair/pipe_2_pipe_1.jpg" id="1_fqaa2"]
+[ext_resource type="Texture2D" uid="uid://cetbl6qaxsyfy" path="res://Assets/Textures/Fair/pipe_2_metal_6.png" id="2_xqvof"]
+[ext_resource type="Texture2D" uid="uid://cwri51g0jeeqc" path="res://Assets/Textures/Fair/pipe_2_metal_3.png" id="3_v7wyx"]
+[ext_resource type="Texture2D" uid="uid://byuhf3ttnwh3s" path="res://Assets/Textures/Fair/pipe_2_plastic_2.png" id="4_cre04"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a1aqt"]
 resource_name = "pipe_1"

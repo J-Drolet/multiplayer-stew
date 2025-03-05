@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=4 uid="uid://deb6m1u2resl6"]
 
-[ext_resource type="Texture2D" uid="uid://cwgatv0pl7vvk" path="res://Assets/Textures/Weapons/Rifle_Rifle.png" id="1_hiumt"]
+[ext_resource type="Texture2D" uid="uid://cc57dwj3u3ksg" path="res://Assets/Textures/Weapons/Rifle_Rifle.png" id="1_hiumt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8aokh"]
 resource_name = "Rifle"

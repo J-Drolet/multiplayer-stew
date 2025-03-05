@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://css47jt4j85uf"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/warehouse_hl_1_frame_piece_metal_hr_2.png" id="1_uuv5a"]
+[ext_resource type="Texture2D" uid="uid://b7r6neg847ci" path="res://Assets/Textures/Megapack2/warehouse_hl_1_frame_piece_metal_hr_2.png" id="1_uuv5a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f0h4e"]
 resource_name = "metal_hr_2"

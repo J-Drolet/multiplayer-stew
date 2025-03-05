@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://4do724wpw746"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Grill.png" id="1_blgik"]
+[ext_resource type="Texture2D" uid="uid://cf35l0r28jycr" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Grill.png" id="1_blgik"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jt3v0"]
 resource_name = "Grill"

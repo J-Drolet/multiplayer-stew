@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bojif5o8c716t"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Battery_1-1024.png" id="1_ctv2x"]
+[ext_resource type="Texture2D" uid="uid://4mmeeikd5jjb" path="res://Assets/Textures/Extras/Misc_Battery_1-1024.png" id="1_ctv2x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yfmic"]
 resource_name = "Battery_Material"

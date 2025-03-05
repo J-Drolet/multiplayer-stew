@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=4 uid="uid://blwlihg7ry13y"]
 
-[ext_resource type="Texture2D" uid="uid://ju66tw56jalj" path="res://Assets/Textures/Fair/beam_2_concrete_1.jpg" id="1_j2e6k"]
+[ext_resource type="Texture2D" uid="uid://bjl2qnhgkgrx6" path="res://Assets/Textures/Fair/beam_2_concrete_1.jpg" id="1_j2e6k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfvgr"]
 resource_name = "concrete_1"

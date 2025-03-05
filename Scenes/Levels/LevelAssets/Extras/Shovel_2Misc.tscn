@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://c2n8bpxxfnahk"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Shovel_2_1024.png" id="1_u1hum"]
+[ext_resource type="Texture2D" uid="uid://8xbml20g3qrn" path="res://Assets/Textures/Extras/Misc_Shovel_2_1024.png" id="1_u1hum"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o3b6l"]
 resource_name = "Shovel_2_Material"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=4 uid="uid://d2o3avynaf1up"]
 
-[ext_resource type="Texture2D" uid="uid://b3ky7x8x55p4v" path="res://Assets/Textures/Fair/Farm-Assets_Fuel_Tank_Base_color.png" id="1_qs44e"]
+[ext_resource type="Texture2D" uid="uid://cboyjxa47ywn8" path="res://Assets/Textures/Fair/Farm-Assets_Fuel_Tank_Base_color.png" id="1_qs44e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lxgfe"]
 resource_name = "Material.004"

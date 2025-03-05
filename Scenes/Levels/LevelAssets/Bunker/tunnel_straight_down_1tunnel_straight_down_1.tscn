@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://r67brlaec7p"]
 
-[ext_resource type="Texture2D" uid="uid://xypmd8qbltgj" path="res://Assets/Textures/Fair/tunnel_straight_down_1_metal_floor_2.png" id="1_tvdyd"]
-[ext_resource type="Texture2D" uid="uid://ucs0jvp78qr7" path="res://Assets/Textures/Fair/tunnel_straight_down_1_concrete_1.png" id="2_p3bf6"]
+[ext_resource type="Texture2D" uid="uid://dctiils0uqlg1" path="res://Assets/Textures/Fair/tunnel_straight_down_1_metal_floor_2.png" id="1_tvdyd"]
+[ext_resource type="Texture2D" uid="uid://vc7us3fjb67u" path="res://Assets/Textures/Fair/tunnel_straight_down_1_concrete_1.png" id="2_p3bf6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ka25g"]
 resource_name = "metal_floor_2"

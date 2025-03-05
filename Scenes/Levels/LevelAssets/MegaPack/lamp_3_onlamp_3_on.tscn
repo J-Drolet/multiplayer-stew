@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=4 uid="uid://xit0es56088l"]
 
-[ext_resource type="Texture2D" uid="uid://ce2lid27dwyll" path="res://Assets/Textures/Fair/lamp_3_on_lamp_3.png" id="1_edkhf"]
-[ext_resource type="Texture2D" uid="uid://bmafta6v0wtp3" path="res://Assets/Textures/Fair/lamp_3_on_lamp_3_emission.png" id="2_3ro1q"]
+[ext_resource type="Texture2D" uid="uid://bmtsqcnqrixj0" path="res://Assets/Textures/Fair/lamp_3_on_lamp_3.png" id="1_edkhf"]
+[ext_resource type="Texture2D" uid="uid://b7e00ueot2twa" path="res://Assets/Textures/Fair/lamp_3_on_lamp_3_emission.png" id="2_3ro1q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6w2f3"]
 resource_name = "lamp_3_on"

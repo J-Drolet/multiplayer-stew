@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://c0qvx81rocg0u"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_House_Variant_3_Base_color.png" id="1_t1gwg"]
+[ext_resource type="Texture2D" uid="uid://dqslip5p05hsb" path="res://Assets/Textures/Farm/Farm-Assets_House_Variant_3_Base_color.png" id="1_t1gwg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ipuc"]
 resource_name = "House_Variant_3"

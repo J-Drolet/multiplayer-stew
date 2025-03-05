@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://b2rc4ma50boss"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Electrical_Pipe_V1_Straight.png" id="1_ynfqq"]
+[ext_resource type="Texture2D" uid="uid://byss3i7cuyagt" path="res://Assets/Textures/Extras/Electrical_Pipe_V1_Straight.png" id="1_ynfqq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_up5uu"]
 resource_name = "Pipe_V1_Straight"

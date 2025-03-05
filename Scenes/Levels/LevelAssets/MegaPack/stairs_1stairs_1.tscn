@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://b2akyc7dowx5a"]
 
-[ext_resource type="Texture2D" uid="uid://dn31twhueuhst" path="res://Assets/Textures/Fair/stairs_1_concrete_1.jpg" id="1_ggdva"]
+[ext_resource type="Texture2D" uid="uid://6anl5saktarl" path="res://Assets/Textures/Fair/stairs_1_concrete_1.jpg" id="1_ggdva"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_am6t8"]
 resource_name = "concrete_1"

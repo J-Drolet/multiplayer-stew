@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bxqelrn3bp87w"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Traps_Leverbase_Variant_1.png" id="1_tk783"]
+[ext_resource type="Texture2D" uid="uid://cls2d70s1si82" path="res://Assets/Textures/Extras/Traps_Leverbase_Variant_1.png" id="1_tk783"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g044b"]
 resource_name = "Lever_Variant_3"

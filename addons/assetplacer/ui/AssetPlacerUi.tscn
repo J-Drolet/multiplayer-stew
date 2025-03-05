@@ -1,15 +1,15 @@
 [gd_scene load_steps=15 format=3 uid="uid://ocxipybus2b7"]
 
-[ext_resource type="Script" path="res://addons/assetplacer/ui/AssetPlacerUi.cs" id="1_mrwxe"]
+[ext_resource type="Script" uid="uid://cm74si8tuteis" path="res://addons/assetplacer/ui/AssetPlacerUi.cs" id="1_mrwxe"]
 [ext_resource type="PackedScene" uid="uid://4cb3fnwhss80" path="res://addons/assetplacer/ui/HelpDialog.tscn" id="7_4kydg"]
-[ext_resource type="Script" path="res://addons/assetplacer/ui/SnappingUi.cs" id="7_15sxk"]
+[ext_resource type="Script" uid="uid://baixb1aaxd4ed" path="res://addons/assetplacer/ui/SnappingUi.cs" id="7_15sxk"]
 [ext_resource type="PackedScene" uid="uid://hwjjgutgbwkt" path="res://addons/assetplacer/ui/AboutDialog.tscn" id="7_ubwky"]
-[ext_resource type="Script" path="res://addons/assetplacer/ui/PlacementUi.cs" id="8_0wcyv"]
-[ext_resource type="Script" path="res://addons/assetplacer/ui/TagLabel.cs" id="9_b58pj"]
+[ext_resource type="Script" uid="uid://ca685s2ofe8wp" path="res://addons/assetplacer/ui/PlacementUi.cs" id="8_0wcyv"]
+[ext_resource type="Script" uid="uid://dfnrq4jax2xhd" path="res://addons/assetplacer/ui/TagLabel.cs" id="9_b58pj"]
 [ext_resource type="PackedScene" uid="uid://crxq1d7601mt6" path="res://addons/assetplacer/ui/AssetPaletteUi.tscn" id="9_k0teu"]
 [ext_resource type="PackedScene" uid="uid://bk1h1t456p8qf" path="res://addons/assetplacer/ui/DynamicPreviewPanel.tscn" id="10_hando"]
 [ext_resource type="PackedScene" uid="uid://dod1gdi7s27cy" path="res://addons/assetplacer/ui/NodePathSelectorUi.tscn" id="10_pa7u5"]
-[ext_resource type="Script" path="res://addons/assetplacer/ui/EditorLineEdit.gd" id="12_y6nck"]
+[ext_resource type="Script" uid="uid://bhsgifyutaqms" path="res://addons/assetplacer/ui/EditorLineEdit.gd" id="12_y6nck"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kvgly"]
 

@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://b7wy2slmf1vbv"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/warehouse_hs_1_roof_1_roof_hr_5.png" id="1_72c0y"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/warehouse_hs_1_roof_1_metal_hr_2.png" id="2_hlfja"]
+[ext_resource type="Texture2D" uid="uid://cisbb48tm1ofo" path="res://Assets/Textures/Megapack2/warehouse_hs_1_roof_1_roof_hr_5.png" id="1_72c0y"]
+[ext_resource type="Texture2D" uid="uid://dn25e16rnmq3l" path="res://Assets/Textures/Megapack2/warehouse_hs_1_roof_1_metal_hr_2.png" id="2_hlfja"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_655md"]
 resource_name = "roof_hr_5"

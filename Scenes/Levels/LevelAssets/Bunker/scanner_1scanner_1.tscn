@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=4]
+[gd_scene load_steps=7 format=4 uid="uid://vdttiaxdkcem"]
 
-[ext_resource type="Texture2D" uid="uid://b4xhvcb8v1bl7" path="res://Assets/Textures/Fair/scanner_1_scanner_1.png" id="1_wj4f6"]
-[ext_resource type="Texture2D" uid="uid://depw7mevox3hc" path="res://Assets/Textures/Fair/scanner_1_scanner_1_emission.png" id="2_1xm3s"]
+[ext_resource type="Texture2D" uid="uid://bx8dnmp8magrc" path="res://Assets/Textures/Fair/scanner_1_scanner_1.png" id="1_wj4f6"]
+[ext_resource type="Texture2D" uid="uid://bkwjghi266g12" path="res://Assets/Textures/Fair/scanner_1_scanner_1_emission.png" id="2_1xm3s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_myp1r"]
 resource_name = "scanner_1"

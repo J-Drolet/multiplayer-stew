@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=4]
+[gd_scene load_steps=10 format=4 uid="uid://5nsesocjcsh"]
 
-[ext_resource type="Texture2D" uid="uid://c56r8h4yt1lvo" path="res://Assets/Textures/Fair/pillar_11_concrete_1.png" id="1_oq4io"]
-[ext_resource type="Texture2D" uid="uid://cnianstlourc" path="res://Assets/Textures/Fair/pillar_11_metal_floor_1.png" id="2_tk66n"]
-[ext_resource type="Texture2D" uid="uid://ey80n76dw1vn" path="res://Assets/Textures/Fair/pillar_11_metal_6.png" id="3_aertg"]
+[ext_resource type="Texture2D" uid="uid://brfm7thowu2yq" path="res://Assets/Textures/Fair/pillar_11_concrete_1.png" id="1_oq4io"]
+[ext_resource type="Texture2D" uid="uid://rhuwuipb8xex" path="res://Assets/Textures/Fair/pillar_11_metal_floor_1.png" id="2_tk66n"]
+[ext_resource type="Texture2D" uid="uid://nmi8s4ojwqet" path="res://Assets/Textures/Fair/pillar_11_metal_6.png" id="3_aertg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mmeam"]
 resource_name = "concrete_1"

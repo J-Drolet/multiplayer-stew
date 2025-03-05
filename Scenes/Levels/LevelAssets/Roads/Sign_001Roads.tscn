@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://cdxcr7t0mi2j4"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Roads/Roads_TexturesCom_SignDeadEnd0001_S.jpg" id="1_3kww3"]
+[ext_resource type="Texture2D" uid="uid://cl0815a5g3y8u" path="res://Assets/Textures/Roads/Roads_TexturesCom_SignDeadEnd0001_S.jpg" id="1_3kww3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uo8sn"]
 resource_name = "Material.018"

@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=4]
+[gd_scene load_steps=10 format=4 uid="uid://b7bxn1q7l6wd1"]
 
-[ext_resource type="Texture2D" uid="uid://b16nqm7xb1e71" path="res://Assets/Textures/Fair/canned_food_5_metal_1.png" id="1_j423s"]
-[ext_resource type="Texture2D" uid="uid://2e215o2xpfvs" path="res://Assets/Textures/Fair/canned_food_5_canned_food_3.png" id="2_8l8dk"]
-[ext_resource type="Texture2D" uid="uid://dgy8htjdouk2v" path="res://Assets/Textures/Fair/canned_food_5_metal_3.png" id="3_graow"]
+[ext_resource type="Texture2D" uid="uid://bfxhloyhb6hc1" path="res://Assets/Textures/Fair/canned_food_5_metal_1.png" id="1_j423s"]
+[ext_resource type="Texture2D" uid="uid://bq6x48p7o88m" path="res://Assets/Textures/Fair/canned_food_5_canned_food_3.png" id="2_8l8dk"]
+[ext_resource type="Texture2D" uid="uid://bf4lwmv0n4lkw" path="res://Assets/Textures/Fair/canned_food_5_metal_3.png" id="3_graow"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c0673"]
 resource_name = "metal_1"

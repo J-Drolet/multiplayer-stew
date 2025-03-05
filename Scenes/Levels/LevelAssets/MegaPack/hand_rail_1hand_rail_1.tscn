@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://bkm2j0ttcwnkr"]
 
-[ext_resource type="Texture2D" uid="uid://bd4swpgpq44g" path="res://Assets/Textures/Fair/hand_rail_1_metal_mp_5.png" id="1_17a3w"]
-[ext_resource type="Texture2D" uid="uid://crmxg34rrkmli" path="res://Assets/Textures/Fair/hand_rail_1_rubber_1.png" id="2_t0f5t"]
+[ext_resource type="Texture2D" uid="uid://bcxvlkkh5oitg" path="res://Assets/Textures/Fair/hand_rail_1_metal_mp_5.png" id="1_17a3w"]
+[ext_resource type="Texture2D" uid="uid://cm37v3g2sjcdi" path="res://Assets/Textures/Fair/hand_rail_1_rubber_1.png" id="2_t0f5t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1lj8p"]
 resource_name = "metal_mp_5"

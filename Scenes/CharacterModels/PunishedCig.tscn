@@ -425,8 +425,8 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_514rf"]
 _data = {
-"JumpTEST": SubResource("Animation_mrq4d"),
-"RESET": SubResource("Animation_kpxwu")
+&"JumpTEST": SubResource("Animation_mrq4d"),
+&"RESET": SubResource("Animation_kpxwu")
 }
 
 [node name="CharacterModelv2" type="Node3D"]

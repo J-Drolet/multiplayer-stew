@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bemklqrvju50q"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Shelf_FR_I.png" id="1_np4an"]
+[ext_resource type="Texture2D" uid="uid://fy4mebdk63r0" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Shelf_FR_I.png" id="1_np4an"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ln2ak"]
 resource_name = "Shelf_FR_I"

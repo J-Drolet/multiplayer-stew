@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=4]
+[gd_scene load_steps=9 format=4 uid="uid://bip1vb5fyawgv"]
 
-[ext_resource type="Texture2D" uid="uid://do1vrpfe22s0a" path="res://Assets/Textures/Fair/keypad_2_keypad_2.png" id="1_s2hi0"]
-[ext_resource type="Texture2D" uid="uid://dvdogkg00uf48" path="res://Assets/Textures/Fair/keypad_2_keypad_2_emission.png" id="2_iaori"]
-[ext_resource type="Texture2D" uid="uid://evr1ablkrdt2" path="res://Assets/Textures/Fair/keypad_2_metal_mp_4.png" id="3_ctrym"]
+[ext_resource type="Texture2D" uid="uid://dnpysywja614p" path="res://Assets/Textures/Fair/keypad_2_keypad_2.png" id="1_s2hi0"]
+[ext_resource type="Texture2D" uid="uid://0myadtc4kqg3" path="res://Assets/Textures/Fair/keypad_2_keypad_2_emission.png" id="2_iaori"]
+[ext_resource type="Texture2D" uid="uid://cdscgvoen3b6a" path="res://Assets/Textures/Fair/keypad_2_metal_mp_4.png" id="3_ctrym"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42mml"]
 resource_name = "keypad_2"

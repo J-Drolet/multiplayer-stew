@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://cutp2cjlijk16"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Screwdriver_200x200.png" id="1_3xw6j"]
+[ext_resource type="Texture2D" uid="uid://bx36ouj6hnwav" path="res://Assets/Textures/Extras/Misc_Screwdriver_200x200.png" id="1_3xw6j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ly7wv"]
 resource_name = "Screwdriver_Material"

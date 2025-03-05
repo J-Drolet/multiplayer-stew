@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://b2b2pgnvgscyx"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Torch_2_2048.png" id="1_x587k"]
+[ext_resource type="Texture2D" uid="uid://bwisart2j3fi" path="res://Assets/Textures/Extras/Misc_Torch_2_2048.png" id="1_x587k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mmvns"]
 resource_name = "Torch_2_Material"

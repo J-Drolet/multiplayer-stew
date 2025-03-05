@@ -1,10 +1,10 @@
-[gd_scene load_steps=14 format=4]
+[gd_scene load_steps=14 format=4 uid="uid://c1k2hegac53aw"]
 
-[ext_resource type="Texture2D" uid="uid://dyvc2cc7unrbt" path="res://Assets/Textures/Fair/wall_peace_1_concrete_6.png" id="1_rgosy"]
-[ext_resource type="Texture2D" uid="uid://d2ffdqb37xfp5" path="res://Assets/Textures/Fair/wall_peace_1_metal_mesh_1.png" id="2_gwm01"]
-[ext_resource type="Texture2D" uid="uid://bb4f31nqd1rmn" path="res://Assets/Textures/Fair/wall_peace_1_pipe_1.jpg" id="3_ernqq"]
-[ext_resource type="Texture2D" uid="uid://jqu2aevyjyd0" path="res://Assets/Textures/Fair/wall_peace_1_metal_3.png" id="4_ji1yi"]
-[ext_resource type="Texture2D" uid="uid://ceaa6kmigpuvj" path="res://Assets/Textures/Fair/wall_peace_1_plastic_2.png" id="5_fiwwb"]
+[ext_resource type="Texture2D" uid="uid://cf23g2g38ucgm" path="res://Assets/Textures/Fair/wall_peace_1_concrete_6.png" id="1_rgosy"]
+[ext_resource type="Texture2D" uid="uid://n40jexrr8r0f" path="res://Assets/Textures/Fair/wall_peace_1_metal_mesh_1.png" id="2_gwm01"]
+[ext_resource type="Texture2D" uid="uid://c3kkouuuad2gr" path="res://Assets/Textures/Fair/wall_peace_1_pipe_1.jpg" id="3_ernqq"]
+[ext_resource type="Texture2D" uid="uid://bioiwtpcn0ehf" path="res://Assets/Textures/Fair/wall_peace_1_metal_3.png" id="4_ji1yi"]
+[ext_resource type="Texture2D" uid="uid://bd6uifvvlkffk" path="res://Assets/Textures/Fair/wall_peace_1_plastic_2.png" id="5_fiwwb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0letp"]
 resource_name = "concrete_6"

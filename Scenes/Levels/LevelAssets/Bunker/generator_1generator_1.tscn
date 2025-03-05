@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://c8g3wq5i8ouqi"]
 
-[ext_resource type="Texture2D" uid="uid://dp2wrjsqr51qb" path="res://Assets/Textures/Fair/generator_1_generator_1.png" id="1_kmagu"]
-[ext_resource type="Texture2D" uid="uid://b50gg20xwkfj" path="res://Assets/Textures/Fair/generator_1_metal_4.png" id="2_kiak0"]
+[ext_resource type="Texture2D" uid="uid://bjysiejto7kbo" path="res://Assets/Textures/Fair/generator_1_generator_1.png" id="1_kmagu"]
+[ext_resource type="Texture2D" uid="uid://b8kpg748c6ox" path="res://Assets/Textures/Fair/generator_1_metal_4.png" id="2_kiak0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1gc5n"]
 resource_name = "generator_1"

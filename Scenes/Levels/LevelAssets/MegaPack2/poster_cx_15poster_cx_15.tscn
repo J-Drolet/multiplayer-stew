@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://ck1g2t1kqy7wv"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/poster_cx_15_poster_cx_15.png" id="1_23fhf"]
+[ext_resource type="Texture2D" uid="uid://br37fsrfmpvhq" path="res://Assets/Textures/Megapack2/poster_cx_15_poster_cx_15.png" id="1_23fhf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sf227"]
 resource_name = "poster_cx_15"

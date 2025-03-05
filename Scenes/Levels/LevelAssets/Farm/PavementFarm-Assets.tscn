@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://d2xk8cjdl3dhx"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Pavement_Base_color.png" id="1_dmeuy"]
+[ext_resource type="Texture2D" uid="uid://bjkswpiksll4m" path="res://Assets/Textures/Farm/Farm-Assets_Pavement_Base_color.png" id="1_dmeuy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qa6tu"]
 resource_name = "Pavement"

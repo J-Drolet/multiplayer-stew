@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://cc6dptdidhhh5"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Roads/Roads_2.jpg" id="1_kasxk"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Roads/Roads_Asphalt010_2K_Color.jpg" id="2_pkg0h"]
+[ext_resource type="Texture2D" uid="uid://bodfvqdodwewj" path="res://Assets/Textures/Roads/Roads_2.jpg" id="1_kasxk"]
+[ext_resource type="Texture2D" uid="uid://dhec52tmddy04" path="res://Assets/Textures/Roads/Roads_Asphalt010_2K_Color.jpg" id="2_pkg0h"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iyd8o"]
 resource_name = "Material"

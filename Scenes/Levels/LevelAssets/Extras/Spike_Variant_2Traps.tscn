@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://c5f72dhbjawex"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Traps_Spike_Variant_2.png" id="1_nrgqe"]
+[ext_resource type="Texture2D" uid="uid://bl5yj77ecyv22" path="res://Assets/Textures/Extras/Traps_Spike_Variant_2.png" id="1_nrgqe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u1lfw"]
 resource_name = "Spike_Variant_5"

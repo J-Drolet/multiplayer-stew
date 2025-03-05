@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://dbwnexlq826ar"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Gas_Stove_Base_color.png" id="1_7pc2l"]
+[ext_resource type="Texture2D" uid="uid://c03xioyri1oar" path="res://Assets/Textures/Extras/Misc_Gas_Stove_Base_color.png" id="1_7pc2l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehbxd"]
 resource_name = "Gas_Stove"

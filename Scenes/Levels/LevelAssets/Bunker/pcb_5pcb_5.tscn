@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://t28df8xj84oh"]
 
-[ext_resource type="Texture2D" uid="uid://dqv1c332te4es" path="res://Assets/Textures/Fair/pcb_5_pcb_5.png" id="1_lpya2"]
+[ext_resource type="Texture2D" uid="uid://c0ahq1xb1bj1i" path="res://Assets/Textures/Fair/pcb_5_pcb_5.png" id="1_lpya2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nva5f"]
 resource_name = "pcb_5"

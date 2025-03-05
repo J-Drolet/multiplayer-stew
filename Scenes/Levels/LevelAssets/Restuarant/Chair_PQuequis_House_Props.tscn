@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://cv6y3fxkmkqvd"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Chair_P.png" id="1_qgoqv"]
+[ext_resource type="Texture2D" uid="uid://c0nund7p2sgf" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Chair_P.png" id="1_qgoqv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ttty"]
 resource_name = "Chair_P"

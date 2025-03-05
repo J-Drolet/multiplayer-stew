@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bo4jl137ana16"]
 
-[ext_resource type="Texture2D" uid="uid://78awetwmkch1" path="res://Assets/Textures/Fair/jerrycan_1_jerrycan_1.png" id="1_is2c3"]
+[ext_resource type="Texture2D" uid="uid://15rsyslmsxrl" path="res://Assets/Textures/Fair/jerrycan_1_jerrycan_1.png" id="1_is2c3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v05da"]
 resource_name = "jerrycan_1"

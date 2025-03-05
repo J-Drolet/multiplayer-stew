@@ -1,9 +1,9 @@
-[gd_scene load_steps=12 format=4]
+[gd_scene load_steps=12 format=4 uid="uid://bf874xxm07epv"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Plaster.png" id="1_a6b5k"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_brick_stone.jpg" id="2_gyvxn"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Plaster_02.png" id="3_igwof"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_sign_ww01.png" id="4_km1eb"]
+[ext_resource type="Texture2D" uid="uid://cvohtocgmt71d" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Plaster.png" id="1_a6b5k"]
+[ext_resource type="Texture2D" uid="uid://bkektsbu7mswj" path="res://Assets/Textures/Restaurant/Quequis_House_Props_brick_stone.jpg" id="2_gyvxn"]
+[ext_resource type="Texture2D" uid="uid://ds3puanka3gk2" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Plaster_02.png" id="3_igwof"]
+[ext_resource type="Texture2D" uid="uid://brpr0ubhov17b" path="res://Assets/Textures/Restaurant/Quequis_House_Props_sign_ww01.png" id="4_km1eb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1o1u4"]
 resource_name = "Plaster"

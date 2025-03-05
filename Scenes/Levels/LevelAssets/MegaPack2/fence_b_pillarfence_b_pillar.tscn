@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://co4uriq0g3xqr"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/fence_b_pillar_planks_hr_3.png" id="1_cy54u"]
+[ext_resource type="Texture2D" uid="uid://by8vl7rm1hcml" path="res://Assets/Textures/Megapack2/fence_b_pillar_planks_hr_3.png" id="1_cy54u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6xh6d"]
 resource_name = "planks_hr_3"

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bp6050ccs38g2"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Pen_Base_color.png" id="1_goytl"]
+[ext_resource type="Texture2D" uid="uid://dv0w7w5e16hil" path="res://Assets/Textures/Extras/Misc_Pen_Base_color.png" id="1_goytl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_18gfu"]
 resource_name = "Pen"

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://dip06y7xc8grt"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Roads/Roads_TexturesCom_SignPedestrians0016_2_masked_S.jpg" id="1_0xm8g"]
+[ext_resource type="Texture2D" uid="uid://bi06gsgd7higu" path="res://Assets/Textures/Roads/Roads_TexturesCom_SignPedestrians0016_2_masked_S.jpg" id="1_0xm8g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6leji"]
 resource_name = "Material.014"

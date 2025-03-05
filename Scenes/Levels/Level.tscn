@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dustp76kyosr0"]
 
-[ext_resource type="Script" path="res://Scripts/GameLogic/LevelManager.cs" id="1_filpv"]
+[ext_resource type="Script" uid="uid://7qt4qpdvopym" path="res://Scripts/GameLogic/LevelManager.cs" id="1_filpv"]
 [ext_resource type="PackedScene" uid="uid://bwh21gfyr2idt" path="res://Scenes/GodotBox.tscn" id="2_glbo0"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_hmwfx"]
 [ext_resource type="PackedScene" uid="uid://6jntjlknvgow" path="res://Scenes/Levels/LevelAssets/UtilityAssets/DeathBarrier.tscn" id="3_a6llq"]

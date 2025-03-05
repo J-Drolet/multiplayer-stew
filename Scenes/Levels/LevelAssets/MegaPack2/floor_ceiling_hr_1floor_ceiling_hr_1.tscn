@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://dxev7ycvoipdt"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/floor_ceiling_hr_1_concrete_hr_3.png" id="1_scwe3"]
+[ext_resource type="Texture2D" uid="uid://dhwsrh31tdsxl" path="res://Assets/Textures/Megapack2/floor_ceiling_hr_1_concrete_hr_3.png" id="1_scwe3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0sosb"]
 resource_name = "concrete_hr_3"

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bxbxosq2b8yul"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Gas_V2_Base_color.png" id="1_dc2v4"]
+[ext_resource type="Texture2D" uid="uid://douvapemc4h22" path="res://Assets/Textures/Extras/Misc_Gas_V2_Base_color.png" id="1_dc2v4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lwuql"]
 resource_name = "Gas_V2"

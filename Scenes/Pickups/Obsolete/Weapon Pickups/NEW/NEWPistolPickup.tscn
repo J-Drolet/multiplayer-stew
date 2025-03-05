@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://cm2whm84p0m3u"]
 
-[ext_resource type="Script" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_52fw0"]
+[ext_resource type="Script" uid="uid://dnr2b41enseqc" path="res://Scripts/Pickups/WeaponPickup.cs" id="1_52fw0"]
 [ext_resource type="PackedScene" uid="uid://x7a1ptqtwtmp" path="res://Scenes/Pickups/Obsolete/Weapon Pickups/OLD/PistolPickup.tscn" id="2_68hqo"]
 [ext_resource type="PackedScene" uid="uid://b8hpvrno7saob" path="res://Scenes/Weapons/pistol.tscn" id="2_t8sdl"]
 
@@ -78,8 +78,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nubif"]
 _data = {
-"RESET": SubResource("Animation_hgvp4"),
-"Rotation": SubResource("Animation_0vvxu")
+&"RESET": SubResource("Animation_hgvp4"),
+&"Rotation": SubResource("Animation_0vvxu")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o0sq4"]

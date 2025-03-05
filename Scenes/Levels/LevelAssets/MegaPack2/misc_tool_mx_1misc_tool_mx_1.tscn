@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bpr8u6o8424vf"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/misc_tool_mx_1_misc_tool_mx_1.png" id="1_i6hin"]
+[ext_resource type="Texture2D" uid="uid://bscujn2fai2j2" path="res://Assets/Textures/Megapack2/misc_tool_mx_1_misc_tool_mx_1.png" id="1_i6hin"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s8y83"]
 resource_name = "misc_tool_mx_1"

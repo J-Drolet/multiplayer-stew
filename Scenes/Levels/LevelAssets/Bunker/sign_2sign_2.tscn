@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://xvxjybuhher2"]
 
-[ext_resource type="Texture2D" uid="uid://b6hafi7gknlb2" path="res://Assets/Textures/Fair/sign_2_sign_2.png" id="1_8b5mq"]
+[ext_resource type="Texture2D" uid="uid://ccaw7yer7jsmd" path="res://Assets/Textures/Fair/sign_2_sign_2.png" id="1_8b5mq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_isegp"]
 resource_name = "sign_2"

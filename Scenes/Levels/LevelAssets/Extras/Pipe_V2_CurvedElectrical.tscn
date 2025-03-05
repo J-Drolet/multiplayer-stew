@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bpp3vnyrr1jrc"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Electrical_Pipe_V2_Curved.png" id="1_fkg0a"]
+[ext_resource type="Texture2D" uid="uid://cbjsj4lfvwowg" path="res://Assets/Textures/Extras/Electrical_Pipe_V2_Curved.png" id="1_fkg0a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ji5na"]
 resource_name = "Pipe_V2_Curved"

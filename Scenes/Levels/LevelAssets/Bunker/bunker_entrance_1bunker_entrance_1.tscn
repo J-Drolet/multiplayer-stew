@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=4]
+[gd_scene load_steps=10 format=4 uid="uid://br5l1dd1amgdv"]
 
-[ext_resource type="Texture2D" uid="uid://mnjkxl3r3xfw" path="res://Assets/Textures/Fair/bunker_entrance_1_metal_floor_1.png" id="1_jlat1"]
-[ext_resource type="Texture2D" uid="uid://dd46v02fq2q8b" path="res://Assets/Textures/Fair/bunker_entrance_1_wall_6.png" id="2_de2at"]
-[ext_resource type="Texture2D" uid="uid://snfnxpxarjan" path="res://Assets/Textures/Fair/bunker_entrance_1_concrete_4.png" id="3_xasj4"]
+[ext_resource type="Texture2D" uid="uid://wve7y4res1el" path="res://Assets/Textures/Fair/bunker_entrance_1_metal_floor_1.png" id="1_jlat1"]
+[ext_resource type="Texture2D" uid="uid://8d0g84c2lkns" path="res://Assets/Textures/Fair/bunker_entrance_1_wall_6.png" id="2_de2at"]
+[ext_resource type="Texture2D" uid="uid://b16l3encabbtd" path="res://Assets/Textures/Fair/bunker_entrance_1_concrete_4.png" id="3_xasj4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_saq3u"]
 resource_name = "metal_floor_1"

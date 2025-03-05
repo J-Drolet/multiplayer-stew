@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bftbcm1tv8nc3"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Electrical_M2.png" id="1_txgkj"]
+[ext_resource type="Texture2D" uid="uid://cvuls5igh6riy" path="res://Assets/Textures/Extras/Electrical_M2.png" id="1_txgkj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cbgoh"]
 resource_name = "Machinery_2"

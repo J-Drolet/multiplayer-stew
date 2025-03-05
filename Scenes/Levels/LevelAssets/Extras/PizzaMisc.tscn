@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://deefvpgx8fsek"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Pizza_1024.png" id="1_xyl88"]
+[ext_resource type="Texture2D" uid="uid://dfq0taayy5ovd" path="res://Assets/Textures/Extras/Misc_Pizza_1024.png" id="1_xyl88"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vv1fk"]
 resource_name = "Pizza_Material"

@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=4]
+[gd_scene load_steps=10 format=4 uid="uid://bapgbfgiw88t2"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_ConcreteBare.png" id="1_mwnrc"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Metal_01.png" id="2_j5y0d"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_M_Gas_station.png" id="3_ci16r"]
+[ext_resource type="Texture2D" uid="uid://dtx0bme1hbxuu" path="res://Assets/Textures/Restaurant/Quequis_House_Props_ConcreteBare.png" id="1_mwnrc"]
+[ext_resource type="Texture2D" uid="uid://clt1axre7yl6n" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Metal_01.png" id="2_j5y0d"]
+[ext_resource type="Texture2D" uid="uid://cthna5i0ddm8r" path="res://Assets/Textures/Restaurant/Quequis_House_Props_M_Gas_station.png" id="3_ci16r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dm874"]
 resource_name = "ConcreteBare"

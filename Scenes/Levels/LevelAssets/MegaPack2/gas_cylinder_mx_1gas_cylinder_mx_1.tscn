@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://b7w3rx3bw8ysg"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/gas_cylinder_mx_1_gas_cylinder_mx_1.png" id="1_7qhq6"]
+[ext_resource type="Texture2D" uid="uid://csq6ttjldsnwk" path="res://Assets/Textures/Megapack2/gas_cylinder_mx_1_gas_cylinder_mx_1.png" id="1_7qhq6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yj8ui"]
 resource_name = "gas_cylinder_mx_1"

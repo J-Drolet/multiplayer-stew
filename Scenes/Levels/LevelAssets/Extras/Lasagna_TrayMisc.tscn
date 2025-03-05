@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://lb3r534h3sxo"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Lasagna_Tray_Base_color.png" id="1_ulh5o"]
+[ext_resource type="Texture2D" uid="uid://dhch5qlimojd4" path="res://Assets/Textures/Extras/Misc_Lasagna_Tray_Base_color.png" id="1_ulh5o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bpb73"]
 resource_name = "Lasagna_Tray"

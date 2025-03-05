@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://b1suycb7qabrt"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Roads/Roads_TexturesCom_SignsTrafficArrows0020_1_masked_S (1).png" id="1_gxyl8"]
+[ext_resource type="Texture2D" uid="uid://b1wam1md12vpl" path="res://Assets/Textures/Roads/Roads_TexturesCom_SignsTrafficArrows0020_1_masked_S (1).png" id="1_gxyl8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w56yp"]
 resource_name = "Material.013"

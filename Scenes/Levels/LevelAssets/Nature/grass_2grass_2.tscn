@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=4]
+[gd_scene load_steps=5 format=4 uid="uid://bj68tfqde0jq2"]
 
-[ext_resource type="Texture2D" uid="uid://ddob3lkdevsox" path="res://Assets/Textures/Nature/grass_2_grass_2.png" id="1_6qlfy"]
+[ext_resource type="Texture2D" uid="uid://bafb4vmg7yb4h" path="res://Assets/Textures/Nature/grass_2_grass_2.png" id="1_6qlfy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fk1uj"]
 resource_name = "grass_2"

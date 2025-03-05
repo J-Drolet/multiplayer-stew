@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://umunsqqv6bp6"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/barricade_a_3_barricade_hr_2.png" id="1_35bsu"]
+[ext_resource type="Texture2D" uid="uid://dd0hfmn21a00n" path="res://Assets/Textures/Megapack2/barricade_a_3_barricade_hr_2.png" id="1_35bsu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k6wkt"]
 resource_name = "barricade_hr_2"

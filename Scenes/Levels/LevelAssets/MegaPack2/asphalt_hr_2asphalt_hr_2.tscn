@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://dxvo08r2fc6jk"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/asphalt_hr_2_asphalt_hr_1.png" id="1_s3od6"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/asphalt_hr_2_hole_hr_1.png" id="2_r2ei6"]
+[ext_resource type="Texture2D" uid="uid://bp3odwhxcatyq" path="res://Assets/Textures/Megapack2/asphalt_hr_2_asphalt_hr_1.png" id="1_s3od6"]
+[ext_resource type="Texture2D" uid="uid://c75l1wwh42eo3" path="res://Assets/Textures/Megapack2/asphalt_hr_2_hole_hr_1.png" id="2_r2ei6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1dfin"]
 resource_name = "asphalt_hr_1"

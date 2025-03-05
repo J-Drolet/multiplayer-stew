@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bukwbh2rhf6ao"]
 
-[ext_resource type="Texture2D" uid="uid://5p7jbcxwqo0j" path="res://Assets/Textures/Fair/window_metal_bars_double_metal_6.png" id="1_ersli"]
+[ext_resource type="Texture2D" uid="uid://cegabreycg5rs" path="res://Assets/Textures/Fair/window_metal_bars_double_metal_6.png" id="1_ersli"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sif31"]
 resource_name = "metal_6"

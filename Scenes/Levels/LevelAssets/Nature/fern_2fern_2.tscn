@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=4]
+[gd_scene load_steps=5 format=4 uid="uid://0bju6g3errnx"]
 
-[ext_resource type="Texture2D" uid="uid://b4lo6fhp8ubwn" path="res://Assets/Textures/Nature/fern_2_fern_2.png" id="1_63y86"]
+[ext_resource type="Texture2D" uid="uid://bkn2xmxrolfse" path="res://Assets/Textures/Nature/fern_2_fern_2.png" id="1_63y86"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_whge4"]
 resource_name = "fern_2"

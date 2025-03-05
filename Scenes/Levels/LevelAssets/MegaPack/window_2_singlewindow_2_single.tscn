@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=4 uid="uid://cp6ov8nyojtyt"]
 
-[ext_resource type="Texture2D" uid="uid://b2w618qh0xknf" path="res://Assets/Textures/Fair/window_2_single_wall_3.png" id="1_s1wsx"]
-[ext_resource type="Texture2D" uid="uid://bb1qejh7crbjy" path="res://Assets/Textures/Fair/window_2_single_wood_2.png" id="2_lk22x"]
-[ext_resource type="Texture2D" uid="uid://cgsfbrq887kjj" path="res://Assets/Textures/Fair/window_2_single_window_2.png" id="3_8pggx"]
-[ext_resource type="Texture2D" uid="uid://bnualh2kber65" path="res://Assets/Textures/Fair/window_2_single_window_2_emission.png" id="4_tjqg8"]
+[ext_resource type="Texture2D" uid="uid://q5wb6vl8cf8i" path="res://Assets/Textures/Fair/window_2_single_wall_3.png" id="1_s1wsx"]
+[ext_resource type="Texture2D" uid="uid://b3jy4seqt5u5i" path="res://Assets/Textures/Fair/window_2_single_wood_2.png" id="2_lk22x"]
+[ext_resource type="Texture2D" uid="uid://b60i13hw3f67g" path="res://Assets/Textures/Fair/window_2_single_window_2.png" id="3_8pggx"]
+[ext_resource type="Texture2D" uid="uid://cqtqohjudkklk" path="res://Assets/Textures/Fair/window_2_single_window_2_emission.png" id="4_tjqg8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cba4j"]
 resource_name = "wall_3"

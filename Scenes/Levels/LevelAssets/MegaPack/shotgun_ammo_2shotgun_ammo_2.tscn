@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://6fy1t6gwha7e"]
 
-[ext_resource type="Texture2D" uid="uid://c6k4mbtvgfdkr" path="res://Assets/Textures/Fair/shotgun_ammo_2_shotgun_ammo_2.png" id="1_o35dk"]
+[ext_resource type="Texture2D" uid="uid://c08pj0upga4pr" path="res://Assets/Textures/Fair/shotgun_ammo_2_shotgun_ammo_2.png" id="1_o35dk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pjw6o"]
 resource_name = "shotgun_ammo_2"

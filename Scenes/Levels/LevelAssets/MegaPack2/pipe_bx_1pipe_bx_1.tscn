@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4 uid="uid://b8ugp7qwsmivs"]
 
-[ext_resource type="Texture2D" uid="uid://dma7ecbdq8cjt" path="res://Assets/Textures/Megapack2/pipe_bx_1_metal_hr_2.png" id="1_0kffv"]
-[ext_resource type="Texture2D" uid="uid://g32oalxfcpsu" path="res://Assets/Textures/Megapack2/pipe_bx_1_pipe_hr_3.png" id="2_xxy4d"]
+[ext_resource type="Texture2D" uid="uid://cx3rq8reibmoq" path="res://Assets/Textures/Megapack2/pipe_bx_1_metal_hr_2.png" id="1_0kffv"]
+[ext_resource type="Texture2D" uid="uid://gojce004owg6" path="res://Assets/Textures/Megapack2/pipe_bx_1_pipe_hr_3.png" id="2_xxy4d"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8y2sv"]
 resource_name = "metal_hr_2"

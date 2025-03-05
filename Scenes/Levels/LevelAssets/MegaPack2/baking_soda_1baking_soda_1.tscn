@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://25wnev4vyhya"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/baking_soda_1_baking_soda_1.png" id="1_wk4yc"]
+[ext_resource type="Texture2D" uid="uid://bt2jfrk1nuisu" path="res://Assets/Textures/Megapack2/baking_soda_1_baking_soda_1.png" id="1_wk4yc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gldcq"]
 resource_name = "baking_soda_1"

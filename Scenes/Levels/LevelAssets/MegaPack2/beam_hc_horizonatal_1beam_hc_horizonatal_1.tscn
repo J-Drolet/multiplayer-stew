@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://6sdkjb65h4hs"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/beam_hc_horizonatal_1_metal_hr_2.png" id="1_iseyl"]
+[ext_resource type="Texture2D" uid="uid://b1br04byj2epn" path="res://Assets/Textures/Megapack2/beam_hc_horizonatal_1_metal_hr_2.png" id="1_iseyl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4m1sy"]
 resource_name = "metal_hr_2"

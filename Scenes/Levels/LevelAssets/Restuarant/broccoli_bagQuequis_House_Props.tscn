@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://cny8f0fteut5v"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_broccoli_bag.png" id="1_b3sji"]
+[ext_resource type="Texture2D" uid="uid://bgajon3lych6l" path="res://Assets/Textures/Restaurant/Quequis_House_Props_broccoli_bag.png" id="1_b3sji"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_joiwh"]
 resource_name = "broccoli_bag"

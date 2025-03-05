@@ -1,10 +1,10 @@
-[gd_scene load_steps=14 format=4]
+[gd_scene load_steps=14 format=4 uid="uid://cdwabyl25fg3a"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_bx_1_concrete_hr_1.png" id="1_np4g6"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_bx_1_wall_hr_2.png" id="2_xpmud"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_bx_1_roof_hr_5.png" id="3_xrkoe"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_bx_1_glass_general_mx_1.png" id="4_wt75a"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_bx_1_metal_hr_2.png" id="5_7rhif"]
+[ext_resource type="Texture2D" uid="uid://dvcx8ksmw0wvj" path="res://Assets/Textures/Megapack2/roof_bx_1_concrete_hr_1.png" id="1_np4g6"]
+[ext_resource type="Texture2D" uid="uid://buvgr4deb62dj" path="res://Assets/Textures/Megapack2/roof_bx_1_wall_hr_2.png" id="2_xpmud"]
+[ext_resource type="Texture2D" uid="uid://bn6o0k22flsg5" path="res://Assets/Textures/Megapack2/roof_bx_1_roof_hr_5.png" id="3_xrkoe"]
+[ext_resource type="Texture2D" uid="uid://cj2iuh83ut6qg" path="res://Assets/Textures/Megapack2/roof_bx_1_glass_general_mx_1.png" id="4_wt75a"]
+[ext_resource type="Texture2D" uid="uid://cbsogsib5xwmv" path="res://Assets/Textures/Megapack2/roof_bx_1_metal_hr_2.png" id="5_7rhif"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ujcj8"]
 resource_name = "concrete_hr_1"

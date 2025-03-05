@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://piic73qxknaw"]
 
-[ext_resource type="Texture2D" uid="uid://c28wpkivew7ok" path="res://Assets/Textures/Fair/trash_5_trash_5.png" id="1_dct72"]
+[ext_resource type="Texture2D" uid="uid://d10ot6gyvmwsa" path="res://Assets/Textures/Fair/trash_5_trash_5.png" id="1_dct72"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d233h"]
 resource_name = "trash_5"

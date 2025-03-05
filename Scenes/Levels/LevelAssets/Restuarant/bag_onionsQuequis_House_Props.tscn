@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://qdxblevuyg8m"]
 
-[ext_resource type="Texture2D" uid="uid://c2d2agfk8ufaj" path="res://Assets/Textures/Restaurant/Quequis_House_Props_bag_onions.png" id="1_8g7dl"]
+[ext_resource type="Texture2D" uid="uid://bdt7hubj3ihfv" path="res://Assets/Textures/Restaurant/Quequis_House_Props_bag_onions.png" id="1_8g7dl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jrivt"]
 resource_name = "bag_onions"

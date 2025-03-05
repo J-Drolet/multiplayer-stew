@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://ddsudmvet857l"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Traps_Blade_Guillotine_Base_color.png" id="1_m4oyh"]
+[ext_resource type="Texture2D" uid="uid://btpvjyugonhk2" path="res://Assets/Textures/Extras/Traps_Blade_Guillotine_Base_color.png" id="1_m4oyh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sxqtf"]
 resource_name = "Blade_Guillotine"

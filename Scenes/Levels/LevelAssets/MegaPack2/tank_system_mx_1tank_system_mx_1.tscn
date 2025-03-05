@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://erjursob1jag"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/tank_system_mx_1_metal_hr_3.png" id="1_sqshv"]
+[ext_resource type="Texture2D" uid="uid://sl70ldyjogff" path="res://Assets/Textures/Megapack2/tank_system_mx_1_metal_hr_3.png" id="1_sqshv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cyjod"]
 resource_name = "metal_hr_3"

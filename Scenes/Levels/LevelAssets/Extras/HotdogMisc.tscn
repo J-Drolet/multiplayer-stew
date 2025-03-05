@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://clrfnarg2uqn2"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Hotdog2_200x200.png" id="1_68661"]
+[ext_resource type="Texture2D" uid="uid://df4e4bliuhwfq" path="res://Assets/Textures/Extras/Misc_Hotdog2_200x200.png" id="1_68661"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v7m0j"]
 resource_name = "Hotdog_Material"

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://bi2vyo1fxq157"]
 
-[ext_resource type="Texture2D" uid="uid://dpu14tkxwvmnf" path="res://Assets/Textures/Fair/meat_1_meat_1.png" id="1_4ke2s"]
+[ext_resource type="Texture2D" uid="uid://b1pnvdpsioo4w" path="res://Assets/Textures/Fair/meat_1_meat_1.png" id="1_4ke2s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ehqw"]
 resource_name = "meat_1"

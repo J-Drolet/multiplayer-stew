@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=4 uid="uid://d0jng73tjd8h6"]
 
-[ext_resource type="Texture2D" uid="uid://bm5fi1gh77gpi" path="res://Assets/Textures/Fair/chair_2_metal_8.png" id="1_b1pns"]
-[ext_resource type="Texture2D" uid="uid://dw22poa061i7u" path="res://Assets/Textures/Fair/chair_2_fabric_2.png" id="2_b02l7"]
-[ext_resource type="Texture2D" uid="uid://cuk70q4m0dkcm" path="res://Assets/Textures/Fair/chair_2_metal_mp_4.png" id="3_876xe"]
+[ext_resource type="Texture2D" uid="uid://cb228467lq3os" path="res://Assets/Textures/Fair/chair_2_metal_8.png" id="1_b1pns"]
+[ext_resource type="Texture2D" uid="uid://bb2olerwhah40" path="res://Assets/Textures/Fair/chair_2_fabric_2.png" id="2_b02l7"]
+[ext_resource type="Texture2D" uid="uid://c40ttn012ms8x" path="res://Assets/Textures/Fair/chair_2_metal_mp_4.png" id="3_876xe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_edy5c"]
 resource_name = "metal_8"

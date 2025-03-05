@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://co5fqd3w1m2s6"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wooden_crate_3_wooden_crate__hs_1.png" id="1_bliru"]
+[ext_resource type="Texture2D" uid="uid://c3xq1pkxqitvm" path="res://Assets/Textures/Megapack2/wooden_crate_3_wooden_crate__hs_1.png" id="1_bliru"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nbbar"]
 resource_name = "wooden_crate__hs_1"

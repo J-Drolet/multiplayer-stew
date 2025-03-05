@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://duidmpkx3kkr4"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Wrench1_200x200.png" id="1_dpg33"]
+[ext_resource type="Texture2D" uid="uid://b1aigo4nw6fpv" path="res://Assets/Textures/Extras/Misc_Wrench1_200x200.png" id="1_dpg33"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d1t22"]
 resource_name = "Wrench_Material"

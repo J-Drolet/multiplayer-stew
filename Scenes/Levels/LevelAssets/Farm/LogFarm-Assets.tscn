@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://c7mscw4ukr1x1"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Log_Base_color.png" id="1_ili17"]
+[ext_resource type="Texture2D" uid="uid://8613c8k1jr0h" path="res://Assets/Textures/Farm/Farm-Assets_Log_Base_color.png" id="1_ili17"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t7rif"]
 resource_name = "Log"

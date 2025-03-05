@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://c1g1i6jf36w1w"]
 
-[ext_resource type="Script" path="res://Scripts/Pickups/HealthPickup.cs" id="2_kows0"]
+[ext_resource type="Script" uid="uid://d25ntb7j0bdwq" path="res://Scripts/Pickups/HealthPickup.cs" id="2_kows0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o0sq4"]
 size = Vector3(2, 2, 2)
@@ -39,8 +39,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nubif"]
 _data = {
-"RESET": SubResource("Animation_hgvp4"),
-"Rotation": SubResource("Animation_0vvxu")
+&"RESET": SubResource("Animation_hgvp4"),
+&"Rotation": SubResource("Animation_0vvxu")
 }
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_r5s7f"]

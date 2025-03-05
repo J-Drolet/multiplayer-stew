@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=8 format=4 uid="uid://jb5wcg1jpj61"]
 
-[ext_resource type="Texture2D" uid="uid://6lmnn1lbel6c" path="res://Assets/Textures/Fair/notebook_1_notebook_1.png" id="1_xsqq8"]
-[ext_resource type="Texture2D" uid="uid://dxphdxbmisdfn" path="res://Assets/Textures/Fair/notebook_1_metal_mp_1.png" id="2_r6xkb"]
+[ext_resource type="Texture2D" uid="uid://csiod2janq21c" path="res://Assets/Textures/Fair/notebook_1_notebook_1.png" id="1_xsqq8"]
+[ext_resource type="Texture2D" uid="uid://ggge7aq1p3pl" path="res://Assets/Textures/Fair/notebook_1_metal_mp_1.png" id="2_r6xkb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6yc0"]
 resource_name = "notebook_1"
