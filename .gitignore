@@ -6,3 +6,4 @@
 *.import
 *.tmp
 /Assets/Models/
+/Properties/launchSettings.json
