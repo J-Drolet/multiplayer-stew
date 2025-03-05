@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://cyamrm6gitdte"]
 
-[ext_resource type="Texture2D" uid="uid://c2m21x6t3n182" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Sauces_condiments.png" id="1_ou1ge"]
+[ext_resource type="Texture2D" uid="uid://cercjl0i4bx4k" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Sauces_condiments.png" id="1_ou1ge"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e784y"]
 resource_name = "Sauces_condiments"
@@ -44,10 +44,11 @@ shadow_mesh = SubResource("ArrayMesh_f2grd")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0o3cm"]
 points = PackedVector3Array(0.120831, 0.383335, -0.0499532, -0.177264, -0.179639, -0.0662853, -0.179084, -0.18248, -0.0405342, 0.179069, -0.181902, -0.0404891, -0.117025, 0.253648, 0.150637, 0.11715, -0.179909, 0.150253, -0.0126577, 0.251675, -0.185902, -0.137827, 0.373428, -0.0498461, 0.11715, 0.253295, 0.150253, 0.012994, -0.176629, -0.185657, -0.117025, -0.180538, 0.150637, 0.177359, 0.252915, -0.0662157, -0.075968, 0.384152, 0.102248, -0.177264, 0.253143, -0.0662853, 0.00457871, 0.380363, -0.138087, 0.0850579, 0.374446, 0.110875, 0.177359, -0.179234, -0.0662157, 0.012994, 0.25145, -0.185657, -0.0126577, -0.17703, -0.185902, 0.179069, 0.254416, -0.0404891, -0.179084, 0.25474, -0.0405342, 0.138135, 0.373262, -0.0498274, -0.0847747, 0.37468, 0.110984, -0.00428165, 0.372889, -0.147584, 0.076323, 0.384152, 0.102248, 0.00459885, 0.372752, -0.14752, -0.119287, 0.3806, -0.0143425, -0.101873, 0.372474, 0.0655656, 0.0933013, 0.372304, 0.0921632, -0.00426135, 0.380503, -0.138147, -0.118272, 0.378195, -0.0581696, -0.136517, 0.370806, -0.0407268)
 
-[node name="@Node3D@90" type="Node3D"]
+[node name="_Node3D_90" type="Node3D"]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 0, 0, 0)
 
 [node name="@StaticBody3D@91" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.191509, 0)
 
 [node name="Salt" type="MeshInstance3D" parent="@StaticBody3D@91"]
 mesh = SubResource("ArrayMesh_w0xas")

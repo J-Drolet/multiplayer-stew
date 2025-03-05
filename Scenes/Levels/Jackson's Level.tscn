@@ -1,4 +1,4 @@
-[gd_scene load_steps=260 format=3 uid="uid://ce4mnhuaptjjq"]
+[gd_scene load_steps=266 format=3 uid="uid://ce4mnhuaptjjq"]
 
 [ext_resource type="Script" uid="uid://7qt4qpdvopym" path="res://Scripts/GameLogic/LevelManager.cs" id="1_3cian"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_auvs1"]
@@ -186,7 +186,6 @@
 [ext_resource type="PackedScene" uid="uid://ktpwjixbxdha" path="res://Scenes/Levels/LevelAssets/MegaPack2/metal_barrel_hr_2metal_barrel_hr_2.tscn" id="186_aymwu"]
 [ext_resource type="PackedScene" uid="uid://c8uvrpcu878yg" path="res://Scenes/Levels/LevelAssets/MegaPack2/jerrycan_mx_1jerrycan_mx_1.tscn" id="187_fflhd"]
 [ext_resource type="PackedScene" uid="uid://ec1pu87dpdhw" path="res://Scenes/Levels/LevelAssets/MegaPack2/distillery_mx_1distillery_mx_1.tscn" id="188_on6pt"]
-[ext_resource type="PackedScene" uid="uid://dtrgmj2ve6fw8" path="res://Scenes/Levels/LevelAssets/MegaPack2/doorway_rg_1_regulardoorway_rg_1_regular.tscn" id="189_y7y14"]
 [ext_resource type="PackedScene" uid="uid://dvaa7kxlac6kk" path="res://Scenes/Levels/LevelAssets/MegaPack2/doorway_rg_2_widedoorway_rg_2_wide.tscn" id="190_u76au"]
 [ext_resource type="PackedScene" uid="uid://dx0fk1uy20da6" path="res://Scenes/Levels/LevelAssets/MegaPack/elevator_1elevator_1.tscn" id="191_aefa1"]
 [ext_resource type="PackedScene" uid="uid://c8g3wq5i8ouqi" path="res://Scenes/Levels/LevelAssets/Bunker/generator_1generator_1.tscn" id="192_gn4ul"]
@@ -256,6 +255,13 @@
 [ext_resource type="PackedScene" uid="uid://dal3u4c2hclbh" path="res://Scenes/Levels/LevelAssets/Restuarant/soap_dispenserQuequis_House_Props.tscn" id="254_y4tos"]
 [ext_resource type="PackedScene" uid="uid://dwdx40pbufa15" path="res://Scenes/Levels/LevelAssets/MegaPack/wall_element_2_bottomwall_element_2_bottom.tscn" id="255_faerh"]
 [ext_resource type="PackedScene" uid="uid://by17oybrifwnr" path="res://Scenes/Levels/LevelAssets/Bunker/drain_cover_3drain_cover_3.tscn" id="256_ikgcq"]
+[ext_resource type="PackedScene" uid="uid://ccjuvvreq8087" path="res://Scenes/Levels/LevelAssets/Restuarant/Bush_021Quequis_House_Props.tscn" id="257_85jn0"]
+[ext_resource type="PackedScene" uid="uid://cl2jhjcfpyrbk" path="res://Scenes/Levels/LevelAssets/Restuarant/PepperQuequis_House_Props.tscn" id="258_3rbuk"]
+[ext_resource type="PackedScene" uid="uid://cyamrm6gitdte" path="res://Scenes/Levels/LevelAssets/Restuarant/SaltQuequis_House_Props.tscn" id="259_2hv6b"]
+[ext_resource type="Script" uid="uid://b48dqousk512e" path="res://Scripts/Pickups/TimedUpgradePickup.cs" id="259_lgws6"]
+[ext_resource type="Script" uid="uid://cgc03dv53j450" path="res://Scripts/Pickups/TimedWeaponPickup.cs" id="260_gwy68"]
+[ext_resource type="PackedScene" uid="uid://b1638ox18o0fr" path="res://Scenes/Pickups/TimedHealthPickup.tscn" id="261_3u6v1"]
+[ext_resource type="Script" uid="uid://c4puwdv4gpshh" path="res://Scripts/Pickups/TimedHealthPickup.cs" id="262_hpc52"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_klxao"]
 properties/0/path = NodePath(".:PlayerStatJson")
@@ -758,44 +764,23 @@ text = "Text"
 [node name="DeathBarrier" parent="DONT DELETE" instance=ExtResource("16_6qshe")]
 transform = Transform3D(12724.9, 0, 0, 0, 63.6247, 0, 0, 0, 12724.9, 0, -36.1208, 0)
 
-[node name="catwalk_1catwalk_1_tscn" parent="." instance=ExtResource("19_wlggv")]
-transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 27, -2.38419e-07, -8)
-
 [node name="catwalk_1catwalk_1_tscn2" parent="." instance=ExtResource("19_wlggv")]
-transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 27, 3, -16)
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 27, 4.94998, -17.4437)
 
 [node name="hand_rail_3hand_rail_3_tscn2" parent="." instance=ExtResource("18_8ur56")]
-transform = Transform3D(1.31134e-07, 1, -3.36732e-08, 0, -4.37114e-08, -0.770352, -1, 1.31134e-07, -4.4157e-15, 28, 3.05176, -16)
+transform = Transform3D(1.31134e-07, 1, -3.36732e-08, 0, -4.37114e-08, -0.770352, -1, 1.31134e-07, -4.4157e-15, 28, 5.00174, -17.4437)
 
 [node name="hand_rail_3hand_rail_3_tscn4" parent="." instance=ExtResource("18_8ur56")]
-transform = Transform3D(1.31134e-07, 1, -3.36732e-08, 0, -4.37114e-08, -0.770352, -1, 1.31134e-07, -4.4157e-15, 28, 3.05176, -18)
+transform = Transform3D(1.31134e-07, 1, -3.36732e-08, 0, -4.37114e-08, -0.770352, -1, 1.31134e-07, -4.4157e-15, 28, 5.00174, -19.4437)
 
 [node name="hand_rail_3hand_rail_3_tscn5" parent="." instance=ExtResource("18_8ur56")]
-transform = Transform3D(-1, -8.74228e-08, 1.37915e-07, -1.74846e-07, -1.31134e-07, -0.788781, 8.74228e-08, -1, 1.03436e-07, 26, 3, -18.0034)
-
-[node name="hand_rail_3hand_rail_3_tscn7" parent="." instance=ExtResource("18_8ur56")]
-transform = Transform3D(-4.37114e-08, 1, -1.31134e-07, -1.74846e-07, -1.31134e-07, -1, -1, -4.37114e-08, 1.74846e-07, 28, 0.0517578, -8)
-
-[node name="hand_rail_3hand_rail_3_tscn8" parent="." instance=ExtResource("18_8ur56")]
-transform = Transform3D(-4.37114e-08, -1, 1.31134e-07, -1.74846e-07, -1.31134e-07, -1, 1, -4.37114e-08, -1.74846e-07, 28, 0.0517578, -8)
+transform = Transform3D(-1, -8.74228e-08, 1.37915e-07, -1.74846e-07, -1.31134e-07, -0.788781, 8.74228e-08, -1, 1.03436e-07, 26, 4.94998, -19.4471)
 
 [node name="catwalk_1catwalk_1_tscn3" parent="." instance=ExtResource("19_wlggv")]
-transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 27.0168, -0.00326785, -3.93631)
+transform = Transform3D(-4.84399e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1.10818, -4.37114e-08, 1.91069e-15, 27.0168, -0.00326785, -4.16288)
 
 [node name="catwalk_1catwalk_1_tscn4" parent="." instance=ExtResource("19_wlggv")]
 transform = Transform3D(-0.0100944, -0.999949, -0.000994009, 0.459848, -0.00375944, -0.88799, 0.88794, -0.00942083, 0.459862, 26.994, 0.90354, -0.197055)
-
-[node name="catwalk_1catwalk_1_tscn5" parent="." instance=ExtResource("19_wlggv")]
-transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 27, 2, 7.5)
-
-[node name="hand_rail_1hand_rail_1_tscn4" parent="." instance=ExtResource("17_qdrbs")]
-transform = Transform3D(0.598087, -0.801431, -1.05095e-07, 0.147067, 0.109752, -0.983019, 0.787822, 0.58793, 0.183505, 29.2536, 0.666304, 4.81776)
-
-[node name="hand_rail_3hand_rail_3_tscn9" parent="." instance=ExtResource("18_8ur56")]
-transform = Transform3D(-4.37114e-08, -1, 1.31134e-07, -1.74846e-07, -1.31134e-07, -1, 1, -4.37114e-08, -1.74846e-07, 28, 2.05176, 7.4)
-
-[node name="hand_rail_3hand_rail_3_tscn10" parent="." instance=ExtResource("18_8ur56")]
-transform = Transform3D(1.31134e-07, 1, -1.31134e-07, -1.74846e-07, -1.31134e-07, -1, -1, 1.31134e-07, 1.74846e-07, 28, 2.05176, 7.6)
 
 [node name="hand_rail_3hand_rail_3_tscn11" parent="." instance=ExtResource("18_8ur56")]
 transform = Transform3D(1.31134e-07, 1, -1.31134e-07, -1.74846e-07, -1.31134e-07, -1, -1, 1.31134e-07, 1.74846e-07, 28.1105, 0.130892, -3.83996)
@@ -947,26 +932,8 @@ transform = Transform3D(-2.86603e-14, 0.759574, -2.11397e-07, -1.31134e-07, -1.6
 [node name="table_large_1table_large_1_tscn4" parent="." instance=ExtResource("32_vyl1h")]
 transform = Transform3D(-2.86603e-14, 0.759574, -2.11397e-07, -1.31134e-07, -1.6601e-07, -0.967242, -1, 0, 1.26838e-07, 21.6526, 0.0103078, -0.370956)
 
-[node name="catwalk_1catwalk_1_tscn7" parent="." instance=ExtResource("19_wlggv")]
-transform = Transform3D(-5.38169e-08, -1, 4.57518e-08, 0.0333032, -4.48777e-08, -1.04629, 1.23073, -4.25131e-08, 0.0283124, 27, 2.08215, 11.6103)
-
-[node name="catwalk_1catwalk_1_tscn8" parent="." instance=ExtResource("19_wlggv")]
-transform = Transform3D(-4.37114e-08, -1, -1.31134e-07, 7.64274e-15, 1.31134e-07, -1, 1, -4.37114e-08, 1.91069e-15, 27, 2.15725, 16)
-
-[node name="hand_rail_3hand_rail_3_tscn13" parent="." instance=ExtResource("18_8ur56")]
-transform = Transform3D(-2.18557e-07, -1, 1.31134e-07, -1.74846e-07, -1.31134e-07, -1, 1, -2.18557e-07, -1.74846e-07, 28, 2.15725, 16)
-
-[node name="hand_rail_3hand_rail_3_tscn14" parent="." instance=ExtResource("18_8ur56")]
-transform = Transform3D(3.0598e-07, 1, -1.31134e-07, -1.74846e-07, -1.31134e-07, -1, -1, 3.0598e-07, 1.74846e-07, 28, 2.15725, 16)
-
-[node name="hand_rail_3hand_rail_3_tscn15" parent="." instance=ExtResource("18_8ur56")]
-transform = Transform3D(0.243055, 0.964838, -0.100063, 0.38977, -0.191605, -0.900759, -0.888259, 0.179932, -0.422636, 28, 2.20373, 17.8764)
-
 [node name="catwalk_1catwalk_1_tscn9" parent="." instance=ExtResource("19_wlggv")]
-transform = Transform3D(1.31134e-07, -1, -3.0598e-07, -8.74228e-08, -3.0598e-07, 1, -1, -1.31134e-07, -8.74228e-08, 26.7163, 0.0107442, 20)
-
-[node name="hand_rail_3hand_rail_3_tscn17" parent="." instance=ExtResource("18_8ur56")]
-transform = Transform3D(0.490241, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 27.1, 0.0517601, 18.1)
+transform = Transform3D(1.63097e-07, -1, -3.0598e-07, -1.08732e-07, -3.0598e-07, 1, -1.24374, -1.31134e-07, -8.74228e-08, 27.0173, 0.0107442, 19.51)
 
 [node name="wall_small_1wall_small_1_tscn2" parent="." instance=ExtResource("34_l6hym")]
 transform = Transform3D(0.778691, -0.524121, 3.4095e-08, 2.87152e-15, -2.93229e-08, -0.998337, 0.974751, 0.4187, -2.72372e-08, -20.7021, 2.5, 10.7503)
@@ -1371,7 +1338,7 @@ transform = Transform3D(1.31134e-07, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 1
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -27, -0.080668, -4)
 
 [node name="catwalk_1catwalk_1_tscn11" parent="." instance=ExtResource("19_wlggv")]
-transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -27, -0.053213, 12)
+transform = Transform3D(-4.37114e-08, -1.17718, 4.37114e-08, 0, -5.14561e-08, -1, 1, -5.14561e-08, 1.91069e-15, -27, -0.053213, 12)
 
 [node name="catwalk_1catwalk_1_tscn12" parent="." instance=ExtResource("19_wlggv")]
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -27, 3, 4)
@@ -1380,7 +1347,7 @@ transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -
 transform = Transform3D(-5.59729e-08, -1, 4.04557e-08, 0.774641, -6.12489e-08, -0.736958, 1.01963, -8.36284e-09, 0.559889, -27, 1.5, 0)
 
 [node name="catwalk_1catwalk_1_tscn14" parent="." instance=ExtResource("19_wlggv")]
-transform = Transform3D(-3.31953e-08, 1, -4.89189e-08, 0.774196, -2.64279e-08, -0.737202, -1.01997, -5.26053e-08, -0.559567, -27, 1.5, 8.0337)
+transform = Transform3D(-3.31953e-08, 1.17718, -4.89189e-08, 0.774196, -3.11103e-08, -0.737202, -1.01997, -6.19258e-08, -0.559567, -27, 1.5, 8.0337)
 
 [node name="hand_rail_3hand_rail_3_tscn19" parent="." instance=ExtResource("18_8ur56")]
 transform = Transform3D(-1.31134e-07, -1, 4.37114e-08, -2.62268e-07, -4.37114e-08, -1, 1, -1.31134e-07, -2.62268e-07, -28, 0.0517578, -4)
@@ -1401,16 +1368,16 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -28, 0
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -28, 1.59415, 0.0447394)
 
 [node name="hand_rail_3hand_rail_3_tscn23" parent="." instance=ExtResource("18_8ur56")]
-transform = Transform3D(2.18557e-07, 1, -4.37115e-08, -2.62268e-07, -4.37114e-08, -1, -1, 2.18557e-07, 2.62268e-07, -28, 0.051758, 10)
+transform = Transform3D(2.18557e-07, 1, -4.37115e-08, -2.62268e-07, -4.37114e-08, -1, -1, 2.18557e-07, 2.62268e-07, -28.1288, 0.051758, 10)
 
 [node name="hand_rail_3hand_rail_3_tscn24" parent="." instance=ExtResource("18_8ur56")]
-transform = Transform3D(2.18557e-07, 1, -4.37115e-08, -2.62268e-07, -4.37114e-08, -1, -1, 2.18557e-07, 2.62268e-07, -28, 0.051758, 12)
+transform = Transform3D(2.18557e-07, 1, -4.37115e-08, -2.62268e-07, -4.37114e-08, -1, -1, 2.18557e-07, 2.62268e-07, -28.1288, 0.051758, 12)
 
 [node name="hand_rail_1hand_rail_1_tscn5" parent="." instance=ExtResource("17_qdrbs")]
-transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, -28, 0.0219331, 10.0602)
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, -28.1288, 0.0219331, 10.0602)
 
 [node name="hand_rail_1hand_rail_1_tscn6" parent="." instance=ExtResource("17_qdrbs")]
-transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, -28, 1.53343, 8.06889)
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, -28.1288, 1.53343, 8.06889)
 
 [node name="cardboard_box_3cardboard_box_3_tscn" parent="." instance=ExtResource("81_sf0h6")]
 transform = Transform3D(1.17869, 0.905055, -7.91224e-08, -3.95612e-08, -7.83951e-08, -1.48608, -0.905055, 1.17869, -3.80858e-08, -20.2971, 0.0420637, -8.47019)
@@ -1647,10 +1614,10 @@ transform = Transform3D(1, -1.31134e-07, 4.37114e-08, 4.37114e-08, -1.31134e-07,
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -20.0082, 2.97794, 19)
 
 [node name="wall_1wall_1_tscn2" parent="." instance=ExtResource("5_bq7jo")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -0.447454, 0, 1, -1.95589e-08, 24, 0, 22)
+transform = Transform3D(0.60173, 0, 0, 0, -4.37114e-08, -0.447454, 0, 1, -1.95589e-08, 24.4247, 0, 22)
 
 [node name="wall_1wall_1_tscn3" parent="." instance=ExtResource("5_bq7jo")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -0.447454, 0, 1, -1.95589e-08, 20, 0, 22)
+transform = Transform3D(0.702538, 0, 0, 0, -4.37114e-08, -0.447454, 0, 1, -1.95589e-08, 19.5789, 0, 22)
 
 [node name="wall_1wall_1_tscn5" parent="." instance=ExtResource("5_bq7jo")]
 transform = Transform3D(1, -7.64274e-15, -7.82354e-08, -1.74846e-07, -4.37114e-08, -0.447454, 0, 1, -1.95589e-08, 12, 0, 22)
@@ -1677,13 +1644,13 @@ transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 26, 0, 24)
 
 [node name="catwalk_1catwalk_1_tscn15" parent="." instance=ExtResource("19_wlggv")]
-transform = Transform3D(4.37114e-08, 1, -4.37114e-08, -8.74228e-08, -4.37114e-08, -1, -1, 4.37114e-08, 8.74228e-08, 26.7242, -0.0505512, 24)
+transform = Transform3D(4.37114e-08, 1, -4.37114e-08, -8.74228e-08, -4.37114e-08, -1, -1, 4.37114e-08, 8.74228e-08, 27.0144, 0.00987837, 24)
 
 [node name="hand_rail_3hand_rail_3_tscn16" parent="." instance=ExtResource("18_8ur56")]
 transform = Transform3D(1, -2.62268e-07, -2.62268e-07, -2.62268e-07, -4.37114e-08, -1, 2.62268e-07, 1, -4.37115e-08, 27, 0, 26)
 
 [node name="hand_rail_3hand_rail_3_tscn25" parent="." instance=ExtResource("18_8ur56")]
-transform = Transform3D(-4.80825e-07, -1, 4.37115e-08, -2.62268e-07, -4.37114e-08, -1, 1, -4.80825e-07, -2.62268e-07, 27.6639, 0, 25.85)
+transform = Transform3D(-4.80825e-07, -1, 4.37115e-08, -2.62268e-07, -4.37114e-08, -1, 1, -4.80825e-07, -2.62268e-07, 28.0047, 0, 25.85)
 
 [node name="BoardQuequis_House_Props_tscn2" parent="." instance=ExtResource("61_w53l0")]
 transform = Transform3D(1.91283e-08, 0.437605, -2.66129e-15, 0.437605, -1.91283e-08, -6.08832e-08, -3.82566e-08, 0, -0.696423, 18.25, 1.71194, 25.8977)
@@ -1815,9 +1782,9 @@ transform = Transform3D(-0.601192, 0.799086, 0.00577162, -0.00387194, 0.00430941
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -24.9726, 2.34832, -9.84947)
 
 [node name="TimedUpgradePickup_tscn" parent="." instance=ExtResource("118_fuo22")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.54972, 0, 24.6929)
-UpgradeSpawnList = [3]
-SpawnWeights = [1]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.92875, 0, 24.6929)
+UpgradeSpawnList = Array[int]([3])
+SpawnWeights = Array[int]([1])
 
 [node name="BurgerMisc_tscn" parent="." instance=ExtResource("119_1c4s5")]
 transform = Transform3D(1.00536, 0, 0, 0, 1.00536, 0, 0, 0, 1.00536, 23.0436, 0.943453, 13.7205)
@@ -3895,8 +3862,11 @@ transform = Transform3D(-8.74228e-08, 1, -2.63649e-08, -4.37114e-08, -4.37114e-0
 [node name="wall_4wall_4_tscn107" parent="." instance=ExtResource("129_ixhii")]
 transform = Transform3D(-8.74228e-08, 1, -2.63649e-08, -4.37114e-08, -4.37114e-08, -0.603158, -1, -8.74228e-08, 2.63649e-08, -25.5, 3.4, 1.5)
 
+[node name="wall_4wall_4_tscn155" parent="." instance=ExtResource("129_ixhii")]
+transform = Transform3D(0.229774, 4.37114e-08, -2.63649e-08, -1.00437e-08, -4.37114e-08, -0.603158, -1.00437e-08, 1, -2.63649e-08, -25.7285, 3.4, 2.50153)
+
 [node name="wall_4wall_4_tscn108" parent="." instance=ExtResource("129_ixhii")]
-transform = Transform3D(1, 4.37114e-08, -2.63649e-08, -4.37114e-08, -4.37114e-08, -0.603158, -4.37114e-08, 1, -2.63649e-08, -24.5, 3.4, 4.5)
+transform = Transform3D(1.43289, 4.37114e-08, -2.63649e-08, -6.26337e-08, -4.37114e-08, -0.603158, -6.26337e-08, 1, -2.63649e-08, -24.5136, 3.4, 4.5)
 
 [node name="wall_4wall_4_tscn109" parent="." instance=ExtResource("129_ixhii")]
 transform = Transform3D(-7.10543e-15, -1, 2.63649e-08, -4.37114e-08, -4.37114e-08, -0.603158, 1, -7.10543e-15, -2.63649e-08, -23.5, 3.4, 3.5)
@@ -4565,14 +4535,14 @@ transform = Transform3D(-1.39434e-06, 4.9738e-14, -1, -1.21247e-07, -1, 6.39488e
 transform = Transform3D(-1.77973e-07, -8.74228e-08, -1, 1.55589e-14, -1, 8.74228e-08, -1.35718, 0, 1.31134e-07, 21.3, 4.2, 3.5)
 
 [node name="TimedUpgradePickup_tscn2" parent="." instance=ExtResource("118_fuo22")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 22)
-UpgradeSpawnList = [0]
-SpawnWeights = [1]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1674, 0, 22.3097)
+UpgradeSpawnList = Array[int]([0])
+SpawnWeights = Array[int]([1])
 
 [node name="TimedWeaponPickup_tscn" parent="." instance=ExtResource("152_qco11")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 19)
-WeaponSpawnList = [3, 0, 1, 2, 4]
-SpawnWeights = [1, 1, 1, 1, 1]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 15.3871)
+WeaponSpawnList = Array[int]([3, 0, 1, 2, 4])
+SpawnWeights = Array[int]([1, 1, 1, 1, 1])
 
 [node name="floor_1_001floor_1_001_tscn144" parent="." instance=ExtResource("130_7ukjj")]
 transform = Transform3D(-1, 8.74228e-08, 3.43923e-14, -2.29282e-14, 1.31134e-07, -1, -8.74228e-08, -1, -1.31134e-07, 10, 5, -0.5)
@@ -4719,16 +4689,16 @@ transform = Transform3D(-2.18557e-07, -1, 2.63649e-08, 0, -4.37114e-08, -0.60315
 transform = Transform3D(-2.18557e-07, -1, 2.63649e-08, 0, -4.37114e-08, -0.603158, 1, -2.18557e-07, 5.76223e-15, -19.5, 3.4, 1.5)
 
 [node name="beam_hc_horizonatal_1beam_hc_horizonatal_1_tscn8" parent="." instance=ExtResource("150_3bt2u")]
-transform = Transform3D(7.70548e-08, -4.37114e-08, -1, 1.76281, -8.74228e-08, 4.37114e-08, -1.5411e-07, -1, 4.37114e-08, -18.5, 0, 25.8)
+transform = Transform3D(7.70548e-08, -4.37114e-08, -1, 1.76281, -8.74228e-08, 4.37114e-08, -1.5411e-07, -1, 4.37114e-08, -18.5, 4.14673, 25.8)
 
 [node name="beam_hc_horizonatal_1beam_hc_horizonatal_1_tscn9" parent="." instance=ExtResource("150_3bt2u")]
-transform = Transform3D(7.70548e-08, -4.37114e-08, -1, 1.76281, -8.74228e-08, 4.37114e-08, -1.5411e-07, -1, 4.37114e-08, -21.9349, 0, 25.8)
+transform = Transform3D(7.70548e-08, -4.37114e-08, -1, 1.76281, -8.74228e-08, 4.37114e-08, -1.5411e-07, -1, 4.37114e-08, -21.9349, 4.14673, 25.8)
 
 [node name="beam_hc_horizonatal_1beam_hc_horizonatal_1_tscn10" parent="." instance=ExtResource("150_3bt2u")]
-transform = Transform3D(7.70548e-08, -4.37114e-08, -1, 1.76281, -8.74228e-08, 4.37114e-08, -1.5411e-07, -1, 4.37114e-08, -21.9349, 0, 22.5491)
+transform = Transform3D(7.70548e-08, -4.37114e-08, -1, 1.76281, -8.74228e-08, 4.37114e-08, -1.5411e-07, -1, 4.37114e-08, -21.9349, 4.14673, 22.5491)
 
 [node name="beam_hc_horizonatal_1beam_hc_horizonatal_1_tscn11" parent="." instance=ExtResource("150_3bt2u")]
-transform = Transform3D(7.70548e-08, -4.37114e-08, -1, 1.76281, -8.74228e-08, 4.37114e-08, -1.5411e-07, -1, 4.37114e-08, -18.5038, 0, 22.5559)
+transform = Transform3D(7.70548e-08, -4.37114e-08, -1, 1.76281, -8.74228e-08, 4.37114e-08, -1.5411e-07, -1, 4.37114e-08, -18.5038, 4.14673, 22.5559)
 
 [node name="bolt_mx_1bolt_mx_1_tscn" parent="." instance=ExtResource("157_ysqkc")]
 transform = Transform3D(-3.75702, 5.67294e-07, -2.47972e-14, 0, -1.64224e-07, -3.75702, -5.67294e-07, -3.75702, 1.64224e-07, -18.2893, 2.81042, 25.6209)
@@ -4755,16 +4725,16 @@ transform = Transform3D(3.75702, -1.31379e-06, 5.74278e-14, 0, -1.64224e-07, -3.
 transform = Transform3D(-3.75212, 1.4693e-06, -0.191715, 0.191715, -2.47475e-07, -3.75212, -1.48001e-06, -3.75702, 1.72177e-07, -18.2514, -0.208501, 25.6209)
 
 [node name="beam_hc_horizonatal_1beam_hc_horizonatal_1_tscn12" parent="." instance=ExtResource("150_3bt2u")]
-transform = Transform3D(7.70548e-08, -4.37114e-08, -1, 1.76281, -8.74228e-08, 4.37114e-08, -1.5411e-07, -1, 4.37114e-08, -22.46, 0, 25.8)
+transform = Transform3D(7.70548e-08, -4.37114e-08, -1, 1.76281, -8.74228e-08, 4.37114e-08, -1.5411e-07, -1, 4.37114e-08, -22.46, 4.2574, 25.8)
 
 [node name="beam_hc_horizonatal_1beam_hc_horizonatal_1_tscn13" parent="." instance=ExtResource("150_3bt2u")]
-transform = Transform3D(7.70548e-08, -4.37114e-08, -1, 1.76281, -8.74228e-08, 4.37114e-08, -1.5411e-07, -1, 4.37114e-08, -25.895, 0, 25.8)
+transform = Transform3D(7.70548e-08, -4.37114e-08, -1, 1.76281, -8.74228e-08, 4.37114e-08, -1.5411e-07, -1, 4.37114e-08, -25.895, 4.2574, 25.8)
 
 [node name="beam_hc_horizonatal_1beam_hc_horizonatal_1_tscn14" parent="." instance=ExtResource("150_3bt2u")]
-transform = Transform3D(7.70548e-08, -4.37114e-08, -1, 1.76281, -8.74228e-08, 4.37114e-08, -1.5411e-07, -1, 4.37114e-08, -25.895, 0, 22.5491)
+transform = Transform3D(7.70548e-08, -4.37114e-08, -1, 1.76281, -8.74228e-08, 4.37114e-08, -1.5411e-07, -1, 4.37114e-08, -25.895, 4.2574, 22.5491)
 
 [node name="beam_hc_horizonatal_1beam_hc_horizonatal_1_tscn15" parent="." instance=ExtResource("150_3bt2u")]
-transform = Transform3D(7.70548e-08, -4.37114e-08, -1, 1.76281, -8.74228e-08, 4.37114e-08, -1.5411e-07, -1, 4.37114e-08, -22.4638, 0, 22.5559)
+transform = Transform3D(7.70548e-08, -4.37114e-08, -1, 1.76281, -8.74228e-08, 4.37114e-08, -1.5411e-07, -1, 4.37114e-08, -22.4638, 4.2574, 22.5559)
 
 [node name="elevator_doorway_1elevator_doorway_1_tscn4" parent="." instance=ExtResource("6_ahxcu")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -20, 5, 22)
@@ -5085,7 +5055,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -10, 5
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -10, 5.0317, 18.2586)
 
 [node name="pillar_rg_1_brokenpillar_rg_1_broken_tscn4" parent="." instance=ExtResource("177_1qmd3")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -14, 5.0317, 18.2579)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -3.30234, 0, 1, -1.4435e-07, -14, 5.0317, 18.2579)
 
 [node name="ramp_platform_slim_mx_1ramp_platform_slim_mx_1_tscn" parent="." instance=ExtResource("179_tt3fr")]
 transform = Transform3D(3.0598e-07, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 3.0598e-07, -1.33748e-14, -14, 4.90611, 13.2)
@@ -5231,11 +5201,11 @@ transform = Transform3D(0.114611, -0.993406, 6.37508e-08, 6.16199e-09, -6.34625e
 [node name="wooden_crate_hx_2_1wooden_crate_hx_2_1_tscn2" parent="." instance=ExtResource("167_n8xhp")]
 transform = Transform3D(0.983195, 0.182557, 0.00015399, 0.000101365, 0.000297597, -1, -0.182557, 0.983195, 0.000274092, -15.3502, 6.85715, -2.88097)
 
-[node name="doorway_rg_1_regulardoorway_rg_1_regular_tscn" parent="." instance=ExtResource("189_y7y14")]
-transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -14, 5, 16)
-
 [node name="doorway_rg_2_widedoorway_rg_2_wide_tscn" parent="." instance=ExtResource("190_u76au")]
 transform = Transform3D(1.31134e-07, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 1.31134e-07, -5.73206e-15, -10, 5, 20)
+
+[node name="doorway_rg_2_widedoorway_rg_2_wide_tscn3" parent="." instance=ExtResource("190_u76au")]
+transform = Transform3D(1.31134e-07, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 1.31134e-07, -5.73206e-15, -13.8942, 5, 16.1766)
 
 [node name="doorway_1doorway_1_tscn18" parent="." instance=ExtResource("35_igshn")]
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -6, 5, 20)
@@ -6252,7 +6222,7 @@ transform = Transform3D(0.819277, 0.573397, -1.20814e-08, -2.01669e-08, 7.74487e
 transform = Transform3D(0.8791, 0.476637, -2.08345e-08, 0, -4.37114e-08, -1, -0.476637, 0.8791, -3.84267e-08, 5.26581, 6.36193, 20.2381)
 
 [node name="car_battery_1car_battery_1_tscn2" parent="." instance=ExtResource("88_m35ut")]
-transform = Transform3D(0.804251, 0.594289, -2.59772e-08, 0, -4.37114e-08, -1, -0.594289, 0.804251, -3.51549e-08, 5.36402, 6.31978, 19.6138)
+transform = Transform3D(0.804251, 0.594289, -2.59772e-08, 0, -4.37114e-08, -1, -0.594289, 0.804251, -3.51549e-08, 5.36402, 6.33146, 19.6138)
 
 [node name="cardboard_box_2cardboard_box_2_tscn6" parent="." instance=ExtResource("82_n2tul")]
 transform = Transform3D(-3.93677e-08, -7.8983e-08, -1.30147, -0.900627, 3.5182e-07, 5.68893e-08, 1.75359e-07, 1.80692, -5.68893e-08, 4.66868, 5.65649, 20.2377)
@@ -6528,16 +6498,10 @@ transform = Transform3D(7.54979e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 7
 transform = Transform3D(-4.37114e-08, -1, 3.28247e-08, 0, -4.37114e-08, -0.750942, 1, -4.37114e-08, 1.43481e-15, 19.8731, 5.0317, 20.6347)
 
 [node name="catwalk_1catwalk_1_tscn23" parent="." instance=ExtResource("19_wlggv")]
-transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 27, 5, 20)
+transform = Transform3D(-2.3892e-08, -1, 3.64717e-08, 0.172267, -5.52601e-08, -0.791852, 0.51873, -2.77072e-08, 0.262969, 27, 4.66957, 17.4819)
 
 [node name="catwalk_1catwalk_1_tscn24" parent="." instance=ExtResource("19_wlggv")]
-transform = Transform3D(-2.14112e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 0.489831, -4.37114e-08, 1.91069e-15, 27, 5, 23)
-
-[node name="catwalk_1catwalk_1_tscn25" parent="." instance=ExtResource("19_wlggv")]
-transform = Transform3D(-2.14112e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 0.489831, -4.37114e-08, 1.91069e-15, 27, 5, 13.945)
-
-[node name="catwalk_1catwalk_1_tscn26" parent="." instance=ExtResource("19_wlggv")]
-transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 27, 5, 11)
+transform = Transform3D(-2.98912e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 0.683832, -4.37114e-08, 1.91069e-15, 27, 5, 19.8498)
 
 [node name="doorway_1doorway_1_tscn23" parent="." instance=ExtResource("35_igshn")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 24, 5, 18)
@@ -7164,7 +7128,7 @@ transform = Transform3D(-6.40376e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1.46
 transform = Transform3D(-1.46501, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -1.28075e-07, -1, 4.37114e-08, -15.75, 5, -28.95)
 
 [node name="hand_rail_3hand_rail_3_tscn32" parent="." instance=ExtResource("18_8ur56")]
-transform = Transform3D(-2.81601e-07, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1.28846, -2.18557e-07, 9.55343e-15, -4.05509, 3.05, -26.3208)
+transform = Transform3D(-1.29037e-07, -1, 4.37114e-08, 0, -4.37114e-08, -1, 0.590408, -2.18557e-07, 9.55343e-15, -4.18693, 3.05, -27.8724)
 
 [node name="hand_rail_3hand_rail_3_tscn33" parent="." instance=ExtResource("18_8ur56")]
 transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, -15.95, 0.0517582, -22)
@@ -7602,13 +7566,13 @@ transform = Transform3D(1, -3.49691e-07, 1.52855e-14, 0, -4.37114e-08, -1, 3.496
 transform = Transform3D(1, -3.49691e-07, 1.52855e-14, 0, -4.37114e-08, -1, 3.49691e-07, 1, -4.37114e-08, 20.05, 8.4, -25.7)
 
 [node name="wall_rg_1wall_rg_1_tscn33" parent="." instance=ExtResource("127_4bdbq")]
-transform = Transform3D(1, -3.49691e-07, 1.52855e-14, 0, -4.37114e-08, -1, 3.49691e-07, 1, -4.37114e-08, 24.05, 8.4, -25.7)
+transform = Transform3D(1, -3.49691e-07, 1.52855e-14, 0, -4.37114e-08, -1, 3.49691e-07, 1, -4.37114e-08, 23.9495, 8.4, -25.7)
 
 [node name="wall_rg_1wall_rg_1_tscn34" parent="." instance=ExtResource("127_4bdbq")]
-transform = Transform3D(-3.93403e-07, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -3.93403e-07, 1.71962e-14, 25.85, 8.4, -23.95)
+transform = Transform3D(-3.93403e-07, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -3.93403e-07, 1.71962e-14, 25.75, 8.4, -23.95)
 
 [node name="wall_rg_1wall_rg_1_tscn35" parent="." instance=ExtResource("127_4bdbq")]
-transform = Transform3D(-3.93403e-07, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -3.93403e-07, 1.71962e-14, 25.85, 8.4, -20)
+transform = Transform3D(-3.93403e-07, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -3.93403e-07, 1.71962e-14, 25.75, 8.4, -20)
 
 [node name="wall_rg_1wall_rg_1_tscn36" parent="." instance=ExtResource("127_4bdbq")]
 transform = Transform3D(-3.93403e-07, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -3.93403e-07, 1.71962e-14, 25.75, 8.4, -16)
@@ -8565,7 +8529,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1.16978, 0, 1, -5.11329e-08, 
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8, -15.3414, 6.2)
 
 [node name="wall_rg_1wall_rg_1_tscn108" parent="." instance=ExtResource("127_4bdbq")]
-transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 10.2, -15.3414, 4)
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 10.2261, -15.3844, 4.01956)
 
 [node name="wall_rg_1wall_rg_1_tscn109" parent="." instance=ExtResource("127_4bdbq")]
 transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 4.05, -15.3414, 6.2)
@@ -8891,11 +8855,8 @@ transform = Transform3D(1.72165e-15, -5.90257e-15, -0.976966, 3.93866e-08, 0.553
 [node name="pillar_1_plainpillar_1_plain_tscn5" parent="." instance=ExtResource("125_ubknq")]
 transform = Transform3D(1.72165e-15, -5.90257e-15, -1.16312, 3.93866e-08, 0.553809, -1.23967e-14, 0.901061, -2.42078e-08, 2.22237e-15, 10.367, 1.4, 21.981)
 
-[node name="pillar_1_plainpillar_1_plain_tscn3" parent="." instance=ExtResource("125_ubknq")]
-transform = Transform3D(1.72165e-15, -5.90257e-15, -0.976966, 3.93866e-08, 0.553809, -1.04126e-14, 0.901061, -2.42078e-08, 1.86668e-15, 21.0792, 1.4, 21.981)
-
 [node name="pillar_1_plainpillar_1_plain_tscn4" parent="." instance=ExtResource("125_ubknq")]
-transform = Transform3D(1.72165e-15, -5.90257e-15, -0.534844, 3.93866e-08, 0.553809, -5.70044e-15, 0.901061, -2.42078e-08, 1.02192e-15, 23.9702, 1.4, 21.981)
+transform = Transform3D(1.72165e-15, -5.90257e-15, -0.802761, 3.93866e-08, 0.553809, -8.55593e-15, 0.901061, -2.42078e-08, 1.53383e-15, 23.2174, 1.4, 21.9548)
 
 [node name="ArmchairQuequis_House_Props_tscn5" parent="." instance=ExtResource("242_bpu8w")]
 transform = Transform3D(1, -1.50996e-07, 6.99382e-07, 1.50996e-07, 1, 2.71051e-20, 6.99382e-07, -1.05604e-13, -1, 10.882, 0.014189, 19.5513)
@@ -8972,70 +8933,70 @@ transform = Transform3D(-0.0819697, 0, 0.183945, 0, 0.201382, 0, -0.183945, 0, -
 [node name="Sauce_01Quequis_House_Props_tscn" parent="." instance=ExtResource("252_f3tk2")]
 transform = Transform3D(-1.37881e-09, 0, 0.0315436, 0, 0.0315436, 0, -0.0315436, 0, -1.37881e-09, 25.3209, 0.966131, 20.9741)
 
-[node name="Sauce_02Quequis_House_Props_tscn2" type="Node3D" parent="." instance=ExtResource("69_2pc7m")]
+[node name="Sauce_02Quequis_House_Props_tscn2" parent="." instance=ExtResource("69_2pc7m")]
 transform = Transform3D(-0.0939474, 0, 0.20274, 0, 0.223449, 0, -0.20274, 0, -0.0939474, 25.4331, 0.966131, 21.1281)
 
-[node name="Washbasin_MQuequis_House_Props_tscn" type="Node3D" parent="." instance=ExtResource("253_eutd4")]
+[node name="Washbasin_MQuequis_House_Props_tscn" parent="." instance=ExtResource("253_eutd4")]
 transform = Transform3D(0.904051, 0, -1.58069e-07, 0, 0.904051, 0, 1.58069e-07, 0, 0.904051, 18.5409, 0.528793, 25.8708)
 
-[node name="Washbasin_MQuequis_House_Props_tscn2" type="Node3D" parent="." instance=ExtResource("253_eutd4")]
+[node name="Washbasin_MQuequis_House_Props_tscn2" parent="." instance=ExtResource("253_eutd4")]
 transform = Transform3D(0.904051, 0, -1.58069e-07, 0, 0.904051, 0, 1.58069e-07, 0, 0.904051, 18.0315, 0.530096, 25.8679)
 
-[node name="ketchupQuequis_House_Props_tscn3" type="Node3D" parent="." instance=ExtResource("247_epueh")]
+[node name="ketchupQuequis_House_Props_tscn3" parent="." instance=ExtResource("247_epueh")]
 transform = Transform3D(0.197861, 0, -0.00621816, 0, 0.197959, 0, 0.00621816, 0, 0.197861, 22.7778, 0.943453, 13.9622)
 
-[node name="ketchupQuequis_House_Props_tscn4" type="Node3D" parent="." instance=ExtResource("247_epueh")]
+[node name="ketchupQuequis_House_Props_tscn4" parent="." instance=ExtResource("247_epueh")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 22.9896, 0.943454, 10.0549)
 
-[node name="ketchupQuequis_House_Props_tscn5" type="Node3D" parent="." instance=ExtResource("247_epueh")]
+[node name="ketchupQuequis_House_Props_tscn5" parent="." instance=ExtResource("247_epueh")]
 transform = Transform3D(-0.130475, 5.74252e-08, -0.148876, 5.74252e-08, 0.197959, 2.60304e-08, 0.148876, -2.60303e-08, -0.130475, 23.0568, 0.943453, 18.1798)
 
-[node name="mustardQuequis_House_Props_tscn3" type="Node3D" parent="." instance=ExtResource("246_2o8qe")]
+[node name="mustardQuequis_House_Props_tscn3" parent="." instance=ExtResource("246_2o8qe")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 23.1827, 0.943453, 18.0657)
 
-[node name="mustardQuequis_House_Props_tscn4" type="Node3D" parent="." instance=ExtResource("246_2o8qe")]
+[node name="mustardQuequis_House_Props_tscn4" parent="." instance=ExtResource("246_2o8qe")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 22.8141, 0.943453, 14.0682)
 
-[node name="mustardQuequis_House_Props_tscn5" type="Node3D" parent="." instance=ExtResource("246_2o8qe")]
-transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 22.9827, 0.943454, 9.77905)
+[node name="mustardQuequis_House_Props_tscn5" parent="." instance=ExtResource("246_2o8qe")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 23.042, 0.943454, 10.1642)
 
-[node name="soap_dispenserQuequis_House_Props_tscn" type="Node3D" parent="." instance=ExtResource("254_y4tos")]
+[node name="soap_dispenserQuequis_House_Props_tscn" parent="." instance=ExtResource("254_y4tos")]
 transform = Transform3D(0.531188, -2.02987e-14, -1.85752e-07, -1.21792e-14, 0.531188, -9.28759e-08, 1.85752e-07, 9.28759e-08, 0.531188, 17.3956, 1.42884, 25.8628)
 
 [node name="wall_1wall_1_tscn157" parent="." instance=ExtResource("5_bq7jo")]
 transform = Transform3D(0.509363, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3, 0, 19.5266)
 
-[node name="wall_1wall_1_tscn154" type="Node3D" parent="." instance=ExtResource("5_bq7jo")]
+[node name="wall_1wall_1_tscn154" parent="." instance=ExtResource("5_bq7jo")]
 transform = Transform3D(0.62118, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3, 0, 21.2)
 
 [node name="wall_1wall_1_tscn158" parent="." instance=ExtResource("5_bq7jo")]
 transform = Transform3D(0.62118, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1, 0, 21.2)
 
-[node name="wall_1wall_1_tscn155" type="Node3D" parent="." instance=ExtResource("5_bq7jo")]
+[node name="wall_1wall_1_tscn155" parent="." instance=ExtResource("5_bq7jo")]
 transform = Transform3D(0.62118, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3, 0, 23)
 
 [node name="wall_1wall_1_tscn159" parent="." instance=ExtResource("5_bq7jo")]
 transform = Transform3D(0.62118, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.05659, 0, 23)
 
-[node name="wall_1wall_1_tscn156" type="Node3D" parent="." instance=ExtResource("5_bq7jo")]
+[node name="wall_1wall_1_tscn156" parent="." instance=ExtResource("5_bq7jo")]
 transform = Transform3D(-1.63411e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 0.373842, -4.37114e-08, 1.91069e-15, 4.1, 0, 25.5)
 
-[node name="pillar_1_plainpillar_1_plain_tscn6" type="Node3D" parent="." instance=ExtResource("125_ubknq")]
+[node name="pillar_1_plainpillar_1_plain_tscn6" parent="." instance=ExtResource("125_ubknq")]
 transform = Transform3D(1, 0, 0, 0, -2.06668e-08, -1, 0, 0.472801, -4.37114e-08, 4.1, 0, 19.5266)
 
-[node name="pillar_1_plainpillar_1_plain_tscn7" type="Node3D" parent="." instance=ExtResource("125_ubknq")]
+[node name="pillar_1_plainpillar_1_plain_tscn7" parent="." instance=ExtResource("125_ubknq")]
 transform = Transform3D(1, 0, 0, 0, -2.06668e-08, -1, 0, 0.472801, -4.37114e-08, 4.1, 0, 21.2)
 
 [node name="pillar_1_plainpillar_1_plain_tscn11" parent="." instance=ExtResource("125_ubknq")]
 transform = Transform3D(1, 0, 0, 0, -2.06668e-08, -1, 0, 0.472801, -4.37114e-08, -0.119568, 0, 21.2)
 
-[node name="pillar_1_plainpillar_1_plain_tscn8" type="Node3D" parent="." instance=ExtResource("125_ubknq")]
+[node name="pillar_1_plainpillar_1_plain_tscn8" parent="." instance=ExtResource("125_ubknq")]
 transform = Transform3D(1, 0, 0, 0, -2.06668e-08, -1, 0, 0.472801, -4.37114e-08, 4.1, 0, 23)
 
 [node name="pillar_1_plainpillar_1_plain_tscn10" parent="." instance=ExtResource("125_ubknq")]
 transform = Transform3D(1, 0, 0, 0, -2.06668e-08, -1, 0, 0.472801, -4.37114e-08, -0.147715, 0, 23)
 
-[node name="pillar_1_plainpillar_1_plain_tscn9" type="Node3D" parent="." instance=ExtResource("125_ubknq")]
+[node name="pillar_1_plainpillar_1_plain_tscn9" parent="." instance=ExtResource("125_ubknq")]
 transform = Transform3D(1, 0, 0, 0, -2.06668e-08, -1, 0, 0.472801, -4.37114e-08, 4.05, 0, 24.75)
 
 [node name="wall_1wall_1_tscn160" parent="." instance=ExtResource("5_bq7jo")]
@@ -9044,31 +9005,31 @@ transform = Transform3D(-1.63411e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 0.37
 [node name="pillar_1_plainpillar_1_plain_tscn12" parent="." instance=ExtResource("125_ubknq")]
 transform = Transform3D(1, 0, 0, 0, -2.06668e-08, -1, 0, 0.472801, -4.37114e-08, -0.142767, 0, 24.75)
 
-[node name="wall_element_2_bottomwall_element_2_bottom_tscn" type="Node3D" parent="." instance=ExtResource("255_faerh")]
+[node name="wall_element_2_bottomwall_element_2_bottom_tscn" parent="." instance=ExtResource("255_faerh")]
 transform = Transform3D(-2.07307e-08, -0.474262, 2.07307e-08, 0, -2.07307e-08, -0.474262, 0.474262, -2.07307e-08, 9.06166e-16, 1.95, -1.19209e-07, 18.55)
 
-[node name="wall_element_2_bottomwall_element_2_bottom_tscn2" type="Node3D" parent="." instance=ExtResource("255_faerh")]
+[node name="wall_element_2_bottomwall_element_2_bottom_tscn2" parent="." instance=ExtResource("255_faerh")]
 transform = Transform3D(-2.07307e-08, -0.474262, 2.07307e-08, 0, -2.07307e-08, -0.474262, 0.474262, -2.07307e-08, 9.06166e-16, 1.95, 0, 19.5456)
 
-[node name="wall_element_2_bottomwall_element_2_bottom_tscn3" type="Node3D" parent="." instance=ExtResource("255_faerh")]
+[node name="wall_element_2_bottomwall_element_2_bottom_tscn3" parent="." instance=ExtResource("255_faerh")]
 transform = Transform3D(-2.07307e-08, -0.474262, 2.07307e-08, 0, -2.07307e-08, -0.474262, 0.474262, -2.07307e-08, 9.06166e-16, 1.95, 1.19209e-07, 20.5)
 
-[node name="drain_cover_3drain_cover_3_tscn" type="Node3D" parent="." instance=ExtResource("256_ikgcq")]
+[node name="drain_cover_3drain_cover_3_tscn" parent="." instance=ExtResource("256_ikgcq")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.75, 0, 18.55)
 
-[node name="drain_cover_3drain_cover_3_tscn2" type="Node3D" parent="." instance=ExtResource("256_ikgcq")]
+[node name="drain_cover_3drain_cover_3_tscn2" parent="." instance=ExtResource("256_ikgcq")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.75, -1.19209e-07, 19.5456)
 
-[node name="drain_cover_3drain_cover_3_tscn3" type="Node3D" parent="." instance=ExtResource("256_ikgcq")]
+[node name="drain_cover_3drain_cover_3_tscn3" parent="." instance=ExtResource("256_ikgcq")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.75, 0, 20.5)
 
-[node name="pillar_1pillar_1_tscn109" type="Node3D" parent="." instance=ExtResource("9_2c055")]
+[node name="pillar_1pillar_1_tscn109" parent="." instance=ExtResource("9_2c055")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2, 0, 18)
 
-[node name="pillar_1pillar_1_tscn110" type="Node3D" parent="." instance=ExtResource("9_2c055")]
+[node name="pillar_1pillar_1_tscn110" parent="." instance=ExtResource("9_2c055")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6, 0, 18)
 
-[node name="pipe_1_shortpipe_1_short_tscn3" type="Node3D" parent="." instance=ExtResource("95_i3aag")]
+[node name="pipe_1_shortpipe_1_short_tscn3" parent="." instance=ExtResource("95_i3aag")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1.42725, 0, 1, -6.23872e-08, 1.9, 1.3614, 18.55)
 
 [node name="pipe_1_shortpipe_1_short_tscn4" parent="." instance=ExtResource("95_i3aag")]
@@ -9077,41 +9038,841 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1.42725, 0, 1, -6.23872e-08, 
 [node name="pipe_1_shortpipe_1_short_tscn5" parent="." instance=ExtResource("95_i3aag")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1.42725, 0, 1, -6.23872e-08, 1.9, 1.3614, 20.5286)
 
-[node name="pillar_1pillar_1_tscn111" type="Node3D" parent="." instance=ExtResource("9_2c055")]
+[node name="pillar_1pillar_1_tscn111" parent="." instance=ExtResource("9_2c055")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2, 0, 14)
 
-[node name="pillar_1pillar_1_tscn112" type="Node3D" parent="." instance=ExtResource("9_2c055")]
+[node name="pillar_1pillar_1_tscn112" parent="." instance=ExtResource("9_2c055")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2, 0, 14)
 
-[node name="pillar_1pillar_1_tscn113" type="Node3D" parent="." instance=ExtResource("9_2c055")]
+[node name="pillar_1pillar_1_tscn113" parent="." instance=ExtResource("9_2c055")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6, 0, 14)
 
-[node name="pillar_1pillar_1_tscn114" type="Node3D" parent="." instance=ExtResource("9_2c055")]
+[node name="pillar_1pillar_1_tscn114" parent="." instance=ExtResource("9_2c055")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1.84264, 0, 1, -8.05444e-08, 6, 3, 14)
 
-[node name="pillar_1pillar_1_tscn115" type="Node3D" parent="." instance=ExtResource("9_2c055")]
+[node name="pillar_1pillar_1_tscn115" parent="." instance=ExtResource("9_2c055")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -2.18803, 0, 1, -9.5642e-08, 2, 3, 14)
 
-[node name="pillar_1pillar_1_tscn116" type="Node3D" parent="." instance=ExtResource("9_2c055")]
+[node name="pillar_1pillar_1_tscn116" parent="." instance=ExtResource("9_2c055")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1.80607, 0, 1, -7.89461e-08, -2, 3, 14)
 
-[node name="wall_1wall_1_tscn153" type="Node3D" parent="." instance=ExtResource("5_bq7jo")]
+[node name="wall_1wall_1_tscn153" parent="." instance=ExtResource("5_bq7jo")]
 transform = Transform3D(0.707107, 0.707107, -1.20591e-08, 0, -4.37114e-08, -0.390154, -0.707107, 0.707107, -1.20591e-08, 16.5, 0, 12.5)
 
-[node name="wall_1wall_1_tscn161" type="Node3D" parent="." instance=ExtResource("5_bq7jo")]
+[node name="wall_1wall_1_tscn161" parent="." instance=ExtResource("5_bq7jo")]
 transform = Transform3D(-2.70702e-07, -1, 1.70542e-08, 0, -4.37114e-08, -0.390154, 0.60825, -4.45051e-07, 1.49092e-15, 15.1077, 0, 15.0758)
 
-[node name="wall_1wall_1_tscn162" type="Node3D" parent="." instance=ExtResource("5_bq7jo")]
+[node name="wall_1wall_1_tscn162" parent="." instance=ExtResource("5_bq7jo")]
 transform = Transform3D(-0.60825, 4.88762e-07, -2.23638e-15, 0, -4.37114e-08, -0.390154, -2.9729e-07, -1, 1.70542e-08, 19.15, 0, 11.1)
 
-[node name="pillar_1pillar_1_tscn117" type="Node3D" parent="." instance=ExtResource("9_2c055")]
+[node name="pillar_1pillar_1_tscn117" parent="." instance=ExtResource("9_2c055")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 15.1, 0, 16.3)
 
-[node name="pillar_1pillar_1_tscn118" type="Node3D" parent="." instance=ExtResource("9_2c055")]
+[node name="pillar_1pillar_1_tscn118" parent="." instance=ExtResource("9_2c055")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 20.55, 0, 11.1)
 
-[node name="pillar_1pillar_1_tscn119" type="Node3D" parent="." instance=ExtResource("9_2c055")]
+[node name="pillar_1pillar_1_tscn119" parent="." instance=ExtResource("9_2c055")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 15.1, 0, 13.95)
 
-[node name="pillar_1pillar_1_tscn120" type="Node3D" parent="." instance=ExtResource("9_2c055")]
+[node name="pillar_1pillar_1_tscn120" parent="." instance=ExtResource("9_2c055")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 17.95, 0, 11.15)
+
+[node name="pillar_1_plainpillar_1_plain_tscn13" type="Node3D" parent="." instance=ExtResource("125_ubknq")]
+transform = Transform3D(-8.42937e-08, -0.721843, 0, 1, -1.29076e-07, 0, 0, 0, 0.756096, 15.0995, 1.18313, 16.2926)
+
+[node name="pillar_1_plainpillar_1_plain_tscn14" parent="." instance=ExtResource("125_ubknq")]
+transform = Transform3D(3.68459e-15, 3.15528e-08, -0.756096, 1, -1.29076e-07, 0, -8.42937e-08, -0.721843, -3.305e-08, 18.1198, 1.18313, 11.0785)
+
+[node name="pillar_1_plainpillar_1_plain_tscn15" type="Node3D" parent="." instance=ExtResource("125_ubknq")]
+transform = Transform3D(-5.96046e-08, -0.57645, -0.952873, 1, -1.45773e-07, 0, -5.96046e-08, -0.57645, 0.952873, 15.1796, 1.18313, 13.9325)
+
+[node name="ArmchairQuequis_House_Props_tscn7" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+transform = Transform3D(-0.707107, 1.0677e-07, -0.707107, 1.50996e-07, 1, 0, -0.707107, 1.0677e-07, 0.707107, 16.4714, 0.0420636, 13.9309)
+
+[node name="ArmchairQuequis_House_Props_tscn8" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+transform = Transform3D(0.707107, -1.0677e-07, 0.707107, 1.50996e-07, 1, 0, 0.707107, -1.0677e-07, -0.707107, 18, 0.0420635, 12.4994)
+
+[node name="ArmchairQuequis_House_Props_tscn9" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+transform = Transform3D(1, -1.50996e-07, 2.38419e-07, 1.50996e-07, 1, 0, 2.38419e-07, -3.55271e-14, -1, 16.0387, 0.0420635, 14.7868)
+
+[node name="ArmchairQuequis_House_Props_tscn10" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+transform = Transform3D(-1, 1.50996e-07, -2.38419e-07, 1.50996e-07, 1, 0, -2.38419e-07, 4.26326e-14, 1, 16.0207, 0.0420637, 16.5047)
+
+[node name="ArmchairQuequis_House_Props_tscn11" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+transform = Transform3D(2.8213e-07, -4.92328e-14, -1, 1.50996e-07, 1, 0, -1, 1.50996e-07, -2.8213e-07, 18.9, 0.0420637, 12.1)
+
+[node name="ArmchairQuequis_House_Props_tscn12" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+transform = Transform3D(-2.38419e-07, 4.9738e-14, 1, 1.50996e-07, 1, 0, 1, -1.50996e-07, 2.38419e-07, 20.75, 0.0420635, 12.1)
+
+[node name="TableQuequis_House_Props_tscn7" type="Node3D" parent="." instance=ExtResource("20_7xy12")]
+transform = Transform3D(0.0407888, 0, 0, 0, 0.0407888, 0, 0, 0, 0.0407888, 16.05, 0.0420634, 15.6)
+
+[node name="TableQuequis_House_Props_tscn8" type="Node3D" parent="." instance=ExtResource("20_7xy12")]
+transform = Transform3D(0.028842, 0, -0.028842, 0, 0.0407888, 0, 0.028842, 0, 0.028842, 17.2504, 0.0420634, 13.2258)
+
+[node name="TableQuequis_House_Props_tscn9" type="Node3D" parent="." instance=ExtResource("20_7xy12")]
+transform = Transform3D(-1.86265e-09, 0, -0.0407888, 0, 0.0407888, 0, 0.0407888, 0, -1.86265e-09, 19.8, 0.0420636, 12.05)
+
+[node name="_Node3D_125" parent="." instance=ExtResource("257_85jn0")]
+transform = Transform3D(1.13722, 0, 1.73, 0, 5.84873, 0, -1.73, 0, 1.13722, 15.9441, 0.330391, 14.1822)
+
+[node name="_Node3D_126" parent="." instance=ExtResource("257_85jn0")]
+transform = Transform3D(2.14671, 0, -0.491937, 0, 6.22178, 0, 0.491937, 0, 2.14671, 18.3015, 0.660497, 11.9251)
+
+[node name="Bush_020Quequis_House_Props_tscn2" type="Node3D" parent="." instance=ExtResource("228_d11fp")]
+transform = Transform3D(-7.03272e-08, 0, 1.6089, 0, 1.6089, 0, -1.6089, 0, -7.03272e-08, 16.2472, 1.40447, 14.3595)
+
+[node name="Bush_020Quequis_House_Props_tscn3" type="Node3D" parent="." instance=ExtResource("228_d11fp")]
+transform = Transform3D(0, 0, -1.6089, 0, 1.6089, 0, 1.6089, 0, 0, 18.482, 1.448, 12.3176)
+
+[node name="NapkinholderQuequis_House_Props_tscn7" type="Node3D" parent="." instance=ExtResource("245_byecq")]
+transform = Transform3D(0.106864, 0, 0, 0, 0.106864, 0, 0, 0, 0.106864, 15.4871, 0.985516, 15.6459)
+
+[node name="NapkinholderQuequis_House_Props_tscn8" type="Node3D" parent="." instance=ExtResource("245_byecq")]
+transform = Transform3D(-0.0755643, 0, 0.0755643, 0, 0.106864, 0, -0.0755643, 0, -0.0755643, 16.7944, 0.985516, 12.8072)
+
+[node name="NapkinholderQuequis_House_Props_tscn9" type="Node3D" parent="." instance=ExtResource("245_byecq")]
+transform = Transform3D(-4.67117e-09, 0, 0.106864, 0, 0.106864, 0, -0.106864, 0, -4.67117e-09, 19.81, 0.985517, 11.373)
+
+[node name="ketchupQuequis_House_Props_tscn6" type="Node3D" parent="." instance=ExtResource("247_epueh")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 19.6219, 0.985517, 11.426)
+
+[node name="ketchupQuequis_House_Props_tscn7" type="Node3D" parent="." instance=ExtResource("247_epueh")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 16.9204, 0.985516, 12.8306)
+
+[node name="ketchupQuequis_House_Props_tscn8" type="Node3D" parent="." instance=ExtResource("247_epueh")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 16.0739, 0.985516, 15.823)
+
+[node name="mustardQuequis_House_Props_tscn6" type="Node3D" parent="." instance=ExtResource("246_2o8qe")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 15.5772, 0.985516, 15.4423)
+
+[node name="mustardQuequis_House_Props_tscn7" type="Node3D" parent="." instance=ExtResource("246_2o8qe")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 16.8776, 0.985516, 12.9364)
+
+[node name="mustardQuequis_House_Props_tscn8" type="Node3D" parent="." instance=ExtResource("246_2o8qe")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 19.7569, 0.985517, 11.5518)
+
+[node name="PepperQuequis_House_Props_tscn" type="Node3D" parent="." instance=ExtResource("258_3rbuk")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 17.0672, 0.985516, 13.016)
+
+[node name="PepperQuequis_House_Props_tscn2" type="Node3D" parent="." instance=ExtResource("258_3rbuk")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 16.0455, 0.985516, 15.6989)
+
+[node name="PepperQuequis_House_Props_tscn3" type="Node3D" parent="." instance=ExtResource("258_3rbuk")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 19.8785, 0.985517, 11.4389)
+
+[node name="SaltQuequis_House_Props_tscn" type="Node3D" parent="." instance=ExtResource("259_2hv6b")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 19.9657, 0.985517, 11.4426)
+
+[node name="SaltQuequis_House_Props_tscn2" type="Node3D" parent="." instance=ExtResource("259_2hv6b")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 17.1569, 0.985516, 13.0847)
+
+[node name="SaltQuequis_House_Props_tscn3" type="Node3D" parent="." instance=ExtResource("259_2hv6b")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 15.4801, 0.985516, 15.8483)
+
+[node name="SaltQuequis_House_Props_tscn4" type="Node3D" parent="." instance=ExtResource("259_2hv6b")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 10.5064, 0.985517, 18.1028)
+
+[node name="SaltQuequis_House_Props_tscn5" type="Node3D" parent="." instance=ExtResource("259_2hv6b")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 10.7868, 0.985516, 20.8295)
+
+[node name="SaltQuequis_House_Props_tscn6" type="Node3D" parent="." instance=ExtResource("259_2hv6b")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 10.5482, 0.985516, 15.4342)
+
+[node name="PepperQuequis_House_Props_tscn4" type="Node3D" parent="." instance=ExtResource("258_3rbuk")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 10.5788, 0.985516, 15.3467)
+
+[node name="PepperQuequis_House_Props_tscn5" type="Node3D" parent="." instance=ExtResource("258_3rbuk")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 10.8592, 0.985517, 18.0199)
+
+[node name="PepperQuequis_House_Props_tscn6" type="Node3D" parent="." instance=ExtResource("258_3rbuk")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 10.7342, 0.985516, 20.7699)
+
+[node name="SaltQuequis_House_Props_tscn7" type="Node3D" parent="." instance=ExtResource("259_2hv6b")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 25.1854, 0.966131, 20.9644)
+
+[node name="SaltQuequis_House_Props_tscn8" type="Node3D" parent="." instance=ExtResource("259_2hv6b")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 25.1394, 0.966131, 21.0634)
+
+[node name="PepperQuequis_House_Props_tscn7" type="Node3D" parent="." instance=ExtResource("258_3rbuk")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 25.1258, 0.966131, 20.841)
+
+[node name="PepperQuequis_House_Props_tscn8" type="Node3D" parent="." instance=ExtResource("258_3rbuk")]
+transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 25.0901, 0.966131, 20.9575)
+
+[node name="chair_1chair_1_tscn18" type="Node3D" parent="." instance=ExtResource("36_cqhj3")]
+transform = Transform3D(-1, 1.50996e-07, -6.60024e-15, 0, -4.37114e-08, -1, -1.50996e-07, -1, 4.37114e-08, 22.8927, 0.0420635, 18.8076)
+
+[node name="chair_1chair_1_tscn19" type="Node3D" parent="." instance=ExtResource("36_cqhj3")]
+transform = Transform3D(1, -3.49691e-07, 1.52855e-14, 0, -4.37114e-08, -1, 3.49691e-07, 1, -4.37114e-08, 22.8924, 0.0420632, 17.2595)
+
+[node name="chair_1chair_1_tscn20" type="Node3D" parent="." instance=ExtResource("36_cqhj3")]
+transform = Transform3D(-0.883305, -0.468796, 4.09835e-08, -2.04918e-08, -4.88122e-08, -1, 0.468796, -0.883305, 3.35097e-08, 23.0091, 0.0420635, 14.8132)
+
+[node name="chair_1chair_1_tscn21" type="Node3D" parent="." instance=ExtResource("36_cqhj3")]
+transform = Transform3D(0.71607, -0.698022, 1.42109e-14, -3.05115e-08, -3.13004e-08, -1, 0.698022, 0.71607, -4.37114e-08, 23.0706, 0.0420639, 13.2468)
+
+[node name="chair_1chair_1_tscn22" type="Node3D" parent="." instance=ExtResource("36_cqhj3")]
+transform = Transform3D(-0.187382, -0.982286, 3.47464e-08, 7.74256e-10, -3.55207e-08, -1, 0.982286, -0.187382, 7.41648e-09, 23.6383, 0.0420637, 10.232)
+
+[node name="chair_1chair_1_tscn23" type="Node3D" parent="." instance=ExtResource("36_cqhj3")]
+transform = Transform3D(-1, 8.66252e-07, 3.78651e-14, 0, -4.37114e-08, 1, 8.66252e-07, 1, 4.37114e-08, 23.0394, 1.5807, 9.61052)
+
+[node name="ArmchairQuequis_House_Props_tscn13" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+transform = Transform3D(-2.8213e-07, 5.63382e-14, 1, 1.50996e-07, 1, -1.37377e-14, 1, -1.50996e-07, 2.8213e-07, 25.7158, 0.0420635, 6.92677)
+
+[node name="ArmchairQuequis_House_Props_tscn14" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+transform = Transform3D(5.52335e-07, -9.7138e-14, -1, 1.50996e-07, 1, -1.37377e-14, -1, 1.50996e-07, -5.52335e-07, 23.7585, 0.0420636, 6.92198)
+
+[node name="TableQuequis_House_Props_tscn10" type="Node3D" parent="." instance=ExtResource("20_7xy12")]
+transform = Transform3D(-1.78294e-09, 0, -0.0407888, 0, 0.0407888, 0, 0.0407888, 0, -1.78294e-09, 24.6902, 0.0420634, 6.89042)
+
+[node name="ArmchairQuequis_House_Props_tscn15" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+transform = Transform3D(-7.58967e-07, 1.28339e-13, 1, 1.50996e-07, 1, -1.37377e-14, 1, -1.50996e-07, 7.58967e-07, 23.3337, 0.0420635, 6.91719)
+
+[node name="TableQuequis_House_Props_tscn11" type="Node3D" parent="." instance=ExtResource("20_7xy12")]
+transform = Transform3D(-1.78294e-09, 0, -0.0407888, 0, 0.0407888, 0, 0.0407888, 0, -1.78294e-09, 22.3189, 0.0420638, 7.02616)
+
+[node name="pillar_1pillar_1_tscn121" type="Node3D" parent="." instance=ExtResource("9_2c055")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 23.25, 0, 21.95)
+
+[node name="pillar_1pillar_1_tscn122" type="Node3D" parent="." instance=ExtResource("9_2c055")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 21.1, 0, 22)
+
+[node name="pills_bottle_1pills_bottle_1_tscn2" type="Node3D" parent="." instance=ExtResource("93_krxh6")]
+transform = Transform3D(0.960566, -0.278048, 1.21539e-08, 0, -4.37114e-08, -1, 0.278048, 0.960566, -4.19877e-08, 24.9618, 0.985516, 6.90729)
+
+[node name="pills_bottle_1pills_bottle_1_tscn5" type="Node3D" parent="." instance=ExtResource("93_krxh6")]
+transform = Transform3D(0.525007, 0.851097, -3.72027e-08, 0, -4.37114e-08, -1, -0.851097, 0.525007, -2.29488e-08, 24.9114, 0.985516, 6.75949)
+
+[node name="cash_1cash_1_tscn15" type="Node3D" parent="." instance=ExtResource("103_mdbv4")]
+transform = Transform3D(0.898889, -0.438175, 1.91532e-08, 0, -4.37114e-08, -1, 0.438175, 0.898889, -3.92917e-08, 24.5516, 0.985516, 6.72884)
+
+[node name="cash_1cash_1_tscn16" type="Node3D" parent="." instance=ExtResource("103_mdbv4")]
+transform = Transform3D(0.985776, 0.168059, -4.70348e-10, 6.33092e-09, -3.99336e-08, -1, -0.168059, 0.985776, -4.04297e-08, 24.523, 1.02698, 6.72755)
+
+[node name="electrical_outlet_1electrical_outlet_1_tscn6" type="Node3D" parent="." instance=ExtResource("56_j1mll")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 25.9399, 0.468262, 8.15496)
+
+[node name="electrical_outlet_1electrical_outlet_1_tscn7" type="Node3D" parent="." instance=ExtResource("56_j1mll")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 25.9344, 0.411918, 13.8754)
+
+[node name="electrical_outlet_1electrical_outlet_1_tscn8" type="Node3D" parent="." instance=ExtResource("56_j1mll")]
+transform = Transform3D(-1, 1.50996e-07, -6.60024e-15, 0, -4.37114e-08, -1, -1.50996e-07, -1, 4.37114e-08, 24.1012, 0.483193, 21.9323)
+
+[node name="electrical_outlet_1electrical_outlet_1_tscn9" type="Node3D" parent="." instance=ExtResource("56_j1mll")]
+transform = Transform3D(-1, 1.50996e-07, -6.60024e-15, 0, -4.37114e-08, -1, -1.50996e-07, -1, 4.37114e-08, 19.5236, 0.475789, 21.937)
+
+[node name="electrical_outlet_1electrical_outlet_1_tscn10" type="Node3D" parent="." instance=ExtResource("56_j1mll")]
+transform = Transform3D(-1, 1.50996e-07, -6.60024e-15, 0, -4.37114e-08, -1, -1.50996e-07, -1, 4.37114e-08, 12.5807, 0.471826, 21.9421)
+
+[node name="electrical_outlet_1electrical_outlet_1_tscn11" type="Node3D" parent="." instance=ExtResource("56_j1mll")]
+transform = Transform3D(1, -1.74846e-07, 7.64274e-15, 0, -4.37114e-08, -1, 1.74846e-07, 1, -4.37114e-08, 19.5091, 0.492576, 22.1162)
+
+[node name="electrical_outlet_1electrical_outlet_1_tscn12" type="Node3D" parent="." instance=ExtResource("56_j1mll")]
+transform = Transform3D(1, -1.74846e-07, 7.64274e-15, 0, -4.37114e-08, -1, 1.74846e-07, 1, -4.37114e-08, 24.3318, 0.48752, 22.1164)
+
+[node name="electrical_outlet_1electrical_outlet_1_tscn13" type="Node3D" parent="." instance=ExtResource("56_j1mll")]
+transform = Transform3D(-1, 1.50996e-07, -6.60024e-15, 0, -4.37114e-08, -1, -1.50996e-07, -1, 4.37114e-08, 16.0944, 0.432005, 25.9391)
+
+[node name="carpet_1carpet_1_tscn4" type="Node3D" parent="." instance=ExtResource("62_4h6dw")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 20.0135, -2.95457e-09, -0.324364)
+
+[node name="TableQuequis_House_Props_tscn12" type="Node3D" parent="." instance=ExtResource("20_7xy12")]
+transform = Transform3D(0.0407888, 0, -3.64558e-09, 0, 0.0407888, 0, 3.64558e-09, 0, 0.0407888, 19.8211, 0.0420634, 18.0322)
+
+[node name="chair_1chair_1_tscn24" type="Node3D" parent="." instance=ExtResource("36_cqhj3")]
+transform = Transform3D(-0.984938, 0.172897, -1.51151e-08, 7.55753e-09, -4.43696e-08, -1, -0.172897, -0.984938, 4.23948e-08, 19.5359, 0.0420635, 18.8073)
+
+[node name="chair_1chair_1_tscn25" type="Node3D" parent="." instance=ExtResource("36_cqhj3")]
+transform = Transform3D(3.93074e-07, 0.433596, -0.901107, 1, -9.97386e-07, -4.37113e-08, -9.17705e-07, -0.901107, -0.433596, 19.5138, 0.381549, 16.8176)
+
+[node name="vending_machine_1vending_machine_1_tscn10" type="Node3D" parent="." instance=ExtResource("42_0kw4i")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 25.5848, 0.0420636, 10.9875)
+
+[node name="vending_machine_1vending_machine_1_tscn11" type="Node3D" parent="." instance=ExtResource("42_0kw4i")]
+transform = Transform3D(0.0755227, -0.997142, 4.68878e-08, 1.24838e-10, -4.70125e-08, -1, 0.997142, 0.0755227, -3.42605e-09, 25.593, 0.0420635, 12.0657)
+
+[node name="vending_machine_1vending_machine_1_tscn12" type="Node3D" parent="." instance=ExtResource("42_0kw4i")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 25.6496, 0.0420634, 13.1325)
+
+[node name="ArmchairQuequis_House_Props_tscn16" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+transform = Transform3D(1, -1.50996e-07, 8.9409e-07, 1.50996e-07, 1, -1.37377e-14, 8.9409e-07, -1.48741e-13, -1, 14.0557, 0.0420633, 14.2812)
+
+[node name="ArmchairQuequis_House_Props_tscn17" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+transform = Transform3D(-1, 1.50996e-07, -1.10467e-06, 1.50996e-07, 1, -1.37377e-14, -1.10467e-06, 1.80538e-13, 1, 14.125, 0.0420635, 16.5052)
+
+[node name="TableQuequis_House_Props_tscn13" type="Node3D" parent="." instance=ExtResource("20_7xy12")]
+transform = Transform3D(0.0407888, 0, -3.64558e-09, 0, 0.0407888, 0, 3.64558e-09, 0, 0.0407888, 14.0945, 0.0420635, 15.3288)
+
+[node name="trash_canQuequis_House_Props_tscn4" type="Node3D" parent="." instance=ExtResource("99_t04p8")]
+transform = Transform3D(0.676719, 0, 0, 0, 0.676719, 0, 0, 0, 0.676719, 15.0549, 0.0420637, 17.1058)
+
+[node name="trash_can_01Quequis_House_Props_tscn4" type="Node3D" parent="." instance=ExtResource("43_3pmhj")]
+transform = Transform3D(0.492345, 0, 0, 0, 0.492345, 0, 0, 0, 0.492345, 5.58481, -3.46371e-07, -19.4428)
+
+[node name="catwalk_1catwalk_1_tscn35" type="Node3D" parent="." instance=ExtResource("19_wlggv")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12, 5, -27)
+
+[node name="catwalk_1catwalk_1_tscn36" type="Node3D" parent="." instance=ExtResource("19_wlggv")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8, 5, -27)
+
+[node name="catwalk_1catwalk_1_tscn37" type="Node3D" parent="." instance=ExtResource("19_wlggv")]
+transform = Transform3D(1.2915, 0, 4.37114e-08, 5.64534e-08, 1.91069e-15, -1, 0, 1, 1.91069e-15, 0.549708, 4.07475, -27)
+
+[node name="catwalk_1catwalk_1_tscn38" type="Node3D" parent="." instance=ExtResource("19_wlggv")]
+transform = Transform3D(7.19937e-08, -1, -5.12889e-08, -0.482402, -3.09086e-08, -0.586677, 0.482402, 1.18331e-07, -0.586677, 27, 3.99534, -14.5134)
+
+[node name="catwalk_1catwalk_1_tscn39" type="Node3D" parent="." instance=ExtResource("19_wlggv")]
+transform = Transform3D(-5.1791e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1.18484, -4.37114e-08, 1.91069e-15, 27, 3.07367, -11.682)
+
+[node name="catwalk_1catwalk_1_tscn5" type="Node3D" parent="." instance=ExtResource("19_wlggv")]
+transform = Transform3D(1.3394e-07, -1, -6.18172e-08, -0.897483, -3.09086e-08, -0.707107, 0.897483, 1.18331e-07, -0.707107, 27, 1.5, 15.5)
+
+[node name="catwalk_1catwalk_1_tscn7" parent="." instance=ExtResource("19_wlggv")]
+transform = Transform3D(1.3394e-07, -1, 6.18172e-08, -0.897483, -3.09086e-08, 0.707107, -0.897483, -1.18331e-07, -0.707107, 27, 1.5, 7.91887)
+
+[node name="catwalk_1catwalk_1_tscn8" type="Node3D" parent="." instance=ExtResource("19_wlggv")]
+transform = Transform3D(-4.56197e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1.04366, -4.37114e-08, 1.91069e-15, 26.9944, 3.27241, 11.7058)
+
+[node name="catwalk_1catwalk_1_tscn" type="Node3D" parent="." instance=ExtResource("19_wlggv")]
+transform = Transform3D(1.39943e-07, -1, -6.42904e-08, -0.937705, -3.09086e-08, -0.735396, 0.937705, 1.18331e-07, -0.735396, 27, 1.23044, -7.45475)
+
+[node name="pillar_rgx_1pillar_rgx_1_tscn5" type="Node3D" parent="." instance=ExtResource("235_f34o4")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -18, 5, -10)
+
+[node name="wall_1_plainwall_1_plain_tscn16" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -18, 6, 24)
+
+[node name="wall_1_plainwall_1_plain_tscn17" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, -20, 6, 26)
+
+[node name="wall_1_plainwall_1_plain_tscn18" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, -24, 6, 26)
+
+[node name="wall_1_plainwall_1_plain_tscn19" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+transform = Transform3D(1.31134e-07, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 1.31134e-07, -5.73206e-15, -26, 6, 24)
+
+[node name="wall_1_plainwall_1_plain_tscn20" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+transform = Transform3D(-2.18557e-07, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -2.18557e-07, 9.55343e-15, -22, 6, 24)
+
+[node name="wall_1_plainwall_1_plain_tscn21" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+transform = Transform3D(-1, 2.62268e-07, -1.14641e-14, 0, -4.37114e-08, -1, -2.62268e-07, -1, 4.37114e-08, -24, 8, 22)
+
+[node name="wall_1_plainwall_1_plain_tscn22" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+transform = Transform3D(-1, 2.62268e-07, -1.14641e-14, 0, -4.37114e-08, -1, -2.62268e-07, -1, 4.37114e-08, -20, 8, 22)
+
+[node name="wall_1_plainwall_1_plain_tscn23" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+transform = Transform3D(3.0598e-07, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 3.0598e-07, -1.33748e-14, -26, 8, 24)
+
+[node name="wall_1_plainwall_1_plain_tscn24" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+transform = Transform3D(1, -3.49691e-07, 1.52855e-14, 0, -4.37114e-08, -1, 3.49691e-07, 1, -4.37114e-08, -24, 8, 26)
+
+[node name="wall_1_plainwall_1_plain_tscn25" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+transform = Transform3D(1, -3.49691e-07, 1.52855e-14, 0, -4.37114e-08, -1, 3.49691e-07, 1, -4.37114e-08, -20, 8, 26)
+
+[node name="wall_1_plainwall_1_plain_tscn26" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+transform = Transform3D(-3.93403e-07, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -3.93403e-07, 1.71962e-14, -18, 8, 24)
+
+[node name="floor_ceiling_hr_1floor_ceiling_hr_1_tscn106" type="Node3D" parent="." instance=ExtResource("125_c2emj")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -20, 11, 24)
+
+[node name="floor_ceiling_hr_1floor_ceiling_hr_1_tscn109" type="Node3D" parent="." instance=ExtResource("125_c2emj")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -24, 11, 24)
+
+[node name="wall_1_plainwall_1_plain_tscn27" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+transform = Transform3D(-3.93403e-07, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -3.93403e-07, 1.71962e-14, -22, 9, 24)
+
+[node name="walkie_talkie_1walkie_talkie_1_tscn2" type="Node3D" parent="." instance=ExtResource("92_hxxpw")]
+transform = Transform3D(0.774875, 0.632114, -2.76306e-08, 0, -4.37114e-08, -1, -0.632114, 0.774875, -3.38709e-08, 19.7027, 0.985517, 12.3948)
+
+[node name="Pickups" type="Node3D" parent="."]
+
+[node name="TimedUpgradePickup_tscn" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9666, -1.19209e-07, 24.1739)
+script = ExtResource("259_lgws6")
+UpgradeSpawnList = Array[int]([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+SpawnWeights = Array[int]([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn2" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.1809, 0, -11.8418)
+script = ExtResource("260_gwy68")
+WeaponSpawnList = Array[int]([0, 1, 2, 3, 4])
+SpawnWeights = Array[int]([1, 1, 1, 1, 1])
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn2" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11879, 0, -20.9637)
+script = ExtResource("259_lgws6")
+UpgradeSpawnList = Array[int]([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+SpawnWeights = Array[int]([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn3" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9112, 0, -21.1694)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn4" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.21306, 0, -16.2058)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn3" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.1275, 0, -0.227872)
+script = ExtResource("259_lgws6")
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn4" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8131, 0, 23.6444)
+script = ExtResource("259_lgws6")
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn5" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.3024, 0, 11.3584)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedHealthPickup_tscn" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5791, 0, 15.087)
+script = ExtResource("262_hpc52")
+HealthGained = 25
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn5" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.90274, 0, 22.1185)
+script = ExtResource("259_lgws6")
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn6" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.96627, 0, 15.0273)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.4894, 0, 4.59829)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedHealthPickup_tscn2" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.3522, 0, 4.00076)
+script = ExtResource("262_hpc52")
+HealthGained = 25
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn6" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0734, 0, 0.110248)
+script = ExtResource("259_lgws6")
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn7" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.62182, 0, -8.51055)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedHealthPickup_tscn3" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5389, 0, -9.83374)
+script = ExtResource("262_hpc52")
+HealthGained = 25
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn7" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.3786, 0, 25.0954)
+script = ExtResource("259_lgws6")
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn8" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.243, 0, 16.5215)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedHealthPickup_tscn4" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5534, 0, -24.1492)
+script = ExtResource("262_hpc52")
+HealthGained = 25
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn8" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.523, 0, -3.98561)
+script = ExtResource("259_lgws6")
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn9" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0145, 2, -25.3546)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn9" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.993, 5, -23.612)
+script = ExtResource("259_lgws6")
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedHealthPickup_tscn5" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.8892, 5, -18.4053)
+script = ExtResource("262_hpc52")
+HealthGained = 25
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn10" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.9154, 5, 19.8432)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn10" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8612, 5, 24.7691)
+script = ExtResource("259_lgws6")
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn11" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4985, 5, 19.3914)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn11" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.2392, 5, 8.05582)
+script = ExtResource("259_lgws6")
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedHealthPickup_tscn6" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.696, 5, 13.2408)
+script = ExtResource("262_hpc52")
+HealthGained = 25
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn12" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.49143, 5, 19.0514)
+script = ExtResource("259_lgws6")
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn12" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.422394, 5, 21.4291)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedHealthPickup_tscn7" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2684, 5, 14.8292)
+script = ExtResource("262_hpc52")
+HealthGained = 25
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn13" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.0782, 5, 16.033)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn13" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3877, 5, 9.88373)
+script = ExtResource("259_lgws6")
+UpgradeSpawnList = Array[int]([3])
+SpawnWeights = Array[int]([1])
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn14" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7742, 6, 9.86669)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn14" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.7086, 5, 19.7673)
+script = ExtResource("259_lgws6")
+UpgradeSpawnList = Array[int]([3])
+SpawnWeights = Array[int]([0])
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn15" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.4738, 5, -0.982711)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedHealthPickup_tscn8" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.691, 5, 8.44174)
+script = ExtResource("262_hpc52")
+HealthGained = 25
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn16" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0056, 5, -5.17782)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedHealthPickup_tscn9" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.5203, 5, -12.8197)
+script = ExtResource("262_hpc52")
+HealthGained = 25
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn15" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9332, 5, -19.0841)
+script = ExtResource("259_lgws6")
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn17" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.89193, 5, -19.2039)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn16" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.6081, 5, -27.5813)
+script = ExtResource("259_lgws6")
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedHealthPickup_tscn10" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49342, 5, -26.9964)
+script = ExtResource("262_hpc52")
+HealthGained = 25
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn18" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8066, 5, -12.0873)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedHealthPickup_tscn11" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6223, 5, 15.7831)
+script = ExtResource("262_hpc52")
+HealthGained = 25
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn17" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3699, 5, -0.578746)
+script = ExtResource("259_lgws6")
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn19" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4888, 5, 0.555232)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedHealthPickup_tscn12" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.59252, 5, 6.42332)
+script = ExtResource("262_hpc52")
+HealthGained = 25
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn20" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52374, 5, -5.44249)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn18" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7715, 9, -12.7115)
+script = ExtResource("259_lgws6")
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn21" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2639, 9, -6.9209)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn19" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5831, 4, 3.80812)
+script = ExtResource("259_lgws6")
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn22" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1212, 3.4, -14.9476)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn20" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.415, 3.4, -10.1675)
+script = ExtResource("259_lgws6")
+UpgradeSpawnList = Array[int]([7])
+SpawnWeights = Array[int]([1])
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn23" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0775, 3.4, 20.9886)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn21" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4714, 3.4, -0.557608)
+script = ExtResource("259_lgws6")
+UpgradeSpawnList = Array[int]([0])
+SpawnWeights = Array[int]([1])
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn22" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.8622, 3.4, -12.8244)
+script = ExtResource("259_lgws6")
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn24" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.7991, 3.4, -18.7046)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedHealthPickup_tscn13" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5476, 3.4, -18.7086)
+script = ExtResource("262_hpc52")
+HealthGained = 25
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedUpgradePickup_tscn23" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8462, 3.4, -10.4042)
+script = ExtResource("259_lgws6")
+UpgradeSpawnList = Array[int]([7, 9])
+SpawnWeights = Array[int]([1, 1])
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedWeaponPickup_tscn25" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.0489, 3.4, -4.92677)
+script = ExtResource("260_gwy68")
+PickupArea = NodePath("Area3D")
+RespawnTime = 3.0
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+
+[node name="TimedHealthPickup_tscn14" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.838, 5.1, 19.9951)
+script = ExtResource("262_hpc52")
+HealthGained = 25
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")

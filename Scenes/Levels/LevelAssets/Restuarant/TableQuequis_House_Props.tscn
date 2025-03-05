@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://cw6qigb8n77wp"]
 
-[ext_resource type="Texture2D" uid="uid://dip6s7vfng3ek" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Table.png" id="1_lxfyi"]
+[ext_resource type="Texture2D" uid="uid://cfqkwjwhigqqg" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Table.png" id="1_lxfyi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w7slw"]
 resource_name = "Table"
@@ -44,7 +44,7 @@ shadow_mesh = SubResource("ArrayMesh_d1spt")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1kv46"]
 points = PackedVector3Array(18.1389, 23.1302, 14.0561, -18.9716, 21.1382, -14.4053, -18.1389, 23.1302, -13.7667, -18.9716, 21.1382, 14.6947, 11.3838, -0.997791, -11.2406, -10.7498, -0.997791, 11.5301, 18.1389, 23.1302, -13.7667, 10.7498, -0.997791, 11.5301, -11.3838, -0.997791, -11.2406, 20.2395, 21.1382, 13.4272, -19.3512, 23.1302, 12.8442, 18.9716, 21.1382, -14.4053, -20.2395, 21.1382, 13.4272, -20.2395, 21.1382, -13.1377, 18.9716, 21.1382, 14.6947, 20.2395, 21.1382, -13.1377, -11.3838, -0.997791, 10.8977, 11.3838, -0.997791, 10.8977, 19.3512, 23.1302, -12.5548, -18.1389, 23.1302, 14.0561, 19.3512, 23.1302, 12.8442, -19.3512, 23.1302, -12.5548)
 
-[node name="@Node3D@104" type="Node3D"]
+[node name="_Node3D_104" type="Node3D"]
 transform = Transform3D(0.0407888, 0, 0, 0, 0.0407888, 0, 0, 0, 0.0407888, 0, 0, 0)
 
 [node name="@StaticBody3D@105" type="StaticBody3D" parent="."]
