@@ -45,14 +45,14 @@ public partial class Character : Entity
 
 	public override void _EnterTree()
 	{
-		CurrentHealth = MaxHealth; // we have to do this here or else infinite spawns will happen on server side
+        CurrentHealth = MaxHealth; // we have to do this here or else infinite spawns will happen on server side
 		SetMultiplayerAuthority(Name.ToString().Split("#").First().ToInt());
 		WeaponSpawner.GetParent().SetMultiplayerAuthority(1); // weapon spawning is server responsibility
 		LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode = this;
 		WeaponSpawner.Spawned += OnWeaponSpawned; // used to sync up EquippedWeapon
 		WeaponSpawner.Despawned += OnWeaponDespawned;
 
-		if(IsMultiplayerAuthority()) // local client requests its spawn point from server
+        if (IsMultiplayerAuthority()) // local client requests its spawn point from server
 		{
 			LevelManager.Instance.RpcId(1, LevelManager.MethodName.RequestSpawnPoint);
 			UI.InGameUI.AmmoCount.Visible = EquippedWeapon != null; // hide ammoCount on respawn
@@ -62,6 +62,8 @@ public partial class Character : Entity
 			UI.InGameUI.Show();
 			Input.MouseMode = Input.MouseModeEnum.Captured;
         	UI.GunViewCamera.active = true;
+
+			CharacterMesh.Hide();
 		}
 	}
 
@@ -75,6 +77,7 @@ public partial class Character : Entity
 		{
 			WeaponSpawner.AddSpawnableScene(filepath);
 		}
+        SetWeapon(Weapon.Pistol);
     }
 
     public override void _UnhandledInput(InputEvent @event)

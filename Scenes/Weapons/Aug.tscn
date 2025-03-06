@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://uoy74i0gesrj" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_afhbb"]
 [ext_resource type="PackedScene" uid="uid://x45b1orurjwf" path="res://Scenes/Projectiles/AugBullet.tscn" id="2_bl7sb"]
-[ext_resource type="AudioStream" uid="uid://cmyml6f07k1mi" path="res://Assets/Sounds/SFX/SmgClick.wav" id="3_st1q3"]
-[ext_resource type="AudioStream" uid="uid://cq4iww0rmr0jm" path="res://Assets/Sounds/SFX/AugFire.wav" id="4_a5mya"]
-[ext_resource type="AudioStream" uid="uid://dut0skifosef6" path="res://Assets/Sounds/SFX/AugUnload.wav" id="5_h75v2"]
-[ext_resource type="AudioStream" uid="uid://b0kncuhx6c1u4" path="res://Assets/Sounds/SFX/AugLoad.wav" id="6_eysib"]
-[ext_resource type="AudioStream" uid="uid://c7fk60bk3w8a7" path="res://Assets/Sounds/SFX/AugSlide.wav" id="7_kbijw"]
-[ext_resource type="Texture2D" uid="uid://bvolebrfyhrsi" path="res://Assets/Textures/Weapons/AUG_AUG.png" id="8_xdqq6"]
+[ext_resource type="AudioStream" uid="uid://vv13wj56o404" path="res://Assets/Sounds/SFX/SmgClick.wav" id="3_st1q3"]
+[ext_resource type="AudioStream" uid="uid://dg5egcrdpq16t" path="res://Assets/Sounds/SFX/AugFire.wav" id="4_a5mya"]
+[ext_resource type="AudioStream" uid="uid://daw5qe551ka2g" path="res://Assets/Sounds/SFX/AugUnload.wav" id="5_h75v2"]
+[ext_resource type="AudioStream" uid="uid://bl4bww2i3nurm" path="res://Assets/Sounds/SFX/AugLoad.wav" id="6_eysib"]
+[ext_resource type="AudioStream" uid="uid://cgfphekfrcnbf" path="res://Assets/Sounds/SFX/AugSlide.wav" id="7_kbijw"]
+[ext_resource type="Texture2D" uid="uid://p0l0ll4ivc2q" path="res://Assets/Textures/Weapons/AUG_AUG.png" id="8_xdqq6"]
 [ext_resource type="Script" uid="uid://bl1otymgjtlka" path="res://Scripts/Base/SelfDestroyingParticle.cs" id="9_3if1e"]
 [ext_resource type="PackedScene" uid="uid://m5ohhp5uxd8" path="res://Scenes/Particles/AugShellParticle.tscn" id="10_7fcci"]
 
@@ -570,7 +570,7 @@ ClickSound = ExtResource("3_st1q3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_qq742")
+&"": SubResource("AnimationLibrary_qq742")
 }
 
 [node name="HandMesh" type="MeshInstance3D" parent="."]
@@ -611,7 +611,7 @@ mesh = SubResource("ArrayMesh_oiouu")
 skeleton = NodePath("")
 
 [node name="Mag" type="MeshInstance3D" parent="AUG"]
-transform = Transform3D(0.05876, 0, 0, 0, 0.355141, -0.0401046, 0, 0.0671291, 0.21217, 0, -0.4883, 1.04387)
+transform = Transform3D(0.05876, 0, 0, 0, 0.355141, -0.0401046, 0, 0.0671292, 0.21217, 0, -0.4883, 1.04387)
 mesh = SubResource("ArrayMesh_p7wpg")
 skeleton = NodePath("")
 
