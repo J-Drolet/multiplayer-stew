@@ -207,7 +207,7 @@ namespace multiplayerstew.Scripts.Base
 					spawnInfo.RandomizerSeed = rng.NextInt64(10000);
 					spawnInfo.SpawnPosition = new GodotJson.SerializableVector3(LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalPosition);
 					spawnInfo.SpawnRotation = new GodotJson.SerializableVector3(LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalRotation);
-					spawnInfo.SpawnTime = Time.GetUnixTimeFromSystem();
+					spawnInfo.SpawnTime = GameSessionManager.GameClock;
     				spawnInfo.AngleOffset = angleOffset;
 					projectileInstance.Name = GodotJson.ToJson(spawnInfo);  
 
