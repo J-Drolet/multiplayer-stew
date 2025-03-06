@@ -2,7 +2,6 @@ using Godot;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Threading;
 
 public partial class Client : Node
 {
@@ -12,6 +11,9 @@ public partial class Client : Node
     private const int ServerPort = 3333;
     private ENetMultiplayerPeer Peer;
     private int ServerPid = -1;
+    private List<double> LatencyArray = new();
+    private double Latency = 0;
+    private double DeltaLatency = 0;
 
     public override void _ExitTree()
     {
@@ -28,6 +30,12 @@ public partial class Client : Node
         Multiplayer.ConnectionFailed += ConnectionFailed;
         Multiplayer.PeerConnected += PeerConnected;
         Multiplayer.PeerDisconnected += PeerDisconnected;
+    }
+
+    public override void _PhysicsProcess(double delta)
+    {
+        GameSessionManager.GameClock += delta + DeltaLatency;
+        DeltaLatency = 0;
     }
 
     // Called when the "Create Lobby" button is pressed
@@ -100,11 +108,21 @@ public partial class Client : Node
         GD.Print("Connected to server");
         UI.ToggleSpinner(false);
         RpcId(1, MethodName.SendPlayerInfo, Multiplayer.GetUniqueId(), Config.GetValue("settings", "player_name").ToString());
+        RpcId(1, MethodName.FetchServerTime, Time.GetUnixTimeFromSystem());
+
+        // create ping timer
+        Timer timer = new();
+        timer.Name = "RequestLatencyTimer";
+        timer.WaitTime = (float)Config.GetValue("game_constants", "sync_server_time_interval_ms", true) / 1000;
+        timer.Autostart = true;
+        timer.Timeout += () => {RpcId(1, MethodName.RequestLatency, Time.GetUnixTimeFromSystem());};
+        AddChild(timer);
         //main.connection_succeeded()
         //send_player_info.rpc_id(1, peer_name, peer_color, multiplayer.get_unique_id()
     }
 
     // called only on clients
+
     private void ConnectionFailed()
     {
         UI.ErrorMessage.DisplayError("Failed Connection");
@@ -164,4 +182,46 @@ public partial class Client : Node
         GameSessionManager.LeaveJoinedGame();
         UI.DisplayError(reason);
     }
+
+    [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Unreliable)]
+    public void FetchServerTime(double clientTime) {}
+
+    [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Unreliable)]
+    public void ReturnServerTime(double serverTime, double clientTime) 
+    {
+        Latency = (Time.GetUnixTimeFromSystem() - clientTime) / 2;
+        GameSessionManager.GameClock = serverTime + Latency;
+    }
+
+    [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Unreliable)]
+    public void RequestLatency(double clientTime){}
+
+    [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Unreliable)]
+    public void ReturnLatency(double clientTime) {
+        LatencyArray.Add((Time.GetUnixTimeFromSystem() - clientTime) / 2);
+        if(LatencyArray.Count == 9)
+        {
+            double totalLatency = 0;
+            LatencyArray.Sort();
+            double midPoint = LatencyArray[4];
+            for(int i = LatencyArray.Count - 1; i >= 0; i--)
+            {
+                if(LatencyArray[i] > (2 * midPoint) && LatencyArray[i] > (20 / 1000))
+                {
+                    LatencyArray.RemoveAt(i);
+                }
+                else
+                {
+                    totalLatency += LatencyArray[i];
+                }
+            }
+            DeltaLatency = (totalLatency / LatencyArray.Count) - Latency;
+            Latency = totalLatency / LatencyArray.Count;
+            GD.Print("Client.ReturnLatency - Latency: " + Latency);
+            GD.Print("Client.ReturnLatency - DeltaLatency: " + DeltaLatency);
+
+            LatencyArray.Clear();
+        }
+    }
+
 }

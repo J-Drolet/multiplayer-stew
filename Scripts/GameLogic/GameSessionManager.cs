@@ -9,6 +9,22 @@ public static class GameSessionManager
     public static long GameHost { get; set; } = -1;
     public static int GameDurationSeconds { get; set; }
     public static int MaxAura {get; set; }
+    private static double gameClock;
+    public static double GameClock 
+    { 
+        get
+        {
+            if(Config.Instance.Multiplayer.IsServer())
+            {
+                return Time.GetUnixTimeFromSystem();
+            }
+            else
+            {
+                return gameClock;
+            }
+        } 
+        set {gameClock = value;} 
+    }
 
     public static void RemovePlayer(long id)
     {
