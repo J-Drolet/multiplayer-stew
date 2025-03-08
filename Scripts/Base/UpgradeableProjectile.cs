@@ -127,7 +127,7 @@ namespace multiplayerstew.Scripts.Base
             if(Upgrades.Contains(Upgrade.W_Homing))
             {
                 Character nearestEnemy = null;
-                float maxHomingDistance = (float)Config.GetValue("game_constants", "homing_max_distance", true);
+                float maxHomingDistance = (float)Config.GetValue("Upgrade.W_Homing", "homing_max_distance", true);
                 foreach(int peerId in LevelManager.Instance.LevelPeerInfo.Keys)
                 {
                     if(peerId != projectileOwner)
