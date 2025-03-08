@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://dsaaox0mxj5hl"]
+[gd_scene load_steps=19 format=4 uid="uid://dsaaox0mxj5hl"]
 
 [ext_resource type="Texture2D" uid="uid://bv7riqbqrivl0" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Bush.png" id="1_1b3ti"]
 [ext_resource type="Texture2D" uid="uid://b8wqv5nbhm0x4" path="res://Assets/Textures/Fair/ashtray_1_plastic_4.png" id="2_lddlt"]
@@ -188,6 +188,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_tjf74")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1b3ti"]
+albedo_color = Color(0.330721, 0.915459, 7.70092e-07, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_lddlt"]
+material = SubResource("StandardMaterial3D_1b3ti")
+
 [node name="CInvisibility" type="Node3D"]
 
 [node name="Bush_021" type="MeshInstance3D" parent="."]
@@ -219,3 +225,8 @@ skeleton = NodePath("")
 transform = Transform3D(-2.36261, 0.285497, 0, -0.32053, -2.10439, 0, 0, 0, 1.29933, 0.132756, 0.068421, 0.00847751)
 mesh = SubResource("ArrayMesh_6o8u6")
 skeleton = NodePath("")
+
+[node name="Greenscreen" type="MeshInstance3D" parent="."]
+transform = Transform3D(160.763, 0, 0, 0, 131.99, -91.7796, 0, 91.7796, 131.99, 0, -0.382043, -0.398198)
+visible = false
+mesh = SubResource("PlaneMesh_lddlt")

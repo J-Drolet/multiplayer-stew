@@ -57,6 +57,7 @@ public partial class Character : Entity
 			LevelManager.Instance.RpcId(1, LevelManager.MethodName.RequestSpawnPoint);
 			UI.InGameUI.AmmoCount.Visible = EquippedWeapon != null; // hide ammoCount on respawn
 			UI.InGameUI.FlavorTextDisplay.HideDisplay();
+			UI.InGameUI.ItemDisplay.Refresh(Upgrades);
 			ATree.Active = true;
 
 			UI.InGameUI.Show();
@@ -384,6 +385,7 @@ public partial class Character : Entity
 		OnPowerLevelChange();
 		if(IsMultiplayerAuthority())
 		{
+			UI.InGameUI.ItemDisplay.Refresh(Upgrades);
 			UI.InGameUI.FlavorTextDisplay.DisplayFlavorTextFor(upgrade);
 		}
 	}
@@ -391,8 +393,12 @@ public partial class Character : Entity
 	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
 	public void RemoveUpgrade(Upgrade upgrade)
 	{
-		Upgrades.Remove(upgrade);
-	}
+        Upgrades.Remove(upgrade);
+		if (IsMultiplayerAuthority())
+		{
+			UI.InGameUI.ItemDisplay.Refresh(Upgrades);
+		}
+    }
 
 	/// <summary>
 	/// For use for knockback

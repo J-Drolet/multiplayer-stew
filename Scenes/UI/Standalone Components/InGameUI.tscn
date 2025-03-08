@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dker47ss6f07g"]
+[gd_scene load_steps=18 format=3 uid="uid://dker47ss6f07g"]
 
 [ext_resource type="Script" uid="uid://c6d03e7dxcwth" path="res://Scripts/UI/InGameUI.cs" id="1_8bj3a"]
 [ext_resource type="Script" uid="uid://p8vtx7t4ry0c" path="res://Scripts/UI/GunViewCamera.cs" id="2_v6n63"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://caiim4tryff58" path="res://Assets/Textures/UI/HealthBar/CigarettePSX.png" id="5_q7cja"]
 [ext_resource type="Texture2D" uid="uid://bnvm8reohkcpa" path="res://Assets/Textures/UI/Crosshair3.png" id="5_q16sg"]
 [ext_resource type="Texture2D" uid="uid://b6lypeb8nv6ub" path="res://Assets/Textures/UI/Ammo/Rifle_Fired.png" id="6_jnuv4"]
+[ext_resource type="Script" uid="uid://dx877wbsvgwx3" path="res://Scenes/UI/Standalone Components/ItemDisplay.cs" id="11_42qaf"]
+[ext_resource type="Texture2D" uid="uid://daeh6xoceiky1" path="res://Assets/Textures/Thumbnails/C_DoubleJump.png" id="12_vbjgj"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_q5dko"]
 viewport_path = NodePath("GunView/SubViewport")
@@ -33,7 +35,23 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[node name="InGameUi" type="Control" node_paths=PackedStringArray("AmmoCount", "HealthBar", "FlavorTextDisplay")]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gg4ao"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.760784, 0.541176, 0.184314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[node name="InGameUi" type="Control" node_paths=PackedStringArray("AmmoCount", "HealthBar", "FlavorTextDisplay", "ItemDisplay")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -43,8 +61,9 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_8bj3a")
 AmmoCount = NodePath("Ammo Display")
-HealthBar = NodePath("HealthBar")
+HealthBar = NodePath("MarginContainer/HealthBar")
 FlavorTextDisplay = NodePath("UpgradeFlavorText")
+ItemDisplay = NodePath("ItemDisplay")
 
 [node name="GunView" type="TextureRect" parent="."]
 layout_mode = 1
@@ -70,20 +89,27 @@ anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
 script = ExtResource("3_kgdjc")
-TitleLabel = NodePath("VBoxContainer/Title")
-SubTitleLabel = NodePath("VBoxContainer/SubTitle")
+TitleLabel = NodePath("MarginContainer/VBoxContainer/Title")
+SubTitleLabel = NodePath("MarginContainer/VBoxContainer/SubTitle")
 TotalDisplayTime = 3.0
 OpacityCurve = SubResource("Curve_1onke")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UpgradeFlavorText"]
+[node name="MarginContainer" type="MarginContainer" parent="UpgradeFlavorText"]
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_right = 250.0
+offset_bottom = 49.0
 grow_horizontal = 2
-grow_vertical = 2
+theme_override_constants/margin_top = 20
 
-[node name="Title" type="Label" parent="UpgradeFlavorText/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UpgradeFlavorText/MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="UpgradeFlavorText/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_uu0oa")
 theme_override_font_sizes/font_size = 20
@@ -91,7 +117,7 @@ text = "Title"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SubTitle" type="Label" parent="UpgradeFlavorText/VBoxContainer"]
+[node name="SubTitle" type="Label" parent="UpgradeFlavorText/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_uu0oa")
 theme_override_font_sizes/font_size = 12
@@ -129,19 +155,22 @@ label_settings = SubResource("LabelSettings_1vvx4")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HealthBar" type="TextureProgressBar" parent="."]
-custom_minimum_size = Vector2(400, 0)
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.02
-anchor_top = 0.892
-anchor_right = 0.367
-anchor_bottom = 0.957
-offset_left = -0.0400009
-offset_top = -0.0159912
-offset_right = 0.215973
-offset_bottom = -0.135986
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 410.0
 grow_vertical = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HealthBar" type="TextureProgressBar" parent="MarginContainer"]
+custom_minimum_size = Vector2(400, 45)
+layout_mode = 2
 value = 100.0
 nine_patch_stretch = true
 texture_under = ExtResource("4_0nvln")
@@ -182,3 +211,31 @@ theme_override_constants/margin_bottom = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Ammo Display/MarginContainer"]
 layout_mode = 2
+
+[node name="ItemDisplay" type="MarginContainer" parent="." node_paths=PackedStringArray("ItemGrid")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -293.0
+offset_right = -136.0
+offset_bottom = 89.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+script = ExtResource("11_42qaf")
+ItemGrid = NodePath("Panel/Items")
+
+[node name="Panel" type="PanelContainer" parent="ItemDisplay"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_gg4ao")
+
+[node name="Items" type="GridContainer" parent="ItemDisplay/Panel"]
+layout_mode = 2
+columns = 4
+
+[node name="TextureRect" type="TextureRect" parent="ItemDisplay/Panel/Items"]
+layout_mode = 2
+texture = ExtResource("12_vbjgj")
