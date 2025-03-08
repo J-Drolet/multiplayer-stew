@@ -26,6 +26,8 @@ public static class GameSessionManager
         set {gameClock = value;} 
     }
 
+    public static double GameClockOffset = 0;
+
     public static void RemovePlayer(long id)
     {
         if(LevelManager.Instance != null)

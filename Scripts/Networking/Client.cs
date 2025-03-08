@@ -32,7 +32,7 @@ public partial class Client : Node
         Multiplayer.PeerDisconnected += PeerDisconnected;
     }
 
-    public override void _PhysicsProcess(double delta)
+    public override void _Process(double delta)
     {
         GameSessionManager.GameClock += delta + DeltaLatency;
         DeltaLatency = 0;
@@ -117,6 +117,7 @@ public partial class Client : Node
         timer.Autostart = true;
         timer.Timeout += () => {RpcId(1, MethodName.RequestLatency, Time.GetUnixTimeFromSystem());};
         AddChild(timer);
+
         //main.connection_succeeded()
         //send_player_info.rpc_id(1, peer_name, peer_color, multiplayer.get_unique_id()
     }
@@ -190,7 +191,16 @@ public partial class Client : Node
     public void ReturnServerTime(double serverTime, double clientTime) 
     {
         Latency = (Time.GetUnixTimeFromSystem() - clientTime) / 2;
+        GD.Print("Client.ReturnServerTime - Latency: " + Latency);
+        GD.Print("Client.ReturnServerTime - ServerTime: " + serverTime);
+        GD.Print("Client.ReturnServerTime - CurrentTime: " + Time.GetUnixTimeFromSystem());
+        GD.Print("Client.ReturnServerTime - StartTime: " + clientTime);
+
         GameSessionManager.GameClock = serverTime + Latency;
+        GD.Print("Client.ReturnServerTime - GameClock: " + GameSessionManager.GameClock);
+        GameSessionManager.GameClockOffset = Time.GetUnixTimeFromSystem() - (serverTime + Latency);
+        GD.Print("Client.ReturnServerTime - GameClockOffset: " + GameSessionManager.GameClockOffset);
+
     }
 
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Unreliable)]
@@ -222,6 +232,49 @@ public partial class Client : Node
 
             LatencyArray.Clear();
         }
+    }
+
+    [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Unreliable)]
+    public void RequestPing(double requestorTime)
+    {
+        RpcId(Multiplayer.GetRemoteSenderId(), MethodName.ReturnPing, requestorTime);
+    }
+
+    [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Unreliable)]
+    public void ReturnPing(double requestorTime)
+    {
+        double ping = (Time.GetUnixTimeFromSystem() - requestorTime) / 2;
+        double averagePing = GameSessionManager.ConnectedPeers[Multiplayer.GetRemoteSenderId()].AveragePing;
+        List<double> lastPings = GameSessionManager.ConnectedPeers[Multiplayer.GetRemoteSenderId()].LastPings;
+        lastPings.Add(ping);
+        if(averagePing < 0) // if no ping is regestered then set it to the first ping
+        {
+            averagePing = ping;
+        }
+        else
+        {
+            if(lastPings.Count == 9)
+            {
+                double totalLatency = 0;
+                lastPings.Sort();
+                double midPoint = lastPings[4];
+                for(int i = lastPings.Count - 1; i >= 0; i--)
+                {
+                    if(lastPings[i] > (2 * midPoint) && lastPings[i] > (20 / 1000)) // ignore outliers
+                    {
+                        lastPings.RemoveAt(i);
+                    }
+                    else
+                    {
+                        totalLatency += lastPings[i];
+                    }
+                }
+                averagePing = totalLatency / lastPings.Count;
+                lastPings.Clear();
+            }
+        }
+        GameSessionManager.ConnectedPeers[Multiplayer.GetRemoteSenderId()].LastPings = lastPings;
+        GameSessionManager.ConnectedPeers[Multiplayer.GetRemoteSenderId()].AveragePing = averagePing;
     }
 
 }

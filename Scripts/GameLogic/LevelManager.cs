@@ -35,6 +35,14 @@ public partial class LevelManager : Node
 
 	public override void _Ready() 
 	{   
+		Timer timer = new();
+        timer.Name = "RequestLatencyTimer";
+        timer.WaitTime = 1;
+        timer.Autostart = true;
+        //timer.Timeout += () => {GD.Print("Peer: " + Multiplayer.GetUniqueId() + ": " + GameSessionManager.GameClock);};
+        timer.Timeout += () => {GD.Print("Peer: " + Multiplayer.GetUniqueId() + ": " + (Time.GetUnixTimeFromSystem() + GameSessionManager.GameClockOffset));};
+        AddChild(timer);
+
 		GodotErrorService.ValidateRequiredData(this);
 		Instance = this;
 

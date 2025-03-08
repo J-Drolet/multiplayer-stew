@@ -33,7 +33,7 @@ namespace multiplayerstew.Scripts.Base
         private Vector3 ProjectileGravity = Vector3.Down * 5;
         private float TimeAlive;
         private int HitsLeft;
-        private int BouncesRegistered; // for bouncing projectile upgrade
+        public int BouncesRegistered; // for bouncing projectile upgrade
         private double CatchUpTime = 0;
         private int AngleOffset;
 
@@ -53,11 +53,14 @@ namespace multiplayerstew.Scripts.Base
 
             if(HasRightToMoveProjectile())
             {
-                GlobalPosition = spawnInfo.SpawnPosition.ToVector3();
-                GlobalRotation = spawnInfo.SpawnRotation.ToVector3();
-                Transform = Transform.Orthonormalized(); // fix basis if it got non-orthonormalized
-                CatchUpTime = GameSessionManager.GameClock - spawnInfo.SpawnTime;
+                GlobalTransform = spawnInfo.SpawnTransform.ToTransform3D();
                 AngleOffset = (int)spawnInfo.AngleOffset;
+                
+                if(Multiplayer.IsServer())
+                {
+                    CatchUpTime = GameSessionManager.ConnectedPeers[projectileOwner].AveragePing;
+                    GD.Print("CatchUpTime: " + CatchUpTime);
+                }
             }
         }
 
@@ -90,6 +93,7 @@ namespace multiplayerstew.Scripts.Base
             WorldHitDetectionRaycast.CollideWithAreas = false;
             WorldHitDetectionRaycast.CollideWithBodies = true;
             WorldHitDetectionRaycast.HitFromInside = false;
+            WorldHitDetectionRaycast.TargetPosition = Vector3.Zero;
 
             if (!Multiplayer.IsServer()) return;
 
@@ -98,6 +102,7 @@ namespace multiplayerstew.Scripts.Base
             AddChild(HitboxDetectionRaycast);
             HitboxDetectionRaycast.SetCollisionMaskValue(1, false);
             HitboxDetectionRaycast.SetCollisionMaskValue(3, true);
+            HitboxDetectionRaycast.TargetPosition = Vector3.Zero;
 
             HitboxDetectionRaycast.CollideWithAreas = true;
             HitboxDetectionRaycast.CollideWithBodies = false;
@@ -222,17 +227,9 @@ namespace multiplayerstew.Scripts.Base
                     if(HitboxDetectionRaycast.IsColliding())
                     {
                         GodotObject collider = HitboxDetectionRaycast.GetCollider();
-                        if(MaxHits > 0 && collider is DamageArea) // we do a max hit check here so server stops hitting even before authority queue frees the projectile
+                        if(MaxHits > 0 && collider is DamageArea damageArea) // we do a max hit check here so server stops hitting even before authority queue frees the projectile
                         {
-                            DamageArea damageArea = collider as DamageArea;
                             damageArea.HitDamageArea(this, HitboxDetectionRaycast.GetCollisionNormal());
-                        }
-                        
-                        MaxHits--;
-                        
-                        if(MaxHits <= 0)
-                        {
-                            DisableSelf();
                         }
                     }
                 }
@@ -273,7 +270,7 @@ namespace multiplayerstew.Scripts.Base
         /// <summary>
         /// Way for the server to kill a projectile without having authority.
         /// </summary>                        
-        private void DisableSelf()
+        public void DisableSelf()
         {
             if(!Multiplayer.IsServer()) return;
 

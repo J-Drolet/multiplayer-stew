@@ -30,6 +30,56 @@ public static class GodotJson
         }
     }
 
+    public struct SerializableQuaternion  {
+        public float x { get; set; }
+        public float y { get; set; }
+        public float z { get; set; }
+        public float w { get; set; }
+
+        public SerializableQuaternion(Quaternion quaternion) 
+        {
+            x = quaternion.X;
+            y = quaternion.Y;
+            z = quaternion.Z;
+            w = quaternion.W;
+        }
+
+        public Quaternion ToQuaternion() 
+        {
+            return new Quaternion(x, y, z, w);
+        }
+    }
+
+    public struct SerializableBasis {
+        public SerializableQuaternion quaternion { get; set; }
+
+        public SerializableBasis(Basis basis) 
+        {
+            quaternion = new SerializableQuaternion(basis.GetRotationQuaternion());
+        }
+
+        public Basis ToBasis() 
+        {
+            return new Basis(quaternion.ToQuaternion());
+        }
+    }
+
+    public struct SerializableTransform3D {
+        public SerializableBasis basis { get; set; }
+        public SerializableVector3 origin { get; set; }
+
+        public SerializableTransform3D(Transform3D transform3D) 
+        {
+            basis = new SerializableBasis(transform3D.Basis);
+            origin = new SerializableVector3(transform3D.Origin);
+        }
+
+        public Transform3D ToTransform3D() 
+        {
+            return new Transform3D(basis.ToBasis(), origin.ToVector3());
+        }
+    }
+
     public static T FromJson<T>(string base64String)
     {
         string decodedJson = Convert.FromBase64String(base64String).GetStringFromUtf8();

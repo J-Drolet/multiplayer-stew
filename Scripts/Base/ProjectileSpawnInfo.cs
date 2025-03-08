@@ -6,8 +6,7 @@ public class ProjectileSpawnInfo {
 
     public long RandomizerSeed { get; set; }
 
-    public GodotJson.SerializableVector3 SpawnPosition { get; set; }
-    public GodotJson.SerializableVector3 SpawnRotation { get; set; }
+    public GodotJson.SerializableTransform3D SpawnTransform { get; set; }
 
     public double SpawnTime { get; set; }
 

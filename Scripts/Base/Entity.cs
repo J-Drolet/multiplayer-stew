@@ -81,22 +81,47 @@ namespace multiplayerstew.Scripts.Base
         public void HitboxHit(UpgradeableProjectile projectile, DamageArea hitbox, Vector3 collisionNormal)
         {
             float damage = projectile.Damage * hitbox.DamageMultiplier * (hitbox.TriggerVital ?  projectile.VitalMultiplier : 1);
-            DamageTakenThisFrame += damage;
-            LastDamagedBy = projectile.projectileOwner;
+            bool validDamage = true;
 
             if(this is Character character)
             {
-                // for knockback
-                if(character.Upgrades.Contains(Upgrade.C_SmallerHitbox) && collisionNormal != Vector3.Zero)
+                if(projectile.BouncesRegistered < 1 && projectile.projectileOwner == character.GetMultiplayerAuthority())
                 {
-                    Vector3 knockback = -collisionNormal.Normalized() * damage * (float)Config.GetValue("Upgrade.C_SmallerHitbox", "knockback_strength_per_damage", true);
-                    KnockbackGainedSinceSync += knockback;
+                    validDamage = false;
+                    GD.Print("HitboxHit - Projectile hit the same player twice");
+                }
+                else 
+                {
+                    
+                    GD.Print(projectile.BouncesRegistered);
                 }
 
-                // for slowdown projectiles
-                if(LevelManager.Instance.LevelPeerInfo[projectile.projectileOwner].characterNode.Upgrades.Contains(Upgrade.W_SlowTargetBullets))
+                if(validDamage)
                 {
-                    character.RpcId(GetMultiplayerAuthority(), Character.MethodName.SetSlowdown, (float)Config.GetValue("Upgrade.W_SlowTargetBullets", "slowdown_speed_multiplier", true));
+                    // for knockback
+                    if(character.Upgrades.Contains(Upgrade.C_SmallerHitbox) && collisionNormal != Vector3.Zero)
+                    {
+                        Vector3 knockback = -collisionNormal.Normalized() * damage * (float)Config.GetValue("Upgrade.C_SmallerHitbox", "knockback_strength_per_damage", true);
+                        KnockbackGainedSinceSync += knockback;
+                    }
+
+                    // for slowdown projectiles
+                    if(LevelManager.Instance.LevelPeerInfo[projectile.projectileOwner].characterNode.Upgrades.Contains(Upgrade.W_SlowTargetBullets))
+                    {
+                        character.RpcId(GetMultiplayerAuthority(), Character.MethodName.SetSlowdown, (float)Config.GetValue("Upgrade.W_SlowTargetBullets", "slowdown_speed_multiplier", true));
+                    }
+                } 
+            }
+
+            if(validDamage)
+            {
+                DamageTakenThisFrame += damage;
+                LastDamagedBy = projectile.projectileOwner;
+                                        
+                projectile.MaxHits--;
+                if(projectile.MaxHits <= 0)
+                {
+                    projectile.DisableSelf();
                 }
             }
         }
