@@ -204,15 +204,15 @@ public partial class Character : Entity
 
 		if(Upgrades.Contains(Upgrade.C_FastSlide))
 		{
-			speed *= 2;
-			acceleration /= 10;
-			deceleration /= 100;
+			speed *= (float)Config.GetValue("Upgrade.C_FastSlide", "speed_multiplier", true);
+			acceleration *= (float)Config.GetValue("Upgrade.C_FastSlide", "acceleration_multiplier", true);;
+			deceleration *= (float)Config.GetValue("Upgrade.C_FastSlide", "deceleration_multiplier", true);;
 		}
 
 		int jumpsAllowedInAir = 0;
 		if(Upgrades.Contains(Upgrade.C_DoubleJump))
 		{
-			jumpsAllowedInAir = 1;
+			jumpsAllowedInAir = (int)Config.GetValue("Upgrade.C_DoubleJump", "jumps_in_air", true);
 		}
 
 		// Add the gravity.
