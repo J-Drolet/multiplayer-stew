@@ -18,7 +18,7 @@ public partial class Character : Entity
 	public Node3D Hand { get; set; }
 	[Export, ExportRequired]
 	public MeshInstance3D CharacterMesh { get; set; }
-	[Export, ExportRequired, AnimationsRequired(new string[] {"Walk"})]
+	[Export, ExportRequired, AnimationsRequired(["Walk"])]
 	public AnimationPlayer APlayer { get; set; }
     [Export, ExportRequired]
     public AnimationTree ATree { get; set; }

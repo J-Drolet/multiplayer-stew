@@ -558,7 +558,6 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_bypow")
 
 [node name="AUG" type="Node3D" node_paths=PackedStringArray("APlayer")]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
 script = ExtResource("1_afhbb")
 WeaponName = "AUG"
 WeaponType = 1

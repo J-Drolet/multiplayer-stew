@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://uoy74i0gesrj" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_ekypa"]
 [ext_resource type="PackedScene" uid="uid://chv0b14sstem5" path="res://Scenes/Projectiles/ShotgunPellet.tscn" id="2_67p85"]
-[ext_resource type="AudioStream" uid="uid://cpcaj2mn321lc" path="res://Assets/Sounds/SFX/ShotgunFire.wav" id="3_ibh0c"]
-[ext_resource type="AudioStream" uid="uid://7oiv1wlji2kh" path="res://Assets/Sounds/SFX/ShotgunUnlatch.wav" id="4_odpjs"]
-[ext_resource type="Texture2D" uid="uid://h4o23p1xwjgl" path="res://Assets/Textures/Weapons/Double_Barrel_glb_Shotgun_tex.png" id="4_v4e64"]
-[ext_resource type="AudioStream" uid="uid://cbn6kn8af1aqd" path="res://Assets/Sounds/SFX/ShotgunLoad.wav" id="5_1jm2x"]
-[ext_resource type="Texture2D" uid="uid://b2nvm6qlgdxw3" path="res://Assets/Textures/Weapons/Ammo_glb_Ammo_tex.png" id="5_mkipk"]
-[ext_resource type="AudioStream" uid="uid://bbtjx13gjcshc" path="res://Assets/Sounds/SFX/ShotgunLatch.wav" id="6_ylv44"]
+[ext_resource type="AudioStream" uid="uid://dyf64e2425cnd" path="res://Assets/Sounds/SFX/ShotgunFire.wav" id="3_ibh0c"]
+[ext_resource type="AudioStream" uid="uid://j6ddhp0k7ik2" path="res://Assets/Sounds/SFX/ShotgunUnlatch.wav" id="4_odpjs"]
+[ext_resource type="Texture2D" uid="uid://cimyblxjq77k2" path="res://Assets/Textures/Weapons/Double_Barrel_glb_Shotgun_tex.png" id="4_v4e64"]
+[ext_resource type="AudioStream" uid="uid://bv7vd4wuysfxc" path="res://Assets/Sounds/SFX/ShotgunLoad.wav" id="5_1jm2x"]
+[ext_resource type="Texture2D" uid="uid://dpmxe81eskxr7" path="res://Assets/Textures/Weapons/Ammo_glb_Ammo_tex.png" id="5_mkipk"]
+[ext_resource type="AudioStream" uid="uid://dusrix5x06j8e" path="res://Assets/Sounds/SFX/ShotgunLatch.wav" id="6_ylv44"]
 [ext_resource type="Script" uid="uid://bl1otymgjtlka" path="res://Scripts/Base/SelfDestroyingParticle.cs" id="9_x08go"]
 [ext_resource type="PackedScene" uid="uid://bjyaanpyul0bx" path="res://Scenes/Particles/ShotgunShellParticle.tscn" id="10_b4gog"]
 
@@ -603,7 +603,7 @@ APlayer = NodePath("AnimationPlayer")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_mxbmx")
+&"": SubResource("AnimationLibrary_mxbmx")
 }
 
 [node name="Meshes" type="Node3D" parent="."]

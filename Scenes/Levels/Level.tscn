@@ -56,6 +56,7 @@ size = Vector3(50, 0.25, 50)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.766896, 0.439592, -0.467578, 0, 0.728574, 0.684967, 0.641771, -0.525299, 0.558741, 0, 0, 0)
+layers = 3
 
 [node name="Spawns" type="Node3D" parent="."]
 
@@ -76,47 +77,47 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.9534)
 
 [node name="TimedUpgradePickup" parent="Upgrades" instance=ExtResource("20_7qb6e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0)
-UpgradeSpawnList = [0]
+UpgradeSpawnList = Array[int]([0])
 
 [node name="TimedUpgradePickup2" parent="Upgrades" instance=ExtResource("20_7qb6e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0)
-UpgradeSpawnList = [1]
+UpgradeSpawnList = Array[int]([1])
 
 [node name="TimedUpgradePickup3" parent="Upgrades" instance=ExtResource("20_7qb6e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
-UpgradeSpawnList = [2]
+UpgradeSpawnList = Array[int]([2])
 
 [node name="TimedUpgradePickup4" parent="Upgrades" instance=ExtResource("20_7qb6e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
-UpgradeSpawnList = [3]
+UpgradeSpawnList = Array[int]([3])
 
 [node name="TimedUpgradePickup5" parent="Upgrades" instance=ExtResource("20_7qb6e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
-UpgradeSpawnList = [4]
+UpgradeSpawnList = Array[int]([4])
 
 [node name="TimedUpgradePickup6" parent="Upgrades" instance=ExtResource("20_7qb6e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
-UpgradeSpawnList = [5]
+UpgradeSpawnList = Array[int]([5])
 
 [node name="TimedUpgradePickup7" parent="Upgrades" instance=ExtResource("20_7qb6e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
-UpgradeSpawnList = [6]
+UpgradeSpawnList = Array[int]([6])
 
 [node name="TimedUpgradePickup8" parent="Upgrades" instance=ExtResource("20_7qb6e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
-UpgradeSpawnList = [7]
+UpgradeSpawnList = Array[int]([7])
 
 [node name="TimedUpgradePickup9" parent="Upgrades" instance=ExtResource("20_7qb6e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 0)
-UpgradeSpawnList = [8]
+UpgradeSpawnList = Array[int]([8])
 
 [node name="TimedUpgradePickup10" parent="Upgrades" instance=ExtResource("20_7qb6e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 0)
-UpgradeSpawnList = [9]
+UpgradeSpawnList = Array[int]([9])
 
 [node name="TimedUpgradePickup11" parent="Upgrades" instance=ExtResource("20_7qb6e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 0)
-UpgradeSpawnList = [10]
+UpgradeSpawnList = Array[int]([10])
 
 [node name="TimedUpgradePickup12" parent="Upgrades" instance=ExtResource("20_7qb6e")]
 RespawnTime = 1.0
@@ -125,23 +126,23 @@ RespawnTime = 1.0
 
 [node name="TimedWeaponPickup" parent="Weapons" instance=ExtResource("19_1ndxl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
-WeaponSpawnList = [0]
+WeaponSpawnList = Array[int]([0])
 
 [node name="TimedWeaponPickup2" parent="Weapons" instance=ExtResource("19_1ndxl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
-WeaponSpawnList = [1]
+WeaponSpawnList = Array[int]([1])
 
 [node name="TimedWeaponPickup3" parent="Weapons" instance=ExtResource("19_1ndxl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
-WeaponSpawnList = [2]
+WeaponSpawnList = Array[int]([2])
 
 [node name="TimedWeaponPickup4" parent="Weapons" instance=ExtResource("19_1ndxl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 0)
-WeaponSpawnList = [3]
+WeaponSpawnList = Array[int]([3])
 
 [node name="TimedWeaponPickup5" parent="Weapons" instance=ExtResource("19_1ndxl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
-WeaponSpawnList = [4]
+WeaponSpawnList = Array[int]([4])
 
 [node name="TimedWeaponPickup6" parent="Weapons" instance=ExtResource("19_1ndxl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)

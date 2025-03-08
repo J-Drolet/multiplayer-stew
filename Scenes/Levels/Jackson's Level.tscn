@@ -1,4 +1,4 @@
-[gd_scene load_steps=266 format=3 uid="uid://ce4mnhuaptjjq"]
+[gd_scene load_steps=263 format=3 uid="uid://ce4mnhuaptjjq"]
 
 [ext_resource type="Script" uid="uid://7qt4qpdvopym" path="res://Scripts/GameLogic/LevelManager.cs" id="1_3cian"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_auvs1"]
@@ -258,10 +258,7 @@
 [ext_resource type="PackedScene" uid="uid://ccjuvvreq8087" path="res://Scenes/Levels/LevelAssets/Restuarant/Bush_021Quequis_House_Props.tscn" id="257_85jn0"]
 [ext_resource type="PackedScene" uid="uid://cl2jhjcfpyrbk" path="res://Scenes/Levels/LevelAssets/Restuarant/PepperQuequis_House_Props.tscn" id="258_3rbuk"]
 [ext_resource type="PackedScene" uid="uid://cyamrm6gitdte" path="res://Scenes/Levels/LevelAssets/Restuarant/SaltQuequis_House_Props.tscn" id="259_2hv6b"]
-[ext_resource type="Script" uid="uid://b48dqousk512e" path="res://Scripts/Pickups/TimedUpgradePickup.cs" id="259_lgws6"]
-[ext_resource type="Script" uid="uid://cgc03dv53j450" path="res://Scripts/Pickups/TimedWeaponPickup.cs" id="260_gwy68"]
 [ext_resource type="PackedScene" uid="uid://b1638ox18o0fr" path="res://Scenes/Pickups/TimedHealthPickup.tscn" id="261_3u6v1"]
-[ext_resource type="Script" uid="uid://c4puwdv4gpshh" path="res://Scripts/Pickups/TimedHealthPickup.cs" id="262_hpc52"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_klxao"]
 properties/0/path = NodePath(".:PlayerStatJson")
@@ -9077,40 +9074,40 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 15.1, 
 [node name="pillar_1pillar_1_tscn120" parent="." instance=ExtResource("9_2c055")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 17.95, 0, 11.15)
 
-[node name="pillar_1_plainpillar_1_plain_tscn13" type="Node3D" parent="." instance=ExtResource("125_ubknq")]
+[node name="pillar_1_plainpillar_1_plain_tscn13" parent="." instance=ExtResource("125_ubknq")]
 transform = Transform3D(-8.42937e-08, -0.721843, 0, 1, -1.29076e-07, 0, 0, 0, 0.756096, 15.0995, 1.18313, 16.2926)
 
 [node name="pillar_1_plainpillar_1_plain_tscn14" parent="." instance=ExtResource("125_ubknq")]
 transform = Transform3D(3.68459e-15, 3.15528e-08, -0.756096, 1, -1.29076e-07, 0, -8.42937e-08, -0.721843, -3.305e-08, 18.1198, 1.18313, 11.0785)
 
-[node name="pillar_1_plainpillar_1_plain_tscn15" type="Node3D" parent="." instance=ExtResource("125_ubknq")]
+[node name="pillar_1_plainpillar_1_plain_tscn15" parent="." instance=ExtResource("125_ubknq")]
 transform = Transform3D(-5.96046e-08, -0.57645, -0.952873, 1, -1.45773e-07, 0, -5.96046e-08, -0.57645, 0.952873, 15.1796, 1.18313, 13.9325)
 
-[node name="ArmchairQuequis_House_Props_tscn7" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+[node name="ArmchairQuequis_House_Props_tscn7" parent="." instance=ExtResource("242_bpu8w")]
 transform = Transform3D(-0.707107, 1.0677e-07, -0.707107, 1.50996e-07, 1, 0, -0.707107, 1.0677e-07, 0.707107, 16.4714, 0.0420636, 13.9309)
 
-[node name="ArmchairQuequis_House_Props_tscn8" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+[node name="ArmchairQuequis_House_Props_tscn8" parent="." instance=ExtResource("242_bpu8w")]
 transform = Transform3D(0.707107, -1.0677e-07, 0.707107, 1.50996e-07, 1, 0, 0.707107, -1.0677e-07, -0.707107, 18, 0.0420635, 12.4994)
 
-[node name="ArmchairQuequis_House_Props_tscn9" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+[node name="ArmchairQuequis_House_Props_tscn9" parent="." instance=ExtResource("242_bpu8w")]
 transform = Transform3D(1, -1.50996e-07, 2.38419e-07, 1.50996e-07, 1, 0, 2.38419e-07, -3.55271e-14, -1, 16.0387, 0.0420635, 14.7868)
 
-[node name="ArmchairQuequis_House_Props_tscn10" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+[node name="ArmchairQuequis_House_Props_tscn10" parent="." instance=ExtResource("242_bpu8w")]
 transform = Transform3D(-1, 1.50996e-07, -2.38419e-07, 1.50996e-07, 1, 0, -2.38419e-07, 4.26326e-14, 1, 16.0207, 0.0420637, 16.5047)
 
-[node name="ArmchairQuequis_House_Props_tscn11" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+[node name="ArmchairQuequis_House_Props_tscn11" parent="." instance=ExtResource("242_bpu8w")]
 transform = Transform3D(2.8213e-07, -4.92328e-14, -1, 1.50996e-07, 1, 0, -1, 1.50996e-07, -2.8213e-07, 18.9, 0.0420637, 12.1)
 
-[node name="ArmchairQuequis_House_Props_tscn12" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+[node name="ArmchairQuequis_House_Props_tscn12" parent="." instance=ExtResource("242_bpu8w")]
 transform = Transform3D(-2.38419e-07, 4.9738e-14, 1, 1.50996e-07, 1, 0, 1, -1.50996e-07, 2.38419e-07, 20.75, 0.0420635, 12.1)
 
-[node name="TableQuequis_House_Props_tscn7" type="Node3D" parent="." instance=ExtResource("20_7xy12")]
+[node name="TableQuequis_House_Props_tscn7" parent="." instance=ExtResource("20_7xy12")]
 transform = Transform3D(0.0407888, 0, 0, 0, 0.0407888, 0, 0, 0, 0.0407888, 16.05, 0.0420634, 15.6)
 
-[node name="TableQuequis_House_Props_tscn8" type="Node3D" parent="." instance=ExtResource("20_7xy12")]
+[node name="TableQuequis_House_Props_tscn8" parent="." instance=ExtResource("20_7xy12")]
 transform = Transform3D(0.028842, 0, -0.028842, 0, 0.0407888, 0, 0.028842, 0, 0.028842, 17.2504, 0.0420634, 13.2258)
 
-[node name="TableQuequis_House_Props_tscn9" type="Node3D" parent="." instance=ExtResource("20_7xy12")]
+[node name="TableQuequis_House_Props_tscn9" parent="." instance=ExtResource("20_7xy12")]
 transform = Transform3D(-1.86265e-09, 0, -0.0407888, 0, 0.0407888, 0, 0.0407888, 0, -1.86265e-09, 19.8, 0.0420636, 12.05)
 
 [node name="_Node3D_125" parent="." instance=ExtResource("257_85jn0")]
@@ -9119,760 +9116,473 @@ transform = Transform3D(1.13722, 0, 1.73, 0, 5.84873, 0, -1.73, 0, 1.13722, 15.9
 [node name="_Node3D_126" parent="." instance=ExtResource("257_85jn0")]
 transform = Transform3D(2.14671, 0, -0.491937, 0, 6.22178, 0, 0.491937, 0, 2.14671, 18.3015, 0.660497, 11.9251)
 
-[node name="Bush_020Quequis_House_Props_tscn2" type="Node3D" parent="." instance=ExtResource("228_d11fp")]
+[node name="Bush_020Quequis_House_Props_tscn2" parent="." instance=ExtResource("228_d11fp")]
 transform = Transform3D(-7.03272e-08, 0, 1.6089, 0, 1.6089, 0, -1.6089, 0, -7.03272e-08, 16.2472, 1.40447, 14.3595)
 
-[node name="Bush_020Quequis_House_Props_tscn3" type="Node3D" parent="." instance=ExtResource("228_d11fp")]
+[node name="Bush_020Quequis_House_Props_tscn3" parent="." instance=ExtResource("228_d11fp")]
 transform = Transform3D(0, 0, -1.6089, 0, 1.6089, 0, 1.6089, 0, 0, 18.482, 1.448, 12.3176)
 
-[node name="NapkinholderQuequis_House_Props_tscn7" type="Node3D" parent="." instance=ExtResource("245_byecq")]
+[node name="NapkinholderQuequis_House_Props_tscn7" parent="." instance=ExtResource("245_byecq")]
 transform = Transform3D(0.106864, 0, 0, 0, 0.106864, 0, 0, 0, 0.106864, 15.4871, 0.985516, 15.6459)
 
-[node name="NapkinholderQuequis_House_Props_tscn8" type="Node3D" parent="." instance=ExtResource("245_byecq")]
+[node name="NapkinholderQuequis_House_Props_tscn8" parent="." instance=ExtResource("245_byecq")]
 transform = Transform3D(-0.0755643, 0, 0.0755643, 0, 0.106864, 0, -0.0755643, 0, -0.0755643, 16.7944, 0.985516, 12.8072)
 
-[node name="NapkinholderQuequis_House_Props_tscn9" type="Node3D" parent="." instance=ExtResource("245_byecq")]
+[node name="NapkinholderQuequis_House_Props_tscn9" parent="." instance=ExtResource("245_byecq")]
 transform = Transform3D(-4.67117e-09, 0, 0.106864, 0, 0.106864, 0, -0.106864, 0, -4.67117e-09, 19.81, 0.985517, 11.373)
 
-[node name="ketchupQuequis_House_Props_tscn6" type="Node3D" parent="." instance=ExtResource("247_epueh")]
+[node name="ketchupQuequis_House_Props_tscn6" parent="." instance=ExtResource("247_epueh")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 19.6219, 0.985517, 11.426)
 
-[node name="ketchupQuequis_House_Props_tscn7" type="Node3D" parent="." instance=ExtResource("247_epueh")]
+[node name="ketchupQuequis_House_Props_tscn7" parent="." instance=ExtResource("247_epueh")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 16.9204, 0.985516, 12.8306)
 
-[node name="ketchupQuequis_House_Props_tscn8" type="Node3D" parent="." instance=ExtResource("247_epueh")]
+[node name="ketchupQuequis_House_Props_tscn8" parent="." instance=ExtResource("247_epueh")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 16.0739, 0.985516, 15.823)
 
-[node name="mustardQuequis_House_Props_tscn6" type="Node3D" parent="." instance=ExtResource("246_2o8qe")]
+[node name="mustardQuequis_House_Props_tscn6" parent="." instance=ExtResource("246_2o8qe")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 15.5772, 0.985516, 15.4423)
 
-[node name="mustardQuequis_House_Props_tscn7" type="Node3D" parent="." instance=ExtResource("246_2o8qe")]
+[node name="mustardQuequis_House_Props_tscn7" parent="." instance=ExtResource("246_2o8qe")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 16.8776, 0.985516, 12.9364)
 
-[node name="mustardQuequis_House_Props_tscn8" type="Node3D" parent="." instance=ExtResource("246_2o8qe")]
+[node name="mustardQuequis_House_Props_tscn8" parent="." instance=ExtResource("246_2o8qe")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 19.7569, 0.985517, 11.5518)
 
-[node name="PepperQuequis_House_Props_tscn" type="Node3D" parent="." instance=ExtResource("258_3rbuk")]
+[node name="PepperQuequis_House_Props_tscn" parent="." instance=ExtResource("258_3rbuk")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 17.0672, 0.985516, 13.016)
 
-[node name="PepperQuequis_House_Props_tscn2" type="Node3D" parent="." instance=ExtResource("258_3rbuk")]
+[node name="PepperQuequis_House_Props_tscn2" parent="." instance=ExtResource("258_3rbuk")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 16.0455, 0.985516, 15.6989)
 
-[node name="PepperQuequis_House_Props_tscn3" type="Node3D" parent="." instance=ExtResource("258_3rbuk")]
+[node name="PepperQuequis_House_Props_tscn3" parent="." instance=ExtResource("258_3rbuk")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 19.8785, 0.985517, 11.4389)
 
-[node name="SaltQuequis_House_Props_tscn" type="Node3D" parent="." instance=ExtResource("259_2hv6b")]
+[node name="SaltQuequis_House_Props_tscn" parent="." instance=ExtResource("259_2hv6b")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 19.9657, 0.985517, 11.4426)
 
-[node name="SaltQuequis_House_Props_tscn2" type="Node3D" parent="." instance=ExtResource("259_2hv6b")]
+[node name="SaltQuequis_House_Props_tscn2" parent="." instance=ExtResource("259_2hv6b")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 17.1569, 0.985516, 13.0847)
 
-[node name="SaltQuequis_House_Props_tscn3" type="Node3D" parent="." instance=ExtResource("259_2hv6b")]
+[node name="SaltQuequis_House_Props_tscn3" parent="." instance=ExtResource("259_2hv6b")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 15.4801, 0.985516, 15.8483)
 
-[node name="SaltQuequis_House_Props_tscn4" type="Node3D" parent="." instance=ExtResource("259_2hv6b")]
+[node name="SaltQuequis_House_Props_tscn4" parent="." instance=ExtResource("259_2hv6b")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 10.5064, 0.985517, 18.1028)
 
-[node name="SaltQuequis_House_Props_tscn5" type="Node3D" parent="." instance=ExtResource("259_2hv6b")]
+[node name="SaltQuequis_House_Props_tscn5" parent="." instance=ExtResource("259_2hv6b")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 10.7868, 0.985516, 20.8295)
 
-[node name="SaltQuequis_House_Props_tscn6" type="Node3D" parent="." instance=ExtResource("259_2hv6b")]
+[node name="SaltQuequis_House_Props_tscn6" parent="." instance=ExtResource("259_2hv6b")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 10.5482, 0.985516, 15.4342)
 
-[node name="PepperQuequis_House_Props_tscn4" type="Node3D" parent="." instance=ExtResource("258_3rbuk")]
+[node name="PepperQuequis_House_Props_tscn4" parent="." instance=ExtResource("258_3rbuk")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 10.5788, 0.985516, 15.3467)
 
-[node name="PepperQuequis_House_Props_tscn5" type="Node3D" parent="." instance=ExtResource("258_3rbuk")]
+[node name="PepperQuequis_House_Props_tscn5" parent="." instance=ExtResource("258_3rbuk")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 10.8592, 0.985517, 18.0199)
 
-[node name="PepperQuequis_House_Props_tscn6" type="Node3D" parent="." instance=ExtResource("258_3rbuk")]
+[node name="PepperQuequis_House_Props_tscn6" parent="." instance=ExtResource("258_3rbuk")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 10.7342, 0.985516, 20.7699)
 
-[node name="SaltQuequis_House_Props_tscn7" type="Node3D" parent="." instance=ExtResource("259_2hv6b")]
+[node name="SaltQuequis_House_Props_tscn7" parent="." instance=ExtResource("259_2hv6b")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 25.1854, 0.966131, 20.9644)
 
-[node name="SaltQuequis_House_Props_tscn8" type="Node3D" parent="." instance=ExtResource("259_2hv6b")]
+[node name="SaltQuequis_House_Props_tscn8" parent="." instance=ExtResource("259_2hv6b")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 25.1394, 0.966131, 21.0634)
 
-[node name="PepperQuequis_House_Props_tscn7" type="Node3D" parent="." instance=ExtResource("258_3rbuk")]
+[node name="PepperQuequis_House_Props_tscn7" parent="." instance=ExtResource("258_3rbuk")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 25.1258, 0.966131, 20.841)
 
-[node name="PepperQuequis_House_Props_tscn8" type="Node3D" parent="." instance=ExtResource("258_3rbuk")]
+[node name="PepperQuequis_House_Props_tscn8" parent="." instance=ExtResource("258_3rbuk")]
 transform = Transform3D(0.197959, 0, 0, 0, 0.197959, 0, 0, 0, 0.197959, 25.0901, 0.966131, 20.9575)
 
-[node name="chair_1chair_1_tscn18" type="Node3D" parent="." instance=ExtResource("36_cqhj3")]
+[node name="chair_1chair_1_tscn18" parent="." instance=ExtResource("36_cqhj3")]
 transform = Transform3D(-1, 1.50996e-07, -6.60024e-15, 0, -4.37114e-08, -1, -1.50996e-07, -1, 4.37114e-08, 22.8927, 0.0420635, 18.8076)
 
-[node name="chair_1chair_1_tscn19" type="Node3D" parent="." instance=ExtResource("36_cqhj3")]
+[node name="chair_1chair_1_tscn19" parent="." instance=ExtResource("36_cqhj3")]
 transform = Transform3D(1, -3.49691e-07, 1.52855e-14, 0, -4.37114e-08, -1, 3.49691e-07, 1, -4.37114e-08, 22.8924, 0.0420632, 17.2595)
 
-[node name="chair_1chair_1_tscn20" type="Node3D" parent="." instance=ExtResource("36_cqhj3")]
+[node name="chair_1chair_1_tscn20" parent="." instance=ExtResource("36_cqhj3")]
 transform = Transform3D(-0.883305, -0.468796, 4.09835e-08, -2.04918e-08, -4.88122e-08, -1, 0.468796, -0.883305, 3.35097e-08, 23.0091, 0.0420635, 14.8132)
 
-[node name="chair_1chair_1_tscn21" type="Node3D" parent="." instance=ExtResource("36_cqhj3")]
+[node name="chair_1chair_1_tscn21" parent="." instance=ExtResource("36_cqhj3")]
 transform = Transform3D(0.71607, -0.698022, 1.42109e-14, -3.05115e-08, -3.13004e-08, -1, 0.698022, 0.71607, -4.37114e-08, 23.0706, 0.0420639, 13.2468)
 
-[node name="chair_1chair_1_tscn22" type="Node3D" parent="." instance=ExtResource("36_cqhj3")]
+[node name="chair_1chair_1_tscn22" parent="." instance=ExtResource("36_cqhj3")]
 transform = Transform3D(-0.187382, -0.982286, 3.47464e-08, 7.74256e-10, -3.55207e-08, -1, 0.982286, -0.187382, 7.41648e-09, 23.6383, 0.0420637, 10.232)
 
-[node name="chair_1chair_1_tscn23" type="Node3D" parent="." instance=ExtResource("36_cqhj3")]
+[node name="chair_1chair_1_tscn23" parent="." instance=ExtResource("36_cqhj3")]
 transform = Transform3D(-1, 8.66252e-07, 3.78651e-14, 0, -4.37114e-08, 1, 8.66252e-07, 1, 4.37114e-08, 23.0394, 1.5807, 9.61052)
 
-[node name="ArmchairQuequis_House_Props_tscn13" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+[node name="ArmchairQuequis_House_Props_tscn13" parent="." instance=ExtResource("242_bpu8w")]
 transform = Transform3D(-2.8213e-07, 5.63382e-14, 1, 1.50996e-07, 1, -1.37377e-14, 1, -1.50996e-07, 2.8213e-07, 25.7158, 0.0420635, 6.92677)
 
-[node name="ArmchairQuequis_House_Props_tscn14" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+[node name="ArmchairQuequis_House_Props_tscn14" parent="." instance=ExtResource("242_bpu8w")]
 transform = Transform3D(5.52335e-07, -9.7138e-14, -1, 1.50996e-07, 1, -1.37377e-14, -1, 1.50996e-07, -5.52335e-07, 23.7585, 0.0420636, 6.92198)
 
-[node name="TableQuequis_House_Props_tscn10" type="Node3D" parent="." instance=ExtResource("20_7xy12")]
+[node name="TableQuequis_House_Props_tscn10" parent="." instance=ExtResource("20_7xy12")]
 transform = Transform3D(-1.78294e-09, 0, -0.0407888, 0, 0.0407888, 0, 0.0407888, 0, -1.78294e-09, 24.6902, 0.0420634, 6.89042)
 
-[node name="ArmchairQuequis_House_Props_tscn15" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+[node name="ArmchairQuequis_House_Props_tscn15" parent="." instance=ExtResource("242_bpu8w")]
 transform = Transform3D(-7.58967e-07, 1.28339e-13, 1, 1.50996e-07, 1, -1.37377e-14, 1, -1.50996e-07, 7.58967e-07, 23.3337, 0.0420635, 6.91719)
 
-[node name="TableQuequis_House_Props_tscn11" type="Node3D" parent="." instance=ExtResource("20_7xy12")]
+[node name="TableQuequis_House_Props_tscn11" parent="." instance=ExtResource("20_7xy12")]
 transform = Transform3D(-1.78294e-09, 0, -0.0407888, 0, 0.0407888, 0, 0.0407888, 0, -1.78294e-09, 22.3189, 0.0420638, 7.02616)
 
-[node name="pillar_1pillar_1_tscn121" type="Node3D" parent="." instance=ExtResource("9_2c055")]
+[node name="pillar_1pillar_1_tscn121" parent="." instance=ExtResource("9_2c055")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 23.25, 0, 21.95)
 
-[node name="pillar_1pillar_1_tscn122" type="Node3D" parent="." instance=ExtResource("9_2c055")]
+[node name="pillar_1pillar_1_tscn122" parent="." instance=ExtResource("9_2c055")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 21.1, 0, 22)
 
-[node name="pills_bottle_1pills_bottle_1_tscn2" type="Node3D" parent="." instance=ExtResource("93_krxh6")]
+[node name="pills_bottle_1pills_bottle_1_tscn2" parent="." instance=ExtResource("93_krxh6")]
 transform = Transform3D(0.960566, -0.278048, 1.21539e-08, 0, -4.37114e-08, -1, 0.278048, 0.960566, -4.19877e-08, 24.9618, 0.985516, 6.90729)
 
-[node name="pills_bottle_1pills_bottle_1_tscn5" type="Node3D" parent="." instance=ExtResource("93_krxh6")]
+[node name="pills_bottle_1pills_bottle_1_tscn5" parent="." instance=ExtResource("93_krxh6")]
 transform = Transform3D(0.525007, 0.851097, -3.72027e-08, 0, -4.37114e-08, -1, -0.851097, 0.525007, -2.29488e-08, 24.9114, 0.985516, 6.75949)
 
-[node name="cash_1cash_1_tscn15" type="Node3D" parent="." instance=ExtResource("103_mdbv4")]
+[node name="cash_1cash_1_tscn15" parent="." instance=ExtResource("103_mdbv4")]
 transform = Transform3D(0.898889, -0.438175, 1.91532e-08, 0, -4.37114e-08, -1, 0.438175, 0.898889, -3.92917e-08, 24.5516, 0.985516, 6.72884)
 
-[node name="cash_1cash_1_tscn16" type="Node3D" parent="." instance=ExtResource("103_mdbv4")]
+[node name="cash_1cash_1_tscn16" parent="." instance=ExtResource("103_mdbv4")]
 transform = Transform3D(0.985776, 0.168059, -4.70348e-10, 6.33092e-09, -3.99336e-08, -1, -0.168059, 0.985776, -4.04297e-08, 24.523, 1.02698, 6.72755)
 
-[node name="electrical_outlet_1electrical_outlet_1_tscn6" type="Node3D" parent="." instance=ExtResource("56_j1mll")]
+[node name="electrical_outlet_1electrical_outlet_1_tscn6" parent="." instance=ExtResource("56_j1mll")]
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 25.9399, 0.468262, 8.15496)
 
-[node name="electrical_outlet_1electrical_outlet_1_tscn7" type="Node3D" parent="." instance=ExtResource("56_j1mll")]
+[node name="electrical_outlet_1electrical_outlet_1_tscn7" parent="." instance=ExtResource("56_j1mll")]
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 25.9344, 0.411918, 13.8754)
 
-[node name="electrical_outlet_1electrical_outlet_1_tscn8" type="Node3D" parent="." instance=ExtResource("56_j1mll")]
+[node name="electrical_outlet_1electrical_outlet_1_tscn8" parent="." instance=ExtResource("56_j1mll")]
 transform = Transform3D(-1, 1.50996e-07, -6.60024e-15, 0, -4.37114e-08, -1, -1.50996e-07, -1, 4.37114e-08, 24.1012, 0.483193, 21.9323)
 
-[node name="electrical_outlet_1electrical_outlet_1_tscn9" type="Node3D" parent="." instance=ExtResource("56_j1mll")]
+[node name="electrical_outlet_1electrical_outlet_1_tscn9" parent="." instance=ExtResource("56_j1mll")]
 transform = Transform3D(-1, 1.50996e-07, -6.60024e-15, 0, -4.37114e-08, -1, -1.50996e-07, -1, 4.37114e-08, 19.5236, 0.475789, 21.937)
 
-[node name="electrical_outlet_1electrical_outlet_1_tscn10" type="Node3D" parent="." instance=ExtResource("56_j1mll")]
+[node name="electrical_outlet_1electrical_outlet_1_tscn10" parent="." instance=ExtResource("56_j1mll")]
 transform = Transform3D(-1, 1.50996e-07, -6.60024e-15, 0, -4.37114e-08, -1, -1.50996e-07, -1, 4.37114e-08, 12.5807, 0.471826, 21.9421)
 
-[node name="electrical_outlet_1electrical_outlet_1_tscn11" type="Node3D" parent="." instance=ExtResource("56_j1mll")]
+[node name="electrical_outlet_1electrical_outlet_1_tscn11" parent="." instance=ExtResource("56_j1mll")]
 transform = Transform3D(1, -1.74846e-07, 7.64274e-15, 0, -4.37114e-08, -1, 1.74846e-07, 1, -4.37114e-08, 19.5091, 0.492576, 22.1162)
 
-[node name="electrical_outlet_1electrical_outlet_1_tscn12" type="Node3D" parent="." instance=ExtResource("56_j1mll")]
+[node name="electrical_outlet_1electrical_outlet_1_tscn12" parent="." instance=ExtResource("56_j1mll")]
 transform = Transform3D(1, -1.74846e-07, 7.64274e-15, 0, -4.37114e-08, -1, 1.74846e-07, 1, -4.37114e-08, 24.3318, 0.48752, 22.1164)
 
-[node name="electrical_outlet_1electrical_outlet_1_tscn13" type="Node3D" parent="." instance=ExtResource("56_j1mll")]
+[node name="electrical_outlet_1electrical_outlet_1_tscn13" parent="." instance=ExtResource("56_j1mll")]
 transform = Transform3D(-1, 1.50996e-07, -6.60024e-15, 0, -4.37114e-08, -1, -1.50996e-07, -1, 4.37114e-08, 16.0944, 0.432005, 25.9391)
 
-[node name="carpet_1carpet_1_tscn4" type="Node3D" parent="." instance=ExtResource("62_4h6dw")]
+[node name="carpet_1carpet_1_tscn4" parent="." instance=ExtResource("62_4h6dw")]
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 20.0135, -2.95457e-09, -0.324364)
 
-[node name="TableQuequis_House_Props_tscn12" type="Node3D" parent="." instance=ExtResource("20_7xy12")]
+[node name="TableQuequis_House_Props_tscn12" parent="." instance=ExtResource("20_7xy12")]
 transform = Transform3D(0.0407888, 0, -3.64558e-09, 0, 0.0407888, 0, 3.64558e-09, 0, 0.0407888, 19.8211, 0.0420634, 18.0322)
 
-[node name="chair_1chair_1_tscn24" type="Node3D" parent="." instance=ExtResource("36_cqhj3")]
+[node name="chair_1chair_1_tscn24" parent="." instance=ExtResource("36_cqhj3")]
 transform = Transform3D(-0.984938, 0.172897, -1.51151e-08, 7.55753e-09, -4.43696e-08, -1, -0.172897, -0.984938, 4.23948e-08, 19.5359, 0.0420635, 18.8073)
 
-[node name="chair_1chair_1_tscn25" type="Node3D" parent="." instance=ExtResource("36_cqhj3")]
+[node name="chair_1chair_1_tscn25" parent="." instance=ExtResource("36_cqhj3")]
 transform = Transform3D(3.93074e-07, 0.433596, -0.901107, 1, -9.97386e-07, -4.37113e-08, -9.17705e-07, -0.901107, -0.433596, 19.5138, 0.381549, 16.8176)
 
-[node name="vending_machine_1vending_machine_1_tscn10" type="Node3D" parent="." instance=ExtResource("42_0kw4i")]
+[node name="vending_machine_1vending_machine_1_tscn10" parent="." instance=ExtResource("42_0kw4i")]
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 25.5848, 0.0420636, 10.9875)
 
-[node name="vending_machine_1vending_machine_1_tscn11" type="Node3D" parent="." instance=ExtResource("42_0kw4i")]
+[node name="vending_machine_1vending_machine_1_tscn11" parent="." instance=ExtResource("42_0kw4i")]
 transform = Transform3D(0.0755227, -0.997142, 4.68878e-08, 1.24838e-10, -4.70125e-08, -1, 0.997142, 0.0755227, -3.42605e-09, 25.593, 0.0420635, 12.0657)
 
-[node name="vending_machine_1vending_machine_1_tscn12" type="Node3D" parent="." instance=ExtResource("42_0kw4i")]
+[node name="vending_machine_1vending_machine_1_tscn12" parent="." instance=ExtResource("42_0kw4i")]
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 25.6496, 0.0420634, 13.1325)
 
-[node name="ArmchairQuequis_House_Props_tscn16" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+[node name="ArmchairQuequis_House_Props_tscn16" parent="." instance=ExtResource("242_bpu8w")]
 transform = Transform3D(1, -1.50996e-07, 8.9409e-07, 1.50996e-07, 1, -1.37377e-14, 8.9409e-07, -1.48741e-13, -1, 14.0557, 0.0420633, 14.2812)
 
-[node name="ArmchairQuequis_House_Props_tscn17" type="Node3D" parent="." instance=ExtResource("242_bpu8w")]
+[node name="ArmchairQuequis_House_Props_tscn17" parent="." instance=ExtResource("242_bpu8w")]
 transform = Transform3D(-1, 1.50996e-07, -1.10467e-06, 1.50996e-07, 1, -1.37377e-14, -1.10467e-06, 1.80538e-13, 1, 14.125, 0.0420635, 16.5052)
 
-[node name="TableQuequis_House_Props_tscn13" type="Node3D" parent="." instance=ExtResource("20_7xy12")]
+[node name="TableQuequis_House_Props_tscn13" parent="." instance=ExtResource("20_7xy12")]
 transform = Transform3D(0.0407888, 0, -3.64558e-09, 0, 0.0407888, 0, 3.64558e-09, 0, 0.0407888, 14.0945, 0.0420635, 15.3288)
 
-[node name="trash_canQuequis_House_Props_tscn4" type="Node3D" parent="." instance=ExtResource("99_t04p8")]
+[node name="trash_canQuequis_House_Props_tscn4" parent="." instance=ExtResource("99_t04p8")]
 transform = Transform3D(0.676719, 0, 0, 0, 0.676719, 0, 0, 0, 0.676719, 15.0549, 0.0420637, 17.1058)
 
-[node name="trash_can_01Quequis_House_Props_tscn4" type="Node3D" parent="." instance=ExtResource("43_3pmhj")]
+[node name="trash_can_01Quequis_House_Props_tscn4" parent="." instance=ExtResource("43_3pmhj")]
 transform = Transform3D(0.492345, 0, 0, 0, 0.492345, 0, 0, 0, 0.492345, 5.58481, -3.46371e-07, -19.4428)
 
-[node name="catwalk_1catwalk_1_tscn35" type="Node3D" parent="." instance=ExtResource("19_wlggv")]
+[node name="catwalk_1catwalk_1_tscn35" parent="." instance=ExtResource("19_wlggv")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12, 5, -27)
 
-[node name="catwalk_1catwalk_1_tscn36" type="Node3D" parent="." instance=ExtResource("19_wlggv")]
+[node name="catwalk_1catwalk_1_tscn36" parent="." instance=ExtResource("19_wlggv")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8, 5, -27)
 
-[node name="catwalk_1catwalk_1_tscn37" type="Node3D" parent="." instance=ExtResource("19_wlggv")]
+[node name="catwalk_1catwalk_1_tscn37" parent="." instance=ExtResource("19_wlggv")]
 transform = Transform3D(1.2915, 0, 4.37114e-08, 5.64534e-08, 1.91069e-15, -1, 0, 1, 1.91069e-15, 0.549708, 4.07475, -27)
 
-[node name="catwalk_1catwalk_1_tscn38" type="Node3D" parent="." instance=ExtResource("19_wlggv")]
+[node name="catwalk_1catwalk_1_tscn38" parent="." instance=ExtResource("19_wlggv")]
 transform = Transform3D(7.19937e-08, -1, -5.12889e-08, -0.482402, -3.09086e-08, -0.586677, 0.482402, 1.18331e-07, -0.586677, 27, 3.99534, -14.5134)
 
-[node name="catwalk_1catwalk_1_tscn39" type="Node3D" parent="." instance=ExtResource("19_wlggv")]
+[node name="catwalk_1catwalk_1_tscn39" parent="." instance=ExtResource("19_wlggv")]
 transform = Transform3D(-5.1791e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1.18484, -4.37114e-08, 1.91069e-15, 27, 3.07367, -11.682)
 
-[node name="catwalk_1catwalk_1_tscn5" type="Node3D" parent="." instance=ExtResource("19_wlggv")]
+[node name="catwalk_1catwalk_1_tscn5" parent="." instance=ExtResource("19_wlggv")]
 transform = Transform3D(1.3394e-07, -1, -6.18172e-08, -0.897483, -3.09086e-08, -0.707107, 0.897483, 1.18331e-07, -0.707107, 27, 1.5, 15.5)
 
 [node name="catwalk_1catwalk_1_tscn7" parent="." instance=ExtResource("19_wlggv")]
 transform = Transform3D(1.3394e-07, -1, 6.18172e-08, -0.897483, -3.09086e-08, 0.707107, -0.897483, -1.18331e-07, -0.707107, 27, 1.5, 7.91887)
 
-[node name="catwalk_1catwalk_1_tscn8" type="Node3D" parent="." instance=ExtResource("19_wlggv")]
+[node name="catwalk_1catwalk_1_tscn8" parent="." instance=ExtResource("19_wlggv")]
 transform = Transform3D(-4.56197e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1.04366, -4.37114e-08, 1.91069e-15, 26.9944, 3.27241, 11.7058)
 
-[node name="catwalk_1catwalk_1_tscn" type="Node3D" parent="." instance=ExtResource("19_wlggv")]
+[node name="catwalk_1catwalk_1_tscn" parent="." instance=ExtResource("19_wlggv")]
 transform = Transform3D(1.39943e-07, -1, -6.42904e-08, -0.937705, -3.09086e-08, -0.735396, 0.937705, 1.18331e-07, -0.735396, 27, 1.23044, -7.45475)
 
-[node name="pillar_rgx_1pillar_rgx_1_tscn5" type="Node3D" parent="." instance=ExtResource("235_f34o4")]
+[node name="pillar_rgx_1pillar_rgx_1_tscn5" parent="." instance=ExtResource("235_f34o4")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -18, 5, -10)
 
-[node name="wall_1_plainwall_1_plain_tscn16" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+[node name="wall_1_plainwall_1_plain_tscn16" parent="." instance=ExtResource("7_5g2wk")]
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -18, 6, 24)
 
-[node name="wall_1_plainwall_1_plain_tscn17" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+[node name="wall_1_plainwall_1_plain_tscn17" parent="." instance=ExtResource("7_5g2wk")]
 transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, -20, 6, 26)
 
-[node name="wall_1_plainwall_1_plain_tscn18" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+[node name="wall_1_plainwall_1_plain_tscn18" parent="." instance=ExtResource("7_5g2wk")]
 transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, -24, 6, 26)
 
-[node name="wall_1_plainwall_1_plain_tscn19" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+[node name="wall_1_plainwall_1_plain_tscn19" parent="." instance=ExtResource("7_5g2wk")]
 transform = Transform3D(1.31134e-07, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 1.31134e-07, -5.73206e-15, -26, 6, 24)
 
-[node name="wall_1_plainwall_1_plain_tscn20" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+[node name="wall_1_plainwall_1_plain_tscn20" parent="." instance=ExtResource("7_5g2wk")]
 transform = Transform3D(-2.18557e-07, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -2.18557e-07, 9.55343e-15, -22, 6, 24)
 
-[node name="wall_1_plainwall_1_plain_tscn21" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+[node name="wall_1_plainwall_1_plain_tscn21" parent="." instance=ExtResource("7_5g2wk")]
 transform = Transform3D(-1, 2.62268e-07, -1.14641e-14, 0, -4.37114e-08, -1, -2.62268e-07, -1, 4.37114e-08, -24, 8, 22)
 
-[node name="wall_1_plainwall_1_plain_tscn22" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+[node name="wall_1_plainwall_1_plain_tscn22" parent="." instance=ExtResource("7_5g2wk")]
 transform = Transform3D(-1, 2.62268e-07, -1.14641e-14, 0, -4.37114e-08, -1, -2.62268e-07, -1, 4.37114e-08, -20, 8, 22)
 
-[node name="wall_1_plainwall_1_plain_tscn23" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+[node name="wall_1_plainwall_1_plain_tscn23" parent="." instance=ExtResource("7_5g2wk")]
 transform = Transform3D(3.0598e-07, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 3.0598e-07, -1.33748e-14, -26, 8, 24)
 
-[node name="wall_1_plainwall_1_plain_tscn24" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+[node name="wall_1_plainwall_1_plain_tscn24" parent="." instance=ExtResource("7_5g2wk")]
 transform = Transform3D(1, -3.49691e-07, 1.52855e-14, 0, -4.37114e-08, -1, 3.49691e-07, 1, -4.37114e-08, -24, 8, 26)
 
-[node name="wall_1_plainwall_1_plain_tscn25" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+[node name="wall_1_plainwall_1_plain_tscn25" parent="." instance=ExtResource("7_5g2wk")]
 transform = Transform3D(1, -3.49691e-07, 1.52855e-14, 0, -4.37114e-08, -1, 3.49691e-07, 1, -4.37114e-08, -20, 8, 26)
 
-[node name="wall_1_plainwall_1_plain_tscn26" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+[node name="wall_1_plainwall_1_plain_tscn26" parent="." instance=ExtResource("7_5g2wk")]
 transform = Transform3D(-3.93403e-07, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -3.93403e-07, 1.71962e-14, -18, 8, 24)
 
-[node name="floor_ceiling_hr_1floor_ceiling_hr_1_tscn106" type="Node3D" parent="." instance=ExtResource("125_c2emj")]
+[node name="floor_ceiling_hr_1floor_ceiling_hr_1_tscn106" parent="." instance=ExtResource("125_c2emj")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -20, 11, 24)
 
-[node name="floor_ceiling_hr_1floor_ceiling_hr_1_tscn109" type="Node3D" parent="." instance=ExtResource("125_c2emj")]
+[node name="floor_ceiling_hr_1floor_ceiling_hr_1_tscn109" parent="." instance=ExtResource("125_c2emj")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -24, 11, 24)
 
-[node name="wall_1_plainwall_1_plain_tscn27" type="Node3D" parent="." instance=ExtResource("7_5g2wk")]
+[node name="wall_1_plainwall_1_plain_tscn27" parent="." instance=ExtResource("7_5g2wk")]
 transform = Transform3D(-3.93403e-07, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -3.93403e-07, 1.71962e-14, -22, 9, 24)
 
-[node name="walkie_talkie_1walkie_talkie_1_tscn2" type="Node3D" parent="." instance=ExtResource("92_hxxpw")]
+[node name="walkie_talkie_1walkie_talkie_1_tscn2" parent="." instance=ExtResource("92_hxxpw")]
 transform = Transform3D(0.774875, 0.632114, -2.76306e-08, 0, -4.37114e-08, -1, -0.632114, 0.774875, -3.38709e-08, 19.7027, 0.985517, 12.3948)
 
 [node name="Pickups" type="Node3D" parent="."]
 
-[node name="TimedUpgradePickup_tscn" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9666, -1.19209e-07, 24.1739)
-script = ExtResource("259_lgws6")
 UpgradeSpawnList = Array[int]([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 SpawnWeights = Array[int]([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn2" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn2" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.1809, 0, -11.8418)
-script = ExtResource("260_gwy68")
 WeaponSpawnList = Array[int]([0, 1, 2, 3, 4])
 SpawnWeights = Array[int]([1, 1, 1, 1, 1])
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn2" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn2" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11879, 0, -20.9637)
-script = ExtResource("259_lgws6")
 UpgradeSpawnList = Array[int]([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 SpawnWeights = Array[int]([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn3" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn3" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9112, 0, -21.1694)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn4" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn4" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.21306, 0, -16.2058)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn3" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn3" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.1275, 0, -0.227872)
-script = ExtResource("259_lgws6")
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn4" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn4" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8131, 0, 23.6444)
-script = ExtResource("259_lgws6")
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn5" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn5" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.3024, 0, 11.3584)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedHealthPickup_tscn" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+[node name="TimedHealthPickup_tscn" parent="Pickups" instance=ExtResource("261_3u6v1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5791, 0, 15.087)
-script = ExtResource("262_hpc52")
-HealthGained = 25
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn5" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn5" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.90274, 0, 22.1185)
-script = ExtResource("259_lgws6")
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn6" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn6" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.96627, 0, 15.0273)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.4894, 0, 4.59829)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedHealthPickup_tscn2" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+[node name="TimedHealthPickup_tscn2" parent="Pickups" instance=ExtResource("261_3u6v1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.3522, 0, 4.00076)
-script = ExtResource("262_hpc52")
-HealthGained = 25
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn6" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn6" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0734, 0, 0.110248)
-script = ExtResource("259_lgws6")
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn7" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn7" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.62182, 0, -8.51055)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedHealthPickup_tscn3" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+[node name="TimedHealthPickup_tscn3" parent="Pickups" instance=ExtResource("261_3u6v1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5389, 0, -9.83374)
-script = ExtResource("262_hpc52")
-HealthGained = 25
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn7" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn7" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.3786, 0, 25.0954)
-script = ExtResource("259_lgws6")
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn8" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn8" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.243, 0, 16.5215)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedHealthPickup_tscn4" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+[node name="TimedHealthPickup_tscn4" parent="Pickups" instance=ExtResource("261_3u6v1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5534, 0, -24.1492)
-script = ExtResource("262_hpc52")
-HealthGained = 25
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn8" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn8" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.523, 0, -3.98561)
-script = ExtResource("259_lgws6")
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn9" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn9" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0145, 2, -25.3546)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn9" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn9" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.993, 5, -23.612)
-script = ExtResource("259_lgws6")
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedHealthPickup_tscn5" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+[node name="TimedHealthPickup_tscn5" parent="Pickups" instance=ExtResource("261_3u6v1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.8892, 5, -18.4053)
-script = ExtResource("262_hpc52")
-HealthGained = 25
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn10" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn10" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.9154, 5, 19.8432)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn10" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn10" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8612, 5, 24.7691)
-script = ExtResource("259_lgws6")
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn11" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn11" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4985, 5, 19.3914)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn11" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn11" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.2392, 5, 8.05582)
-script = ExtResource("259_lgws6")
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedHealthPickup_tscn6" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+[node name="TimedHealthPickup_tscn6" parent="Pickups" instance=ExtResource("261_3u6v1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.696, 5, 13.2408)
-script = ExtResource("262_hpc52")
-HealthGained = 25
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn12" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn12" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.49143, 5, 19.0514)
-script = ExtResource("259_lgws6")
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn12" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn12" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.422394, 5, 21.4291)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedHealthPickup_tscn7" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+[node name="TimedHealthPickup_tscn7" parent="Pickups" instance=ExtResource("261_3u6v1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2684, 5, 14.8292)
-script = ExtResource("262_hpc52")
-HealthGained = 25
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn13" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn13" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.0782, 5, 16.033)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn13" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn13" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3877, 5, 9.88373)
-script = ExtResource("259_lgws6")
 UpgradeSpawnList = Array[int]([3])
 SpawnWeights = Array[int]([1])
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn14" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn14" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7742, 6, 9.86669)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn14" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn14" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.7086, 5, 19.7673)
-script = ExtResource("259_lgws6")
 UpgradeSpawnList = Array[int]([3])
 SpawnWeights = Array[int]([0])
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn15" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn15" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.4738, 5, -0.982711)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedHealthPickup_tscn8" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+[node name="TimedHealthPickup_tscn8" parent="Pickups" instance=ExtResource("261_3u6v1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.691, 5, 8.44174)
-script = ExtResource("262_hpc52")
-HealthGained = 25
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn16" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn16" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0056, 5, -5.17782)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedHealthPickup_tscn9" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+[node name="TimedHealthPickup_tscn9" parent="Pickups" instance=ExtResource("261_3u6v1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.5203, 5, -12.8197)
-script = ExtResource("262_hpc52")
-HealthGained = 25
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn15" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn15" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9332, 5, -19.0841)
-script = ExtResource("259_lgws6")
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn17" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn17" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.89193, 5, -19.2039)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn16" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn16" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.6081, 5, -27.5813)
-script = ExtResource("259_lgws6")
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedHealthPickup_tscn10" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+[node name="TimedHealthPickup_tscn10" parent="Pickups" instance=ExtResource("261_3u6v1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49342, 5, -26.9964)
-script = ExtResource("262_hpc52")
-HealthGained = 25
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn18" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn18" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8066, 5, -12.0873)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedHealthPickup_tscn11" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+[node name="TimedHealthPickup_tscn11" parent="Pickups" instance=ExtResource("261_3u6v1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6223, 5, 15.7831)
-script = ExtResource("262_hpc52")
-HealthGained = 25
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn17" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn17" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3699, 5, -0.578746)
-script = ExtResource("259_lgws6")
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn19" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn19" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4888, 5, 0.555232)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedHealthPickup_tscn12" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+[node name="TimedHealthPickup_tscn12" parent="Pickups" instance=ExtResource("261_3u6v1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.59252, 5, 6.42332)
-script = ExtResource("262_hpc52")
-HealthGained = 25
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn20" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn20" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52374, 5, -5.44249)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn18" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn18" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7715, 9, -12.7115)
-script = ExtResource("259_lgws6")
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn21" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn21" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2639, 9, -6.9209)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn19" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn19" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5831, 4, 3.80812)
-script = ExtResource("259_lgws6")
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn22" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn22" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1212, 3.4, -14.9476)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn20" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn20" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.415, 3.4, -10.1675)
-script = ExtResource("259_lgws6")
 UpgradeSpawnList = Array[int]([7])
 SpawnWeights = Array[int]([1])
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn23" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn23" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0775, 3.4, 20.9886)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn21" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn21" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4714, 3.4, -0.557608)
-script = ExtResource("259_lgws6")
 UpgradeSpawnList = Array[int]([0])
 SpawnWeights = Array[int]([1])
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn22" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn22" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.8622, 3.4, -12.8244)
-script = ExtResource("259_lgws6")
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn24" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn24" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.7991, 3.4, -18.7046)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedHealthPickup_tscn13" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+[node name="TimedHealthPickup_tscn13" parent="Pickups" instance=ExtResource("261_3u6v1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5476, 3.4, -18.7086)
-script = ExtResource("262_hpc52")
-HealthGained = 25
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedUpgradePickup_tscn23" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+[node name="TimedUpgradePickup_tscn23" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8462, 3.4, -10.4042)
-script = ExtResource("259_lgws6")
 UpgradeSpawnList = Array[int]([7, 9])
 SpawnWeights = Array[int]([1, 1])
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedWeaponPickup_tscn25" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("152_qco11")]
+[node name="TimedWeaponPickup_tscn25" parent="Pickups" instance=ExtResource("152_qco11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.0489, 3.4, -4.92677)
-script = ExtResource("260_gwy68")
-PickupArea = NodePath("Area3D")
-RespawnTime = 3.0
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
-[node name="TimedHealthPickup_tscn14" type="Node3D" parent="Pickups" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("261_3u6v1")]
+[node name="TimedHealthPickup_tscn14" parent="Pickups" instance=ExtResource("261_3u6v1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.838, 5.1, 19.9951)
-script = ExtResource("262_hpc52")
-HealthGained = 25
-PickupArea = NodePath("Area3D")
-MeshParent = NodePath("MeshParent")
-ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
