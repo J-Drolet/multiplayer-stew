@@ -200,17 +200,25 @@ namespace multiplayerstew.Scripts.Base
 				foreach(int angleOffset in angleOffsets)
 				{
 					UpgradeableProjectile projectileInstance = Projectile.Instantiate() as UpgradeableProjectile;
+					UpgradeableProjectile dummyProjectile = Projectile.Instantiate() as UpgradeableProjectile;
 
 					// Pack spawn info into Name
 					ProjectileSpawnInfo spawnInfo = new();
 					spawnInfo.ProjectileOwner = GetMultiplayerAuthority();
 					spawnInfo.RandomizerSeed = rng.NextInt64(10000);
 					spawnInfo.SpawnTransform = new GodotJson.SerializableTransform3D(LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalTransform);
-					spawnInfo.SpawnTime = GameSessionManager.GameClock;
+					spawnInfo.SpawnTime = Time.GetUnixTimeFromSystem(); // gives the projectile a unique name
     				spawnInfo.AngleOffset = angleOffset;
-					projectileInstance.Name = GodotJson.ToJson(spawnInfo);  
+					string projectileName = GodotJson.ToJson(spawnInfo);
 
+					projectileInstance.Name = projectileName; 
 					LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].projectileParent.AddChild(projectileInstance, true);
+					projectileInstance.Visible = false; // hide real projectile
+
+					dummyProjectile.IsDummy = true;
+					dummyProjectile.SetMultiplayerAuthority(GetMultiplayerAuthority());
+					dummyProjectile.Name = projectileName; 
+					LevelManager.Instance.AddChild(dummyProjectile, true);
 				}
 			}
 		}

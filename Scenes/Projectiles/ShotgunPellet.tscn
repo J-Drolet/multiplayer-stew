@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://chv0b14sstem5"]
+[gd_scene load_steps=5 format=3 uid="uid://chv0b14sstem5"]
 
 [ext_resource type="Script" uid="uid://nprhfw4hoegg" path="res://Scripts/Base/UpgradeableProjectile.cs" id="1_g76ux"]
 
@@ -12,11 +12,6 @@ material = SubResource("StandardMaterial3D_e3alw")
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_sjcrr"]
 properties/0/path = NodePath(".:position")
-properties/0/spawn = true
-properties/0/replication_mode = 1
-
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_jxtxf"]
-properties/0/path = NodePath(".:TrueGlobalPosition")
 properties/0/spawn = true
 properties/0/replication_mode = 1
 properties/1/path = NodePath(".:rotation")
@@ -34,6 +29,3 @@ mesh = SubResource("SphereMesh_k41vp")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_sjcrr")
-
-[node name="PeerSync" type="MultiplayerSynchronizer" parent="."]
-replication_config = SubResource("SceneReplicationConfig_jxtxf")

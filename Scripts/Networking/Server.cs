@@ -139,26 +139,6 @@ public partial class Server : Node
     public void NotifyConnectionRefused(string reason) {}
 
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Unreliable)]
-    public void FetchServerTime(double clientTime)
-    {
-        RpcId(Multiplayer.GetRemoteSenderId(), MethodName.ReturnServerTime, Time.GetUnixTimeFromSystem(), clientTime);
-    }
-
-    [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Unreliable)]
-    public void ReturnServerTime(double serverTime, double clientTime) {}
-
-    [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Unreliable)]
-    public void RequestLatency(double clientTime)
-    {
-        RpcId(Multiplayer.GetRemoteSenderId(), MethodName.ReturnLatency, clientTime);
-    }
-
-    [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Unreliable)]
-    public void ReturnLatency(double clientTime) {}
-
-
-
-    [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Unreliable)]
     public void RequestPing(double requestorTime)
     {
         RpcId(Multiplayer.GetRemoteSenderId(), MethodName.ReturnPing, requestorTime);
