@@ -7,4 +7,7 @@
   <ItemGroup>
     <Folder Include="Scenes\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="constants.cfg" />
+  </ItemGroup>
 </Project>
