@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 
 public partial class UI: Node
 {
@@ -52,17 +53,5 @@ public partial class UI: Node
             Scoreboard.Show();
         }
 
-    }
-
-    public static void ToggleSpinner(bool visibility) 
-    {
-        if(visibility) 
-        {
-            Spinner.Show();
-        }
-        else
-        {
-            Spinner.Hide();
-        }
     }
 }

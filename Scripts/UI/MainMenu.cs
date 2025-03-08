@@ -46,7 +46,7 @@ public partial class MainMenu : Control
         CloseAllWindows();
         Client.Instance.CreateLobbyAndConnect();
         LobbyPage.Show();
-        UI.ToggleSpinner(true);
+        UI.Spinner.Show();
     }
 
     public void OnJoinPressed()

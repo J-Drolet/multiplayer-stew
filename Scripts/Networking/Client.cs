@@ -97,7 +97,7 @@ public partial class Client : Node
     private void ConnectedToServer()
     {
         GD.Print("Connected to server");
-        UI.ToggleSpinner(false);
+        UI.Spinner.Hide();
         RpcId(1, MethodName.SendPlayerInfo, Multiplayer.GetUniqueId(), Config.GetValue("settings", "player_name").ToString());
 
         //main.connection_succeeded()
