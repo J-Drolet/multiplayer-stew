@@ -151,7 +151,7 @@ public partial class LevelManager : Node
 					{
 						PlayerStats[id].deaths++;
 
-						if(PlayerStats.ContainsKey(character.LastDamagedBy))
+						if(character.GetMultiplayerAuthority() != character.LastDamagedBy && PlayerStats.ContainsKey(character.LastDamagedBy))
 						{
 							PlayerStats[character.LastDamagedBy].kills++;
 							PlayerStats[character.LastDamagedBy].aura += LevelPeerInfo[id].characterNode.CalculatePowerLevel();
