@@ -1,0 +1,156 @@
+[gd_scene load_steps=9 format=4 uid="uid://cslx7c34bxb3h"]
+
+[ext_resource type="Texture2D" uid="uid://b2ekw3lhyp6vx" path="res://Assets/Textures/UI/OpenPack_Cigarette_Pack_1024.png" id="1_tig7o"]
+[ext_resource type="Script" uid="uid://btxe376me04ya" path="res://Scripts/UI/InGameUI/PowerPackDisplay.cs" id="1_vh6wk"]
+[ext_resource type="PackedScene" uid="uid://0x7eogo5neue" path="res://Scenes/UI/Standalone Components/AnimatedCig.tscn" id="2_tig7o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xn4v"]
+resource_name = "Cigarette_Pack_Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_tig7o")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2mhhe"]
+_surfaces = [{
+"aabb": AABB(-0.30217, -0.749244, -0.13756, 0.60434, 0.775649, 0.27512),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAgADAAQAAAACAAQAAQAFAAMAAAAEAAYAAQAHAAUAAAAHAAEABwAGAAUABwAAAAYA"),
+"name": "Cigarette_Pack_Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAAAAAAD//wAA//8AAP//AAAAAAAA//////7/AAD///7/AAAAAAAA///+/wAAAAD+/wAAAAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gpjhw"]
+resource_name = "OpenPack_Cube_056"
+_surfaces = [{
+"aabb": AABB(-0.30217, -0.749244, -0.13756, 0.60434, 0.775649, 0.27512),
+"attribute_data": PackedByteArray("wODHZzKbOSLA4DkiMpvHZ+ZZz7mhAF3/oQDPueZZXf/nWaZyoQA0uKEApnLnWTS4b7TPuSpbXf8qW8+5b7Rd/2+0pXIqWzS4Klulcm+0NLg="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
+"material": SubResource("StandardMaterial3D_4xn4v"),
+"name": "Cigarette_Pack_Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAAAAAAAVNX//wAA//9U1f//AAAAAFTVAAAAAP//VNX//wAA////vwAA///+//+///////7//78AAAAA////v///AAAAAFTV//////7/VNX///7/AABU1f//AAD//1TVAAAAAAAA//////7/AAD//wAA/v8AAP////8AAAAA//8AAAAA//9U1QAA/v8AAFTVAAD///7/VNUAAAAAAABU1VVVVFVVVVRVVVVUVVRVVFX/f/9//3//f/9//3//f/9/qqpVVaqqVVWqqlVVqqpVVf+//z//v/8//7//P/8//79UVaqqVFWqqlRVqqpUVaqq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_2mhhe")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8prs1"]
+_surfaces = [{
+"aabb": AABB(-0.32191, 0.026405, -0.150345, 0.64382, 0.321812, 0.300689),
+"format": 34896613377,
+"index_count": 78,
+"index_data": PackedByteArray("DAAJAA0ADgAMAA0ADgAPAAwADQAHAA4ADQAJAAcADgAKAA8ADgAHAAoADwALAAwADAALAAkADwAKAAsAAwAHAAkAAQAKAAcAAwABAAcABQALAAoAAQAFAAoACAAJAAsACAADAAkABQAIAAsAAgABAAMAAAABAAIAAAAFAAEAAgADAAQABAADAAgABgAFAAAABAAIAAYABgAIAAUA"),
+"lods": [9.63281e-05, PackedByteArray("AAABAAIAAgABAAMAAgADAAQAAAAFAAEABgAFAAAAAwABAAcABAAIAAYABAADAAgABgAIAAUAAwAHAAkACAADAAkAAQAKAAcAAQAFAAoACQAHAAoABQAIAAsACAAJAAsABQALAAoACQAKAAsA")],
+"name": "Cigarette_Pack_Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("JfgAABz1AAD//wAAAAAAACX4AADiCgAAAAAAAAAAAADZBwAA4goAAP//AAD//wAA2QcAABz1AAD///7/AAAAAAAAAAD//wAAAAD+/wAAAAD//////v8AAAAA///+/wAA2Qf//xz1AADZB/7/4goAACX4/v/iCgAAJfj//xz1AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kes56"]
+resource_name = "OpenPack_Cube_002"
+_surfaces = [{
+"aabb": AABB(-0.32191, 0.026405, -0.150345, 0.64382, 0.321812, 0.300689),
+"attribute_data": PackedByteArray("3QM3KaZM8SZrSTcppkwKcaEA8SZrScVu3QPFbqEACnHumfEm7pkKcelNCnHpTfEms7VEtbzaP2m82kS1s7U/aepNogADmKsl6k2rJQOYogChAKEApkyrJaEAqyWmTKEAs7Vd/7zaRLW82l3/s7VEtSVRNymzljcps5bFbiVRxW4="),
+"format": 34896613399,
+"index_count": 78,
+"index_data": PackedByteArray("HAAIAB0AHQAIAAkAHAALAAgAHQAJAB4AHgAcAB0AHgAJAAoAHwALABwAHgAfABwAHwAKAAsAHgAKAB8AAAABAAIAAgABAAMAAAAEAAEAAgADAAUABgAEAAAABQADAAcABgAHAAQABQAHAAYADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkA"),
+"lods": [9.63281e-05, PackedByteArray("AAABAAIAAgABAAMAAAAEAAEAAgADAAUABgAEAAAABQADAAcABgAHAAQABQAHAAYACAAJAAoACAAKAAsADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkA")],
+"material": SubResource("StandardMaterial3D_4xn4v"),
+"name": "Cigarette_Pack_Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("JfgAABz1VNX//wAAAABU1SX4AADiClTVAAAAAAAAVNX//wAA//9U1dkHAADiClTV2QcAABz1VNUAAAAA//9U1QAA/v8AAFTV///+/wAAVNX//////v9U1QAA///+/1TVAAAAAP//VNUAAP7/AABU1QAA///+/1TVAAAAAAAAVNUAAAAAAAD//////v8AAP//AAD+/wAA/////wAAAAD/////AAAAAP////////7///////7/AAD/////AAD///////8AAP///78AAP///v//v//////+//+/AAAAAP///7/ZB///HPVU1dkH/v/iClTVJfj+/+IKVNUl+P//HPVU1VVVVFVVVVRVVVVUVVRVVVVVVVRVVFVVVVVVVFVVVVRVVNWqKlTVqipU1aoqVNWqKlTVVNVU1VTVVNVU1VTVVNX///9/////f////3////9//7//f/+//3//v/9//7//f/////////////////////9U1aoqVNWqKlTVqipU1aoq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_8prs1")
+
+[node name="Pack" type="Node3D"]
+script = ExtResource("1_vh6wk")
+
+[node name="Cigarette_Pack" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.887412, 0, 0, 0, 1, 0, 0, 0, 0.755901, 0.00366588, 0.0175644, -0.00293235)
+layers = 2
+mesh = SubResource("ArrayMesh_gpjhw")
+skeleton = NodePath("")
+
+[node name="Cigs" type="Node3D" parent="."]
+
+[node name="7" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.225021, -0.202619, 0.0576357)
+
+[node name="6" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(0.830576, 0, -0.556905, 0, 1, 0, 0.556905, 0, 0.830576, -0.148783, -0.202619, 0.0576357)
+
+[node name="5" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(0.940193, 0, 0.340642, 0, 1, 0, -0.340642, 0, 0.940193, -0.0733204, -0.202619, 0.0576357)
+
+[node name="4" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(0.893285, 0, 0.449491, 0, 1, 0, -0.449491, 0, 0.893285, 0.0022261, -0.202619, 0.0576357)
+
+[node name="3" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(0.894654, 0, 0.44676, 0, 1, 0, -0.44676, 0, 0.894654, 0.0799718, -0.202619, 0.0576357)
+
+[node name="2" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(-0.134107, 0, -0.990967, 0, 1, 0, 0.990967, 0, -0.134107, 0.154609, -0.202619, 0.0576357)
+
+[node name="1" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(0.322513, 0, -0.946565, 0, 1, 0, 0.946565, 0, 0.322513, 0.230344, -0.202619, 0.0576357)
+
+[node name="20" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.225021, -0.202619, -0.0635981)
+
+[node name="19" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(0.830576, 0, -0.556905, 0, 1, 0, 0.556905, 0, 0.830576, -0.148783, -0.202619, -0.0635981)
+
+[node name="18" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(0.940193, 0, 0.340642, 0, 1, 0, -0.340642, 0, 0.940193, -0.0733204, -0.202619, -0.0635981)
+
+[node name="17" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(0.893285, 0, 0.449491, 0, 1, 0, -0.449491, 0, 0.893285, 0.0022261, -0.202619, -0.0635981)
+
+[node name="16" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(0.894654, 0, 0.44676, 0, 1, 0, -0.44676, 0, 0.894654, 0.0799718, -0.202619, -0.0635981)
+
+[node name="15" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(-0.134107, 0, -0.990967, 0, 1, 0, 0.990967, 0, -0.134107, 0.154609, -0.202619, -0.0635981)
+
+[node name="14" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(0.322513, 0, -0.946565, 0, 1, 0, 0.946565, 0, 0.322513, 0.230344, -0.202619, -0.0635981)
+
+[node name="13" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.184332, -0.202619, -0.00292446)
+
+[node name="12" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(0.830576, 0, -0.556905, 0, 1, 0, 0.556905, 0, 0.830576, -0.108094, -0.202619, -0.00292446)
+
+[node name="11" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(0.940193, 0, 0.340642, 0, 1, 0, -0.340642, 0, 0.940193, -0.0326317, -0.202619, -0.00292446)
+
+[node name="10" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(0.893285, 0, 0.449491, 0, 1, 0, -0.449491, 0, 0.893285, 0.0429148, -0.202619, -0.00292446)
+
+[node name="9" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(0.894654, 0, 0.44676, 0, 1, 0, -0.44676, 0, 0.894654, 0.12066, -0.202619, -0.00292446)
+
+[node name="8" parent="Cigs" instance=ExtResource("2_tig7o")]
+transform = Transform3D(-0.134107, 0, -0.990967, 0, 1, 0, 0.990967, 0, -0.134107, 0.195298, -0.202619, -0.00292446)
+
+[node name="Hinge" type="Node3D" parent="."]
+transform = Transform3D(0.887412, 0, 0, 0, 1, 0, 0, 0, 1, 0.000218677, 0.0436247, -0.106373)
+
+[node name="Cigarette_Pack_001" type="MeshInstance3D" parent="Hinge"]
+transform = Transform3D(1, 0, 0, 0, -0.0101638, 0.996433, 0, -0.755853, -0.0133989, -0.00191595, 0.098097, 0.0195782)
+layers = 2
+mesh = SubResource("ArrayMesh_kes56")
+skeleton = NodePath("")

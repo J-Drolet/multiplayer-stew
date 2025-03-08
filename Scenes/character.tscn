@@ -1,9 +1,10 @@
-[gd_scene load_steps=36 format=4 uid="uid://lcx7afjcynql"]
+[gd_scene load_steps=37 format=4 uid="uid://lcx7afjcynql"]
 
 [ext_resource type="Script" uid="uid://5yutkv0j58u4" path="res://Scripts/Character.cs" id="1_n6eoi"]
 [ext_resource type="Script" uid="uid://c38dblfxtao7" path="res://Scripts/Base/DamageArea.cs" id="2_4301p"]
 [ext_resource type="AudioStream" uid="uid://dbvro82au5vr5" path="res://Assets/Sounds/SFX/Voice B Pain Grunt 002.wav" id="2_b0fus"]
 [ext_resource type="PackedScene" uid="uid://bu6ksmfk5pwif" path="res://Scenes/Particles/InvisibilitySmoke.tscn" id="3_ffhoh"]
+[ext_resource type="PackedScene" uid="uid://cslx7c34bxb3h" path="res://Scenes/UI/Standalone Components/PowerPack.tscn" id="5_ejsiy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mo30b"]
 radius = 0.164492
@@ -357,6 +358,9 @@ spawn_path = NodePath("..")
 
 [node name="ProjectileOrigin" type="Node3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.793709)
+
+[node name="Pack" parent="Head/Camera3D" instance=ExtResource("5_ejsiy")]
+transform = Transform3D(0.229178, 0, 0.123963, 0, 0.260556, 0, -0.123963, 0, 0.229178, -0.76784, -0.226355, -0.782433)
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_w7qvv")

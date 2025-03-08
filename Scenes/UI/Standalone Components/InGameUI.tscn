@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://caiim4tryff58" path="res://Assets/Textures/UI/HealthBar/CigarettePSX.png" id="5_q7cja"]
 [ext_resource type="Texture2D" uid="uid://bnvm8reohkcpa" path="res://Assets/Textures/UI/Crosshair3.png" id="5_q16sg"]
 [ext_resource type="Texture2D" uid="uid://b6lypeb8nv6ub" path="res://Assets/Textures/UI/Ammo/Rifle_Fired.png" id="6_jnuv4"]
-[ext_resource type="Script" uid="uid://dx877wbsvgwx3" path="res://Scenes/UI/Standalone Components/ItemDisplay.cs" id="11_42qaf"]
+[ext_resource type="Script" uid="uid://dx877wbsvgwx3" path="res://Scripts/UI/InGameUI/ItemDisplay.cs" id="11_42qaf"]
 [ext_resource type="Texture2D" uid="uid://daeh6xoceiky1" path="res://Assets/Textures/Thumbnails/C_DoubleJump.png" id="12_vbjgj"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_q5dko"]
