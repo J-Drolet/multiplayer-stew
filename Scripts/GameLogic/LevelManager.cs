@@ -205,4 +205,10 @@ public partial class LevelManager : Node
 		UI.MainMenu.Show();
 		UI.Lobby.Show();
 	}
+
+	[Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Unreliable)]
+	public void DisplayHitmarker(bool isVital)
+	{
+		UI.Hitmarker.DisplayHitmarker(isVital);
+	}
 }
