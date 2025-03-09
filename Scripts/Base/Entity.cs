@@ -123,6 +123,8 @@ namespace multiplayerstew.Scripts.Base
                 {
                     projectile.DisableSelf();
                 }
+
+                LevelManager.Instance.RpcId(projectile.projectileOwner, LevelManager.MethodName.DisplayHitmarker, hitbox.TriggerVital);
             }
         }
 

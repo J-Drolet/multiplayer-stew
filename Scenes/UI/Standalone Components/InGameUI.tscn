@@ -1,17 +1,18 @@
-[gd_scene load_steps=18 format=3 uid="uid://dker47ss6f07g"]
+[gd_scene load_steps=19 format=3 uid="uid://dker47ss6f07g"]
 
 [ext_resource type="Script" uid="uid://c6d03e7dxcwth" path="res://Scripts/UI/InGameUI.cs" id="1_8bj3a"]
 [ext_resource type="Script" uid="uid://p8vtx7t4ry0c" path="res://Scripts/UI/GunViewCamera.cs" id="2_v6n63"]
 [ext_resource type="Script" uid="uid://beopo3wk41qyb" path="res://Scripts/UI/InGameUI/FlavorTextDisplay.cs" id="3_kgdjc"]
 [ext_resource type="Theme" uid="uid://dorbb2kl66u26" path="res://Assets/Themes/FlavorText.tres" id="3_uu0oa"]
-[ext_resource type="Texture2D" uid="uid://bmujef6nkdqyv" path="res://Assets/Textures/UI/HealthBar/CigaretteOutline.png" id="4_0nvln"]
+[ext_resource type="Texture2D" uid="uid://dvtb4ffopis17" path="res://Assets/Textures/UI/HealthBar/CigaretteOutline.png" id="4_0nvln"]
 [ext_resource type="Script" uid="uid://cyau7ww8b4vns" path="res://Scripts/UI/InGameUI/AmmoDisplay.cs" id="4_ojlqa"]
-[ext_resource type="Texture2D" uid="uid://d3f7mevdvuvi3" path="res://Assets/Textures/UI/Ammo/Rifle_Unfired.png" id="5_0b2f7"]
-[ext_resource type="Texture2D" uid="uid://caiim4tryff58" path="res://Assets/Textures/UI/HealthBar/CigarettePSX.png" id="5_q7cja"]
-[ext_resource type="Texture2D" uid="uid://bnvm8reohkcpa" path="res://Assets/Textures/UI/Crosshair3.png" id="5_q16sg"]
-[ext_resource type="Texture2D" uid="uid://b6lypeb8nv6ub" path="res://Assets/Textures/UI/Ammo/Rifle_Fired.png" id="6_jnuv4"]
+[ext_resource type="Texture2D" uid="uid://bg3qetf4osqrt" path="res://Assets/Textures/UI/Ammo/Rifle_Unfired.png" id="5_0b2f7"]
+[ext_resource type="Texture2D" uid="uid://b2w888ydp6gkh" path="res://Assets/Textures/UI/HealthBar/CigarettePSX.png" id="5_q7cja"]
+[ext_resource type="Texture2D" uid="uid://boop7d71pw8mk" path="res://Assets/Textures/UI/Crosshair3.png" id="5_q16sg"]
+[ext_resource type="Texture2D" uid="uid://dqscko1lqgsya" path="res://Assets/Textures/UI/Ammo/Rifle_Fired.png" id="6_jnuv4"]
+[ext_resource type="PackedScene" uid="uid://lnhkjw81qivb" path="res://Scenes/UI/Standalone Components/Hitmarker.tscn" id="6_pmhjc"]
 [ext_resource type="Script" uid="uid://dx877wbsvgwx3" path="res://Scripts/UI/InGameUI/ItemDisplay.cs" id="11_42qaf"]
-[ext_resource type="Texture2D" uid="uid://daeh6xoceiky1" path="res://Assets/Textures/Thumbnails/C_DoubleJump.png" id="12_vbjgj"]
+[ext_resource type="Texture2D" uid="uid://bspnofktwp8m7" path="res://Assets/Textures/Thumbnails/C_DoubleJump.png" id="12_vbjgj"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_q5dko"]
 viewport_path = NodePath("GunView/SubViewport")
@@ -130,6 +131,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -137,6 +140,9 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_stretch_ratio = 2.3
 texture = ExtResource("5_q16sg")
+
+[node name="Hitmarker" parent="CenterContainer" instance=ExtResource("6_pmhjc")]
+layout_mode = 2
 
 [node name="AmmoCount" type="Label" parent="."]
 visible = false

@@ -15,6 +15,7 @@ public partial class UI: Node
     public static GunViewCamera GunViewCamera { get; set; }
     public static Scoreboard Scoreboard { get; set; }
     public static EndOfGame EndOfGame { get; set; }
+    public static Hitmarker Hitmarker { get; set; }
     
     public static void DisplayError(string errorText) 
     {   
