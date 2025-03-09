@@ -11,5 +11,4 @@ public class PlayerStat
     public int maxPowerLevel { get; set; }
     public int aura { get; set; }
     public int ping { get; set; }
-    public ulong lastPinged;
 }

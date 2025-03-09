@@ -131,14 +131,6 @@ public partial class LevelManager : Node
 				return;
 			}
 
-			bool shouldPingThisFrame = false;
-			TimeSinceLastPing += delta;
-			if(TimeSinceLastPing * 1000 >= (double)Config.GetValue("game_constants", "server_ping_interval_ms", true))
-			{
-				TimeSinceLastPing = 0;
-				shouldPingThisFrame = true;
-			}
-
 			int maxAura = 0;
 			foreach(long id in LevelPeerInfo.Keys)
 			{
@@ -159,11 +151,6 @@ public partial class LevelManager : Node
 
 						RespawnPlayer(id);
 					}
-				}
-
-				if(shouldPingThisFrame && PlayerStats[id].lastPinged == 0) { // don't ping again if still awaiting an answer back
-					PlayerStats[id].lastPinged = Time.GetTicksMsec();
-					RpcId(id, MethodName.Ping);
 				}
 			}
 
@@ -217,20 +204,5 @@ public partial class LevelManager : Node
 		UI.InGameUI.Hide();
 		UI.MainMenu.OpenMainMenu();
 		UI.Lobby.Show();
-	}
-
-	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-	public void Ping()
-	{
-		int senderId = Multiplayer.GetRemoteSenderId();
-		if(senderId == 1) 
-		{
-			RpcId(1, MethodName.Ping);
-		}
-		else
-		{
-			PlayerStats[senderId].ping = (int)(Time.GetTicksMsec() - PlayerStats[senderId].lastPinged);
-			PlayerStats[senderId].lastPinged = 0; // placeholder saying we got the ping
-		}
 	}
 }
