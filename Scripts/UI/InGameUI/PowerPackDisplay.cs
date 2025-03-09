@@ -9,9 +9,10 @@ public partial class PowerPackDisplay : Node3D
 {
     [Export, ExportRequired]
     public Node3D CigNode { get; set; }
+    [Export, ExportRequired]
+    public Node3D PackMeshes {  get; set; }
 
     [Export, ExportRequired, AnimationsRequired(["Close", "Open", "Spawn", "Despawn"])]
-
     public AnimationPlayer APlayer { get; set; }
     private List<AnimatedCig> animatedCigs = [];
     public int NumberOfCigs { get; private set; } = 0;

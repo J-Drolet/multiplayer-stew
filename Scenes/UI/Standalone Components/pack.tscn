@@ -82,7 +82,7 @@ length = 2.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/path = NodePath("PackMeshes/Hinge:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -94,7 +94,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
+tracks/1/path = NodePath("PackMeshes:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -106,7 +106,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath(".:rotation")
+tracks/2/path = NodePath("PackMeshes:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -116,13 +116,42 @@ tracks/2/keys = {
 "values": [Vector3(0, 0, 0), Vector3(1.5708, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_hjkbm"]
+resource_name = "Despawn"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PackMeshes:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(-4, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-5, 0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_m0jk1"]
 resource_name = "Open"
 length = 2.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/path = NodePath("PackMeshes/Hinge:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -134,7 +163,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
+tracks/1/path = NodePath("PackMeshes:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -146,7 +175,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath(".:rotation")
+tracks/2/path = NodePath("PackMeshes:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -156,57 +185,12 @@ tracks/2/keys = {
 "values": [Vector3(1.5708, 0, 0), Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_o0qsi"]
-resource_name = "Spawn"
-length = 2.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(1.5, 2.5),
-"transitions": PackedFloat32Array(-4, 1),
-"update": 0,
-"values": [Vector3(-5, 0, 0), Vector3(0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_hjkbm"]
-resource_name = "Despawn"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(-4, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(-5, 0, 0)]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(1),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"queue_free"
-}]
-}
-
 [sub_resource type="Animation" id="Animation_hadxo"]
 resource_name = "RESET"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath("PackMeshes/Hinge:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -218,7 +202,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
+tracks/1/path = NodePath("PackMeshes:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -230,7 +214,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Hinge:rotation")
+tracks/2/path = NodePath("PackMeshes:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -238,6 +222,22 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_o0qsi"]
+resource_name = "Spawn"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PackMeshes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.5, 2.5),
+"transitions": PackedFloat32Array(-4, 1),
+"update": 0,
+"values": [Vector3(-5, 0, 0), Vector3(0, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o0qsi"]
@@ -249,84 +249,87 @@ _data = {
 &"Spawn": SubResource("Animation_o0qsi")
 }
 
-[node name="Pack" type="Node3D" node_paths=PackedStringArray("CigNode", "APlayer")]
+[node name="Pack" type="Node3D" node_paths=PackedStringArray("CigNode", "PackMeshes", "APlayer")]
 script = ExtResource("1_0jahh")
-CigNode = NodePath("Cigs")
+CigNode = NodePath("PackMeshes/Cigs")
+PackMeshes = NodePath("PackMeshes")
 APlayer = NodePath("AnimationPlayer")
 
-[node name="Cigarette_Pack" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.887412, 0, 0, 0, 1, 0, 0, 0, 0.755901, 0.00366588, 0.0175644, -0.00293235)
+[node name="PackMeshes" type="Node3D" parent="."]
+
+[node name="Cigarette_Pack" type="MeshInstance3D" parent="PackMeshes"]
+transform = Transform3D(0.887412, 0, 0, 0, 1, 0, 0, 0, 0.755901, 0.00366592, 0.0175644, -0.00293235)
 layers = 3
 cast_shadow = 0
 mesh = SubResource("ArrayMesh_gpjhw")
 skeleton = NodePath("")
 
-[node name="Cigs" type="Node3D" parent="."]
+[node name="Cigs" type="Node3D" parent="PackMeshes"]
 
-[node name="7" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="7" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.225021, -0.202619, 0.0576357)
 
-[node name="6" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="6" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(0.830576, 0, -0.556905, 0, 1, 0, 0.556905, 0, 0.830576, -0.148783, -0.202619, 0.0576357)
 
-[node name="5" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="5" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(0.940193, 0, 0.340642, 0, 1, 0, -0.340642, 0, 0.940193, -0.0733204, -0.202619, 0.0576357)
 
-[node name="4" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="4" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(0.893285, 0, 0.449491, 0, 1, 0, -0.449491, 0, 0.893285, 0.0022261, -0.202619, 0.0576357)
 
-[node name="3" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="3" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(0.894654, 0, 0.44676, 0, 1, 0, -0.44676, 0, 0.894654, 0.0799718, -0.202619, 0.0576357)
 
-[node name="2" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="2" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(-0.134107, 0, -0.990967, 0, 1, 0, 0.990967, 0, -0.134107, 0.154609, -0.202619, 0.0576357)
 
-[node name="1" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="1" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(0.322513, 0, -0.946565, 0, 1, 0, 0.946565, 0, 0.322513, 0.230344, -0.202619, 0.0576357)
 
-[node name="20" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="20" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.225021, -0.202619, -0.0635981)
 
-[node name="19" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="19" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(0.830576, 0, -0.556905, 0, 1, 0, 0.556905, 0, 0.830576, -0.148783, -0.202619, -0.0635981)
 
-[node name="18" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="18" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(0.940193, 0, 0.340642, 0, 1, 0, -0.340642, 0, 0.940193, -0.0733204, -0.202619, -0.0635981)
 
-[node name="17" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="17" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(0.893285, 0, 0.449491, 0, 1, 0, -0.449491, 0, 0.893285, 0.0022261, -0.202619, -0.0635981)
 
-[node name="16" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="16" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(0.894654, 0, 0.44676, 0, 1, 0, -0.44676, 0, 0.894654, 0.0799718, -0.202619, -0.0635981)
 
-[node name="15" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="15" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(-0.134107, 0, -0.990967, 0, 1, 0, 0.990967, 0, -0.134107, 0.154609, -0.202619, -0.0635981)
 
-[node name="14" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="14" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(0.322513, 0, -0.946565, 0, 1, 0, 0.946565, 0, 0.322513, 0.230344, -0.202619, -0.0635981)
 
-[node name="13" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="13" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.184332, -0.202619, -0.00292446)
 
-[node name="12" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="12" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(0.830576, 0, -0.556905, 0, 1, 0, 0.556905, 0, 0.830576, -0.108094, -0.202619, -0.00292446)
 
-[node name="11" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="11" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(0.940193, 0, 0.340642, 0, 1, 0, -0.340642, 0, 0.940193, -0.0326317, -0.202619, -0.00292446)
 
-[node name="10" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="10" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(0.893285, 0, 0.449491, 0, 1, 0, -0.449491, 0, 0.893285, 0.0429148, -0.202619, -0.00292446)
 
-[node name="9" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="9" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(0.894654, 0, 0.44676, 0, 1, 0, -0.44676, 0, 0.894654, 0.12066, -0.202619, -0.00292446)
 
-[node name="8" parent="Cigs" instance=ExtResource("3_m0jk1")]
+[node name="8" parent="PackMeshes/Cigs" instance=ExtResource("3_m0jk1")]
 transform = Transform3D(-0.134107, 0, -0.990967, 0, 1, 0, 0.990967, 0, -0.134107, 0.195298, -0.202619, -0.00292446)
 
-[node name="Hinge" type="Node3D" parent="."]
-transform = Transform3D(0.887412, 0, 0, 0, 1, 0, 0, 0, 1, 0.000218677, 0.0436247, -0.106373)
+[node name="Hinge" type="Node3D" parent="PackMeshes"]
+transform = Transform3D(0.887412, 0, 0, 0, 1, 0, 0, 0, 1, 0.000218868, 0.0436247, -0.106373)
 
-[node name="Cigarette_Pack_001" type="MeshInstance3D" parent="Hinge"]
+[node name="Cigarette_Pack_001" type="MeshInstance3D" parent="PackMeshes/Hinge"]
 transform = Transform3D(1, 0, 0, 0, -0.0101638, 0.996433, 0, -0.755853, -0.0133989, -0.00191595, 0.098097, 0.0195782)
 layers = 2
 mesh = SubResource("ArrayMesh_kes56")

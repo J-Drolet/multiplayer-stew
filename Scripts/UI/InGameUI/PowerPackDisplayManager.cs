@@ -31,20 +31,25 @@ public partial class PowerPackDisplayManager : Node3D
                 if (newPowerLevel.Value > LastPowerLevel)
                 {
                     int cigsToAdd = newPowerLevel.Value - LastPowerLevel;
-                    for (int x = (int)Math.Floor((decimal)LastPowerLevel/20); cigsToAdd > 0; x++)
+                    int latestPack = Packs.Count - 1;
+                    while (cigsToAdd > 0)
                     {
-                        // New pack? Add one
-                        if (Packs.Count <= x)
+                        cigsToAdd = Packs[latestPack].FillPack(cigsToAdd);
+                        if (cigsToAdd > 0)
                         {
+                            //Add pack
                             PowerPackDisplay newPack = PackScene.Instantiate<PowerPackDisplay>();
                             AddChild(newPack);
                             Packs.Add(newPack);
                             // Move new pack above the old one
-                            newPack.GlobalTransform = Packs[x - 1].GlobalTransform;
-                            newPack.Translate(new Vector3(-5.0f, 1.0f, 0));
+                            newPack.GlobalTransform = Packs[latestPack].PackMeshes.GlobalTransform;
+                            newPack.Translate(new Vector3(0, 1.0f, 0));
+                            // Spawn meshes left that are animating from the left so they don't cause a flicker effect
+                            newPack.PackMeshes.Translate(new Vector3(-5.0f, 0, 0));
                             newPack.APlayer.Play("Spawn");
+
+                            latestPack++;
                         }
-                        cigsToAdd = Packs[x].FillPack(cigsToAdd);
                     }
                 }
                 // Removing Cigs
@@ -56,7 +61,7 @@ public partial class PowerPackDisplayManager : Node3D
                         PowerPackDisplay currentPack = Packs.Last();
                         cigsToRemove = currentPack.EmptyPack(cigsToRemove);
                         // Remove empty packs (Always keep 1st one)
-                        if (x < 0 && currentPack.NumberOfCigs <= 0)
+                        if (x > 0 && currentPack.NumberOfCigs <= 0)
                         {
                             currentPack.APlayer.Play("Despawn");
                             Packs.Remove(currentPack);
