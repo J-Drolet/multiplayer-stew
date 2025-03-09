@@ -179,5 +179,13 @@ public partial class Server : Node
         }
         GameSessionManager.ConnectedPeers[Multiplayer.GetRemoteSenderId()].LastPings = lastPings;
         GameSessionManager.ConnectedPeers[Multiplayer.GetRemoteSenderId()].AveragePing = averagePing;
+
+        // Using LevelManager.Instance.PlayerStats allows automatic syncing of the ping values to all clients
+        if(LevelManager.Instance?.PlayerStats.GetValueOrDefault(Multiplayer.GetRemoteSenderId()) != null)
+        {
+            LevelManager.Instance.PlayerStats[Multiplayer.GetRemoteSenderId()].ping = (int)(ping * 1000);
+        }
     }
+    
+   
 }

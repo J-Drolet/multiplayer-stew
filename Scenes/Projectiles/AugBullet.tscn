@@ -54,11 +54,6 @@ shadow_mesh = SubResource("ArrayMesh_kc6nu")
 
 [node name="AugBullet" type="Node3D" node_paths=PackedStringArray("multiplayerSynchronizer")]
 script = ExtResource("1_ke2li")
-InitialVelocity = 70.0
-Damage = 10.0
-VitalMultiplier = 3.0
-Lifespan = 2.0
-ShotSpread = 0.01
 multiplayerSynchronizer = NodePath("MultiplayerSynchronizer")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]

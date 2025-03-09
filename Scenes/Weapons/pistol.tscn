@@ -438,15 +438,13 @@ material = SubResource("StandardMaterial3D_n6kq3")
 
 [node name="Pistol" type="Node3D" node_paths=PackedStringArray("APlayer")]
 script = ExtResource("1_3n8ap")
-WeaponName = "Pistol"
-MaxAmmo = 8
 Projectile = ExtResource("2_6tjck")
 APlayer = NodePath("AnimationPlayer")
 ClickSound = ExtResource("3_cawty")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_qq742")
+&"": SubResource("AnimationLibrary_qq742")
 }
 
 [node name="HandMesh" type="MeshInstance3D" parent="."]

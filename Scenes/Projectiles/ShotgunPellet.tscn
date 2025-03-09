@@ -20,7 +20,6 @@ properties/1/replication_mode = 1
 
 [node name="ShotgunPellet" type="Node3D" node_paths=PackedStringArray("multiplayerSynchronizer")]
 script = ExtResource("1_g76ux")
-ShotSpread = 0.14
 multiplayerSynchronizer = NodePath("MultiplayerSynchronizer")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

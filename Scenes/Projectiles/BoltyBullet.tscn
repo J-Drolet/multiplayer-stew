@@ -54,8 +54,6 @@ properties/1/replication_mode = 1
 
 [node name="BoltyBullet" type="Node3D" node_paths=PackedStringArray("multiplayerSynchronizer")]
 script = ExtResource("1_ot4mb")
-InitialVelocity = 50.0
-Damage = 25.0
 multiplayerSynchronizer = NodePath("MultiplayerSynchronizer")
 
 [node name="Bullet" type="MeshInstance3D" parent="."]

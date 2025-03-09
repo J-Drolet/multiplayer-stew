@@ -27,12 +27,6 @@ visible = false
 [node name="SettingsScreen" parent="." instance=ExtResource("4_gol1j")]
 visible = false
 
-[node name="ErrorMessage" parent="." instance=ExtResource("3_rpxpi")]
-visible = false
-
-[node name="Spinner" parent="." instance=ExtResource("4_ryq63")]
-visible = false
-
 [node name="Diagnostics" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(100, 0)
 anchors_preset = -1
@@ -67,3 +61,8 @@ offset_left = -0.352005
 offset_top = -0.0400009
 offset_right = 0.351929
 offset_bottom = 0.039978
+
+[node name="Spinner" parent="." instance=ExtResource("4_ryq63")]
+
+[node name="ErrorMessage" parent="." instance=ExtResource("3_rpxpi")]
+visible = false

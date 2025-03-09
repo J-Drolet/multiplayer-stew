@@ -11,21 +11,15 @@ namespace multiplayerstew.Scripts.Base
 { 
     public partial class UpgradeableProjectile: Node3D
     {
-        
-        [Export]
-        public float InitialVelocity { get; set; } = 20.0f;
-        [Export]
-        public float Damage { get; set; } = 1.0f;
-        [Export]
-        public float VitalMultiplier { get; set; } = 2.0f;
-        [Export]
-        public int MaxHits { get; set; } = 1;
-        [Export]
-        public float Lifespan { get; set; } = 3.0f;
-        [Export]
-        public float ShotSpread { get; set; } = 0.0f;
         [Export, ExportRequired]
         public MultiplayerSynchronizer multiplayerSynchronizer { get; set; }
+
+        public float InitialVelocity { get; set; } = 20.0f;
+        public float Damage { get; set; } = 1.0f;
+        public float VitalMultiplier { get; set; } = 2.0f;
+        public int MaxHits { get; set; } = 1;
+        public float Lifespan { get; set; } = 3.0f;
+        public float ShotSpread { get; set; } = 0.0f;
 
         private Vector3 Velocity = Vector3.Zero;
         private Vector3 ProjectileGravity = Vector3.Down * 5;
@@ -49,6 +43,13 @@ namespace multiplayerstew.Scripts.Base
             projectileOwner = (int)spawnInfo.ProjectileOwner;
             Rng = new((int)spawnInfo.RandomizerSeed); // get seed from name
             Upgrades = new HashSet<Upgrade>(LevelManager.Instance.LevelPeerInfo[projectileOwner].characterNode.Upgrades);
+            Damage = (float)Config.GetValue("Weapon." + spawnInfo.WeaponType.ToString(), "damage", true);
+            InitialVelocity = (float)Config.GetValue("Weapon." + spawnInfo.WeaponType.ToString(), "bullet_velocity", true);
+            VitalMultiplier = (float)Config.GetValue("Weapon." + spawnInfo.WeaponType.ToString(), "vital_multiplier", true);
+            MaxHits = (int)Config.GetValue("Weapon." + spawnInfo.WeaponType.ToString(), "max_hits", true);
+            Lifespan = (float)Config.GetValue("Weapon." + spawnInfo.WeaponType.ToString(), "lifespan", true);
+            ShotSpread = (float)Config.GetValue("Weapon." + spawnInfo.WeaponType.ToString(), "shot_spread", true);
+
 
             if(IsMultiplayerAuthority())
             {

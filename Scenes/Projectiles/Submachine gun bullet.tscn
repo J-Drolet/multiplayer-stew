@@ -54,10 +54,6 @@ shadow_mesh = SubResource("ArrayMesh_wyovt")
 
 [node name="sub bullet" type="Node3D" node_paths=PackedStringArray("multiplayerSynchronizer")]
 script = ExtResource("1_vyfoj")
-InitialVelocity = 45.0
-Damage = 3.5
-Lifespan = 2.0
-ShotSpread = 0.05
 multiplayerSynchronizer = NodePath("MultiplayerSynchronizer")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]

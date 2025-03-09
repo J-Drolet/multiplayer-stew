@@ -30,7 +30,7 @@ public static class GameSessionManager
             LevelManager.Instance.QueueFree();
         }
 
-        UI.MainMenu.OpenMainMenu();
+        UI.MainMenu.Show();
         UI.PauseMenu.Hide();
         UI.InGameUI.Hide();
         UI.EndOfGame.Hide();
