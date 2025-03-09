@@ -71,6 +71,7 @@ public partial class Client : Node
         UI.GunViewCamera.active = false;
         GameSessionManager.ConnectedPeers.Clear();
         Peer.Close();
+        Multiplayer.MultiplayerPeer = new OfflineMultiplayerPeer();
     }
 
     /// <summary>
