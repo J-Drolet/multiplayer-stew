@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://eoi8ks6agami"]
+[gd_scene load_steps=14 format=3 uid="uid://eoi8ks6agami"]
 
 [ext_resource type="Script" uid="uid://d3r5pnkqsi5fh" path="res://Scripts/Networking/Client.cs" id="1_i1rml"]
 [ext_resource type="PackedScene" uid="uid://emhg32smyqx0" path="res://Scenes/UI/Main Menu/mainMenu.tscn" id="2_518qk"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://cvcvpgpwy3ld6" path="res://Scripts/UI/PingDisplay.cs" id="10_750w8"]
 [ext_resource type="PackedScene" uid="uid://c4wr0n7pacuhv" path="res://Scenes/UI/Standalone Components/EndOfGame.tscn" id="10_lyo1v"]
 [ext_resource type="PackedScene" uid="uid://b2wqxmis36qbr" path="res://Scenes/UI/Scoreboard/Scoreboard.tscn" id="10_ueqgi"]
+[ext_resource type="PackedScene" uid="uid://ddjwjb1jmqeye" path="res://Scenes/UI/Standalone Components/LoadingScreen.tscn" id="11_k5qxj"]
 
 [node name="Network" type="Node"]
 script = ExtResource("1_i1rml")
@@ -61,6 +62,9 @@ offset_left = -0.352005
 offset_top = -0.0400009
 offset_right = 0.351929
 offset_bottom = 0.039978
+
+[node name="LoadingScreen" parent="." instance=ExtResource("11_k5qxj")]
+visible = false
 
 [node name="Spinner" parent="." instance=ExtResource("4_ryq63")]
 

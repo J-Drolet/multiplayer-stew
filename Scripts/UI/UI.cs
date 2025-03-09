@@ -16,6 +16,7 @@ public partial class UI: Node
     public static Scoreboard Scoreboard { get; set; }
     public static EndOfGame EndOfGame { get; set; }
     public static Hitmarker Hitmarker { get; set; }
+    public static LoadingScreen LoadingScreen { get; set; }
     
     public static void DisplayError(string errorText) 
     {   

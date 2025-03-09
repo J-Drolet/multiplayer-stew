@@ -64,6 +64,10 @@ public partial class LevelManager : Node
 			GameTime = 0;
 			GameOver = false; // mark the game as not over
 		}
+		else
+		{
+			UI.LoadingScreen.Hide();
+		}
 
 		TreeExiting += OnLevelClose;
 	}

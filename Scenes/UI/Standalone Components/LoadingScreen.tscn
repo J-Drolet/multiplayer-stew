@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddjwjb1jmqeye"]
+
+[ext_resource type="Texture2D" uid="uid://b5gav0ulky2i1" path="res://Assets/icon.svg" id="1_85adj"]
+[ext_resource type="Script" uid="uid://ds3f36mjueust" path="res://Scripts/UI/LoadingScreen.cs" id="1_u1vfm"]
+[ext_resource type="Script" uid="uid://3nbhnkvtke0i" path="res://Scripts/UI/Spinner.cs" id="2_u1vfm"]
+
+[node name="LoadingScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u1vfm")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.190762, 0.190762, 0.190762, 1)
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchor_left = 0.818
+anchor_top = 0.694
+anchor_right = 0.929
+anchor_bottom = 0.892
+offset_left = -0.335999
+offset_top = 0.287994
+offset_right = -0.208008
+offset_bottom = -0.0159912
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Spinner" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(64, 64)
+texture = ExtResource("1_85adj")
+script = ExtResource("2_u1vfm")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.046
+anchor_top = 0.742
+anchor_right = 0.259
+anchor_bottom = 0.849
+offset_left = 0.00799561
+offset_top = 0.18396
+offset_right = -0.368011
+offset_bottom = -0.152039
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Loading..."
+vertical_alignment = 1
