@@ -43,7 +43,7 @@ public partial class PowerPackDisplayManager : Node3D
                             Packs.Add(newPack);
                             // Move new pack above the old one
                             newPack.GlobalTransform = Packs[latestPack].PackMeshes.GlobalTransform;
-                            newPack.Translate(new Vector3(0, 1.0f, 0));
+                            newPack.Translate(new Vector3(0, 0.4f, 0));
                             // Spawn meshes left that are animating from the left so they don't cause a flicker effect
                             newPack.PackMeshes.Translate(new Vector3(-5.0f, 0, 0));
                             newPack.APlayer.Play("Spawn");

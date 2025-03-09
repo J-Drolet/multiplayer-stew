@@ -18,6 +18,8 @@ public partial class Character : Entity
 	public Node3D Hand { get; set; }
 	[Export, ExportRequired]
 	public MeshInstance3D CharacterMesh { get; set; }
+	[Export, ExportRequired]
+	public Node3D PowerPackDisplayManager { get; set; }
 	[Export, ExportRequired, AnimationsRequired(["Walk"])]
 	public AnimationPlayer APlayer { get; set; }
     [Export, ExportRequired]
@@ -26,8 +28,6 @@ public partial class Character : Entity
 	public GpuParticles3D InvisibilitySmokeParticles { get; set; }
 	[Export, ExportRequired]
 	public MultiplayerSpawner WeaponSpawner { get; set; }
-	/*[Export, ExportRequired]
-	public PowerPackDisplayManager PowerPackDisplayManager { get; set; }*/
 	[Export, ExportRequired]
 	public AudioStream OutlinePlayerSFX { get; set; }
 	public HashSet<Upgrade> Upgrades { get; set; } = new();
@@ -66,6 +66,10 @@ public partial class Character : Entity
 			Input.MouseMode = Input.MouseModeEnum.Captured;
 
 			CharacterMesh.Hide();
+		}
+		else
+		{
+			PowerPackDisplayManager.Hide();
 		}
 	}
 

@@ -297,13 +297,14 @@ states/Walk/position = Vector2(481, 94)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_uyc7b"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_hr1ek"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_0a1m0"), "Sprint", "Idle", SubResource("AnimationNodeStateMachineTransition_ixqql"), "Sprint", "Walk", SubResource("AnimationNodeStateMachineTransition_24ak6"), "Walk", "Sprint", SubResource("AnimationNodeStateMachineTransition_n1s64"), "Idle", "Sprint", SubResource("AnimationNodeStateMachineTransition_u4lto")]
 graph_offset = Vector2(-85, 3)
 
-[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "ProjectileOrigin", "Head", "Hand", "CharacterMesh", "APlayer", "ATree", "InvisibilitySmokeParticles", "WeaponSpawner", "Hitboxes", "HealthText")]
+[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "ProjectileOrigin", "Head", "Hand", "CharacterMesh", "PowerPackDisplayManager", "APlayer", "ATree", "InvisibilitySmokeParticles", "WeaponSpawner", "Hitboxes", "HealthText")]
 script = ExtResource("1_n6eoi")
 Camera = NodePath("Head/Camera3D")
 ProjectileOrigin = NodePath("Head/Camera3D/ProjectileOrigin")
 Head = NodePath("Head")
 Hand = NodePath("Head/Camera3D/Hand")
 CharacterMesh = NodePath("CharacterMesh")
+PowerPackDisplayManager = NodePath("Head/Camera3D/Pack")
 APlayer = NodePath("AnimationPlayer")
 ATree = NodePath("AnimationTree")
 InvisibilitySmokeParticles = NodePath("CharacterMesh/InvisibilitySmoke")
@@ -360,7 +361,7 @@ spawn_path = NodePath("..")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.793709)
 
 [node name="Pack" parent="Head/Camera3D" instance=ExtResource("5_ejsiy")]
-transform = Transform3D(0.145941, 0.0363193, 0.0980956, 0.0122484, 0.161294, -0.0779404, -0.103884, 0.0700403, 0.12862, -0.430051, -0.121242, -0.462388)
+transform = Transform3D(0.104356, 0.0168493, 0.044935, -0.00779863, 0.112074, -0.0239131, -0.0473524, 0.018675, 0.102967, -0.363863, -0.112363, -0.364438)
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_w7qvv")

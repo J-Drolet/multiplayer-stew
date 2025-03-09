@@ -10,7 +10,7 @@ cull_mode = 2
 shading_mode = 0
 albedo_texture = ExtResource("2_hadxo")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_2mhhe"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_0jahh"]
 _surfaces = [{
 "aabb": AABB(-0.30217, -0.749244, -0.13756, 0.60434, 0.775649, 0.27512),
 "format": 34896613377,
@@ -40,7 +40,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAAAAAVNX//wAA//9U1f//AAAAAFTVAAAAAP//VNX//wAA////vwAA///+//+///////7//78AAAAA////v///AAAAAFTV//////7/VNX///7/AABU1f//AAD//1TVAAAAAAAA//////7/AAD//wAA/v8AAP////8AAAAA//8AAAAA//9U1QAA/v8AAFTVAAD///7/VNUAAAAAAABU1VVVVFVVVVRVVVVUVVRVVFX/f/9//3//f/9//3//f/9/qqpVVaqqVVWqqlVVqqpVVf+//z//v/8//7//P/8//79UVaqqVFWqqlRVqqpUVaqq")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_2mhhe")
+shadow_mesh = SubResource("ArrayMesh_0jahh")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8prs1"]
 _surfaces = [{
