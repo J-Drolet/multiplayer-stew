@@ -68,7 +68,6 @@ public partial class Client : Node
             CloseServer();
         }
 
-        UI.GunViewCamera.active = false;
         GameSessionManager.ConnectedPeers.Clear();
         Peer.Close();
         Multiplayer.MultiplayerPeer = new OfflineMultiplayerPeer();
@@ -144,7 +143,7 @@ public partial class Client : Node
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyStartGame(string filepath, int durationInSeconds, int maxAura)
     {
-        UI.MainMenu.CloseMainMenu();
+        UI.MainMenu.Hide();
         GameSessionManager.GameDurationSeconds = durationInSeconds;
         GameSessionManager.MaxAura = maxAura;
     }

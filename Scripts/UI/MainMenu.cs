@@ -19,20 +19,22 @@ public partial class MainMenu : Control
     {
         UI.MainMenu = this;
         GodotErrorService.ValidateRequiredData(this);
+        VisibilityChanged += OnVisibilityChanged;
     }
 
-    public void OpenMainMenu()
+    private void OnVisibilityChanged()
     {
         CloseAllWindows();
-        MainMenuMusic.Play();
-        Show();
-    }
 
-    public void CloseMainMenu()
-    {
-        CloseAllWindows();
-        MainMenuMusic.Stop();
-        Hide();
+        if(Visible)
+        {
+            MainMenuMusic.Play();
+        }
+        else
+        {
+            MainMenuMusic.Stop();
+        }
+
     }
 
     private void CloseAllWindows() {

@@ -202,7 +202,7 @@ public partial class LevelManager : Node
 		}
 		UI.EndOfGame.Hide();
 		UI.InGameUI.Hide();
-		UI.MainMenu.OpenMainMenu();
+		UI.MainMenu.Show();
 		UI.Lobby.Show();
 	}
 }

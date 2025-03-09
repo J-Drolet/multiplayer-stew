@@ -62,7 +62,6 @@ public partial class Character : Entity
 
 			UI.InGameUI.Show();
 			Input.MouseMode = Input.MouseModeEnum.Captured;
-        	UI.GunViewCamera.active = true;
 
 			CharacterMesh.Hide();
 		}
@@ -142,6 +141,9 @@ public partial class Character : Entity
 		if(!IsMultiplayerAuthority()) return;
 
 		UI.InGameUI.AmmoCount.Visible = EquippedWeapon != null;
+
+		UI.GunViewCamera.GlobalTransform = Camera.GlobalTransform;
+		UI.GunViewCamera.Fov = Camera.Fov;
 
 		////////// Small Player Upgrade
 		Scale = Vector3.One * (!Upgrades.Contains(Upgrade.C_SmallerHitbox) ? 1.0f : (float)Config.GetValue("Upgrade.C_SmallerHitbox", "small_hitbox_factor", true));
