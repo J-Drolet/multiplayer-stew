@@ -11,4 +11,5 @@ public class ProjectileSpawnInfo {
     public double SpawnTime { get; set; }
 
     public float AngleOffset { get; set; }
+    public Weapon WeaponType { get; set; }
 }
