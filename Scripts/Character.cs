@@ -26,6 +26,8 @@ public partial class Character : Entity
 	public GpuParticles3D InvisibilitySmokeParticles { get; set; }
 	[Export, ExportRequired]
 	public MultiplayerSpawner WeaponSpawner { get; set; }
+	/*[Export, ExportRequired]
+	public PowerPackDisplayManager PowerPackDisplayManager { get; set; }*/
 	[Export, ExportRequired]
 	public AudioStream OutlinePlayerSFX { get; set; }
 	public HashSet<Upgrade> Upgrades { get; set; } = new();
@@ -39,9 +41,9 @@ public partial class Character : Entity
     [Export]
     public UpgradableWeapon EquippedWeapon;
 
-	public float BaseSpeed = (float)Config.GetValue("game_constants", "base_speed", true);
-	public float SprintMultiplier = (float)Config.GetValue("game_constants", "sprint_multiplier", true);
-	public float JumpVelocity = (float)Config.GetValue("game_constants", "jump_velocity", true);
+	private float BaseSpeed = (float)Config.GetValue("game_constants", "base_speed", true);
+	private float SprintMultiplier = (float)Config.GetValue("game_constants", "sprint_multiplier", true);
+	private float JumpVelocity = (float)Config.GetValue("game_constants", "jump_velocity", true);
 
 	public override void _EnterTree()
 	{
@@ -299,15 +301,15 @@ public partial class Character : Entity
 		return powerLevel;
 	}
 
-	private void OnPowerLevelChange() 
+	private void UpdatePowerLevelStats() 
 	{
-		if(Multiplayer.IsServer())
+        int currentPowerLevel = CalculatePowerLevel();
+        if (Multiplayer.IsServer())
 		{
-			int characterOwner = GetMultiplayerAuthority();
-			int powerLevel = CalculatePowerLevel();
-			if(powerLevel > LevelManager.Instance.PlayerStats[characterOwner].maxPowerLevel)
+            int characterOwner = GetMultiplayerAuthority();
+			if(currentPowerLevel > LevelManager.Instance.PlayerStats[characterOwner].maxPowerLevel)
 			{
-				LevelManager.Instance.PlayerStats[characterOwner].maxPowerLevel = powerLevel;
+				LevelManager.Instance.PlayerStats[characterOwner].maxPowerLevel = currentPowerLevel;
 			}
 		}
 	}
@@ -355,7 +357,7 @@ public partial class Character : Entity
 			
 			WeaponSpawner.GetParent().AddChild(EquippedWeapon);
 		}
-		OnPowerLevelChange();
+		UpdatePowerLevelStats();
 	}
 
 	private void OnWeaponDespawned(Node node)
@@ -382,7 +384,7 @@ public partial class Character : Entity
 	public void AddUpgrade(Upgrade upgrade)
 	{
 		Upgrades.Add(upgrade);
-		OnPowerLevelChange();
+		UpdatePowerLevelStats();
 		if(IsMultiplayerAuthority())
 		{
 			UI.InGameUI.ItemDisplay.Refresh(Upgrades);

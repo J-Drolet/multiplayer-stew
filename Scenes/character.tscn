@@ -360,7 +360,7 @@ spawn_path = NodePath("..")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.793709)
 
 [node name="Pack" parent="Head/Camera3D" instance=ExtResource("5_ejsiy")]
-transform = Transform3D(0.229178, 0, 0.123963, 0, 0.260556, 0, -0.123963, 0, 0.229178, -0.76784, -0.226355, -0.782433)
+transform = Transform3D(0.145941, 0.0363193, 0.0980956, 0.0122484, 0.161294, -0.0779404, -0.103884, 0.0700403, 0.12862, -0.430051, -0.121242, -0.462388)
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_w7qvv")
