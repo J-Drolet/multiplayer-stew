@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=4 uid="uid://b6mcfykmocjij"]
 
-[ext_resource type="Texture2D" uid="uid://nl4i3yh65utg" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_metal_mp_1.png" id="1_1pqpr"]
-[ext_resource type="Texture2D" uid="uid://bmnohntc4l0pf" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_metal_mp_4.png" id="2_ibpdc"]
-[ext_resource type="Texture2D" uid="uid://c2tv6m1joiimu" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_ceiling_lamp_1_on.png" id="3_7aofw"]
-[ext_resource type="Texture2D" uid="uid://bmjwpdqp1wxg0" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_ceiling_lamp_1_on_emission.png" id="4_01gsm"]
+[ext_resource type="Texture2D" uid="uid://bvdljyr2bm6mm" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_metal_mp_1.png" id="1_1pqpr"]
+[ext_resource type="Texture2D" uid="uid://ccgcg0x6m582o" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_metal_mp_4.png" id="2_ibpdc"]
+[ext_resource type="Texture2D" uid="uid://0yjp8aq4oloc" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_ceiling_lamp_1_on.png" id="3_7aofw"]
+[ext_resource type="Texture2D" uid="uid://cw0x88ky1yces" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_ceiling_lamp_1_on_emission.png" id="4_01gsm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kroog"]
 resource_name = "metal_mp_1"
@@ -117,9 +117,9 @@ skeleton = NodePath("")
 shape = SubResource("ConvexPolygonShape3D_knbdx")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 4.54596e-09, 0.103999)
 layers = 3
-light_color = Color(1, 1, 0.811765, 1)
-light_energy = 3.0
-spot_range = 12.8175
+light_energy = 1.5
+shadow_enabled = true
+spot_range = 13.0
 spot_angle = 63.8343

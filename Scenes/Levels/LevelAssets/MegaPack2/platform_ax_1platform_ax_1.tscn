@@ -1,13 +1,13 @@
 [gd_scene load_steps=8 format=4 uid="uid://damrojwsidyx6"]
 
-[ext_resource type="Texture2D" uid="uid://cfcuexjjtvnl1" path="res://Assets/Textures/Megapack2/platform_ax_1_planks_hr_3.png" id="1_eg147"]
-[ext_resource type="Texture2D" uid="uid://7f745w5ba16q" path="res://Assets/Textures/Megapack2/platform_ax_1_steel_beams_hr_1.png" id="2_i18fl"]
+[ext_resource type="Texture2D" uid="uid://dx81n7rkj4q36" path="res://Assets/Textures/Megapack2/platform_ax_1_planks_hr_3.png" id="1_eg147"]
+[ext_resource type="Texture2D" uid="uid://ce2coykh58h5l" path="res://Assets/Textures/Megapack2/platform_ax_1_steel_beams_hr_1.png" id="2_i18fl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_reocf"]
 resource_name = "planks_hr_3"
 cull_mode = 2
 albedo_texture = ExtResource("1_eg147")
-roughness = 0.0
+metallic_specular = 0.12
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2rjbe"]
@@ -73,7 +73,7 @@ shadow_mesh = SubResource("ArrayMesh_frf7l")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_dkkjn"]
 points = PackedVector3Array(0.0956046, 1.07912, 0.997619, 0.0302764, -1.91223, -0.05, 2, -1.90859, -0.0490316, 0.0302764, 1.91223, -0.05, 2.06349, 2.03175, 0.0452506, -0.0313361, -1.07912, 0.997619, 1.93614, -1.07912, 0.172247, -0.0313361, 2.03175, 0.362742, -0.0313361, -2.03175, 0.362742, 2.06349, -2.03175, 0.0452506, 2, 1.90859, -0.0490316, 0.0956046, -1.07912, 0.997619, 1.8092, 1.07912, 0.235745, -0.0313361, 1.07912, 0.997619, 1.8092, -1.07912, 0.235745, 0.0320318, 2.03175, 0.362742, 0.0320318, -2.03175, 0.362742, 1.93614, 1.07912, 0.172247)
 
-[node name="@Node3D@482" type="Node3D"]
+[node name="_Node3D_482" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@483" type="StaticBody3D" parent="."]
