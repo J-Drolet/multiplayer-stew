@@ -152,6 +152,7 @@ public partial class Client : Node
     public void NotifyStartGame(string filepath, int durationInSeconds, int maxAura)
     {
         UI.MainMenu.Hide();
+        UI.LoadingScreen.Show();
         GameSessionManager.GameDurationSeconds = durationInSeconds;
         GameSessionManager.MaxAura = maxAura;
     }
