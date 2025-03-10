@@ -40,11 +40,7 @@ public partial class Character : Entity
 	[Export, ExportRequired]
 	public Node3D HeadCosmeticSlot { get; set; }
 	[Export, ExportRequired]
-	public MultiplayerSpawner HeadCosmeticSpawner { get; set; }
-	[Export, ExportRequired]
 	public Node3D FaceCosmeticSlot { get; set; }
-    [Export, ExportRequired]
-    public MultiplayerSpawner FaceCosmeticSpawner { get; set; }
     #endregion
 
     #region UpgradePropertiesAndFields
@@ -70,8 +66,6 @@ public partial class Character : Entity
         CurrentHealth = MaxHealth; // we have to do this here or else infinite spawns will happen on server side
 		SetMultiplayerAuthority(Name.ToString().Split("#").First().ToInt());
 		WeaponSpawner.GetParent().SetMultiplayerAuthority(1); // weapon spawning is server responsibility
-        HeadCosmeticSpawner.GetParent().SetMultiplayerAuthority(1);
-        FaceCosmeticSpawner.GetParent().SetMultiplayerAuthority(1);
         LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode = this;
 		WeaponSpawner.Spawned += OnWeaponSpawned; // used to sync up EquippedWeapon
 		WeaponSpawner.Despawned += OnWeaponDespawned;
@@ -102,11 +96,6 @@ public partial class Character : Entity
     public override void _Ready()
     {
         base._Ready();
-
-		MultiplayerSpawnerService.LoadMultiplayerSpawner(WeaponSpawner, Root.WeaponsFilepath);
-        MultiplayerSpawnerService.LoadMultiplayerSpawner(WeaponSpawner, Root.HeadCosmeticFilepath);
-        MultiplayerSpawnerService.LoadMultiplayerSpawner(WeaponSpawner, Root.FaceCosmeticFilepath);
-
         SetWeapon(Weapon.Pistol);
     }
 
