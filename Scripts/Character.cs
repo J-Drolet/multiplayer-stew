@@ -96,6 +96,7 @@ public partial class Character : Entity
     public override void _Ready()
     {
         base._Ready();
+        MultiplayerSpawnerService.LoadMultiplayerSpawner(WeaponSpawner, Root.WeaponsFilepath);
         SetWeapon(Weapon.Pistol);
     }
 
