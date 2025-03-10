@@ -12,7 +12,7 @@ height = 2.00081
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_2mse5"]
 height = 1.98724
-radius = 0.162109
+radius = 0.4
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_nytcm"]
 noise_type = 3
