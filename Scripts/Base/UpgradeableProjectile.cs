@@ -11,31 +11,24 @@ namespace multiplayerstew.Scripts.Base
 { 
     public partial class UpgradeableProjectile: Node3D
     {
-        
-        [Export]
-        public float InitialVelocity { get; set; } = 20.0f;
-        [Export]
-        public float Damage { get; set; } = 1.0f;
-        [Export]
-        public float VitalMultiplier { get; set; } = 2.0f;
-        [Export]
-        public int MaxHits { get; set; } = 1;
-        [Export]
-        public float Lifespan { get; set; } = 3.0f;
-        [Export]
-        public float ShotSpread { get; set; } = 0.0f;
         [Export, ExportRequired]
         public MultiplayerSynchronizer multiplayerSynchronizer { get; set; }
-        [Export]
-        private Vector3 TrueGlobalPosition = Vector3.Zero;
+
+        public float InitialVelocity { get; set; } = 20.0f;
+        public float Damage { get; set; } = 1.0f;
+        public float VitalMultiplier { get; set; } = 2.0f;
+        public int MaxHits { get; set; } = 1;
+        public float Lifespan { get; set; } = 3.0f;
+        public float ShotSpread { get; set; } = 0.0f;
 
         private Vector3 Velocity = Vector3.Zero;
         private Vector3 ProjectileGravity = Vector3.Down * 5;
         private float TimeAlive;
         private int HitsLeft;
-        private int BouncesRegistered; // for bouncing projectile upgrade
+        public int BouncesRegistered; // for bouncing projectile upgrade
         private double CatchUpTime = 0;
         private int AngleOffset;
+        public bool IsDummy = false; // For fake visual versions
 
         public int projectileOwner;
         private Random Rng;
@@ -50,14 +43,27 @@ namespace multiplayerstew.Scripts.Base
             projectileOwner = (int)spawnInfo.ProjectileOwner;
             Rng = new((int)spawnInfo.RandomizerSeed); // get seed from name
             Upgrades = new HashSet<Upgrade>(LevelManager.Instance.LevelPeerInfo[projectileOwner].characterNode.Upgrades);
+            Damage = (float)Config.GetValue("Weapon." + spawnInfo.WeaponType.ToString(), "damage", true);
+            InitialVelocity = (float)Config.GetValue("Weapon." + spawnInfo.WeaponType.ToString(), "bullet_velocity", true);
+            VitalMultiplier = (float)Config.GetValue("Weapon." + spawnInfo.WeaponType.ToString(), "vital_multiplier", true);
+            MaxHits = (int)Config.GetValue("Weapon." + spawnInfo.WeaponType.ToString(), "max_hits", true);
+            Lifespan = (float)Config.GetValue("Weapon." + spawnInfo.WeaponType.ToString(), "lifespan", true);
+            ShotSpread = (float)Config.GetValue("Weapon." + spawnInfo.WeaponType.ToString(), "shot_spread", true);
 
-            if(HasRightToMoveProjectile())
+
+            if(IsMultiplayerAuthority())
             {
-                GlobalPosition = spawnInfo.SpawnPosition.ToVector3();
-                GlobalRotation = spawnInfo.SpawnRotation.ToVector3();
-                Transform = Transform.Orthonormalized(); // fix basis if it got non-orthonormalized
-                //CatchUpTime = Time.GetUnixTimeFromSystem() - spawnInfo.SpawnTime;
+                GlobalTransform = spawnInfo.SpawnTransform.ToTransform3D();
                 AngleOffset = (int)spawnInfo.AngleOffset;
+                if(!IsDummy)
+                {
+                    CatchUpTime = GameSessionManager.ConnectedPeers[projectileOwner].AveragePing;
+                }
+            }
+
+            // disable syncing on dummy
+            if(IsDummy) {
+                multiplayerSynchronizer.Free();
             }
         }
 
@@ -65,16 +71,7 @@ namespace multiplayerstew.Scripts.Base
         {
             GodotErrorService.ValidateRequiredData(this);
 
-            // disable syncing on projectileOwner
-            if(Multiplayer.GetUniqueId() == projectileOwner) {
-                multiplayerSynchronizer.SetVisibilityFor(1, false);
-                multiplayerSynchronizer.QueueFree();
-            }
-            //if(Multiplayer.GetUniqueId() == 1) {
-            //    multiplayerSynchronizer.SetVisibilityFor(projectileOwner, false);
-            //}
-
-            if(!HasRightToMoveProjectile()) return; // server and local peer continue
+            if(!IsMultiplayerAuthority()) return; // server and local peer continue
 
             Vector3 directionVector = -GlobalTransform.Basis.Z;
             int yAngleOffset = AngleOffset;
@@ -90,14 +87,16 @@ namespace multiplayerstew.Scripts.Base
             WorldHitDetectionRaycast.CollideWithAreas = false;
             WorldHitDetectionRaycast.CollideWithBodies = true;
             WorldHitDetectionRaycast.HitFromInside = false;
+            WorldHitDetectionRaycast.TargetPosition = Vector3.Zero;
 
-            if (!Multiplayer.IsServer()) return;
+            if(IsDummy) return;
 
             // dynamically add hitbox raycast
             HitboxDetectionRaycast = new();
             AddChild(HitboxDetectionRaycast);
             HitboxDetectionRaycast.SetCollisionMaskValue(1, false);
             HitboxDetectionRaycast.SetCollisionMaskValue(3, true);
+            HitboxDetectionRaycast.TargetPosition = Vector3.Zero;
 
             HitboxDetectionRaycast.CollideWithAreas = true;
             HitboxDetectionRaycast.CollideWithBodies = false;
@@ -106,7 +105,7 @@ namespace multiplayerstew.Scripts.Base
 
         public override void _Process(double delta)
         {
-            if (!Multiplayer.IsServer()) return; // only the server is concerned with destroying bullets
+            if (!IsMultiplayerAuthority()) return; // only the server is concerned with destroying bullets
 
             TimeAlive += (float)delta;
             if (TimeAlive > Lifespan)
@@ -118,36 +117,8 @@ namespace multiplayerstew.Scripts.Base
 
         public override void _PhysicsProcess(double delta)
         {
-            if (!HasRightToMoveProjectile()) return;
+            if (!IsMultiplayerAuthority()) return;
 
-            if(!Multiplayer.IsServer() && TrueGlobalPosition != Vector3.Zero) // interpolation logic
-            {
-                float interpolationStrength = 1.10f * Math.Abs(InitialVelocity); // interpolation strength is a function of the bullet speed
-                GlobalPosition = GlobalPosition.MoveToward(TrueGlobalPosition, (float)(interpolationStrength * delta));
-                /*
-                Vector3 positionDifference = TrueGlobalPosition - GlobalPosition;
-                Vector3 movementVector = positionDifference.Normalized() * (float)(interpolationStrength * delta);
-                if(positionDifference.LengthSquared() <= movementVector.LengthSquared()) {
-                    movementVector = positionDifference;
-                }
-
-                GlobalPosition += movementVector;
-                */
-
-                /*
-                // Calculate the difference between the local and true global positions
-                Vector3 positionDifference = TrueGlobalPosition - GlobalPosition;
-                Vector3 forward = -GlobalTransform.Basis.Z.Normalized(); // Bullet's forward direction
-                Vector3 forwardDisplacement = positionDifference.Project(forward);
-                Vector3 diffAfterForward = positionDifference - forwardDisplacement;
-
-                // Interpolate the X and Y components only
-                GlobalPosition += diffAfterForward.Normalized() * (float)(delta * 0.000000001);//(float)(delta * (float)Config.GetValue("game_constants", "multiplayer_sync_interpolation_smoothing", true));
-                GlobalPosition += forwardDisplacement;
-                */
- 
-                return; // if we are interpolating then we return here
-            }
             delta = delta + CatchUpTime; // used to speed up projectile for when it was spawned initially
             CatchUpTime = 0;
 
@@ -157,7 +128,7 @@ namespace multiplayerstew.Scripts.Base
             if(Upgrades.Contains(Upgrade.W_Homing))
             {
                 Character nearestEnemy = null;
-                float maxHomingDistance = (float)Config.GetValue("game_constants", "homing_max_distance", true);
+                float maxHomingDistance = (float)Config.GetValue("Upgrade.W_Homing", "homing_max_distance", true);
                 foreach(int peerId in LevelManager.Instance.LevelPeerInfo.Keys)
                 {
                     if(peerId != projectileOwner)
@@ -189,50 +160,20 @@ namespace multiplayerstew.Scripts.Base
                 }
             }
 
-            /*
-            if(!Multiplayer.IsServer() && TrueGlobalPosition != Vector3.Zero) // add homing towards real position
-            {
-                float speed = Velocity.Length();
-                
-                float distanceToTarget = (TrueGlobalPosition - GlobalPosition).Length();
-                Vector3 directionToTarget = (TrueGlobalPosition - GlobalPosition).Normalized();
-                // Define ideal velocity (direction x speed towards player character from current position)
-                Vector3 idealVelocity = directionToTarget * speed;
-                
-                // Ensure that the ideal velocity doesn't make us overshoot the target
-                if (distanceToTarget < speed * delta) {
-                    idealVelocity = directionToTarget * (float)(distanceToTarget / delta); // Adjust to stop right at the target
-                }
-
-                // speed to steer = direction vector obtained by idealVelocity - current_velocity x force to steer
-                Vector3 steering = (idealVelocity - Velocity).Normalized() * (float)Config.GetValue("game_constants", "ping_correction_homing_intensity", true);
-                Velocity += steering * (float)delta;
-            }
-            */
-                
-
             if (Velocity != Vector3.Zero)
             {
                 LookAt(GlobalPosition + Velocity.Normalized(), Vector3.Up);
 
-                if(Multiplayer.IsServer()) // only the server cares about hit collision
+                if(!IsDummy) // only the non dummy projectiles care about hit collision
                 {
                     HitboxDetectionRaycast.TargetPosition = ToLocal(GlobalPosition + Velocity * (float)delta);
                     HitboxDetectionRaycast.ForceRaycastUpdate();
                     if(HitboxDetectionRaycast.IsColliding())
                     {
                         GodotObject collider = HitboxDetectionRaycast.GetCollider();
-                        if(MaxHits > 0 && collider is DamageArea) // we do a max hit check here so server stops hitting even before authority queue frees the projectile
+                        if(MaxHits > 0 && collider is DamageArea damageArea) // we do a max hit check here so server stops hitting even before authority queue frees the projectile
                         {
-                            DamageArea damageArea = collider as DamageArea;
                             damageArea.HitDamageArea(this, HitboxDetectionRaycast.GetCollisionNormal());
-                        }
-                        
-                        MaxHits--;
-                        
-                        if(MaxHits <= 0)
-                        {
-                            DisableSelf();
                         }
                     }
                 }
@@ -264,21 +205,26 @@ namespace multiplayerstew.Scripts.Base
                 }
 
                 GlobalPosition += Velocity * (float)delta;
-                if(Multiplayer.IsServer()) {
-                    TrueGlobalPosition = GlobalPosition;
-                }
             }
         }
 
         /// <summary>
         /// Way for the server to kill a projectile without having authority.
         /// </summary>                        
-        private void DisableSelf()
+        public void DisableSelf()
         {
-            if(!Multiplayer.IsServer()) return;
+            if(!IsMultiplayerAuthority()) return;
 
-            RpcId(projectileOwner, MethodName.NotifyOfDestruction);
-            SetMultiplayerAuthority(projectileOwner); // stops server from syncing position - stops errors from desync between time that projectileOwner queueFree and the server gets the message
+            if(GetMultiplayerAuthority() == projectileOwner)
+            {
+                QueueFree();
+            }
+            else
+            {
+                RpcId(projectileOwner, MethodName.NotifyOfDestruction);
+                SetMultiplayerAuthority(projectileOwner); // stops server from syncing position - stops errors from desync between time that projectileOwner queueFree and the server gets the message
+            }
+            
         }
 
         [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
@@ -288,11 +234,6 @@ namespace multiplayerstew.Scripts.Base
             {
                 QueueFree();
             }
-        }
-
-        private bool HasRightToMoveProjectile()
-        {
-            return IsMultiplayerAuthority() || Multiplayer.GetUniqueId() == projectileOwner;
         }
     }
 }

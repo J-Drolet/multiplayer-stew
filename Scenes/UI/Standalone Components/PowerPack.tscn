@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=4 uid="uid://cslx7c34bxb3h"]
+
+[ext_resource type="Script" uid="uid://dob1x500ekglp" path="res://Scripts/UI/InGameUI/PowerPackDisplayManager.cs" id="1_tig7o"]
+[ext_resource type="PackedScene" uid="uid://bb77f6cpi3oi" path="res://Scenes/UI/Standalone Components/pack.tscn" id="2_vh6wk"]
+[ext_resource type="Texture2D" uid="uid://b2ekw3lhyp6vx" path="res://Assets/Textures/UI/OpenPack_Cigarette_Pack_1024.png" id="3_vh6wk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xn4v"]
+resource_name = "Cigarette_Pack_Material"
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("3_vh6wk")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2mhhe"]
+_surfaces = [{
+"aabb": AABB(-0.30217, -0.749244, -0.13756, 0.60434, 0.775649, 0.27512),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAgADAAQAAAACAAQAAQAFAAMAAAAEAAYAAQAHAAUAAAAHAAEABwAGAAUABwAAAAYA"),
+"name": "Cigarette_Pack_Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAAAAAAD//wAA//8AAP//AAAAAAAA//////7/AAD///7/AAAAAAAA///+/wAAAAD+/wAAAAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gdy8l"]
+resource_name = "OpenPack_Cube_056"
+_surfaces = [{
+"aabb": AABB(-0.30217, -0.749244, -0.13756, 0.60434, 0.775649, 0.27512),
+"attribute_data": PackedByteArray("wODHZzKbOSLA4DkiMpvHZ+ZZz7mhAF3/oQDPueZZXf/nWaZyoQA0uKEApnLnWTS4b7TPuSpbXf8qW8+5b7Rd/2+0pXIqWzS4Klulcm+0NLg="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
+"material": SubResource("StandardMaterial3D_4xn4v"),
+"name": "Cigarette_Pack_Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAAAAAAAVNX//wAA//9U1f//AAAAAFTVAAAAAP//VNX//wAA////vwAA///+//+///////7//78AAAAA////v///AAAAAFTV//////7/VNX///7/AABU1f//AAD//1TVAAAAAAAA//////7/AAD//wAA/v8AAP////8AAAAA//8AAAAA//9U1QAA/v8AAFTVAAD///7/VNUAAAAAAABU1VVVVFVVVVRVVVVUVVRVVFX/f/9//3//f/9//3//f/9/qqpVVaqqVVWqqlVVqqpVVf+//z//v/8//7//P/8//79UVaqqVFWqqlRVqqpUVaqq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_2mhhe")
+
+[node name="Packs" type="Node3D"]
+script = ExtResource("1_tig7o")
+PackScene = ExtResource("2_vh6wk")
+
+[node name="Cigarette_Pack" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.887412, 0, 0, 0, 1, 0, 0, 0, 0.755901, 0.00366592, 0.0175644, -0.00293235)
+visible = false
+layers = 3
+cast_shadow = 0
+mesh = SubResource("ArrayMesh_gdy8l")
+skeleton = NodePath("")

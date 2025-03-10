@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://x45b1orurjwf"]
+[gd_scene load_steps=7 format=4 uid="uid://x45b1orurjwf"]
 
 [ext_resource type="Script" uid="uid://i5dbdlp27m8b" path="res://Scripts/Projectiles/SimpleBullet.cs" id="1_ke2li"]
 [ext_resource type="Texture2D" uid="uid://yfr8qq3bu53e" path="res://Assets/Textures/Weapons/AugBullet_Ammo_tex.png" id="2_7mr4n"]
@@ -7,6 +7,9 @@
 properties/0/path = NodePath(".:position")
 properties/0/spawn = true
 properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3uye1"]
 resource_name = "Ammo"
@@ -49,30 +52,14 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_kc6nu")
 
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_fabpj"]
-properties/0/path = NodePath(".:TrueGlobalPosition")
-properties/0/spawn = true
-properties/0/replication_mode = 1
-properties/1/path = NodePath(".:rotation")
-properties/1/spawn = true
-properties/1/replication_mode = 1
-
 [node name="AugBullet" type="Node3D" node_paths=PackedStringArray("multiplayerSynchronizer")]
-transform = Transform3D(0.434487, 0, 0, 0, 0.434487, 0, 0, 0, 0.434487, 0, 0, 0)
 script = ExtResource("1_ke2li")
-InitialVelocity = 70.0
-Damage = 10.0
-VitalMultiplier = 3.0
-Lifespan = 2.0
-ShotSpread = 0.01
 multiplayerSynchronizer = NodePath("MultiplayerSynchronizer")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_s3o7p")
 
 [node name="Rifle_caliber_2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.43, 0, 0, 0, 0.43, 0, 0, 0, 0.43, 0, 0, 0)
 mesh = SubResource("ArrayMesh_kv3pp")
 skeleton = NodePath("")
-
-[node name="PeerSync" type="MultiplayerSynchronizer" parent="."]
-replication_config = SubResource("SceneReplicationConfig_fabpj")

@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 
 public partial class UI: Node
 {
@@ -14,6 +15,8 @@ public partial class UI: Node
     public static GunViewCamera GunViewCamera { get; set; }
     public static Scoreboard Scoreboard { get; set; }
     public static EndOfGame EndOfGame { get; set; }
+    public static Hitmarker Hitmarker { get; set; }
+    public static LoadingScreen LoadingScreen { get; set; }
     
     public static void DisplayError(string errorText) 
     {   
@@ -52,17 +55,5 @@ public partial class UI: Node
             Scoreboard.Show();
         }
 
-    }
-
-    public static void ToggleSpinner(bool visibility) 
-    {
-        if(visibility) 
-        {
-            Spinner.Show();
-        }
-        else
-        {
-            Spinner.Hide();
-        }
     }
 }

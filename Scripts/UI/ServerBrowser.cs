@@ -53,7 +53,7 @@ public partial class ServerBrowser : Control
         Client.Instance.ConnectToServer(ip, port);
         Hide();
         LobbyPage.Show();
-        UI.ToggleSpinner(true);
+        UI.Spinner.Show();
     }
 
     public void AddFavorite(string ip, int port, string serverName)

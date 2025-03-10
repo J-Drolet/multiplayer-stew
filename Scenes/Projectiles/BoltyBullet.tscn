@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://diqolrhp5s6sw"]
+[gd_scene load_steps=7 format=4 uid="uid://diqolrhp5s6sw"]
 
 [ext_resource type="Script" uid="uid://nprhfw4hoegg" path="res://Scripts/Base/UpgradeableProjectile.cs" id="1_ot4mb"]
-[ext_resource type="Texture2D" uid="uid://cokmftpmgn2xu" path="res://Assets/Textures/Weapons/RifleBulletSeperate_Ammo_tex.png" id="2_pjhyj"]
+[ext_resource type="Texture2D" uid="uid://cohcg4lejpdtj" path="res://Assets/Textures/Weapons/RifleBulletSeperate_Ammo_tex.png" id="2_pjhyj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ejcdq"]
 resource_name = "Ammo"
@@ -48,19 +48,12 @@ shadow_mesh = SubResource("ArrayMesh_li4ie")
 properties/0/path = NodePath(".:position")
 properties/0/spawn = true
 properties/0/replication_mode = 1
-
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_vugfn"]
-properties/0/path = NodePath(".:TrueGlobalPosition")
-properties/0/spawn = true
-properties/0/replication_mode = 1
 properties/1/path = NodePath(".:rotation")
 properties/1/spawn = true
 properties/1/replication_mode = 1
 
 [node name="BoltyBullet" type="Node3D" node_paths=PackedStringArray("multiplayerSynchronizer")]
 script = ExtResource("1_ot4mb")
-InitialVelocity = 50.0
-Damage = 25.0
 multiplayerSynchronizer = NodePath("MultiplayerSynchronizer")
 
 [node name="Bullet" type="MeshInstance3D" parent="."]
@@ -70,6 +63,3 @@ skeleton = NodePath("")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_m7mpy")
-
-[node name="PeerSync" type="MultiplayerSynchronizer" parent="."]
-replication_config = SubResource("SceneReplicationConfig_vugfn")

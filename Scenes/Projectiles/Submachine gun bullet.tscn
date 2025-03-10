@@ -1,12 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://de6ynjcj4qnom"]
+[gd_scene load_steps=7 format=4 uid="uid://de6ynjcj4qnom"]
 
 [ext_resource type="Script" uid="uid://i5dbdlp27m8b" path="res://Scripts/Projectiles/SimpleBullet.cs" id="1_vyfoj"]
-[ext_resource type="Texture2D" uid="uid://2lpk5gowym0b" path="res://Assets/Textures/Weapons/PistolBullet_Ammo_tex.png" id="2_sbl56"]
+[ext_resource type="Texture2D" uid="uid://wggjy5cfolrn" path="res://Assets/Textures/Weapons/PistolBullet_Ammo_tex.png" id="2_sbl56"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_s3o7p"]
 properties/0/path = NodePath(".:position")
 properties/0/spawn = true
 properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vu5ms"]
 resource_name = "Ammo"
@@ -49,30 +52,14 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wyovt")
 
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_crllb"]
-properties/0/path = NodePath(".:TrueGlobalPosition")
-properties/0/spawn = true
-properties/0/replication_mode = 1
-properties/1/path = NodePath(".:rotation")
-properties/1/spawn = true
-properties/1/replication_mode = 1
-
 [node name="sub bullet" type="Node3D" node_paths=PackedStringArray("multiplayerSynchronizer")]
-transform = Transform3D(0.434487, 0, 0, 0, 0.434487, 0, 0, 0, 0.434487, 0, 0, 0)
 script = ExtResource("1_vyfoj")
-InitialVelocity = 45.0
-Damage = 3.5
-Lifespan = 2.0
-ShotSpread = 0.05
 multiplayerSynchronizer = NodePath("MultiplayerSynchronizer")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_s3o7p")
 
 [node name="Pistol_caliber_1" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.049, 0, 0, 0, -4.41485e-09, 0.049, 0, -0.101, -2.14186e-09, 0, 0, 0)
+transform = Transform3D(0.021, 0, 0, 0, -1.9233e-09, 0.021, 0, -0.044, -9.17939e-10, 0, 0, 0)
 mesh = SubResource("ArrayMesh_pk76u")
 skeleton = NodePath("")
-
-[node name="PeerSync" type="MultiplayerSynchronizer" parent="."]
-replication_config = SubResource("SceneReplicationConfig_crllb")

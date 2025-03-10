@@ -11,70 +11,93 @@ public partial class Character : Entity
 	[Export, ExportRequired]
 	public Camera3D Camera { get; set; }
 	[Export, ExportRequired]
-	public Node3D ProjectileOrigin { get; set; }
-	[Export, ExportRequired]
 	public Node3D Head { get; set; }
 	[Export, ExportRequired]
 	public Node3D Hand { get; set; }
-	[Export, ExportRequired]
-	public MeshInstance3D CharacterMesh { get; set; }
-	[Export, ExportRequired, AnimationsRequired(new string[] {"Walk"})]
-	public AnimationPlayer APlayer { get; set; }
+    public HashSet<Upgrade> Upgrades { get; set; } = new();
     [Export, ExportRequired]
-    public AnimationTree ATree { get; set; }
-	[Export, ExportRequired]
-	public GpuParticles3D InvisibilitySmokeParticles { get; set; }
-	[Export, ExportRequired]
-	public MultiplayerSpawner WeaponSpawner { get; set; }
-	[Export, ExportRequired]
-	public AudioStream OutlinePlayerSFX { get; set; }
-	public HashSet<Upgrade> Upgrades { get; set; } = new();
+    public Node3D PowerPackDisplayManager { get; set; }
 
-	public bool CanMove { get; set; } = true; // whether or not the local player should be able to manipulate the character
-	public bool CanLook { get; set; } = true; // whether or not the local player should be able to manipulate the character
-	private int JumpsSinceHitGround { get; set; } // keeps track of how many jumps the character has done since last hitting the ground
-	private double TimeSinceXray { get; set; } // for see through walls upgrade
-	public double SlowdownMultiplier { get; set; } = 1.0;
-
+    #region WeaponProperties
     [Export]
     public UpgradableWeapon EquippedWeapon;
+    [Export, ExportRequired]
+    public Node3D ProjectileOrigin { get; set; }
+    [Export, ExportRequired]
+    public MultiplayerSpawner WeaponSpawner { get; set; }
+    #endregion
 
-	public float BaseSpeed = (float)Config.GetValue("game_constants", "base_speed", true);
-	public float SprintMultiplier = (float)Config.GetValue("game_constants", "sprint_multiplier", true);
-	public float JumpVelocity = (float)Config.GetValue("game_constants", "jump_velocity", true);
+    #region AnimationProperties
+    [Export, ExportRequired, AnimationsRequired(["Walk"])]
+    public AnimationPlayer APlayer { get; set; }
+    [Export, ExportRequired]
+    public AnimationTree ATree { get; set; }
+    #endregion
+
+    #region CosmeticProperties
+    [Export, ExportRequired]
+    public MeshInstance3D CharacterMesh { get; set; }
+	[Export, ExportRequired]
+	public Node3D HeadCosmeticSlot { get; set; }
+	[Export, ExportRequired]
+	public Node3D FaceCosmeticSlot { get; set; }
+    #endregion
+
+    #region UpgradePropertiesAndFields
+    [Export, ExportRequired]
+    public GpuParticles3D InvisibilitySmokeParticles { get; set; }
+    [Export, ExportRequired]
+    public AudioStream OutlinePlayerSFX { get; set; }
+
+    private double TimeSinceXray { get; set; } // for see through walls upgrade
+    public double SlowdownMultiplier { get; set; } = 1.0;
+    private int JumpsSinceHitGround { get; set; } // keeps track of how many jumps the character has done since last hitting the ground
+    #endregion
+
+    public bool CanMove { get; set; } = true; // whether or not the local player should be able to manipulate the character
+	public bool CanLook { get; set; } = true; // whether or not the local player should be able to manipulate the character
+
+	private float BaseSpeed = (float)Config.GetValue("game_constants", "base_speed", true);
+	private float SprintMultiplier = (float)Config.GetValue("game_constants", "sprint_multiplier", true);
+	private float JumpVelocity = (float)Config.GetValue("game_constants", "jump_velocity", true);
 
 	public override void _EnterTree()
 	{
-		CurrentHealth = MaxHealth; // we have to do this here or else infinite spawns will happen on server side
+        CurrentHealth = MaxHealth; // we have to do this here or else infinite spawns will happen on server side
 		SetMultiplayerAuthority(Name.ToString().Split("#").First().ToInt());
 		WeaponSpawner.GetParent().SetMultiplayerAuthority(1); // weapon spawning is server responsibility
-		LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode = this;
+        LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode = this;
 		WeaponSpawner.Spawned += OnWeaponSpawned; // used to sync up EquippedWeapon
 		WeaponSpawner.Despawned += OnWeaponDespawned;
 
-		if(IsMultiplayerAuthority()) // local client requests its spawn point from server
+        if (IsMultiplayerAuthority()) // local client requests its spawn point from server
 		{
 			LevelManager.Instance.RpcId(1, LevelManager.MethodName.RequestSpawnPoint);
 			UI.InGameUI.AmmoCount.Visible = EquippedWeapon != null; // hide ammoCount on respawn
 			UI.InGameUI.FlavorTextDisplay.HideDisplay();
+			UI.InGameUI.ItemDisplay.Refresh(Upgrades);
 			ATree.Active = true;
 
 			UI.InGameUI.Show();
 			Input.MouseMode = Input.MouseModeEnum.Captured;
-        	UI.GunViewCamera.active = true;
-		}
-	}
 
+			CharacterMesh.Hide();
+		}
+		else
+		{
+			PowerPackDisplayManager.Hide();
+		}
+
+		// Load Cosmetics
+		FaceCosmeticSlot.AddChild(ResourceLoader.Load<PackedScene>(GameSessionManager.ConnectedPeers[GetMultiplayerAuthority()].FaceCosmetic).Instantiate());
+        HeadCosmeticSlot.AddChild(ResourceLoader.Load<PackedScene>(GameSessionManager.ConnectedPeers[GetMultiplayerAuthority()].HeadCosmetic).Instantiate());
+    }
 
     public override void _Ready()
     {
         base._Ready();
-
-		List<string> files = GodotSceneFindingService.GetScenesAtFilepath(Root.WeaponsFilepath);
-		foreach(string filepath in files) 
-		{
-			WeaponSpawner.AddSpawnableScene(filepath);
-		}
+        MultiplayerSpawnerService.LoadMultiplayerSpawner(WeaponSpawner, Root.WeaponsFilepath);
+        SetWeapon(Weapon.Pistol);
     }
 
     public override void _UnhandledInput(InputEvent @event)
@@ -139,6 +162,9 @@ public partial class Character : Entity
 
 		UI.InGameUI.AmmoCount.Visible = EquippedWeapon != null;
 
+		UI.GunViewCamera.GlobalTransform = Camera.GlobalTransform;
+		UI.GunViewCamera.Fov = Camera.Fov;
+
 		////////// Small Player Upgrade
 		Scale = Vector3.One * (!Upgrades.Contains(Upgrade.C_SmallerHitbox) ? 1.0f : (float)Config.GetValue("Upgrade.C_SmallerHitbox", "small_hitbox_factor", true));
 
@@ -200,15 +226,15 @@ public partial class Character : Entity
 
 		if(Upgrades.Contains(Upgrade.C_FastSlide))
 		{
-			speed *= 2;
-			acceleration /= 10;
-			deceleration /= 100;
+			speed *= (float)Config.GetValue("Upgrade.C_FastSlide", "speed_multiplier", true);
+			acceleration *= (float)Config.GetValue("Upgrade.C_FastSlide", "acceleration_multiplier", true);;
+			deceleration *= (float)Config.GetValue("Upgrade.C_FastSlide", "deceleration_multiplier", true);;
 		}
 
 		int jumpsAllowedInAir = 0;
 		if(Upgrades.Contains(Upgrade.C_DoubleJump))
 		{
-			jumpsAllowedInAir = 1;
+			jumpsAllowedInAir = (int)Config.GetValue("Upgrade.C_DoubleJump", "jumps_in_air", true);
 		}
 
 		// Add the gravity.
@@ -295,15 +321,15 @@ public partial class Character : Entity
 		return powerLevel;
 	}
 
-	private void OnPowerLevelChange() 
+	private void UpdatePowerLevelStats() 
 	{
-		if(Multiplayer.IsServer())
+        int currentPowerLevel = CalculatePowerLevel();
+        if (Multiplayer.IsServer())
 		{
-			int characterOwner = GetMultiplayerAuthority();
-			int powerLevel = CalculatePowerLevel();
-			if(powerLevel > LevelManager.Instance.PlayerStats[characterOwner].maxPowerLevel)
+            int characterOwner = GetMultiplayerAuthority();
+			if(currentPowerLevel > LevelManager.Instance.PlayerStats[characterOwner].maxPowerLevel)
 			{
-				LevelManager.Instance.PlayerStats[characterOwner].maxPowerLevel = powerLevel;
+				LevelManager.Instance.PlayerStats[characterOwner].maxPowerLevel = currentPowerLevel;
 			}
 		}
 	}
@@ -351,7 +377,7 @@ public partial class Character : Entity
 			
 			WeaponSpawner.GetParent().AddChild(EquippedWeapon);
 		}
-		OnPowerLevelChange();
+		UpdatePowerLevelStats();
 	}
 
 	private void OnWeaponDespawned(Node node)
@@ -378,9 +404,10 @@ public partial class Character : Entity
 	public void AddUpgrade(Upgrade upgrade)
 	{
 		Upgrades.Add(upgrade);
-		OnPowerLevelChange();
+		UpdatePowerLevelStats();
 		if(IsMultiplayerAuthority())
 		{
+			UI.InGameUI.ItemDisplay.Refresh(Upgrades);
 			UI.InGameUI.FlavorTextDisplay.DisplayFlavorTextFor(upgrade);
 		}
 	}
@@ -388,8 +415,12 @@ public partial class Character : Entity
 	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
 	public void RemoveUpgrade(Upgrade upgrade)
 	{
-		Upgrades.Remove(upgrade);
-	}
+        Upgrades.Remove(upgrade);
+		if (IsMultiplayerAuthority())
+		{
+			UI.InGameUI.ItemDisplay.Refresh(Upgrades);
+		}
+    }
 
 	/// <summary>
 	/// For use for knockback

@@ -1,0 +1,63 @@
+[gd_scene load_steps=11 format=3 uid="uid://ncmwg7u8w1ou"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fkvgn"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 1)
+refraction_enabled = true
+refraction_scale = 1.0
+refraction_texture_channel = 2
+
+[sub_resource type="SphereMesh" id="SphereMesh_p154h"]
+material = SubResource("StandardMaterial3D_fkvgn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sp2ee"]
+albedo_color = Color(0.641934, 0.641934, 0.641934, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ce18l"]
+material = SubResource("StandardMaterial3D_sp2ee")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kjrlu"]
+albedo_color = Color(0.174216, 0.234686, 0.314672, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_j3q8l"]
+material = SubResource("StandardMaterial3D_kjrlu")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ek1ls"]
+frequency = 0.0492
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_oeayq"]
+as_normal_map = true
+noise = SubResource("FastNoiseLite_ek1ls")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3eyju"]
+resource_name = "Material"
+cull_mode = 2
+albedo_color = Color(0.278431, 0.0901961, 0.00392157, 1)
+roughness = 0.5
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_oeayq")
+
+[sub_resource type="TorusMesh" id="TorusMesh_5uaw6"]
+material = SubResource("StandardMaterial3D_3eyju")
+inner_radius = 0.088
+
+[node name="Eyepatch" type="Node3D"]
+
+[node name="Face" type="Node3D" parent="."]
+transform = Transform3D(-4.90064e-09, -6.17443e-10, 0.113, -0.0141254, 0.112114, -6.60594e-17, -0.112114, -0.0141254, -4.93939e-09, 0.0654876, -0.00181651, -0.0275067)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Face"]
+transform = Transform3D(0.142423, 0, -0.267709, 0, 1, 0, 0.0395722, 0, 0.963499, -0.113778, 0, 0)
+mesh = SubResource("SphereMesh_p154h")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Face"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38499, 0, -1.24127)
+mesh = SubResource("SphereMesh_ce18l")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Face/MeshInstance3D3"]
+transform = Transform3D(0.64757, 0, 0, 0, 0.64757, 0, 0, 0, 0.64757, 0.203709, 0, 0)
+mesh = SubResource("SphereMesh_j3q8l")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Face"]
+transform = Transform3D(0.548405, 0, 0, 0, 0.531757, -0.134101, 0, 0.134101, 0.531757, -0.398331, 0.323907, -1.18653)
+mesh = SubResource("TorusMesh_5uaw6")

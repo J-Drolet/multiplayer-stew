@@ -558,11 +558,8 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_bypow")
 
 [node name="AUG" type="Node3D" node_paths=PackedStringArray("APlayer")]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
 script = ExtResource("1_afhbb")
-WeaponName = "AUG"
 WeaponType = 1
-MaxAmmo = 30
 FireMode = 2
 Projectile = ExtResource("2_bl7sb")
 APlayer = NodePath("AnimationPlayer")
@@ -570,7 +567,7 @@ ClickSound = ExtResource("3_st1q3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_qq742")
+&"": SubResource("AnimationLibrary_qq742")
 }
 
 [node name="HandMesh" type="MeshInstance3D" parent="."]
@@ -611,7 +608,7 @@ mesh = SubResource("ArrayMesh_oiouu")
 skeleton = NodePath("")
 
 [node name="Mag" type="MeshInstance3D" parent="AUG"]
-transform = Transform3D(0.05876, 0, 0, 0, 0.355141, -0.0401046, 0, 0.0671291, 0.21217, 0, -0.4883, 1.04387)
+transform = Transform3D(0.05876, 0, 0, 0, 0.355141, -0.0401046, 0, 0.0671292, 0.21217, 0, -0.4883, 1.04387)
 mesh = SubResource("ArrayMesh_p7wpg")
 skeleton = NodePath("")
 

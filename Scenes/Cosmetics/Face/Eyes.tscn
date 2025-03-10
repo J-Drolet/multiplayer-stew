@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://161axn2gexx8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sp2ee"]
+albedo_color = Color(0.641934, 0.641934, 0.641934, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_akemk"]
+material = SubResource("StandardMaterial3D_sp2ee")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kjrlu"]
+albedo_color = Color(0.174216, 0.234686, 0.314672, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_kkfgf"]
+material = SubResource("StandardMaterial3D_kjrlu")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ek1ls"]
+frequency = 0.0492
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hdwoe"]
+as_normal_map = true
+noise = SubResource("FastNoiseLite_ek1ls")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3eyju"]
+resource_name = "Material"
+cull_mode = 2
+albedo_color = Color(0.278431, 0.0901961, 0.00392157, 1)
+roughness = 0.5
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_hdwoe")
+
+[sub_resource type="TorusMesh" id="TorusMesh_24kno"]
+material = SubResource("StandardMaterial3D_3eyju")
+inner_radius = 0.088
+
+[node name="Eyes" type="Node3D"]
+
+[node name="Face" type="Node3D" parent="."]
+transform = Transform3D(-4.90064e-09, -6.17443e-10, 0.113, -0.0141254, 0.112114, -6.60594e-17, -0.112114, -0.0141254, -4.93939e-09, 0.0859864, 0.00402105, -0.0710795)
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Face"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38499, 0, -1.24127)
+mesh = SubResource("SphereMesh_akemk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Face/MeshInstance3D3"]
+transform = Transform3D(0.64757, 0, 0, 0, 0.64757, 0, 0, 0, 0.64757, 0.203709, 0, 0)
+mesh = SubResource("SphereMesh_kkfgf")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Face"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38499, 9.53674e-07, -0.348562)
+mesh = SubResource("SphereMesh_akemk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Face/MeshInstance3D5"]
+transform = Transform3D(0.64757, 0, 0, 0, 0.64757, 0, 0, 0, 0.64757, 0.203709, 0, 0)
+mesh = SubResource("SphereMesh_kkfgf")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Face"]
+transform = Transform3D(0.547777, -0.00146464, -0.0262053, 0.00498778, 0.543382, 0.0738909, 0.0257679, -0.0740446, 0.542773, -0.398331, 0.323906, -1.18653)
+mesh = SubResource("TorusMesh_24kno")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Face"]
+transform = Transform3D(0.547777, -0.00146463, -0.0262054, 0.00498778, 0.543382, 0.0738909, 0.0257679, -0.0740446, 0.542773, -0.398331, 0.323905, -0.239035)
+mesh = SubResource("TorusMesh_24kno")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Face"]

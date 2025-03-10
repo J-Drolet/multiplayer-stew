@@ -19,17 +19,10 @@ namespace multiplayerstew.Scripts.Base
 	}
 	public partial class UpgradableWeapon : Node3D
 	{
-		// Define new weapon parameters + projectile as Godot Properties
-		[Export]
-		public string WeaponName { get; set; } = "Unknown";
 		[Export, ExportRequired]
 		public Weapon WeaponType;
 		[Export]
-		public int MaxAmmo { get; set; } = -1;
-		[Export]
 		public FireModes FireMode { get; set; } = FireModes.Single;
-		[Export]
-		public int ProjectilePerShot { get; set; } = 1;
 		[Export, ExportRequired]
 		public PackedScene Projectile { get; set; }
 		[Export]
@@ -42,6 +35,8 @@ namespace multiplayerstew.Scripts.Base
 		public AudioStream ClickSound { get; set; }
 		private Random rng = new();
 
+		private int MaxAmmo { get; set; } = -1;
+		private int ProjectilePerShot { get; set; } = 1;
 		private int CurrentAmmo { get; set; }
 		private int StoredAmmo { get; set; } // for charge upgrade
 		private double TimeSinceLastCharge { get; set; } // for charge upgrade
@@ -49,6 +44,8 @@ namespace multiplayerstew.Scripts.Base
         public override void _EnterTree()
         {
             SetMultiplayerAuthority(Name.ToString().Split('#').First().ToInt());
+			MaxAmmo = (int) Config.GetValue("Weapon." + WeaponType.ToString(), "max_ammo", true);
+			ProjectilePerShot = (int) Config.GetValue("Weapon." + WeaponType.ToString(), "projectiles_per_shot", true);
         }
 
         public override void _Ready()
@@ -200,18 +197,26 @@ namespace multiplayerstew.Scripts.Base
 				foreach(int angleOffset in angleOffsets)
 				{
 					UpgradeableProjectile projectileInstance = Projectile.Instantiate() as UpgradeableProjectile;
+					UpgradeableProjectile dummyProjectile = Projectile.Instantiate() as UpgradeableProjectile;
 
 					// Pack spawn info into Name
 					ProjectileSpawnInfo spawnInfo = new();
 					spawnInfo.ProjectileOwner = GetMultiplayerAuthority();
 					spawnInfo.RandomizerSeed = rng.NextInt64(10000);
-					spawnInfo.SpawnPosition = new GodotJson.SerializableVector3(LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalPosition);
-					spawnInfo.SpawnRotation = new GodotJson.SerializableVector3(LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalRotation);
-					spawnInfo.SpawnTime = Time.GetUnixTimeFromSystem();
+					spawnInfo.SpawnTransform = new GodotJson.SerializableTransform3D(LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode.ProjectileOrigin.GlobalTransform);
+					spawnInfo.SpawnTime = Time.GetUnixTimeFromSystem(); // gives the projectile a unique name
     				spawnInfo.AngleOffset = angleOffset;
-					projectileInstance.Name = GodotJson.ToJson(spawnInfo);  
+					spawnInfo.WeaponType = WeaponType;
+					string projectileName = GodotJson.ToJson(spawnInfo);
 
+					projectileInstance.Name = projectileName; 
 					LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].projectileParent.AddChild(projectileInstance, true);
+					projectileInstance.Visible = false; // hide real projectile
+
+					dummyProjectile.IsDummy = true;
+					dummyProjectile.SetMultiplayerAuthority(GetMultiplayerAuthority());
+					dummyProjectile.Name = projectileName; 
+					LevelManager.Instance.AddChild(dummyProjectile, true);
 				}
 			}
 		}

@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Threading;
+using System.Text.Json;
 
 public partial class Client : Node
 {
@@ -69,9 +69,9 @@ public partial class Client : Node
             CloseServer();
         }
 
-        UI.GunViewCamera.active = false;
         GameSessionManager.ConnectedPeers.Clear();
         Peer.Close();
+        Multiplayer.MultiplayerPeer = new OfflineMultiplayerPeer();
     }
 
     /// <summary>
@@ -98,13 +98,22 @@ public partial class Client : Node
     private void ConnectedToServer()
     {
         GD.Print("Connected to server");
-        UI.ToggleSpinner(false);
-        RpcId(1, MethodName.SendPlayerInfo, Multiplayer.GetUniqueId(), Config.GetValue("settings", "player_name").ToString());
+        UI.Spinner.Hide();
+        string peerInfo = JsonSerializer.Serialize(new PeerInfo() 
+        { 
+            name = Config.GetValue("settings", "player_name").ToString(),
+            FaceCosmetic = Config.GetValue("settings", "face_cosmetic").ToString(),
+            HeadCosmetic = Config.GetValue("settings", "head_cosmetic").ToString(),
+        });
+
+        RpcId(1, MethodName.SendPlayerInfo, Multiplayer.GetUniqueId(), peerInfo);
+
         //main.connection_succeeded()
         //send_player_info.rpc_id(1, peer_name, peer_color, multiplayer.get_unique_id()
     }
 
     // called only on clients
+
     private void ConnectionFailed()
     {
         UI.ErrorMessage.DisplayError("Failed Connection");
@@ -131,18 +140,19 @@ public partial class Client : Node
 
 
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-    public void SendPlayerInfo(long id, string name) {}
+    public void SendPlayerInfo(long id, string peerInfoJson) {}
 
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-    public void NotifyPlayerConnected(long id, string name, int sequenceNumber) {
-        GameSessionManager.ConnectedPeers.Add(id, new PeerInfo{ name = name, sequenceNumber = sequenceNumber });
+    public void NotifyPlayerConnected(long id, string peerInfoJson) {
+        GameSessionManager.ConnectedPeers.Add(id, JsonSerializer.Deserialize<PeerInfo>(peerInfoJson));
         UI.Lobby.RefreshLobby();
     }
 
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
     public void NotifyStartGame(string filepath, int durationInSeconds, int maxAura)
     {
-        UI.MainMenu.CloseMainMenu();
+        UI.MainMenu.Hide();
+        UI.LoadingScreen.Show();
         GameSessionManager.GameDurationSeconds = durationInSeconds;
         GameSessionManager.MaxAura = maxAura;
     }
@@ -164,4 +174,48 @@ public partial class Client : Node
         GameSessionManager.LeaveJoinedGame();
         UI.DisplayError(reason);
     }
+
+    [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Unreliable)]
+    public void RequestPing(double requestorTime)
+    {
+        RpcId(Multiplayer.GetRemoteSenderId(), MethodName.ReturnPing, requestorTime);
+    }
+
+    [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Unreliable)]
+    public void ReturnPing(double requestorTime)
+    {
+        double ping = (Time.GetUnixTimeFromSystem() - requestorTime) / 2;
+        double averagePing = GameSessionManager.ConnectedPeers[Multiplayer.GetRemoteSenderId()].AveragePing;
+        List<double> lastPings = GameSessionManager.ConnectedPeers[Multiplayer.GetRemoteSenderId()].LastPings;
+        lastPings.Add(ping);
+        if(averagePing < 0) // if no ping is regestered then set it to the first ping
+        {
+            averagePing = ping;
+        }
+        else
+        {
+            if(lastPings.Count == 9)
+            {
+                double totalLatency = 0;
+                lastPings.Sort();
+                double midPoint = lastPings[4];
+                for(int i = lastPings.Count - 1; i >= 0; i--)
+                {
+                    if(lastPings[i] > (2 * midPoint) && lastPings[i] > (20 / 1000)) // ignore outliers
+                    {
+                        lastPings.RemoveAt(i);
+                    }
+                    else
+                    {
+                        totalLatency += lastPings[i];
+                    }
+                }
+                averagePing = totalLatency / lastPings.Count;
+                lastPings.Clear();
+            }
+        }
+        GameSessionManager.ConnectedPeers[Multiplayer.GetRemoteSenderId()].LastPings = lastPings;
+        GameSessionManager.ConnectedPeers[Multiplayer.GetRemoteSenderId()].AveragePing = averagePing;
+    }
+
 }
