@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://mujxr1ewuap1"]
+[gd_scene load_steps=8 format=3 uid="uid://mujxr1ewuap1"]
 
 [ext_resource type="Script" uid="uid://cgocmhkfg50vn" path="res://Scripts/UI/SettingsScreen.cs" id="1_cvm75"]
 [ext_resource type="Theme" uid="uid://emuxwpv1i0mt" path="res://Assets/Themes/SettingsMenu.tres" id="2_oyqlb"]
 [ext_resource type="Script" uid="uid://icflct6hpykn" path="res://Scripts/UI/SettingInputTypes/LineEditSettingInput.cs" id="3_7u800"]
+[ext_resource type="Script" uid="uid://c7natr5a0arxk" path="res://Scripts/UI/Util/FileOptionInitializer.cs" id="4_fuxot"]
 [ext_resource type="Script" uid="uid://b0k55cdarcera" path="res://Scripts/UI/SettingInputTypes/SliderSettingInput.cs" id="4_j6ui4"]
 [ext_resource type="Script" uid="uid://b2ppijulutxhp" path="res://Scripts/UI/SettingInputTypes/ButtonSettingInput.cs" id="5_aka8e"]
 [ext_resource type="Script" uid="uid://cm1nmgasd7h55" path="res://Scripts/UI/SettingInputTypes/OptionsButtonSettingInput.cs" id="6_45gcu"]
@@ -148,10 +149,16 @@ render_target_update_mode = 4
 layout_mode = 2
 alignment = 1
 
-[node name="HatOption" type="HBoxContainer" parent="Tabs/GameTab/VBoxContainer/Character Customization/VBoxContainer"]
+[node name="HatOption" type="HBoxContainer" parent="Tabs/GameTab/VBoxContainer/Character Customization/VBoxContainer" node_paths=PackedStringArray("Input")]
 layout_mode = 2
 theme_override_constants/separation = 40
 alignment = 1
+script = ExtResource("6_45gcu")
+Input = NodePath("OptionButton")
+UseIndexSaving = false
+SettingSection = "settings"
+SettingName = "head_cosmetic"
+ResettableToDefault = false
 
 [node name="Label" type="Label" parent="Tabs/GameTab/VBoxContainer/Character Customization/VBoxContainer/HatOption"]
 custom_minimum_size = Vector2(100, 0)
@@ -163,18 +170,22 @@ horizontal_alignment = 2
 [node name="OptionButton" type="OptionButton" parent="Tabs/GameTab/VBoxContainer/Character Customization/VBoxContainer/HatOption"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-item_count = 3
-popup/item_0/text = "Fullscreen"
+item_count = 1
+popup/item_0/text = "None"
 popup/item_0/id = 0
-popup/item_1/text = "Windowed"
-popup/item_1/id = 1
-popup/item_2/text = "Borderless Fullscreen"
-popup/item_2/id = 2
+script = ExtResource("4_fuxot")
+ParentFilepath = "res://Scenes/Cosmetics/Head/"
 
-[node name="FaceOption" type="HBoxContainer" parent="Tabs/GameTab/VBoxContainer/Character Customization/VBoxContainer"]
+[node name="FaceOption" type="HBoxContainer" parent="Tabs/GameTab/VBoxContainer/Character Customization/VBoxContainer" node_paths=PackedStringArray("Input")]
 layout_mode = 2
 theme_override_constants/separation = 40
 alignment = 1
+script = ExtResource("6_45gcu")
+Input = NodePath("OptionButton")
+UseIndexSaving = false
+SettingSection = "settings"
+SettingName = "face_cosmetic"
+ResettableToDefault = false
 
 [node name="Label" type="Label" parent="Tabs/GameTab/VBoxContainer/Character Customization/VBoxContainer/FaceOption"]
 custom_minimum_size = Vector2(100, 0)
@@ -186,13 +197,11 @@ horizontal_alignment = 2
 [node name="OptionButton" type="OptionButton" parent="Tabs/GameTab/VBoxContainer/Character Customization/VBoxContainer/FaceOption"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-item_count = 3
-popup/item_0/text = "Fullscreen"
+item_count = 1
+popup/item_0/text = "None"
 popup/item_0/id = 0
-popup/item_1/text = "Windowed"
-popup/item_1/id = 1
-popup/item_2/text = "Borderless Fullscreen"
-popup/item_2/id = 2
+script = ExtResource("4_fuxot")
+ParentFilepath = "res://Scenes/Cosmetics/Face/"
 
 [node name="ControlTab" type="Panel" parent="Tabs"]
 visible = false

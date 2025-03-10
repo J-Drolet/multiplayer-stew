@@ -40,7 +40,7 @@ public partial class MainMenu : Control
     private void CloseAllWindows() {
         JoinInformation.Hide();
         LobbyPage.Hide();
-        //Settings.Hide();
+        UI.Scoreboard.Hide();
     }
 
     public void OnHostPressed()
