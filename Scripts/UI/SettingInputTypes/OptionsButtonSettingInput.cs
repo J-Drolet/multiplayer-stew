@@ -23,6 +23,7 @@ public partial class OptionsButtonSettingInput: SettingInput
         {
             Input.Select(GetItemIndexWithSaveValue((string) Config.GetValue(SettingSection, SettingName)));
         }
+        Input.EmitSignal(OptionButton.SignalName.ItemSelected, Input.Selected); // emit signal (doesn't happen by default with Input.Select)
     }
 
     public override void SaveSetting() 
