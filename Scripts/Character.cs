@@ -91,6 +91,8 @@ public partial class Character : Entity
 		// Load Cosmetics
 		FaceCosmeticSlot.AddChild(ResourceLoader.Load<PackedScene>(GameSessionManager.ConnectedPeers[GetMultiplayerAuthority()].FaceCosmetic).Instantiate());
         HeadCosmeticSlot.AddChild(ResourceLoader.Load<PackedScene>(GameSessionManager.ConnectedPeers[GetMultiplayerAuthority()].HeadCosmetic).Instantiate());
+		FaceCosmeticSlot.Visible = !IsMultiplayerAuthority();
+		HeadCosmeticSlot.Visible = !IsMultiplayerAuthority();
     }
 
     public override void _Ready()

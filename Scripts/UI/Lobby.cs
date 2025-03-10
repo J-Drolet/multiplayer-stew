@@ -79,6 +79,7 @@ public partial class Lobby : Control
     public void OnLeavePressed() 
     {   
         Client.Instance.Disconnect();
+        UI.Spinner.Hide();
         Hide();
     }
 
