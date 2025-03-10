@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://5yutkv0j58u4" path="res://Scripts/Character.cs" id="1_n6eoi"]
 [ext_resource type="Script" uid="uid://c38dblfxtao7" path="res://Scripts/Base/DamageArea.cs" id="2_4301p"]
-[ext_resource type="AudioStream" uid="uid://dbvro82au5vr5" path="res://Assets/Sounds/SFX/Voice B Pain Grunt 002.wav" id="2_b0fus"]
+[ext_resource type="AudioStream" uid="uid://b4o2ftef65g1l" path="res://Assets/Sounds/SFX/Voice B Pain Grunt 002.wav" id="2_b0fus"]
 [ext_resource type="PackedScene" uid="uid://bu6ksmfk5pwif" path="res://Scenes/Particles/InvisibilitySmoke.tscn" id="3_ffhoh"]
-[ext_resource type="PackedScene" uid="uid://cslx7c34bxb3h" path="res://Scenes/UI/Standalone Components/PowerPack.tscn" id="5_ejsiy"]
+[ext_resource type="PackedScene" uid="uid://ylbbkhm60usj" path="res://Scenes/UI/Standalone Components/PowerPack.tscn" id="5_ejsiy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mo30b"]
 radius = 0.164492
@@ -150,6 +150,9 @@ properties/6/replication_mode = 1
 properties/7/path = NodePath("Head/Camera3D/Hand:rotation")
 properties/7/spawn = true
 properties/7/replication_mode = 1
+properties/8/path = NodePath("CharacterVisuals:rotation")
+properties/8/spawn = true
+properties/8/replication_mode = 1
 
 [sub_resource type="Animation" id="Animation_donu8"]
 resource_name = "Passive"
@@ -307,13 +310,13 @@ ProjectileOrigin = NodePath("Head/Camera3D/ProjectileOrigin")
 WeaponSpawner = NodePath("Head/Camera3D/Hand/WeaponParent/MultiplayerSpawner")
 APlayer = NodePath("AnimationPlayer")
 ATree = NodePath("AnimationTree")
-CharacterMesh = NodePath("CharacterMesh")
-HeadCosmeticSlot = NodePath("HeadCosmetics")
-FaceCosmeticSlot = NodePath("FaceCosmetics")
-InvisibilitySmokeParticles = NodePath("CharacterMesh/InvisibilitySmoke")
+CharacterMesh = NodePath("CharacterVisuals/CharacterMesh")
+HeadCosmeticSlot = NodePath("Head/HeadCosmetics")
+FaceCosmeticSlot = NodePath("Head/FaceCosmetics")
+InvisibilitySmokeParticles = NodePath("CharacterVisuals/InvisibilitySmoke")
 OutlinePlayerSFX = ExtResource("2_b0fus")
 Hitboxes = [NodePath("Hitbox")]
-HealthText = NodePath("CharacterMesh/Cur Health")
+HealthText = NodePath("CharacterVisuals/Cur Health")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -330,25 +333,21 @@ script = ExtResource("2_4301p")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00303209, 0)
 shape = SubResource("CylinderShape3D_2mse5")
 
-[node name="HeadCosmetics" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98936, 0)
+[node name="CharacterVisuals" type="Node3D" parent="."]
 
-[node name="FaceCosmetics" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7333, -0.167722)
-
-[node name="CharacterMesh" type="MeshInstance3D" parent="."]
+[node name="CharacterMesh" type="MeshInstance3D" parent="CharacterVisuals"]
 transform = Transform3D(0.16289, 0, 0, 0, 0.990428, 0, 0, 0, 0.16289, 0, 1, 0)
 mesh = SubResource("ArrayMesh_nytcm")
 skeleton = NodePath("")
 
-[node name="Cur Health" type="Label3D" parent="CharacterMesh"]
-transform = Transform3D(6.13912, 0, 0, 0, 1.00966, 0, 0, 0, 6.13912, 0, 1.17219, -0.053538)
+[node name="Cur Health" type="Label3D" parent="CharacterVisuals"]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0, 0, 0, 1, 0, 2.16097, -0.0087208)
 visible = false
 billboard = 1
 text = "Text"
 
-[node name="InvisibilitySmoke" parent="CharacterMesh" instance=ExtResource("3_ffhoh")]
-transform = Transform3D(6.13912, 0, 0, 0, 1.00966, 0, 0, 0, 6.13912, 0, -0.504832, 0)
+[node name="InvisibilitySmoke" parent="CharacterVisuals" instance=ExtResource("3_ffhoh")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0, 0, 0, 1, 0, 0.5, 0)
 emitting = false
 
 [node name="Head" type="Node3D" parent="."]
@@ -371,6 +370,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.793709)
 
 [node name="Pack" parent="Head/Camera3D" instance=ExtResource("5_ejsiy")]
 transform = Transform3D(0.104356, 0.0168493, 0.044935, -0.00779863, 0.112074, -0.0239131, -0.0473524, 0.018675, 0.102967, -0.363863, -0.112363, -0.364438)
+
+[node name="HeadCosmetics" type="Node3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.98936, -0.0409511)
+
+[node name="FaceCosmetics" type="Node3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7333, -0.208673)
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_w7qvv")
