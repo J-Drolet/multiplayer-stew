@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3inqxrgemha1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gm2b0"]
+albedo_color = Color(0.280295, 0.0883174, 0.00388758, 1)
+
+[sub_resource type="TorusMesh" id="TorusMesh_4lq81"]
+material = SubResource("StandardMaterial3D_gm2b0")
+inner_radius = 0.001
+outer_radius = 0.94
+rings = 9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oa1op"]
+albedo_color = Color(0.169245, 0.169245, 0.169245, 1)
+
+[sub_resource type="TorusMesh" id="TorusMesh_rfpns"]
+material = SubResource("StandardMaterial3D_oa1op")
+inner_radius = 1.228
+
+[node name="Bandana" type="Node3D"]
+
+[node name="Hair" type="Node3D" parent="."]
+transform = Transform3D(-2.97611e-08, 0, 0.680853, 0, 0.680853, 0, -0.680853, 0, -2.97611e-08, 0.00349867, 0.890675, 0.192247)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.0960966, -0.0965027, 0, 0.215776, 0.0429779, 0, 0, 0, 0.0889036, 0.0680467, -1.50306, -0.0971571)
+mesh = SubResource("TorusMesh_4lq81")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.389054, -0.00650211, 0, 0.0175444, 0.144187, 0, 0, 0, 0.289816, 0.284263, -1.33194, -0.00529264)
+mesh = SubResource("TorusMesh_4lq81")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.0960966, -0.0965027, 0, 0.215776, 0.0429779, 0, 0, 0, 0.0889036, 3.65973e-05, -1.51508, 0.00035198)
+mesh = SubResource("TorusMesh_4lq81")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.0960965, -0.0965027, 0, 0.215776, 0.0429778, 0, 0, 0, 0.0889036, 0.0231647, -1.53094, 0.138251)
+mesh = SubResource("TorusMesh_4lq81")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.021881, -0.0367294, 0, 0.0491317, 0.0163576, 0, 0, 0, 0.0109702, 0.612943, -1.3314, 0.0604672)
+mesh = SubResource("TorusMesh_4lq81")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.021881, -0.0367294, 0, 0.0491317, 0.0163576, 0, 0, 0, 0.0109702, 0.612943, -1.3314, 0.0604672)
+mesh = SubResource("TorusMesh_4lq81")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.0282548, -0.0474285, 0, 0.0634435, 0.0211225, 0, 0, 0, 0.0141657, 0.581241, -1.3314, 0.0604672)
+mesh = SubResource("TorusMesh_4lq81")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.0364987, -0.0612669, 0, 0.0819546, 0.0272854, 0, 0, 0, 0.0182989, 0.579736, -1.3314, -0.0919414)
+mesh = SubResource("TorusMesh_4lq81")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.0318923, -0.0535345, 0, 0.0716113, 0.0238418, 0, 0, 0, 0.0159894, 0.62563, -1.3314, -0.0498564)
+mesh = SubResource("TorusMesh_4lq81")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.0298362, -0.0500832, 0, 0.0669945, 0.0223047, 0, 0, 0, 0.0149586, 0.612943, -1.3314, 0.0179821)
+mesh = SubResource("TorusMesh_4lq81")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.0289427, -0.0485833, 0, 0.0649882, 0.0216368, 0, 0, 0, 0.0145106, 0.612943, -1.3314, 0.0394068)
+mesh = SubResource("TorusMesh_4lq81")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.217554, -0.0511613, -0.128432, -0.0348527, -0.0974215, 0.140585, -0.188813, -0.040966, -0.17393, 0.30121, -1.49045, 0.00050564)
+mesh = SubResource("TorusMesh_rfpns")
+skeleton = NodePath("../../Face")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="Hair"]
+transform = Transform3D(0.287888, 0.0820782, 0, -0.0362717, 0.651453, 0, 0, 0, 0.257896, 0.285192, -1.38371, 0.00050564)
+mesh = SubResource("TorusMesh_rfpns")
+skeleton = NodePath("../../Face")

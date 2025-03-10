@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://ctd7mprbv1r3x"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_pkqaa"]
+frequency = 0.0565
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8kfqd"]
+as_normal_map = true
+bump_strength = 5.2
+noise = SubResource("FastNoiseLite_pkqaa")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u58cd"]
+albedo_color = Color(0.791475, 0.661389, 2.31028e-06, 1)
+metallic = 1.0
+roughness_texture = SubResource("NoiseTexture2D_8kfqd")
+
+[sub_resource type="TorusMesh" id="TorusMesh_qt8g5"]
+material = SubResource("StandardMaterial3D_u58cd")
+inner_radius = 0.534
+outer_radius = 0.47
+
+[sub_resource type="PrismMesh" id="PrismMesh_ga6h2"]
+material = SubResource("StandardMaterial3D_u58cd")
+
+[node name="Crown" type="Node3D"]
+
+[node name="Crown" type="Node3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -0.156326, -0.224802, -0.00225)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Crown"]
+transform = Transform3D(0.544247, 0, 0, 0, 1.39533, 0, 0, 0, 0.544248, 0.256868, 0.402483, -0.00247562)
+mesh = SubResource("TorusMesh_qt8g5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Crown"]
+transform = Transform3D(0.00298731, 0, -0.0222979, 0, 0.159141, 0, 0.0810821, 0, 0.000821527, 0.52065, 0.501312, 0)
+mesh = SubResource("PrismMesh_ga6h2")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Crown"]
+transform = Transform3D(0.00298731, 0, -0.0222979, 0, 0.159141, 0, 0.0810821, 0, 0.000821527, -0.00284067, 0.501312, 0)
+mesh = SubResource("PrismMesh_ga6h2")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Crown"]
+transform = Transform3D(0.0722936, 0, 0.0101299, 0, 0.159141, 0, -0.0368355, 0, 0.0198811, 0.15105, 0.507374, -0.247896)
+mesh = SubResource("PrismMesh_ga6h2")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Crown"]
+transform = Transform3D(0.0722936, 0, 0.0101299, 0, 0.15914, 0, -0.0368355, 0, 0.0198811, 0.390018, 0.507374, 0.224816)
+mesh = SubResource("PrismMesh_ga6h2")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Crown"]
+transform = Transform3D(0.0722936, 0, -0.0101299, 0, 0.15914, 0, 0.0368355, 0, 0.0198811, 0.15105, 0.507374, 0.238863)
+mesh = SubResource("PrismMesh_ga6h2")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Crown"]
+transform = Transform3D(0.0722936, 0, -0.0101299, 0, 0.15914, 0, 0.0368355, 0, 0.0198811, 0.419371, 0.507374, -0.193524)
+mesh = SubResource("PrismMesh_ga6h2")

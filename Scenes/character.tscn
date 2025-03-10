@@ -297,18 +297,18 @@ states/Walk/position = Vector2(481, 94)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_uyc7b"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_hr1ek"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_0a1m0"), "Sprint", "Idle", SubResource("AnimationNodeStateMachineTransition_ixqql"), "Sprint", "Walk", SubResource("AnimationNodeStateMachineTransition_24ak6"), "Walk", "Sprint", SubResource("AnimationNodeStateMachineTransition_n1s64"), "Idle", "Sprint", SubResource("AnimationNodeStateMachineTransition_u4lto")]
 graph_offset = Vector2(-85, 3)
 
-[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "ProjectileOrigin", "Head", "Hand", "CharacterMesh", "PowerPackDisplayManager", "APlayer", "ATree", "InvisibilitySmokeParticles", "WeaponSpawner", "Hitboxes", "HealthText")]
+[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "Head", "Hand", "PowerPackDisplayManager", "ProjectileOrigin", "WeaponSpawner", "APlayer", "ATree", "CharacterMesh", "InvisibilitySmokeParticles", "Hitboxes", "HealthText")]
 script = ExtResource("1_n6eoi")
 Camera = NodePath("Head/Camera3D")
-ProjectileOrigin = NodePath("Head/Camera3D/ProjectileOrigin")
 Head = NodePath("Head")
 Hand = NodePath("Head/Camera3D/Hand")
-CharacterMesh = NodePath("CharacterMesh")
 PowerPackDisplayManager = NodePath("Head/Camera3D/Pack")
+ProjectileOrigin = NodePath("Head/Camera3D/ProjectileOrigin")
+WeaponSpawner = NodePath("Head/Camera3D/Hand/WeaponParent/MultiplayerSpawner")
 APlayer = NodePath("AnimationPlayer")
 ATree = NodePath("AnimationTree")
+CharacterMesh = NodePath("CharacterMesh")
 InvisibilitySmokeParticles = NodePath("CharacterMesh/InvisibilitySmoke")
-WeaponSpawner = NodePath("Head/Camera3D/Hand/WeaponParent/MultiplayerSpawner")
 OutlinePlayerSFX = ExtResource("2_b0fus")
 Hitboxes = [NodePath("Hitbox")]
 HealthText = NodePath("CharacterMesh/Cur Health")
@@ -328,6 +328,18 @@ script = ExtResource("2_4301p")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00303209, 0)
 shape = SubResource("CylinderShape3D_2mse5")
 
+[node name="HeadCosmetics" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98936, 0)
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="HeadCosmetics"]
+spawn_path = NodePath("..")
+
+[node name="FaceCosmetics" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7333, -0.167722)
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="FaceCosmetics"]
+spawn_path = NodePath("..")
+
 [node name="CharacterMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.16289, 0, 0, 0, 0.990428, 0, 0, 0, 0.16289, 0, 1, 0)
 mesh = SubResource("ArrayMesh_nytcm")
@@ -335,6 +347,7 @@ skeleton = NodePath("")
 
 [node name="Cur Health" type="Label3D" parent="CharacterMesh"]
 transform = Transform3D(6.13912, 0, 0, 0, 1.00966, 0, 0, 0, 6.13912, 0, 1.17219, -0.053538)
+visible = false
 billboard = 1
 text = "Text"
 

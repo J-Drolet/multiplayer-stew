@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Text.Json;
 
 public partial class Server : Node
 {
@@ -81,10 +82,13 @@ public partial class Server : Node
     /// <param name="id"></param>
     /// <param name="name"></param>
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-    public void SendPlayerInfo(long id, string name) {
+    public void SendPlayerInfo(long id, string peerInfoJson) {
         if(AcceptingConnections)
         {
-            Rpc(MethodName.NotifyPlayerConnected, id, name, GameSessionManager.ConnectedPeers.Count);
+            PeerInfo peerInfo = JsonSerializer.Deserialize<PeerInfo>(peerInfoJson);
+            peerInfo.sequenceNumber = GameSessionManager.ConnectedPeers.Count;
+            peerInfoJson = JsonSerializer.Serialize(peerInfo);
+            Rpc(MethodName.NotifyPlayerConnected, id, peerInfoJson);
         }
     }
 
@@ -94,14 +98,14 @@ public partial class Server : Node
     /// <param name="id"></param>
     /// <param name="name"></param>
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-    public void NotifyPlayerConnected(long id, string name, int sequenceNumber) {
+    public void NotifyPlayerConnected(long id, string peerInfoJson) {
         // For the peer that connected, we have to tell them about all other players that joined before them
         foreach(long peerId in GameSessionManager.ConnectedPeers.Keys)
         {
-            RpcId(id, MethodName.NotifyPlayerConnected, peerId, GameSessionManager.ConnectedPeers[peerId].name, GameSessionManager.ConnectedPeers[peerId].sequenceNumber);
+            RpcId(id, MethodName.NotifyPlayerConnected, peerId, JsonSerializer.Serialize(GameSessionManager.ConnectedPeers[peerId]));
         }
 
-        GameSessionManager.ConnectedPeers.Add(id, new PeerInfo{ name = name, sequenceNumber = sequenceNumber });
+        GameSessionManager.ConnectedPeers.Add(id, JsonSerializer.Deserialize<PeerInfo>(peerInfoJson));
     }
 
     /// <summary>

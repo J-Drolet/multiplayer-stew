@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://co8cii12xtc4k"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_4fhf2"]
+frequency = 0.2803
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ntehg"]
+as_normal_map = true
+noise = SubResource("FastNoiseLite_4fhf2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_us2x6"]
+albedo_color = Color(0.0605303, 0.0605303, 0.0605303, 1)
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_ntehg")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_rthqm"]
+material = SubResource("StandardMaterial3D_us2x6")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xwxfh"]
+material = SubResource("StandardMaterial3D_us2x6")
+cap_bottom = false
+
+[node name="TopHat" type="Node3D"]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+
+[node name="Funny Hat" type="Node3D" parent="."]
+transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Funny Hat"]
+transform = Transform3D(0.880211, 0, 0, 0, 0.020344, 0, 0, 0, 0.884646, 0, 0, 0)
+mesh = SubResource("CylinderMesh_rthqm")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Funny Hat"]
+transform = Transform3D(0.521414, 0, 0, 0, 0.249525, 0, 0, 0, 0.521414, 0, 0.233768, 0)
+mesh = SubResource("CylinderMesh_xwxfh")

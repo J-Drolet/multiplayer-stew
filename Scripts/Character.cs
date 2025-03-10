@@ -11,35 +11,55 @@ public partial class Character : Entity
 	[Export, ExportRequired]
 	public Camera3D Camera { get; set; }
 	[Export, ExportRequired]
-	public Node3D ProjectileOrigin { get; set; }
-	[Export, ExportRequired]
 	public Node3D Head { get; set; }
 	[Export, ExportRequired]
 	public Node3D Hand { get; set; }
-	[Export, ExportRequired]
-	public MeshInstance3D CharacterMesh { get; set; }
-	[Export, ExportRequired]
-	public Node3D PowerPackDisplayManager { get; set; }
-	[Export, ExportRequired, AnimationsRequired(["Walk"])]
-	public AnimationPlayer APlayer { get; set; }
+    public HashSet<Upgrade> Upgrades { get; set; } = new();
     [Export, ExportRequired]
-    public AnimationTree ATree { get; set; }
-	[Export, ExportRequired]
-	public GpuParticles3D InvisibilitySmokeParticles { get; set; }
-	[Export, ExportRequired]
-	public MultiplayerSpawner WeaponSpawner { get; set; }
-	[Export, ExportRequired]
-	public AudioStream OutlinePlayerSFX { get; set; }
-	public HashSet<Upgrade> Upgrades { get; set; } = new();
+    public Node3D PowerPackDisplayManager { get; set; }
 
-	public bool CanMove { get; set; } = true; // whether or not the local player should be able to manipulate the character
-	public bool CanLook { get; set; } = true; // whether or not the local player should be able to manipulate the character
-	private int JumpsSinceHitGround { get; set; } // keeps track of how many jumps the character has done since last hitting the ground
-	private double TimeSinceXray { get; set; } // for see through walls upgrade
-	public double SlowdownMultiplier { get; set; } = 1.0;
-
+    #region WeaponProperties
     [Export]
     public UpgradableWeapon EquippedWeapon;
+    [Export, ExportRequired]
+    public Node3D ProjectileOrigin { get; set; }
+    [Export, ExportRequired]
+    public MultiplayerSpawner WeaponSpawner { get; set; }
+    #endregion
+
+    #region AnimationProperties
+    [Export, ExportRequired, AnimationsRequired(["Walk"])]
+    public AnimationPlayer APlayer { get; set; }
+    [Export, ExportRequired]
+    public AnimationTree ATree { get; set; }
+    #endregion
+
+    #region CosmeticProperties
+    [Export, ExportRequired]
+    public MeshInstance3D CharacterMesh { get; set; }
+	[Export, ExportRequired]
+	public Node3D HeadCosmeticSlot { get; set; }
+	[Export, ExportRequired]
+	public MultiplayerSpawner HeadCosmeticSpawner { get; set; }
+	[Export, ExportRequired]
+	public Node3D FaceCosmeticSlot { get; set; }
+    [Export, ExportRequired]
+    public MultiplayerSpawner FaceCosmeticSpawner { get; set; }
+    #endregion
+
+    #region UpgradePropertiesAndFields
+    [Export, ExportRequired]
+    public GpuParticles3D InvisibilitySmokeParticles { get; set; }
+    [Export, ExportRequired]
+    public AudioStream OutlinePlayerSFX { get; set; }
+
+    private double TimeSinceXray { get; set; } // for see through walls upgrade
+    public double SlowdownMultiplier { get; set; } = 1.0;
+    private int JumpsSinceHitGround { get; set; } // keeps track of how many jumps the character has done since last hitting the ground
+    #endregion
+
+    public bool CanMove { get; set; } = true; // whether or not the local player should be able to manipulate the character
+	public bool CanLook { get; set; } = true; // whether or not the local player should be able to manipulate the character
 
 	private float BaseSpeed = (float)Config.GetValue("game_constants", "base_speed", true);
 	private float SprintMultiplier = (float)Config.GetValue("game_constants", "sprint_multiplier", true);
@@ -50,7 +70,9 @@ public partial class Character : Entity
         CurrentHealth = MaxHealth; // we have to do this here or else infinite spawns will happen on server side
 		SetMultiplayerAuthority(Name.ToString().Split("#").First().ToInt());
 		WeaponSpawner.GetParent().SetMultiplayerAuthority(1); // weapon spawning is server responsibility
-		LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode = this;
+        HeadCosmeticSpawner.GetParent().SetMultiplayerAuthority(1);
+        FaceCosmeticSpawner.GetParent().SetMultiplayerAuthority(1);
+        LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode = this;
 		WeaponSpawner.Spawned += OnWeaponSpawned; // used to sync up EquippedWeapon
 		WeaponSpawner.Despawned += OnWeaponDespawned;
 
@@ -71,18 +93,20 @@ public partial class Character : Entity
 		{
 			PowerPackDisplayManager.Hide();
 		}
-	}
 
+		// Load Cosmetics
+		FaceCosmeticSlot.AddChild(ResourceLoader.Load<PackedScene>(GameSessionManager.ConnectedPeers[GetMultiplayerAuthority()].FaceCosmetic).Instantiate());
+        HeadCosmeticSlot.AddChild(ResourceLoader.Load<PackedScene>(GameSessionManager.ConnectedPeers[GetMultiplayerAuthority()].HeadCosmetic).Instantiate());
+    }
 
     public override void _Ready()
     {
         base._Ready();
 
-		List<string> files = GodotSceneFindingService.GetScenesAtFilepath(Root.WeaponsFilepath);
-		foreach(string filepath in files) 
-		{
-			WeaponSpawner.AddSpawnableScene(filepath);
-		}
+		MultiplayerSpawnerService.LoadMultiplayerSpawner(WeaponSpawner, Root.WeaponsFilepath);
+        MultiplayerSpawnerService.LoadMultiplayerSpawner(WeaponSpawner, Root.HeadCosmeticFilepath);
+        MultiplayerSpawnerService.LoadMultiplayerSpawner(WeaponSpawner, Root.FaceCosmeticFilepath);
+
         SetWeapon(Weapon.Pistol);
     }
 

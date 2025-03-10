@@ -2,6 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Text.Json;
 
 public partial class Client : Node
 {
@@ -98,7 +99,14 @@ public partial class Client : Node
     {
         GD.Print("Connected to server");
         UI.Spinner.Hide();
-        RpcId(1, MethodName.SendPlayerInfo, Multiplayer.GetUniqueId(), Config.GetValue("settings", "player_name").ToString());
+        string peerInfo = JsonSerializer.Serialize(new PeerInfo() 
+        { 
+            name = Config.GetValue("settings", "player_name").ToString(),
+            FaceCosmetic = Config.GetValue("settings", "face_cosmetic").ToString(),
+            HeadCosmetic = Config.GetValue("settings", "head_cosmetic").ToString(),
+        });
+
+        RpcId(1, MethodName.SendPlayerInfo, Multiplayer.GetUniqueId(), peerInfo);
 
         //main.connection_succeeded()
         //send_player_info.rpc_id(1, peer_name, peer_color, multiplayer.get_unique_id()
@@ -132,11 +140,11 @@ public partial class Client : Node
 
 
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-    public void SendPlayerInfo(long id, string name) {}
+    public void SendPlayerInfo(long id, string peerInfoJson) {}
 
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-    public void NotifyPlayerConnected(long id, string name, int sequenceNumber) {
-        GameSessionManager.ConnectedPeers.Add(id, new PeerInfo{ name = name, sequenceNumber = sequenceNumber });
+    public void NotifyPlayerConnected(long id, string peerInfoJson) {
+        GameSessionManager.ConnectedPeers.Add(id, JsonSerializer.Deserialize<PeerInfo>(peerInfoJson));
         UI.Lobby.RefreshLobby();
     }
 

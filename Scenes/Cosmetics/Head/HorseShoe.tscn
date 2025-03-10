@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw2c0e48kncw5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rsdeb"]
+albedo_color = Color(0.280295, 0.0883174, 0.00388758, 1)
+
+[node name="HorseShoe" type="Node3D"]
+
+[node name="Hair" type="Node3D" parent="."]
+transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 1, -0.2765, 1.50473, -0.00225)
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="Hair"]
+transform = Transform3D(0.362236, 0, 0, 0, 0.326344, 0, 0, 0, 0.3634, 0.250183, -1.51335, 0)
+outer_radius = 0.942481
+material = SubResource("StandardMaterial3D_rsdeb")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Hair/CSGTorus3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.64349, 0.573135, 0, 0)
+operation = 2
+radius = 0.827397
+height = 0.531174
