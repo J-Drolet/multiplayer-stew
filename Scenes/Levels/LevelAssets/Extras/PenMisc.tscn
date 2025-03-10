@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://bp6050ccs38g2"]
 
-[ext_resource type="Texture2D" uid="uid://dv0w7w5e16hil" path="res://Assets/Textures/Extras/Misc_Pen_Base_color.png" id="1_goytl"]
+[ext_resource type="Texture2D" uid="uid://dpg8miariq0ih" path="res://Assets/Textures/Extras/Misc_Pen_Base_color.png" id="1_goytl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_18gfu"]
 resource_name = "Pen"
@@ -45,11 +45,12 @@ shadow_mesh = SubResource("ArrayMesh_5gt4t")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_e64cu"]
 points = PackedVector3Array(0.0299468, 0.258742, 0.0228558, -0.0338441, -0.442944, -0.0196552, -0.0338441, -0.442944, 0.0157718, 0.0370377, -0.442944, -0.00548026, -0.0196552, 0.25158, -0.0338441, -0.0338441, 0.258742, 0.0157718, -0.00548026, -0.442944, 0.0370377, 0.0157718, 0.258742, -0.0338441, 0.0157718, -0.442944, -0.0338441, -0.00548026, 0.25158, 0.0370377, 0.0228558, -0.442944, 0.0299468, 0.0370377, 0.25158, -0.00548026, -0.00508373, 0.321802, 0.00828391, -0.0338441, 0.25158, -0.0196552, -0.0196552, -0.442944, -0.0338441, 0.0299468, 0.265828, -0.0196552, -0.0196552, 0.265828, 0.0299468, 0.0228558, 0.258742, 0.0299468, 0.0299468, -0.442944, 0.0228558, 0.00828391, 0.321802, -0.00508373, 0.0299468, -0.442944, -0.0196552, -0.0196552, -0.442944, 0.0299468, -0.00488863, 0.310957, -0.0113868, -0.0338441, 0.265828, -0.00548026, -0.00548026, 0.265828, -0.0338441, 0.00814051, 0.313839, 0.00814051, -0.011384, 0.31088, -0.00488725, -0.0267462, 0.258742, -0.0267462, 0.00868083, 0.265828, -0.0338441, -0.0338441, 0.265828, 0.00868083, 0.0228558, 0.265828, -0.0267462, -0.0267462, 0.265828, 0.0228558)
 
-[node name="@Node3D@120" type="Node3D"]
+[node name="_Node3D_120" type="Node3D"]
 
 [node name="@StaticBody3D@121" type="StaticBody3D" parent="."]
 
 [node name="Pen" type="MeshInstance3D" parent="@StaticBody3D@121"]
+transform = Transform3D(-0.000862008, 0.187792, 0, -0.187792, -0.000862008, 0, 0, 0, 0.187794, 0, 0.00542379, 0)
 mesh = SubResource("ArrayMesh_e74wi")
 skeleton = NodePath("")
 

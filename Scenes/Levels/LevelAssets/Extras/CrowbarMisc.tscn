@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://0xq131a3ls5f"]
 
-[ext_resource type="Texture2D" uid="uid://bo45mkq5lvrxo" path="res://Assets/Textures/Extras/Misc_Crowbar_Base_color.png" id="1_ygq7y"]
+[ext_resource type="Texture2D" uid="uid://dv6edo64coghp" path="res://Assets/Textures/Extras/Misc_Crowbar_Base_color.png" id="1_ygq7y"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ssdup"]
 resource_name = "Crowbar"
@@ -45,9 +45,10 @@ shadow_mesh = SubResource("ArrayMesh_u4ft5")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jpilo"]
 points = PackedVector3Array(-0.0169009, 0.520896, -0.122129, 0.0789968, 0.332788, 0.354587, -0.0817218, 0.332788, 0.354587, 0.0468405, -1.77284, -0.272337, -0.0495655, -1.62795, -0.111556, 0.0429611, 0.422476, -0.128837, -0.0495655, 0.381085, -0.175869, -0.0495655, -1.77284, -0.272337, 0.0789968, 0.525743, 0.145572, -0.0817218, 0.525743, 0.145572, 0.0146999, -1.57988, -0.0793997, 0.0468405, -1.62795, -0.111556, 0.0137603, 0.325139, -0.178312, 0.0468405, 0.60616, 0.0651809, -0.0495655, 0.60616, -0.0472434, -0.0817218, 0.300668, 0.354587, -0.0817218, 0.5098, 0.209884, 0.0789968, 0.300668, 0.354587, 0.0789968, 0.5098, 0.209884, 0.0298512, 0.556381, -0.0915386, -0.0174249, -1.57988, -0.0793997, -0.0495655, 0.284725, 0.354587, -0.0174249, -1.6603, -0.111556, -0.0495655, 0.60616, 0.0651809, 0.028942, 0.371993, -0.163473, 0.0468405, -1.74048, -0.272337, 0.0468405, -1.77284, -0.240181, 0.0468405, 0.284725, 0.354587, -0.0495655, -1.77284, -0.240181, 0.0789968, 0.332788, 0.258119, -0.0817218, 0.332788, 0.258119, -0.0174249, -1.72454, -0.272337)
 
-[node name="@Node3D@144" type="Node3D"]
+[node name="_Node3D_144" type="Node3D"]
 
 [node name="@StaticBody3D@145" type="StaticBody3D" parent="."]
+transform = Transform3D(-1.5504e-08, -1.5504e-08, 0.35469, -0.35469, 6.77701e-16, -1.5504e-08, 0, -0.35469, -1.5504e-08, 0, 0.0174882, 0)
 
 [node name="Crowbar" type="MeshInstance3D" parent="@StaticBody3D@145"]
 mesh = SubResource("ArrayMesh_xk0tq")
