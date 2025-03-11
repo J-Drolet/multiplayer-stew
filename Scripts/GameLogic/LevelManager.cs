@@ -154,6 +154,9 @@ public partial class LevelManager : Node
 							PlayerStats[character.LastDamagedBy].aura += auraGained;
 
 							RpcId(character.LastDamagedBy, MethodName.NotifyOfKill, id, auraGained);
+
+							string lastEliminatedName = character.LastDamagedBy == 1 ? "Server" : GameSessionManager.ConnectedPeers[character.LastDamagedBy].name;
+							GD.Print("LevelManager._Process - " + GameSessionManager.ConnectedPeers[id].name + " was eliminated by " + lastEliminatedName);
 						}
 						RespawnPlayer(id);
 					}
