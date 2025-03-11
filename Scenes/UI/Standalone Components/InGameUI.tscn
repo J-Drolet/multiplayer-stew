@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dker47ss6f07g"]
+[gd_scene load_steps=23 format=3 uid="uid://dker47ss6f07g"]
 
 [ext_resource type="Script" uid="uid://c6d03e7dxcwth" path="res://Scripts/UI/InGameUI.cs" id="1_8bj3a"]
 [ext_resource type="Script" uid="uid://p8vtx7t4ry0c" path="res://Scripts/UI/GunViewCamera.cs" id="2_v6n63"]
@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://lnhkjw81qivb" path="res://Scenes/UI/Standalone Components/Hitmarker.tscn" id="6_pmhjc"]
 [ext_resource type="Script" uid="uid://dx877wbsvgwx3" path="res://Scripts/UI/InGameUI/ItemDisplay.cs" id="11_42qaf"]
 [ext_resource type="Texture2D" uid="uid://bspnofktwp8m7" path="res://Assets/Textures/Thumbnails/C_DoubleJump.png" id="12_vbjgj"]
+[ext_resource type="Script" uid="uid://cuxgtsyylbbu" path="res://Scripts/UI/InGameUI/KillPopups.cs" id="15_ofslv"]
+[ext_resource type="Script" uid="uid://p4vcdplvvy1i" path="res://Scripts/UI/InGameUI/KillPopup.cs" id="16_7fh7m"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_q5dko"]
 viewport_path = NodePath("GunView/SubViewport")
@@ -52,6 +54,10 @@ expand_margin_left = 5.0
 expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
+
+[sub_resource type="Curve" id="Curve_ofslv"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.852941, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
 
 [node name="InGameUi" type="Control" node_paths=PackedStringArray("AmmoCount", "HealthBar", "FlavorTextDisplay", "ItemDisplay")]
 layout_mode = 3
@@ -286,3 +292,33 @@ columns = 4
 [node name="TextureRect" type="TextureRect" parent="ItemDisplay/Panel/Items"]
 layout_mode = 2
 texture = ExtResource("12_vbjgj")
+
+[node name="KillPopups" type="VBoxContainer" parent="." node_paths=PackedStringArray("KillPopupPrototype")]
+clip_contents = true
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.546
+anchor_top = 0.5
+anchor_right = 0.72
+anchor_bottom = 0.65
+offset_left = 1.008
+offset_top = -3.0
+offset_right = 0.559937
+offset_bottom = -0.200012
+script = ExtResource("15_ofslv")
+KillPopupPrototype = NodePath("Prototype")
+TotalDisplayTime = 4.0
+OpacityCurve = SubResource("Curve_ofslv")
+
+[node name="Prototype" type="HBoxContainer" parent="KillPopups" node_paths=PackedStringArray("KillLabel")]
+visible = false
+layout_mode = 2
+script = ExtResource("16_7fh7m")
+KillLabel = NodePath("Label")
+
+[node name="Label" type="Label" parent="KillPopups/Prototype"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "(+25) Killed John Cigarette"
+vertical_alignment = 1

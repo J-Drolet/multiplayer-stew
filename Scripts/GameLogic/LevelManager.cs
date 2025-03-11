@@ -149,10 +149,12 @@ public partial class LevelManager : Node
 
 						if(character.GetMultiplayerAuthority() != character.LastDamagedBy && PlayerStats.ContainsKey(character.LastDamagedBy))
 						{
+							int auraGained = LevelPeerInfo[id].characterNode.CalculatePowerLevel();
 							PlayerStats[character.LastDamagedBy].kills++;
-							PlayerStats[character.LastDamagedBy].aura += LevelPeerInfo[id].characterNode.CalculatePowerLevel();
-						}
+							PlayerStats[character.LastDamagedBy].aura += auraGained;
 
+							RpcId(character.LastDamagedBy, MethodName.NotifyOfKill, id, auraGained);
+						}
 						RespawnPlayer(id);
 					}
 				}
@@ -214,5 +216,11 @@ public partial class LevelManager : Node
 	public void DisplayHitmarker(bool isVital)
 	{
 		UI.Hitmarker.DisplayHitmarker(isVital);
+	}
+
+	[Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+	public void NotifyOfKill(long peerKilledId, int auraGained)
+	{
+		UI.KillPopups.DisplayKill(GameSessionManager.ConnectedPeers[peerKilledId].name, auraGained);
 	}
 }

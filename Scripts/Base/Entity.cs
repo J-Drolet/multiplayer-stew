@@ -88,12 +88,6 @@ namespace multiplayerstew.Scripts.Base
                 if(projectile.BouncesRegistered < 1 && projectile.projectileOwner == character.GetMultiplayerAuthority())
                 {
                     validDamage = false;
-                    GD.Print("HitboxHit - Projectile hit the same player twice");
-                }
-                else 
-                {
-                    
-                    GD.Print(projectile.BouncesRegistered);
                 }
 
                 if(validDamage)
