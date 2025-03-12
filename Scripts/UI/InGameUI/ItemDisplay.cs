@@ -12,6 +12,9 @@ public partial class ItemDisplay : MarginContainer
     public GridContainer ItemGrid { get; set; }
 
     private Dictionary<Upgrade, CompressedTexture2D> Thumbnails { get; set; } = [];
+
+    private PlaceholderTexture2D dummyTexture = new() { Size = new Vector2(64.0f, 64.0f) }; // Dummy texture for missing thumbnails
+
     public override void _Ready()
     {
         GodotErrorService.ValidateRequiredData(this);
@@ -24,9 +27,6 @@ public partial class ItemDisplay : MarginContainer
         {
             child.QueueFree();
         }
-
-        // Dummy texture for missing thumbnails
-        PlaceholderTexture2D dummyTexture = new() { Size = new Vector2(64.0f, 64.0f) };
 
         // Fill Item Grid
         foreach (Upgrade upgrade in upgrades) 

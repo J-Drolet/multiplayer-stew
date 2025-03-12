@@ -10,21 +10,32 @@ public partial class GodotFileFindingService : Node
 		return GetFilesAtFilePath(parentFilepath, ["tscn", "scn", "escn"]);
 	}
 
+	public static List<string> GetFilesAtFilePath(string parentFilepath, string extension)
+	{
+		return GetFilesAtFilePath(parentFilepath, extension);
+	}
+
 	public static List<string> GetFilesAtFilePath(string parentFilepath, string[] extensions)
 	{
 		HashSet<string> files = new(); // use hashset to not include duplicate filepaths
-		DirAccess dir = DirAccess.Open(parentFilepath);
-		
-		foreach(string filename in dir.GetFiles()) 
+		using DirAccess dir = DirAccess.Open(parentFilepath);
+		if(dir != null)
 		{
-			string filepath = parentFilepath + filename;
-			// When exporting the project, all scenes get a .remap and textures get a .import added that we need to remove so we can access the underlying file
-			string strippedFilepath = filepath.Replace(".remap", "").Replace (".import", ""); 
-			string extension = GetExtension(strippedFilepath);
-			if(extensions.Contains(extension))
+			foreach(string filename in dir.GetFiles()) 
 			{
-				files.Add(strippedFilepath);
+				string filepath = parentFilepath + filename;
+				// When exporting the project, all scenes get a .remap and textures get a .import added that we need to remove so we can access the underlying file
+				string strippedFilepath = filepath.Replace(".remap", "").Replace (".import", ""); 
+				string extension = GetExtension(strippedFilepath);
+				if(extensions.Contains(extension))
+				{
+					files.Add(strippedFilepath);
+				}
 			}
+		}
+		else
+		{
+			GD.PrintErr("GodotFileFindingService.GetFilesAtFilePath - Could not open directory at " + parentFilepath);
 		}
 		return files.ToList();
 	}
