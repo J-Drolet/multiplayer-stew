@@ -14,7 +14,7 @@ public partial class FileOptionInitializer : OptionButton
         GodotErrorService.ValidateRequiredData(this);
 
         int id;
-        foreach(string filepath in GodotSceneFindingService.GetScenesAtFilepath(ParentFilepath)) 
+        foreach(string filepath in GodotFileFindingService.GetScenesAtFilepath(ParentFilepath)) 
         {
             id = GetItemCount() + 1;
             AddItem(filepath.Split('/').Last().Split('.').First(), id);

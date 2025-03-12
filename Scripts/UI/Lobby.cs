@@ -32,7 +32,7 @@ public partial class Lobby : Control
         UI.Lobby = this;
 
         // init list of levels
-        foreach(string filepath in GodotSceneFindingService.GetScenesAtFilepath(Root.LevelsFilepath)) 
+        foreach(string filepath in GodotFileFindingService.GetScenesAtFilepath(Root.LevelsFilepath)) 
 		{
             LevelSelector.AddItem(filepath.Split('/').Last().Split('.').First());
         }

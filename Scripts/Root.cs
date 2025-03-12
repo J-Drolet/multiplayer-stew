@@ -13,6 +13,7 @@ public partial class Root : Node
 	public static readonly string HealthPickupFilepath = "res://Scenes/Pickups/Health/";
 	public static readonly string HeadCosmeticFilepath = "res://Scenes/Cosmetics/Head/";
     public static readonly string FaceCosmeticFilepath = "res://Scenes/Cosmetics/Face/";
+    public static readonly string ThumbnailFilepath = "res://Assets/Textures/Thumbnails/";
 
     [Export, ExportRequired]
 	public PackedScene ClientScene { get; set; }
@@ -58,7 +59,7 @@ public partial class Root : Node
 	/// </summary>
 	private void RegisterLevelScenes()
 	{
-		foreach(string filepath in GodotSceneFindingService.GetScenesAtFilepath(LevelsFilepath)) 
+		foreach(string filepath in GodotFileFindingService.GetScenesAtFilepath(LevelsFilepath)) 
 		{
 			LevelSpawner.AddSpawnableScene(filepath);
 		}
