@@ -394,10 +394,16 @@ public partial class Character : Entity
     {
         if(node is UpgradableWeapon weapon)
 		{
+			Weapon? oldWeapon = null;
+			if(EquippedWeapon != null) 
+			{
+				oldWeapon = EquippedWeapon.WeaponType;
+			}
+
 			EquippedWeapon = weapon;
 			if(IsMultiplayerAuthority())
 			{
-				UI.InGameUI.FlavorTextDisplay.DisplayFlavorTextFor(weapon.WeaponType);
+				UI.InGameUI.FlavorTextDisplay.DisplayFlavorTextFor(weapon.WeaponType, oldWeapon);
 			}
 		}
     }

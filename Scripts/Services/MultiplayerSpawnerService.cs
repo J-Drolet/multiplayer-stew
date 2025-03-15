@@ -11,7 +11,7 @@ namespace multiplayerstew.Scripts.Services
     {
         public static void LoadMultiplayerSpawner(MultiplayerSpawner spawner, string filePath) 
         {
-            List<string> files = GodotSceneFindingService.GetScenesAtFilepath(filePath);
+            List<string> files = GodotFileFindingService.GetScenesAtFilepath(filePath);
             foreach (string file in files)
             {
                 spawner.AddSpawnableScene(file);

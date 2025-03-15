@@ -10,10 +10,11 @@ public partial class ItemDisplay : MarginContainer
 {
     [Export, ExportRequired]
     public GridContainer ItemGrid { get; set; }
-    [Export, ExportRequired]
-    public string ThumbnailPath { get; set; } = "res://Assets/Textures/Thumbnails/";
 
     private Dictionary<Upgrade, CompressedTexture2D> Thumbnails { get; set; } = [];
+
+    private PlaceholderTexture2D dummyTexture = new() { Size = new Vector2(64.0f, 64.0f) }; // Dummy texture for missing thumbnails
+
     public override void _Ready()
     {
         GodotErrorService.ValidateRequiredData(this);
@@ -27,9 +28,6 @@ public partial class ItemDisplay : MarginContainer
             child.QueueFree();
         }
 
-        // Dummy texture for missing thumbnails
-        PlaceholderTexture2D dummyTexture = new() { Size = new Vector2(64.0f, 64.0f) };
-
         // Fill Item Grid
         foreach (Upgrade upgrade in upgrades) 
         {
@@ -41,32 +39,11 @@ public partial class ItemDisplay : MarginContainer
 
     private void LoadThumbnails()
     {
-        using DirAccess dir = DirAccess.Open(ThumbnailPath);
-        if (dir != null)
+        foreach(string thumbnailPath in GodotFileFindingService.GetFilesAtFilePath(Root.ThumbnailFilepath, ["png"]))
         {
-            dir.ListDirBegin();
-            string fileName = dir.GetNext();
-            while (fileName != "")
-            {
-                try
-                {
-                    if (fileName.Split('.').Last() == "png")
-                    {
-                        CompressedTexture2D thumbnail = ResourceLoader.Load<CompressedTexture2D>(Path.Combine(ThumbnailPath, fileName));
-                        Upgrade thumbnailUpgrade = (Upgrade)Enum.Parse(typeof(Upgrade), fileName.Split('.').First());
-                        Thumbnails.Add(thumbnailUpgrade, thumbnail);
-                    }
-                }
-                catch(Exception ex)
-                {
-                    GD.PrintErr($"Failed to load Thumbnail {fileName}");
-                }
-                fileName = dir.GetNext();
-            }
-        }
-        else
-        {
-            GD.PrintErr("Could not access Thumbnial Path");
+            CompressedTexture2D thumbnail = ResourceLoader.Load<CompressedTexture2D>(thumbnailPath);
+            Upgrade thumbnailUpgrade = (Upgrade)Enum.Parse(typeof(Upgrade), GodotFileFindingService.GetFileName(thumbnailPath));
+            Thumbnails.Add(thumbnailUpgrade, thumbnail);
         }
     }
 }

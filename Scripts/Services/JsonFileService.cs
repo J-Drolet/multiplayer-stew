@@ -1,22 +1,23 @@
 using Godot;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Text.Json;
 
 public static class JsonFileService
 {
     public static T ReadFromDisk<T>(string filepath)
     {
-        string jsonFilePath = ProjectSettings.GlobalizePath(filepath);
         T parsedValue;
-        try
+        using (FileAccess fileAccess = FileAccess.Open(filepath, FileAccess.ModeFlags.Read))
         {
-            parsedValue = JsonSerializer.Deserialize<T>(File.ReadAllText(jsonFilePath));
-        }
-        catch
-        {
-            parsedValue = default;
+            try
+            {
+                parsedValue = JsonSerializer.Deserialize<T>(fileAccess.GetAsText());
+            }
+            catch
+            {
+                parsedValue = default;
+            }
         }
 
         return parsedValue;
@@ -24,7 +25,9 @@ public static class JsonFileService
 
     public static void WriteToDisk<T>(string filepath, T obj) 
     {
-        string jsonFilePath = ProjectSettings.GlobalizePath(filepath);
-        File.WriteAllText(jsonFilePath, JsonSerializer.Serialize(obj));
+        using (FileAccess fileAccess = FileAccess.Open(filepath, FileAccess.ModeFlags.Write))
+        {
+            fileAccess.StoreString(JsonSerializer.Serialize(obj));
+        }
     }
 }
