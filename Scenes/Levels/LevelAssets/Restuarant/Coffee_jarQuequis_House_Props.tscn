@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://ch0oax30cejdc"]
 
-[ext_resource type="Texture2D" uid="uid://nb8iso42xqmk" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Coffee_jar.png" id="1_0pce0"]
+[ext_resource type="Texture2D" uid="uid://pcmwwu25tse3" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Coffee_jar.png" id="1_0pce0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8e4vb"]
 resource_name = "Coffee_jar"
@@ -44,12 +44,13 @@ shadow_mesh = SubResource("ArrayMesh_57oud")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_34q5t"]
 points = PackedVector3Array(0.961428, 1.43241, 0.0931182, -0.973391, -1.0947, -0.0642377, -0.730057, -1.08424, -0.651679, -0.973391, 1.4342, -0.0642377, 0.0932998, -1.09281, 0.961353, 0.699611, -1.11942, -0.710202, 0.0540934, 1.43969, -0.977593, -0.103461, 1.42681, 0.957144, 0.730403, -1.10316, 0.650843, -0.658591, -1.09728, 0.727194, 0.650718, 1.44242, 0.730455, 0.699611, 1.45892, -0.710202, 0.0540934, -1.10019, -0.977593, -0.651816, 1.42364, -0.73, -0.733203, 1.42918, 0.644083, 0.957219, -1.08741, -0.10328, -0.977593, -1.10019, 0.0540933, -0.0646073, -1.0945, -0.973238, 0.961428, -1.09291, 0.0931182, 0.0932998, 1.43231, 0.961353, 0.957219, 1.42691, -0.10328, -0.103461, -1.08731, 0.957144, -0.977593, 1.43969, 0.0540933, -0.658591, 1.43678, 0.727194, 0.650718, -1.10292, 0.730455, 0.730403, 1.44266, 0.650843, -0.651816, -1.08414, -0.73, -0.730057, 1.42374, -0.651679, -0.0646073, 1.434, -0.973238, -0.733203, -1.08968, 0.644083, 0.7272, 1.43712, -0.658576, 0.7272, -1.09762, -0.658576)
 
-[node name="@Node3D@30" type="Node3D"]
+[node name="_Node3D_30" type="Node3D"]
 transform = Transform3D(0.121941, 0, 0, 0, 0.121941, 0, 0, 0, 0.121941, 0, 0, 0)
 
 [node name="@StaticBody3D@31" type="StaticBody3D" parent="."]
 
 [node name="Coffee_jar" type="MeshInstance3D" parent="@StaticBody3D@31"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12991, 0)
 mesh = SubResource("ArrayMesh_k8sgj")
 skeleton = NodePath("")
 

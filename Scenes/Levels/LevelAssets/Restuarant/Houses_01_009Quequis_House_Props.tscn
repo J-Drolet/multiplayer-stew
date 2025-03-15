@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://h4t4dryv6me"]
 
-[ext_resource type="Texture2D" uid="uid://c7q6h8hw1ylek" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Houses_01.png" id="1_x0xtt"]
+[ext_resource type="Texture2D" uid="uid://cwbu16q2acv1e" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Houses_01.png" id="1_x0xtt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fl3i5"]
 resource_name = "Houses_01"
@@ -44,12 +44,13 @@ shadow_mesh = SubResource("ArrayMesh_2hoyp")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_f4x3v"]
 points = PackedVector3Array(-2.96964, 0.7099, -5.52765, 3.39408, -0.125638, 6.20536, 3.58403, -1.543, 6.55262, -3.5843, -1.543, 6.55262, 3.58403, -1.543, -6.55262, -3.5843, -1.543, -6.55262, -2.96964, 0.7099, 5.52765, 2.96866, 0.7099, -5.52765, 2.96866, 0.7099, 5.52765, -3.39411, -0.125659, -6.20491, 3.39408, -0.125638, -6.20536, -3.39411, -0.125659, 6.20491)
 
-[node name="@Node3D@140" type="Node3D"]
+[node name="_Node3D_140" type="Node3D"]
 transform = Transform3D(-4.04516e-07, 0, 2.4829, 0, 2.4829, 0, -2.4829, 0, -4.04516e-07, 0, 0, 0)
 
 [node name="@StaticBody3D@141" type="StaticBody3D" parent="."]
 
 [node name="Houses_01_009" type="MeshInstance3D" parent="@StaticBody3D@141"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.43876, 0)
 mesh = SubResource("ArrayMesh_5o3pq")
 skeleton = NodePath("")
 
