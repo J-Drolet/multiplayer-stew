@@ -1,10 +1,9 @@
-[gd_scene load_steps=40 format=4 uid="uid://lcx7afjcynql"]
+[gd_scene load_steps=37 format=4 uid="uid://lcx7afjcynql"]
 
 [ext_resource type="Script" uid="uid://5yutkv0j58u4" path="res://Scripts/Character.cs" id="1_n6eoi"]
 [ext_resource type="Script" uid="uid://c38dblfxtao7" path="res://Scripts/Base/DamageArea.cs" id="2_4301p"]
 [ext_resource type="AudioStream" uid="uid://b4o2ftef65g1l" path="res://Assets/Sounds/SFX/Voice B Pain Grunt 002.wav" id="2_b0fus"]
 [ext_resource type="PackedScene" uid="uid://bu6ksmfk5pwif" path="res://Scenes/Particles/InvisibilitySmoke.tscn" id="3_ffhoh"]
-[ext_resource type="Material" uid="uid://dusrmy2jjt3td" path="res://Assets/Materials/Upgrades/XRay.tres" id="4_2mse5"]
 [ext_resource type="PackedScene" uid="uid://cslx7c34bxb3h" path="res://Scenes/UI/Standalone Components/PowerPack.tscn" id="5_ejsiy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mo30b"]
@@ -25,11 +24,9 @@ height = 1897
 noise = SubResource("FastNoiseLite_nytcm")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wlyuj"]
-resource_local_to_scene = true
 resource_name = "Top"
 render_priority = 1
 transparency = 1
-albedo_color = Color(0.905882, 0.905882, 0.905882, 1)
 roughness = 0.867391
 normal_enabled = true
 normal_texture = SubResource("NoiseTexture2D_ejsiy")
@@ -88,7 +85,6 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_nytcm"]
-resource_local_to_scene = true
 resource_name = "cigarette2_Cylinder"
 _surfaces = [{
 "aabb": AABB(-1.00609, -0.37271, -1.00336, 2.01495, 1.37919, 2.00336),
@@ -130,20 +126,6 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yrh8o")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_reotu"]
-resource_local_to_scene = true
-next_pass = SubResource("StandardMaterial3D_65fk3")
-transparency = 4
-no_depth_test = true
-albedo_color = Color(1, 0.501961, 0.576471, 0)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a5ess"]
-resource_local_to_scene = true
-next_pass = SubResource("StandardMaterial3D_vxeyr")
-transparency = 4
-no_depth_test = true
-albedo_color = Color(1, 0.501961, 0.576471, 0)
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_w7qvv"]
 properties/0/path = NodePath(".:position")
@@ -359,9 +341,6 @@ shape = SubResource("CylinderShape3D_2mse5")
 transform = Transform3D(0.16289, 0, 0, 0, 0.990428, 0, 0, 0, 0.16289, 0, 1, 0)
 mesh = SubResource("ArrayMesh_nytcm")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("4_2mse5")
-surface_material_override/1 = SubResource("StandardMaterial3D_reotu")
-surface_material_override/2 = SubResource("StandardMaterial3D_a5ess")
 
 [node name="Cur Health" type="Label3D" parent="CharacterVisuals"]
 transform = Transform3D(1, 0, 0, 0, 0.999996, 0, 0, 0, 1, 0, 2.16097, -0.0087208)

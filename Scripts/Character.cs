@@ -97,6 +97,8 @@ public partial class Character : Entity
         HeadCosmeticSlot.AddChild(ResourceLoader.Load<PackedScene>(GameSessionManager.ConnectedPeers[GetMultiplayerAuthority()].HeadCosmetic).Instantiate());
 		FaceCosmeticSlot.Visible = !IsMultiplayerAuthority();
 		HeadCosmeticSlot.Visible = !IsMultiplayerAuthority();
+
+		XrayMaterialService.MakeXrayEnabled(GetVisualMeshes());
     }
 
     public override void _Ready()
@@ -156,14 +158,6 @@ public partial class Character : Entity
         #region UpgradeLogic
         ////////// Invisibility upgrade
 		ToggleInvisibilityUpgrade(Upgrades.Contains(Upgrade.C_Invisibility));
-        /*float transparency = Upgrades.Contains(Upgrade.C_Invisibility)? (float)Config.GetValue("Upgrade.C_Invisibility", "invisibility_transparency", true) : 0;
-		CharacterMesh.Transparency = transparency;
-		foreach(GeometryInstance3D mesh in GodotNodeFindingService.FindNodes<GeometryInstance3D>(Hand))
-		{
-			mesh.Transparency = transparency;
-		}
-		InvisibilitySmokeParticles.Emitting = Upgrades.Contains(Upgrade.C_Invisibility);
-		*/
 
 		if(!IsMultiplayerAuthority()) return;
 
@@ -464,30 +458,28 @@ public partial class Character : Entity
 		SlowdownMultiplier = slowdownMultiplayer;
 	}
 
-	public void SetMeshTranspareny(float transparency)
-	{
-		for(int i = 0; i < CharacterMesh.Mesh.GetSurfaceCount(); i++)
-		{
-			BaseMaterial3D xrayMaterial = (BaseMaterial3D)CharacterMesh.GetSurfaceOverrideMaterial(i);
-			BaseMaterial3D meshMaterial = (BaseMaterial3D)xrayMaterial.NextPass;
-			Color meshAlbedo = meshMaterial.AlbedoColor;
-			meshAlbedo.A = transparency;
-			meshMaterial.AlbedoColor = meshAlbedo;
-		}
-	}
-
 	private void ToggleInvisibilityUpgrade(bool invisible)
 	{
 		float transparency = invisible ? (float)Config.GetValue("Upgrade.C_Invisibility", "invisibility_transparency", true) : 0;
-		for(int i = 0; i < CharacterMesh.Mesh.GetSurfaceCount(); i++)
-		{
-			BaseMaterial3D xrayMaterial = (BaseMaterial3D)CharacterMesh.GetSurfaceOverrideMaterial(i);
-			BaseMaterial3D meshMaterial = (BaseMaterial3D)xrayMaterial.NextPass;
-			Color meshAlbedo = meshMaterial.AlbedoColor;
-			meshAlbedo.A = 1 - transparency;
-			meshMaterial.AlbedoColor = meshAlbedo;
-		}
+		float alpha = 1 - transparency;
+		XrayMaterialService.SetTransparencyOfVisibleMesh(GetVisualMeshes(), alpha);
 
 		InvisibilitySmokeParticles.Emitting = invisible;
+	}
+
+	public List<MeshInstance3D> GetVisualMeshes()
+	{
+		List<MeshInstance3D> visualMeshes = new();
+		foreach(MeshInstance3D faceCosmetic in GodotNodeFindingService.FindNodes<MeshInstance3D>(FaceCosmeticSlot))
+		{
+			visualMeshes.Add(faceCosmetic);
+		}
+		foreach(MeshInstance3D headCosmetic in GodotNodeFindingService.FindNodes<MeshInstance3D>(HeadCosmeticSlot))
+		{
+			visualMeshes.Add(headCosmetic);
+		}
+		visualMeshes.Add(CharacterMesh);
+
+		return visualMeshes;
 	}
 }

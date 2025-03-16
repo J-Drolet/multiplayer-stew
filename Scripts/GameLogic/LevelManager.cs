@@ -186,14 +186,10 @@ public partial class LevelManager : Node
 		int localPeer = Multiplayer.GetUniqueId();
 		foreach(long peerId in LevelPeerInfo.Keys)
 		{
-			if(peerId == localPeer || LevelPeerInfo[peerId].characterNode == null) continue;
-			for(int i = 0; i < LevelPeerInfo[peerId].characterNode.CharacterMesh.Mesh.GetSurfaceCount(); i++)
-			{
-				BaseMaterial3D surfaceMaterial = (BaseMaterial3D)LevelPeerInfo[peerId].characterNode.CharacterMesh.GetSurfaceOverrideMaterial(i);
-				Color xrayAlbedo = surfaceMaterial.AlbedoColor;
-				xrayAlbedo.A = enabled ? 1 : 0;
-				surfaceMaterial.AlbedoColor = xrayAlbedo;
-			}
+			Character peerCharacter = LevelPeerInfo[peerId].characterNode;
+			if(peerId == localPeer || peerCharacter == null) continue;
+
+			XrayMaterialService.ToggleXray(peerCharacter.GetVisualMeshes(), enabled);
 		}
 	}
 
