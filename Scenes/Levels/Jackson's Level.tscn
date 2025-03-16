@@ -1,8 +1,8 @@
-[gd_scene load_steps=339 format=4 uid="uid://ce4mnhuaptjjq"]
+[gd_scene load_steps=336 format=3 uid="uid://ce4mnhuaptjjq"]
 
 [ext_resource type="Script" uid="uid://7qt4qpdvopym" path="res://Scripts/GameLogic/LevelManager.cs" id="1_3cian"]
 [ext_resource type="PackedScene" uid="uid://lcx7afjcynql" path="res://Scenes/character.tscn" id="2_auvs1"]
-[ext_resource type="PackedScene" uid="uid://p4o3o6x1lpw7" path="res://Scenes/Levels/LevelAssets/Bunker/floor_1floor_1.tscn" id="3_hc4n7"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/floor_1floor_1.tscn" id="3_hc4n7"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/window_2_doublewindow_2_double.tscn" id="4_g2prj"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/wall_1wall_1.tscn" id="5_bq7jo"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/elevator_doorway_1elevator_doorway_1.tscn" id="6_ahxcu"]
@@ -17,31 +17,31 @@
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/hand_rail_1hand_rail_1.tscn" id="17_qdrbs"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/hand_rail_3hand_rail_3.tscn" id="18_8ur56"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/catwalk_1catwalk_1.tscn" id="19_wlggv"]
-[ext_resource type="PackedScene" uid="uid://cw6qigb8n77wp" path="res://Scenes/Levels/LevelAssets/Restuarant/TableQuequis_House_Props.tscn" id="20_7xy12"]
-[ext_resource type="PackedScene" uid="uid://y2e6vn5jbu0d" path="res://Scenes/Levels/LevelAssets/Bunker/wooden_crate_8wooden_crate_8.tscn" id="21_bxinr"]
-[ext_resource type="PackedScene" uid="uid://clmjjhjvnbjc6" path="res://Scenes/Levels/LevelAssets/Nature/grass_1grass_1.tscn" id="22_fgpdx"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/TableQuequis_House_Props.tscn" id="20_7xy12"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/wooden_crate_8wooden_crate_8.tscn" id="21_bxinr"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Nature/grass_1grass_1.tscn" id="22_fgpdx"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/sofa_1sofa_1.tscn" id="23_abtxc"]
-[ext_resource type="PackedScene" uid="uid://0bju6g3errnx" path="res://Scenes/Levels/LevelAssets/Nature/fern_2fern_2.tscn" id="24_ua6e0"]
-[ext_resource type="PackedScene" uid="uid://bdlf0bbbdamp8" path="res://Scenes/Levels/LevelAssets/Nature/grass_3grass_3.tscn" id="25_rvaa6"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Nature/fern_2fern_2.tscn" id="24_ua6e0"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Nature/grass_3grass_3.tscn" id="25_rvaa6"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/elevator_sign_1elevator_sign_1.tscn" id="27_ui12p"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/keypad_2keypad_2.tscn" id="28_1ehh4"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/wooden_crate_1wooden_crate_1.tscn" id="30_jib0i"]
-[ext_resource type="PackedScene" uid="uid://bn6wab620tn7p" path="res://Scenes/Levels/LevelAssets/Nature/fern_1fern_1.tscn" id="31_atry8"]
-[ext_resource type="PackedScene" uid="uid://c12yntmxvotev" path="res://Scenes/Levels/LevelAssets/MegaPack/table_large_1table_large_1.tscn" id="32_vyl1h"]
-[ext_resource type="PackedScene" uid="uid://ci36wcpigjmv7" path="res://Scenes/Levels/LevelAssets/ModularFPS/stairs_1stairs_1.tscn" id="33_hudpd"]
-[ext_resource type="PackedScene" uid="uid://dktqlsr507m5n" path="res://Scenes/Levels/LevelAssets/ModularFPS/wall_small_1wall_small_1.tscn" id="34_l6hym"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Nature/fern_1fern_1.tscn" id="31_atry8"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/table_large_1table_large_1.tscn" id="32_vyl1h"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/ModularFPS/stairs_1stairs_1.tscn" id="33_hudpd"]
+[ext_resource type="PackedScene" uid="uid://dexe7sidhipha" path="res://Scenes/Levels/LevelAssets/ModularFPS/wall_small_1wall_small_1.tscn" id="34_l6hym"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/doorway_1doorway_1.tscn" id="35_igshn"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/chair_1chair_1.tscn" id="36_cqhj3"]
-[ext_resource type="PackedScene" uid="uid://gjf54p3r2sw3" path="res://Scenes/Levels/LevelAssets/Bunker/computer_1computer_1.tscn" id="37_eptyh"]
-[ext_resource type="PackedScene" uid="uid://u0s8cy6m8u2f" path="res://Scenes/Levels/LevelAssets/Bunker/floppy_disc_2floppy_disc_2.tscn" id="38_bslxm"]
-[ext_resource type="PackedScene" uid="uid://bipcdo6i62152" path="res://Scenes/Levels/LevelAssets/Bunker/sign_1sign_1.tscn" id="39_so8ny"]
-[ext_resource type="PackedScene" uid="uid://5hduvouta8fi" path="res://Scenes/Levels/LevelAssets/Bunker/power_supply_1power_supply_1.tscn" id="40_dxr6o"]
-[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/vent_1vent_1.tscn" id="41_gt5ud"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/computer_1computer_1.tscn" id="37_eptyh"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/floppy_disc_2floppy_disc_2.tscn" id="38_bslxm"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/sign_1sign_1.tscn" id="39_so8ny"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/power_supply_1power_supply_1.tscn" id="40_dxr6o"]
+[ext_resource type="PackedScene" uid="uid://buv0vptafqlx2" path="res://Scenes/Levels/LevelAssets/MegaPack/vent_1vent_1.tscn" id="41_gt5ud"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/vending_machine_1vending_machine_1.tscn" id="42_0kw4i"]
-[ext_resource type="PackedScene" uid="uid://clohcq7snxptu" path="res://Scenes/Levels/LevelAssets/Restuarant/trash_can_01Quequis_House_Props.tscn" id="43_3pmhj"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/trash_can_01Quequis_House_Props.tscn" id="43_3pmhj"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/cigs_packet_1cigs_packet_1.tscn" id="44_1qbvg"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/matchbox_2matchbox_2.tscn" id="45_n0kx8"]
-[ext_resource type="PackedScene" uid="uid://bfk1sqgonx5ij" path="res://Scenes/Levels/LevelAssets/MegaPack/screen_1screen_1.tscn" id="46_lawoi"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/screen_1screen_1.tscn" id="46_lawoi"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/light_switch_1light_switch_1.tscn" id="47_f6inq"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/painting_1painting_1.tscn" id="48_wqufh"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/keyboard_1keyboard_1.tscn" id="49_i352y"]
@@ -53,28 +53,28 @@
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/cobweb_1cobweb_1.tscn" id="55_y3aei"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/electrical_outlet_1electrical_outlet_1.tscn" id="56_j1mll"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/clock_1clock_1.tscn" id="57_uf1kq"]
-[ext_resource type="PackedScene" uid="uid://b7kbvwjimnxo2" path="res://Scenes/Levels/LevelAssets/Restuarant/Painting_06Quequis_House_Props.tscn" id="58_neg22"]
-[ext_resource type="PackedScene" uid="uid://daiy6cm8wlish" path="res://Scenes/Levels/LevelAssets/Restuarant/PhoneQuequis_House_Props.tscn" id="59_ql1vn"]
-[ext_resource type="PackedScene" uid="uid://csu1p61kdc5i8" path="res://Scenes/Levels/LevelAssets/Restuarant/BoardQuequis_House_Props.tscn" id="61_w53l0"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Painting_06Quequis_House_Props.tscn" id="58_neg22"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/PhoneQuequis_House_Props.tscn" id="59_ql1vn"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/BoardQuequis_House_Props.tscn" id="61_w53l0"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/carpet_1carpet_1.tscn" id="62_4h6dw"]
-[ext_resource type="PackedScene" uid="uid://ch0oax30cejdc" path="res://Scenes/Levels/LevelAssets/Restuarant/Coffee_jarQuequis_House_Props.tscn" id="63_qdlmd"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Coffee_jarQuequis_House_Props.tscn" id="63_qdlmd"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/book_1book_1.tscn" id="64_ohcqw"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/book_2book_2.tscn" id="65_kggdy"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/ashtray_1ashtray_1.tscn" id="66_ty02e"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/cig_3cig_3.tscn" id="67_h4qwh"]
-[ext_resource type="PackedScene" uid="uid://cyxfqt3ycdaae" path="res://Scenes/Levels/LevelAssets/Restuarant/Plates_004Quequis_House_Props.tscn" id="68_dyedf"]
-[ext_resource type="PackedScene" uid="uid://csni2xfkaygjf" path="res://Scenes/Levels/LevelAssets/Restuarant/Sauce_02Quequis_House_Props.tscn" id="69_2pc7m"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Plates_004Quequis_House_Props.tscn" id="68_dyedf"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Sauce_02Quequis_House_Props.tscn" id="69_2pc7m"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/flashlight_1flashlight_1.tscn" id="70_tsso4"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/cassette_tape_1cassette_tape_1.tscn" id="71_bv3g2"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/cassette_tape_2cassette_tape_2.tscn" id="72_0kyi6"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/chair_3chair_3.tscn" id="73_iigug"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/chair_4chair_4.tscn" id="74_hskhr"]
-[ext_resource type="PackedScene" uid="uid://b8hj3jdppm5kj" path="res://Scenes/Levels/LevelAssets/Bunker/machinery_3machinery_3.tscn" id="75_xyh6s"]
-[ext_resource type="PackedScene" uid="uid://e0rdcpjvjv2d" path="res://Scenes/Levels/LevelAssets/Bunker/machinery_2machinery_2.tscn" id="76_lqboa"]
-[ext_resource type="PackedScene" uid="uid://cukotip3gxkau" path="res://Scenes/Levels/LevelAssets/Bunker/table_large_3table_large_3.tscn" id="77_gxkh0"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/machinery_3machinery_3.tscn" id="75_xyh6s"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/machinery_2machinery_2.tscn" id="76_lqboa"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/table_large_3table_large_3.tscn" id="77_gxkh0"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/chair_2chair_2.tscn" id="78_60ftg"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/ceiling_lamp_2_onceiling_lamp_2_on.tscn" id="79_g6lsu"]
-[ext_resource type="PackedScene" uid="uid://b0gui8rt7k2td" path="res://Scenes/Levels/LevelAssets/MegaPack/ceiling_lamp_1_onceiling_lamp_1_on.tscn" id="80_ltegg"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/ceiling_lamp_1_onceiling_lamp_1_on.tscn" id="80_ltegg"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/cardboard_box_3cardboard_box_3.tscn" id="81_sf0h6"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/cardboard_box_2cardboard_box_2.tscn" id="82_n2tul"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/cardboard_box_1cardboard_box_1.tscn" id="83_h5bj1"]
@@ -84,7 +84,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/battery_4battery_4.tscn" id="87_1nr6d"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/car_battery_1car_battery_1.tscn" id="88_m35ut"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/cell_phone_1cell_phone_1.tscn" id="89_8e3q6"]
-[ext_resource type="PackedScene" uid="uid://c605l2grasga8" path="res://Scenes/Levels/LevelAssets/MegaPack/clock_2clock_2.tscn" id="90_fmds3"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/clock_2clock_2.tscn" id="90_fmds3"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/glass_bottle_2glass_bottle_2.tscn" id="91_s8urc"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/walkie_talkie_1walkie_talkie_1.tscn" id="92_hxxpw"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/pills_bottle_1pills_bottle_1.tscn" id="93_krxh6"]
@@ -93,238 +93,238 @@
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/pipe_1pipe_1.tscn" id="96_s6r53"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/pipe_1_cornerpipe_1_corner.tscn" id="97_6kqj6"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/concrete_block_1concrete_block_1.tscn" id="98_jxahi"]
-[ext_resource type="PackedScene" uid="uid://b4jdqom7nkyif" path="res://Scenes/Levels/LevelAssets/Restuarant/trash_canQuequis_House_Props.tscn" id="99_t04p8"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/trash_canQuequis_House_Props.tscn" id="99_t04p8"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/metal_scrapmetal_scrap.tscn" id="100_aeglo"]
-[ext_resource type="PackedScene" uid="uid://bivs76kfqx050" path="res://Scenes/Levels/LevelAssets/Restuarant/Pickle_JarQuequis_House_Props.tscn" id="101_ltv71"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Pickle_JarQuequis_House_Props.tscn" id="101_ltv71"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/cig_1cig_1.tscn" id="102_bnsfj"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/cash_1cash_1.tscn" id="103_mdbv4"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/wooden_crate_3wooden_crate_3.tscn" id="104_4giqn"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/ceiling_lamp_1_offceiling_lamp_1_off.tscn" id="105_4gpma"]
-[ext_resource type="PackedScene" uid="uid://xg7pkhrj1gpw" path="res://Scenes/Levels/LevelAssets/Bunker/metal_shelf_1metal_shelf_1.tscn" id="106_13671"]
-[ext_resource type="PackedScene" uid="uid://bemklqrvju50q" path="res://Scenes/Levels/LevelAssets/Restuarant/Shelf_FR_I_001Quequis_House_Props.tscn" id="107_ljwpm"]
-[ext_resource type="PackedScene" uid="uid://4do724wpw746" path="res://Scenes/Levels/LevelAssets/Restuarant/Grill_003Quequis_House_Props.tscn" id="108_v451w"]
-[ext_resource type="PackedScene" uid="uid://6gnf68bpmgrv" path="res://Scenes/Levels/LevelAssets/Restuarant/Box_BQuequis_House_Props.tscn" id="109_hpq2w"]
-[ext_resource type="PackedScene" uid="uid://d2sun12df44i5" path="res://Scenes/Levels/LevelAssets/Restuarant/Box_B_01Quequis_House_Props.tscn" id="110_mo7xy"]
-[ext_resource type="PackedScene" uid="uid://dtl7txs3fj7an" path="res://Scenes/Levels/LevelAssets/Restuarant/bag_garlicQuequis_House_Props.tscn" id="112_ve2j3"]
-[ext_resource type="PackedScene" uid="uid://cv6y3fxkmkqvd" path="res://Scenes/Levels/LevelAssets/Restuarant/Chair_PQuequis_House_Props.tscn" id="113_8fq3l"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/metal_shelf_1metal_shelf_1.tscn" id="106_13671"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Shelf_FR_I_001Quequis_House_Props.tscn" id="107_ljwpm"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Grill_003Quequis_House_Props.tscn" id="108_v451w"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Box_BQuequis_House_Props.tscn" id="109_hpq2w"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Box_B_01Quequis_House_Props.tscn" id="110_mo7xy"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/bag_garlicQuequis_House_Props.tscn" id="112_ve2j3"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Chair_PQuequis_House_Props.tscn" id="113_8fq3l"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/glass_bottle_1glass_bottle_1.tscn" id="114_o0c78"]
-[ext_resource type="PackedScene" uid="uid://bsaxlj8vc0od6" path="res://Scenes/Levels/LevelAssets/Restuarant/Painting_05Quequis_House_Props.tscn" id="114_w260q"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Painting_05Quequis_House_Props.tscn" id="114_w260q"]
 [ext_resource type="PackedScene" uid="uid://daj31tw0sn7bb" path="res://Scenes/Levels/LevelAssets/Jackson Assets/vent_wall.tscn" id="115_yxjt7"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/cash_2cash_2.tscn" id="117_u0e5c"]
 [ext_resource type="PackedScene" uid="uid://dlk2kennbolq8" path="res://Scenes/Pickups/TimedUpgradePickup.tscn" id="118_fuo22"]
 [ext_resource type="PackedScene" uid="uid://d23ox6v5fqsuw" path="res://Scenes/Levels/LevelAssets/Extras/BurgerMisc.tscn" id="119_1c4s5"]
 [ext_resource type="PackedScene" uid="uid://ci2s7wgwurbhg" path="res://Scenes/Levels/LevelAssets/Jackson Assets/Cubical.tscn" id="120_q17s2"]
-[ext_resource type="PackedScene" uid="uid://bprbxl2lt54pq" path="res://Scenes/Levels/LevelAssets/MegaPack2/platform_b_handrail_2platform_b_handrail_2.tscn" id="121_1jnhr"]
-[ext_resource type="PackedScene" uid="uid://co03vg1qnyd3s" path="res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_12poster_cx_12.tscn" id="121_aosf6"]
-[ext_resource type="PackedScene" uid="uid://db2nwiya4hn76" path="res://Scenes/Levels/LevelAssets/MegaPack2/clipboard_mx_1clipboard_mx_1.tscn" id="122_j64l4"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/platform_b_handrail_2platform_b_handrail_2.tscn" id="121_1jnhr"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_12poster_cx_12.tscn" id="121_aosf6"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/clipboard_mx_1clipboard_mx_1.tscn" id="122_j64l4"]
 [ext_resource type="PackedScene" uid="uid://c5jrbsxm7l72n" path="res://Scenes/Levels/LevelAssets/Extras/Toilet_PaperMisc.tscn" id="123_edgai"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/beam_1beam_1.tscn" id="123_gtb6o"]
-[ext_resource type="PackedScene" uid="uid://bld3kixlwtyta" path="res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_rx_1floor_ceiling_rx_1.tscn" id="124_0jyr2"]
-[ext_resource type="PackedScene" uid="uid://cupgfanrsrgg2" path="res://Scenes/Levels/LevelAssets/MegaPack2/platform_b_handrail_1platform_b_handrail_1.tscn" id="124_nd62l"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_rx_1floor_ceiling_rx_1.tscn" id="124_0jyr2"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/platform_b_handrail_1platform_b_handrail_1.tscn" id="124_nd62l"]
 [ext_resource type="PackedScene" uid="uid://bpodiysncqwlr" path="res://Scenes/Levels/LevelAssets/Extras/Poster_MissingMisc.tscn" id="124_u37gd"]
-[ext_resource type="PackedScene" uid="uid://dxev7ycvoipdt" path="res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hr_1floor_ceiling_hr_1.tscn" id="125_c2emj"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hr_1floor_ceiling_hr_1.tscn" id="125_c2emj"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/pillar_1_plainpillar_1_plain.tscn" id="125_ubknq"]
-[ext_resource type="PackedScene" uid="uid://cqngn4eqsqywq" path="res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hr_2floor_ceiling_hr_2.tscn" id="126_06ov6"]
-[ext_resource type="PackedScene" uid="uid://b72fkchxtfiip" path="res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rg_8pillar_rg_8.tscn" id="126_gw1g0"]
-[ext_resource type="PackedScene" uid="uid://dbhm4waki7lba" path="res://Scenes/Levels/LevelAssets/MegaPack2/wall_rg_1wall_rg_1.tscn" id="127_4bdbq"]
-[ext_resource type="PackedScene" uid="uid://qxldy4w0lag6" path="res://Scenes/Levels/LevelAssets/ModularFPS/wall_4wall_4.tscn" id="129_ixhii"]
-[ext_resource type="PackedScene" uid="uid://bkliqr06bqs30" path="res://Scenes/Levels/LevelAssets/ModularFPS/floor_1_001floor_1_001.tscn" id="130_7ukjj"]
-[ext_resource type="PackedScene" uid="uid://we4m86es5ofl" path="res://Scenes/Levels/LevelAssets/MegaPack2/pipes_hr_5_middlepipes_hr_5_middle.tscn" id="131_8svpc"]
-[ext_resource type="PackedScene" uid="uid://c3u8ph60dqnkw" path="res://Scenes/Levels/LevelAssets/MegaPack2/wires_hr_1wires_hr_1.tscn" id="132_j0d0v"]
-[ext_resource type="PackedScene" uid="uid://ds674djhpqw17" path="res://Scenes/Levels/LevelAssets/MegaPack2/pipe_ax_1pipe_ax_1.tscn" id="133_1e47f"]
-[ext_resource type="PackedScene" uid="uid://cv1lgj04o3kec" path="res://Scenes/Levels/LevelAssets/MegaPack2/machinery_mx_1machinery_mx_1.tscn" id="134_hbjji"]
-[ext_resource type="PackedScene" uid="uid://erjursob1jag" path="res://Scenes/Levels/LevelAssets/MegaPack2/tank_system_mx_1tank_system_mx_1.tscn" id="135_grhqu"]
-[ext_resource type="PackedScene" uid="uid://o37m3kkqfveg" path="res://Scenes/Levels/LevelAssets/MegaPack2/pipe_bx_3pipe_bx_3.tscn" id="136_hqr13"]
-[ext_resource type="PackedScene" uid="uid://b8ugp7qwsmivs" path="res://Scenes/Levels/LevelAssets/MegaPack2/pipe_bx_1pipe_bx_1.tscn" id="137_r3vxi"]
-[ext_resource type="PackedScene" uid="uid://t2ccmfs0j3kv" path="res://Scenes/Levels/LevelAssets/MegaPack2/pipes_hr_1_vertical_end_1pipes_hr_1_vertical_end_1.tscn" id="138_d07q4"]
-[ext_resource type="PackedScene" uid="uid://durahenjcgmcc" path="res://Scenes/Levels/LevelAssets/MegaPack2/pipes_hr_1_elbow_1pipes_hr_1_elbow_1.tscn" id="139_st6ic"]
-[ext_resource type="PackedScene" uid="uid://bfqlo5nkbr8f0" path="res://Scenes/Levels/LevelAssets/MegaPack2/pipes_hr_1_horizontal_middle_1pipes_hr_1_horizontal_middle_1.tscn" id="140_k8gxf"]
-[ext_resource type="PackedScene" uid="uid://c1fg43ydpgxgj" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_board_3wooden_board_3.tscn" id="142_10jy7"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hr_2floor_ceiling_hr_2.tscn" id="126_06ov6"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rg_8pillar_rg_8.tscn" id="126_gw1g0"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/wall_rg_1wall_rg_1.tscn" id="127_4bdbq"]
+[ext_resource type="PackedScene" uid="uid://cdac0wueemspf" path="res://Scenes/Levels/LevelAssets/ModularFPS/wall_4wall_4.tscn" id="129_ixhii"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/ModularFPS/floor_1_001floor_1_001.tscn" id="130_7ukjj"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/pipes_hr_5_middlepipes_hr_5_middle.tscn" id="131_8svpc"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/wires_hr_1wires_hr_1.tscn" id="132_j0d0v"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/pipe_ax_1pipe_ax_1.tscn" id="133_1e47f"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/machinery_mx_1machinery_mx_1.tscn" id="134_hbjji"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/tank_system_mx_1tank_system_mx_1.tscn" id="135_grhqu"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/pipe_bx_3pipe_bx_3.tscn" id="136_hqr13"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/pipe_bx_1pipe_bx_1.tscn" id="137_r3vxi"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/pipes_hr_1_vertical_end_1pipes_hr_1_vertical_end_1.tscn" id="138_d07q4"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/pipes_hr_1_elbow_1pipes_hr_1_elbow_1.tscn" id="139_st6ic"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/pipes_hr_1_horizontal_middle_1pipes_hr_1_horizontal_middle_1.tscn" id="140_k8gxf"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_board_3wooden_board_3.tscn" id="142_10jy7"]
 [ext_resource type="PackedScene" uid="uid://b7bu8yny7pljq" path="res://Scenes/Levels/LevelAssets/Extras/ValveElectrical.tscn" id="142_v8orq"]
-[ext_resource type="PackedScene" uid="uid://bc1jdatsccn31" path="res://Scenes/Levels/LevelAssets/MegaPack2/graffiti_mx_7graffiti_mx_7.tscn" id="143_lefwq"]
-[ext_resource type="PackedScene" uid="uid://bm508ays284dg" path="res://Scenes/Levels/LevelAssets/MegaPack2/graffiti_mx_1graffiti_mx_1.tscn" id="144_lm8xa"]
-[ext_resource type="PackedScene" uid="uid://banlux7hhelj7" path="res://Scenes/Levels/LevelAssets/MegaPack2/shelf_mx_1shelf_mx_1.tscn" id="145_qpgc4"]
-[ext_resource type="PackedScene" uid="uid://dx6eoirqeu3sh" path="res://Scenes/Levels/LevelAssets/MegaPack2/graffiti_mx_4graffiti_mx_4.tscn" id="146_ysvmb"]
-[ext_resource type="PackedScene" uid="uid://dlt4selcn40sp" path="res://Scenes/Levels/LevelAssets/MegaPack2/graffiti_mx_2graffiti_mx_2.tscn" id="147_br6q6"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/graffiti_mx_7graffiti_mx_7.tscn" id="143_lefwq"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/graffiti_mx_1graffiti_mx_1.tscn" id="144_lm8xa"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/shelf_mx_1shelf_mx_1.tscn" id="145_qpgc4"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/graffiti_mx_4graffiti_mx_4.tscn" id="146_ysvmb"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/graffiti_mx_2graffiti_mx_2.tscn" id="147_br6q6"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/floppy_disc_1floppy_disc_1.tscn" id="148_l1mpk"]
-[ext_resource type="PackedScene" uid="uid://gr3jen5x01vo" path="res://Scenes/Levels/LevelAssets/MegaPack2/beam_hc_horizonatal_2beam_hc_horizonatal_2.tscn" id="149_tnfdf"]
-[ext_resource type="PackedScene" uid="uid://6sdkjb65h4hs" path="res://Scenes/Levels/LevelAssets/MegaPack2/beam_hc_horizonatal_1beam_hc_horizonatal_1.tscn" id="150_3bt2u"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/beam_hc_horizonatal_2beam_hc_horizonatal_2.tscn" id="149_tnfdf"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/beam_hc_horizonatal_1beam_hc_horizonatal_1.tscn" id="150_3bt2u"]
 [ext_resource type="PackedScene" uid="uid://bmejhchhhu7w8" path="res://Scenes/Pickups/TimedWeaponPickup.tscn" id="152_qco11"]
-[ext_resource type="PackedScene" uid="uid://c6du22sp5mdiu" path="res://Scenes/Levels/LevelAssets/Bunker/wall_1_plainwall_1_plain.tscn" id="154_asth5"]
-[ext_resource type="PackedScene" uid="uid://bqflki8ooknri" path="res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hr_4floor_ceiling_hr_4.tscn" id="156_duc1y"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/wall_1_plainwall_1_plain.tscn" id="154_asth5"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hr_4floor_ceiling_hr_4.tscn" id="156_duc1y"]
 [ext_resource type="PackedScene" uid="uid://rqtoi5uj4wgv" path="res://Scenes/Levels/LevelAssets/Extras/Radio_001Misc.tscn" id="157_l07n6"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/lamp_2_onlamp_2_on.tscn" id="157_uryc5"]
-[ext_resource type="PackedScene" uid="uid://jnxeyk56ysh4" path="res://Scenes/Levels/LevelAssets/MegaPack2/bolt_mx_1bolt_mx_1.tscn" id="157_ysqkc"]
-[ext_resource type="PackedScene" uid="uid://ygqwkt764vv7" path="res://Scenes/Levels/LevelAssets/ModularFPS/metal_barrel_1metal_barrel_1.tscn" id="158_0dmvx"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/bolt_mx_1bolt_mx_1.tscn" id="157_ysqkc"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/ModularFPS/metal_barrel_1metal_barrel_1.tscn" id="158_0dmvx"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/lamp_2_offlamp_2_off.tscn" id="158_pebcw"]
-[ext_resource type="PackedScene" uid="uid://db4roibkict1s" path="res://Scenes/Levels/LevelAssets/MegaPack2/lamp_mx_1_onlamp_mx_1_on.tscn" id="159_pgahi"]
-[ext_resource type="PackedScene" uid="uid://cn5nv48rdwuoy" path="res://Scenes/Levels/LevelAssets/MegaPack2/metal_barrel_hr_3metal_barrel_hr_3.tscn" id="160_3xaby"]
-[ext_resource type="PackedScene" uid="uid://bvuy2twf0c2di" path="res://Scenes/Levels/LevelAssets/MegaPack2/paint_can_mx_1paint_can_mx_1.tscn" id="161_37cgv"]
-[ext_resource type="PackedScene" uid="uid://d075dde4nfgyp" path="res://Scenes/Levels/LevelAssets/MegaPack2/misc_tool_mx_5misc_tool_mx_5.tscn" id="162_siw7b"]
-[ext_resource type="PackedScene" uid="uid://dlraf8vspahgs" path="res://Scenes/Levels/LevelAssets/MegaPack2/paint_brush_mr_1paint_brush_mr_1.tscn" id="163_sj4n8"]
-[ext_resource type="PackedScene" uid="uid://i1fjkqs45utj" path="res://Scenes/Levels/LevelAssets/MegaPack2/package_hr_1package_hr_1.tscn" id="164_yx1rt"]
-[ext_resource type="PackedScene" uid="uid://0fphhauxgbyx" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_hx_1_1wooden_crate_hx_1_1.tscn" id="165_83inw"]
-[ext_resource type="PackedScene" uid="uid://03uubjj5eawq" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_hx_1_2wooden_crate_hx_1_2.tscn" id="166_pnxf4"]
-[ext_resource type="PackedScene" uid="uid://01q3iq5grmjx" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_hx_2_1wooden_crate_hx_2_1.tscn" id="167_n8xhp"]
-[ext_resource type="PackedScene" uid="uid://dp4iyp610cu24" path="res://Scenes/Levels/LevelAssets/MegaPack2/shipping_container_mx_2shipping_container_mx_2.tscn" id="169_mw728"]
-[ext_resource type="PackedScene" uid="uid://dqwv4873f7rn4" path="res://Scenes/Levels/LevelAssets/MegaPack2/shipping_container_mx_1_hollow_1shipping_container_mx_1_hollow_1.tscn" id="170_itpdn"]
-[ext_resource type="PackedScene" uid="uid://dk7qx4j25ojf6" path="res://Scenes/Levels/LevelAssets/MegaPack2/toolbox_mx_1toolbox_mx_1.tscn" id="171_1a85g"]
-[ext_resource type="PackedScene" uid="uid://bifbm3c1o0q1h" path="res://Scenes/Levels/LevelAssets/Bunker/trash_3trash_3.tscn" id="172_5xqe0"]
-[ext_resource type="PackedScene" uid="uid://c1hf8ucmug2pt" path="res://Scenes/Levels/LevelAssets/Bunker/trash_4trash_4.tscn" id="173_4tk03"]
-[ext_resource type="PackedScene" uid="uid://c0d5p1k856vp0" path="res://Scenes/Levels/LevelAssets/MegaPack2/beam_hc_vertical_1beam_hc_vertical_1.tscn" id="174_gudm6"]
-[ext_resource type="PackedScene" uid="uid://dr4ct7bbu1nj1" path="res://Scenes/Levels/LevelAssets/MegaPack2/platform_mx_1platform_mx_1.tscn" id="175_58wj3"]
-[ext_resource type="PackedScene" uid="uid://cyc173ve3nta0" path="res://Scenes/Levels/LevelAssets/MegaPack2/platform_small_mx_1platform_small_mx_1.tscn" id="176_q8nmq"]
-[ext_resource type="PackedScene" uid="uid://7lwmeujm7e0" path="res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rg_1_brokenpillar_rg_1_broken.tscn" id="177_1qmd3"]
-[ext_resource type="PackedScene" uid="uid://di712ledx6hbp" path="res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rg_2pillar_rg_2.tscn" id="178_i6lln"]
-[ext_resource type="PackedScene" uid="uid://dy1cyo73w08u2" path="res://Scenes/Levels/LevelAssets/MegaPack2/ramp_platform_slim_mx_1ramp_platform_slim_mx_1.tscn" id="179_tt3fr"]
-[ext_resource type="PackedScene" uid="uid://5rhbbyi2hqq" path="res://Scenes/Levels/LevelAssets/MegaPack2/ramp_platform_wide_mx_1ramp_platform_wide_mx_1.tscn" id="180_f078n"]
-[ext_resource type="PackedScene" uid="uid://bcb7snca1756i" path="res://Scenes/Levels/LevelAssets/MegaPack2/beam_hl_1beam_hl_1.tscn" id="181_crjd4"]
-[ext_resource type="PackedScene" uid="uid://ptxs45vt6g4w" path="res://Scenes/Levels/LevelAssets/MegaPack2/platform_cx_1platform_cx_1.tscn" id="182_pqvs4"]
-[ext_resource type="PackedScene" uid="uid://beq1tnftnprd8" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_plank_1wooden_plank_1.tscn" id="183_gw5qn"]
-[ext_resource type="PackedScene" uid="uid://cc1c0u4ld2vaw" path="res://Scenes/Levels/LevelAssets/MegaPack2/ladder_hr_1_longladder_hr_1_long.tscn" id="184_ua1j1"]
-[ext_resource type="PackedScene" uid="uid://4kdwar7pwy6v" path="res://Scenes/Levels/LevelAssets/MegaPack2/metal_barrel_hr_1metal_barrel_hr_1.tscn" id="185_5px8q"]
-[ext_resource type="PackedScene" uid="uid://ktpwjixbxdha" path="res://Scenes/Levels/LevelAssets/MegaPack2/metal_barrel_hr_2metal_barrel_hr_2.tscn" id="186_aymwu"]
-[ext_resource type="PackedScene" uid="uid://c8uvrpcu878yg" path="res://Scenes/Levels/LevelAssets/MegaPack2/jerrycan_mx_1jerrycan_mx_1.tscn" id="187_fflhd"]
-[ext_resource type="PackedScene" uid="uid://ec1pu87dpdhw" path="res://Scenes/Levels/LevelAssets/MegaPack2/distillery_mx_1distillery_mx_1.tscn" id="188_on6pt"]
-[ext_resource type="PackedScene" uid="uid://dvaa7kxlac6kk" path="res://Scenes/Levels/LevelAssets/MegaPack2/doorway_rg_2_widedoorway_rg_2_wide.tscn" id="190_u76au"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/lamp_mx_1_onlamp_mx_1_on.tscn" id="159_pgahi"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/metal_barrel_hr_3metal_barrel_hr_3.tscn" id="160_3xaby"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/paint_can_mx_1paint_can_mx_1.tscn" id="161_37cgv"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/misc_tool_mx_5misc_tool_mx_5.tscn" id="162_siw7b"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/paint_brush_mr_1paint_brush_mr_1.tscn" id="163_sj4n8"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/package_hr_1package_hr_1.tscn" id="164_yx1rt"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_hx_1_1wooden_crate_hx_1_1.tscn" id="165_83inw"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_hx_1_2wooden_crate_hx_1_2.tscn" id="166_pnxf4"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_hx_2_1wooden_crate_hx_2_1.tscn" id="167_n8xhp"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/shipping_container_mx_2shipping_container_mx_2.tscn" id="169_mw728"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/shipping_container_mx_1_hollow_1shipping_container_mx_1_hollow_1.tscn" id="170_itpdn"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/toolbox_mx_1toolbox_mx_1.tscn" id="171_1a85g"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/trash_3trash_3.tscn" id="172_5xqe0"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/trash_4trash_4.tscn" id="173_4tk03"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/beam_hc_vertical_1beam_hc_vertical_1.tscn" id="174_gudm6"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/platform_mx_1platform_mx_1.tscn" id="175_58wj3"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/platform_small_mx_1platform_small_mx_1.tscn" id="176_q8nmq"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rg_1_brokenpillar_rg_1_broken.tscn" id="177_1qmd3"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rg_2pillar_rg_2.tscn" id="178_i6lln"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/ramp_platform_slim_mx_1ramp_platform_slim_mx_1.tscn" id="179_tt3fr"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/ramp_platform_wide_mx_1ramp_platform_wide_mx_1.tscn" id="180_f078n"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/beam_hl_1beam_hl_1.tscn" id="181_crjd4"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/platform_cx_1platform_cx_1.tscn" id="182_pqvs4"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_plank_1wooden_plank_1.tscn" id="183_gw5qn"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/ladder_hr_1_longladder_hr_1_long.tscn" id="184_ua1j1"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/metal_barrel_hr_1metal_barrel_hr_1.tscn" id="185_5px8q"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/metal_barrel_hr_2metal_barrel_hr_2.tscn" id="186_aymwu"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/jerrycan_mx_1jerrycan_mx_1.tscn" id="187_fflhd"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/distillery_mx_1distillery_mx_1.tscn" id="188_on6pt"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/doorway_rg_2_widedoorway_rg_2_wide.tscn" id="190_u76au"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/elevator_1elevator_1.tscn" id="191_aefa1"]
-[ext_resource type="PackedScene" uid="uid://c8g3wq5i8ouqi" path="res://Scenes/Levels/LevelAssets/Bunker/generator_1generator_1.tscn" id="192_gn4ul"]
-[ext_resource type="PackedScene" uid="uid://cne1aho5fob8v" path="res://Scenes/Levels/LevelAssets/Bunker/metal_crate_3metal_crate_3.tscn" id="193_mtxg1"]
-[ext_resource type="PackedScene" uid="uid://bkikj00menmrc" path="res://Scenes/Levels/LevelAssets/Bunker/water_barrel_1water_barrel_1.tscn" id="194_mj1we"]
-[ext_resource type="PackedScene" uid="uid://c5w5xp628qe2f" path="res://Scenes/Levels/LevelAssets/Bunker/wooden_crate_9wooden_crate_9.tscn" id="195_v44ce"]
-[ext_resource type="PackedScene" uid="uid://ba6ydvhfhbuq7" path="res://Scenes/Levels/LevelAssets/MegaPack2/barricade_b_4barricade_b_4.tscn" id="196_h3m63"]
-[ext_resource type="PackedScene" uid="uid://ts0atixl7yyc" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_1wooden_crate_1.tscn" id="197_fglhy"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/generator_1generator_1.tscn" id="192_gn4ul"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/metal_crate_3metal_crate_3.tscn" id="193_mtxg1"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/water_barrel_1water_barrel_1.tscn" id="194_mj1we"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/wooden_crate_9wooden_crate_9.tscn" id="195_v44ce"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/barricade_b_4barricade_b_4.tscn" id="196_h3m63"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_1wooden_crate_1.tscn" id="197_fglhy"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/wooden_crate_6wooden_crate_6.tscn" id="198_y8c5s"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/wooden_crate_4wooden_crate_4.tscn" id="199_csjic"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/wooden_crate_2wooden_crate_2.tscn" id="200_ixmjv"]
-[ext_resource type="PackedScene" uid="uid://ds05f8nphkjhh" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_2_awooden_crate_2_a.tscn" id="201_v7ycy"]
-[ext_resource type="PackedScene" uid="uid://b4fluyenrke2v" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_board_1wooden_board_1.tscn" id="202_7r71s"]
-[ext_resource type="PackedScene" uid="uid://d0n8symlvt52a" path="res://Scenes/Levels/LevelAssets/MegaPack2/concrete_pipe_hm_1_endconcrete_pipe_hm_1_end.tscn" id="203_puilf"]
-[ext_resource type="PackedScene" uid="uid://bwc2qc2l6w3m5" path="res://Scenes/Levels/LevelAssets/Nature/tree_5tree_5.tscn" id="204_m1j5u"]
-[ext_resource type="PackedScene" uid="uid://damrojwsidyx6" path="res://Scenes/Levels/LevelAssets/MegaPack2/platform_ax_1platform_ax_1.tscn" id="205_5rh1u"]
-[ext_resource type="PackedScene" uid="uid://c51j0cs5qiq61" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_plank_2wooden_plank_2.tscn" id="207_5voa5"]
-[ext_resource type="PackedScene" uid="uid://c5cbb8wuar2u4" path="res://Scenes/Levels/LevelAssets/MegaPack2/rubiks_cube_mx_1rubiks_cube_mx_1.tscn" id="208_nog06"]
-[ext_resource type="PackedScene" uid="uid://bj0wud01hpakw" path="res://Scenes/Levels/LevelAssets/MegaPack2/barricade_a_2barricade_a_2.tscn" id="209_4pxe2"]
-[ext_resource type="PackedScene" uid="uid://umunsqqv6bp6" path="res://Scenes/Levels/LevelAssets/MegaPack2/barricade_a_3barricade_a_3.tscn" id="210_77d78"]
-[ext_resource type="PackedScene" uid="uid://dxnwf0ynhu8te" path="res://Scenes/Levels/LevelAssets/MegaPack2/concrete_fence_hr_1concrete_fence_hr_1.tscn" id="211_4fswc"]
-[ext_resource type="PackedScene" uid="uid://xtv7ueym8usa" path="res://Scenes/Levels/LevelAssets/MegaPack2/concrete_block_mx_1concrete_block_mx_1.tscn" id="212_iagub"]
-[ext_resource type="PackedScene" uid="uid://dqcnn51jjw55i" path="res://Scenes/Levels/LevelAssets/MegaPack2/cardboard_box_2cardboard_box_2.tscn" id="213_7c7lr"]
-[ext_resource type="PackedScene" uid="uid://cxg5lm5nmi1on" path="res://Scenes/Levels/LevelAssets/MegaPack2/cardboard_box_1cardboard_box_1.tscn" id="214_xdt01"]
-[ext_resource type="PackedScene" uid="uid://cg7xuwl2iqaa2" path="res://Scenes/Levels/LevelAssets/MegaPack2/gravel_pile_hr_2gravel_pile_hr_2.tscn" id="215_sy4k6"]
-[ext_resource type="PackedScene" uid="uid://dl82y7ye7s3b2" path="res://Scenes/Levels/LevelAssets/MegaPack2/metal_fence_hr_1metal_fence_hr_1.tscn" id="216_ncx6k"]
-[ext_resource type="PackedScene" uid="uid://dlrgil80hrf8j" path="res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rgx_2pillar_rgx_2.tscn" id="217_81ojl"]
-[ext_resource type="PackedScene" uid="uid://dnbxxl1ocdk2c" path="res://Scenes/Levels/LevelAssets/MegaPack2/concrete_pipe_hm_1_middleconcrete_pipe_hm_1_middle.tscn" id="218_17hvb"]
-[ext_resource type="PackedScene" uid="uid://bj0c7n78lx7xf" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_hx_2_2wooden_crate_hx_2_2.tscn" id="219_65p1k"]
-[ext_resource type="PackedScene" uid="uid://co5fqd3w1m2s6" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_3wooden_crate_3.tscn" id="220_fvxc1"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_2_awooden_crate_2_a.tscn" id="201_v7ycy"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_board_1wooden_board_1.tscn" id="202_7r71s"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/concrete_pipe_hm_1_endconcrete_pipe_hm_1_end.tscn" id="203_puilf"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Nature/tree_5tree_5.tscn" id="204_m1j5u"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/platform_ax_1platform_ax_1.tscn" id="205_5rh1u"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_plank_2wooden_plank_2.tscn" id="207_5voa5"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/rubiks_cube_mx_1rubiks_cube_mx_1.tscn" id="208_nog06"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/barricade_a_2barricade_a_2.tscn" id="209_4pxe2"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/barricade_a_3barricade_a_3.tscn" id="210_77d78"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/concrete_fence_hr_1concrete_fence_hr_1.tscn" id="211_4fswc"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/concrete_block_mx_1concrete_block_mx_1.tscn" id="212_iagub"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/cardboard_box_2cardboard_box_2.tscn" id="213_7c7lr"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/cardboard_box_1cardboard_box_1.tscn" id="214_xdt01"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/gravel_pile_hr_2gravel_pile_hr_2.tscn" id="215_sy4k6"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/metal_fence_hr_1metal_fence_hr_1.tscn" id="216_ncx6k"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rgx_2pillar_rgx_2.tscn" id="217_81ojl"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/concrete_pipe_hm_1_middleconcrete_pipe_hm_1_middle.tscn" id="218_17hvb"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_hx_2_2wooden_crate_hx_2_2.tscn" id="219_65p1k"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_crate_3wooden_crate_3.tscn" id="220_fvxc1"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/jerrycan_1jerrycan_1.tscn" id="221_utc82"]
-[ext_resource type="PackedScene" uid="uid://dtxu7iuk0rcbg" path="res://Scenes/Levels/LevelAssets/Bunker/floppy_disc_3floppy_disc_3.tscn" id="222_620vi"]
-[ext_resource type="PackedScene" uid="uid://dor2grh06n2td" path="res://Scenes/Levels/LevelAssets/Bunker/military_radio_1military_radio_1.tscn" id="223_l6qg8"]
-[ext_resource type="PackedScene" uid="uid://fa0ry0q2as1g" path="res://Scenes/Levels/LevelAssets/Bunker/military_radio_2military_radio_2.tscn" id="224_qnbfq"]
-[ext_resource type="PackedScene" uid="uid://dbcfllqcec2qf" path="res://Scenes/Levels/LevelAssets/Bunker/wood_pallet_1wood_pallet_1.tscn" id="225_28ubd"]
-[ext_resource type="PackedScene" uid="uid://cubiwlwruigb2" path="res://Scenes/Levels/LevelAssets/MegaPack2/hanging_shelf_mx_1_1hanging_shelf_mx_1_1.tscn" id="226_qexkd"]
-[ext_resource type="PackedScene" uid="uid://bq4hoqk0ofx7q" path="res://Scenes/Levels/LevelAssets/Bunker/trash_1trash_1.tscn" id="227_mmg7h"]
-[ext_resource type="PackedScene" uid="uid://dg2v3p0v6rrek" path="res://Scenes/Levels/LevelAssets/Restuarant/Bush_020Quequis_House_Props.tscn" id="228_d11fp"]
-[ext_resource type="PackedScene" uid="uid://3g8fwhsf2fom" path="res://Scenes/Levels/LevelAssets/Restuarant/Garbage_deposit_002Quequis_House_Props.tscn" id="229_jeswk"]
-[ext_resource type="PackedScene" uid="uid://c2ylfpqtsgcpv" path="res://Scenes/Levels/LevelAssets/MegaPack2/shelf_mx_2shelf_mx_2.tscn" id="230_h0u63"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/floppy_disc_3floppy_disc_3.tscn" id="222_620vi"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/military_radio_1military_radio_1.tscn" id="223_l6qg8"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/military_radio_2military_radio_2.tscn" id="224_qnbfq"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/wood_pallet_1wood_pallet_1.tscn" id="225_28ubd"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/hanging_shelf_mx_1_1hanging_shelf_mx_1_1.tscn" id="226_qexkd"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/trash_1trash_1.tscn" id="227_mmg7h"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Bush_020Quequis_House_Props.tscn" id="228_d11fp"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Garbage_deposit_002Quequis_House_Props.tscn" id="229_jeswk"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/shelf_mx_2shelf_mx_2.tscn" id="230_h0u63"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/table_small_1table_small_1.tscn" id="231_krxft"]
-[ext_resource type="PackedScene" uid="uid://cwuh2md3jmn74" path="res://Scenes/Levels/LevelAssets/MegaPack2/hanging_shelf_mx_1hanging_shelf_mx_1.tscn" id="232_0crn7"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/hanging_shelf_mx_1hanging_shelf_mx_1.tscn" id="232_0crn7"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/beam_2beam_2.tscn" id="233_evssg"]
-[ext_resource type="PackedScene" uid="uid://b01wuywrw22ch" path="res://Scenes/Levels/LevelAssets/MegaPack2/van_3van_3.tscn" id="234_dbkhc"]
-[ext_resource type="PackedScene" uid="uid://bvsgxljgigaek" path="res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hr_6floor_ceiling_hr_6.tscn" id="234_ud620"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/van_3van_3.tscn" id="234_dbkhc"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hr_6floor_ceiling_hr_6.tscn" id="234_ud620"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/beam_4beam_4.tscn" id="235_8meoi"]
-[ext_resource type="PackedScene" uid="uid://senxkwjjfv64" path="res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rgx_1pillar_rgx_1.tscn" id="235_f34o4"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/pillar_rgx_1pillar_rgx_1.tscn" id="235_f34o4"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/table_small_2table_small_2.tscn" id="236_vgvp0"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/matchbox_1matchbox_1.tscn" id="237_ep6f1"]
-[ext_resource type="PackedScene" uid="uid://f8djje0u3wh1" path="res://Scenes/Levels/LevelAssets/Restuarant/PaintingQuequis_House_Props.tscn" id="238_e2swb"]
-[ext_resource type="PackedScene" uid="uid://cfcwcy6pnh1gt" path="res://Scenes/Levels/LevelAssets/Restuarant/Painting_01Quequis_House_Props.tscn" id="239_7fc83"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/PaintingQuequis_House_Props.tscn" id="238_e2swb"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Painting_01Quequis_House_Props.tscn" id="239_7fc83"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/pipes_holder_1pipes_holder_1.tscn" id="240_r6wl0"]
-[ext_resource type="PackedScene" uid="uid://badwo7r5cgwnh" path="res://Scenes/Levels/LevelAssets/MegaPack2/test_machine_mx_1test_machine_mx_1.tscn" id="241_4ehye"]
-[ext_resource type="PackedScene" uid="uid://ck6m0i1d4i8do" path="res://Scenes/Levels/LevelAssets/Restuarant/ArmchairQuequis_House_Props.tscn" id="242_bpu8w"]
-[ext_resource type="PackedScene" uid="uid://behnge2mnswbp" path="res://Scenes/Levels/LevelAssets/Restuarant/Table_TQuequis_House_Props.tscn" id="243_uibdt"]
-[ext_resource type="PackedScene" uid="uid://cwrp4ttq1xoaj" path="res://Scenes/Levels/LevelAssets/Restuarant/Soda_fountain_01_001Quequis_House_Props.tscn" id="244_xmtjo"]
-[ext_resource type="PackedScene" uid="uid://c6778mlfnqb2b" path="res://Scenes/Levels/LevelAssets/Restuarant/NapkinholderQuequis_House_Props.tscn" id="245_byecq"]
-[ext_resource type="PackedScene" uid="uid://cn72roe47fe8c" path="res://Scenes/Levels/LevelAssets/Restuarant/mustardQuequis_House_Props.tscn" id="246_2o8qe"]
-[ext_resource type="PackedScene" uid="uid://b0dgo42ksgkfv" path="res://Scenes/Levels/LevelAssets/Restuarant/ketchupQuequis_House_Props.tscn" id="247_epueh"]
-[ext_resource type="PackedScene" uid="uid://dxjutlfp8mnnd" path="res://Scenes/Levels/LevelAssets/Restuarant/plastic_cups_005Quequis_House_Props.tscn" id="248_6tdfy"]
-[ext_resource type="PackedScene" uid="uid://bwso5jda4x87x" path="res://Scenes/Levels/LevelAssets/Restuarant/plastic_cups_006Quequis_House_Props.tscn" id="249_uu88h"]
-[ext_resource type="PackedScene" uid="uid://2nf4u6n6b34p" path="res://Scenes/Levels/LevelAssets/Restuarant/plastic_cups_007Quequis_House_Props.tscn" id="250_k818q"]
-[ext_resource type="PackedScene" uid="uid://byuvlr20w3f2q" path="res://Scenes/Levels/LevelAssets/Restuarant/SauceQuequis_House_Props.tscn" id="251_tqhui"]
-[ext_resource type="PackedScene" uid="uid://21xann18bhot" path="res://Scenes/Levels/LevelAssets/Restuarant/Sauce_01Quequis_House_Props.tscn" id="252_f3tk2"]
-[ext_resource type="PackedScene" uid="uid://niokj56bk6bl" path="res://Scenes/Levels/LevelAssets/Restuarant/Washbasin_MQuequis_House_Props.tscn" id="253_eutd4"]
-[ext_resource type="PackedScene" uid="uid://dal3u4c2hclbh" path="res://Scenes/Levels/LevelAssets/Restuarant/soap_dispenserQuequis_House_Props.tscn" id="254_y4tos"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/test_machine_mx_1test_machine_mx_1.tscn" id="241_4ehye"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/ArmchairQuequis_House_Props.tscn" id="242_bpu8w"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Table_TQuequis_House_Props.tscn" id="243_uibdt"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Soda_fountain_01_001Quequis_House_Props.tscn" id="244_xmtjo"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/NapkinholderQuequis_House_Props.tscn" id="245_byecq"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/mustardQuequis_House_Props.tscn" id="246_2o8qe"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/ketchupQuequis_House_Props.tscn" id="247_epueh"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/plastic_cups_005Quequis_House_Props.tscn" id="248_6tdfy"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/plastic_cups_006Quequis_House_Props.tscn" id="249_uu88h"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/plastic_cups_007Quequis_House_Props.tscn" id="250_k818q"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/SauceQuequis_House_Props.tscn" id="251_tqhui"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Sauce_01Quequis_House_Props.tscn" id="252_f3tk2"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Washbasin_MQuequis_House_Props.tscn" id="253_eutd4"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/soap_dispenserQuequis_House_Props.tscn" id="254_y4tos"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/wall_element_2_bottomwall_element_2_bottom.tscn" id="255_faerh"]
-[ext_resource type="PackedScene" uid="uid://by17oybrifwnr" path="res://Scenes/Levels/LevelAssets/Bunker/drain_cover_3drain_cover_3.tscn" id="256_ikgcq"]
-[ext_resource type="PackedScene" uid="uid://ccjuvvreq8087" path="res://Scenes/Levels/LevelAssets/Restuarant/Bush_021Quequis_House_Props.tscn" id="257_85jn0"]
-[ext_resource type="PackedScene" uid="uid://cl2jhjcfpyrbk" path="res://Scenes/Levels/LevelAssets/Restuarant/PepperQuequis_House_Props.tscn" id="258_3rbuk"]
-[ext_resource type="PackedScene" uid="uid://cyamrm6gitdte" path="res://Scenes/Levels/LevelAssets/Restuarant/SaltQuequis_House_Props.tscn" id="259_2hv6b"]
-[ext_resource type="PackedScene" uid="uid://caxba45nqioai" path="res://Scenes/Levels/LevelAssets/Bunker/cpu_1cpu_1.tscn" id="260_qcrgx"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/drain_cover_3drain_cover_3.tscn" id="256_ikgcq"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Bush_021Quequis_House_Props.tscn" id="257_85jn0"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/PepperQuequis_House_Props.tscn" id="258_3rbuk"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/SaltQuequis_House_Props.tscn" id="259_2hv6b"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/cpu_1cpu_1.tscn" id="260_qcrgx"]
 [ext_resource type="PackedScene" uid="uid://b1638ox18o0fr" path="res://Scenes/Pickups/TimedHealthPickup.tscn" id="261_3u6v1"]
-[ext_resource type="PackedScene" uid="uid://daoujg1n3fguv" path="res://Scenes/Levels/LevelAssets/Bunker/canned_food_3canned_food_3.tscn" id="261_q4ngu"]
-[ext_resource type="PackedScene" uid="uid://bnn3wta2vjsxi" path="res://Scenes/Levels/LevelAssets/MegaPack2/bricks_stacked_mx_1_0bricks_stacked_mx_1_0.tscn" id="262_hekxd"]
-[ext_resource type="PackedScene" uid="uid://cixxvkma1hfpe" path="res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_16poster_cx_16.tscn" id="263_gd8w8"]
-[ext_resource type="PackedScene" uid="uid://c1h0c84sdob4j" path="res://Scenes/Levels/LevelAssets/MegaPack2/rubber_duck_mx_1rubber_duck_mx_1.tscn" id="264_ca0jd"]
-[ext_resource type="PackedScene" uid="uid://dtbl7wtt0dvum" path="res://Scenes/Levels/LevelAssets/Farm/TractorFarm-Assets.tscn" id="265_xaw54"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/canned_food_3canned_food_3.tscn" id="261_q4ngu"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/bricks_stacked_mx_1_0bricks_stacked_mx_1_0.tscn" id="262_hekxd"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_16poster_cx_16.tscn" id="263_gd8w8"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/rubber_duck_mx_1rubber_duck_mx_1.tscn" id="264_ca0jd"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Farm/TractorFarm-Assets.tscn" id="265_xaw54"]
 [ext_resource type="PackedScene" uid="uid://bp6050ccs38g2" path="res://Scenes/Levels/LevelAssets/Extras/PenMisc.tscn" id="266_8e035"]
 [ext_resource type="PackedScene" uid="uid://0xq131a3ls5f" path="res://Scenes/Levels/LevelAssets/Extras/CrowbarMisc.tscn" id="267_fwsok"]
 [ext_resource type="PackedScene" uid="uid://slq5md6ol4wv" path="res://Scenes/Levels/LevelAssets/Extras/GuitarMisc.tscn" id="268_bbt3v"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/nails_1nails_1.tscn" id="269_ge8r1"]
-[ext_resource type="PackedScene" uid="uid://bamo12wlsecek" path="res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_13poster_cx_13.tscn" id="270_2jfu4"]
-[ext_resource type="PackedScene" uid="uid://ck1g2t1kqy7wv" path="res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_15poster_cx_15.tscn" id="271_any33"]
-[ext_resource type="PackedScene" uid="uid://cgnoj2wnraq6l" path="res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_11poster_cx_11.tscn" id="272_kji3y"]
-[ext_resource type="PackedScene" uid="uid://d0n2m0rtu5nhy" path="res://Scenes/Levels/LevelAssets/MegaPack2/pipe_e_3pipe_e_3.tscn" id="273_0upk7"]
-[ext_resource type="PackedScene" uid="uid://drf7i4vhki0ro" path="res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_4poster_cx_4.tscn" id="274_8c7k5"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_13poster_cx_13.tscn" id="270_2jfu4"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_15poster_cx_15.tscn" id="271_any33"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_11poster_cx_11.tscn" id="272_kji3y"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/pipe_e_3pipe_e_3.tscn" id="273_0upk7"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_4poster_cx_4.tscn" id="274_8c7k5"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/canned_food_2canned_food_2.tscn" id="275_t10gb"]
-[ext_resource type="Texture2D" uid="uid://dwsorjdn3rowh" path="res://Assets/Textures/Fair/table_large_1_wood_1.png" id="276_11482"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/canned_food_1canned_food_1.tscn" id="276_fid87"]
-[ext_resource type="PackedScene" uid="uid://b8pqi7sh0y25r" path="res://Scenes/Levels/LevelAssets/Restuarant/Painting_02Quequis_House_Props.tscn" id="277_q4ngu"]
-[ext_resource type="PackedScene" uid="uid://bly2jo7p48d13" path="res://Scenes/Levels/LevelAssets/MegaPack2/window_hr_2window_hr_2.tscn" id="278_sp2ab"]
-[ext_resource type="PackedScene" uid="uid://cy4t611hmtars" path="res://Scenes/Levels/LevelAssets/MegaPack2/wall_hr_2wall_hr_2.tscn" id="279_g0yvw"]
-[ext_resource type="PackedScene" uid="uid://dvxj4a1lqprbm" path="res://Scenes/Levels/LevelAssets/MegaPack2/pillar_hr_5pillar_hr_5.tscn" id="280_sxr1l"]
-[ext_resource type="PackedScene" uid="uid://u5n08u3lkhj1" path="res://Scenes/Levels/LevelAssets/MegaPack2/windows_hr_2windows_hr_2.tscn" id="281_hl2rp"]
-[ext_resource type="PackedScene" uid="uid://tgivo8o7o8rr" path="res://Scenes/Levels/LevelAssets/MegaPack2/doorway_hr_2_regulardoorway_hr_2_regular.tscn" id="282_lmlfi"]
-[ext_resource type="PackedScene" uid="uid://bjabryueiyq0v" path="res://Scenes/Levels/LevelAssets/MegaPack2/doorway_hr_3_regulardoorway_hr_3_regular.tscn" id="283_p5nad"]
-[ext_resource type="PackedScene" uid="uid://ukymrcva7p3t" path="res://Scenes/Levels/LevelAssets/MegaPack2/wall_hr_1wall_hr_1.tscn" id="284_8wjww"]
-[ext_resource type="PackedScene" uid="uid://coevwu6qyp4td" path="res://Scenes/Levels/LevelAssets/MegaPack2/door_hr_6door_hr_6.tscn" id="285_lsxs6"]
-[ext_resource type="PackedScene" uid="uid://w3j7ouyb0q2v" path="res://Scenes/Levels/LevelAssets/MegaPack2/door_hr_12door_hr_12.tscn" id="286_njwox"]
-[ext_resource type="PackedScene" uid="uid://djnook4h74d3m" path="res://Scenes/Levels/LevelAssets/MegaPack2/pillar_ay_2pillar_ay_2.tscn" id="287_l7l5l"]
-[ext_resource type="PackedScene" uid="uid://cwnfn7konvxot" path="res://Scenes/Levels/LevelAssets/MegaPack2/wall_hr_1_doublewall_hr_1_double.tscn" id="288_0mrme"]
-[ext_resource type="PackedScene" uid="uid://cilvyxrmyyasb" path="res://Scenes/Levels/LevelAssets/MegaPack2/fence_e_2fence_e_2.tscn" id="289_lcix7"]
-[ext_resource type="PackedScene" uid="uid://cnwb6hlxl60ml" path="res://Scenes/Levels/LevelAssets/MegaPack2/fence_b_1fence_b_1.tscn" id="290_ldkrd"]
-[ext_resource type="PackedScene" uid="uid://bbq456eapmugs" path="res://Scenes/Levels/LevelAssets/MegaPack2/tank_mx_1tank_mx_1.tscn" id="291_fbfwt"]
-[ext_resource type="PackedScene" uid="uid://d2er7wb5ccehr" path="res://Scenes/Levels/LevelAssets/MegaPack2/water_tower_hm_1water_tower_hm_1.tscn" id="292_jkep3"]
-[ext_resource type="PackedScene" uid="uid://cgceiyqk4nbfw" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_barrel_1wooden_barrel_1.tscn" id="293_dcgnm"]
-[ext_resource type="PackedScene" uid="uid://c1yeytoadrr75" path="res://Scenes/Levels/LevelAssets/MegaPack2/tire_1tire_1.tscn" id="294_ajeqm"]
-[ext_resource type="PackedScene" uid="uid://cdr8q77ei6kxh" path="res://Scenes/Levels/LevelAssets/MegaPack2/chimney_a_3chimney_a_3.tscn" id="295_5nmea"]
-[ext_resource type="PackedScene" uid="uid://bfxsof8pr8t2j" path="res://Scenes/Levels/LevelAssets/MegaPack2/doorway_rg_1_widedoorway_rg_1_wide.tscn" id="296_8r02v"]
-[ext_resource type="PackedScene" uid="uid://b7w3rx3bw8ysg" path="res://Scenes/Levels/LevelAssets/MegaPack2/gas_cylinder_mx_1gas_cylinder_mx_1.tscn" id="297_p5nad"]
-[ext_resource type="PackedScene" uid="uid://wjd52xu7osfw" path="res://Scenes/Levels/LevelAssets/MegaPack2/garages_block_hr_1garages_block_hr_1.tscn" id="298_8wjww"]
-[ext_resource type="PackedScene" uid="uid://cbspoyhrwei7k" path="res://Scenes/Levels/LevelAssets/MegaPack2/asphalt_hr_1_largeasphalt_hr_1_large.tscn" id="299_lsxs6"]
-[ext_resource type="PackedScene" uid="uid://cc344wkfg5og5" path="res://Scenes/Levels/LevelAssets/MegaPack2/pillar_hr_2pillar_hr_2.tscn" id="300_lmlfi"]
-[ext_resource type="PackedScene" uid="uid://xn0xauusf8qp" path="res://Scenes/Levels/LevelAssets/MegaPack2/barricade_a_1barricade_a_1.tscn" id="301_njwox"]
-[ext_resource type="PackedScene" uid="uid://cku6urcs3sgxr" path="res://Scenes/Levels/LevelAssets/MegaPack2/barricade_b_1barricade_b_1.tscn" id="302_l7l5l"]
-[ext_resource type="PackedScene" uid="uid://bpewhr3l13s8s" path="res://Scenes/Levels/LevelAssets/MegaPack2/bricks_stacked_mx_1bricks_stacked_mx_1.tscn" id="303_0mrme"]
-[ext_resource type="PackedScene" uid="uid://bp3avriat5c72" path="res://Scenes/Levels/LevelAssets/MegaPack2/bricks_stacked_mx_2_0bricks_stacked_mx_2_0.tscn" id="304_lcix7"]
-[ext_resource type="PackedScene" uid="uid://dpyiuhn6xhxkp" path="res://Scenes/Levels/LevelAssets/Restuarant/Coffee_maker_001Quequis_House_Props.tscn" id="305_5nmea"]
-[ext_resource type="PackedScene" uid="uid://mnejc2e1fv2w" path="res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_5poster_cx_5.tscn" id="306_8r02v"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Painting_02Quequis_House_Props.tscn" id="277_q4ngu"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/window_hr_2window_hr_2.tscn" id="278_sp2ab"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/wall_hr_2wall_hr_2.tscn" id="279_g0yvw"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/pillar_hr_5pillar_hr_5.tscn" id="280_sxr1l"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/windows_hr_2windows_hr_2.tscn" id="281_hl2rp"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/doorway_hr_2_regulardoorway_hr_2_regular.tscn" id="282_lmlfi"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/doorway_hr_3_regulardoorway_hr_3_regular.tscn" id="283_p5nad"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/wall_hr_1wall_hr_1.tscn" id="284_8wjww"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/door_hr_6door_hr_6.tscn" id="285_lsxs6"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/door_hr_12door_hr_12.tscn" id="286_njwox"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/pillar_ay_2pillar_ay_2.tscn" id="287_l7l5l"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/wall_hr_1_doublewall_hr_1_double.tscn" id="288_0mrme"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/fence_e_2fence_e_2.tscn" id="289_lcix7"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/fence_b_1fence_b_1.tscn" id="290_ldkrd"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/tank_mx_1tank_mx_1.tscn" id="291_fbfwt"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/water_tower_hm_1water_tower_hm_1.tscn" id="292_jkep3"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/wooden_barrel_1wooden_barrel_1.tscn" id="293_dcgnm"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/tire_1tire_1.tscn" id="294_ajeqm"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/chimney_a_3chimney_a_3.tscn" id="295_5nmea"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/doorway_rg_1_widedoorway_rg_1_wide.tscn" id="296_8r02v"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/gas_cylinder_mx_1gas_cylinder_mx_1.tscn" id="297_p5nad"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/garages_block_hr_1garages_block_hr_1.tscn" id="298_8wjww"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/asphalt_hr_1_largeasphalt_hr_1_large.tscn" id="299_lsxs6"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/pillar_hr_2pillar_hr_2.tscn" id="300_lmlfi"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/barricade_a_1barricade_a_1.tscn" id="301_njwox"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/barricade_b_1barricade_b_1.tscn" id="302_l7l5l"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/bricks_stacked_mx_1bricks_stacked_mx_1.tscn" id="303_0mrme"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/bricks_stacked_mx_2_0bricks_stacked_mx_2_0.tscn" id="304_lcix7"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Restuarant/Coffee_maker_001Quequis_House_Props.tscn" id="305_5nmea"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_5poster_cx_5.tscn" id="306_8r02v"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/lamp_3_offlamp_3_off.tscn" id="307_ofweg"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/vent_3vent_3.tscn" id="308_3n8jm"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/ammo_box_1ammo_box_1.tscn" id="309_r58w8"]
-[ext_resource type="PackedScene" uid="uid://xvxjybuhher2" path="res://Scenes/Levels/LevelAssets/Bunker/sign_2sign_2.tscn" id="310_08dt7"]
-[ext_resource type="PackedScene" uid="uid://4ri7jcmw2pnq" path="res://Scenes/Levels/LevelAssets/Bunker/floppy_disc_4floppy_disc_4.tscn" id="311_vka0o"]
-[ext_resource type="PackedScene" uid="uid://3qqw76h4j7c6" path="res://Scenes/Levels/LevelAssets/Bunker/supply_box_1supply_box_1.tscn" id="312_m054c"]
-[ext_resource type="PackedScene" uid="uid://d08lyecv6h4sm" path="res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hr_5floor_ceiling_hr_5.tscn" id="313_8blmf"]
-[ext_resource type="PackedScene" uid="uid://pcckg13nl01v" path="res://Scenes/Levels/LevelAssets/MegaPack2/old_mattress_mx_1old_mattress_mx_1.tscn" id="313_mo2eq"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/sign_2sign_2.tscn" id="310_08dt7"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/floppy_disc_4floppy_disc_4.tscn" id="311_vka0o"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/supply_box_1supply_box_1.tscn" id="312_m054c"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hr_5floor_ceiling_hr_5.tscn" id="313_8blmf"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/old_mattress_mx_1old_mattress_mx_1.tscn" id="313_mo2eq"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/cig_2cig_2.tscn" id="314_11482"]
-[ext_resource type="PackedScene" uid="uid://c5ki574qnfmnr" path="res://Scenes/Levels/LevelAssets/MegaPack2/electrical_equipment_2electrical_equipment_2.tscn" id="315_ludxl"]
-[ext_resource type="PackedScene" uid="uid://bkuobaal6okyw" path="res://Scenes/Levels/LevelAssets/MegaPack2/electrical_equipment_1electrical_equipment_1.tscn" id="316_wspmd"]
-[ext_resource type="PackedScene" uid="uid://c8xlvp1keahfu" path="res://Scenes/Levels/LevelAssets/MegaPack2/metal_barrel_hr_4_1metal_barrel_hr_4_1.tscn" id="317_aw08q"]
-[ext_resource type="PackedScene" uid="uid://fypeot3p7eph" path="res://Scenes/Levels/LevelAssets/Bunker/wall_box_2wall_box_2.tscn" id="318_c0sh3"]
-[ext_resource type="PackedScene" uid="uid://xm7rdhraph1s" path="res://Scenes/Levels/LevelAssets/Bunker/wall_box_1wall_box_1.tscn" id="319_wswev"]
-[ext_resource type="PackedScene" uid="uid://bkpem8rlgx3x2" path="res://Scenes/Levels/LevelAssets/Bunker/vent_4vent_4.tscn" id="320_xstaw"]
-[ext_resource type="PackedScene" uid="uid://bwh4eh23ipsgx" path="res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_9poster_cx_9.tscn" id="321_x2cls"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/electrical_equipment_2electrical_equipment_2.tscn" id="315_ludxl"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/electrical_equipment_1electrical_equipment_1.tscn" id="316_wspmd"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/metal_barrel_hr_4_1metal_barrel_hr_4_1.tscn" id="317_aw08q"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/wall_box_2wall_box_2.tscn" id="318_c0sh3"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/wall_box_1wall_box_1.tscn" id="319_wswev"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/vent_4vent_4.tscn" id="320_xstaw"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_9poster_cx_9.tscn" id="321_x2cls"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/door_3door_3.tscn" id="322_1jofj"]
-[ext_resource type="PackedScene" uid="uid://cq7ms0i73jmpe" path="res://Scenes/Levels/LevelAssets/MegaPack2/map_mx_1map_mx_1.tscn" id="323_ustob"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/map_mx_1map_mx_1.tscn" id="323_ustob"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/beam_5beam_5.tscn" id="324_ega4f"]
+[ext_resource type="Script" uid="uid://b48dqousk512e" path="res://Scripts/Pickups/TimedUpgradePickup.cs" id="325_11482"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_klxao"]
 properties/0/path = NodePath(".:PlayerStatJson")
@@ -390,45 +390,6 @@ fog_height = -1.25
 fog_height_density = 0.2789
 adjustment_enabled = true
 adjustment_saturation = 1.5
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pn54s"]
-resource_name = "wood_1"
-cull_mode = 2
-albedo_texture = ExtResource("276_11482")
-texture_filter = 2
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_d3dm2"]
-_surfaces = [{
-"aabb": AABB(-0.850002, -0.45, -0.97, 1.7, 0.9, 0.97),
-"format": 34896613377,
-"index_count": 948,
-"index_data": PackedByteArray("EgARAA0AEgAWABEAWgBZAFUAWgBeAFkAIwBIAEwAIwAfAEgAEAAtAC8AEAAOAC0AQgBBAD0AQgBGAEEAAwAPABQAAwAIAA8AKgApACUAKgAuACkAPwAzADgAPwBEADMACwAYABwACwAHABgAOwAAAAQAOwA3AAAAOQAVAD4AOQACABUADAAvACsADAAQAC8APAAXABMAPABAABcAXwAkACgAXwBbACQANgA1ADEANgA6ADUAIgAbAB0AIgAgABsAJwAbACAAJwAsABsAXgBXAFkAXgBcAFcAUgBLAE0AUgBQAEsAVwBLAFAAVwBcAEsARgA/AEEARgBEAD8ARwBUAFgARwBDAFQAUwAwADQAUwBPADAAUQBFAFYAUQAyAEUACQAtAA4ACQAaAC0ACQAcABoACQALABwAIQBdACYAIQBKAF0AIQBMAEoAIQAjAEwAOgAzADUAOgA4ADMAUQA0ADIAUQBTADQACgADAAUACgAIAAMAOQAEAAIAOQA7AAQAQwBVAFQAVQBbAFoAWwAlACQAJQArACoAKwANAAwADQATABIAEwA9ADwAPQBDAEIAQwBbAFUAWwArACUAKwATAA0AEwBDAD0AQwArAFsAKwBDABMAFgAPABEAFgAUAA8AQAAVABcAQAA+ABUAHgAdABkAHgAiAB0ATgBNAEkATgBSAE0ARQBYAFYARQBHAFgALgAnACkALgAsACcAXQAoACYAXQBfACgABgAFAAEABgAKAAUACwAGAAcACwAKAAYAAAAFAAQAAAABAAUACQAKAAsACQAIAAoABAADAAIABAAFAAMAFwASABMAFwAWABIADAARABAADAANABEAFQAWABcAFQAUABYAEAAPAA4AEAARAA8ALwAqACsALwAuACoAJAApACgAJAAlACkALQAuAC8ALQAsAC4AKAAnACYAKAApACcAIwAeAB8AIwAiAB4AGAAdABwAGAAZAB0AIQAiACMAIQAgACIAHAAbABoAHAAdABsAXwBaAFsAXwBeAFoAVABZAFgAVABVAFkAXQBeAF8AXQBcAF4AWABXAFYAWABZAFcAUwBOAE8AUwBSAE4ASABNAEwASABJAE0AUQBSAFMAUQBQAFIATABLAEoATABNAEsARwBCAEMARwBGAEIAPABBAEAAPAA9AEEARQBGAEcARQBEAEYAQAA/AD4AQABBAD8AOwA2ADcAOwA6ADYAMAA1ADQAMAAxADUAOQA6ADsAOQA4ADoANAAzADIANAA1ADMAAgAUABUAAgADABQADgAIAAkADgAPAAgAOAA+AD8AOAA5AD4ALAAaABsALAAtABoAJgAgACEAJgAnACAAXABKAEsAXABdAEoAMgBEAEUAMgAzAEQAUABWAFcAUABRAFYABwAZABgAGQAfAB4AHwBJAEgASQBPAE4ATwAxADAAMQA3ADYANwABAAAAAQAHAAYABwAfABkAHwBPAEkATwA3ADEANwAHAAEABwBPAB8ATwAHADcAuwC9AL4AuwC4AL0AsgBjAGEAsgC3AGMAtABgAGIAtACxAGAAwwDFAMYAwwDAAMUAugBnAGUAugC/AGcAvABkAGYAvAC5AGQAygBrAGkAygDPAGsAzABoAGoAzADJAGgAwgBvAG0AwgDHAG8AxABsAG4AxADBAGwAeQBzAHoAeQBwAHMAfQB7AH4AfQB4AHsAgQCFAIQAhQCNAIwAjQCJAIgAiQCBAIAAgQCNAIUAjQCBAIkAcQB3AHIAcQB0AHcAdQB/AHYAdQB8AH8AiQCDAIoAiQCAAIMAjQCLAI4AjQCIAIsAkQCVAJQAlQCdAJwAnQCZAJgAmQCRAJAAkQCdAJUAnQCRAJkAgQCHAIIAgQCEAIcAhQCPAIYAhQCMAI8AmQCTAJoAmQCQAJMAnQCbAJ4AnQCYAJsAoQClAKQApQCtAKwArQCpAKgAqQChAKAAoQCtAKUArQChAKkAkQCXAJIAkQCUAJcAlQCfAJYAlQCcAJ8AqQCjAKoAqQCgAKMArQCrAK4ArQCoAKsAoQCnAKIAoQCkAKcApQCvAKYApQCsAK8AcAByAHMAcABxAHIAdgB0AHUAdgB3AHQAfgB8AH0AfgB/AHwAegB4AHkAegB7AHgAgACCAIMAgACBAIIAhgCEAIUAhgCHAIQAjgCMAI0AjgCPAIwAigCIAIkAigCLAIgAkACSAJMAkACRAJIAlgCUAJUAlgCXAJQAngCcAJ0AngCfAJwAmgCYAJkAmgCbAJgAoACiAKMAoAChAKIApgCkAKUApgCnAKQArgCsAK0ArgCvAKwAqgCoAKkAqgCrAKgAcQB1AHQAdQB9AHwAfQB5AHgAeQBxAHAAcQB9AHUAfQBxAHkAtgCyALMAtgC3ALIAsAC0ALUAsACxALQAvgC6ALsAvgC/ALoAuAC8AL0AuAC5ALwAxgDCAMMAxgDHAMIAwADEAMUAwADBAMQAswC1ALYAswCwALUAzgDKAMsAzgDPAMoAyADMAM0AyADJAMwAywDNAM4AywDIAM0A"),
-"lods": [0.178053, PackedByteArray("QAAWAC8AKQBAAC8AKQBBAEAAQQApAF8AQQBfAFgAXwBeAFgAOABYADQAWABcADQAOwA6ADQATQA7ADQATQAFADsABQBNAEwABQBMAAsATAAiAAsAIgAnAAsAXgBcAFgAWAA4AEEANABcAE0ACwAvAAMACwAnAC8AJwBMAFwATABNAFwAJwAiAEwAXABfACcAXwApACcAXABeAF8AOgA4ADQACwADAAUAOAA7AAMAOwAFAAMAOAA6ADsAQAA4AAMAQABBADgAAwAWAEAAFgADAC8ALwAnACkAuwC9AL4AuwC4AL0AsgBjAGEAsgC3AGMAtgC3ALIAtgCyALMAtABgAGIAtACxAGAAsACxALQAsAC0ALUAwwDFAMYAwwDAAMUAxgDHAMIAxgDCAMMAwADBAMQAwADEAMUAugBnAGUAugC/AGcAvgC/ALoAvgC6ALsAvABkAGYAvAC5AGQAuAC5ALwAuAC8AL0AygBrAGkAygDPAGsAzABoAGoAzADJAGgAwgBvAG0AwgDHAG8AxABsAG4AxADBAGwAcABzAHoAcAByAHMAcABxAHIAegB7AHgAegB4AHAAfQB7AH4AfQB4AHsAgQCMAIQAgQCNAIwAjQCBAIAAjQCAAIgAcQB3AHIAcQB0AHcAfAB/AHYAfgB/AHwAdgB0AHwAdgB3AHQAfgB8AH0AgACDAIoAgACCAIMAgACBAIIAigCIAIAAigCLAIgAjQCLAI4AjQCIAIsAkQCcAJQAkQCdAJwAnQCRAJAAnQCQAJgAgQCHAIIAgQCEAIcAjACPAIYAhgCEAIwAhgCHAIQAjgCPAIwAjgCMAI0AkACTAJoAkACSAJMAkACRAJIAmgCbAJgAmgCYAJAAnQCbAJ4AnQCYAJsAoQCsAKQAoQCtAKwArQChAKAArQCgAKgAkQCXAJIAkQCUAJcAnACfAJYAngCfAJwAlgCUAJwAlgCXAJQAngCcAJ0AoACjAKoAoACiAKMAoAChAKIAqgCrAKgAqgCoAKAArQCrAK4ArQCoAKsAoQCnAKIAoQCkAKcArACvAKYApgCkAKwApgCnAKQArgCvAKwArgCsAK0AcQB8AHQAcQB9AHwAfQBxAHAAfQBwAHgAswC1ALYAswCwALUAzgDKAMsAzgDPAMoAywDNAM4AywDIAM0AyADMAM0AyADJAMwA")],
-"name": "wood_1",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 208,
-"vertex_data": PackedByteArray("7ggm/TINAACaBxz8Mg0AAE4I//+OCgAA+wb1/o4KAAB9CCn/bAwAACkHIP5sDAAADgKi8TINAACBASDvMg0AAIwAz/KOCgAAAABP8I4KAAD9AHfybAwAAHAA9u9sDAAAgQEg7wAAAAAOAqLxAAAAAAAAT/CjAgAAjADP8qMCAABwAPbvxQAAAP0Ad/LFAAAAmgcc/AAAAADuCCb9AAAAAPsG9f6jAgAATgj//6MCAAApByD+xQAAAH0IKf/FAAAAgQHeEDINAAAOAlwOMg0AAAAArw+OCgAAjAAvDY4KAABwAAgQbAwAAP0Ahw1sDAAAmgfiAzINAADuCNgCMg0AAPsGCQGOCgAATggAAI4KAAApB94BbAwAAH0I1QBsDAAA7gjYAgAAAACaB+IDAAAAAE4IAACjAgAA+wYJAaMCAAB9CNUAxQAAACkH3gHFAAAADgJcDgAAAACBAd4QAAAAAIwALw2jAgAAAACvD6MCAAD9AIcNxQAAAHAACBDFAAAAff4g7zINAADw/aLxMg0AAP//T/COCgAAcv/P8o4KAACO//bvbAwAAAH/d/JsDAAAZPgc/DINAAAQ9yb9Mg0AAAP59f6OCgAAsPf//44KAADV+CD+bAwAAIH3Kf9sDAAAEPcm/QAAAABk+Bz8AAAAALD3//+jAgAAA/n1/qMCAACB9yn/xQAAANX4IP7FAAAA8P2i8QAAAAB9/iDvAAAAAHL/z/KjAgAA//9P8KMCAAAB/3fyxQAAAI7/9u/FAAAAEPfYAjINAABk+OIDMg0AALD3AACOCgAAA/kJAY4KAACB99UAbAwAANX43gFsDAAA8P1cDjINAAB9/t4QMg0AAHL/Lw2OCgAA//+vD44KAAAB/4cNbAwAAI7/CBBsDAAAff7eEAAAAADw/VwOAAAAAP//rw+jAgAAcv8vDaMCAACO/wgQxQAAAAH/hw3FAAAAZPjiAwAAAAAQ99gCAAAAAAP5CQGjAgAAsPcAAKMCAADV+N4BxQAAAIH31QDFAAAAkxON4zINAACTE93dMg0AAGvsjeMyDQAAa+zd3TINAACTEyEiMg0AAJMTcRwyDQAAa+whIjINAABr7HEcMg0AAA8P+iQyDQAAEhL6JDINAAAPDwTbMg0AABISBNsyDQAA7e36JDINAADw8PokMg0AAO3tBNsyDQAA8PAE2zINAADMDCIi//8AAAwMtSD//wAA8AnnJDINAACUCh0mMg0AAAwMLRj//wAAzAzBFv//AACUCsUSMg0AAPAJ+xMyDQAAEhK1IP//AABRESIi//8AAIkTHSYyDQAALRTnJDINAABREcEW//8AABISLRj//wAALRT7EzINAACJE8USMg0AAMwMPen+/wAADAzR5/7/AADwCQPsMg0AAJQKOe0yDQAADAxJ3/7/AADMDN3d/v8AAJQK4dkyDQAA8AkX2zINAAASEtHn/v8AAFERPen+/wAAiRM57TINAAAtFAPsMg0AAFER3d3+/wAAEhJJ3/7/AAAtFBfbMg0AAIkT4dkyDQAAre496f7/AADt7dHn/v8AANHrA+wyDQAAdew57TINAADt7Unf/v8AAK3u3d3+/wAAdezh2TINAADR6xfbMg0AAPPz0ef+/wAAMvM96f7/AABq9TntMg0AAA72A+wyDQAAMvPd3f7/AADz80nf/v8AAA72F9syDQAAavXh2TINAACt7iIi//8AAO3ttSD//wAA0evnJDINAAB17B0mMg0AAO3tLRj//wAAre7BFv//AAB17MUSMg0AANHr+xMyDQAA8/O1IP//AAAy8yIi//8AAGr1HSYyDQAADvbnJDINAAAy88EW//8AAPPzLRj//wAADvb7EzINAABq9cUSMg0AAJMTIeJPIgAAkxON4/0gAACTE93d/SAAAJMTSd9PIgAAa+yN4/0gAABr7CHiTyIAAGvsSd9PIgAAa+zd3f0gAACTE7UgTyIAAJMTISL9IAAAkxNxHP0gAACTE90dTyIAAGvsISL9IAAAa+y1IE8iAABr7N0dTyIAAGvscRz9IAAAre76JE8iAADt7fok/SAAAPDw+iT9IAAAL/D6JE8iAADt7QTb/SAAAK3uBNtPIgAAL/AE208iAADw8ATb/SAAAM8P+iRPIgAADw/6JP0gAAASEvok/SAAAFER+iRPIgAADw8E2/0gAADPDwTbTyIAAFERBNtPIgAAEhIE2/0gAAA=")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_ludxl"]
-resource_name = "table_large_1_table_large_1"
-lightmap_size_hint = Vector2i(90, 94)
-_surfaces = [{
-"aabb": AABB(-0.850002, -0.45, -0.97, 1.7, 0.9, 0.97),
-"attribute_data": PackedByteArray("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"),
-"format": 34359742519,
-"index_count": 948,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUASABJAEoASABLAEkARQBMAE0ARQBHAEwATgAcAE8ATgAfABwAUABRAFIAUABTAFEAVABVAFYAVABXAFUAWABZAFoAWABbAFkAXAANAA8AXABdAA0AXABeAF0AXABfAF4AYABhAGIAYABjAGEAYABkAGMAYABlAGQAZgAdAGcAZgAeAB0AWABoAFsAWABpAGgAagAUAGsAagAXABQAKABsACsAKABtAGwAbgBvAHAAbwBxAHIAcQBzAHQAcwB1AHYAdQB3AHgAdwB5AHoAeQB7AHwAewBuAH0AbgBxAG8AcQB1AHMAdQB5AHcAeQBuAHsAbgB1AHEAdQBuAHkAfgB/AIAAfgCBAH8AggApAIMAggAqACkAhACFAIYAhACHAIUAiACJAIoAiACLAIkAWQCMAFoAWQCNAIwAjgBAAI8AjgBDAEAAYQCQAGIAYQCRAJAAkgCTAJQAkgCVAJMAIACSACMAIACVAJIAJQCTACYAJQCUAJMAXABqAF8AXAAXAGoAbACWACsAbACXAJYAMQAAADIAMQADAAAALAABAC8ALAACAAEAKQCYAIMAKQCZAJgADAAVAA8ADACaABUALQAYAC4ALQAbABgANQAZADYANQAaABkADQCbAA4ADQCcAJsAkACdAGIAkACeAJ0ACACEAAsACACHAIQAIQCFACIAIQCGAIUAYACfAGUAYACgAJ8AXgA9AF0AXgA+AD0ANAAEADcANAAHAAQAUQAFAFIAUQAGAAUAYQChAJEAYQCiAKEAjACjAFoAjACkAKMAVACIAFcAVACLAIgACQCJAAoACQCKAIkAWABIAGkAWABLAEgAZAClAGMAZACmAKUAUAAQAFMAUAATABAAMAARADMAMAASABEAWQCnAI0AWQCoAKcAggCpACoAggCqAKkAJAA4ACcAJAA7ADgAVQA5AFYAVQA6ADkAKACrAG0AKACsAKsAaACtAFsAaACuAK0AKwCZACkAKwCWAJkADwAXAFwADwAVABcArAAqAKkArAAoACoAnABdAD0AnAANAF0AYgCgAGAAYgCdAKAAogBjAKUAogBhAGMAWwCoAFkAWwCtAKgASwBaAKMASwBYAFoArwCwALEAsACyALMAsgC0ALUAtAC2ALcAtgC4ALkAuAC6ALsAugC8AL0AvACvAL4ArwCyALAAsgC2ALQAtgC6ALgAugCvALwArwC2ALIAtgCvALoAvwDAAMEAvwDCAMAAwwDEAMUAwwDGAMQAxwDIAMkAxwDKAMgAywDMAM0AywDOAMwAzwDQANEAzwDSANAA0wDUANUA0wDWANQA1wDYANkA1wDaANgA2wDcAN0A2wDeANwA3wDgAOEA3wDiAOAA4wDkAOUA4wDmAOQA5wDoAOkA5wDqAOgA6wDsAO0A6wDuAOwA7wDwAPEA8ADyAPMA8gD0APUA9ADvAPYA7wDyAPAA8gDvAPQA9wD4APkA9wD6APgA+wD8AP0A+wD+APwA/wAAAQEB/wACAQABAwEEAQUBAwEGAQQBBwEIAQkBCAEKAQsBCgEMAQ0BDAEHAQ4BBwEKAQgBCgEHAQwBDwEQAREBDwESARABEwEUARUBEwEWARQBFwEYARkBFwEaARgBGwEcAR0BGwEeARwBHwEgASEBIAEiASMBIgEkASUBJAEfASYBHwEiASABIgEfASQBJwEoASkBJwEqASgBKwEsAS0BKwEuASwBLwEwATEBLwEyATABMwE0ATUBMwE2ATQBNwE4ATkBNwE6ATgBOwE8AT0BOwE+ATwBPwFAAUEBPwFCAUABQwFEAUUBQwFGAUQBRwH+AEgBRwH8AP4ASQFKAUsBSQFMAUoBTQFOAU8BTQFQAU4BUQFSAVMBUQFUAVIBVQEWAVYBVQEUARYBAQFXAf8AAQFYAVcBWQFaAVsBWQFcAVoBXQFeAV8BXQFgAV4BYQEuAWIBYQEsAS4BGQFjARcBGQFkAWMBZQFmAWcBZQFoAWYBaQFqAWsBaQFsAWoBbQE+AW4BbQE8AT4BbwFwAXEBbwFyAXABcwF0AXUBdAF2AXcBdgF4AXkBeAFzAXoBcwF2AXQBdgFzAXgBewF8AX0BewF+AXwBfwHHAIABfwHKAMcAgQGCAYMBgQGEAYIBhQHTAIYBhQHWANMAzQCHAcsAzQCIAYcBiQGKAYsBiQGMAYoBjQGOAY8BjQGQAY4BkQGSAZMBkQGUAZIBlQGWAZcBlQGYAZYBkwGZAZEBkwGaAZkB"),
-"material": SubResource("StandardMaterial3D_pn54s"),
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 411,
-"vertex_data": PackedByteArray("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/f95sDSe5KyI8haoymEZU4IUVGPoPJhTIABocxpTymHLC2NimFPpPAUFGnIUQ2Us8/rlDeg8mFMgAGhzmFPpPAUFGnJlLBJD1v+XDBvTNB6EFFTjmdMWQyUAaPPL4eYszQtk4uu8ZiwLBRvy5KzLYTT0m51lrOs89frljTSeGlN866qcFcOZU9v/l4xlrOs89frljRXDmVPb/5eMyuEZ08wLmp0a08nhghSqnJT0l8W6vapCMfoUIkvc/z+T9Gc6ur1UPTH6591H3ABAZbqTdKf6IOETos6F/v8lrmW6a4uo+t2eE6Iwev7/2NGU2pFt+v/o9JHtZ6UAAOn0kO2WWgAAFYuV2m2S/v8Wi2olbZIDAOh0ZiWRbQMAEwuXRZN0fwRnYZpFbYuBBJcekW1nJVvq00pppW4SWuorNZVabRJZ6tFKbpJpJVXqLDVri5hFauuHNZN0mEUN60hKNJ7jrHvrVOPkrDOeMvRj4mW6a4t8+2fhZbqTdH77l54aUzOeywubHcth5KyCFKock3Rlug7rSMpsi2S6a+uGtf/////9/wBA//////3/AED//////f8AQP/////9/wBA//////3/AED//////f8AQP////////8///////3/AED//////f8AQP/////9/wBA//////3/AED//////f8AQP/////9/wBA//////3/AED/////////P//////9/wBA5CzJ4XvrVGNmLOi82f9pczMeGtMw9GNiFEOZ0/L6GnKXxZL0Deu1tWc6k/Rr63fKOm2DZVDo/L8bU8thYMLUuYJlOW3z4P6/y2EaUy3QQ7l8mjlt/P+FzzSeGlOH8ujXxZKDZfn/1svjrMthqfPO3pP0ZjqCBGfhk/SXxYIEl54yHuQsMfSaHeUsMh5666kcZjpsC23rd0qZxW0LCuu2NYJlxZLz4ADAy2HkrC3QusY6bXuaUegBwBtTM55hwinGmlMVw3TLitjLYeWsdc3W1OUsy+FN1kPZFUOZ0+bOQ9ozHhrTMPRjYjIe5Cwx9JodZSwSQ9b/lwwUQ2Us6M5EWuQsMx5P1kRZymEZU3TN2FSYU+k8dMuKWBvTNB50zSYr67xnLHLLcyeZ0xZDJQBo88vh5izNC2TiZqzqPOXOuiU0nhpTTda6JsrhGdPMC5qdmNPovCEAlozpvJjTdMtzpxrTyeF0zSarNJ7jrE7WuqZmrBPD5865pRTDZaza/2fz5KwznjL0Y+L9f/9//f//v/1//3/9//+//3//f/3/AMD9f/9//f//v/9//3/9/wDA/X//f/3//7/9f/9//f//v/1//3/9//+//3//f/3/AMD9f/9//f//v/9//3/9/wDA/X//f/3//7//f/9//f8AwP1//3/9//+//X//f/3//7//f/9//f8AwP9/glr+//+//398pf7//7//f4Ja/v//v/9/fKX+//+//398Jf7//z8CgAAA/v//PwKAAAD+//8//398Jf7//z//f4Da/v//v/9//f/+//+//3/9//7//7//f4Da/v//v3yl/n8BgACAglr+fwGAAIB8pf5/AYAAgIJa/n8BgACA/398Jf7//z8CgAAA/v//PwKAAAD+//8//398Jf7//z//f4Da/v//v/9//f/+//+//3/9//7//7//f4Da/v//v3/a/n/8fwCA/P/9f/l/AID8//1/+X8AgH/a/n/8fwCAfSX/f/p//n8CAACA+n/+fwIAAID6f/5/fSX/f/p//n9/2v5//H8AgPz//X/5fwCA/P/9f/l/AIB/2v5//H8AgH0l/3/6f/5/AgAAgPp//n8CAACA+n/+f30l/3/6f/5/wKRI2Q2Anb7rWvfY73+cvhOl9dgOgJu+PltI2fB/nb5K2T9btv9OgffYE6Wx/7D+99jrWrb/ToFI2cCktP+v/v9//n8BgACA/3/+fwGAAID/f/5/AYAAgP9//n8BgACA/3/+fwGAAID/f/5/AYAAgP9//n8BgACA/3/+fwGAAIC0JsGkSQBOAQQn61pIALB+BycTpUgAUAGyJj1bSQCyfj9bsibuf50+FKUHJw+AnD7tWgQn7n+cPsOktyYNgJ0+wKRI2Q2Anb7rWvfY73+cvhOl9dgOgJu+PltI2fB/nb5K2T9btv9OgffYE6Wx/7D+99jrWrb/ToFI2cCktP+v/v9//n8BgACA/3/+fwGAAID/f/5/AYAAgP9//n8BgACA/3/+fwGAAID/f/5/AYAAgP9//n8BgACA/3/+fwGAAIC0JsGkSQBOAQQn61pIALB+BycTpUgAUAGyJj1bSQCyfj9bsibuf50+FKUHJw+AnD7tWgQn7n+cPsOktyYNgJ0+wKRI2Q2Anb7rWvfY73+cvhOl9dgOgJu+PltI2fB/nb5K2T9btv9OgffYE6Wx/7D+99jrWrb/ToFI2cCktP+v/v9//n8BgACA/3/+fwGAAID/f/5/AYAAgP9//n8BgACA/3/+fwGAAID/f/5/AYAAgP9//n8BgACA/3/+fwGAAIC0JsGkSQBOAQQn61pIALB+BycTpUgAUAGyJj1bSQCyfj9bsibuf50+FKUHJw+AnD7tWgQn7n+cPsOktyYNgJ0+wKRI2Q2Anb7rWvfY73+cvhOl9dgOgJu+PltI2fB/nb5K2T9btv9OgffYE6Wx/7D+99jrWrb/ToFI2cCktP+v/rQmwaRJAE4BBCfrWkgAsH4HJxOlSABQAbImPVtJALJ+P1uyJu5/nT4UpQcnD4CcPu1aBCfuf5w+w6S3Jg2AnT4+W0jZ8H+dvgknE6XvgOG961r32O9/nL62JsCk8oDgve1aBCfuf5w+tSY9W/CA4z0/W7Im7n+dPgYn6lrtgOI9+djsWhF/4z1N2T9bEH/iPROl9dgOgJu+SNm/pAt/4b3ApEjZDYCdvvbYEqUPf+G9PltI2fB/nb4JJxOl74Dhveta99jvf5y+tibApPKA4L3tWgQn7n+cPrUmPVvwgOM9P1uyJu5/nT4GJ+pa7YDiPfnY7FoRf+M9Tdk/WxB/4j1I2b+kC3/hvfbYEqUPf+G9PltI2fB/nb4JJxOl74Dhveta99jvf5y+tibApPKA4L3tWgQn7n+cPrUmPVvwgOM9P1uyJu5/nT4GJ+pa7YDiPfnY7FoRf+M9Tdk/WxB/4j1I2b+kC3/hvfbYEqUPf+G9PltI2fB/nb4JJxOl74Dhveta99jvf5y+tibApPKA4L3tWgQn7n+cPrUmPVvwgOM9P1uyJu5/nT4GJ+pa7YDiPfnY7FoRf+M9Tdk/WxB/4j0TpfXYDoCbvkjZv6QLf+G9wKRI2Q2Anb722BKlD3/hvf9//n8BgACA/3/+fwGAAID/f/5/AYAAgP9//n8BgACA/3/+fwGAAID/f/5/AYAAgP9//n8BgACA/3/+fwGAAID/f4Fa/v//P/9/fCX+//8//3+BWv7//z//f3wl/v//P/9/fKX+//+//398pf7//7//f4Fa/v//P/9/fCX+//8//3+BWv7//z//f3wl/v//P/9/fKX+//+//398pf7//79/2v5//H8AgH/a/n/8fwCAglr+fwGAAIB+Jf5/AoAAgIJa/n8BgACAfiX+fwKAAID/f4Ja/v//v/9/fKX+//+//3+CWv7//7//f3yl/v//v3yl/n8BgACAf9r+f/x/AIB8pf5/AYAAgH/a/n/8fwCAglr+fwGAAIB+Jf5/AoAAgIJa/n8BgACAfiX+fwKAAICCWv5/AYAAgIJa/n8BgACA")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_d3dm2")
 
 [node name="Jackson\'sLevel" type="Node3D"]
 script = ExtResource("1_3cian")
@@ -900,19 +861,37 @@ transform = Transform3D(-1.08908e-07, 1, -4.37114e-08, 4.35633e-07, -4.37114e-08
 [node name="Spawns" type="Node3D" parent="DONT DELETE"]
 
 [node name="1" type="Node3D" parent="DONT DELETE/Spawns" groups=["PlayerSpawnPoint"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6992, 1.64468, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9384, 5.64937, -17.82)
 
 [node name="2" type="Node3D" parent="DONT DELETE/Spawns" groups=["PlayerSpawnPoint"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2335, 0, -9.26633)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4069, 0.352964, -17.1223)
 
 [node name="3" type="Node3D" parent="DONT DELETE/Spawns" groups=["PlayerSpawnPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.9302)
 
 [node name="4" type="Node3D" parent="DONT DELETE/Spawns" groups=["PlayerSpawnPoint"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8213, 0, -1.52081)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.7776, 0, 0.134913)
 
 [node name="5" type="Node3D" parent="DONT DELETE/Spawns" groups=["PlayerSpawnPoint"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.72996, 0, 9.44778)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3828, 5.43475, 9.45034)
+
+[node name="6" type="Node3D" parent="DONT DELETE/Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5069, 8.75853, -8.89048)
+
+[node name="7" type="Node3D" parent="DONT DELETE/Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.71587, 5.38386, -12.9416)
+
+[node name="8" type="Node3D" parent="DONT DELETE/Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.503, 5.19635, 15.9117)
+
+[node name="9" type="Node3D" parent="DONT DELETE/Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.527, 5.19635, 19.6626)
+
+[node name="10" type="Node3D" parent="DONT DELETE/Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7272, 0.544376, 18.8003)
+
+[node name="11" type="Node3D" parent="DONT DELETE/Spawns" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.8903, 0.544376, 17.9859)
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="DONT DELETE"]
 root_path = NodePath("../..")
@@ -1101,7 +1080,7 @@ transform = Transform3D(-2.86603e-14, 0.759574, -2.11397e-07, -1.31134e-07, -1.6
 transform = Transform3D(-2.86603e-14, 0.759574, -2.11397e-07, -1.31134e-07, -1.6601e-07, -0.967242, -1, 0, 1.26838e-07, 21.6526, 0.0103078, -0.370956)
 
 [node name="catwalk_1catwalk_1_tscn9" parent="." instance=ExtResource("19_wlggv")]
-transform = Transform3D(1.63097e-07, -1, -3.0598e-07, -1.08732e-07, -3.0598e-07, 1, -1.24374, -1.31134e-07, -8.74228e-08, 27.0173, 0.0107442, 19.51)
+transform = Transform3D(1.63097e-07, -1, -3.0598e-07, -0.167483, -3.20852e-07, 0.990892, -1.23241, -8.87361e-08, -0.134661, 27.0173, -0.325425, 19.5557)
 
 [node name="wall_small_1wall_small_1_tscn2" parent="." instance=ExtResource("34_l6hym")]
 transform = Transform3D(0.778691, -0.524121, 3.4095e-08, 2.87152e-15, -2.93229e-08, -0.998337, 0.974751, 0.4187, -2.72372e-08, -20.7021, 2.5, 10.7503)
@@ -1197,7 +1176,7 @@ transform = Transform3D(-4.02103e-08, -0.919904, 0.392144, -1.71412e-08, -0.3921
 transform = Transform3D(-4.02103e-08, -0.919904, 0.392144, -1.71412e-08, -0.392144, -0.919904, 1, -4.37114e-08, 1.91069e-15, -21.3515, 2.3916, 2.4681)
 
 [node name="wall_small_1wall_small_1_tscn43" parent="." instance=ExtResource("34_l6hym")]
-transform = Transform3D(-2.38419e-07, -1, 4.37114e-08, 1.02495e-14, -4.37114e-08, -1, 5.76995, -2.98023e-08, 0, -14.118, 2.5, 4.58729)
+transform = Transform3D(-2.71817e-07, -1, 4.37114e-08, 1.16853e-14, -4.37114e-08, -1, 6.57821, -2.98023e-08, 0, -14.118, 2.5, 4.58729)
 
 [node name="pillar_1pillar_1_tscn123" parent="." instance=ExtResource("9_2c055")]
 transform = Transform3D(-1, -1.19209e-07, 5.32907e-15, 0, -4.37114e-08, -1, 1.19209e-07, -1, 4.37114e-08, -14.1864, 0, 4.28729)
@@ -9510,7 +9489,7 @@ transform = Transform3D(7.19937e-08, -1, -5.12889e-08, -0.482402, -3.09086e-08, 
 transform = Transform3D(-5.1791e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1.18484, -4.37114e-08, 1.91069e-15, 27, 3.07367, -11.682)
 
 [node name="catwalk_1catwalk_1_tscn5" parent="." instance=ExtResource("19_wlggv")]
-transform = Transform3D(1.3394e-07, -1, -6.18172e-08, -0.897483, -3.09086e-08, -0.707107, 0.897483, 1.18331e-07, -0.707107, 27, 1.5, 15.5)
+transform = Transform3D(9.08184e-08, -1, -7.04918e-08, -0.608541, -3.09086e-08, -0.806333, 0.608541, 1.18331e-07, -0.806333, 27, 2.07265, 14.999)
 
 [node name="catwalk_1catwalk_1_tscn7" parent="." instance=ExtResource("19_wlggv")]
 transform = Transform3D(1.3394e-07, -1, 6.18172e-08, -0.897483, -3.09086e-08, 0.707107, -0.897483, -1.18331e-07, -0.707107, 27, 1.5, 7.91887)
@@ -9575,11 +9554,6 @@ transform = Transform3D(0.774875, 0.632114, -2.76306e-08, 0, -4.37114e-08, -1, -
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9666, -1.19209e-07, 24.1739)
 UpgradeSpawnList = Array[int]([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 SpawnWeights = Array[int]([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
-
-[node name="TimedWeaponPickup_tscn2" parent="Pickups" instance=ExtResource("152_qco11")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.1809, 0, -11.8418)
-WeaponSpawnList = Array[int]([0, 1, 2, 3, 4])
-SpawnWeights = Array[int]([1, 1, 1, 1, 1])
 
 [node name="TimedUpgradePickup_tscn2" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11879, 0, -20.9637)
@@ -9674,12 +9648,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2684, 5, 14.8292)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.0782, 5, 16.033)
 
 [node name="TimedUpgradePickup_tscn13" parent="Pickups" instance=ExtResource("118_fuo22")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3877, 5, 9.88373)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.37807, 5, 9.88373)
 UpgradeSpawnList = Array[int]([3])
 SpawnWeights = Array[int]([1])
 
 [node name="TimedWeaponPickup_tscn14" parent="Pickups" instance=ExtResource("152_qco11")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7742, 6, 9.86669)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5907, 5.4783, 9.72015)
 
 [node name="TimedUpgradePickup_tscn14" parent="Pickups" instance=ExtResource("118_fuo22")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.7086, 5, 19.7673)
@@ -10701,11 +10675,6 @@ distance_fade_shadow = 15.0
 spot_range = 10.4131
 spot_attenuation = 0.0
 spot_angle = 55.7457
-
-[node name="table_large_1" type="MeshInstance3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.1358, 0, 0)
-mesh = SubResource("ArrayMesh_ludxl")
-skeleton = NodePath("")
 
 [node name="window_hr_2window_hr_2_tscn" parent="." instance=ExtResource("278_sp2ab")]
 transform = Transform3D(-0.707107, -0.707107, 3.09086e-08, 0, -4.37114e-08, -1, 0.707107, -0.707107, 3.09086e-08, -20, 0, -30)
@@ -13644,5 +13613,12 @@ transform = Transform3D(0.566538, 2.25071e-08, 0.340812, 0.265265, -6.17739e-08,
 
 [node name="beam_5beam_5_tscn" parent="." instance=ExtResource("324_ega4f")]
 transform = Transform3D(0.678511, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -24.3724, 7.24546, -3.98591)
+
+[node name="TimedUpgradePickup_tscn3" type="Node3D" parent="." node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar") instance=ExtResource("118_fuo22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, -1.19209e-07, -11.5)
+script = ExtResource("325_11482")
+PickupArea = NodePath("Area3D")
+MeshParent = NodePath("MeshParent")
+ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
 
 [editable path="cig_1cig_1_tscn7"]
