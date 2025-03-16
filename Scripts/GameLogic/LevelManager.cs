@@ -181,6 +181,20 @@ public partial class LevelManager : Node
 		}
     }
 
+	public void ToggleXrayEffect(bool enabled = true)
+	{
+		int localPeer = Multiplayer.GetUniqueId();
+		foreach(long peerId in LevelPeerInfo.Keys)
+		{
+			if(peerId == localPeer || LevelPeerInfo[peerId].characterNode == null) continue;
+			for(int i = 0; i < LevelPeerInfo[peerId].characterNode.CharacterMesh.Mesh.GetSurfaceCount(); i++)
+			{
+				BaseMaterial3D surfaceMaterial = (BaseMaterial3D)LevelPeerInfo[peerId].characterNode.CharacterMesh.GetSurfaceOverrideMaterial(i);
+				surfaceMaterial.NoDepthTest = enabled;
+			}
+		}
+	}
+
 	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
 	public void RequestSpawnPoint()
 	{

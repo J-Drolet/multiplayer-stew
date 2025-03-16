@@ -98,6 +98,8 @@ public partial class Client : Node
     private void ConnectedToServer()
     {
         GD.Print("Connected to server");
+        UI.MainMenu.CloseAllWindows();
+        UI.MainMenu.LobbyPage.Show();
         UI.Spinner.Hide();
         string peerInfo = JsonSerializer.Serialize(new PeerInfo() 
         { 

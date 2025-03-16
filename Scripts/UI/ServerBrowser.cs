@@ -51,8 +51,6 @@ public partial class ServerBrowser : Control
     public void ConnectToServer(string ip, int port) 
     {
         Client.Instance.ConnectToServer(ip, port);
-        Hide();
-        LobbyPage.Show();
         UI.Spinner.Show();
     }
 

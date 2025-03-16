@@ -49,7 +49,8 @@ public partial class Character : Entity
     [Export, ExportRequired]
     public AudioStream OutlinePlayerSFX { get; set; }
 
-    private double TimeSinceXray { get; set; } // for see through walls upgrade
+	private Timer XrayTimer { get; set; }
+	private Timer XrayDisableTimer { get; set; }
     public double SlowdownMultiplier { get; set; } = 1.0;
     private int JumpsSinceHitGround { get; set; } // keeps track of how many jumps the character has done since last hitting the ground
     #endregion
@@ -82,6 +83,8 @@ public partial class Character : Entity
 			Input.MouseMode = Input.MouseModeEnum.Captured;
 
 			CharacterMesh.Hide();
+
+			LevelManager.Instance.ToggleXrayEffect(false); // disable Xray effect on spawn
 		}
 		else
 		{
@@ -149,7 +152,6 @@ public partial class Character : Entity
     public override void _Process(double delta)
     {
 		base._Process(delta);
-
         #region UpgradeLogic
         ////////// Invisibility upgrade
         float transparency = Upgrades.Contains(Upgrade.C_Invisibility)? (float)Config.GetValue("Upgrade.C_Invisibility", "invisibility_transparency", true) : 0;
@@ -173,35 +175,28 @@ public partial class Character : Entity
 		////////// Outline Players Upgrade
 		if(Upgrades.Contains(Upgrade.C_OutlinePlayers))
 		{
-			double beforeFrameTime = TimeSinceXray;
-			TimeSinceXray += delta;
-			double upgradeDuration = (double)Config.GetValue("Upgrade.C_OutlinePlayers", "outline_players_duration", true);
-
-			if(beforeFrameTime < upgradeDuration && TimeSinceXray >= upgradeDuration) // disable effect
+			if(XrayTimer == null)
 			{
-				foreach(int peerId in LevelManager.Instance.LevelPeerInfo.Keys)
+				if(XrayDisableTimer == null)
 				{
-					if(peerId != Multiplayer.GetUniqueId()) // only add xray to peers
-					{
-						LevelManager.Instance.LevelPeerInfo[peerId].characterNode.CharacterMesh.Mesh.SurfaceSetMaterial(0, null);
-					}
-				}	
-			}
-
-			// enable effect
-			if(TimeSinceXray >= (double)Config.GetValue("Upgrade.C_OutlinePlayers", "outline_players_cooldown", true))
-			{
-				TimeSinceXray = 0;
-				MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, OutlinePlayerSFX.ResourcePath, this.GetPath(), Multiplayer.GetUniqueId(), "SFX");
-
-				foreach(long peerId in LevelManager.Instance.LevelPeerInfo.Keys)
-				{
-					if(peerId != Multiplayer.GetUniqueId()) // only add xray to peers
-					{
-						Material xrayMaterial = (Material) ResourceLoader.Load("res://Assets/Materials/Upgrades/XRay.tres");
-						LevelManager.Instance.LevelPeerInfo[peerId].characterNode.CharacterMesh.Mesh.SurfaceSetMaterial(0, xrayMaterial);
-					}
+					XrayDisableTimer = new();
+					XrayDisableTimer.Name = "XrayDisableTimer";
+					XrayDisableTimer.WaitTime = (double)Config.GetValue("Upgrade.C_OutlinePlayers", "outline_players_duration", true);
+					XrayDisableTimer.Autostart = false;
+					XrayDisableTimer.OneShot = true;
+					XrayDisableTimer.Timeout += () => {LevelManager.Instance.ToggleXrayEffect(false);};
+					AddChild(XrayDisableTimer);
 				}
+				XrayTimer = new();
+				XrayTimer.Name = "XrayEnableTimer";
+				XrayTimer.WaitTime = (double)Config.GetValue("Upgrade.C_OutlinePlayers", "outline_players_cooldown", true);
+				XrayTimer.Autostart = true;
+				XrayTimer.Timeout += () => {
+					LevelManager.Instance.ToggleXrayEffect(true);
+					MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, OutlinePlayerSFX.ResourcePath, this.GetPath(), Multiplayer.GetUniqueId(), "SFX");
+					XrayDisableTimer.Start();
+				};
+				AddChild(XrayTimer);
 			}
 		}
 		#endregion
@@ -427,6 +422,22 @@ public partial class Character : Entity
 		if (IsMultiplayerAuthority())
 		{
 			UI.InGameUI.ItemDisplay.Refresh(Upgrades);
+
+			if(upgrade == Upgrade.C_OutlinePlayers)
+			{
+				LevelManager.Instance.ToggleXrayEffect(false); // disable xray in case we remove this
+				
+				if(XrayTimer != null)
+				{
+					XrayTimer.QueueFree();
+					XrayTimer = null;
+				}
+				if(XrayDisableTimer != null)
+				{
+					XrayTimer.QueueFree();
+					XrayTimer = null;
+				}
+			}
 		}
     }
 

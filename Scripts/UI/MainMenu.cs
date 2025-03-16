@@ -37,7 +37,7 @@ public partial class MainMenu : Control
 
     }
 
-    private void CloseAllWindows() {
+    public void CloseAllWindows() {
         JoinInformation.Hide();
         LobbyPage.Hide();
         UI.Scoreboard.Hide();
