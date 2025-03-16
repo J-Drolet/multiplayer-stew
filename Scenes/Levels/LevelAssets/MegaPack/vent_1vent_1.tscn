@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=6 format=4 uid="uid://buv0vptafqlx2"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/vent_1_vent_1.png" id="1_rvh44"]
+[ext_resource type="Texture2D" uid="uid://exnmym2y7rgn" path="res://Assets/Textures/Fair/vent_1_vent_1.png" id="1_rvh44"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vdb1w"]
 resource_name = "vent_1"
+cull_mode = 2
 albedo_texture = ExtResource("1_rvh44")
 texture_filter = 2
 
@@ -44,7 +45,7 @@ shadow_mesh = SubResource("ArrayMesh_6418e")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yx0lm"]
 points = PackedVector3Array(0.416102, 0.0325079, 0.412698, -0.416102, -0.00650159, -0.406502, -0.416102, 0.0325079, -0.406502, 0.416102, -0.00650159, -0.406502, -0.416102, -0.00650159, 0.412698, -0.416102, 0.0325079, 0.412698, 0.416102, 0.0325079, -0.406502, 0.416102, -0.00650159, 0.412698)
 
-[node name="@Node3D@264" type="Node3D"]
+[node name="_Node3D_264" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@265" type="StaticBody3D" parent="."]

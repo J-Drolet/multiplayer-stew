@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://cdac0wueemspf"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/wall_4_wall_8.png" id="1_1gqfl"]
+[ext_resource type="Texture2D" uid="uid://cro78euso1cgl" path="res://Assets/Textures/Fair/wall_4_wall_8.png" id="1_1gqfl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7yrqg"]
 resource_name = "wall_8"
+cull_mode = 2
 albedo_texture = ExtResource("1_1gqfl")
 texture_filter = 2
 
@@ -42,7 +43,7 @@ shadow_mesh = SubResource("ArrayMesh_0s8n4")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5g7ng"]
 points = PackedVector3Array(1.01587, 0.015873, 0.0154753, -1.01587, -0.015873, -2.01548, -1.01587, 0.015873, -2.01548, 1.01587, -0.015873, -2.01548, -1.01587, -0.015873, 0.0154753, -1.01587, 0.015873, 0.0154753, 1.01587, 0.015873, -2.01548, 1.01587, -0.015873, 0.0154753)
 
-[node name="@Node3D@52" type="Node3D"]
+[node name="_Node3D_52" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@53" type="StaticBody3D" parent="."]
