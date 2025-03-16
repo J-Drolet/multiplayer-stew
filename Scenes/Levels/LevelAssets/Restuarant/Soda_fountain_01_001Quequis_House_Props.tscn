@@ -1,18 +1,16 @@
-[gd_scene load_steps=7 format=4 uid="uid://cwrp4ttq1xoaj"]
+[gd_scene load_steps=7 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cgamevut0u4jq" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Soda_fountain.png" id="1_ixnn1"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Soda_fountain.png" id="1_ixnn1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1jrds"]
 resource_name = "Glass"
 transparency = 4
-cull_mode = 2
 albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
 roughness = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6isn5"]
 resource_name = "Soda_fountain"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_ixnn1")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_e14a3"]

@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://cypfwpsl7cujy"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cobteeg6enpao" path="res://Assets/Textures/Nature/tree_10_pine_bark_1.png" id="1_bqpet"]
-[ext_resource type="Texture2D" uid="uid://c4cqfy81hskas" path="res://Assets/Textures/Nature/tree_10_pine_branch_3.png" id="2_shypo"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Nature/tree_10_pine_bark_1.png" id="1_bqpet"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Nature/tree_10_pine_branch_3.png" id="2_shypo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y5j1r"]
 resource_name = "pine_bark_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_bqpet")
 texture_filter = 2
 
@@ -14,7 +13,6 @@ resource_name = "pine_branch_3"
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-cull_mode = 2
 albedo_texture = ExtResource("2_shypo")
 roughness = 0.866667
 texture_filter = 2

@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://d1r74k64cy75h"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dp4jop1te3had" path="res://Assets/Textures/Fair/cig_3_cigs_packet_1.png" id="1_dbg0v"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/cig_3_cigs_packet_1.png" id="1_dbg0v"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mhapm"]
 resource_name = "cigs_packet_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_dbg0v")
 texture_filter = 2
 

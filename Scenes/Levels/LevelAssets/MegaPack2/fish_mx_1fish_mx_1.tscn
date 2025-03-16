@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://cgxmfnrsit031"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://prsqnch14qjg" path="res://Assets/Textures/Megapack2/fish_mx_1_fish_mx_1.png" id="1_lc68l"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/fish_mx_1_fish_mx_1.png" id="1_lc68l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ii0tb"]
 resource_name = "fish_mx_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_lc68l")
 texture_filter = 2
 texture_repeat = false

@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://dc435k1oegutv"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dmx2vnfvapte3" path="res://Assets/Textures/Megapack2/wall_top_part_hr_1_wall_hr_1.png" id="1_1vcrm"]
-[ext_resource type="Texture2D" uid="uid://drv3yk6p63efw" path="res://Assets/Textures/Megapack2/wall_top_part_hr_1_concrete_hr_3.png" id="2_42dxb"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wall_top_part_hr_1_wall_hr_1.png" id="1_1vcrm"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wall_top_part_hr_1_concrete_hr_3.png" id="2_42dxb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a4jgd"]
 resource_name = "wall_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_1vcrm")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a6gxr"]
 resource_name = "concrete_hr_3"
-cull_mode = 2
 albedo_texture = ExtResource("2_42dxb")
 texture_filter = 2
 

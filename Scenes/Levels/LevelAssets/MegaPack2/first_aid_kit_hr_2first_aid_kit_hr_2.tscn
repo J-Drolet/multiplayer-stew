@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://bby8t76kl2heb"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dig4tx70hnmsq" path="res://Assets/Textures/Megapack2/first_aid_kit_hr_2_first_aid_kit_hr_3.png" id="1_kupsw"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/first_aid_kit_hr_2_first_aid_kit_hr_3.png" id="1_kupsw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_86387"]
 resource_name = "first_aid_kit_hr_3"
-cull_mode = 2
 albedo_texture = ExtResource("1_kupsw")
 texture_filter = 2
 texture_repeat = false

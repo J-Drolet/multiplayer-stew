@@ -1,40 +1,35 @@
-[gd_scene load_steps=14 format=4 uid="uid://e64e4hia36n2"]
+[gd_scene load_steps=14 format=4]
 
-[ext_resource type="Texture2D" uid="uid://d2cjdnm1clc2h" path="res://Assets/Textures/Megapack2/roof_bx_1_side_concrete_hr_1.png" id="1_7wqay"]
-[ext_resource type="Texture2D" uid="uid://ictjhm4i2tm5" path="res://Assets/Textures/Megapack2/roof_bx_1_side_wall_hr_2.png" id="2_lnxti"]
-[ext_resource type="Texture2D" uid="uid://wfjoekt6gjfa" path="res://Assets/Textures/Megapack2/roof_bx_1_side_roof_hr_5.png" id="3_ler0b"]
-[ext_resource type="Texture2D" uid="uid://cni5j75ar4rr4" path="res://Assets/Textures/Megapack2/roof_bx_1_side_glass_general_mx_1.png" id="4_ka4gg"]
-[ext_resource type="Texture2D" uid="uid://bk8qy0uy0i166" path="res://Assets/Textures/Megapack2/roof_bx_1_side_metal_hr_2.png" id="5_803i5"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_bx_1_side_concrete_hr_1.png" id="1_7wqay"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_bx_1_side_wall_hr_2.png" id="2_lnxti"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_bx_1_side_roof_hr_5.png" id="3_ler0b"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_bx_1_side_glass_general_mx_1.png" id="4_ka4gg"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_bx_1_side_metal_hr_2.png" id="5_803i5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eiqlx"]
 resource_name = "concrete_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_7wqay")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4gjwx"]
 resource_name = "wall_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("2_lnxti")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_44xvo"]
 resource_name = "roof_hr_5"
-cull_mode = 2
 albedo_texture = ExtResource("3_ler0b")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pu30x"]
 resource_name = "glass_general_mx_1"
 transparency = 4
-cull_mode = 2
 albedo_color = Color(1, 1, 1, 0.6)
 albedo_texture = ExtResource("4_ka4gg")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sirwr"]
 resource_name = "metal_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("5_803i5")
 texture_filter = 2
 

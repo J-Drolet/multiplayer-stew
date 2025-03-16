@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://g46i4sxyfpmu"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dsnwbc2srp62t" path="res://Assets/Textures/Farm/Farm-Assets_Pumpkin_Base_color.png" id="1_xcxhs"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Pumpkin_Base_color.png" id="1_xcxhs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xyx7u"]
 resource_name = "Pumpkin"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_xcxhs")
 roughness = 0.4
 

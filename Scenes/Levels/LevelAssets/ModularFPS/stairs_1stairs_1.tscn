@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://ci36wcpigjmv7"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://6pufgam7u7iq" path="res://Assets/Textures/Fair/stairs_1_stairs_1.png" id="1_vwftq"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/stairs_1_stairs_1.png" id="1_vwftq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r31br"]
 resource_name = "stairs_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_vwftq")
 texture_filter = 2
 

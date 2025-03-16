@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://cplahc1ri8jfx"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://c6irpnycqu4hl" path="res://Assets/Textures/Farm/Farm-Assets_Basket_Variant_1_Base_color.png" id="1_hi7wo"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Basket_Variant_1_Base_color.png" id="1_hi7wo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2388w"]
 resource_name = "Basket_Variant_1"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_hi7wo")
 roughness = 0.4
 

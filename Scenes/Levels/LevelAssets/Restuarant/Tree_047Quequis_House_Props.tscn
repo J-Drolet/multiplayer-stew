@@ -1,19 +1,17 @@
-[gd_scene load_steps=8 format=4 uid="uid://1t8pg4j7wb6"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bwfss4n7er61l" path="res://Assets/Textures/Restaurant/Quequis_House_Props_BarkDecidious.jpg" id="1_h5ldk"]
-[ext_resource type="Texture2D" uid="uid://cf7plwv1k68xu" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Branches.png" id="2_y240x"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_BarkDecidious.jpg" id="1_h5ldk"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Branches.png" id="2_y240x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ypwlx"]
 resource_name = "BarkDecidious"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_h5ldk")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fr11k"]
 resource_name = "Branches"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("2_y240x")
 texture_filter = 2
 

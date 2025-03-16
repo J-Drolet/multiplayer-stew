@@ -1,18 +1,16 @@
-[gd_scene load_steps=10 format=4 uid="uid://cak4gno27sd2t"]
+[gd_scene load_steps=10 format=4]
 
-[ext_resource type="Texture2D" uid="uid://b01vpj5swl6y2" path="res://Assets/Textures/Fair/lamp_0_metal_4.png" id="1_817hr"]
-[ext_resource type="Texture2D" uid="uid://djafx0ujlhova" path="res://Assets/Textures/Fair/lamp_0_metal_3.png" id="2_h8pep"]
-[ext_resource type="Texture2D" uid="uid://doq2gua07uvw6" path="res://Assets/Textures/Fair/lamp_0_lamp_1_on.png" id="3_8jv1k"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/lamp_0_metal_4.png" id="1_817hr"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/lamp_0_metal_3.png" id="2_h8pep"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/lamp_0_lamp_1_on.png" id="3_8jv1k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_23ql2"]
 resource_name = "metal_4"
-cull_mode = 2
 albedo_texture = ExtResource("1_817hr")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30ytc"]
 resource_name = "metal_3"
-cull_mode = 2
 albedo_texture = ExtResource("2_h8pep")
 emission_enabled = true
 emission_texture = ExtResource("2_h8pep")
@@ -20,7 +18,6 @@ texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yi4ro"]
 resource_name = "lamp_1_on"
-cull_mode = 2
 albedo_texture = ExtResource("3_8jv1k")
 emission_enabled = true
 emission_texture = ExtResource("3_8jv1k")
@@ -121,5 +118,4 @@ mesh = SubResource("ArrayMesh_5usbc")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@55"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_w73l2")

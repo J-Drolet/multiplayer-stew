@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://cn7wt15d42is2"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://ckuyb1tawdds6" path="res://Assets/Textures/Megapack2/door_hr_8_door_hr_8.png" id="1_opteb"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/door_hr_8_door_hr_8.png" id="1_opteb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3hc56"]
 resource_name = "door_hr_8"
-cull_mode = 2
 albedo_texture = ExtResource("1_opteb")
 texture_filter = 2
 texture_repeat = false

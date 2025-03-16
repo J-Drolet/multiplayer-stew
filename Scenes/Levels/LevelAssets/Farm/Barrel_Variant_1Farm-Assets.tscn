@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://jeloxcp4gu0j"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bvx2yhg0lpoh4" path="res://Assets/Textures/Farm/Farm-Assets_Barrel_Variant_1_Base_color.png" id="1_yx3fr"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Barrel_Variant_1_Base_color.png" id="1_yx3fr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6ixk"]
 resource_name = "Barrel_Variant_1"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_yx3fr")
 roughness = 0.4
 

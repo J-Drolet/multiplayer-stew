@@ -1,38 +1,33 @@
-[gd_scene load_steps=14 format=4 uid="uid://bvo8jng33hgd4"]
+[gd_scene load_steps=14 format=4]
 
-[ext_resource type="Texture2D" uid="uid://d3smt4eea6la7" path="res://Assets/Textures/Fair/metal_crate_2_metal_mp_1.png" id="1_5o7sy"]
-[ext_resource type="Texture2D" uid="uid://bdhksdogh2r1v" path="res://Assets/Textures/Fair/metal_crate_2_metal_mp_3.png" id="2_dfk1l"]
-[ext_resource type="Texture2D" uid="uid://c03g8vd4xpv4q" path="res://Assets/Textures/Fair/metal_crate_2_metal_mp_4.png" id="3_80bha"]
-[ext_resource type="Texture2D" uid="uid://b24xyfw3ixv8y" path="res://Assets/Textures/Fair/metal_crate_2_metal_mp_5.png" id="4_5fb5k"]
-[ext_resource type="Texture2D" uid="uid://cc6qd3p3it3d2" path="res://Assets/Textures/Fair/metal_crate_2_wood_2.png" id="5_iqiyu"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/metal_crate_2_metal_mp_1.png" id="1_5o7sy"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/metal_crate_2_metal_mp_3.png" id="2_dfk1l"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/metal_crate_2_metal_mp_4.png" id="3_80bha"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/metal_crate_2_metal_mp_5.png" id="4_5fb5k"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/metal_crate_2_wood_2.png" id="5_iqiyu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2hv6m"]
 resource_name = "metal_mp_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_5o7sy")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wx0nf"]
 resource_name = "metal_mp_3"
-cull_mode = 2
 albedo_texture = ExtResource("2_dfk1l")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1lmsu"]
 resource_name = "metal_mp_4"
-cull_mode = 2
 albedo_texture = ExtResource("3_80bha")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_muv58"]
 resource_name = "metal_mp_5"
-cull_mode = 2
 albedo_texture = ExtResource("4_5fb5k")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vkik"]
 resource_name = "wood_2"
-cull_mode = 2
 albedo_texture = ExtResource("5_iqiyu")
 texture_filter = 2
 
@@ -171,5 +166,4 @@ mesh = SubResource("ArrayMesh_qt3a6")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@201"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_o8ti1")

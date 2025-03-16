@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://bxquekobcykdk"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://ysghr61qeyjh" path="res://Assets/Textures/Fair/floppy_disc_1_floppy_disc_1.png" id="1_sxm50"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/floppy_disc_1_floppy_disc_1.png" id="1_sxm50"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q3v0f"]
 resource_name = "floppy_disc_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_sxm50")
 texture_filter = 2
 

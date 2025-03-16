@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://dup0bpl4uop57"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://lg3obcuhbegm" path="res://Assets/Textures/Megapack2/ancient_artifact_mx_1_ancient_artifact_mx_1.png" id="1_v7nvt"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/ancient_artifact_mx_1_ancient_artifact_mx_1.png" id="1_v7nvt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iyg0k"]
 resource_name = "ancient_artifact_mx_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_v7nvt")
 texture_filter = 2
 

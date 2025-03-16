@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://camy3w4541f3p"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dul5yggontgd0" path="res://Assets/Textures/Megapack2/concrete_fence_hr_1_pillar_1_concrete_fence_hr_1.png" id="1_p4cbs"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/concrete_fence_hr_1_pillar_1_concrete_fence_hr_1.png" id="1_p4cbs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pw6sk"]
 resource_name = "concrete_fence_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_p4cbs")
 texture_filter = 2
 

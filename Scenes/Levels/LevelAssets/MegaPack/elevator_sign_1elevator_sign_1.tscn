@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://odpd7s28ur44"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://c33kpgpfwbxk4" path="res://Assets/Textures/Fair/elevator_sign_1_elevator_sign_1.png" id="1_72vvn"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/elevator_sign_1_elevator_sign_1.png" id="1_72vvn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bjaeh"]
 resource_name = "elevator_sign_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_72vvn")
 texture_filter = 2
 texture_repeat = false

@@ -1,39 +1,34 @@
-[gd_scene load_steps=14 format=4 uid="uid://bly2jo7p48d13"]
+[gd_scene load_steps=14 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bbkjssdipa3vg" path="res://Assets/Textures/Megapack2/window_hr_2_wall_hr_1.png" id="1_c1cl6"]
-[ext_resource type="Texture2D" uid="uid://cxkkdty2idkys" path="res://Assets/Textures/Megapack2/window_hr_2_window_hm_2.png" id="2_2hxkw"]
-[ext_resource type="Texture2D" uid="uid://5nmjfjv0rbno" path="res://Assets/Textures/Megapack2/window_hr_2_concrete_hr_1.png" id="3_fph3w"]
-[ext_resource type="Texture2D" uid="uid://b6d8rbju8j87h" path="res://Assets/Textures/Megapack2/window_hr_2_metal_hr_1.png" id="4_eiflo"]
-[ext_resource type="Texture2D" uid="uid://d57qbnakncor" path="res://Assets/Textures/Megapack2/window_hr_2_concrete_hr_3.png" id="5_7ibna"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/window_hr_2_wall_hr_1.png" id="1_c1cl6"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/window_hr_2_window_hm_2.png" id="2_2hxkw"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/window_hr_2_concrete_hr_1.png" id="3_fph3w"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/window_hr_2_metal_hr_1.png" id="4_eiflo"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/window_hr_2_concrete_hr_3.png" id="5_7ibna"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_axlnb"]
 resource_name = "wall_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_c1cl6")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c51u8"]
 resource_name = "window_hm_2"
-cull_mode = 2
 albedo_texture = ExtResource("2_2hxkw")
 texture_filter = 2
 texture_repeat = false
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pmo4y"]
 resource_name = "concrete_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("3_fph3w")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bmnd4"]
 resource_name = "metal_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("4_eiflo")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eb2wc"]
 resource_name = "concrete_hr_3"
-cull_mode = 2
 albedo_texture = ExtResource("5_7ibna")
 texture_filter = 2
 

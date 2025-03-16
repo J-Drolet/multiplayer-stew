@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://ch0oax30cejdc"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://pcmwwu25tse3" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Coffee_jar.png" id="1_0pce0"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Coffee_jar.png" id="1_0pce0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8e4vb"]
 resource_name = "Coffee_jar"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_0pce0")
 texture_filter = 2
 

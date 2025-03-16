@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://dtl7txs3fj7an"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://baqxpuivft2rx" path="res://Assets/Textures/Restaurant/Quequis_House_Props_bag_garlic.png" id="1_qqm3q"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_bag_garlic.png" id="1_qqm3q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3rpp6"]
 resource_name = "bag_garlic"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_qqm3q")
 texture_filter = 2
 

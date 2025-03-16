@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://clohcq7snxptu"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://b0rr3wj8iwico" path="res://Assets/Textures/Restaurant/Quequis_House_Props_trash_can_01.png" id="1_6cuf8"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_trash_can_01.png" id="1_6cuf8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cwu26"]
 resource_name = "trash_can_01"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_6cuf8")
 texture_filter = 2
 

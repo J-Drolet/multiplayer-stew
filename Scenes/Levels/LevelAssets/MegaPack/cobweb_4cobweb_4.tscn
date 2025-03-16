@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c08s3w64ewlsu"]
+[gd_scene load_steps=6 format=3]
 
-[ext_resource type="Texture2D" uid="uid://5bjmrrmsciko" path="res://Assets/Textures/Fair/cobweb_4_cobweb_4.png" id="1_xqewl"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/cobweb_4_cobweb_4.png" id="1_xqewl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_41d6j"]
 resource_name = "cobweb_4"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_xqewl")
 texture_filter = 2
 texture_repeat = false

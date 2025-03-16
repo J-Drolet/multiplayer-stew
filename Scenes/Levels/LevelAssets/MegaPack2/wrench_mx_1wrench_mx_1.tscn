@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://dn2npddgmt3q5"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://2a2q5xundbua" path="res://Assets/Textures/Megapack2/wrench_mx_1_wrench_mx_1.png" id="1_1nr4l"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wrench_mx_1_wrench_mx_1.png" id="1_1nr4l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q8ye8"]
 resource_name = "wrench_mx_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_1nr4l")
 texture_filter = 2
 texture_repeat = false

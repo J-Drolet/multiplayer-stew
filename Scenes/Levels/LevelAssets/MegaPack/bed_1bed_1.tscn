@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://bv0ysfnan68m8"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://b3mj4vaum3why" path="res://Assets/Textures/Fair/bed_1_metal_mp_5.png" id="1_3hqg3"]
-[ext_resource type="Texture2D" uid="uid://cmlpjvy2iwgox" path="res://Assets/Textures/Fair/bed_1_old_mattress_mx_1.png" id="2_hcr5c"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/bed_1_metal_mp_5.png" id="1_3hqg3"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/bed_1_old_mattress_mx_1.png" id="2_hcr5c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_toxeh"]
 resource_name = "metal_mp_5"
-cull_mode = 2
 albedo_texture = ExtResource("1_3hqg3")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i500o"]
 resource_name = "old_mattress_mx_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_hcr5c")
 texture_filter = 2
 texture_repeat = false

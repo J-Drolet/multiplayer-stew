@@ -1,18 +1,16 @@
-[gd_scene load_steps=8 format=4 uid="uid://b01wuywrw22ch"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://ob1kfeae5raj" path="res://Assets/Textures/Megapack2/van_3_van_3.png" id="1_uk0xb"]
-[ext_resource type="Texture2D" uid="uid://bnkeysmvwd3yq" path="res://Assets/Textures/Megapack2/van_3_metal_2_1.png" id="2_v3wcb"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/van_3_van_3.png" id="1_uk0xb"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/van_3_metal_2_1.png" id="2_v3wcb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xoibe"]
 resource_name = "van_3"
-cull_mode = 2
 albedo_texture = ExtResource("1_uk0xb")
 texture_filter = 2
 texture_repeat = false
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w4kmv"]
 resource_name = "metal_2_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_v3wcb")
 texture_filter = 2
 

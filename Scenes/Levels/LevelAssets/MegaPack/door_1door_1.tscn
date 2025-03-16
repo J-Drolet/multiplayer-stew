@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://hg5pwu4sanlf"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://b02yawbvbqbuf" path="res://Assets/Textures/Fair/door_1_door_2.png" id="1_01fly"]
-[ext_resource type="Texture2D" uid="uid://cw64uhjr5okrl" path="res://Assets/Textures/Fair/door_1_door_handle_1.png" id="2_qxco1"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/door_1_door_2.png" id="1_01fly"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/door_1_door_handle_1.png" id="2_qxco1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vyx35"]
 resource_name = "door_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_01fly")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4hjtv"]
 resource_name = "door_handle_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_qxco1")
 texture_filter = 2
 
@@ -82,5 +80,4 @@ mesh = SubResource("ArrayMesh_va8gg")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@113"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_morxj")

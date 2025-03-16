@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://cn72roe47fe8c"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://c2m21x6t3n182" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Sauces_condiments.png" id="1_eva31"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Sauces_condiments.png" id="1_eva31"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e784y"]
 resource_name = "Sauces_condiments"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_eva31")
 texture_filter = 2
 

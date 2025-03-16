@@ -1,24 +1,21 @@
-[gd_scene load_steps=10 format=4 uid="uid://4n6irnykn6a0"]
+[gd_scene load_steps=10 format=4]
 
-[ext_resource type="Texture2D" uid="uid://b0qxcgiorxa7t" path="res://Assets/Textures/Fair/canned_food_4_metal_1.png" id="1_eph4x"]
-[ext_resource type="Texture2D" uid="uid://c33pmvbjw47ov" path="res://Assets/Textures/Fair/canned_food_4_canned_food_3.png" id="2_8e0at"]
-[ext_resource type="Texture2D" uid="uid://c2p36urv0f866" path="res://Assets/Textures/Fair/canned_food_4_metal_3.png" id="3_hxjnl"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/canned_food_4_metal_1.png" id="1_eph4x"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/canned_food_4_canned_food_3.png" id="2_8e0at"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/canned_food_4_metal_3.png" id="3_hxjnl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_074sl"]
 resource_name = "metal_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_eph4x")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w6ele"]
 resource_name = "canned_food_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_8e0at")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_htl20"]
 resource_name = "metal_3"
-cull_mode = 2
 albedo_texture = ExtResource("3_hxjnl")
 emission_enabled = true
 emission_texture = ExtResource("3_hxjnl")
@@ -117,5 +114,4 @@ mesh = SubResource("ArrayMesh_4juoe")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@19"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_55o72")

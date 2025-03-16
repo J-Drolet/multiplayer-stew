@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://bwxaetihi8x1x"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://6xkgubt3sbdw" path="res://Assets/Textures/Fair/vent_3_vent_3.png" id="1_cvbd2"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/vent_3_vent_3.png" id="1_cvbd2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5mesp"]
 resource_name = "vent_3"
-cull_mode = 2
 albedo_texture = ExtResource("1_cvbd2")
 texture_filter = 2
 

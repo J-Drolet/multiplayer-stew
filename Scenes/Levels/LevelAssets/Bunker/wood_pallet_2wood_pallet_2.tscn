@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://7kbtbkkxpwr4"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cdnve2p6tlvp4" path="res://Assets/Textures/Fair/wood_pallet_2_wood_3.png" id="1_en2u3"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/wood_pallet_2_wood_3.png" id="1_en2u3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ll1ea"]
 resource_name = "wood_3"
-cull_mode = 2
 albedo_texture = ExtResource("1_en2u3")
 texture_filter = 2
 
@@ -53,5 +52,4 @@ mesh = SubResource("ArrayMesh_2w1oj")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@165"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_1lfix")

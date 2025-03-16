@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://bg6uv2ha5aora"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://ckegr7giqmubh" path="res://Assets/Textures/Farm/Farm-Assets_Chicken-Coop_Variant_1_Base_color.png" id="1_qehpg"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Chicken-Coop_Variant_1_Base_color.png" id="1_qehpg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4abh8"]
 resource_name = "Chicken-Coop_Variant_1"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_qehpg")
 roughness = 0.4
 

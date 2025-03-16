@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://cfj6sqlwy3ic8"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dvcxpuxe54lqb" path="res://Assets/Textures/Restaurant/Quequis_House_Props_cactus.png" id="1_cjfug"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_cactus.png" id="1_cjfug"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ej76n"]
 resource_name = "cactus"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_cjfug")
 texture_filter = 2
 

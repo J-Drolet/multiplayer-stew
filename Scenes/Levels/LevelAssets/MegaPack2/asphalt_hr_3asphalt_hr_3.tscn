@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://sl6132m2t3qb"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://c11lkv4y1ussh" path="res://Assets/Textures/Megapack2/asphalt_hr_3_asphalt_hr_1.png" id="1_k043e"]
-[ext_resource type="Texture2D" uid="uid://chqc1fe8nbveb" path="res://Assets/Textures/Megapack2/asphalt_hr_3_hole_hr_1.png" id="2_lkbyo"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/asphalt_hr_3_asphalt_hr_1.png" id="1_k043e"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/asphalt_hr_3_hole_hr_1.png" id="2_lkbyo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bv5k2"]
 resource_name = "asphalt_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_k043e")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xxpxh"]
 resource_name = "hole_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_lkbyo")
 texture_filter = 2
 

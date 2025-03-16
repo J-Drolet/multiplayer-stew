@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://bs0ylwgwychjn"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cb3b72b03pnud" path="res://Assets/Textures/Fair/hand_saw_1_hand_saw_1.png" id="1_054ma"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/hand_saw_1_hand_saw_1.png" id="1_054ma"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p3uti"]
 resource_name = "hand_saw_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_054ma")
 texture_filter = 2
 

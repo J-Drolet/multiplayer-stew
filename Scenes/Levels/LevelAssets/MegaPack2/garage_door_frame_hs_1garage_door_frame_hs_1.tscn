@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://bn38cyy1w5ld3"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dpqv2h087p7bg" path="res://Assets/Textures/Megapack2/garage_door_frame_hs_1_wall_hs_1.png" id="1_4j23x"]
-[ext_resource type="Texture2D" uid="uid://dkaaj2i1ql77q" path="res://Assets/Textures/Megapack2/garage_door_frame_hs_1_concrete_hr_3.png" id="2_66ea4"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/garage_door_frame_hs_1_wall_hs_1.png" id="1_4j23x"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/garage_door_frame_hs_1_concrete_hr_3.png" id="2_66ea4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nhys4"]
 resource_name = "wall_hs_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_4j23x")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_roi6f"]
 resource_name = "concrete_hr_3"
-cull_mode = 2
 albedo_texture = ExtResource("2_66ea4")
 texture_filter = 2
 

@@ -1,12 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://bip1vb5fyawgv"]
+[gd_scene load_steps=9 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dnpysywja614p" path="res://Assets/Textures/Fair/keypad_2_keypad_2.png" id="1_s2hi0"]
-[ext_resource type="Texture2D" uid="uid://0myadtc4kqg3" path="res://Assets/Textures/Fair/keypad_2_keypad_2_emission.png" id="2_iaori"]
-[ext_resource type="Texture2D" uid="uid://cdscgvoen3b6a" path="res://Assets/Textures/Fair/keypad_2_metal_mp_4.png" id="3_ctrym"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/keypad_2_keypad_2.png" id="1_s2hi0"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/keypad_2_keypad_2_emission.png" id="2_iaori"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/keypad_2_metal_mp_4.png" id="3_ctrym"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42mml"]
 resource_name = "keypad_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_s2hi0")
 emission_enabled = true
 emission_texture = ExtResource("2_iaori")
@@ -14,7 +13,6 @@ texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kpqti"]
 resource_name = "metal_mp_4"
-cull_mode = 2
 albedo_texture = ExtResource("3_ctrym")
 texture_filter = 2
 

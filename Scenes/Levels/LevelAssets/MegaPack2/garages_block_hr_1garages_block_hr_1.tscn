@@ -1,59 +1,51 @@
-[gd_scene load_steps=20 format=4 uid="uid://wjd52xu7osfw"]
+[gd_scene load_steps=20 format=4]
 
-[ext_resource type="Texture2D" uid="uid://d0rtk5h5hke6w" path="res://Assets/Textures/Megapack2/garages_block_hr_1_bricks_hr_1.png" id="1_5kg78"]
-[ext_resource type="Texture2D" uid="uid://b1shbmtbu56bt" path="res://Assets/Textures/Megapack2/garages_block_hr_1_garage_door_hm_4.png" id="2_l7m5h"]
-[ext_resource type="Texture2D" uid="uid://hns65ubt00oa" path="res://Assets/Textures/Megapack2/garages_block_hr_1_concrete_hr_3.png" id="3_ecfuh"]
-[ext_resource type="Texture2D" uid="uid://b4q4jw1q2e7tq" path="res://Assets/Textures/Megapack2/garages_block_hr_1_garage_door_hm_9.png" id="4_y5217"]
-[ext_resource type="Texture2D" uid="uid://d1su64tpjn28e" path="res://Assets/Textures/Megapack2/garages_block_hr_1_garage_door_hm_8.png" id="5_a75ik"]
-[ext_resource type="Texture2D" uid="uid://bs66fapg86t5p" path="res://Assets/Textures/Megapack2/garages_block_hr_1_garage_door_hm_7.png" id="6_5oh24"]
-[ext_resource type="Texture2D" uid="uid://cead6l211rsbs" path="res://Assets/Textures/Megapack2/garages_block_hr_1_metal_hr_2.png" id="7_4jj28"]
-[ext_resource type="Texture2D" uid="uid://wxtusuosmbnp" path="res://Assets/Textures/Megapack2/garages_block_hr_1_window_hy_5.png" id="8_x3wpw"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/garages_block_hr_1_bricks_hr_1.png" id="1_5kg78"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/garages_block_hr_1_garage_door_hm_4.png" id="2_l7m5h"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/garages_block_hr_1_concrete_hr_3.png" id="3_ecfuh"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/garages_block_hr_1_garage_door_hm_9.png" id="4_y5217"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/garages_block_hr_1_garage_door_hm_8.png" id="5_a75ik"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/garages_block_hr_1_garage_door_hm_7.png" id="6_5oh24"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/garages_block_hr_1_metal_hr_2.png" id="7_4jj28"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/garages_block_hr_1_window_hy_5.png" id="8_x3wpw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ssh4x"]
 resource_name = "bricks_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_5kg78")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pn5h2"]
 resource_name = "garage_door_hm_3"
-cull_mode = 2
 albedo_texture = ExtResource("2_l7m5h")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jpnye"]
 resource_name = "concrete_hr_3"
-cull_mode = 2
 albedo_texture = ExtResource("3_ecfuh")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_06nqx"]
 resource_name = "garage_door_hm_9"
-cull_mode = 2
 albedo_texture = ExtResource("4_y5217")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7jq3r"]
 resource_name = "garage_door_hm_8"
-cull_mode = 2
 albedo_texture = ExtResource("5_a75ik")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1gnjh"]
 resource_name = "garage_door_hm_7"
-cull_mode = 2
 albedo_texture = ExtResource("6_5oh24")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5naox"]
 resource_name = "metal_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("7_4jj28")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jmbwp"]
 resource_name = "window_hy_5"
-cull_mode = 2
 albedo_texture = ExtResource("8_x3wpw")
 texture_filter = 2
 texture_repeat = false

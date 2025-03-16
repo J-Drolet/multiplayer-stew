@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://cov8gl6rdhf4r"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://k8sckvp2cr0h" path="res://Assets/Textures/Megapack2/warehouse_hl_1_metal_hr_2.png" id="1_gwb1j"]
-[ext_resource type="Texture2D" uid="uid://bsyx104jbeey5" path="res://Assets/Textures/Megapack2/warehouse_hl_1_roof_hr_5.png" id="2_747ms"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/warehouse_hl_1_metal_hr_2.png" id="1_gwb1j"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/warehouse_hl_1_roof_hr_5.png" id="2_747ms"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gft12"]
 resource_name = "metal_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_gwb1j")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_atlti"]
 resource_name = "roof_hr_5"
-cull_mode = 2
 albedo_texture = ExtResource("2_747ms")
 texture_filter = 2
 

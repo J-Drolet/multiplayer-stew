@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://u7os6oefb6uq"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bx4ivr8xi7wnr" path="res://Assets/Textures/Farm/Farm-Assets_Fence_Medium_Variant_3_Base_color.png" id="1_hdd54"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Fence_Medium_Variant_3_Base_color.png" id="1_hdd54"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m0aty"]
 resource_name = "Fence_Medium_Variant_3"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_hdd54")
 roughness = 0.4
 

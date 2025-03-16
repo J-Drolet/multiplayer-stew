@@ -1,19 +1,17 @@
-[gd_scene load_steps=12 format=4 uid="uid://b1j3nlc5l035e"]
+[gd_scene load_steps=12 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bnsbthvhx6m4a" path="res://Assets/Textures/Fair/lamp_2_on_metal_mp_1.png" id="1_wgaob"]
-[ext_resource type="Texture2D" uid="uid://ci1fy43gcb35" path="res://Assets/Textures/Fair/lamp_2_on_lamp_1_dim.png" id="2_gcc8l"]
-[ext_resource type="Texture2D" uid="uid://caec4mlrveau3" path="res://Assets/Textures/Fair/lamp_2_on_metal_mp_4.png" id="3_h1r2g"]
-[ext_resource type="Texture2D" uid="uid://cu0ic7ajkli7g" path="res://Assets/Textures/Fair/lamp_2_on_metal_mp_3.png" id="4_qy6xe"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/lamp_2_on_metal_mp_1.png" id="1_wgaob"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/lamp_2_on_lamp_1_dim.png" id="2_gcc8l"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/lamp_2_on_metal_mp_4.png" id="3_h1r2g"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/lamp_2_on_metal_mp_3.png" id="4_qy6xe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xcfmp"]
 resource_name = "metal_mp_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_wgaob")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ce6hq"]
 resource_name = "lamp_1_dim"
-cull_mode = 2
 albedo_texture = ExtResource("2_gcc8l")
 emission_enabled = true
 emission_texture = ExtResource("2_gcc8l")
@@ -21,13 +19,11 @@ texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eva4x"]
 resource_name = "metal_mp_4"
-cull_mode = 2
 albedo_texture = ExtResource("3_h1r2g")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rj7ts"]
 resource_name = "metal_mp_3"
-cull_mode = 2
 albedo_texture = ExtResource("4_qy6xe")
 texture_filter = 2
 

@@ -1,18 +1,16 @@
-[gd_scene load_steps=8 format=4 uid="uid://bld3kixlwtyta"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://c6xmsm8apeoct" path="res://Assets/Textures/Megapack2/floor_ceiling_rx_1_tile_floor_mx_3.png" id="1_2lqp0"]
-[ext_resource type="Texture2D" uid="uid://dp36mbr5e84lv" path="res://Assets/Textures/Megapack2/floor_ceiling_rx_1_concrete_hr_1.png" id="2_76a1c"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/floor_ceiling_rx_1_tile_floor_mx_3.png" id="1_2lqp0"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/floor_ceiling_rx_1_concrete_hr_1.png" id="2_76a1c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_byocf"]
 resource_name = "tile_floor_mx_3"
-cull_mode = 2
 albedo_texture = ExtResource("1_2lqp0")
 metallic_specular = 0.2
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m6lc8"]
 resource_name = "concrete_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_76a1c")
 texture_filter = 2
 

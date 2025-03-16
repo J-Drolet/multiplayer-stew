@@ -1,24 +1,21 @@
-[gd_scene load_steps=10 format=4 uid="uid://nq0vkatkf0fy"]
+[gd_scene load_steps=10 format=4]
 
-[ext_resource type="Texture2D" uid="uid://ug22qbyfton2" path="res://Assets/Textures/Fair/key_2_key_2.png" id="1_noaij"]
-[ext_resource type="Texture2D" uid="uid://egen50wehmwp" path="res://Assets/Textures/Fair/key_2_metal_mp_1.png" id="2_j8t4k"]
-[ext_resource type="Texture2D" uid="uid://dwwehcmodw2qy" path="res://Assets/Textures/Fair/key_2_keychain_1.png" id="3_j7gum"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/key_2_key_2.png" id="1_noaij"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/key_2_metal_mp_1.png" id="2_j8t4k"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/key_2_keychain_1.png" id="3_j7gum"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o58o8"]
 resource_name = "key_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_noaij")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v7crw"]
 resource_name = "metal_mp_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_j8t4k")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hig1l"]
 resource_name = "keychain_1"
-cull_mode = 2
 albedo_texture = ExtResource("3_j7gum")
 texture_filter = 2
 
@@ -115,5 +112,4 @@ mesh = SubResource("ArrayMesh_a7i7o")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@167"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_tkbfe")

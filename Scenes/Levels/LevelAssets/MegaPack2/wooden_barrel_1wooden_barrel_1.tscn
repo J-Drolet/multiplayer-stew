@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://cgceiyqk4nbfw"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bi8x8grlyc4b0" path="res://Assets/Textures/Megapack2/wooden_barrel_1_wooden_barrel_hr_1.png" id="1_81mbc"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wooden_barrel_1_wooden_barrel_hr_1.png" id="1_81mbc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0qxy4"]
 resource_name = "wooden_barrel_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_81mbc")
 texture_filter = 2
 texture_repeat = false

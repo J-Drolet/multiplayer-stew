@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://c0d5p1k856vp0"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://d3mm7ewlw66mc" path="res://Assets/Textures/Megapack2/beam_hc_vertical_1_metal_hr_2.png" id="1_7gipk"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/beam_hc_vertical_1_metal_hr_2.png" id="1_7gipk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_72r7y"]
 resource_name = "metal_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_7gipk")
 texture_filter = 2
 

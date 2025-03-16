@@ -1,59 +1,51 @@
-[gd_scene load_steps=20 format=4 uid="uid://csjkbaj28lnhu"]
+[gd_scene load_steps=20 format=4]
 
-[ext_resource type="Texture2D" uid="uid://c13cttfp7mhh2" path="res://Assets/Textures/Fair/tunnel_1_wall_5.png" id="1_m3fsd"]
-[ext_resource type="Texture2D" uid="uid://l3xu4sm2kdcg" path="res://Assets/Textures/Fair/tunnel_1_metal_mp_3.png" id="2_8joc8"]
-[ext_resource type="Texture2D" uid="uid://qus1fco22ivn" path="res://Assets/Textures/Fair/tunnel_1_metal_mp_4.png" id="3_x5kc5"]
-[ext_resource type="Texture2D" uid="uid://dfrbdnly1b4nh" path="res://Assets/Textures/Fair/tunnel_1_plastic_1.png" id="4_raob1"]
-[ext_resource type="Texture2D" uid="uid://ci80ec0ucakfl" path="res://Assets/Textures/Fair/tunnel_1_plastic_2.png" id="5_8gsf5"]
-[ext_resource type="Texture2D" uid="uid://dkra7c52prtfr" path="res://Assets/Textures/Fair/tunnel_1_plastic_3.png" id="6_quq0m"]
-[ext_resource type="Texture2D" uid="uid://cq0uumbfi7rcc" path="res://Assets/Textures/Fair/tunnel_1_cable_1.png" id="7_b6sjw"]
-[ext_resource type="Texture2D" uid="uid://elnwg0estmom" path="res://Assets/Textures/Fair/tunnel_1_concrete_2.jpg" id="8_wo48i"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/tunnel_1_wall_5.png" id="1_m3fsd"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/tunnel_1_metal_mp_3.png" id="2_8joc8"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/tunnel_1_metal_mp_4.png" id="3_x5kc5"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/tunnel_1_plastic_1.png" id="4_raob1"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/tunnel_1_plastic_2.png" id="5_8gsf5"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/tunnel_1_plastic_3.png" id="6_quq0m"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/tunnel_1_cable_1.png" id="7_b6sjw"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/tunnel_1_concrete_2.jpg" id="8_wo48i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tafou"]
 resource_name = "wall_5"
-cull_mode = 2
 albedo_texture = ExtResource("1_m3fsd")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_548at"]
 resource_name = "metal_mp_3"
-cull_mode = 2
 albedo_texture = ExtResource("2_8joc8")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7uwy7"]
 resource_name = "metal_mp_4"
-cull_mode = 2
 albedo_texture = ExtResource("3_x5kc5")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xbr6d"]
 resource_name = "plastic_1"
-cull_mode = 2
 albedo_texture = ExtResource("4_raob1")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4nmmf"]
 resource_name = "plastic_2"
-cull_mode = 2
 albedo_texture = ExtResource("5_8gsf5")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pfeof"]
 resource_name = "plastic_3"
-cull_mode = 2
 albedo_texture = ExtResource("6_quq0m")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xc3c7"]
 resource_name = "cable_1"
-cull_mode = 2
 albedo_texture = ExtResource("7_b6sjw")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5g4ah"]
 resource_name = "concrete_2"
-cull_mode = 2
 albedo_texture = ExtResource("8_wo48i")
 texture_filter = 2
 

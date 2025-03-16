@@ -1,19 +1,17 @@
-[gd_scene load_steps=10 format=4 uid="uid://cilvyxrmyyasb"]
+[gd_scene load_steps=10 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dg7h50s672r0x" path="res://Assets/Textures/Megapack2/fence_e_2_metal_hr_2.png" id="1_fahde"]
-[ext_resource type="Texture2D" uid="uid://b6dutd3qp71fb" path="res://Assets/Textures/Megapack2/fence_e_2_grate_hm_1.png" id="2_qdciq"]
-[ext_resource type="Texture2D" uid="uid://dtqdm5feeqx1w" path="res://Assets/Textures/Megapack2/fence_e_2_barbed_wire_hr_1.png" id="3_gmpev"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/fence_e_2_metal_hr_2.png" id="1_fahde"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/fence_e_2_grate_hm_1.png" id="2_qdciq"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/fence_e_2_barbed_wire_hr_1.png" id="3_gmpev"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p7tle"]
 resource_name = "metal_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_fahde")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2x4ro"]
 resource_name = "grate_hm_1"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("2_qdciq")
 texture_filter = 2
 
@@ -22,7 +20,6 @@ resource_name = "barbed_wire_hr_1"
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-cull_mode = 2
 albedo_texture = ExtResource("3_gmpev")
 texture_filter = 2
 

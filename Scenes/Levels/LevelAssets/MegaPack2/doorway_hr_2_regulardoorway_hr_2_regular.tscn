@@ -1,24 +1,21 @@
-[gd_scene load_steps=10 format=4 uid="uid://tgivo8o7o8rr"]
+[gd_scene load_steps=10 format=4]
 
-[ext_resource type="Texture2D" uid="uid://barfmjlxejknj" path="res://Assets/Textures/Megapack2/doorway_hr_2_regular_wall_hr_1.png" id="1_w7u8a"]
-[ext_resource type="Texture2D" uid="uid://bb2ed3y367var" path="res://Assets/Textures/Megapack2/doorway_hr_2_regular_concrete_hr_1.png" id="2_isk67"]
-[ext_resource type="Texture2D" uid="uid://do7bi63s3i0cn" path="res://Assets/Textures/Megapack2/doorway_hr_2_regular_concrete_hr_3.png" id="3_iqtdt"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/doorway_hr_2_regular_wall_hr_1.png" id="1_w7u8a"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/doorway_hr_2_regular_concrete_hr_1.png" id="2_isk67"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/doorway_hr_2_regular_concrete_hr_3.png" id="3_iqtdt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8pbdn"]
 resource_name = "wall_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_w7u8a")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yvmvu"]
 resource_name = "concrete_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_isk67")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ifd7l"]
 resource_name = "concrete_hr_3"
-cull_mode = 2
 albedo_texture = ExtResource("3_iqtdt")
 texture_filter = 2
 

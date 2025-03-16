@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cbfpx0842c4po"]
+[gd_scene load_steps=6 format=3]
 
-[ext_resource type="Texture2D" uid="uid://bc6l4b6a3q053" path="res://Assets/Textures/Megapack2/graffiti_mx_5_graffiti_mx_5.png" id="1_cutrg"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/graffiti_mx_5_graffiti_mx_5.png" id="1_cutrg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1o4qr"]
 resource_name = "graffiti_mx_5"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_cutrg")
 texture_filter = 2
 texture_repeat = false

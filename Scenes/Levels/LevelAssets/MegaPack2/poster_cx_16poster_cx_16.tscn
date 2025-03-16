@@ -1,13 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://cixxvkma1hfpe"]
+[gd_scene load_steps=6 format=3]
 
-[ext_resource type="Texture2D" uid="uid://b6um18yck8gsy" path="res://Assets/Textures/Megapack2/poster_cx_16_poster_cx_16.png" id="1_pi66w"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/poster_cx_16_poster_cx_16.png" id="1_pi66w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_04nbk"]
 resource_name = "poster_cx_16"
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-cull_mode = 2
 albedo_texture = ExtResource("1_pi66w")
 texture_filter = 2
 texture_repeat = false

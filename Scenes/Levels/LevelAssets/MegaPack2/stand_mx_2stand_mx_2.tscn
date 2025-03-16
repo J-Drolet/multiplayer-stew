@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://dbchcagg35n2t"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://hx26rflkbsq1" path="res://Assets/Textures/Megapack2/stand_mx_2_metal_hr_2.png" id="1_x6lxx"]
-[ext_resource type="Texture2D" uid="uid://duxdbs4rtng2w" path="res://Assets/Textures/Megapack2/stand_mx_2_concrete_hr_1.png" id="2_ugdkf"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/stand_mx_2_metal_hr_2.png" id="1_x6lxx"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/stand_mx_2_concrete_hr_1.png" id="2_ugdkf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6gjvy"]
 resource_name = "metal_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_x6lxx")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0454q"]
 resource_name = "concrete_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_ugdkf")
 texture_filter = 2
 

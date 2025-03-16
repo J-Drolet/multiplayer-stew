@@ -1,24 +1,21 @@
-[gd_scene load_steps=10 format=4 uid="uid://b1bpuj1vphltr"]
+[gd_scene load_steps=10 format=4]
 
-[ext_resource type="Texture2D" uid="uid://ul08knyixn3x" path="res://Assets/Textures/Megapack2/pipe_dx_1_metal_hr_2.png" id="1_kfu3t"]
-[ext_resource type="Texture2D" uid="uid://bxf8hp7mnvy17" path="res://Assets/Textures/Megapack2/pipe_dx_1_concrete_hr_1.png" id="2_uco03"]
-[ext_resource type="Texture2D" uid="uid://da746uql08jkt" path="res://Assets/Textures/Megapack2/pipe_dx_1_pipe_hr_3.png" id="3_o8ry4"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/pipe_dx_1_metal_hr_2.png" id="1_kfu3t"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/pipe_dx_1_concrete_hr_1.png" id="2_uco03"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/pipe_dx_1_pipe_hr_3.png" id="3_o8ry4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s7gmq"]
 resource_name = "metal_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_kfu3t")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2q0y"]
 resource_name = "concrete_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_uco03")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w8eb5"]
 resource_name = "pipe_hr_3"
-cull_mode = 2
 albedo_texture = ExtResource("3_o8ry4")
 texture_filter = 2
 

@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://sg3tq7hybnc6"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bta2q0fyytuec" path="res://Assets/Textures/Fair/pipe_1_corner_pipe_1.jpg" id="1_bk77c"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/pipe_1_corner_pipe_1.jpg" id="1_bk77c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dhpcm"]
 resource_name = "pipe_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_bk77c")
 texture_filter = 2
 

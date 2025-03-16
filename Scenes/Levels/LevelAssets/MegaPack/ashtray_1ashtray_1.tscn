@@ -1,25 +1,22 @@
-[gd_scene load_steps=10 format=4 uid="uid://cp0o1carysh8t"]
+[gd_scene load_steps=10 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bvxq2egfyxgi8" path="res://Assets/Textures/Fair/ashtray_1_plastic_4.png" id="1_0tsdr"]
-[ext_resource type="Texture2D" uid="uid://b72ncn574g6ax" path="res://Assets/Textures/Fair/ashtray_1_cigs_packet_1.png" id="2_y5o8l"]
-[ext_resource type="Texture2D" uid="uid://cieiy3vf745q1" path="res://Assets/Textures/Fair/ashtray_1_ash_1.png" id="3_lbux7"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/ashtray_1_plastic_4.png" id="1_0tsdr"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/ashtray_1_cigs_packet_1.png" id="2_y5o8l"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/ashtray_1_ash_1.png" id="3_lbux7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mcobs"]
 resource_name = "plastic_4"
-cull_mode = 2
 albedo_texture = ExtResource("1_0tsdr")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w46yx"]
 resource_name = "cigs_packet_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_y5o8l")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2k885"]
 resource_name = "ash_1"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("3_lbux7")
 texture_filter = 2
 

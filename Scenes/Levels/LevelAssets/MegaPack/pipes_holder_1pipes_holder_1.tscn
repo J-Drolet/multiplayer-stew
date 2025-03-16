@@ -1,17 +1,15 @@
-[gd_scene load_steps=9 format=4 uid="uid://djabw04itu0kr"]
+[gd_scene load_steps=9 format=4]
 
-[ext_resource type="Texture2D" uid="uid://uqsjwbgk0us1" path="res://Assets/Textures/Fair/pipes_holder_1_metal_4.png" id="1_xoeo3"]
-[ext_resource type="Texture2D" uid="uid://tx3dyfwcy0ob" path="res://Assets/Textures/Fair/pipes_holder_1_metal_6.png" id="2_ycwp6"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/pipes_holder_1_metal_4.png" id="1_xoeo3"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/pipes_holder_1_metal_6.png" id="2_ycwp6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0odrk"]
 resource_name = "metal_4"
-cull_mode = 2
 albedo_texture = ExtResource("1_xoeo3")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v0gcu"]
 resource_name = "metal_6"
-cull_mode = 2
 albedo_texture = ExtResource("2_ycwp6")
 texture_filter = 2
 

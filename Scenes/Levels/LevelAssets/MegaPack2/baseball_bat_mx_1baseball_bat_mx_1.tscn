@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://djg3omotgrct8"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://8ifttvpm3lui" path="res://Assets/Textures/Megapack2/baseball_bat_mx_1_baseball_bat_mx_1.png" id="1_bm5lj"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/baseball_bat_mx_1_baseball_bat_mx_1.png" id="1_bm5lj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h270c"]
 resource_name = "baseball_bat_mx_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_bm5lj")
 texture_filter = 2
 texture_repeat = false

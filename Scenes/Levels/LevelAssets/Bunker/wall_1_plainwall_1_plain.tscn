@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://c6du22sp5mdiu"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://l4a0kmd4bscx" path="res://Assets/Textures/Fair/wall_1_plain_wall_6.png" id="1_h4hsp"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/wall_1_plain_wall_6.png" id="1_h4hsp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0mvok"]
 resource_name = "wall_6"
-cull_mode = 2
 albedo_texture = ExtResource("1_h4hsp")
 texture_filter = 2
 
@@ -53,5 +52,4 @@ mesh = SubResource("ArrayMesh_3wt05")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@145"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_1ivub")

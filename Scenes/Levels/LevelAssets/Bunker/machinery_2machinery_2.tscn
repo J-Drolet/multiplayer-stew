@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://e0rdcpjvjv2d"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bgh0w6o0ifmm5" path="res://Assets/Textures/Fair/machinery_2_machinery_2.png" id="1_ett7a"]
-[ext_resource type="Texture2D" uid="uid://bd1hk2xugao4v" path="res://Assets/Textures/Fair/machinery_2_scifi_texture_1.png" id="2_a7tvx"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/machinery_2_machinery_2.png" id="1_ett7a"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/machinery_2_scifi_texture_1.png" id="2_a7tvx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vlrc6"]
 resource_name = "machinery_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_ett7a")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m44pn"]
 resource_name = "scifi_texture_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_a7tvx")
 texture_filter = 2
 

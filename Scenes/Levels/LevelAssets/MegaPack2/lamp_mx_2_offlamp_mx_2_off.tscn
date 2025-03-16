@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://0la6nv326rir"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://duvrnb2f3i8pw" path="res://Assets/Textures/Megapack2/lamp_mx_2_off_metal_hr_2.png" id="1_eeurv"]
-[ext_resource type="Texture2D" uid="uid://bt50fox40p1cg" path="res://Assets/Textures/Megapack2/lamp_mx_2_off_lamp_1_off.png" id="2_j6fdi"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/lamp_mx_2_off_metal_hr_2.png" id="1_eeurv"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/lamp_mx_2_off_lamp_1_off.png" id="2_j6fdi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vivcw"]
 resource_name = "metal_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_eeurv")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x7ol2"]
 resource_name = "lamp_1_off"
-cull_mode = 2
 albedo_texture = ExtResource("2_j6fdi")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_fjeq7"]

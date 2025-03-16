@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://b8iuslxupqbtn"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://og5tis5b7bir" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Metal_03.jpg" id="1_ke6vi"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Metal_03.jpg" id="1_ke6vi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8k1lj"]
 resource_name = "Metal_03"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_ke6vi")
 texture_filter = 2
 
@@ -54,5 +53,4 @@ mesh = SubResource("ArrayMesh_yt0er")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@45"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_71le5")

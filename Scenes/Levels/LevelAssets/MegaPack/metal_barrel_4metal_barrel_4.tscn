@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://dxa62p4li5cht"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://vgc4cbwo0gie" path="res://Assets/Textures/Fair/metal_barrel_4_metal_barrel_4.png" id="1_7wiqj"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/metal_barrel_4_metal_barrel_4.png" id="1_7wiqj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ji33j"]
 resource_name = "metal_barrel_4"
-cull_mode = 2
 albedo_texture = ExtResource("1_7wiqj")
 metallic = 0.2
 texture_filter = 2

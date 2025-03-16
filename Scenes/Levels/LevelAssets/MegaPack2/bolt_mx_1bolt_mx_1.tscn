@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://jnxeyk56ysh4"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bg0viug467yws" path="res://Assets/Textures/Megapack2/bolt_mx_1_metal_hr_2.png" id="1_n2voj"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/bolt_mx_1_metal_hr_2.png" id="1_n2voj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cxnsq"]
 resource_name = "metal_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_n2voj")
 texture_filter = 2
 

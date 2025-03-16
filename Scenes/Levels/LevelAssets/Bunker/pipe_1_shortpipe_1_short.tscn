@@ -1,18 +1,16 @@
-[gd_scene load_steps=10 format=4 uid="uid://bjw4i52fwvul8"]
+[gd_scene load_steps=10 format=4]
 
-[ext_resource type="Texture2D" uid="uid://uw1eqjwyu0ox" path="res://Assets/Textures/Fair/pipe_1_short_pipe_1.jpg" id="1_qg0j4"]
-[ext_resource type="Texture2D" uid="uid://bng5iv24o0786" path="res://Assets/Textures/Fair/pipe_1_short_metal_3.png" id="2_gx2t0"]
-[ext_resource type="Texture2D" uid="uid://j3h0jcjwe72e" path="res://Assets/Textures/Fair/pipe_1_short_plastic_2.png" id="3_nhj0m"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/pipe_1_short_pipe_1.jpg" id="1_qg0j4"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/pipe_1_short_metal_3.png" id="2_gx2t0"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/pipe_1_short_plastic_2.png" id="3_nhj0m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8t03y"]
 resource_name = "pipe_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_qg0j4")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7bcfc"]
 resource_name = "metal_3"
-cull_mode = 2
 albedo_texture = ExtResource("2_gx2t0")
 emission_enabled = true
 emission_texture = ExtResource("2_gx2t0")
@@ -20,7 +18,6 @@ texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lsiho"]
 resource_name = "plastic_2"
-cull_mode = 2
 albedo_texture = ExtResource("3_nhj0m")
 texture_filter = 2
 
@@ -117,5 +114,4 @@ mesh = SubResource("ArrayMesh_o6e0n")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@93"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_i402u")

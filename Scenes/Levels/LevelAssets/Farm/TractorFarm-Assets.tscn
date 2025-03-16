@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://dtbl7wtt0dvum"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://b633ajwdy2xkf" path="res://Assets/Textures/Farm/Farm-Assets_Tractor_Base_color.png" id="1_34x8x"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Tractor_Base_color.png" id="1_34x8x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c15g3"]
 resource_name = "Tractor"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_34x8x")
 roughness = 0.4
 

@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://cx6xhd2oasiiw"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cvk4hvvg8ajn6" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Plastic_box.png" id="1_yv5ke"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Plastic_box.png" id="1_yv5ke"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1xcxj"]
 resource_name = "Plastic_box"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_yv5ke")
 texture_filter = 2
 

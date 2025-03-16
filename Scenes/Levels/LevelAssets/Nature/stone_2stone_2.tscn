@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://dkiqvgfxghqvp"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://4c8a426ho3dw" path="res://Assets/Textures/Nature/stone_2_stone_2.png" id="1_anof2"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Nature/stone_2_stone_2.png" id="1_anof2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8bw8p"]
 resource_name = "stone_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_anof2")
 texture_filter = 2
 

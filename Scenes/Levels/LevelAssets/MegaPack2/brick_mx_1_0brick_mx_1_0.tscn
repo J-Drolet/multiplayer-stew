@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://djuh0ujyhd5oy"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://xrd8ul5hhf6s" path="res://Assets/Textures/Megapack2/brick_mx_1_0_bricks_mx_1.png" id="1_ascif"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/brick_mx_1_0_bricks_mx_1.png" id="1_ascif"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k5j2k"]
 resource_name = "bricks_mx_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_ascif")
 texture_filter = 2
 texture_repeat = false

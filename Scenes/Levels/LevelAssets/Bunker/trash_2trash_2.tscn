@@ -1,13 +1,12 @@
-[gd_scene load_steps=6 format=4 uid="uid://c2w6jmkamyt61"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dmlam11wah0yp" path="res://Assets/Textures/Fair/trash_2_trash_2.png" id="1_bv34q"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/trash_2_trash_2.png" id="1_bv34q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m2asb"]
 resource_name = "trash_2"
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-cull_mode = 2
 albedo_texture = ExtResource("1_bv34q")
 texture_filter = 2
 texture_repeat = false

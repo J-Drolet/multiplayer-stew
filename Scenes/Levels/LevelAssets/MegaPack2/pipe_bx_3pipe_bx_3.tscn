@@ -1,17 +1,15 @@
-[gd_scene load_steps=9 format=4 uid="uid://o37m3kkqfveg"]
+[gd_scene load_steps=9 format=4]
 
-[ext_resource type="Texture2D" uid="uid://b84nosvej36hl" path="res://Assets/Textures/Megapack2/pipe_bx_3_pipe_hr_3.png" id="1_ytp4c"]
-[ext_resource type="Texture2D" uid="uid://cnrl3tbxb40yp" path="res://Assets/Textures/Megapack2/pipe_bx_3_metal_hr_2.png" id="2_0phle"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/pipe_bx_3_pipe_hr_3.png" id="1_ytp4c"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/pipe_bx_3_metal_hr_2.png" id="2_0phle"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u7cun"]
 resource_name = "pipe_hr_3"
-cull_mode = 2
 albedo_texture = ExtResource("1_ytp4c")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2bfae"]
 resource_name = "metal_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("2_0phle")
 texture_filter = 2
 

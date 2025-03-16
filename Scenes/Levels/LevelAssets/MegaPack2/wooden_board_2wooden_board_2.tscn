@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://c2q4nhhb31ntu"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://daggy6ki3dxid" path="res://Assets/Textures/Megapack2/wooden_board_2_wooden_board_hr_2.png" id="1_ip1vo"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wooden_board_2_wooden_board_hr_2.png" id="1_ip1vo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sc5fo"]
 resource_name = "wooden_board_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_ip1vo")
 texture_filter = 2
 texture_repeat = false

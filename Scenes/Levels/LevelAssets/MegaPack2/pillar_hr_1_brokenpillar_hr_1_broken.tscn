@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://bh3jkb03yjjth"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dv7pfwsm18dm0" path="res://Assets/Textures/Megapack2/pillar_hr_1_broken_wall_hr_2.png" id="1_josv1"]
-[ext_resource type="Texture2D" uid="uid://cgd6q0a5nghji" path="res://Assets/Textures/Megapack2/pillar_hr_1_broken_rebar_hr_1.png" id="2_6wjgn"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/pillar_hr_1_broken_wall_hr_2.png" id="1_josv1"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/pillar_hr_1_broken_rebar_hr_1.png" id="2_6wjgn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_njwpp"]
 resource_name = "wall_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_josv1")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bvx7l"]
 resource_name = "rebar_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_6wjgn")
 texture_filter = 2
 

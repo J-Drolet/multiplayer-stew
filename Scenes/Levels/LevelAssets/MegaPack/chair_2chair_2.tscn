@@ -1,24 +1,21 @@
-[gd_scene load_steps=10 format=4 uid="uid://d0jng73tjd8h6"]
+[gd_scene load_steps=10 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cb228467lq3os" path="res://Assets/Textures/Fair/chair_2_metal_8.png" id="1_b1pns"]
-[ext_resource type="Texture2D" uid="uid://bb2olerwhah40" path="res://Assets/Textures/Fair/chair_2_fabric_2.png" id="2_b02l7"]
-[ext_resource type="Texture2D" uid="uid://c40ttn012ms8x" path="res://Assets/Textures/Fair/chair_2_metal_mp_4.png" id="3_876xe"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/chair_2_metal_8.png" id="1_b1pns"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/chair_2_fabric_2.png" id="2_b02l7"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/chair_2_metal_mp_4.png" id="3_876xe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_edy5c"]
 resource_name = "metal_8"
-cull_mode = 2
 albedo_texture = ExtResource("1_b1pns")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ukcor"]
 resource_name = "fabric_2"
-cull_mode = 2
 albedo_texture = ExtResource("2_b02l7")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8l72k"]
 resource_name = "metal_mp_4"
-cull_mode = 2
 albedo_texture = ExtResource("3_876xe")
 texture_filter = 2
 

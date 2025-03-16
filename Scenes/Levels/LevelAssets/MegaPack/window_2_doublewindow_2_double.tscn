@@ -1,26 +1,23 @@
-[gd_scene load_steps=11 format=4 uid="uid://dp22f5w3wr0ex"]
+[gd_scene load_steps=11 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bf1b8c4muyd0j" path="res://Assets/Textures/Fair/window_2_double_wall_3.png" id="1_q1pbu"]
-[ext_resource type="Texture2D" uid="uid://ddy6loxj1pto1" path="res://Assets/Textures/Fair/window_2_double_wood_2.png" id="2_jwmgx"]
-[ext_resource type="Texture2D" uid="uid://cf5fqj8uhm2n1" path="res://Assets/Textures/Fair/window_2_double_window_2.png" id="3_ljs8n"]
-[ext_resource type="Texture2D" uid="uid://t01l8xqrrywc" path="res://Assets/Textures/Fair/window_2_double_window_2_emission.png" id="4_6sf7x"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/window_2_double_wall_3.png" id="1_q1pbu"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/window_2_double_wood_2.png" id="2_jwmgx"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/window_2_double_window_2.png" id="3_ljs8n"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/window_2_double_window_2_emission.png" id="4_6sf7x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b6um5"]
 resource_name = "wall_3"
-cull_mode = 2
 albedo_texture = ExtResource("1_q1pbu")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qva3g"]
 resource_name = "wood_2"
-cull_mode = 2
 albedo_texture = ExtResource("2_jwmgx")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kognx"]
 resource_name = "window_2"
 transparency = 1
-cull_mode = 2
 albedo_color = Color(1, 1, 1, 0.403922)
 albedo_texture = ExtResource("3_ljs8n")
 emission_enabled = true

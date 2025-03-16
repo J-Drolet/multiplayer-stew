@@ -1,13 +1,12 @@
-[gd_scene load_steps=5 format=4 uid="uid://dx5f77s4dpj25"]
+[gd_scene load_steps=5 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cp2dcbixpyucf" path="res://Assets/Textures/Nature/fern_3_fern_3.png" id="1_gvy63"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Nature/fern_3_fern_3.png" id="1_gvy63"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qeyb2"]
 resource_name = "fern_3"
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-cull_mode = 2
 albedo_texture = ExtResource("1_gvy63")
 texture_filter = 2
 texture_repeat = false

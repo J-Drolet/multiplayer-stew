@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://csiw0dkfd05vl"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://7ldmvbshdj54" path="res://Assets/Textures/Fair/concrete_block_1_concrete_block_1.png" id="1_yohe1"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/concrete_block_1_concrete_block_1.png" id="1_yohe1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e8fc0"]
 resource_name = "concrete_block_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_yohe1")
 texture_filter = 2
 

@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://bx8vt3tc6c0g6"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bsudb06l0ewea" path="res://Assets/Textures/Fair/lamp_3_off_lamp_3_off.png" id="1_aood7"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/lamp_3_off_lamp_3_off.png" id="1_aood7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wwibb"]
 resource_name = "lamp_3_off"
-cull_mode = 2
 albedo_texture = ExtResource("1_aood7")
 texture_filter = 2
 

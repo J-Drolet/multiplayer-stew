@@ -1,12 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://td13qcg5gbc8"]
+[gd_scene load_steps=10 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cxs6f8hge5rgx" path="res://Assets/Textures/Fair/ceiling_peace_1_concrete_6.png" id="1_fu38m"]
-[ext_resource type="Texture2D" uid="uid://dxmtbvxsrlu6a" path="res://Assets/Textures/Fair/ceiling_peace_1_metal_mesh_1.png" id="2_60tcm"]
-[ext_resource type="Texture2D" uid="uid://btlahbry0y1c4" path="res://Assets/Textures/Fair/ceiling_peace_1_metal_floor_2.png" id="3_xqs5i"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/ceiling_peace_1_concrete_6.png" id="1_fu38m"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/ceiling_peace_1_metal_mesh_1.png" id="2_60tcm"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/ceiling_peace_1_metal_floor_2.png" id="3_xqs5i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2huu"]
 resource_name = "concrete_6"
-cull_mode = 2
 albedo_texture = ExtResource("1_fu38m")
 texture_filter = 2
 
@@ -15,13 +14,11 @@ resource_name = "metal_mesh_1"
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-cull_mode = 2
 albedo_texture = ExtResource("2_60tcm")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5k8a2"]
 resource_name = "metal_floor_2"
-cull_mode = 2
 albedo_texture = ExtResource("3_xqs5i")
 texture_filter = 2
 

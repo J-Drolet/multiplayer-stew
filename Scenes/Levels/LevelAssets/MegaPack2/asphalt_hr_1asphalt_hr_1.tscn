@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://cgfqaar4myf44"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cdt8nlm4fuc0" path="res://Assets/Textures/Megapack2/asphalt_hr_1_asphalt_hr_1.png" id="1_02c77"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/asphalt_hr_1_asphalt_hr_1.png" id="1_02c77"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xm6h1"]
 resource_name = "asphalt_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_02c77")
 texture_filter = 2
 

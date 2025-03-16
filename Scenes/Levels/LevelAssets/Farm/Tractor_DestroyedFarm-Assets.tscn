@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://bbgvl2ur6iqar"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cjbo5tnhs0lx1" path="res://Assets/Textures/Farm/Farm-Assets_Tractor_Destroyed_Base_color.png" id="1_g4b40"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Tractor_Destroyed_Base_color.png" id="1_g4b40"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eyny3"]
 resource_name = "Tractor_Destroyed"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_g4b40")
 roughness = 0.4
 

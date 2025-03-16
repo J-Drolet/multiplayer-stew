@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://dijbt7q15nhpp"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://1vird7a7mvaw" path="res://Assets/Textures/Farm/Farm-Assets_Wind-Mill_Base_color.png" id="1_no7vt"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Wind-Mill_Base_color.png" id="1_no7vt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r4nqt"]
 resource_name = "Wind-Mill"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_no7vt")
 roughness = 0.4
 

@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://b5leno4s6wusl"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bdf771t1lohp5" path="res://Assets/Textures/Farm/Farm-Assets_Fence_Short_Variant_2_Base_color.png" id="1_lcwxg"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Fence_Short_Variant_2_Base_color.png" id="1_lcwxg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gjc2k"]
 resource_name = "Fence_Short_Variant_2"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_lcwxg")
 roughness = 0.4
 

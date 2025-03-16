@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://dridlfm6734wy"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://mac6a0vmhoiq" path="res://Assets/Textures/Fair/metal_shelf_2_metal_3.png" id="1_sgsdt"]
-[ext_resource type="Texture2D" uid="uid://pv3gg0c2lada" path="res://Assets/Textures/Fair/metal_shelf_2_metal_6.png" id="2_mui50"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/metal_shelf_2_metal_3.png" id="1_sgsdt"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/metal_shelf_2_metal_6.png" id="2_mui50"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ydcf3"]
 resource_name = "metal_3"
-cull_mode = 2
 albedo_texture = ExtResource("1_sgsdt")
 emission_enabled = true
 emission_texture = ExtResource("1_sgsdt")
@@ -13,7 +12,6 @@ texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i2dg7"]
 resource_name = "metal_6"
-cull_mode = 2
 albedo_texture = ExtResource("2_mui50")
 texture_filter = 2
 

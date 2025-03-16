@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://bfrww7ac0oskg"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://q60db5n8y4yi" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Cash_register.png" id="1_dubmp"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Cash_register.png" id="1_dubmp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qlf0i"]
 resource_name = "Cash_register"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_dubmp")
 texture_filter = 2
 

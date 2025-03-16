@@ -1,13 +1,12 @@
-[gd_scene load_steps=5 format=4 uid="uid://bwmtxrnbr7v84"]
+[gd_scene load_steps=5 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cn4qsib4ock3v" path="res://Assets/Textures/Nature/grass_4_grass_4.png" id="1_8ua8f"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Nature/grass_4_grass_4.png" id="1_8ua8f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_laujj"]
 resource_name = "grass_4"
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-cull_mode = 2
 albedo_texture = ExtResource("1_8ua8f")
 texture_filter = 2
 texture_repeat = false

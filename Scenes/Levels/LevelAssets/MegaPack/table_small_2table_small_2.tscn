@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://dorcpgku4am28"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bwacbbaak33k0" path="res://Assets/Textures/Fair/table_small_2_wood_1.png" id="1_uiqgb"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/table_small_2_wood_1.png" id="1_uiqgb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b4rf6"]
 resource_name = "wood_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_uiqgb")
 texture_filter = 2
 

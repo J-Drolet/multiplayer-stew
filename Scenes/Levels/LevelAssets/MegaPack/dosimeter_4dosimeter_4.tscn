@@ -1,24 +1,21 @@
-[gd_scene load_steps=10 format=4 uid="uid://dy8ovxcpem00g"]
+[gd_scene load_steps=10 format=4]
 
-[ext_resource type="Texture2D" uid="uid://c68a13h7qlg7d" path="res://Assets/Textures/Fair/dosimeter_4_dosimeter_3.png" id="1_dpqua"]
-[ext_resource type="Texture2D" uid="uid://bd48s3lb7rj61" path="res://Assets/Textures/Fair/dosimeter_4_metal_mp_1.png" id="2_gx5sv"]
-[ext_resource type="Texture2D" uid="uid://buk7x8hxnej2c" path="res://Assets/Textures/Fair/dosimeter_4_metal_mp_4.png" id="3_4tsc0"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/dosimeter_4_dosimeter_3.png" id="1_dpqua"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/dosimeter_4_metal_mp_1.png" id="2_gx5sv"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/dosimeter_4_metal_mp_4.png" id="3_4tsc0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xowbt"]
 resource_name = "dosimeter_3"
-cull_mode = 2
 albedo_texture = ExtResource("1_dpqua")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pv7jc"]
 resource_name = "metal_mp_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_gx5sv")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l14qe"]
 resource_name = "metal_mp_4"
-cull_mode = 2
 albedo_texture = ExtResource("3_4tsc0")
 texture_filter = 2
 

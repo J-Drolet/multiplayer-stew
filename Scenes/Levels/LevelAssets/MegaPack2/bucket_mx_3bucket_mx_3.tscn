@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://dk3f8iw4njslm"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cxjvgfq4khx1" path="res://Assets/Textures/Megapack2/bucket_mx_3_bucket_mx_3.png" id="1_232hu"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/bucket_mx_3_bucket_mx_3.png" id="1_232hu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_827xm"]
 resource_name = "bucket_mx_3"
-cull_mode = 2
 albedo_texture = ExtResource("1_232hu")
 texture_filter = 2
 

@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://hm56l1npuqc1"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://djpkvddbtp5cu" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Waffle_maker.png" id="1_nbdh0"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Waffle_maker.png" id="1_nbdh0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7moy3"]
 resource_name = "Waffle_maker"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_nbdh0")
 texture_filter = 2
 
@@ -54,5 +53,4 @@ mesh = SubResource("ArrayMesh_agm56")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@175"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_ys7kf")

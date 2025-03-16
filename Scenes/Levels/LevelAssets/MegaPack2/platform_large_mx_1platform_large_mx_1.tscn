@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://dym23njgklopr"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://btq2u7qd1v883" path="res://Assets/Textures/Megapack2/platform_large_mx_1_concrete_hr_4.png" id="1_ibk6s"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/platform_large_mx_1_concrete_hr_4.png" id="1_ibk6s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8enal"]
 resource_name = "concrete_hr_4"
-cull_mode = 2
 albedo_texture = ExtResource("1_ibk6s")
 texture_filter = 2
 

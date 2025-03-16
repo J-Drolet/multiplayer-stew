@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://b3v8x73tn3nh8"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://jxyrppdxo6hg" path="res://Assets/Textures/Megapack2/chimney_a_1_metal_hr_1.png" id="1_4qfek"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/chimney_a_1_metal_hr_1.png" id="1_4qfek"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g84ne"]
 resource_name = "metal_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_4qfek")
 texture_filter = 2
 

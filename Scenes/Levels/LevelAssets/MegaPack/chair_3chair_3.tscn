@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://drt1mk1xwrd0t"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://ge81q6brrghx" path="res://Assets/Textures/Fair/chair_3_metal_mp_4.png" id="1_ftfn4"]
-[ext_resource type="Texture2D" uid="uid://c2psk2wrwttds" path="res://Assets/Textures/Fair/chair_3_fabric_4.png" id="2_2gyn8"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/chair_3_metal_mp_4.png" id="1_ftfn4"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/chair_3_fabric_4.png" id="2_2gyn8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7pltf"]
 resource_name = "metal_mp_4"
-cull_mode = 2
 albedo_texture = ExtResource("1_ftfn4")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x1ibj"]
 resource_name = "fabric_4"
-cull_mode = 2
 albedo_texture = ExtResource("2_2gyn8")
 texture_filter = 2
 

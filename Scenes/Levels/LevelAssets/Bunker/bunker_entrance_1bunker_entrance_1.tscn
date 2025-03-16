@@ -1,24 +1,21 @@
-[gd_scene load_steps=10 format=4 uid="uid://br5l1dd1amgdv"]
+[gd_scene load_steps=10 format=4]
 
-[ext_resource type="Texture2D" uid="uid://wve7y4res1el" path="res://Assets/Textures/Fair/bunker_entrance_1_metal_floor_1.png" id="1_jlat1"]
-[ext_resource type="Texture2D" uid="uid://8d0g84c2lkns" path="res://Assets/Textures/Fair/bunker_entrance_1_wall_6.png" id="2_de2at"]
-[ext_resource type="Texture2D" uid="uid://b16l3encabbtd" path="res://Assets/Textures/Fair/bunker_entrance_1_concrete_4.png" id="3_xasj4"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/bunker_entrance_1_metal_floor_1.png" id="1_jlat1"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/bunker_entrance_1_wall_6.png" id="2_de2at"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/bunker_entrance_1_concrete_4.png" id="3_xasj4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_saq3u"]
 resource_name = "metal_floor_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_jlat1")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_27uhy"]
 resource_name = "wall_6"
-cull_mode = 2
 albedo_texture = ExtResource("2_de2at")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5xqs0"]
 resource_name = "concrete_4"
-cull_mode = 2
 albedo_texture = ExtResource("3_xasj4")
 texture_filter = 2
 
@@ -115,5 +112,4 @@ mesh = SubResource("ArrayMesh_6t53h")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@13"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_elrg3")

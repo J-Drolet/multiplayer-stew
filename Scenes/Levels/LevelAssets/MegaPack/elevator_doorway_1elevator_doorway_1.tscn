@@ -1,38 +1,33 @@
-[gd_scene load_steps=15 format=4 uid="uid://cvjh6fc7wfjxe"]
+[gd_scene load_steps=15 format=4]
 
-[ext_resource type="Texture2D" uid="uid://d0nmc0anjhvml" path="res://Assets/Textures/Fair/elevator_doorway_1_wall_3.png" id="1_q1nq3"]
-[ext_resource type="Texture2D" uid="uid://dccdb22xmyqef" path="res://Assets/Textures/Fair/elevator_doorway_1_wood_2.png" id="2_c1ky5"]
-[ext_resource type="Texture2D" uid="uid://b4lr6ox1rvgpw" path="res://Assets/Textures/Fair/elevator_doorway_1_metal_mp_3.png" id="3_qrhfl"]
-[ext_resource type="Texture2D" uid="uid://dvpxribylvmli" path="res://Assets/Textures/Fair/elevator_doorway_1_metal_mp_1.png" id="4_tf1f2"]
-[ext_resource type="Texture2D" uid="uid://crl4gw721mivj" path="res://Assets/Textures/Fair/elevator_doorway_1_metal_mp_4.png" id="5_co6ru"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/elevator_doorway_1_wall_3.png" id="1_q1nq3"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/elevator_doorway_1_wood_2.png" id="2_c1ky5"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/elevator_doorway_1_metal_mp_3.png" id="3_qrhfl"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/elevator_doorway_1_metal_mp_1.png" id="4_tf1f2"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/elevator_doorway_1_metal_mp_4.png" id="5_co6ru"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxex7"]
 resource_name = "wall_3"
-cull_mode = 2
 albedo_texture = ExtResource("1_q1nq3")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rm4mv"]
 resource_name = "wood_2"
-cull_mode = 2
 albedo_texture = ExtResource("2_c1ky5")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jfief"]
 resource_name = "metal_mp_3"
-cull_mode = 2
 albedo_texture = ExtResource("3_qrhfl")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4dke"]
 resource_name = "metal_mp_1"
-cull_mode = 2
 albedo_texture = ExtResource("4_tf1f2")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oempq"]
 resource_name = "metal_mp_4"
-cull_mode = 2
 albedo_texture = ExtResource("5_co6ru")
 texture_filter = 2
 

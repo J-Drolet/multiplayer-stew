@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://cd1ab6xm0s1h2"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cr8pnbqdbgg1n" path="res://Assets/Textures/Restaurant/Quequis_House_Props_sack_flour.png" id="1_w0v6e"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_sack_flour.png" id="1_w0v6e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0hxcb"]
 resource_name = "sack_flour"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_w0v6e")
 texture_filter = 2
 
@@ -56,5 +55,4 @@ mesh = SubResource("ArrayMesh_xxq2a")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@87"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_g53w5")

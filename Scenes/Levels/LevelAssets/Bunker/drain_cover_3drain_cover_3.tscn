@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://by17oybrifwnr"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://b8i76gxfgq8xn" path="res://Assets/Textures/Fair/drain_cover_3_drain_cover_3.png" id="1_u80q1"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/drain_cover_3_drain_cover_3.png" id="1_u80q1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ru6wh"]
 resource_name = "drain_cover_3"
-cull_mode = 2
 albedo_texture = ExtResource("1_u80q1")
 texture_filter = 2
 texture_repeat = false

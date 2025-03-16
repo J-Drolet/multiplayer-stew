@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://dor2grh06n2td"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://ceffdu4dn4apr" path="res://Assets/Textures/Fair/military_radio_1_military_radio_1.png" id="1_5bf0g"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/military_radio_1_military_radio_1.png" id="1_5bf0g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nxwka"]
 resource_name = "military_radio_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_5bf0g")
 texture_filter = 2
 texture_repeat = false

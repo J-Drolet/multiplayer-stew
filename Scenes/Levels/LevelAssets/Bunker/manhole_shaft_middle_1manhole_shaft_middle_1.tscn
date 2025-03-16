@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://d38c18vuwyjp2"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://chrilgte6w0cu" path="res://Assets/Textures/Fair/manhole_shaft_middle_1_metal_floor_2.png" id="1_73b37"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/manhole_shaft_middle_1_metal_floor_2.png" id="1_73b37"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_84x51"]
 resource_name = "metal_floor_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_73b37")
 texture_filter = 2
 

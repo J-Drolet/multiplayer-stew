@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://bulh3acx3rkbk"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cgi5ocn3awdag" path="res://Assets/Textures/Fair/mre_1_mre_1.png" id="1_bhcht"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/mre_1_mre_1.png" id="1_bhcht"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wi2x6"]
 resource_name = "mre_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_bhcht")
 texture_filter = 2
 texture_repeat = false

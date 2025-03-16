@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://de1qpfs2ypjqu"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bw46b718yhkqv" path="res://Assets/Textures/Fair/cell_phone_2_cell_phone_2.png" id="1_f1fw2"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/cell_phone_2_cell_phone_2.png" id="1_f1fw2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1tk0n"]
 resource_name = "cell_phone_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_f1fw2")
 texture_filter = 2
 

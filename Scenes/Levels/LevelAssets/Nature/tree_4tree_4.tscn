@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://dvkndelsmbua7"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bp6wjc1n2qq0m" path="res://Assets/Textures/Nature/tree_4_pine_bark_1_winter.png" id="1_0wkdi"]
-[ext_resource type="Texture2D" uid="uid://ljwa56svdeb2" path="res://Assets/Textures/Nature/tree_4_pine_branch_2_snowy.png" id="2_t7mp4"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Nature/tree_4_pine_bark_1_winter.png" id="1_0wkdi"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Nature/tree_4_pine_branch_2_snowy.png" id="2_t7mp4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2vr8h"]
 resource_name = "pine_bark_1_winter"
-cull_mode = 2
 albedo_texture = ExtResource("1_0wkdi")
 texture_filter = 2
 
@@ -14,7 +13,6 @@ resource_name = "pine_branch_2_winter"
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-cull_mode = 2
 albedo_texture = ExtResource("2_t7mp4")
 roughness = 0.866667
 texture_filter = 2

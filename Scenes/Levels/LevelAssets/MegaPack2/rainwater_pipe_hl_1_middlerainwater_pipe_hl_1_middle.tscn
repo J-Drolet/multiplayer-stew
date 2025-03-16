@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://ccuvkktq6t3o5"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cb1kw2l4x8yp4" path="res://Assets/Textures/Megapack2/rainwater_pipe_hl_1_middle_metal_hr_2.png" id="1_q0k8p"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/rainwater_pipe_hl_1_middle_metal_hr_2.png" id="1_q0k8p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vyhht"]
 resource_name = "metal_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_q0k8p")
 texture_filter = 2
 

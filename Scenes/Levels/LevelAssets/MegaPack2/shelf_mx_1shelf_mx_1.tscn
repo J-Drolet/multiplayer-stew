@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://banlux7hhelj7"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://br6i1emvt0kd7" path="res://Assets/Textures/Megapack2/shelf_mx_1_metal_hr_2.png" id="1_w04ii"]
-[ext_resource type="Texture2D" uid="uid://debketle05sno" path="res://Assets/Textures/Megapack2/shelf_mx_1_planks_hr_2.png" id="2_5augu"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/shelf_mx_1_metal_hr_2.png" id="1_w04ii"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/shelf_mx_1_planks_hr_2.png" id="2_5augu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_btklh"]
 resource_name = "metal_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_w04ii")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ps80m"]
 resource_name = "planks_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("2_5augu")
 roughness = 0.0
 texture_filter = 2

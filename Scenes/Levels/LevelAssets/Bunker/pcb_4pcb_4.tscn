@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://dqth0vthrypxh"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bqkkam5ldfwgu" path="res://Assets/Textures/Fair/pcb_4_pcb_4.png" id="1_x8gqt"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/pcb_4_pcb_4.png" id="1_x8gqt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0sc8k"]
 resource_name = "pcb_4"
-cull_mode = 2
 albedo_texture = ExtResource("1_x8gqt")
 texture_filter = 2
 texture_repeat = false

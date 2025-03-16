@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://qdxblevuyg8m"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bdt7hubj3ihfv" path="res://Assets/Textures/Restaurant/Quequis_House_Props_bag_onions.png" id="1_8g7dl"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_bag_onions.png" id="1_8g7dl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jrivt"]
 resource_name = "bag_onions"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_8g7dl")
 texture_filter = 2
 

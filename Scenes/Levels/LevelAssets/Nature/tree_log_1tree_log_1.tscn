@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://brj0emj1xrow3"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://rak8xc3hpfiw" path="res://Assets/Textures/Nature/tree_log_1_tree_bark_5.png" id="1_u05h4"]
-[ext_resource type="Texture2D" uid="uid://do2cosb6hl6w1" path="res://Assets/Textures/Nature/tree_log_1_log_ends_1.png" id="2_r1pgx"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Nature/tree_log_1_tree_bark_5.png" id="1_u05h4"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Nature/tree_log_1_log_ends_1.png" id="2_r1pgx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8gg6m"]
 resource_name = "tree_bark_5"
-cull_mode = 2
 albedo_texture = ExtResource("1_u05h4")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obbpw"]
 resource_name = "log_ends_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_r1pgx")
 texture_filter = 2
 

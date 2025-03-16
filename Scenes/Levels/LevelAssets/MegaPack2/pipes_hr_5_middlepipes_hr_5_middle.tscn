@@ -1,25 +1,22 @@
-[gd_scene load_steps=10 format=4 uid="uid://we4m86es5ofl"]
+[gd_scene load_steps=10 format=4]
 
-[ext_resource type="Texture2D" uid="uid://b22frmu1j6ubd" path="res://Assets/Textures/Megapack2/pipes_hr_5_middle_panel_hs_1.png" id="1_ut1yg"]
-[ext_resource type="Texture2D" uid="uid://cb1dpw00kp1vw" path="res://Assets/Textures/Megapack2/pipes_hr_5_middle_steel_beams_hr_1.png" id="2_ioh5b"]
-[ext_resource type="Texture2D" uid="uid://dia62bfpbjhvq" path="res://Assets/Textures/Megapack2/pipes_hr_5_middle_pipe_hr_3.png" id="3_4dyow"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/pipes_hr_5_middle_panel_hs_1.png" id="1_ut1yg"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/pipes_hr_5_middle_steel_beams_hr_1.png" id="2_ioh5b"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/pipes_hr_5_middle_pipe_hr_3.png" id="3_4dyow"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4y7vy"]
 resource_name = "panel_hs_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_ut1yg")
 roughness = 0.0
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jxumh"]
 resource_name = "steel_beams_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_ioh5b")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gol2b"]
 resource_name = "pipe_hr_3"
-cull_mode = 2
 albedo_texture = ExtResource("3_4dyow")
 texture_filter = 2
 

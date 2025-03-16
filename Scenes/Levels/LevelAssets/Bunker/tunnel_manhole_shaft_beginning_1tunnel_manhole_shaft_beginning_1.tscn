@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://n2slvos2l7l"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://yp81l7avcsgm" path="res://Assets/Textures/Fair/tunnel_manhole_shaft_beginning_1_metal_floor_2.png" id="1_k5tpu"]
-[ext_resource type="Texture2D" uid="uid://ceb3s1vbqoy26" path="res://Assets/Textures/Fair/tunnel_manhole_shaft_beginning_1_concrete_1.png" id="2_djxp6"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/tunnel_manhole_shaft_beginning_1_metal_floor_2.png" id="1_k5tpu"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/tunnel_manhole_shaft_beginning_1_concrete_1.png" id="2_djxp6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f7i12"]
 resource_name = "metal_floor_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_k5tpu")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_54bvf"]
 resource_name = "concrete_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_djxp6")
 texture_filter = 2
 

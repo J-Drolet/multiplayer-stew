@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://6y2clgb7ra1q"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://blm5qqmgpv6gr" path="res://Assets/Textures/Farm/Farm-Assets_Wheelbarrow_Base_color.png" id="1_bir0s"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Wheelbarrow_Base_color.png" id="1_bir0s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_juw6h"]
 resource_name = "Wheelbarrow"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_bir0s")
 roughness = 0.4
 

@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://cbkq5nq5r3kvk"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://diawx7k42bytg" path="res://Assets/Textures/Fair/crate_1_wooden_crate_3.png" id="1_guubc"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/crate_1_wooden_crate_3.png" id="1_guubc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_andkr"]
 resource_name = "crate_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_guubc")
 texture_filter = 2
 

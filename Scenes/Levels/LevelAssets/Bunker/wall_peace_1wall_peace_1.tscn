@@ -1,14 +1,13 @@
-[gd_scene load_steps=14 format=4 uid="uid://c1k2hegac53aw"]
+[gd_scene load_steps=14 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cf23g2g38ucgm" path="res://Assets/Textures/Fair/wall_peace_1_concrete_6.png" id="1_rgosy"]
-[ext_resource type="Texture2D" uid="uid://n40jexrr8r0f" path="res://Assets/Textures/Fair/wall_peace_1_metal_mesh_1.png" id="2_gwm01"]
-[ext_resource type="Texture2D" uid="uid://c3kkouuuad2gr" path="res://Assets/Textures/Fair/wall_peace_1_pipe_1.jpg" id="3_ernqq"]
-[ext_resource type="Texture2D" uid="uid://bioiwtpcn0ehf" path="res://Assets/Textures/Fair/wall_peace_1_metal_3.png" id="4_ji1yi"]
-[ext_resource type="Texture2D" uid="uid://bd6uifvvlkffk" path="res://Assets/Textures/Fair/wall_peace_1_plastic_2.png" id="5_fiwwb"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/wall_peace_1_concrete_6.png" id="1_rgosy"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/wall_peace_1_metal_mesh_1.png" id="2_gwm01"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/wall_peace_1_pipe_1.jpg" id="3_ernqq"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/wall_peace_1_metal_3.png" id="4_ji1yi"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/wall_peace_1_plastic_2.png" id="5_fiwwb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0letp"]
 resource_name = "concrete_6"
-cull_mode = 2
 albedo_texture = ExtResource("1_rgosy")
 texture_filter = 2
 
@@ -17,19 +16,16 @@ resource_name = "metal_mesh_1"
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-cull_mode = 2
 albedo_texture = ExtResource("2_gwm01")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jm52f"]
 resource_name = "pipe_1"
-cull_mode = 2
 albedo_texture = ExtResource("3_ernqq")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3rgp1"]
 resource_name = "metal_3"
-cull_mode = 2
 albedo_texture = ExtResource("4_ji1yi")
 emission_enabled = true
 emission_texture = ExtResource("4_ji1yi")
@@ -37,7 +33,6 @@ texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mc70u"]
 resource_name = "plastic_2"
-cull_mode = 2
 albedo_texture = ExtResource("5_fiwwb")
 texture_filter = 2
 

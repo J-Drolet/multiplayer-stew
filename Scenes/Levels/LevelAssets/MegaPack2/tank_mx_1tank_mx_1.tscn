@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://bbq456eapmugs"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://2h3627f1ed46" path="res://Assets/Textures/Megapack2/tank_mx_1_metal_hr_3.png" id="1_jcyta"]
-[ext_resource type="Texture2D" uid="uid://752e86af342w" path="res://Assets/Textures/Megapack2/tank_mx_1_concrete_hr_1.png" id="2_hvsm7"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/tank_mx_1_metal_hr_3.png" id="1_jcyta"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/tank_mx_1_concrete_hr_1.png" id="2_hvsm7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uwkay"]
 resource_name = "metal_hr_3"
-cull_mode = 2
 albedo_texture = ExtResource("1_jcyta")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wp3o8"]
 resource_name = "concrete_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_hvsm7")
 texture_filter = 2
 

@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://l46p8yqcv4bd"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://lewlbinba0bu" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Box_B.png" id="1_7oqhk"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Box_B.png" id="1_7oqhk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jx17d"]
 resource_name = "Box_B"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_7oqhk")
 texture_filter = 2
 
@@ -54,5 +53,4 @@ mesh = SubResource("ArrayMesh_k57ul")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@17"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_41bwd")

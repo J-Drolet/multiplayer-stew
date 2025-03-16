@@ -1,47 +1,41 @@
-[gd_scene load_steps=16 format=4 uid="uid://cqux5fc1nyxun"]
+[gd_scene load_steps=16 format=4]
 
-[ext_resource type="Texture2D" uid="uid://b5c2wl2qywm1a" path="res://Assets/Textures/Megapack2/roof_mh_4_b_4_concrete_hr_3.png" id="1_x6e7j"]
-[ext_resource type="Texture2D" uid="uid://4r6h5b2r13bs" path="res://Assets/Textures/Megapack2/roof_mh_4_b_4_wall_hr_2.png" id="2_ddqas"]
-[ext_resource type="Texture2D" uid="uid://dfnnu2qjaf0gc" path="res://Assets/Textures/Megapack2/roof_mh_4_b_4_roof_hr_4.png" id="3_ydd21"]
-[ext_resource type="Texture2D" uid="uid://c4vxrerys3emo" path="res://Assets/Textures/Megapack2/roof_mh_4_b_4_planks_hr_3.png" id="4_deo1d"]
-[ext_resource type="Texture2D" uid="uid://dpupqscpmbqd1" path="res://Assets/Textures/Megapack2/roof_mh_4_b_4_window_hy_6.png" id="5_7e6hw"]
-[ext_resource type="Texture2D" uid="uid://nd754ljsqa8o" path="res://Assets/Textures/Megapack2/roof_mh_4_b_4_steel_beams_hr_1.png" id="6_83sdd"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_mh_4_b_4_concrete_hr_3.png" id="1_x6e7j"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_mh_4_b_4_wall_hr_2.png" id="2_ddqas"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_mh_4_b_4_roof_hr_4.png" id="3_ydd21"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_mh_4_b_4_planks_hr_3.png" id="4_deo1d"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_mh_4_b_4_window_hy_6.png" id="5_7e6hw"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/roof_mh_4_b_4_steel_beams_hr_1.png" id="6_83sdd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ueeap"]
 resource_name = "concrete_hr_3"
-cull_mode = 2
 albedo_texture = ExtResource("1_x6e7j")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxi81"]
 resource_name = "wall_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("2_ddqas")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e6ifb"]
 resource_name = "roof_hr_4"
-cull_mode = 2
 albedo_texture = ExtResource("3_ydd21")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2dee"]
 resource_name = "planks_hr_3"
-cull_mode = 2
 albedo_texture = ExtResource("4_deo1d")
 roughness = 0.0
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_np7el"]
 resource_name = "window_hy_6"
-cull_mode = 2
 albedo_texture = ExtResource("5_7e6hw")
 texture_filter = 2
 texture_repeat = false
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3uuo"]
 resource_name = "steel_beams_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("6_83sdd")
 texture_filter = 2
 

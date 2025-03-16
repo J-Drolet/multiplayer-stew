@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://beq1tnftnprd8"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dtyimj2etp20m" path="res://Assets/Textures/Megapack2/wooden_plank_1_planks_hr_1.png" id="1_7w8cx"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wooden_plank_1_planks_hr_1.png" id="1_7w8cx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_35tgl"]
 resource_name = "planks_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_7w8cx")
 texture_filter = 2
 texture_repeat = false

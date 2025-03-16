@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://ktpwjixbxdha"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://6l3652dlhxn6" path="res://Assets/Textures/Megapack2/metal_barrel_hr_2_metal_barrel_hr_2.png" id="1_50dxo"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/metal_barrel_hr_2_metal_barrel_hr_2.png" id="1_50dxo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sif8p"]
 resource_name = "metal_barrel_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_50dxo")
 texture_filter = 2
 texture_repeat = false

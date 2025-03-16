@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://bqlp6stxubjk4"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bj506a4qhc4jm" path="res://Assets/Textures/Fair/doorway_4_plain_metal_floor_1.png" id="1_he1l3"]
-[ext_resource type="Texture2D" uid="uid://o1j2wo6jw7ye" path="res://Assets/Textures/Fair/doorway_4_plain_wall_6.png" id="2_1cxb2"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/doorway_4_plain_metal_floor_1.png" id="1_he1l3"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/doorway_4_plain_wall_6.png" id="2_1cxb2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hw5o6"]
 resource_name = "metal_floor_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_he1l3")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qre2f"]
 resource_name = "wall_6"
-cull_mode = 2
 albedo_texture = ExtResource("2_1cxb2")
 texture_filter = 2
 
@@ -84,5 +82,4 @@ mesh = SubResource("ArrayMesh_dite1")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@35"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_7adge")

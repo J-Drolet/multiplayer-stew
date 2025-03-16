@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://dal3u4c2hclbh"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://c71kpyt31ljy4" path="res://Assets/Textures/Restaurant/Quequis_House_Props_soap_dispenser.png" id="1_gw053"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_soap_dispenser.png" id="1_gw053"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ujayf"]
 resource_name = "soap_dispenser"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_gw053")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_xd4hv"]
@@ -53,5 +52,4 @@ mesh = SubResource("ArrayMesh_78rgh")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@99"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_bcm68")

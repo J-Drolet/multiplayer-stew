@@ -1,24 +1,21 @@
-[gd_scene load_steps=10 format=4 uid="uid://5nsesocjcsh"]
+[gd_scene load_steps=10 format=4]
 
-[ext_resource type="Texture2D" uid="uid://brfm7thowu2yq" path="res://Assets/Textures/Fair/pillar_11_concrete_1.png" id="1_oq4io"]
-[ext_resource type="Texture2D" uid="uid://rhuwuipb8xex" path="res://Assets/Textures/Fair/pillar_11_metal_floor_1.png" id="2_tk66n"]
-[ext_resource type="Texture2D" uid="uid://nmi8s4ojwqet" path="res://Assets/Textures/Fair/pillar_11_metal_6.png" id="3_aertg"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/pillar_11_concrete_1.png" id="1_oq4io"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/pillar_11_metal_floor_1.png" id="2_tk66n"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/pillar_11_metal_6.png" id="3_aertg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mmeam"]
 resource_name = "concrete_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_oq4io")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_405i2"]
 resource_name = "metal_floor_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_tk66n")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_85wt7"]
 resource_name = "metal_6"
-cull_mode = 2
 albedo_texture = ExtResource("3_aertg")
 texture_filter = 2
 

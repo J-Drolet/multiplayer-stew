@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://75q7610cnyry"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://8vqdb2e11q8a" path="res://Assets/Textures/Megapack2/fence_a_1_planks_hr_3.png" id="1_1vbvg"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/fence_a_1_planks_hr_3.png" id="1_1vbvg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxolo"]
 resource_name = "planks_hr_3"
-cull_mode = 2
 albedo_texture = ExtResource("1_1vbvg")
 roughness = 0.0
 texture_filter = 2

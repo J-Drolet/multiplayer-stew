@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://cya4rpw8bqw87"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://ddcd0qxq48syn" path="res://Assets/Textures/Farm/Farm-Assets_Haybale_Variant_2_Base_color.png" id="1_b05w5"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Haybale_Variant_2_Base_color.png" id="1_b05w5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cfgkk"]
 resource_name = "Haybale_Variant_2"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_b05w5")
 roughness = 0.4
 

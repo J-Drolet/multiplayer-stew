@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://cnwb6hlxl60ml"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bxkpvcg24h7ye" path="res://Assets/Textures/Megapack2/fence_b_1_roof_hr_5.png" id="1_4g8jo"]
-[ext_resource type="Texture2D" uid="uid://db38y2x01wnj2" path="res://Assets/Textures/Megapack2/fence_b_1_planks_hr_3.png" id="2_cdg8i"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/fence_b_1_roof_hr_5.png" id="1_4g8jo"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/fence_b_1_planks_hr_3.png" id="2_cdg8i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kte6y"]
 resource_name = "roof_hr_5"
-cull_mode = 2
 albedo_texture = ExtResource("1_4g8jo")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l7efb"]
 resource_name = "planks_hr_3"
-cull_mode = 2
 albedo_texture = ExtResource("2_cdg8i")
 roughness = 0.0
 texture_filter = 2

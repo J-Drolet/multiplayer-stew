@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://df20f1sd63bwm"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dj2esyc6ldrp6" path="res://Assets/Textures/Megapack2/gift_box_mx_1_1_gift_box_mx_1_1.png" id="1_jmrwq"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/gift_box_mx_1_1_gift_box_mx_1_1.png" id="1_jmrwq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qtrin"]
 resource_name = "gift_box_mx_1_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_jmrwq")
 texture_filter = 2
 

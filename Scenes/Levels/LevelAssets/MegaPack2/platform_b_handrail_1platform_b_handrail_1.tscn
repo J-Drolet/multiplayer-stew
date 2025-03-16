@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://cupgfanrsrgg2"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cpy4g4imixvpb" path="res://Assets/Textures/Megapack2/platform_b_handrail_1_steel_beams_hr_1.png" id="1_i7w7g"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/platform_b_handrail_1_steel_beams_hr_1.png" id="1_i7w7g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n2j8m"]
 resource_name = "steel_beams_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_i7w7g")
 texture_filter = 2
 

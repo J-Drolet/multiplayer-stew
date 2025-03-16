@@ -1,24 +1,21 @@
-[gd_scene load_steps=10 format=4 uid="uid://bxw721jnkbshn"]
+[gd_scene load_steps=10 format=4]
 
-[ext_resource type="Texture2D" uid="uid://qch60xcg6vus" path="res://Assets/Textures/Megapack2/warehouse_hs_1_roof_2_roof_hr_5.png" id="1_48ytw"]
-[ext_resource type="Texture2D" uid="uid://b6uv7b0hl2j3s" path="res://Assets/Textures/Megapack2/warehouse_hs_1_roof_2_window_he_4.png" id="2_847xb"]
-[ext_resource type="Texture2D" uid="uid://bg4gkoihib10q" path="res://Assets/Textures/Megapack2/warehouse_hs_1_roof_2_metal_hr_2.png" id="3_86yhp"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/warehouse_hs_1_roof_2_roof_hr_5.png" id="1_48ytw"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/warehouse_hs_1_roof_2_window_he_4.png" id="2_847xb"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/warehouse_hs_1_roof_2_metal_hr_2.png" id="3_86yhp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wk2mp"]
 resource_name = "roof_hr_5"
-cull_mode = 2
 albedo_texture = ExtResource("1_48ytw")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0hhef"]
 resource_name = "window_he_4"
-cull_mode = 2
 albedo_texture = ExtResource("2_847xb")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vw7aa"]
 resource_name = "metal_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("3_86yhp")
 texture_filter = 2
 

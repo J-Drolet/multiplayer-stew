@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://dd1aamfdjb8wk"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://btdn47wic0b0o" path="res://Assets/Textures/Fair/door_slim_1_door_1.png" id="1_7ddsa"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/door_slim_1_door_1.png" id="1_7ddsa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_olrpj"]
 resource_name = "door_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_7ddsa")
 texture_filter = 2
 

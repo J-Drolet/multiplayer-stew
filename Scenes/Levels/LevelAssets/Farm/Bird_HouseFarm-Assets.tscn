@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://c4nox7uwpi61x"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://di4mxh7yjsh35" path="res://Assets/Textures/Farm/Farm-Assets_Bird_House_Base_color.png" id="1_766hh"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Bird_House_Base_color.png" id="1_766hh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lbmcc"]
 resource_name = "Bird_House"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_766hh")
 roughness = 0.4
 

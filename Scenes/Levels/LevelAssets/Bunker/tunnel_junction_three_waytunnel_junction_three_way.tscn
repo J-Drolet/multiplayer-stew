@@ -1,31 +1,27 @@
-[gd_scene load_steps=12 format=4 uid="uid://bimrw0q6uduy5"]
+[gd_scene load_steps=12 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dkgwte83d1ahu" path="res://Assets/Textures/Fair/tunnel_junction_three_way_metal_floor_2.png" id="1_comif"]
-[ext_resource type="Texture2D" uid="uid://v1yo6rd6qwq0" path="res://Assets/Textures/Fair/tunnel_junction_three_way_concrete_1.png" id="2_22y0n"]
-[ext_resource type="Texture2D" uid="uid://dbid0cxd6gc82" path="res://Assets/Textures/Fair/tunnel_junction_three_way_drain_cover_1.png" id="3_7bean"]
-[ext_resource type="Texture2D" uid="uid://di7binwupe7id" path="res://Assets/Textures/Fair/tunnel_junction_three_way_metal_4.png" id="4_tviqn"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/tunnel_junction_three_way_metal_floor_2.png" id="1_comif"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/tunnel_junction_three_way_concrete_1.png" id="2_22y0n"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/tunnel_junction_three_way_drain_cover_1.png" id="3_7bean"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/tunnel_junction_three_way_metal_4.png" id="4_tviqn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x8ily"]
 resource_name = "metal_floor_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_comif")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xf04p"]
 resource_name = "concrete_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_22y0n")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b746u"]
 resource_name = "drain_cover_1"
-cull_mode = 2
 albedo_texture = ExtResource("3_7bean")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ku6l6"]
 resource_name = "metal_4"
-cull_mode = 2
 albedo_texture = ExtResource("4_tviqn")
 texture_filter = 2
 

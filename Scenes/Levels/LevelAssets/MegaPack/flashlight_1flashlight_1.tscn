@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://7dqm47l3bcw3"]
+[gd_scene load_steps=7 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dbjfv2kovqu0p" path="res://Assets/Textures/Fair/flashlight_1_flashlight_1.png" id="1_6n553"]
-[ext_resource type="Texture2D" uid="uid://6duxsyaai1rc" path="res://Assets/Textures/Fair/flashlight_1_flashlight_1_emission.png" id="2_tkhpr"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/flashlight_1_flashlight_1.png" id="1_6n553"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/flashlight_1_flashlight_1_emission.png" id="2_tkhpr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3m3c1"]
 resource_name = "flashlight_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_6n553")
 emission_enabled = true
 emission_energy_multiplier = 2.0

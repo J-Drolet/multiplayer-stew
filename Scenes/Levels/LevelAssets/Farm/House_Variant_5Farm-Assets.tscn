@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://djanrma3lmmcm"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://de2t82k0a24we" path="res://Assets/Textures/Farm/Farm-Assets_House_Variant_5_Base_color.png" id="1_2wj42"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_House_Variant_5_Base_color.png" id="1_2wj42"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_knla4"]
 resource_name = "House_Variant_5"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_2wj42")
 roughness = 0.4
 

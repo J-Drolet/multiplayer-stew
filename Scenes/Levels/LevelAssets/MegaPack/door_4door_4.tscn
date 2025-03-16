@@ -1,31 +1,27 @@
-[gd_scene load_steps=12 format=4 uid="uid://coxbhykax3mr7"]
+[gd_scene load_steps=12 format=4]
 
-[ext_resource type="Texture2D" uid="uid://k1wybvd6v68j" path="res://Assets/Textures/Fair/door_4_door_4.png" id="1_dnj15"]
-[ext_resource type="Texture2D" uid="uid://8ktp7ehif1d3" path="res://Assets/Textures/Fair/door_4_metal_6.png" id="2_hdhn2"]
-[ext_resource type="Texture2D" uid="uid://dnxtykqm68rxb" path="res://Assets/Textures/Fair/door_4_metal_mp_4.png" id="3_5rtw8"]
-[ext_resource type="Texture2D" uid="uid://cu5f47mefsc5m" path="res://Assets/Textures/Fair/door_4_door_handle_1.png" id="4_cpw7e"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/door_4_door_4.png" id="1_dnj15"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/door_4_metal_6.png" id="2_hdhn2"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/door_4_metal_mp_4.png" id="3_5rtw8"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/door_4_door_handle_1.png" id="4_cpw7e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mu3vd"]
 resource_name = "door_4"
-cull_mode = 2
 albedo_texture = ExtResource("1_dnj15")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ca4dw"]
 resource_name = "metal_6"
-cull_mode = 2
 albedo_texture = ExtResource("2_hdhn2")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p5clx"]
 resource_name = "metal_mp_4"
-cull_mode = 2
 albedo_texture = ExtResource("3_5rtw8")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fai0r"]
 resource_name = "door_handle_1"
-cull_mode = 2
 albedo_texture = ExtResource("4_cpw7e")
 texture_filter = 2
 

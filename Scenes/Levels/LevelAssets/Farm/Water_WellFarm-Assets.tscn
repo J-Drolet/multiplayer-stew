@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://b6ugbv77n1o6k"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bq347tabr1obl" path="res://Assets/Textures/Farm/Farm-Assets_Water_Well_Base_color.png" id="1_17q1r"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Water_Well_Base_color.png" id="1_17q1r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1p5w6"]
 resource_name = "Water_Well"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_17q1r")
 roughness = 0.4
 

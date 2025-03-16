@@ -1,24 +1,21 @@
-[gd_scene load_steps=10 format=4 uid="uid://yrhou0fe6dxt"]
+[gd_scene load_steps=10 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cjvuoiiiyrdby" path="res://Assets/Textures/Fair/button_12_metal_mp_3.png" id="1_vyn5g"]
-[ext_resource type="Texture2D" uid="uid://b06a33cq3lf33" path="res://Assets/Textures/Fair/button_12_cable_2.png" id="2_detc2"]
-[ext_resource type="Texture2D" uid="uid://babvipreg1ojk" path="res://Assets/Textures/Fair/button_12_button_12.png" id="3_3ql2u"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/button_12_metal_mp_3.png" id="1_vyn5g"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/button_12_cable_2.png" id="2_detc2"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/button_12_button_12.png" id="3_3ql2u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eq3xb"]
 resource_name = "metal_mp_3"
-cull_mode = 2
 albedo_texture = ExtResource("1_vyn5g")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xqkb3"]
 resource_name = "cable_2"
-cull_mode = 2
 albedo_texture = ExtResource("2_detc2")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3tbsl"]
 resource_name = "button_12"
-cull_mode = 2
 albedo_texture = ExtResource("3_3ql2u")
 texture_filter = 2
 

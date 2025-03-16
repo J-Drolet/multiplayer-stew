@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://pwub42w26ju8"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bbshmwfpx3ruc" path="res://Assets/Textures/Farm/Farm-Assets_Tree_Logs_Variant_2_Base_color.png" id="1_l761j"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Tree_Logs_Variant_2_Base_color.png" id="1_l761j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jklb7"]
 resource_name = "Tree_Logs_Variant_2"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_l761j")
 roughness = 0.4
 

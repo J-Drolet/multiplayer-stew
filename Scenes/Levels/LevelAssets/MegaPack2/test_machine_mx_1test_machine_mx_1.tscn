@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://badwo7r5cgwnh"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://d1rm6bxdtjj7j" path="res://Assets/Textures/Megapack2/test_machine_mx_1_metal_hr_3.png" id="1_sqjh4"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/test_machine_mx_1_metal_hr_3.png" id="1_sqjh4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32ssj"]
 resource_name = "metal_hr_3"
-cull_mode = 2
 albedo_texture = ExtResource("1_sqjh4")
 texture_filter = 2
 
@@ -55,5 +54,4 @@ mesh = SubResource("ArrayMesh_5ef1s")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@631"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_6xl6x")

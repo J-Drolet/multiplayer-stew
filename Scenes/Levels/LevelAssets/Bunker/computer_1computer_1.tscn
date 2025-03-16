@@ -1,18 +1,16 @@
-[gd_scene load_steps=8 format=4 uid="uid://gjf54p3r2sw3"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://c30e54bmnfftc" path="res://Assets/Textures/Fair/computer_1_pc_1.png" id="1_shrey"]
-[ext_resource type="Texture2D" uid="uid://dm5plfo4ddxcv" path="res://Assets/Textures/Fair/computer_1_keyboard_1.png" id="2_8e3g6"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/computer_1_pc_1.png" id="1_shrey"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/computer_1_keyboard_1.png" id="2_8e3g6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2m8bw"]
 resource_name = "pc_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_shrey")
 texture_filter = 2
 texture_repeat = false
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pbbpd"]
 resource_name = "keyboard_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_8e3g6")
 texture_filter = 2
 texture_repeat = false

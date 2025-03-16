@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://3xqgyqrd3kwf"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bpdait2qi2b2y" path="res://Assets/Textures/Fair/battery_1_battery_1.png" id="1_dc4e2"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/battery_1_battery_1.png" id="1_dc4e2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3afj2"]
 resource_name = "battery_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_dc4e2")
 texture_filter = 2
 

@@ -1,31 +1,27 @@
-[gd_scene load_steps=12 format=4 uid="uid://yfyt80482exx"]
+[gd_scene load_steps=12 format=4]
 
-[ext_resource type="Texture2D" uid="uid://c5sxmqwn68e75" path="res://Assets/Textures/Megapack2/wall_rg_1_hole_1_wall_rg_1.png" id="1_yhco0"]
-[ext_resource type="Texture2D" uid="uid://cp3ypr6p8vmgy" path="res://Assets/Textures/Megapack2/wall_rg_1_hole_1_concrete_hr_1.png" id="2_hu1s7"]
-[ext_resource type="Texture2D" uid="uid://cilafn0k7at3o" path="res://Assets/Textures/Megapack2/wall_rg_1_hole_1_metal_hr_2.png" id="3_vaawf"]
-[ext_resource type="Texture2D" uid="uid://d1gl2e42sl6fx" path="res://Assets/Textures/Megapack2/wall_rg_1_hole_1_concrete_hr_3.png" id="4_rpb65"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wall_rg_1_hole_1_wall_rg_1.png" id="1_yhco0"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wall_rg_1_hole_1_concrete_hr_1.png" id="2_hu1s7"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wall_rg_1_hole_1_metal_hr_2.png" id="3_vaawf"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wall_rg_1_hole_1_concrete_hr_3.png" id="4_rpb65"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cisci"]
 resource_name = "wall_rg_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_yhco0")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gyvxl"]
 resource_name = "concrete_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_hu1s7")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rstit"]
 resource_name = "metal_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("3_vaawf")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_imppr"]
 resource_name = "concrete_hr_3"
-cull_mode = 2
 albedo_texture = ExtResource("4_rpb65")
 texture_filter = 2
 

@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://baqkf3o5d0pfh"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://8llroe2u7xnv" path="res://Assets/Textures/Fair/walkie_talkie_1_walkie_talkie_1.png" id="1_a30tu"]
-[ext_resource type="Texture2D" uid="uid://dtoqat812ituh" path="res://Assets/Textures/Fair/walkie_talkie_1_plastic_4.png" id="2_4cfgh"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/walkie_talkie_1_walkie_talkie_1.png" id="1_a30tu"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/walkie_talkie_1_plastic_4.png" id="2_4cfgh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e8ge3"]
 resource_name = "walkie_talkie_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_a30tu")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8qj6i"]
 resource_name = "plastic_4"
-cull_mode = 2
 albedo_texture = ExtResource("2_4cfgh")
 texture_filter = 2
 

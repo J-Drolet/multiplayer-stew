@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://3qqw76h4j7c6"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://d5awlg2mhdhm" path="res://Assets/Textures/Fair/supply_box_1_supply_box_1.png" id="1_girmc"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/supply_box_1_supply_box_1.png" id="1_girmc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_44fn3"]
 resource_name = "supply_box_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_girmc")
 texture_filter = 2
 texture_repeat = false

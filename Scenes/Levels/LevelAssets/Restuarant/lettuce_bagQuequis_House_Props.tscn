@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://cbhepth07xxtg"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bwqcxgjgiw80f" path="res://Assets/Textures/Restaurant/Quequis_House_Props_lettuce_bag.png" id="1_ycbdo"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_lettuce_bag.png" id="1_ycbdo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bwkhf"]
 resource_name = "lettuce_bag"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_ycbdo")
 texture_filter = 2
 
@@ -56,5 +55,4 @@ mesh = SubResource("ArrayMesh_gdqoq")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@53"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_ckxaw")

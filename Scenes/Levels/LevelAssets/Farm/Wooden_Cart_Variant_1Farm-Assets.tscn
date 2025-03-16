@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://b4po511djolst"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cxv540valu66n" path="res://Assets/Textures/Farm/Farm-Assets_Wooden_Cart_Variant_1_Base_color.png" id="1_1djqv"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Wooden_Cart_Variant_1_Base_color.png" id="1_1djqv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8q75"]
 resource_name = "Wooden_Cart_Variant_1"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_1djqv")
 roughness = 0.4
 

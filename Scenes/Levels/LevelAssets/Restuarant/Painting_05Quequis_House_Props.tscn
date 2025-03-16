@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://bsaxlj8vc0od6"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bxlvipg7p1xt3" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Paintings.png" id="1_i4cum"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Paintings.png" id="1_i4cum"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_js4n5"]
 resource_name = "Paintings"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_i4cum")
 texture_filter = 2
 

@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://r67brlaec7p"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dctiils0uqlg1" path="res://Assets/Textures/Fair/tunnel_straight_down_1_metal_floor_2.png" id="1_tvdyd"]
-[ext_resource type="Texture2D" uid="uid://vc7us3fjb67u" path="res://Assets/Textures/Fair/tunnel_straight_down_1_concrete_1.png" id="2_p3bf6"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/tunnel_straight_down_1_metal_floor_2.png" id="1_tvdyd"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/tunnel_straight_down_1_concrete_1.png" id="2_p3bf6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ka25g"]
 resource_name = "metal_floor_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_tvdyd")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p311k"]
 resource_name = "concrete_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_p3bf6")
 texture_filter = 2
 

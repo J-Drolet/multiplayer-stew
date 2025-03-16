@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://btpxdjfvvh804"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dskaud5d4q6lh" path="res://Assets/Textures/Fair/pillar_1_wall_3.png" id="1_hoegp"]
-[ext_resource type="Texture2D" uid="uid://btdvw6xfgu7bm" path="res://Assets/Textures/Fair/pillar_1_wood_2.png" id="2_rnlcy"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/pillar_1_wall_3.png" id="1_hoegp"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/pillar_1_wood_2.png" id="2_rnlcy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rf1mj"]
 resource_name = "wall_3"
-cull_mode = 2
 albedo_texture = ExtResource("1_hoegp")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ijixh"]
 resource_name = "wood_2"
-cull_mode = 2
 albedo_texture = ExtResource("2_rnlcy")
 texture_filter = 2
 

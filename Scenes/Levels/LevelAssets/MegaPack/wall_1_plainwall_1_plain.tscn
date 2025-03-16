@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://bgyn1ffu2uhd4"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://c7f5ir381frma" path="res://Assets/Textures/Fair/wall_1_plain_wall_4.png" id="1_n051e"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/wall_1_plain_wall_4.png" id="1_n051e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j8fyt"]
 resource_name = "wall_4"
-cull_mode = 2
 albedo_texture = ExtResource("1_n051e")
 texture_filter = 2
 

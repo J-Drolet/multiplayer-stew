@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://00r72dq0cbno"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://iochtee68m8p" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Mayonnaise_Jar.png" id="1_3y7vh"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Mayonnaise_Jar.png" id="1_3y7vh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3yju"]
 resource_name = "Mayonnaise_Jar"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_3y7vh")
 texture_filter = 2
 

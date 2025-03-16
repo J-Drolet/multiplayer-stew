@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://1xvcjnucwlsf"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cqksb50j8gtet" path="res://Assets/Textures/Nature/tree_8_pine_bark_2_dead.png" id="1_hmqer"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Nature/tree_8_pine_bark_2_dead.png" id="1_hmqer"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_exkox"]
 resource_name = "pine_bark_2_dead"
-cull_mode = 2
 albedo_texture = ExtResource("1_hmqer")
 texture_filter = 2
 

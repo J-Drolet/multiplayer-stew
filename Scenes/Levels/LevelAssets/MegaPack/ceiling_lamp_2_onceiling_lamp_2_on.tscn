@@ -1,25 +1,22 @@
-[gd_scene load_steps=11 format=4 uid="uid://b6mcfykmocjij"]
+[gd_scene load_steps=11 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bvdljyr2bm6mm" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_metal_mp_1.png" id="1_1pqpr"]
-[ext_resource type="Texture2D" uid="uid://ccgcg0x6m582o" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_metal_mp_4.png" id="2_ibpdc"]
-[ext_resource type="Texture2D" uid="uid://0yjp8aq4oloc" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_ceiling_lamp_1_on.png" id="3_7aofw"]
-[ext_resource type="Texture2D" uid="uid://cw0x88ky1yces" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_ceiling_lamp_1_on_emission.png" id="4_01gsm"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_metal_mp_1.png" id="1_1pqpr"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_metal_mp_4.png" id="2_ibpdc"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_ceiling_lamp_1_on.png" id="3_7aofw"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/ceiling_lamp_2_on_ceiling_lamp_1_on_emission.png" id="4_01gsm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kroog"]
 resource_name = "metal_mp_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_1pqpr")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3o1li"]
 resource_name = "metal_mp_4"
-cull_mode = 2
 albedo_texture = ExtResource("2_ibpdc")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fnhna"]
 resource_name = "ceiling_lamp_1_on"
-cull_mode = 2
 albedo_texture = ExtResource("3_7aofw")
 emission_enabled = true
 emission_texture = ExtResource("4_01gsm")

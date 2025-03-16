@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://c6cl4550m4l2q"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dm6u0bliyyrx6" path="res://Assets/Textures/Farm/Farm-Assets_Fuel_Tank_Base_color.png" id="1_xqivv"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Fuel_Tank_Base_color.png" id="1_xqivv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sb0nv"]
 resource_name = "Material.004"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_xqivv")
 roughness = 0.4
 

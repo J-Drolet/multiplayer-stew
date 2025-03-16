@@ -1,18 +1,16 @@
-[gd_scene load_steps=10 format=4 uid="uid://ur1gv5uqnwdn"]
+[gd_scene load_steps=10 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bd3aqxuaiev5q" path="res://Assets/Textures/Megapack2/concrete_fence_hr_2_concrete_fence_hr_1.png" id="1_xbxia"]
-[ext_resource type="Texture2D" uid="uid://df4y5vqmm2gf8" path="res://Assets/Textures/Megapack2/concrete_fence_hr_2_metal_hr_1.png" id="2_vgehv"]
-[ext_resource type="Texture2D" uid="uid://c0xxc5qccodyr" path="res://Assets/Textures/Megapack2/concrete_fence_hr_2_barbed_wire_hr_1.png" id="3_mlabf"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/concrete_fence_hr_2_concrete_fence_hr_1.png" id="1_xbxia"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/concrete_fence_hr_2_metal_hr_1.png" id="2_vgehv"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/concrete_fence_hr_2_barbed_wire_hr_1.png" id="3_mlabf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mh5ri"]
 resource_name = "concrete_fence_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_xbxia")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rdnxt"]
 resource_name = "metal_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_vgehv")
 texture_filter = 2
 
@@ -21,7 +19,6 @@ resource_name = "barbed_wire_hr_1"
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-cull_mode = 2
 albedo_texture = ExtResource("3_mlabf")
 texture_filter = 2
 

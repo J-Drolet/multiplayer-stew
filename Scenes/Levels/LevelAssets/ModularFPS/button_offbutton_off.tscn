@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://55ry42la6u10"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bovue2hnlkdwo" path="res://Assets/Textures/Fair/button_off_button_off.png" id="1_wuqj0"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/button_off_button_off.png" id="1_wuqj0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7c0l8"]
 resource_name = "button_off"
-cull_mode = 2
 albedo_texture = ExtResource("1_wuqj0")
 texture_filter = 2
 

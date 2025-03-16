@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://nsocnxeqpueu"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://ce6l8ikjxok7" path="res://Assets/Textures/Farm/Farm-Assets_Shovel_Variant_2_Base_color.png" id="1_k02rc"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Shovel_Variant_2_Base_color.png" id="1_k02rc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pceid"]
 resource_name = "Shovel_Variant_2"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_k02rc")
 roughness = 0.4
 

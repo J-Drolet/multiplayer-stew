@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://0arp0fpew3ip"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://58fsmeuon3ox" path="res://Assets/Textures/Fair/light_switch_1_light_switch_1.png" id="1_labuk"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/light_switch_1_light_switch_1.png" id="1_labuk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjqwj"]
 resource_name = "light_switch_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_labuk")
 texture_filter = 2
 

@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://cvoyhnf3w80cy"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://d3rkx0c07xc6u" path="res://Assets/Textures/Fair/hand_rail_3_metal_mp_5.png" id="1_e02lo"]
-[ext_resource type="Texture2D" uid="uid://cd58s1kc4tcwv" path="res://Assets/Textures/Fair/hand_rail_3_rubber_1.png" id="2_q14jk"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/hand_rail_3_metal_mp_5.png" id="1_e02lo"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/hand_rail_3_rubber_1.png" id="2_q14jk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_umc8x"]
 resource_name = "metal_mp_5"
-cull_mode = 2
 albedo_texture = ExtResource("1_e02lo")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nvura"]
 resource_name = "rubber_1"
-cull_mode = 2
 albedo_texture = ExtResource("2_q14jk")
 texture_filter = 2
 

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bubb2kwrpqobh"]
+
+[ext_resource type="Script" uid="uid://b5q716murehr4" path="res://Assets/BackfaceCullUtlity.cs" id="1_qmqo6"]
+
+[node name="BackfaceCullUtlity" type="Node3D"]
+script = ExtResource("1_qmqo6")
+ASSET_FOLDER = "res://Scenes/Levels/LevelAssets/Bunker/"

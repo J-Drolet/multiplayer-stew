@@ -1,18 +1,16 @@
-[gd_scene load_steps=8 format=4 uid="uid://dpihms46u2bn7"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dkmdjyrgcfmj3" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Shelf_B.png" id="1_nnl8y"]
-[ext_resource type="Texture2D" uid="uid://1nlh7ik6nn28" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Wire.png" id="2_0702a"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Shelf_B.png" id="1_nnl8y"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Wire.png" id="2_0702a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1qghv"]
 resource_name = "Shelf_B"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_nnl8y")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rbgqa"]
 resource_name = "Wire"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("2_0702a")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_yayy2"]

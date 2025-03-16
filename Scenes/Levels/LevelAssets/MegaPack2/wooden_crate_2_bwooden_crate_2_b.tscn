@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://c2lf1g80fwvfk"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cq8kf36w8x5ua" path="res://Assets/Textures/Megapack2/wooden_crate_2_b_wooden_crate_hm_2.png" id="1_b5juk"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wooden_crate_2_b_wooden_crate_hm_2.png" id="1_b5juk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kqs6d"]
 resource_name = "wooden_crate_hm_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_b5juk")
 texture_filter = 2
 texture_repeat = false

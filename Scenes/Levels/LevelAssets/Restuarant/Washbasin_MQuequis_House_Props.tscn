@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://niokj56bk6bl"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bd5umm0v87kaw" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Washbasin_M.png" id="1_bxq1e"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Washbasin_M.png" id="1_bxq1e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4em2q"]
 resource_name = "Washbasin_M"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_bxq1e")
 texture_filter = 2
 

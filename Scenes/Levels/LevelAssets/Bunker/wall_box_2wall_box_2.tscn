@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://fypeot3p7eph"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://c8nt277qncmhu" path="res://Assets/Textures/Fair/wall_box_2_wall_box_2.png" id="1_kalew"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/wall_box_2_wall_box_2.png" id="1_kalew"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8i3iw"]
 resource_name = "wall_box_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_kalew")
 texture_filter = 2
 texture_repeat = false

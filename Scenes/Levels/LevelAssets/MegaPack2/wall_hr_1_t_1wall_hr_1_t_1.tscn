@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://bcj38svgmr6j0"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cmilbcw8f5bim" path="res://Assets/Textures/Megapack2/wall_hr_1_t_1_wall_hr_2.png" id="1_4v3vp"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wall_hr_1_t_1_wall_hr_2.png" id="1_4v3vp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oyuqv"]
 resource_name = "wall_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_4v3vp")
 texture_filter = 2
 

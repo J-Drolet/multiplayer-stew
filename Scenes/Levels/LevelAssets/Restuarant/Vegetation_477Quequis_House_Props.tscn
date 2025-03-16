@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://brwvwpqqbi0se"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cf7plwv1k68xu" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Branches.png" id="1_omahr"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Branches.png" id="1_omahr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fr11k"]
 resource_name = "Branches"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_omahr")
 texture_filter = 2
 

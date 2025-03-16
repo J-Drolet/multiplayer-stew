@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://c5ki574qnfmnr"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dkcp7t0p0yfa6" path="res://Assets/Textures/Megapack2/electrical_equipment_2_transformer_box_hr_1.png" id="1_ib1f5"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/electrical_equipment_2_transformer_box_hr_1.png" id="1_ib1f5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7dda2"]
 resource_name = "transformer_box_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_ib1f5")
 texture_filter = 2
 

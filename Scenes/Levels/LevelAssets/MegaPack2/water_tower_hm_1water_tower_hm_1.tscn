@@ -1,39 +1,34 @@
-[gd_scene load_steps=14 format=4 uid="uid://d2er7wb5ccehr"]
+[gd_scene load_steps=14 format=4]
 
-[ext_resource type="Texture2D" uid="uid://xgsx7dh0pqqv" path="res://Assets/Textures/Megapack2/water_tower_hm_1_concrete_hr_4.png" id="1_oimoa"]
-[ext_resource type="Texture2D" uid="uid://b0pqkeiqeabvw" path="res://Assets/Textures/Megapack2/water_tower_hm_1_metal_hr_2.png" id="2_bcjbg"]
-[ext_resource type="Texture2D" uid="uid://5o8w8kanrsfu" path="res://Assets/Textures/Megapack2/water_tower_hm_1_grate_hm_1.png" id="3_feevl"]
-[ext_resource type="Texture2D" uid="uid://byyvwgnqp8d0h" path="res://Assets/Textures/Megapack2/water_tower_hm_1_wall_rx_2.png" id="4_nyjec"]
-[ext_resource type="Texture2D" uid="uid://c6rhvt1ctkicy" path="res://Assets/Textures/Megapack2/water_tower_hm_1_pipe_hr_3.png" id="5_8yw6h"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/water_tower_hm_1_concrete_hr_4.png" id="1_oimoa"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/water_tower_hm_1_metal_hr_2.png" id="2_bcjbg"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/water_tower_hm_1_grate_hm_1.png" id="3_feevl"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/water_tower_hm_1_wall_rx_2.png" id="4_nyjec"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/water_tower_hm_1_pipe_hr_3.png" id="5_8yw6h"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o4tj7"]
 resource_name = "concrete_hr_4"
-cull_mode = 2
 albedo_texture = ExtResource("1_oimoa")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ob36"]
 resource_name = "metal_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("2_bcjbg")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_33nsf"]
 resource_name = "grate_hm_1"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("3_feevl")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ekrid"]
 resource_name = "wall_rx_2"
-cull_mode = 2
 albedo_texture = ExtResource("4_nyjec")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yelqv"]
 resource_name = "pipe_hr_3"
-cull_mode = 2
 albedo_texture = ExtResource("5_8yw6h")
 texture_filter = 2
 

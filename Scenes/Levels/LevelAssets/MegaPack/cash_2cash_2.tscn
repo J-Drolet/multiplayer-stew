@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://chnue2abvskwx"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bmmblg78j24yn" path="res://Assets/Textures/Fair/cash_2_cash_2.png" id="1_a564x"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/cash_2_cash_2.png" id="1_a564x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hkh2v"]
 resource_name = "cash_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_a564x")
 texture_filter = 2
 

@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://c1h0c84sdob4j"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dbfe8ruvgxouc" path="res://Assets/Textures/Megapack2/rubber_duck_mx_1_rubber_ducky_mx_1.png" id="1_7ih41"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/rubber_duck_mx_1_rubber_ducky_mx_1.png" id="1_7ih41"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ole4b"]
 resource_name = "rubber_duck_mx_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_7ih41")
 texture_filter = 2
 

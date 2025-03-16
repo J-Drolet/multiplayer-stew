@@ -1,17 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://c7btxhkdikgj7"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://dov1o7cxt5faf" path="res://Assets/Textures/Megapack2/lamp_mx_3_on_metal_hr_2.png" id="1_jc01e"]
-[ext_resource type="Texture2D" uid="uid://t30yi246wo5r" path="res://Assets/Textures/Megapack2/lamp_mx_3_on_lamp_1_on.png" id="2_72rdw"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/lamp_mx_3_on_metal_hr_2.png" id="1_jc01e"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/lamp_mx_3_on_lamp_1_on.png" id="2_72rdw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1c7gt"]
 resource_name = "metal_hr_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_jc01e")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gkmum"]
 resource_name = "lamp_1_on"
-cull_mode = 2
 albedo_texture = ExtResource("2_72rdw")
 emission_enabled = true
 emission_energy_multiplier = 10.0

@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://y3g1x6xjlqst"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://gmcdeqm5bwfc" path="res://Assets/Textures/Fair/nails_1_metal_mp_1.png" id="1_x853e"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/nails_1_metal_mp_1.png" id="1_x853e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wmv7b"]
 resource_name = "metal_mp_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_x853e")
 texture_filter = 2
 
@@ -53,5 +52,4 @@ mesh = SubResource("ArrayMesh_ntj67")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@205"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_hlb6x")

@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://dm4n7uu0gjduv"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cyltiqx0qn4o8" path="res://Assets/Textures/Fair/cardboard_box_2_cardboard_box_2.png" id="1_ijgmr"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/cardboard_box_2_cardboard_box_2.png" id="1_ijgmr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_470w7"]
 resource_name = "cardboard_box_2"
-cull_mode = 2
 albedo_texture = ExtResource("1_ijgmr")
 texture_filter = 2
 

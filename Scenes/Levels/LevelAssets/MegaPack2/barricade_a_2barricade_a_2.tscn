@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://bj0wud01hpakw"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://pirl3jflq0kl" path="res://Assets/Textures/Megapack2/barricade_a_2_barricade_hr_1.png" id="1_6bahd"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/barricade_a_2_barricade_hr_1.png" id="1_6bahd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nx7cb"]
 resource_name = "barricade_hr_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_6bahd")
 texture_filter = 2
 

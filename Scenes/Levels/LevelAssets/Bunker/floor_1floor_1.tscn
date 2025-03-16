@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://p4o3o6x1lpw7"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://clifuddou1krp" path="res://Assets/Textures/Fair/floor_1_concrete_1.png" id="1_120mr"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/floor_1_concrete_1.png" id="1_120mr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mof3g"]
 resource_name = "concrete_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_120mr")
 texture_filter = 2
 

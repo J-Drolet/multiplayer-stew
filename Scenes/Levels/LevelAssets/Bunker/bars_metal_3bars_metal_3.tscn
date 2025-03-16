@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://d2d5pw8nri1b6"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://diabfjbpc2d8o" path="res://Assets/Textures/Fair/bars_metal_3_metal_6.png" id="1_yi2v6"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/bars_metal_3_metal_6.png" id="1_yi2v6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aus3l"]
 resource_name = "metal_6"
-cull_mode = 2
 albedo_texture = ExtResource("1_yi2v6")
 texture_filter = 2
 
@@ -53,5 +52,4 @@ mesh = SubResource("ArrayMesh_2uuxo")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_ow2g6")

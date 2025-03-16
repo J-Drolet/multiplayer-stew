@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://cv1lgj04o3kec"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bawy0ymha0ljx" path="res://Assets/Textures/Megapack2/machinery_mx_1_machinery_mx_1.png" id="1_td1qq"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/machinery_mx_1_machinery_mx_1.png" id="1_td1qq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t2nfk"]
 resource_name = "machinery_mx_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_td1qq")
 texture_filter = 2
 texture_repeat = false

@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://ck6m0i1d4i8do"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://b21drv7dmo2we" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Armchair-Armchair.png" id="1_ft1iu"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Armchair-Armchair.png" id="1_ft1iu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xpgl"]
 resource_name = "Armchair"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_ft1iu")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_4s72t"]

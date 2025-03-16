@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://c4q6jsgk1srah"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://f47gy17c6h7f" path="res://Assets/Textures/Fair/padlock_4_padlock_4.png" id="1_02xf6"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/padlock_4_padlock_4.png" id="1_02xf6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_71347"]
 resource_name = "padlock_4"
-cull_mode = 2
 albedo_texture = ExtResource("1_02xf6")
 texture_filter = 2
 

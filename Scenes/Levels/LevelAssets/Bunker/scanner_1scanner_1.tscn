@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://vdttiaxdkcem"]
+[gd_scene load_steps=7 format=4]
 
-[ext_resource type="Texture2D" uid="uid://bx8dnmp8magrc" path="res://Assets/Textures/Fair/scanner_1_scanner_1.png" id="1_wj4f6"]
-[ext_resource type="Texture2D" uid="uid://bkwjghi266g12" path="res://Assets/Textures/Fair/scanner_1_scanner_1_emission.png" id="2_1xm3s"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/scanner_1_scanner_1.png" id="1_wj4f6"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/scanner_1_scanner_1_emission.png" id="2_1xm3s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_myp1r"]
 resource_name = "scanner_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_wj4f6")
 emission_enabled = true
 emission_texture = ExtResource("2_1xm3s")

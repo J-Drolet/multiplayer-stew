@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://cnuu5p3jq0lru"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://ebs5mjjulhux" path="res://Assets/Textures/Farm/Farm-Assets_Storage_Variant_4_Base_color.png" id="1_0sdxw"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Farm/Farm-Assets_Storage_Variant_4_Base_color.png" id="1_0sdxw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4cig8"]
 resource_name = "Storage_Variant_4"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_0sdxw")
 roughness = 0.4
 

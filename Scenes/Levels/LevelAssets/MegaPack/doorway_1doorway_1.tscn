@@ -1,24 +1,21 @@
-[gd_scene load_steps=11 format=4 uid="uid://cd3gyolk6fylo"]
+[gd_scene load_steps=11 format=4]
 
-[ext_resource type="Texture2D" uid="uid://b4qhbrrfgd6ta" path="res://Assets/Textures/Fair/doorway_1_wall_3.png" id="1_87m11"]
-[ext_resource type="Texture2D" uid="uid://cwyu443mrmkbu" path="res://Assets/Textures/Fair/doorway_1_wood_2.png" id="2_7umxu"]
-[ext_resource type="Texture2D" uid="uid://b7mrpun5nioct" path="res://Assets/Textures/Fair/doorway_1_metal_6.png" id="3_4sx6u"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/doorway_1_wall_3.png" id="1_87m11"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/doorway_1_wood_2.png" id="2_7umxu"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/doorway_1_metal_6.png" id="3_4sx6u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ut45"]
 resource_name = "wall_3"
-cull_mode = 2
 albedo_texture = ExtResource("1_87m11")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0vpqr"]
 resource_name = "wood_2"
-cull_mode = 2
 albedo_texture = ExtResource("2_7umxu")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4oiif"]
 resource_name = "metal_6"
-cull_mode = 2
 albedo_texture = ExtResource("3_4sx6u")
 texture_filter = 2
 

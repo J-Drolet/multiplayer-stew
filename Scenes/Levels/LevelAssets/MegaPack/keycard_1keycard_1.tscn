@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://1qnfqv78axsx"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cp6x0i5sjin5s" path="res://Assets/Textures/Fair/keycard_1_keycard_1.png" id="1_ryf2w"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/keycard_1_keycard_1.png" id="1_ryf2w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nvgc6"]
 resource_name = "keycard_1"
-cull_mode = 2
 albedo_texture = ExtResource("1_ryf2w")
 texture_filter = 2
 
@@ -53,5 +52,4 @@ mesh = SubResource("ArrayMesh_sbkxe")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@159"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_58e6m")

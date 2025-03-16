@@ -1,11 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://bc6oapbpioag4"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://c7k37snk2af03" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Knife.png" id="1_wrlt0"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Knife.png" id="1_wrlt0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2uhlf"]
 resource_name = "Knife"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_wrlt0")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_bxh5i"]
