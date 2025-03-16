@@ -5,6 +5,7 @@ using multiplayerstew.Scripts.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 public partial class Character : Entity
 {
@@ -154,13 +155,15 @@ public partial class Character : Entity
 		base._Process(delta);
         #region UpgradeLogic
         ////////// Invisibility upgrade
-        float transparency = Upgrades.Contains(Upgrade.C_Invisibility)? (float)Config.GetValue("Upgrade.C_Invisibility", "invisibility_transparency", true) : 0;
+		ToggleInvisibilityUpgrade(Upgrades.Contains(Upgrade.C_Invisibility));
+        /*float transparency = Upgrades.Contains(Upgrade.C_Invisibility)? (float)Config.GetValue("Upgrade.C_Invisibility", "invisibility_transparency", true) : 0;
 		CharacterMesh.Transparency = transparency;
 		foreach(GeometryInstance3D mesh in GodotNodeFindingService.FindNodes<GeometryInstance3D>(Hand))
 		{
 			mesh.Transparency = transparency;
 		}
 		InvisibilitySmokeParticles.Emitting = Upgrades.Contains(Upgrade.C_Invisibility);
+		*/
 
 		if(!IsMultiplayerAuthority()) return;
 
@@ -459,5 +462,32 @@ public partial class Character : Entity
 		if(Multiplayer.GetRemoteSenderId() != 1) return; // only server should broadcast spawn positons
 
 		SlowdownMultiplier = slowdownMultiplayer;
+	}
+
+	public void SetMeshTranspareny(float transparency)
+	{
+		for(int i = 0; i < CharacterMesh.Mesh.GetSurfaceCount(); i++)
+		{
+			BaseMaterial3D xrayMaterial = (BaseMaterial3D)CharacterMesh.GetSurfaceOverrideMaterial(i);
+			BaseMaterial3D meshMaterial = (BaseMaterial3D)xrayMaterial.NextPass;
+			Color meshAlbedo = meshMaterial.AlbedoColor;
+			meshAlbedo.A = transparency;
+			meshMaterial.AlbedoColor = meshAlbedo;
+		}
+	}
+
+	private void ToggleInvisibilityUpgrade(bool invisible)
+	{
+		float transparency = invisible ? (float)Config.GetValue("Upgrade.C_Invisibility", "invisibility_transparency", true) : 0;
+		for(int i = 0; i < CharacterMesh.Mesh.GetSurfaceCount(); i++)
+		{
+			BaseMaterial3D xrayMaterial = (BaseMaterial3D)CharacterMesh.GetSurfaceOverrideMaterial(i);
+			BaseMaterial3D meshMaterial = (BaseMaterial3D)xrayMaterial.NextPass;
+			Color meshAlbedo = meshMaterial.AlbedoColor;
+			meshAlbedo.A = 1 - transparency;
+			meshMaterial.AlbedoColor = meshAlbedo;
+		}
+
+		InvisibilitySmokeParticles.Emitting = invisible;
 	}
 }

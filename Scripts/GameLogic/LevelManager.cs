@@ -190,7 +190,9 @@ public partial class LevelManager : Node
 			for(int i = 0; i < LevelPeerInfo[peerId].characterNode.CharacterMesh.Mesh.GetSurfaceCount(); i++)
 			{
 				BaseMaterial3D surfaceMaterial = (BaseMaterial3D)LevelPeerInfo[peerId].characterNode.CharacterMesh.GetSurfaceOverrideMaterial(i);
-				surfaceMaterial.NoDepthTest = enabled;
+				Color xrayAlbedo = surfaceMaterial.AlbedoColor;
+				xrayAlbedo.A = enabled ? 1 : 0;
+				surfaceMaterial.AlbedoColor = xrayAlbedo;
 			}
 		}
 	}
