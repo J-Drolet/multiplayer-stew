@@ -173,27 +173,30 @@ shadow_mesh = SubResource("ArrayMesh_pdlco")
 
 [node name="Uzi" type="Node3D"]
 
-[node name="Body" type="MeshInstance3D" parent="."]
+[node name="Scale" type="Node3D" parent="."]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+
+[node name="Body" type="MeshInstance3D" parent="Scale"]
 transform = Transform3D(-0.177498, 0, -1.55174e-08, 0, 0.177498, 0, 1.55174e-08, 0, -0.177498, 0, 0.0700675, -0.0887221)
 mesh = SubResource("ArrayMesh_jy31b")
 skeleton = NodePath("")
 
-[node name="ChargingHandle" type="MeshInstance3D" parent="Body"]
+[node name="ChargingHandle" type="MeshInstance3D" parent="Scale/Body"]
 transform = Transform3D(0.185328, 0, 0, 0, 0.107652, 0, -1.77636e-15, 0, 1.15694, 0, 1.8392, -0.66121)
 mesh = SubResource("ArrayMesh_3ylvs")
 skeleton = NodePath("")
 
-[node name="Mag" type="MeshInstance3D" parent="Body"]
+[node name="Mag" type="MeshInstance3D" parent="Scale/Body"]
 transform = Transform3D(0.17107, 0, 0, 0, 1.28912, 0, 0, 0, 0.340383, -0.0300148, -0.827813, -0.553594)
 mesh = SubResource("ArrayMesh_prjup")
 skeleton = NodePath("")
 
-[node name="Slide" type="MeshInstance3D" parent="Body"]
+[node name="Slide" type="MeshInstance3D" parent="Scale/Body"]
 transform = Transform3D(0.185328, 0, 0, 0, 0.107652, 0, 0, 0, 1.15694, 0, 1.8392, -0.660946)
 mesh = SubResource("ArrayMesh_3rqjy")
 skeleton = NodePath("")
 
-[node name="Trigger" type="MeshInstance3D" parent="Body"]
+[node name="Trigger" type="MeshInstance3D" parent="Scale/Body"]
 transform = Transform3D(0.0452191, 0, 0, 0, 0.368654, 0, 0, 0, 0.0663822, 0, 0, 0)
 mesh = SubResource("ArrayMesh_prmpp")
 skeleton = NodePath("")

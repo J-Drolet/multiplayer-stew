@@ -112,17 +112,20 @@ shadow_mesh = SubResource("ArrayMesh_lka0q")
 
 [node name="Shotgun" type="Node3D"]
 
-[node name="Body" type="MeshInstance3D" parent="."]
+[node name="Scale" type="Node3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Body" type="MeshInstance3D" parent="Scale"]
 transform = Transform3D(-0.5, -4.37114e-08, 1.91069e-15, 0, -2.18557e-08, -0.5, 4.37114e-08, -0.5, 2.18557e-08, 0, 0.016571, -0.142085)
 mesh = SubResource("ArrayMesh_efsau")
 skeleton = NodePath("")
 
-[node name="Barrels" type="MeshInstance3D" parent="Body"]
+[node name="Barrels" type="MeshInstance3D" parent="Scale/Body"]
 transform = Transform3D(0.677858, 0, 0, 0, 0.677858, 0, 0, 0, 0.677858, 0, 0.0766358, -0.192528)
 mesh = SubResource("ArrayMesh_rurkn")
 skeleton = NodePath("")
 
-[node name="Trigger" type="MeshInstance3D" parent="Body"]
+[node name="Trigger" type="MeshInstance3D" parent="Scale/Body"]
 transform = Transform3D(0.15355, 0, 0, 0, 0.0483982, 0.0306611, 0, -0.145723, 0.0101833, 0, -0.946951, -0.0123682)
 mesh = SubResource("ArrayMesh_m4qnt")
 skeleton = NodePath("")

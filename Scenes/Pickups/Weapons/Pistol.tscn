@@ -75,12 +75,15 @@ shadow_mesh = SubResource("ArrayMesh_te12l")
 
 [node name="Pistol" type="Node3D"]
 
-[node name="Lugar" type="MeshInstance3D" parent="."]
+[node name="Scale" type="Node3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="Lugar" type="MeshInstance3D" parent="Scale"]
 transform = Transform3D(-0.168051, 0, 8.15e-08, 0, 0.53975, 0, -2.5375e-08, 0, -0.53975, 0, -0.00839388, -0.387356)
 mesh = SubResource("ArrayMesh_skj4q")
 skeleton = NodePath("")
 
-[node name="Trigger" type="MeshInstance3D" parent="Lugar"]
+[node name="Trigger" type="MeshInstance3D" parent="Scale/Lugar"]
 transform = Transform3D(1.33389e-09, 0.0437192, 9.45528e-09, 0.0626195, -1.8894e-09, 0.00950112, 0.00950112, 6.31474e-09, -0.0626195, -3.86984e-09, 0.153395, -0.326559)
 mesh = SubResource("ArrayMesh_7sv46")
 skeleton = NodePath("")

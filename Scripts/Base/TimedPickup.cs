@@ -17,6 +17,8 @@ namespace multiplayerstew.Scripts.Base
         public Node3D MeshParent { get; set; } // the node where upgrade meshes and cooldown sprite will live
         [Export, ExportRequired]
         public Range ProgressBar { get; set; }
+        [Export, ExportRequired]
+        public Node3D PickupLight { get; set; }
 
         private bool Active = true;
         [Export]
@@ -67,6 +69,8 @@ namespace multiplayerstew.Scripts.Base
                 
                 RespawnPickup();
             }
+
+            PickupLight.Visible = Active;
         }
 
         protected abstract void ActivatePickup(Character character);

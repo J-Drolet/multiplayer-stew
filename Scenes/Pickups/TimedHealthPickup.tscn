@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://b1638ox18o0fr"]
 
 [ext_resource type="Script" uid="uid://c4puwdv4gpshh" path="res://Scripts/Pickups/TimedHealthPickup.cs" id="1_0e8g2"]
-[ext_resource type="Texture2D" uid="uid://cr6vgqjhgn56r" path="res://Assets/Textures/UI/ProgressBar/Border.png" id="2_ytf08"]
-[ext_resource type="Texture2D" uid="uid://dh1mlc7rugobi" path="res://Assets/Textures/UI/ProgressBar/Fill.png" id="3_lymcp"]
+[ext_resource type="Texture2D" uid="uid://cnbfw8yt3ogh2" path="res://Assets/Textures/UI/ProgressBar/Border.png" id="2_ytf08"]
+[ext_resource type="Texture2D" uid="uid://hlk0h74umyuk" path="res://Assets/Textures/UI/ProgressBar/Fill.png" id="3_lymcp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p8ly1"]
 size = Vector3(2, 2, 2)
@@ -96,13 +96,17 @@ properties/0/replication_mode = 1
 properties/1/path = NodePath(".:TimeSinceLastActive")
 properties/1/spawn = true
 properties/1/replication_mode = 1
+properties/2/path = NodePath("SpotLight3D:visible")
+properties/2/spawn = true
+properties/2/replication_mode = 1
 
-[node name="TimedUpgradePickup" type="Node3D" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar")]
+[node name="TimedUpgradePickup" type="Node3D" node_paths=PackedStringArray("PickupArea", "MeshParent", "ProgressBar", "PickupLight")]
 script = ExtResource("1_0e8g2")
 HealthGained = 25
 PickupArea = NodePath("Area3D")
 MeshParent = NodePath("MeshParent")
 ProgressBar = NodePath("MeshParent/Sprite3D/SubViewport/TextureProgressBar")
+PickupLight = NodePath("SpotLight3D")
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(0.387666, 0, 0, 0, 0.387666, 0, 0, 0, 0.387666, -0.0311243, 0.387011, 0)

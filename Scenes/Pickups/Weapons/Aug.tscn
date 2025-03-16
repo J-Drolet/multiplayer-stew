@@ -246,37 +246,40 @@ shadow_mesh = SubResource("ArrayMesh_vlq3d")
 
 [node name="Aug" type="Node3D"]
 
-[node name="AUG" type="MeshInstance3D" parent="."]
+[node name="Scale" type="Node3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+
+[node name="AUG" type="MeshInstance3D" parent="Scale"]
 transform = Transform3D(0.655935, 0, 0, 0, 0.655935, 0, 0, 0, 0.655935, 0, 0, 0)
 mesh = SubResource("ArrayMesh_8yutg")
 skeleton = NodePath("")
 
-[node name="Cylinder" type="MeshInstance3D" parent="AUG"]
-transform = Transform3D(0.0777308, 0, 0, 0, 0, -0.0777308, 0, 0.860509, 0, 0, 0.211119, -0.671475)
+[node name="Cylinder" type="MeshInstance3D" parent="Scale/AUG"]
+transform = Transform3D(0.0777308, 0, 0, 0, -3.7614e-08, -0.0777308, 0, 0.860509, -3.39772e-09, 0, 0.211119, -0.671475)
 mesh = SubResource("ArrayMesh_nycym")
 skeleton = NodePath("")
 
-[node name="Charging Handle" type="MeshInstance3D" parent="AUG/Cylinder"]
-transform = Transform3D(-1.4554, 4.55604, -1.255e-07, 3.79078e-07, 1.11586e-06, 0.574495, 6.1911, 1.07103, -6.46783e-08, -1.80151, 0.0719449, 0.0135172)
+[node name="Charging Handle" type="MeshInstance3D" parent="Scale/AUG/Cylinder"]
+transform = Transform3D(-1.4554, 4.55604, 2.44456e-08, 0, -2.0458e-07, 0.574495, 6.1911, 1.07103, 5.74666e-09, -1.80151, 0.0719449, 0.0135172)
 mesh = SubResource("ArrayMesh_7x86r")
 skeleton = NodePath("")
 
-[node name="Cylinder_001" type="MeshInstance3D" parent="AUG/Cylinder"]
+[node name="Cylinder_001" type="MeshInstance3D" parent="Scale/AUG/Cylinder"]
 transform = Transform3D(0.835361, 0, 0, 0, 0.0754592, 0, 0, 0, 0.835361, 0, 0.902585, -5.09918)
 mesh = SubResource("ArrayMesh_fto4x")
 skeleton = NodePath("")
 
-[node name="Back Sight" type="MeshInstance3D" parent="AUG/Cylinder/Cylinder_001"]
+[node name="Back Sight" type="MeshInstance3D" parent="Scale/AUG/Cylinder/Cylinder_001"]
 transform = Transform3D(0.271739, 0, 0, 0, 0.271739, 0, 0, 0, 0.271739, 0, 10.3225, -0.173357)
 mesh = SubResource("ArrayMesh_201yc")
 skeleton = NodePath("")
 
-[node name="Mag" type="MeshInstance3D" parent="AUG"]
-transform = Transform3D(0.0587599, 0, 0, 0, 0.35514, -0.0401045, 0, 0.0671289, 0.21217, 0, -0.4883, 1.04387)
+[node name="Mag" type="MeshInstance3D" parent="Scale/AUG"]
+transform = Transform3D(0.0587599, 0, 0, 0, 0.35514, -0.0401046, 0, 0.0671289, 0.21217, 0, -0.4883, 1.04387)
 mesh = SubResource("ArrayMesh_e3ni0")
 skeleton = NodePath("")
 
-[node name="Trigger" type="MeshInstance3D" parent="AUG"]
+[node name="Trigger" type="MeshInstance3D" parent="Scale/AUG"]
 transform = Transform3D(0.123538, 0, 0, 0, 0.123538, 0, 0, 0, 0.123538, 0, -0.0376187, 0.182118)
 mesh = SubResource("ArrayMesh_lu1m4")
 skeleton = NodePath("")
