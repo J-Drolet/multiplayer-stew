@@ -1,7 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://dq4rt2sh4c7y6"]
 
-[ext_resource type="Script" uid="uid://b5q716murehr4" path="res://Assets/BackfaceCullUtlity.cs" id="1_qmqo6"]
+[ext_resource type="Script" uid="uid://bqubbi82vqprs" path="res://Assets/MeshManipulationUtlity.cs" id="1_5mh6l"]
 
 [node name="MeshManipulationUtlity" type="Node3D"]
-script = ExtResource("1_qmqo6")
+script = ExtResource("1_5mh6l")
 ASSET_FOLDER = "res://Scenes/Levels/LevelAssets/Bunker/"
+UtilMode = 1
