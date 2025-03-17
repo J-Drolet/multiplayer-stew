@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=5 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Fair/button_off_button_off.png" id="1_wuqj0"]
 
@@ -7,37 +7,22 @@ resource_name = "button_off"
 albedo_texture = ExtResource("1_wuqj0")
 texture_filter = 2
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_uovpp"]
-_surfaces = [{
-"aabb": AABB(-0.333333, -0.133333, -0.5, 0.666667, 0.0666667, 1),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAADAAIAAAABAAMABQAHAAYABQAEAAcAAAAGAAEAAAAFAAYAAQAHAAMAAQAGAAcAAgAFAAAAAgAEAAUAAwAEAAIAAwAHAAQA"),
-"name": "button_off",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAD/////AAD///////8AAAAA//8AAAAA/////wAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAAAAAAAA==")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_ygatt"]
 resource_name = "button_off_button_off"
+lightmap_size_hint = Vector2i(22, 26)
 _surfaces = [{
 "aabb": AABB(-0.333333, -0.133333, -0.5, 0.666667, 0.0666667, 1),
-"attribute_data": PackedByteArray("AAD/7wAA////5wAA/+cAAP///+//////AAAAAAAA/+//5////+f/////AAD////vAAAAAAAA////////AAD//wAA/////wAA//8AAP////////////8AAP//////////"),
-"format": 34896613399,
+"attribute_data": PackedByteArray("AAAAAAAAgD9GFx0/O7FTPwAAgD8AAAAAjC66PGIn9j4AAAAAAAAAAIwuujw7sVM/AACAPwAAgD9GFx0/Yif2PgAAAAAAAIA/RhcdP7ETuz4AAIA/AAAAAIwuujzZiZ08AACAPwAAgD9GFx0/2YmdPAAAAAAAAAAAjC66PLETuz4AAAAA8P9vP+miSz+xE3s/AACAPwAAgD8AAEA/J3YiPwAAgD/w/28/6aJLPyd2Ij8AAAAAAACAPwAAQD+xE3s/6P9nPwAAAADpoks/T+wEPwAAgD8AAIA/AABAP9mJnTzo/2c/AACAP+miSz/ZiZ08AACAPwAAAAAAAEA/T+wEP+j/Zz8AAIA/o4tuP9mJnTwAAIA/AAAAAIwuej9P7AQ/6P9nPwAAAACji24/T+wEPwAAgD8AAIA/jC56P9mJnTwAAIA/8P9vP4wuej+xE3s/AAAAAAAAgD+ji24/J3YiPwAAAADw/28/jC56Pyd2Ij8AAIA/AACAP6OLbj+xE3s/"),
+"format": 34359742519,
 "index_count": 36,
-"index_data": PackedByteArray("AQAKAAYAAQAFAAoAEAAVABQAEAAMABUAAAATAAQAAAAPABMAAwAWAAkAAwASABYACAARAAIACAAOABEACwANAAcACwAXAA0A"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
 "material": SubResource("StandardMaterial3D_7c0l8"),
-"name": "button_off",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
-"vertex_data": PackedByteArray("AAD/////AAAAAP//////PwAA/////6oq////////VNX///////8AAP////////8/AAD//wAA/z8AAP//AAAAgAAA//8AAKoq/////wAAVNX/////AAD/P/////8AAACAAAAAAAAA/78AAAAAAAAAgAAAAAAAAKoqAAAAAP//AAAAAAAA////vwAAAAD//6oq//8AAP//VNX//wAA//8AAP//AAD///+///8AAAAA/7///wAAAABU1f//AAAAAACA////fwAA/3+qqlRVVFWqqv///38AAP9/AAD/f/9///+qqlRVVFWqqgAA/3//f///////f/9///+qqlRV////f////3+qqlRVVFWqqv///3////9/////f1RVqqr/f///")
+"vertex_data": PackedByteArray("n6qqvleIiL0AAAA/waqqPleIiL0AAAC/n6qqvleIiL0AAAC/waqqPleIiL0AAAA/n6qqvnKICL4AAAA/waqqPnKICL4AAAC/waqqPnKICL4AAAA/n6qqvnKICL4AAAC/n6qqvleIiL0AAAA/waqqPnKICL4AAAA/waqqPleIiL0AAAA/n6qqvnKICL4AAAA/waqqPleIiL0AAAA/waqqPnKICL4AAAC/waqqPleIiL0AAAC/waqqPnKICL4AAAA/n6qqvleIiL0AAAC/n6qqvnKICL4AAAA/n6qqvleIiL0AAAA/n6qqvnKICL4AAAC/waqqPleIiL0AAAC/n6qqvnKICL4AAAC/n6qqvleIiL0AAAC/waqqPnKICL4AAAC/AoAAAP7//z8CgAAA/v//PwKAAAD+//8/AoAAAP7//z//f/3//v//v/9//f/+//+//3/9//7//7//f/3//v//v/////////8//////////z//////////P/////////8/AgD5fwOAAYACAPl/A4ABgAIA+X8DgAGAAgD5fwOAAYD+//p//H/+f/7/+n/8f/5//v/6f/x//n/+//p//H/+f/1//3/9//+//X//f/3//7/9f/9//f//v/1//3/9//+/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_uovpp")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wujac"]
 points = PackedVector3Array(-0.341237, -0.141236, -0.507937, 0.341303, -0.0618714, 0.507937, 0.341303, -0.141236, 0.507937, 0.341303, -0.0618714, -0.507937, -0.341237, -0.0618714, 0.507937, -0.341237, -0.141236, 0.507937, 0.341303, -0.141236, -0.507937, -0.341237, -0.0618714, -0.507937)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=5 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/shipping_container_mx_2_shipping_containers_mx_1.png" id="1_1p2e0"]
 
@@ -8,48 +8,33 @@ albedo_texture = ExtResource("1_1p2e0")
 texture_filter = 2
 texture_repeat = false
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_gokfs"]
-_surfaces = [{
-"aabb": AABB(-1.255, -2.7, -2.5, 2.5, 5.4, 2.5),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
-"name": "shipping_containers_mx_1",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("/v//////AAD+////AAAAAAAA/////wAAAAD//wAAAAD//wAA//8AAP//AAAAAAAAAAAAAP//AAAAAAAAAAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_s1r7x"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_sy8cn"]
 resource_name = "shipping_container_mx_2_shipping_container_mx_2"
+lightmap_size_hint = Vector2i(86, 110)
 _surfaces = [{
 "aabb": AABB(-1.255, -2.7, -2.5, 2.5, 5.4, 2.5),
-"attribute_data": PackedByteArray("AAD/vwAA/79cxv+/AAD/fwAA//9cxv9/AAD//x2L/79ujP+/AAD/vx2L/39ujP9/HYv/vx2L/79cxv+/HYv/fx2L//9cxv9/AAD/vx2L//////+/AAD/fx2L/7////9/"),
-"format": 34896613399,
+"attribute_data": PackedByteArray("xlxGP8D/Pz/6gn4/WPtGP4xuDD8A//8+0Bc0P83MDD/GXEY/AP//PvqCfj/NzAw/jG4MP8D/Pz/QFzQ/WPtGP4sdCz/A/z8/rSkrP6gE+T4AAAAAAP//PvqCvjuQp4Q+ix0LPwD//z6tKSs/kKeEPgAAAADA/z8/+oK+O6gE+T4AAIA/wP8/P7+grz4c1n4/xlxGPwD//z5ZU1Y9kKdEPwAAgD8A//8+v6CvPpCnRD/GXEY/wP8/P1lTVj0c1n4/ix0LP8D/Pz+tKSs/v2FtPgAAAAAA//8++oK+OwnylDuLHQs/AP//Pq0pKz848pQ7AAAAAMD/Pz85g747vmFtPgAAAAAAAIA/rSkrPzisPT+LHQs/wP8/P/qCvjusfQM/ix0LPwAAgD/6gr47OKw9PwAAAADA/z8/rSkrP+Z9Az+LHQs/wP8/P9AXND8J8pQ7AAAAAAAAgD+wgn4/dNEFPwAAAADA/z8/0Bc0P3TRBT+LHQs/AACAP/qCfj8J8pQ7"),
+"format": 34359742519,
 "index_count": 36,
-"index_data": PackedByteArray("AgALAAUAAgAIAAsABwAVAAoABwASABUAFAARABcAFAAOABEADQADAA8ADQABAAMABgAMABMABgAAAAwAFgAEAAkAFgAQAAQA"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
 "material": SubResource("StandardMaterial3D_pc8qr"),
-"name": "shipping_containers_mx_1",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
-"vertex_data": PackedByteArray("/v///////7/+//////9U1f7///////+//v///wAAVNX+////AAD///7///8AAP+/AAD//////78AAP////9U1QAA//////+/AAD//wAA//8AAP//AABU1QAA//8AAP+///8AAP///7///wAA//9U1f//AAD///////8AAAAAVNX//wAAAAD/////AAAAAP//AAAAAP//VNUAAAAA////vwAAAAD/////AAAAAAAAVNUAAAAAAAD//wAAAAAAAP///3//f6qqVVX///9/qqpVVf+//z////9//3//f1TVVNX///9//7//P1TVVNX///9//3//f6qqVFX/f/8/qqpUVf+//z//f/8/VNVU1f9//3//f/8/VNVU1f+//z//f/8/")
+"vertex_data": PackedByteArray("6VqfP83MLEAAAAAA16Ogv83MLEAAACDA6VqfP83MLEAAACDA16Ogv83MLEAAAAAA16Ogv83MLEAAAAAA16Ogv83MLMAAACDA16Ogv83MLEAAACDA16Ogv83MLMAAAAAA16Ogv83MLMAAAAAAKVyfP83MLMAAACDA16Ogv83MLMAAACDAKVyfP83MLMAAAAAAKVyfP83MLMAAAAAA6VqfP83MLEAAACDAKVyfP83MLMAAACDA6VqfP83MLEAAAAAA16Ogv83MLEAAAAAAKVyfP83MLMAAAAAA16Ogv83MLMAAAAAA6VqfP83MLEAAAAAA16Ogv83MLMAAACDA6VqfP83MLEAAACDA16Ogv83MLEAAACDAKVyfP83MLMAAACDA/3/9//7//7//f/3//v//v/9//f/+//+//3/9//7//78AAASAAYD8/wAABIABgPz/AAAEgAGA/P8AAASAAYD8/wWAAAAAAADABYAAAAAAAMAFgAAAAAAAwAWAAAAAAADA/v8CgASAAID9/wCAAYAAgP7/AoAEgACA/f8AgAGAAID/f/5/AYAAgP9//n8BgACA/3/+fwGAAID/f/5/AYAAgAAA/v/8fwCAAAD+//x/AIAAAP7//H8AgAAA/v/8fwCA")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_gokfs")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0ullu"]
 points = PackedVector3Array(1.245, 2.6819, -3.5233e-07, -1.255, -2.65143, -2.5, 1.23071, -2.65143, -2.5, 1.245, -2.6819, -3.5233e-07, -1.255, 2.65143, -0.0142862, 1.23071, 2.65143, -2.5, -1.255, 2.65143, -2.5, -1.255, -2.65143, -0.0142862)
 
-[node name="@Node3D@606" type="Node3D"]
+[node name="_Node3D_606" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@607" type="StaticBody3D" parent="."]
 
 [node name="shipping_container_mx_2" type="MeshInstance3D" parent="@StaticBody3D@607"]
-mesh = SubResource("ArrayMesh_s1r7x")
+mesh = SubResource("ArrayMesh_sy8cn")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@607"]

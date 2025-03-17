@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4 uid="uid://3yiwmwd6jf5n"]
+[gd_scene load_steps=5 format=4]
 
-[ext_resource type="Texture2D" uid="uid://du76fqvtv6xpf" path="res://Assets/Textures/Extras/Misc_Pizza_Box_256.png" id="1_607tc"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Pizza_Box_256.png" id="1_607tc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4l1sd"]
 resource_name = "PizzaBox"
@@ -8,37 +8,22 @@ cull_mode = 2
 albedo_texture = ExtResource("1_607tc")
 texture_filter = 2
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_vkj12"]
-_surfaces = [{
-"aabb": AABB(-0.752384, -0.0768035, -0.752384, 1.50477, 0.153607, 1.50477),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
-"name": "PizzaBox",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD+/wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD///7/AAAAAA==")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_myfux"]
 resource_name = "Misc_Cube_054"
+lightmap_size_hint = Vector2i(38, 34)
 _surfaces = [{
 "aabb": AABB(-0.752384, -0.0768035, -0.752384, 1.50477, 0.153607, 1.50477),
-"attribute_data": PackedByteArray("CKpd/6EAXf8IqotV9lVd/0urilX2VYtVXf9Lq7NUXf8Iqp2pS6tLq13/ilX2VZ2pCKpLq6EAS6uzVJyp9lVLq0urnKmhAJypXf9d/7NUS6uzVIpVS6td/13/nKmhAIpV"),
-"format": 34896613399,
+"attribute_data": PackedByteArray("qggqP6sWqz6voXw/PDx8P6zsqz6qnSk/8xoKP7yWVj+s7Ks+qxarPq+hfD+XllY/qggqP6qdKT/zGgo/PDx8P/9dfz+rSys/G8rrPgAAQD+rSys//11/P0qUVzxaWho/q0srP6tLKz8byus+WloaP/9dfz//XX8/NpRXPAAAQD+pZqk+qxSrPq+hfD8AAEA/oQAhO6qcKT/zGgo/WloaP6EAITurFKs+r6F8P4BaGj+pZqk+qpwpP/MaCj8AAEA/qggqP6tLKz82lFc8l5ZWP6zsqz7/XX8/G8rrPjw8fD+s7Ks+q0srPzaUVzw8PHw/qggqP/9dfz8byus+l5ZWP6lmqT7/XX8/r6F8P/HwcDyhACE7q0srP/MaCj/EwwM/qWapPqtLKz/zGgo/8fBwPKEAITv/XX8/r6F8P8TDAz//XX8/qpwpPxvK6z7EwwM/q0srP6sUqz42lFc88fBwPP9dfz+rFKs+G8rrPvHwcDyrSys/qpwpPzaUVzzEwwM/"),
+"format": 34359742519,
 "index_count": 36,
-"index_data": PackedByteArray("AgALAAUAAgAIAAsABgAVAAkABgASABUAFAARABcAFAAOABEADAADAA8ADAAAAAMABwANABMABwABAA0AFgAEAAoAFgAQAAQA"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
 "material": SubResource("StandardMaterial3D_4l1sd"),
-"name": "PizzaBox",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
-"vertex_data": PackedByteArray("AAAAAP///78AAAAA//9U1QAAAAD//1TVAAD//////78AAP////9U1QAA/////1TVAAAAAAAA//8AAAAAAABU1QAAAAAAAFTVAAD+/wAA//8AAP7/AABU1QAA/v8AAFTV//8AAP///7///wAA//9U1f//AAD//1TV/////////7////////9U1f///////1TV//8AAAAA/////wAAAABU1f//AAAAAFTV///+/wAA//////7/AABU1f///v8AAFTV/3//f1RVVVVUVamq/3//f1TVqipUVamq/7//P1RVVFVVVaqq/7//P1TVqipVVaqq/3//f1RVVFWqqlRV/3//f1TVqiqqqlVV/z//v1VVVFWqqlVV/7//P1TVqiqqqlVV")
+"vertex_data": PackedByteArray("PZxAvydLnb1fnEA/PZxAv+1JnT09nEC/PZxAvydLnT1fnEA/PZxAvydLnb09nEC/PZxAvydLnb09nEC/X5xAP+1JnT09nEC/PZxAv+1JnT09nEC/X5xAPydLnb09nEC/X5xAPydLnb09nEC/X5xAPydLnT1fnEA/X5xAP+1JnT09nEC/X5xAPydLnb1fnEA/X5xAPydLnb1fnEA/PZxAvydLnT1fnEA/X5xAPydLnT1fnEA/PZxAvydLnb1fnEA/PZxAvydLnb09nEC/X5xAPydLnb1fnEA/X5xAPydLnb09nEC/PZxAvydLnb1fnEA/X5xAP+1JnT09nEC/PZxAvydLnT1fnEA/PZxAv+1JnT09nEC/X5xAPydLnT1fnEA/AwD7fwWAAYAAAP5/AIAAgAMA+38FgAGAAAD+fwCAAIAAAP7//H8AgAAA/v/8fwCAAAD+//x/AID+/wAAAYABgP3/AIABgACA/f8AgAGAAID9/wCAAYAAgP7/AoAEgACA/3/+fwGAAID/f/5/AYAAgP9//n8BgACA/3/+fwGAAIAIgAIA+f/9/wiAAgD5//3/BYACAPz//v8CgAAA/P/9/wGA+/8AAP7/AYD7/wAA/v8BgPv/AAD+/wGA+/8AAP7/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_vkj12")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vajnr"]
 points = PackedVector3Array(-0.764343, -0.0887429, -0.764343, 0.749176, 0.0768, 0.749192, -0.749192, 0.0768, 0.749192, 0.764326, -0.0887429, 0.764343, 0.749176, 0.0768, -0.749192, -0.764343, -0.0887429, 0.764343, 0.764326, -0.0887429, -0.764343, -0.749192, 0.0768, -0.749192)

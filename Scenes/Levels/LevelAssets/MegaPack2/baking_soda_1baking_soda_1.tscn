@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=5 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/baking_soda_1_baking_soda_1.png" id="1_wk4yc"]
 
@@ -8,37 +8,22 @@ albedo_texture = ExtResource("1_wk4yc")
 texture_filter = 2
 texture_repeat = false
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_yjlws"]
-_surfaces = [{
-"aabb": AABB(-0.06075, -0.0364507, -0.1971, 0.1215, 0.0729007, 0.1971),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("BwADAAEABwAGAAMAAQACAAQAAQADAAIABAAHAAEABAAFAAcABgACAAMABgAAAAIAAAAEAAIAAAAFAAQABwAAAAYABwAFAAAA"),
-"name": "baking_soda_1",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("/v/+/wAAAAAAAAAA//8AAAAA/v8AAAAAAAAAAAAAAAAAAP7//v8AAP7////+/wAA//8AAAAAAAD//wAA//8AAA==")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_l40s6"]
 resource_name = "baking_soda_1_baking_soda_1"
+lightmap_size_hint = Vector2i(14, 14)
 _surfaces = [{
 "aabb": AABB(-0.06075, -0.0364507, -0.1971, 0.1215, 0.0729007, 0.1971),
-"attribute_data": PackedByteArray("AAAAAFx00UUtutFFXHT//1x0/////wAAAADRRVx0AAAtutFFXHTRRVx00UVcdNFFAAD//y26/////9FFXHTRRVx0//8tuv//AADRRQAA0UX//9FFAAD//1x0AAD/////"),
-"format": 34896613399,
+"attribute_data": PackedByteArray("AAAAAAAAgD9u23Y/kiTJPum46D6Moos+t20bPyVJEj3puOg+AACAP27bdj8lSRI9AAAAAIyiiz63bRs/kiTJPum46D4AAIA/t20bP27bdj+6LTo/jKKLPm7bdj9JkmQ/ui06PwAAgD8Sbhs/SZJkP+m46D6Moos+btt2P27bdj8AAIA/jKKLPpIkyT7JbRs/6bjoPgAAAAAlSRI927YtPwAAgD8AAAAAkiTJPtu2LT/puOg+jKKLPttOEj23bRs/AAAAAIyiiz6SJMk+SZJkP+m46D4AAAAAJUkSPW7bdj/puOg+jKKLPiVJEj1JkmQ/AAAAAAAAAADaI8k+btt2P+m46D6Moos+kiTJPpIkyT4AAAAAAACAPyVJEj0lSRI9AAAAAIyiiz6SJMk+JUkSPem46D4AAIA/JUkSPZIkyT4AAIA/AACAP7dtGz/bti0/ui06P4yiiz5u23Y/yW0bPwAAgD+Moos+btt2P9u2LT+6LTo/AACAPxJuGz+3bRs/"),
+"format": 34359742519,
 "index_count": 36,
-"index_data": PackedByteArray("FQALAAQAFQATAAsAAwAIAA0AAwAJAAgADgAWAAUADgAPABYAEgAHAAoAEgAAAAcAAQAMAAYAAQAQAAwAFwACABQAFwARAAIA"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
 "material": SubResource("StandardMaterial3D_gldcq"),
-"name": "baking_soda_1",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
-"vertex_data": PackedByteArray("/v/+/wAA///+//7/AAD/v/7//v8AAFTVAAAAAP//VNUAAAAA/////wAAAAD/////AAD+/wAA/78AAP7/AAD//wAA/v8AAFTVAAAAAAAAVNUAAAAAAAD//wAAAAAAAP//AAD+//7//78AAP7//v9U1QAA/v/+/////v////7////+/////v//v/7////+/1TV//8AAAAA/////wAAAAD/////AAAAAFTV//8AAP///////wAA////////AAD//1TV/3///////3+qqlVVVNVU1f9//z//f/9/////f/9///9U1VTVVNVU1f9/////f/8/////f1TVVNX/f/9//3//f////3+qqlVV/3////9//z+qqlVV/3//P/9//3+qqlVV")
+"vertex_data": PackedByteArray("/tR4PVRNFb0AAAAA/tR4vVRNFb2V1Em+/tR4vVRNFb0AAAAA/tR4PVRNFb2V1Em+/tR4vVRNFb0AAAAA/tR4vW5LFT2V1Em+/tR4vW5LFT0AAEq2/tR4vVRNFb2V1Em+/tR4vW5LFT0AAEq2/tR4PVRNFb0AAAAA/tR4vVRNFb0AAAAADNN4PZhMFT0AAEq2/tR4PVRNFb2V1Em+/tR4vW5LFT2V1Em+/tR4vVRNFb2V1Em+DNN4PW5LFT2V1Em+DNN4PW5LFT2V1Em+/tR4vW5LFT0AAEq2/tR4vW5LFT2V1Em+DNN4PZhMFT0AAEq2/tR4PVRNFb0AAAAADNN4PW5LFT2V1Em+/tR4PVRNFb2V1Em+DNN4PZhMFT0AAEq2BYAAAAAAAMAFgAAAAAAAwAWAAAAAAADABYAAAAAAAMAAAASAAYD8/wAABIABgPz/AAAEgAGA/P8AAASAAYD8//5//n8AAP+//n/+fwAA/7/+f/5/AAD/v/5//n8AAP+//v8AAAAA/7/+/wAAAAD/v/7/AAAAAP+//v8AAAAA/7//f/3//v//v/9//f/+//+//3/9//7//7//f/3//v//v/3/AIABgACA/f8AgAGAAID9/wCAAYAAgP3/AIABgACA")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_yjlws")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mf25u"]
 points = PackedVector3Array(-0.0597571, -0.0365, -0.194493, 0.060701, 0.0357678, -0.00175982, 0.058714, 0.0364348, 1.38778e-17, 0.0586588, 0.0364, -0.197007, -0.0608, 0.0360829, -0.00093857, 0.0601714, -0.0365, -0.00260714, 0.0601714, -0.0365, -0.194493, -0.0608, 0.0360829, -0.196161, -0.0597571, -0.0365, -0.00260714, 0.0607009, 0.0357677, -0.19534)

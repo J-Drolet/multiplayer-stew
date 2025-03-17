@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=5 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/asphalt_hr_1_asphalt_hr_1.png" id="1_02c77"]
 
@@ -7,37 +7,22 @@ resource_name = "asphalt_hr_1"
 albedo_texture = ExtResource("1_02c77")
 texture_filter = 2
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_s2yql"]
-_surfaces = [{
-"aabb": AABB(-2, -2, -6.99237e-06, 4, 4, 1.40034e-05),
-"format": 34359742465,
-"index_count": 6,
-"index_data": PackedByteArray("AAADAAEAAAACAAMA"),
-"name": "asphalt_hr_1",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray("AAAAwAAAAEAAoOq2AAAAQAAAAEAAoOq2AAAAwAAAAMAAQOs2AAAAQAAAAMAAQOs2")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_fo87l"]
 resource_name = "asphalt_hr_1_asphalt_hr_1"
+lightmap_size_hint = Vector2i(42, 42)
 _surfaces = [{
 "aabb": AABB(-2, -2, -6.99237e-06, 4, 4, 1.40034e-05),
-"attribute_data": PackedByteArray("AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AACAPwAAgD8="),
-"format": 34359742487,
+"attribute_data": PackedByteArray("AAAAAAAAAAAxDEM8MQxDPAAAgD8AAIA/z/N8P8/zfD8AAIA/AAAAADEMQzzP83w/AAAAAAAAgD/P83w/MQxDPA=="),
+"format": 34359742519,
 "index_count": 6,
-"index_data": PackedByteArray("AAADAAEAAAACAAMA"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
 "material": SubResource("StandardMaterial3D_xm6h1"),
-"name": "asphalt_hr_1",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray("AAAAwAAAAEAAoOq2AAAAQAAAAEAAoOq2AAAAwAAAAMAAQOs2AAAAQAAAAMAAQOs2/v8AAP///z/+/wAA////P/7/AAD///8//v8AAP///z8=")
+"vertex_data": PackedByteArray("AAAAwAAAAEAAoOq2AAAAQAAAAMAAQOs2AAAAQAAAAEAAoOq2AAAAwAAAAMAAQOs2/v8AAP///z/+/wAA////P/7/AAD///8//v8AAP///z8=")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_s2yql")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ydcv1"]
 points = PackedVector3Array(-2.03175, -2.03175, -0.031746, 2.03175, 2.03175, 0.031746, 2.03175, 2.03175, -0.031746, -2.03175, 2.03175, 0.031746, 2.03175, -2.03175, 0.031746, 2.03175, -2.03175, -0.031746, -2.03175, 2.03175, -0.031746, -2.03175, -2.03175, 0.031746)

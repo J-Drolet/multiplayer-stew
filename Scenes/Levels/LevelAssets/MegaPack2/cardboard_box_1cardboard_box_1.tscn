@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=5 format=4 uid="uid://beaq0e27ox8r8"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/cardboard_box_1_cardboard_box_hr_1.png" id="1_0gb10"]
+[ext_resource type="Texture2D" uid="uid://cx1weplhmrfpv" path="res://Assets/Textures/Megapack2/cardboard_box_1_cardboard_box_hr_1.png" id="1_0gb10"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1qhkv"]
 resource_name = "cardboard_box_hr_1"
@@ -8,42 +8,27 @@ albedo_texture = ExtResource("1_0gb10")
 texture_filter = 2
 texture_repeat = false
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_ocxgf"]
-_surfaces = [{
-"aabb": AABB(-0.27, -0.160001, -0.330001, 0.53, 0.330001, 0.330001),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABwAEAAUABwAGAAQABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
-"name": "cardboard_box_hr_1",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAD+/wAAAAAAAAAAAAAAAAAA///+/wAAAAAAAP//AAD///7/AAAAAP//AAAAAAAA//////7/AAD//wAA//8AAA==")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_0d0wq"]
 resource_name = "cardboard_box_1_cardboard_box_1"
+lightmap_size_hint = Vector2i(26, 22)
 _surfaces = [{
 "aabb": AABB(-0.27, -0.160001, -0.330001, 0.53, 0.330001, 0.330001),
-"attribute_data": PackedByteArray("AAAAAAAArFT+/wAAAACsVAAArFT+/6xUAABSqwAAUqu2nQAAAABSqwAA//+2naxUtp0AALadrFT+/wAAtp2sVLadrFT+/6xUtp0AALadUqu2nVKrtp2sVLadUqu2nf//"),
-"format": 34896613399,
+"attribute_data": PackedByteArray("AP9/PwAAAACe2Ek/0TW6PJ62HT+pWKk+sRN7PwAAgD4A/38/qVipPp7YST8AAIA+nrYdPwAAAACAE3s/jC66PAAAAACrUis/xU4sP4wuujyeth0/AACAP2In9j5GF90+AAAAAAAAgD9iJ/Y+jC66PJ62HT+rUis/xU4sP0YX3T6eth0/qVipPoqdWD6MLno/AP9/PwAAAADZiZ08OgBAPwD/fz+pWKk+xZxYPgAAQD+eth0/AAAAANmJnTyMLno/nrYdPwAAAADZiZ08dNHFPgAAAACpWKk+sRO7PkYXHT+eth0/qVipPtmJnTxGFx0/AAAAAAAAAACxE7s+dNHFPgAAAACrUis/4omdPAAAgD6eth0/qVipPrETuz6MLro8nrYdP6tSKz+xE7s+AACAPgAAAACpWKk+2YmdPIwuujyeth0/q1IrP8VOLD+MLno/AAAAAKlYqT5iJ/Y+XXQRPwAAAACrUis/xU4sP110ET+eth0/qVipPmIn9j6MLno/"),
+"format": 34359742519,
 "index_count": 36,
-"index_data": PackedByteArray("AgALAAUAAgAIAAsABgAXAAoABgATABcAFQAOABEAFQASAA4ADAAEABAADAAAAAQABwANABQABwABAA0AFgADAAkAFgAPAAMA"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
 "material": SubResource("StandardMaterial3D_1qhkv"),
-"name": "cardboard_box_hr_1",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
-"vertex_data": PackedByteArray("AAD+/wAAAAAAAP7/AAD/vwAA/v8AAAAAAAAAAAAA/z8AAAAAAAAAAAAAAAAAAAAAAAD///7/AIAAAP///v//vwAA///+/wAAAAAAAP///z8AAAAA//8AgAAAAAD//wAA///+/wAAAAD///7/AAD/v////v8AAP+///8AAAAA/z///wAAAAAAAP//AAAAAP+///////7//7///////v8AgP/////+//+///8AAP///7///wAA////P///AAD//wCA////f////3//P/9/AAD/f////3//P/9//3///////3//P/9/AAD/f/9/////P/9/////f////3//fwAAAAD/f////3//fwAA/38AAP9///////9//38AAAAA/3//f///")
+"vertex_data": PackedByteArray("cT2KvikTLj7k9ai+cT2Kvk3XI74AAAAAcT2Kvk3XI77k9ai+cT2KvnsULj4AAKm2cT2KvnsULj4AAKm2tx6FPk3XI74AAAAAcT2Kvk3XI74AAAAAtx6FPnsULj4AAKm2tx6FPk3XI74AAAAAtx6FPikTLj7k9ai+tx6FPk3XI77k9ai+tx6FPnsULj4AAKm2tx6FPikTLj7k9ai+cT2Kvk3XI77k9ai+tx6FPk3XI77k9ai+cT2KvikTLj7k9ai+cT2KvnsULj4AAKm2tx6FPikTLj7k9ai+tx6FPnsULj4AAKm2cT2KvikTLj7k9ai+tx6FPk3XI74AAAAAcT2Kvk3XI77k9ai+cT2Kvk3XI74AAAAAtx6FPk3XI77k9ai+AAAFgP7/AAAAAAWA/v8AAAAABYD+/wAAAAAFgP7/AAD9f/9//f//v/1//3/9//+//X//f/3//7/9f/9//f//v/3/AID+//7//f8AgP7//v/9/wCA/v/+//3/AID+//7//////////z//////////P/////////8//////////z//f/3//v//v/9//f/+//+//3/9//7//7//f/3//v//vwKAAAD+//8/AoAAAP7//z8CgAAA/v//PwKAAAD+//8/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_ocxgf")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_62hes"]
 points = PackedVector3Array(-0.267476, -0.16, -0.33, 0.26, 0.169673, -0.000327386, 0.257476, -0.16, -0.00190477, -0.27, 0.169673, -0.000327386, 0.257476, 0.168095, -0.33, -0.267476, -0.16, -0.00190477, 0.257476, -0.16, -0.33, -0.267476, 0.168095, -0.33)
 
-[node name="@Node3D@110" type="Node3D"]
+[node name="_Node3D_110" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@111" type="StaticBody3D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4]
+[gd_scene load_steps=7 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wall_hr_1_double_wall_hr_1.png" id="1_ec1da"]
 [ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wall_hr_1_double_concrete_hr_3.png" id="2_fqoce"]
@@ -13,70 +13,44 @@ resource_name = "concrete_hr_3"
 albedo_texture = ExtResource("2_fqoce")
 texture_filter = 2
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_cyqql"]
-_surfaces = [{
-"aabb": AABB(-2, -0.200023, -6, 4, 0.400024, 6),
-"format": 34896613377,
-"index_count": 12,
-"index_data": PackedByteArray("AgABAAAAAgADAAEABQAHAAYABQAEAAcA"),
-"name": "wall_hr_1",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("///+//7/AAD///v/AAAAAAAA///+/wAAAAD7/wAAAAD//wMA//8AAAAAAwD//wAAAAAAAAAAAAD//wAAAAAAAA==")
-}, {
-"aabb": AABB(-2, -0.200023, -6, 4, 0.400002, 1e-05),
-"format": 34896613377,
-"index_count": 6,
-"index_data": PackedByteArray("AQAAAAMAAQACAAAA"),
-"name": "concrete_hr_3",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray("AAAAANMwAAD///7/AAAAAAAA//8AAAAA//8AANMwAAA=")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_1pbpc"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_68i8a"]
 resource_name = "wall_hr_1_double_wall_hr_1_double"
+lightmap_size_hint = Vector2i(86, 70)
 _surfaces = [{
 "aabb": AABB(-2, -0.200023, -6, 4, 0.400024, 6),
-"attribute_data": PackedByteArray("////////AAD/f////38AAP9///////////8AAP9/AAA="),
-"format": 34896613399,
+"attribute_data": PackedByteArray("AACAtwAAgD8SdwQ/oQ7qOwAAgD8AAIC/+oJ+Pw/qYD8AAIA/AACAP/qCfj+hDuo7AACAtwAAgL8SdwQ/D+pgPwAAgD8AAIA/+oK+O6EO6jsAAIC3AACAv9wR9z4P6mA/AACAPwAAgL/6gr47D+pgPwAAgLcAAIA/3BH3PqEO6js="),
+"format": 34359742519,
 "index_count": 12,
-"index_data": PackedByteArray("AgABAAAAAgADAAEABQAHAAYABQAEAAcA"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
 "material": SubResource("StandardMaterial3D_as68f"),
-"name": "wall_hr_1",
 "primitive": 3,
-"uv_scale": Vector4(2, 2, 0, 0),
+"uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray("///+//7//7////v/AAD/vwAA///+//+/AAD7/wAA/7///wMA/////wAAAwD/////AAAAAAAA/////wAAAAD//////3////9/////f////3//f/8//3//P/9//z//f/8/")
+"vertex_data": PackedByteArray("AAAAwBDNTD4AAMC4AAAAQKrGTD4AAMDAAAAAQHbLTD4AAMC4AAAAwKrGTD4AAMDAAAAAwAfOTL4AAAAAAAAAQNTSTL4AAMDAAAAAwNTSTL4AAMDAAAAAQAfOTL4AAAAA/3/9//7//7//f/3//v//v/9//f/+//+//3/9//7//78FgAAAAAAAwAWAAAAAAADABYAAAAAAAMAFgAAAAAAAwA==")
 }, {
 "aabb": AABB(-2, -0.200023, -6, 4, 0.400002, 1e-05),
-"attribute_data": PackedByteArray("qqq56P///v+qqv////+56A=="),
-"format": 34896613399,
+"attribute_data": PackedByteArray("AADAP7PLDD/cEfc+0OJrPwEAAD/OZeY++oK+O+Mrfj8AAMA/zmXmPtwR9z7jK34/AQAAP83MDD/6gr47vuJrPw=="),
+"format": 34359742519,
 "index_count": 6,
-"index_data": PackedByteArray("AQAAAAMAAQACAAAA"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
 "material": SubResource("StandardMaterial3D_pfvsl"),
-"name": "concrete_hr_3",
 "primitive": 3,
-"uv_scale": Vector4(3, 1.1, 0, 0),
+"uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray("AAAAANMw//////7/AAD//wAA//8AAP////8AANMw//////9//v//f////3/+//9/")
+"vertex_data": PackedByteArray("AAAAQLLFTD4AAMDAAAAAwNTSTL78/7/AAAAAQNTSTL78/7/AAAAAwEzHTD4AAMDA//////3//r////////8AwP/////9//6/////////AMA=")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_cyqql")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vjp25"]
 points = PackedVector3Array(-2.04762, -0.247619, -6.04643, 2.04762, 0.228571, 0.0470223, 2.04762, -0.247619, 0.0470223, 2.04762, 0.228571, -6.04643, -2.04762, 0.228571, 0.0470223, -2.04762, -0.247619, 0.0470223, 2.04762, -0.247619, -6.04643, -2.04762, 0.228571, -6.04643)
 
-[node name="@Node3D@646" type="Node3D"]
+[node name="_Node3D_646" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@647" type="StaticBody3D" parent="."]
 
 [node name="wall_hr_1_double" type="MeshInstance3D" parent="@StaticBody3D@647"]
-mesh = SubResource("ArrayMesh_1pbpc")
+mesh = SubResource("ArrayMesh_68i8a")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@647"]

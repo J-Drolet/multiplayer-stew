@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://ci2s7wgwurbhg"]
+[gd_scene load_steps=5 format=3]
 
-[ext_resource type="Texture2D" uid="uid://dib7jhgrgi834" path="res://Assets/Textures/TextureSuperPack/snow_1.png" id="1_n0ora"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/TextureSuperPack/snow_1.png" id="1_n0ora"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_px5sg"]
 albedo_color = Color(0.856067, 0.856067, 0.856067, 1)

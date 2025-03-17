@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=4]
+[gd_scene load_steps=4 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Nature/fern_1_fern_1.png" id="1_4ihee"]
 
@@ -11,37 +11,22 @@ albedo_texture = ExtResource("1_4ihee")
 texture_filter = 2
 texture_repeat = false
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_qobpr"]
-_surfaces = [{
-"aabb": AABB(-0.496888, -0.546319, -1.10586, 0.973284, 1.03781, 1.14667),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AQAMAA0AAQAAAAwABQAOAA8ABQAEAA4ACQAQABEACQAIABAADAADAA0ADAACAAMAEAALABEAEAAKAAsADgAHAA8ADgAGAAcA"),
-"name": "fern_1",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 18,
-"vertex_data": PackedByteArray("HdxcmH79AADwBTRufv0AAC3WvK++QwAAAACUhb5DAADgKIjZ//8AAP//SBP//wAAiBT5zgAAAACm67kIAAAAAMmoWufU/gAAjE0AANT+AABpgv//lB8AAC0npBiUHwAAHdxcmJ6gAADwBTRunqAAAOAoiNn/fwAA//9IE/9/AADJqFrnNI8AAIxNAAA0jwAA")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_vt2ce"]
 resource_name = "fern_1_fern_1"
+lightmap_size_hint = Vector2i(30, 26)
 _surfaces = [{
 "aabb": AABB(-0.496888, -0.546319, -1.10586, 0.973284, 1.03781, 1.14667),
-"attribute_data": PackedByteArray("AAD///////8AAAAA//8AAAAA////////AAAAAP//AAAAAP///////wAAAAD//wAAAAD/f////38AAP9/////fwAA/3////9/"),
-"format": 34896613399,
+"attribute_data": PackedByteArray("AACAPwAAgD8PRJA8J3YiPwAAAAAA//8+IiKiPrsrTj8AAIA/AP//PqIekzy7K04/AAAAAAAAgD959KE+J3YiPwAAgD8AAIA/zcwMP9mJnTwAAAAAAP//PlVneT9uJok+AACAPwD//z5e2gw/YiaJPgAAAAAAAIA/xFl5P4+KnTwAAIA/AACAP2Zm5j5P7AQ/AAAAAAD//z7iIQo9Z4aNPgAAgD8A//8+NfblPmeGjT4AAAAAAACAP3WjDT1P7AQ/AACAPwAAAACJiIg8sRN7PwAAAAAAAAAAwXihPrETez8AAIA/AAAAAAM73T5MjZ08AAAAAAAAAACJiIg82YmdPAAAgD8AAAAABS8PP0/sBD8AAAAAAAAAALy7ez9P7AQ/"),
+"format": 34359742519,
 "index_count": 36,
-"index_data": PackedByteArray("AQAMAA0AAQAAAAwABQAOAA8ABQAEAA4ACQAQABEACQAIABAADAADAA0ADAACAAMAEAALABEAEAAKAAsADgAHAA8ADgAGAAcA"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkAAQAMAAIAAQANAAwACQAOAAoACQAPAA4ABQAQAAYABQARABAA"),
 "material": SubResource("StandardMaterial3D_j7goo"),
-"name": "fern_1",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 18,
-"vertex_data": PackedByteArray("HdxcmH79CvrwBTRufv0K+i3WvK++Q8P6AACUhb5Dw/rgKIjZ///bxf//SBP//9vFiBT5zgAAFMum67kIAAAUy8moWufU/hnejE0AANT+Gd5pgv//lB9o5C0npBiUH2jkHdxcmJ6gZPrwBTRunqBl+uAoiNn/f37I//9IE/9/a8jJqFrnNI8/4YxNAAA0jxXhUIYoQ1CGKEMAh4M8AIeDPGXGMmNlxjJjoshIYqLISGIOoYdQDqGHUPmk5kr5pOZKqIbYP6iG1D+Mx7lihce8Yhejmk39or9N")
+"vertex_data": PackedByteArray("R9nyvmDjy73Ab/I8uxCuPlgekj1K2MW+R9nyvmDjy71K2MW+uxCuPlgekj3Ab/I8LerzPrax775gKCc96NauvsTNqz4iVAi/LerzPrax774iVAi/6NauvsTNqz5gKCc9fuhOvpDbC7+guhE93kwUPmp9yD4oyO2+fuhOvpDbC78oyO2+3kwUPmp9yD6guhE9G2j+vgAJnbvKa02/54GiPpQYKj7Ka02/rSWyvuqR5L7S43a/APKMurSk+z7S43a/WU7MPhnOAr/SjI2/ynDWvkbjlT7SjI2/NJYzFjMW5LSWnzsUMxbktJ6fOBQxFuW0NJYzFjMW5LRvv43Aj8BGoKvCucONwEaglcKmw4/ARqBvv43Aj8BGoHDdcV1wXUaRf+F3Um5dRpFP4fdSbl1GkXDdcV1wXUaRq6eKEjIW47Srp4oSMhbjtLjkwUluXUaRuOTBSW5dRpGMxY7GjsBGoIzFjsaOwEag")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_qobpr")
 
 [node name="@Node3D@2" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)

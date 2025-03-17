@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=5 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/poster_cx_9_poster_cx_9.png" id="1_t8ohi"]
 
@@ -11,37 +11,22 @@ albedo_texture = ExtResource("1_t8ohi")
 texture_filter = 2
 texture_repeat = false
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_thpgc"]
-_surfaces = [{
-"aabb": AABB(-0.313296, -1.52226e-06, -0.412173, 0.626591, 1e-05, 0.824345),
-"format": 34896613377,
-"index_count": 6,
-"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
-"name": "poster_cx_9",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray(205, 13, 240, 77, 255, 255, 0, 0, 255, 255, 157, 75, 54, 248, 0, 0, 0, 0, 82, 2, 200, 7, 0, 0, 49, 242, 0, 0, 0, 0, 0, 0)
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_60hq2"]
 resource_name = "poster_cx_9_poster_cx_9"
+lightmap_size_hint = Vector2i(10, 10)
 _surfaces = [{
 "aabb": AABB(-0.313296, -1.52226e-06, -0.412173, 0.626591, 1e-05, 0.824345),
-"attribute_data": PackedByteArray(0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0),
-"format": 34896613399,
+"attribute_data": PackedByteArray("AAAAAAAAgD/NzEw9zcxMPQAAgD8AAAAA7TJzPzMzcz8AAIA/AACAP7bWTD0zM3M/AAAAAAAAAAAzM3M/09xMPQ=="),
+"format": 34359742519,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
 "material": SubResource("StandardMaterial3D_qvkv3"),
-"name": "poster_cx_9",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(205, 13, 240, 77, 255, 255, 3, 192, 255, 255, 157, 75, 54, 248, 3, 192, 0, 0, 82, 2, 200, 7, 3, 192, 49, 242, 0, 0, 0, 0, 3, 192, 102, 253, 207, 122, 102, 253, 207, 122, 102, 253, 207, 122, 102, 253, 207, 122)
+"vertex_data": PackedByteArray("xhyPvhVPzDU1CNM+ZRuPPnVQzLVXCNO+NWigPoMfwDVRMsY+VWigviQmwLUZNMa+AYD6//3/Zr0BgPr//f9mvQGA+v/9/2a9AYD6//3/Zr0=")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_thpgc")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8hho5"]
 points = PackedVector3Array(-0.319717, -0.00654286, -0.39251, 0.321232, 0.00654286, 0.39251, 0.321232, -0.00654286, 0.39251, -0.280497, 0.00654286, 0.418743, 0.282012, 0.00654286, -0.418743, -0.280497, -0.00654286, 0.418743, 0.282012, -0.00654286, -0.418743, -0.319717, 0.00654286, -0.39251, -0.293613, -0.00654286, 0.39251, 0.295127, -0.00654286, -0.353243, -0.319717, 0.00654286, -0.222406, 0.190456, 0.00654286, 0.405626, -0.188942, 0.00654286, -0.405626, 0.308179, 0.00654286, -0.0523019, -0.293613, 0.00654286, 0.39251, 0.111954, -0.00654286, -0.418743, -0.123492, -0.00654286, 0.418743, 0.321232, -0.00654286, 0.261673, -0.319717, -0.00654286, -0.222406, 0.295127, 0.00654286, -0.353243, 0.190456, -0.00654286, 0.405626, -0.188942, -0.00654286, -0.405626, 0.111954, 0.00654286, -0.418743, -0.123492, 0.00654286, 0.418743, 0.321232, 0.00654286, 0.261673, 0.308179, -0.00654286, -0.0523019)

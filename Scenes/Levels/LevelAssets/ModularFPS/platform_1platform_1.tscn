@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=5 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Fair/platform_1_floor_1.png" id="1_jivib"]
 
@@ -7,37 +7,22 @@ resource_name = "floor_1"
 albedo_texture = ExtResource("1_jivib")
 texture_filter = 2
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_y570o"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_jplrs"]
+resource_name = "platform_1_platform_1"
+lightmap_size_hint = Vector2i(46, 22)
 _surfaces = [{
 "aabb": AABB(-1, -1, -0.51, 2, 2, 0.52),
-"format": 34896613377,
+"attribute_data": PackedByteArray("AACAtwAAgLcLWQg/jC66PAAAgD8AAIA/pzd9P4wuej8AAIC3AACAPwtZCD+MLno/AACAPwAAgLenN30/jC66PAAAgLcAAIC3QxYyPIwuujwAAIA/AACAP+pN7z6MLno/AACAPwAAgLdDFjI8jC56PwAAgLcAAIA/6k3vPowuujw="),
+"format": 34359742519,
 "index_count": 12,
-"index_data": PackedByteArray("AAADAAEAAAACAAMABAAHAAYABAAFAAcA"),
-"name": "floor_1",
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"material": SubResource("StandardMaterial3D_qyxeg"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray("AAD//wAAAAD/////AAAAAAAAAAAm9gAA//8AACb2AAAAAP//2AkAAP/////YCQAAAAAAAP//AAD//wAA//8AAA==")
+"vertex_data": PackedByteArray("AACAvwAAgD9cjwK/AACAPwAAgL8g5SO8AACAPwAAgD9cjwK/AACAvwAAgL8g5SO8AACAvwAAgD/h4fq+AACAPwAAgL8A1yM8AACAvwAAgL8A1yM8AACAPwAAgD/h4fq+ZOYAAAGAzYxk5gAAAYDNjGTmAAABgM2MZOYAAAGAzYz/f5iZ/38zc/9/mJn/fzNz/3+Ymf9/M3P/f5iZ/38zcw==")
 }]
 blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_jplrs"]
-resource_name = "platform_1_platform_1"
-_surfaces = [{
-"aabb": AABB(-1, -1, -0.51, 2, 2, 0.52),
-"attribute_data": PackedByteArray("/3//f/9///////9///////9//3//f///////f/////8="),
-"format": 34896613399,
-"index_count": 12,
-"index_data": PackedByteArray("AAADAAEAAAACAAMABAAHAAYABAAFAAcA"),
-"material": SubResource("StandardMaterial3D_qyxeg"),
-"name": "floor_1",
-"primitive": 3,
-"uv_scale": Vector4(2, 2, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAD//wAA8vj/////AADy+AAAAAAm9vL4//8AACb28vgAAP//2AlkP//////YCWQ/AAAAAP//ZD///wAA//9kP0k8tcNJPLXDSTy1w0k8tcOkjKSMpIykjKSMpIykjKSM")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_y570o")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7m488"]
 points = PackedVector3Array(-1.01587, -1.01587, -0.0179893, 1.01587, 1.01587, -0.462328, 1.01587, 1.01587, -0.525873, -1.01587, 1.01587, -0.462328, 1.01587, -0.856969, 0.0137567, 1.01587, -0.984052, -0.0497354, -1.01587, 0.92061, -0.525873, -1.01587, -0.856969, 0.0137567, 1.01587, 0.92061, -0.525873, -1.01587, -0.984052, -0.0497354, -1.01587, 0.92061, -0.430582, 1.01587, -1.01587, 0.0137567, 1.01587, 0.92061, -0.430582, -1.01587, 1.01587, -0.525873, -1.01587, -1.01587, 0.0137567, 1.01587, -1.01587, -0.0179893, -1.01587, 0.412674, -0.303598, 1.01587, -0.222148, -0.240212, 1.01587, 0.412674, -0.303598, -1.01587, -0.222148, -0.240212)

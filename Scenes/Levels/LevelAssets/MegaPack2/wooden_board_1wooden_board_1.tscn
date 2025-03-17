@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=5 format=4 uid="uid://beexqpyuo5xa"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wooden_board_1_wooden_board_hr_1.png" id="1_3al3g"]
+[ext_resource type="Texture2D" uid="uid://c8o8y1kpgspx6" path="res://Assets/Textures/Megapack2/wooden_board_1_wooden_board_hr_1.png" id="1_3al3g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0js7j"]
 resource_name = "wooden_board_hr_1"
@@ -8,42 +8,27 @@ albedo_texture = ExtResource("1_3al3g")
 texture_filter = 2
 texture_repeat = false
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_wuss7"]
-_surfaces = [{
-"aabb": AABB(-0.25, -1.9, -0.0300001, 0.5, 1.9, 0.0300069),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AQADAAIAAQAAAAMABQACAAcABQABAAIAAAAGAAMAAAAEAAYABAAHAAYABAAFAAcAAwAHAAIAAwAGAAcAAAAFAAQAAAABAAUA"),
-"name": "wooden_board_hr_1",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAD+/wAAAAAAAAAADgAAAAAAAAD+/wAAAAD///D/AAD///7/AAAAAP//AAAPAAAA/////+//AAD//wAA//8AAA==")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_ot8yt"]
 resource_name = "wooden_board_1_wooden_board_1"
+lightmap_size_hint = Vector2i(22, 26)
 _surfaces = [{
 "aabb": AABB(-0.25, -1.9, -0.0300001, 0.5, 1.9, 0.0300069),
-"attribute_data": PackedByteArray("ikL//8FC+H3DfP//ikIAAMFC+H3DfAAAikIAAMFCBoI7gwAAikL//8FCBoI7g///w3z//z29+H10vf//w3wAAD29+H10vQAAO4P//z29BoJ0vf//O4MAAD29BoJ0vQAA"),
-"format": 34896613399,
+"attribute_data": PackedByteArray("+ob5PgAAAACsLro8nthJP4M7Az8AAIA/jC56PzuxUz+DOwM/AAAAAIwuujw7sVM/+ob5PgAAgD+XLXo/nthJP709PT/88Ps+RBfdPrETez+GgoU+ggYCP5cuujwUO3E/vT09P4IGAj9GF90+FDtxP4aChT788Ps+jC66PLETez+GgoU+/PD7Pl10ET+xE3s/vT09P4IGAj/poks/HDtxP4aChT6CBgI/XXQRPxQ7cT+9PT0//PD7PumiSz+wE3s/+ob5PgAAgD+ZLXo/xU4sP4M7Az8AAAAAjC66PCd2Ij+DOwM/AACAP4wuej8xdiI/+ob5PgAAAADMLro8xU4sP4UUhT4AAIA/jC56P0/sBD+9dD0/AAAAAIwuujx2Yqc+hRSFPgAAAACMLro8T+wEP710PT8AAIA/jC56P3Zipz6FFIU+AACAP4wuej+KnVg+vXQ9PwAAAACMLro82YmdPL10PT8AAIA/jC56P9mJnTyFFIU+AAAAAKwuujyKnVg+"),
+"format": 34359742519,
 "index_count": 36,
-"index_data": PackedByteArray("BQALAAgABQACAAsAEAAHABYAEAAEAAcAAQATAAoAAQANABMADAAVABIADAAPABUACQAXAAYACQAUABcAAAARAA4AAAADABEA"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
 "material": SubResource("StandardMaterial3D_0js7j"),
-"name": "wooden_board_hr_1",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
-"vertex_data": PackedByteArray("AAD+/wAA//8AAP7/AAD/vwAA/v8AAP8/AAAAAA4A//8AAAAADgD/PwAAAAAOAP8/AAAAAP7//n8AAAAA/v//PwAAAAD+//8/AAD///D//n8AAP//8P//vwAA///w//8////+/wAA//////7/AAD/v////v8AAP////8AAA8A/////wAADwD/P///AAAPAP///////+//////////7///v//////v//5///8AAP///////wAA////P///AAD///5/////f/7//3//f/7/////fwAA/3//f/7//3///wAA/3//f/7//3////7//3//f/7//7//f/7//3////9//7//fwAA/3////9//7//f/7//3//f////7//fwAA/3//f///")
+"vertex_data": PackedByteArray("AACAvjMz879UtfW8AACAvgAAAAAAAJCzAACAvjMz878A0NQ2AACAvgAA87fFwvW8AACAPjMz879etPW8AACAvjMz878A0NQ2AACAPjMz878AMOQ2AACAvjMz879UtfW8AACAvgAA87fFwvW8AACAPgAAAAAAAA21AACAvgAAAAAAAJCzAACAPgAA87fFwvW8AACAPgAA87fFwvW8AACAPjMz878AMOQ2AACAPgAAAAAAAA21AACAPjMz879etPW8AACAvgAAAAAAAJCzAACAPjMz878AMOQ2AACAvjMz878A0NQ2AACAPgAAAAAAAA21AACAvgAA87fFwvW8AACAPjMz879etPW8AACAPgAA87fFwvW8AACAvjMz879UtfW8AAABgP1/AEAAAAGA/X8AQAAAAYD9fwBAAAABgP1/AEACgAAA/v//PwKAAAD+//8/AoAAAP7//z8CgAAA/v//PwCA/f/+//6/AID9//7//r8AgP3//v/+vwCA/f/+//6//v/+f/9//r/+//5//3/+v/7//n//f/6//v/+f/9//r/6f/9/+v//P/p//3/6//8/+n//f/r//z/6f/9/+v//P////////wDA////////AMD///////8AwP///////wDA")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_wuss7")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nnxvj"]
 points = PackedVector3Array(0.277778, 0.0150794, 0.0152381, -0.265079, -1.91508, -0.0450794, -0.265079, -1.91508, 0.0152381, -0.265079, 0.0150794, -0.0450794, 0.277778, -1.91508, -0.0450794, 0.277778, -1.91508, 0.0152381, -0.265079, 0.0150794, 0.0152381, 0.277778, 0.0150794, -0.0450794)
 
-[node name="@Node3D@752" type="Node3D"]
+[node name="_Node3D_752" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@753" type="StaticBody3D" parent="."]

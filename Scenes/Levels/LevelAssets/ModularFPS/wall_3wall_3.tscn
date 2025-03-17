@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=5 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Fair/wall_3_wall_3.png" id="1_0d53r"]
 
@@ -7,37 +7,22 @@ resource_name = "wall_3"
 albedo_texture = ExtResource("1_0d53r")
 texture_filter = 2
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_oyugf"]
-_surfaces = [{
-"aabb": AABB(-1, -0.1, -2, 2, 0.1, 2),
-"format": 34896613377,
-"index_count": 18,
-"index_data": PackedByteArray("BAADAAUABAACAAMABgAFAAcABgAEAAUAAAAHAAEAAAAGAAcA"),
-"name": "wall_3",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("//8AAP//AAAAAAAA//8AAP///v8AAAAAAAD//wAAAAD///7//38AAAAA/v//fwAA//8AAP+/AAAAAAAA/78AAA==")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_2sv38"]
 resource_name = "wall_3_wall_3"
+lightmap_size_hint = Vector2i(22, 22)
 _surfaces = [{
 "aabb": AABB(-1, -0.1, -2, 2, 0.1, 2),
-"attribute_data": PackedByteArray("AAD///////8AAAAA//8AAAAA/3////9/AAD/v////78="),
-"format": 34896613399,
+"attribute_data": PackedByteArray("AAAAAAD//z6MLno/bGUAPwAAgD8AAAAAFDO6PIwuej8AAIA/AP//PgadujxrZQA/AAAAAAAAAAA8K3o/jC56PwAAAADA/z8/Fyt6P/5shT4AAIA/wP8/P4wuujz8bIU+AAAAAAAAgD/ALHo/qS66PAAAgD8AAIA/ZmO6PIwuujw="),
+"format": 34359742519,
 "index_count": 18,
-"index_data": PackedByteArray("BAADAAUABAACAAMABgAFAAcABgAEAAUAAAAHAAEAAAAGAAcA"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAUABAAAAAIABgAFAAcABgAEAAUA"),
 "material": SubResource("StandardMaterial3D_g121d"),
-"name": "wall_3",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray("//8AAP////8AAAAA/////////v8AAP//AAD//wAA//////7//3///wAA/v//f/////8AAP+///8AAAAA/7////9//z//f/8//7////+////WvP//1rz//9a8///WvP//")
+"vertex_data": PackedByteArray("AACAPwAAzbWAAIC/AACAvwAAAAAAAADAAACAvwAAzbWAAIC/AACAPwAAzbUAAADAAACAP83MzL2AAAC/AACAv83MzL2AAAC/AACAP83MzL0AAAAAAACAv83MzL0AAAAAiIsAAAAA/78AgAAAAAD/v4iLAAAAAP+/AIAAAAAA/7+IiwAAAAD/v4iLAAAAAP+/+n8AAAAAAMD6fwAAAAAAwA==")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_oyugf")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ymckh"]
 points = PackedVector3Array(1.01587, -0.0841208, 0.0154753, -1.01587, -0.0206536, -2.01548, -1.01587, 0.0110863, -2.01548, 1.01587, -0.0206536, -2.01548, -1.01587, -0.115848, -0.587407, -1.01587, 0.0110863, -0.87314, 1.01587, 0.0110863, -0.87314, 1.01587, -0.115848, -0.587407, -1.01587, -0.115848, 0.0154753, 1.01587, 0.0110863, -2.01548, -1.01587, -0.0841208, 0.0154753, 1.01587, -0.115848, 0.0154753)

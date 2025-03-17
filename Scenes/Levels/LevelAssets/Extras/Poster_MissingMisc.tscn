@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bpodiysncqwlr"]
+[gd_scene load_steps=5 format=4]
 
-[ext_resource type="Texture2D" uid="uid://c67hh4bhipvni" path="res://Assets/Textures/Extras/Misc_Poster_Missing_1_100.png" id="1_wdjsv"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Extras/Misc_Poster_Missing_1_100.png" id="1_wdjsv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_io5ro"]
 resource_name = "Poster_Missing_Material"
@@ -8,37 +8,22 @@ cull_mode = 2
 albedo_texture = ExtResource("1_wdjsv")
 texture_filter = 2
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_4ra81"]
-_surfaces = [{
-"aabb": AABB(-1, -2.42445e-07, -1.48811, 2, 1e-05, 2.97623),
-"format": 34896613377,
-"index_count": 6,
-"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
-"name": "Poster_Missing_Material",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 105, 12, 255, 255, 0, 0, 255, 255, 105, 12, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_01m00"]
 resource_name = "Misc_Plane_002"
+lightmap_size_hint = Vector2i(34, 22)
 _surfaces = [{
 "aabb": AABB(-1, -2.42445e-07, -1.48811, 2, 1e-05, 2.97623),
-"attribute_data": PackedByteArray(163, 0, 163, 0, 163, 0, 91, 255, 91, 255, 163, 0, 91, 255, 91, 255),
-"format": 34896613399,
+"attribute_data": PackedByteArray("owAjO6MAIzvx8HA8jC66PP9bfz//W38/PDx8P4wuej+jACM7/1t/P/HwcDyMLno//1t/P6MAIzs8PHw/jC66PA=="),
+"format": 34359742519,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
 "material": SubResource("StandardMaterial3D_io5ro"),
-"name": "Poster_Missing_Material",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 105, 12, 255, 255, 84, 213, 255, 255, 105, 12, 255, 255, 84, 213, 0, 0, 0, 0, 0, 0, 84, 213, 255, 255, 0, 0, 0, 0, 84, 213, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42)
+"vertex_data": PackedByteArray("AACAvycagjS3er4/AACAP2MpgrRjer6/AACAPycagjS3er4/AACAv2MpgrRjer6/AYD7/wAA/v8BgPv/AAD+/wGA+/8AAP7/AYD7/wAA/v8=")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_4ra81")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_opra3"]
 points = PackedVector3Array(-1.02362, -0.0236206, -1.51172, 1.00775, 0.0236206, 1.51172, 1.00775, -0.0236206, 1.51172, 1.00775, 0.0236206, -1.51172, -1.02362, 0.0236206, 1.51172, -1.02362, -0.0236206, 1.51172, 1.00775, -0.0236206, -1.51172, -1.02362, 0.0236206, -1.51172)

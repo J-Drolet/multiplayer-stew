@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=7 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Fair/floor_1_001_floor_1.png" id="1_q3esv"]
 [ext_resource type="Texture2D" path="res://Assets/Textures/Fair/floor_1_001_floor_2.png" id="2_vko2v"]
@@ -13,59 +13,33 @@ resource_name = "floor_2"
 albedo_texture = ExtResource("2_vko2v")
 texture_filter = 2
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_yodvv"]
-_surfaces = [{
-"aabb": AABB(-1, -0.5, -0.01, 2, 1, 1e-05),
-"format": 34896613377,
-"index_count": 6,
-"index_data": PackedByteArray(0, 0, 3, 0, 2, 0, 0, 0, 1, 0, 3, 0),
-"name": "floor_1",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 30, 1, 0, 0, 255, 255, 0, 0, 30, 1, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0)
-}, {
-"aabb": AABB(-1, -0.5, 0.00999998, 2, 1, 1e-05),
-"format": 34896613377,
-"index_count": 6,
-"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
-"name": "floor_2",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 30, 1, 0, 0, 255, 255, 0, 0, 30, 1, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0)
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_eqe4t"]
 resource_name = "floor_1_001_floor_1_001"
+lightmap_size_hint = Vector2i(30, 22)
 _surfaces = [{
 "aabb": AABB(-1, -0.5, -0.01, 2, 1, 1e-05),
-"attribute_data": PackedByteArray(0, 0, 255, 255, 0, 0, 0, 0, 255, 127, 255, 255, 255, 127, 0, 0),
-"format": 34896613399,
+"attribute_data": PackedByteArray("AAAAAAAAgD+8u3s/jC66PAD//z4AAAAAPM0MP4wuej8A//8+AACAP83MDD+MLro8AAAAAAAAAAC8u3s/jC56Pw=="),
+"format": 34359742519,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 3, 0, 2, 0, 0, 0, 1, 0, 3, 0),
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
 "material": SubResource("StandardMaterial3D_7i7wu"),
-"name": "floor_1",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 30, 1, 255, 255, 255, 255, 0, 0, 30, 1, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 255, 255, 254, 255, 0, 0, 255, 255, 255, 191, 255, 191, 255, 191, 255, 191, 255, 191, 255, 191, 255, 191, 255, 191)
+"vertex_data": PackedByteArray("AACAvwAAAL/b1iO8AACAPwD+/z4K1yO8AACAvwAAAD8K1yO8AACAPwAAAL/b1iO8/v/+//9//v/+//7//3/+//7//v//f/7//v/+//9//v8=")
 }, {
 "aabb": AABB(-1, -0.5, 0.00999998, 2, 1, 1e-05),
-"attribute_data": PackedByteArray(0, 0, 255, 255, 0, 0, 0, 0, 255, 127, 255, 255, 255, 127, 0, 0),
-"format": 34896613399,
+"attribute_data": PackedByteArray("AAAAAAAAgD+JiIg8jC66PAD//z4AAAAAiWXmPowuej8AAAAAAAAAAImIiDyMLno/AP//PgAAgD9mZuY+jC66PA=="),
+"format": 34359742519,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
 "material": SubResource("StandardMaterial3D_17jqf"),
-"name": "floor_2",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 30, 1, 255, 63, 255, 255, 0, 0, 30, 1, 255, 63, 0, 0, 255, 255, 0, 0, 255, 63, 255, 255, 254, 255, 0, 0, 255, 63, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+"vertex_data": PackedByteArray("AACAvwAAAL8k1yM8AACAPwD+/z711iM8AACAPwAAAL8k1yM8AACAvwAAAD/11iM8/3//f/1/AAD/f/9//X8AAP9//3/9fwAA/3//f/1/AAA=")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_yodvv")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gxljt"]
 points = PackedVector3Array(-1.01587, -0.515873, -0.0258606, 1.01587, 0.531746, 0.0376066, 1.01587, 0.531746, -0.0258606, -1.01587, 0.531746, 0.0376066, 1.01587, -0.515873, 0.0376066, 1.01587, -0.515873, -0.0258606, -1.01587, 0.531746, -0.0258606, -1.01587, -0.515873, 0.0376066)

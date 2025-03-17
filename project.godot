@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="multiplayer-stew"
-run/main_scene="res://Scenes/root.tscn"
+run/main_scene="uid://c0mk22jub2a7n"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
@@ -26,6 +26,10 @@ Config="*res://Scripts/Services/Config.cs"
 SettingsUpdater="*res://Scripts/SettingsUpdater.cs"
 MultiplayerAudioService="*res://Scripts/Services/MultiplayerAudioService.cs"
 MultiplayerPropertyService="*res://Scripts/Services/MultiplayerPropertyService.cs"
+
+[debug]
+
+settings/profiler/max_timestamp_query_elements=2048
 
 [display]
 
@@ -109,3 +113,7 @@ ViewScoreboard={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+lights_and_shadows/directional_shadow/size=2048

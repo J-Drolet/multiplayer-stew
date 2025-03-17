@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=5 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/wooden_board_2_wooden_board_hr_2.png" id="1_ip1vo"]
 
@@ -8,37 +8,22 @@ albedo_texture = ExtResource("1_ip1vo")
 texture_filter = 2
 texture_repeat = false
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_sxhyq"]
-_surfaces = [{
-"aabb": AABB(-0.524242, -1.9, -0.0300001, 1.04848, 1.9, 0.0300069),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAADAAEAAAACAAMABQAHAAQABQAGAAcAAQAHAAYAAQADAAcAAgAFAAQAAgAAAAUAAwAEAAcAAwACAAQAAAAGAAUAAAABAAYA"),
-"name": "wooden_board_hr_2",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAD+/wAAAAD///7/AAAAAAAAAAAPAAAA//8AAA8AAAAAAAAA//8AAAAA///v/wAA/////+//AAD//wAA//8AAA==")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_xx83h"]
 resource_name = "wooden_board_2_wooden_board_2"
+lightmap_size_hint = Vector2i(30, 34)
 _surfaces = [{
 "aabb": AABB(-0.524242, -1.9, -0.0300001, 1.04848, 1.9, 0.0300069),
-"attribute_data": PackedByteArray("AAAAAAAAlv8AAP//AACW////AAD/////AAAAAAAAAAAAAAAAAAAAAP//AAD//wAAAAAAAAAAfQQjCAAAAAB9BAAA//8jCJb/IwiW////fQT/////IwgAAP//AAD//30E"),
-"format": 34896613399,
+"attribute_data": PackedByteArray("AAAAAAAAgD93dzc/S0vLPgAAgD8AAAAAiYiIPPHwcDwAAIA/AACAP3d3Nz/x8HA8AAAAAAAAAACJiIg8S0vLPgAAAAAAAIA/d3c3P3h4+D4AAIA/AAAAAImIiDweHl4/AAAAAAAAAACJiIg8eHj4PgAAgD8AAIA/d3c3Px4eXj8AAAAAAJd/P7y7ez9F4SE/gjACPQAAAAAzM3M/8fBwPIIwAj0Al38/PDNzP+LhIT8AAAAAAAAAALy7ez8a8XA8AAAAAAAAAACamVk/4uEhP4IwAj0Al38/GhFRP/HwcDyCMAI9AAAAABERUT/i4SE/AAAAAACXfz+amVk/SxhxPAAAgD8AAAAAvLt7Pzw8fD8AAAAAkKCPPM3MDD+1tHQ/AACAP5Cgjzy8u3s/tbR0PwAAAAAAAAAAzcwMPzw8fD8AAAAAAAAAAGZm5j48PHw/AACAP5CgjzyJiIg8tbR0PwAAAACQoI88ZmbmPrW0dD8AAIA/AAAAAImIiDw8PHw/"),
+"format": 34359742519,
 "index_count": 36,
-"index_data": PackedByteArray("AgALAAUAAgAIAAsAEAAWAAwAEAAUABYAAwAVABIAAwAJABUABgARAA4ABgABABEACgANABcACgAHAA0AAAATAA8AAAAEABMA"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
 "material": SubResource("StandardMaterial3D_sc5fo"),
-"name": "wooden_board_hr_2",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
-"vertex_data": PackedByteArray("AAD+/wAA/78AAP7/AAD/PwAA/v8AAP/////+/wAA//////7/AAD/v////v8AAP//AAAAAA8A/z8AAAAADwD/PwAAAAAPAP////8AAA8A/////wAADwD/P///AAAPAP//AAAAAP///n8AAAAA////PwAAAAD///8/AAD//+///78AAP//7//+fwAA///v//8//////+//////////7///v//////v//5///8AAP///////wAA///+f///AAD///8/////f/9//v////9//7//f////3////9//3/+/wAA/3////9//7//fwAA/3////9//3///wAA/3//f/7/////f/9/////f/7//7//f////3//f////7//f/9///8AAP9/")
+"vertex_data": PackedByteArray("uTQGvwAA87fFwvW8dzQGPzMz879etPW8dzQGPwAA87fFwvW8uTQGvzMz879etPW8uTQGvwAAAAAAAA21dzQGPzMz878AMOQ2uTQGvzMz878AMOQ2dzQGPwAAAAAAAA21dzQGPwAA87fFwvW8dzQGPzMz878AMOQ2dzQGPwAAAAAAAA21dzQGPzMz879etPW8uTQGvzMz879etPW8uTQGvwAAAAAAAA21uTQGvzMz878AMOQ2uTQGvwAA87fFwvW8dzQGPzMz879etPW8uTQGvzMz878AMOQ2dzQGPzMz878AMOQ2uTQGvzMz879etPW8uTQGvwAA87fFwvW8dzQGPwAAAAAAAA21uTQGvwAAAAAAAA21dzQGPwAA87fFwvW8////////AMD///////8AwP///////wDA////////AMD6f/9/+v//P/p//3/6//8/+n//f/r//z/6f/9/+v//P/7//n//f/6//v/+f/9//r/+//5//3/+v/7//n//f/6/AAABgP1/AEAAAAGA/X8AQAAAAYD9fwBAAAABgP1/AEACgAAA/v//PwKAAAD+//8/AoAAAP7//z8CgAAA/v//P/9//f/+//+//3/9//7//7//f/3//v//v/9//f/+//+/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_sxhyq")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lsla1"]
 points = PackedVector3Array(0.546435, 0.0150794, 0.0152381, -0.539279, -1.91508, -0.0450794, -0.539279, -1.91508, 0.0152381, -0.539279, 0.0150794, -0.0450794, 0.546435, -1.91508, -0.0450794, 0.546435, -1.91508, 0.0152381, -0.539279, 0.0150794, 0.0152381, 0.546435, 0.0150794, -0.0450794)

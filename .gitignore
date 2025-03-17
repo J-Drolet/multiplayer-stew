@@ -8,3 +8,4 @@
 /Assets/Models/
 /Properties/launchSettings.json
 /addons/terrain_3d/bin/~libterrain.windows.debug.x86_64.dll
+*.exr

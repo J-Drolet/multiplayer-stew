@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=5 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Fair/corner_1_floor_2.png" id="1_3ek2n"]
 
@@ -7,37 +7,22 @@ resource_name = "floor_2"
 albedo_texture = ExtResource("1_3ek2n")
 texture_filter = 2
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_wqh0w"]
-_surfaces = [{
-"aabb": AABB(-1, -1, -2, 1, 1, 2),
-"format": 34896613377,
-"index_count": 6,
-"index_data": PackedByteArray(1, 0, 2, 0, 3, 0, 1, 0, 0, 0, 2, 0),
-"name": "floor_2",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray(254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0)
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_rpv35"]
 resource_name = "corner_1_corner_1"
+lightmap_size_hint = Vector2i(22, 18)
 _surfaces = [{
 "aabb": AABB(-1, -1, -2, 1, 1, 2),
-"attribute_data": PackedByteArray(255, 63, 255, 255, 255, 255, 255, 255, 255, 63, 0, 0, 255, 255, 0, 0),
-"format": 34896613399,
+"attribute_data": PackedByteArray("AACAPwAAgD+MLro8juN4PwD9fz4AAAAAjC56PzmO4zwAAIA/AAAAAE8uej+O43g/AP1/PgAAgD8vNro8OY7jPA=="),
+"format": 34359742519,
 "index_count": 6,
-"index_data": PackedByteArray(1, 0, 2, 0, 3, 0, 1, 0, 0, 0, 2, 0),
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
 "material": SubResource("StandardMaterial3D_c31cn"),
-"name": "floor_2",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(254, 255, 0, 0, 255, 255, 170, 233, 0, 0, 255, 255, 255, 255, 170, 233, 255, 255, 0, 0, 0, 0, 170, 233, 0, 0, 254, 255, 0, 0, 170, 233, 250, 202, 8, 234, 250, 202, 8, 234, 250, 202, 8, 234, 250, 202, 8, 234)
+"vertex_data": PackedByteArray("AACAvwAAAAAAAAAAAAAAAAAAgL8AAADAAACAvwAAgLcAAADAAACAtwAAgL8AAAAA/D8AQAJAAOD8PwBAAkAA4Pw/AEACQADg/D8AQAJAAOA=")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_wqh0w")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0kvw3"]
 points = PackedVector3Array(-1.01587, -0.0318331, -2.01548, 0.031746, -0.984084, 0.0154753, 0.031746, -1.01587, 0.0154753, -1.01587, -0.0318331, 0.0154753, -0.984084, 0.031746, -2.01548, -0.0318331, -1.01587, -2.01548, 0.031746, -0.984084, -2.01548, -0.984084, 0.031746, 0.0154753, -0.0318331, -1.01587, 0.0154753, -1.01587, 0.031746, 0.0154753, 0.031746, -1.01587, -2.01548, -1.01587, 0.031746, -2.01548)

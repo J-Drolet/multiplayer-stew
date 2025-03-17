@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=4]
+[gd_scene load_steps=4 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Nature/grass_1_grass_1.png" id="1_0fmf7"]
 
@@ -11,37 +11,22 @@ albedo_texture = ExtResource("1_0fmf7")
 texture_filter = 2
 texture_repeat = false
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_lnpc8"]
-_surfaces = [{
-"aabb": AABB(-0.240893, -0.326934, -0.653871, 0.481786, 0.653869, 0.653871),
-"format": 34896613377,
-"index_count": 18,
-"index_data": PackedByteArray("AAADAAEAAAACAAMABAAHAAUABAAGAAcACAALAAkACAAKAAsA"),
-"name": "grass_1",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("AADPtv//AAD//y9J//8AAAAAz7bUJQAA//8vSdQlAAB/fwAA//8AAH+A/////wAAf38AAAAAAAB/gP//AAAAADALok7//wAAzvRcsf//AAAwC6JOjzkAAM70XLGPOQAA")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_xm4vk"]
 resource_name = "grass_1_grass_1"
+lightmap_size_hint = Vector2i(22, 22)
 _surfaces = [{
 "aabb": AABB(-0.240893, -0.326934, -0.653871, 0.481786, 0.653869, 0.653871),
-"attribute_data": PackedByteArray("AAD///////8AAAAA//8AAAAA////////AAAAAP//AAAAAP///////wAAAAD//wAA"),
-"format": 34896613399,
+"attribute_data": PackedByteArray("AAAAAAAAgD9GF90+jC56PwAAgD8AAAAAjC66PF10ET8AAIA/AACAP0YX3T5ddBE/AAAAAAAAAACMLro8jC56PwAAAAAAAIA/jC56P0YX3T4AAIA/AAAAAF10ET+MLro8AACAPwAAgD+MLno/jC66PAAAAAAAAAAAXXQRP0YX3T4AAAAAAACAP0YX3T5GF90+AACAPwAAAACMLro8jC66PAAAgD8AAIA/RhfdPowuujwAAAAAAAAAAIwuujxGF90+"),
+"format": 34359742519,
 "index_count": 18,
-"index_data": PackedByteArray("AAADAAEAAAACAAMABAAHAAUABAAGAAcACAALAAkACAAKAAsA"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkA"),
 "material": SubResource("StandardMaterial3D_8qb37"),
-"name": "grass_1",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 12,
-"vertex_data": PackedByteArray("AADPtv//wcL//y9J///BwgAAz7bUJcHC//8vSdQlwcJ/fwAA//9D1X+A/////0PVf38AAAAAQ9V/gP//AABD1TALok7//7LCzvRcsf//ssIwC6JOjzmyws70XLGPObLCK9OVaSvTlWkr05VpK9OVaV7VP9Ve1T/VXtU/1V7VP9W/6X2sv+l9rL/pfay/6X2s")
+"vertex_data": PackedByteArray("qKx2vrxbDz4AAAAAqKx2PhpeD77opw6/qKx2PhpeD74AAAAAqKx2vrxbDz7opw6/AKR3uuVjp74AAAAAALZ1OgVkpz4XZCe/ALZ1OgVkpz4AAAAAAKR3uuVjp74XZCe/Ox1hvnUdAb4AAAAAThthPhYbAT4nwQG/ThthPhYbAT4AAAAAOx1hvnUdAb4nwQG/Cq/x0PPQeKgKr/HQ89B4qAqv8dDz0HioCq/x0PPQeKhfAGOAX4DN/18AY4BfgM3/XwBjgF+Azf9fAGOAX4DN/1hRWNFX0VHXWFFY0VfRUddYUVjRV9FR11hRWNFX0VHX")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_lnpc8")
 
 [node name="@Node3D@8" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)

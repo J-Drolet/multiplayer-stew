@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://daj31tw0sn7bb"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="PackedScene" uid="uid://cvjh6fc7wfjxe" path="res://Scenes/Levels/LevelAssets/MegaPack/elevator_doorway_1elevator_doorway_1.tscn" id="1_304ur"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/elevator_doorway_1elevator_doorway_1.tscn" id="1_304ur"]
 
 [node name="Vent Wall" type="Node3D"]
 
-[node name="elevator_doorway_1elevator_doorway_1_tscn4" parent="." instance=ExtResource("1_304ur")]
+[node name="elevator_doorway_1elevator_doorway_1_tscn4" type="Node3D" parent="." instance=ExtResource("1_304ur")]
 transform = Transform3D(-4.37114e-08, -1, 2.71567e-08, 0, -4.37114e-08, -0.621272, 1, -4.37114e-08, 1.18706e-15, 0, 2.38419e-07, 0)

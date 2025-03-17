@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=5 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/map_mx_1_map_mx_1.png" id="1_j68gj"]
 
@@ -8,37 +8,22 @@ albedo_texture = ExtResource("1_j68gj")
 texture_filter = 2
 texture_repeat = false
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_cwjte"]
-_surfaces = [{
-"aabb": AABB(-0.649351, -0.5, -0.00100183, 1.2987, 1, 0.00100365),
-"format": 34359742465,
-"index_count": 36,
-"index_data": PackedByteArray("AAADAAIAAAABAAMABQAHAAYABQAEAAcAAQAHAAMAAQAGAAcAAgAFAAAAAgAEAAUAAwAEAAIAAwAHAAQAAAAGAAEAAAAFAAYA"),
-"name": "map_mx_1",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("2Dsmv/j//z4DEfU12DsmP/j//z4DEfU12DsmvwQAAL8TEfW12DsmPwQAAL8TEfW12DsmvwQAAL+yT4O62Dsmv/j//z4q1YK62DsmP/j//z4q1YK62DsmPwQAAL+yT4O6")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_t31of"]
 resource_name = "map_mx_1_map_mx_1"
+lightmap_size_hint = Vector2i(30, 22)
 _surfaces = [{
 "aabb": AABB(-0.649351, -0.5, -0.00100183, 1.2987, 1, 0.00100365),
-"attribute_data": PackedByteArray("AAAAAAAAgD8AAAAAAACAPwAAgD8AAIA/AAAAAAAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAIA/AAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AACAPwAAAAAAAIA/AAAAAAAAgD8AAAAA"),
-"format": 34359742487,
+"attribute_data": PackedByteArray("AACAPwAAgD+8u3s/RhcdPwAAAAAAAAAAzcwMP4wuujwAAIA/AAAAALy7ez+MLro8AAAAAAAAgD/NzAw/RhcdPwAAAAAAAIA/ZmbmPkYXHT8AAIA/AAAAAImIiDyMLro8AACAPwAAgD9mZuY+jC66PAAAAAAAAAAAiYiIPEYXHT8AAIA/AACAP4mIiDyMLno/AACAPwAAAABmZuY+o4tuPwAAgD8AAAAAZmbmPowuej8AAIA/AACAP4mIiDyji24/AAAAAAAAAADNzAw/jC56PwAAAAAAAIA/vLt7P6OLbj8AAAAAAACAP7y7ez+MLno/AAAAAAAAAADNzAw/o4tuPwAAgD8AAAAAzcwMP+miSz8AAAAAAAAAALy7ez8AAEA/AAAAAAAAAAC8u3s/6aJLPwAAgD8AAAAAzcwMPwAAQD8AAAAAAACAP4mIiDzpoks/AACAPwAAgD9mZuY+AABAPwAAgD8AAIA/ZmbmPumiSz8AAAAAAACAP4mIiDwAAEA/"),
+"format": 34359742519,
 "index_count": 36,
-"index_data": PackedByteArray("AgAJAAgAAgADAAkAEAAWABIAEAAOABYABQAXAAsABQAUABcABgAPAAAABgAMAA8ACgANAAcACgAVAA0AAQATAAQAAQARABMA"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
 "material": SubResource("StandardMaterial3D_jwdsd"),
-"name": "map_mx_1",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
-"vertex_data": PackedByteArray("2Dsmv/j//z4DEfU12Dsmv/j//z4DEfU12Dsmv/j//z4DEfU12DsmP/j//z4DEfU12DsmP/j//z4DEfU12DsmP/j//z4DEfU12DsmvwQAAL8TEfW12DsmvwQAAL8TEfW12DsmvwQAAL8TEfW12DsmPwQAAL8TEfW12DsmPwQAAL8TEfW12DsmPwQAAL8TEfW12DsmvwQAAL+yT4O62DsmvwQAAL+yT4O62DsmvwQAAL+yT4O62Dsmv/j//z4q1YK62Dsmv/j//z4q1YK62Dsmv/j//z4q1YK62DsmP/j//z4q1YK62DsmP/j//z4q1YK62DsmP/j//z4q1YK62DsmPwQAAL+yT4O62DsmPwQAAL+yT4O62DsmPwQAAL+yT4O6AAD/f////7//f///////v/9//38AAP+//3//fwAA/7//f///////v////3////+/AAD/f////7//fwAA////v/9//38AAP+//3//fwAA/7//fwAA////v////3////+/AAD/f////7//fwAA////v/7///////+/AAD/f////7/+////////v/9///////+//v///////7//f///////v////3////+//38AAP///7/+////////v////3////+/")
+"vertex_data": PackedByteArray("2Dsmv/j//z4DEfU12DsmPwQAAL8TEfW12DsmvwQAAL8TEfW12DsmP/j//z4DEfU12Dsmv/j//z4q1YK62DsmPwQAAL+yT4O62DsmP/j//z4q1YK62DsmvwQAAL+yT4O62DsmP/j//z4DEfU12DsmPwQAAL+yT4O62DsmPwQAAL8TEfW12DsmP/j//z4q1YK62DsmvwQAAL8TEfW12Dsmv/j//z4q1YK62Dsmv/j//z4DEfU12DsmvwQAAL+yT4O62DsmPwQAAL8TEfW12DsmvwQAAL+yT4O62DsmvwQAAL8TEfW12DsmPwQAAL+yT4O62Dsmv/j//z4DEfU12DsmP/j//z4q1YK62DsmP/j//z4DEfU12Dsmv/j//z4q1YK6/3//fwAA/7//f/9/AAD/v/9//38AAP+//3//fwAA/7/+////////v/7///////+//v///////7/+////////v///AID///+///8AgP///7///wCA////v///AID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCA//////+/AID//////78AgP//////vwCA//////+/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_cwjte")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jkrx8"]
 points = PackedVector3Array(-0.659708, -0.510308, -0.0113079, 0.659708, 0.520486, 0.00930794, 0.659708, 0.520486, -0.0113079, -0.659708, 0.520486, 0.00930794, 0.659708, -0.510308, 0.00930794, 0.659708, -0.510308, -0.0113079, -0.659708, 0.520486, -0.0113079, -0.659708, -0.510308, 0.00930794)

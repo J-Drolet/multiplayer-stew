@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=5 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Fair/cobweb_5_cobweb_5.png" id="1_qxo2d"]
 
@@ -9,37 +9,22 @@ albedo_texture = ExtResource("1_qxo2d")
 texture_filter = 2
 texture_repeat = false
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_p65sd"]
-_surfaces = [{
-"aabb": AABB(-0.46936, 0, -0.4, 0.93872, 1e-05, 0.8),
-"format": 34896613377,
-"index_count": 6,
-"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
-"name": "cobweb_5",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_v5sy0"]
 resource_name = "cobweb_5_cobweb_5"
+lightmap_size_hint = Vector2i(10, 14)
 _surfaces = [{
 "aabb": AABB(-0.46936, 0, -0.4, 0.93872, 1e-05, 0.8),
-"attribute_data": PackedByteArray(0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0),
-"format": 34896613399,
+"attribute_data": PackedByteArray("AAAAAAAAgD8zM3M/btt2PwAAgD8AAAAAzcxMPSVJEj0AAIA/AACAPzMzcz8lSRI9AAAAAAAAAADNzEw9btt2Pw=="),
+"format": 34359742519,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
 "material": SubResource("StandardMaterial3D_hk13i"),
-"name": "cobweb_5",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+"vertex_data": PackedByteArray("9E/wvgAAAADNzMw+9E/wPgAAAADNzMy+9E/wPgAAAADNzMw+9E/wvgAAAADNzMy+/3/9//7//7//f/3//v//v/9//f/+//+//3/9//7//78=")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_p65sd")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_i0atp"]
 points = PackedVector3Array(0.476851, 0.00745079, 0.412137, -0.476851, -0.00745079, -0.407451, -0.476851, 0.00745079, -0.407451, 0.476851, -0.00745079, -0.407451, -0.476851, -0.00745079, 0.412137, -0.476851, 0.00745079, 0.412137, 0.476851, 0.00745079, -0.407451, 0.476851, -0.00745079, 0.412137)

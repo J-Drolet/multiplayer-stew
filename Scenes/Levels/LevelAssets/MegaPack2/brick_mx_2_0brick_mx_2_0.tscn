@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=5 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/brick_mx_2_0_bricks_mx_1.png" id="1_in641"]
 
@@ -8,37 +8,22 @@ albedo_texture = ExtResource("1_in641")
 texture_filter = 2
 texture_repeat = false
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_y55kr"]
-_surfaces = [{
-"aabb": AABB(-0.14, -0.0699995, -0.09, 0.28, 0.139999, 0.09),
-"format": 34896613377,
-"index_count": 48,
-"index_data": PackedByteArray("BgACAAgAAgAAAAEAAgAGAAAACAAHAAYACAAJAAcABQAHAAkABwAEAAMABwAFAAQAAQAFAAIAAQAEAAUAAgAJAAgAAgAFAAkABgADAAAABgAHAAMAAAAEAAEAAAADAAQA"),
-"name": "bricks_mx_1",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 10,
-"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAP///v///wAAAAAAAAAAAAAAAP//AAAAAP///v8AAAAASNIAAP//AABI0gAAAAAAANr2bVv//wAA2vZtWwAAAAA=")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_lwcvn"]
 resource_name = "brick_mx_2_0_brick_mx_2_0"
+lightmap_size_hint = Vector2i(14, 14)
 _surfaces = [{
 "aabb": AABB(-0.14, -0.0699995, -0.09, 0.28, 0.139999, 0.09),
-"attribute_data": PackedByteArray("/38AAP9/m1v/f/9//382N/9/m1sHxf9//3//f///Njf//5tb/38AAP9/Njf/f5tb/382N/9/NjcHxZtb/3+bW///Njf//zY3J8L/f/zoAAD86JtbJ8KbW/zoAAD86DY3RKj/f0So/3+u+xMURKibW0Som1uu+xMU"),
-"format": 34896613399,
+"attribute_data": PackedByteArray("6fxoPwAAAABVwSs/1U0SPQAAgD/d2Fw+t20bP5IkyT78rns/oZigPb6xHj/iLyc+AP//PgAAAABX23Y/JUkSPQD//z7d2Fw+btt2P5IkyT6oRCg/AP//Pj1zNz63bRs/widCP7c2tz4lSRI927YtP8InQj8A//8+cLMSPQF6Gz+oRCg/tza3PqpYNz6Rqi0/AACAP93YXD7bI8k+JUkSPen8aD8AAAAAJUkSPTvCyz38rns/oZigPYIuJz6AikY9AP//Pt3YXD6SJMk+kiTJPgD//z4AAAAAJUkSPZIkyT4A//8+tza3PpIkyT5u23Y/AACAP93YXD4lSRI9SZJkPwAAgD+3Nrc+JUkSPW7bdj8A//8+3dhcPpIkyT5JkmQ/AP//PgD//z6SJMk+AXobP6hEKD+3Nrc+qlg3PpGqLT+oRCg/AP//Pj1zNz63bRs/AP//Prc2tz5IF8k+27YtP+n8aD+3Nrc+btt2P7dtGz8A//8+3dhcPrdtGz/bti0/AP//Prc2tz63bRs/t20bP+n8aD/d2Fw+btt2P9u2LT8A//8+AP//PrdtGz9u23Y/xQdFP7c2tz5u23Y/SZJkP8UHRT8A//8+btt2P27bdj8A//8+tza3PrdtGz9JkmQ/"),
+"format": 34359742519,
 "index_count": 48,
-"index_data": PackedByteArray("EwAHABoABwAAAAMABwATAAAAGAAVABIAGAAbABUAEAAWAB0AFgAMAAkAFgAQAAwABAARAAgABAANABEABgAcABkABgAPABwAFAAKAAEAFAAXAAoAAgAOAAUAAgALAA4A"),
+"index_data": PackedByteArray("AAABAAIAAQADAAQAAQAAAAMABQAGAAcABQAIAAYACQAKAAsACgAMAA0ACgAJAAwADgAPABAADgARAA8AEgATABQAEgAVABMAFgAXABgAFgAZABcAGgAbABwAGgAdABsA"),
 "material": SubResource("StandardMaterial3D_ilqha"),
-"name": "bricks_mx_1",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 30,
-"vertex_data": PackedByteArray("AAAAAP///n8AAAAA////PwAAAAD//1TVAAD//////n8AAP//////vwAA/////1TV///+////+tf///7///+6f////v////+/AAAAAAAA//8AAAAAAAD/PwAAAAAAAFTVAAD//wAA//8AAP//AAD/vwAA//8AAFTV///+/wAA+tf///7/AAD//////v8AAP+/SNIAAP//oOZI0gAA//+/f0jSAAD///8/SNIAAAAAoOZI0gAAAAD//0jSAAAAAP8/2vZtW///oOba9m1b///619r2bVv//01+2vZtWwAAoOba9m1bAAD619r2bVsAAP///3///wAA/39U1VTV/3///////39U1VTVkqfJU/9//3////9/////fwAA/39U1VTV////f////39U1VTVkqfJU5L/k3////9/zJhmTP9//38AAP9/zJhmTJr/m38AAP9/zJhmTJKnyVP/f/9/zJhmTJKnyVNi/WJ9")
+"vertex_data": PackedByteArray("MlG4PeZbj70AAAAAKVwPPshajz0AAAAAMx4FPlbYo7wAAAAAKVwPvuZbj70AAAAAKVwPvuZbjz0AAAAAMx4FPlbYo7wAAAAAMlG4PeZbj73sUbi9MlG4PeZbj70AAAAAMx4FPlbYo7zsUbi9KVwPPshajz3sUbi9MlG4PeZbj73sUbi9Mx4FPlbYo7zsUbi9KVwPvuZbjz3sUbi9KVwPvuZbj73sUbi9KVwPvuZbjz0AAAAAKVwPPshajz3sUbi9KVwPPshajz0AAAAAKVwPvuZbjz3sUbi9KVwPPshajz0AAAAAMx4FPlbYo7zsUbi9Mx4FPlbYo7wAAAAAKVwPPshajz3sUbi9MlG4PeZbj70AAAAAKVwPvuZbj73sUbi9KVwPvuZbj70AAAAAMlG4PeZbj73sUbi9KVwPvuZbj70AAAAAKVwPvuZbjz3sUbi9KVwPvuZbjz0AAAAAKVwPvuZbj73sUbi9/3//fzL/WUD/f/9/Iv9hQP9//3/d+oRC+n//f/r//z/6f/9/+v//PxrHHUcbR3CcGscdRxtHcJwaxx1HG0dwnBrHHUcbR3Cc/v8AACX/k7/+/wAANf+bvwAA/f/f+m69////////AMD///////8AwP9//f/+//+//3/9//7//7//f/3//v//v/9//f/+//+/MvMzczBzZYYy8zNzMHNlhjLzM3Mwc2WGMvMzczBzZYYCgAAA/v//PwKAAAD+//8/AoAAAP7//z8CgAAA/v//PwAABIABgPz/AAAEgAGA/P8AAASAAYD8/wAABIABgPz/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_y55kr")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ydj15"]
 points = PackedVector3Array(0.101304, -0.0558705, -0.0898881, 0.133575, 0.07, -0.00171717, 0.137354, 0.0461821, -0.000477038, -0.137885, -0.07, -0.000303035, -0.133577, 0.07, -0.0893939, -0.133577, 0.07, -0.00171717, 0.133575, 0.07, -0.0893939, -0.135423, -0.0687302, -0.09, 0.0901827, -0.0697716, -0.000448364, 0.126963, -0.0221602, -0.09, 0.0888577, -0.0687302, -0.09, 0.128104, -0.0223695, -0.000711415, 0.135422, 0.0455481, -0.09, 0.133061, 0.00754505, -0.000482677, 0.131205, 0.00745534, -0.09, 0.118196, -0.0347552, -0.0898845)

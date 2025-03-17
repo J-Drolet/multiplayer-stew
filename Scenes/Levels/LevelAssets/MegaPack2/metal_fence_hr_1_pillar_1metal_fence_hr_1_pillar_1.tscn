@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=5 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/metal_fence_hr_1_pillar_1_metal_fence_hr_1.png" id="1_2y33f"]
 
@@ -7,37 +7,22 @@ resource_name = "metal_fence_hr_1"
 albedo_texture = ExtResource("1_2y33f")
 texture_filter = 2
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_e8673"]
-_surfaces = [{
-"aabb": AABB(-0.2, -0.100009, -2.5, 0.4, 0.200009, 2.5),
-"format": 34896613377,
-"index_count": 30,
-"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEABwABAAMABwAFAAEA"),
-"name": "metal_fence_hr_1",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAACAP//AAAAAAAAAAAAAP7/AgD//wAA/v8AAAAAAAAAAP///v8AAAAA/P8AAAAA///+//7/AAD///z/AAAAAA==")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_me61i"]
 resource_name = "metal_fence_hr_1_pillar_1_metal_fence_hr_1_pillar_1"
+lightmap_size_hint = Vector2i(34, 30)
 _surfaces = [{
 "aabb": AABB(-0.2, -0.100009, -2.5, 0.4, 0.200009, 2.5),
-"attribute_data": PackedByteArray("ROj//3Lu//9E6AAAcu4AAHLuepRy7v///////3LuAABy7oRr//8AAETo///Q+f//ROgAAND5AADQ+XqU0Pn////////Q+QAA0PmEa///AAA="),
-"format": 34896613399,
+"attribute_data": PackedByteArray("6ERoPwAAgD8AAEA/d3c3PwAAgD8AAAAA8fBwPM3MDD/oRGg/AAAAAPHwcDx3dzc/AACAPwAAgD8AAEA/zcwMP+5ybj8AAIA/AABAP5WIiDz60Hk/AAAAADzxcDy8uzs+7nJuPwAAAADx8HA8iYiIPPrQeT8AAIA/Rv8/P7y7Oz4AAIA/AACAPwAAQD9mZuY+6ERoPwAAAADx8HA8ERGRPgAAgD8AAAAA8fBwPGZm5j7oRGg/AACAPwAAQD8REZE++tB5PwAAgD9G/z8/ERFRP+5ybj8AAAAA8fBwPLy7ez/60Hk/AAAAAIjxcDw8EVE/7nJuPwAAgD8AAEA/vLt7P/rQeT/XCNc+PDx8P7y7Oz7ucm4/lHoUP5eWVj+JiIg87nJuP9cI1z4XPHw/iYiIPPrQeT+UehQ/l5ZWP7y7Oz4="),
+"format": 34359742519,
 "index_count": 30,
-"index_data": PackedByteArray("AAAJAAIAAAAGAAkABQARAAcABQAPABEAEAAMABMAEAAKAAwACwADAA0ACwABAAMAEgAEAAgAEgAOAAQA"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
 "material": SubResource("StandardMaterial3D_71rc4"),
-"name": "metal_fence_hr_1",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 20,
-"vertex_data": PackedByteArray("AAACAP///z8AAAIA//9U1QAAAAAAAP8/AAAAAAAAVNUAAAAAAAD///7/AgD//6oq/v8CAP///z/+/wAAAACqKv7/AAAAAP///v8AAAAA/z8AAP///v//vwAA///+/1TVAAD8/wAA/78AAPz/AABU1QAA/P8AAP/////+//7/qir///7//v//v////P8AAKoq///8/wAA//////z/AAD/vwAA/39U1VTVAAD/f1TVVNX/v/+/qiqqKgAA/3+qKqoq/7//vwAA/3////9/VNVU1f///39U1VTV/7//v6oqqir///9/qiqqKv+//7////9/")
+"vertex_data": PackedByteArray("zcxMvlLOzL0AAAAAM8tMPoXRzL0AACDAzcxMvoXRzL0AACDAM8tMPlLOzL0AAAAAM8tMPlLOzL0AAAAAzcxMPgHIzD0AACDAM8tMPoXRzL0AACDAzcxMPjPLzD0AACC4zcxMPjPLzD0AACC4zcxMvgHIzD0AACDAzcxMPgHIzD0AACDAzcxMvs3MzD0AACC4zcxMvs3MzD0AACC4zcxMvoXRzL0AACDAzcxMvgHIzD0AACDAzcxMvlLOzL0AAAAAzcxMPgHIzD0AACDAzcxMvoXRzL0AACDAM8tMPoXRzL0AACDAzcxMvgHIzD0AACDAAoAAAP7//z8CgAAA/v//PwKAAAD+//8/AoAAAP7//z/6/wGAAoAAAPr/AYACgAAA+v8BgAKAAAD6/wGAAoAAAP9//f/+//+//3/9//7//7//f/3//v//v/9//f/+//+/AAAEgAGA/P8AAASAAYD8/wAABIABgPz/AAAEgAGA/P/+//7//3/+//7//v//f/7//v/+//9//v/+//7//3/+/w==")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_e8673")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hcgqt"]
 points = PackedVector3Array(-0.219841, -0.119841, -2.51984, 0.216667, 0.118254, 0.0198412, 0.216667, -0.119841, 0.0198412, 0.216667, 0.118254, -2.51984, -0.219841, 0.118254, 0.0198412, -0.219841, -0.119841, 0.0198412, 0.216667, -0.119841, -2.51984, -0.219841, 0.118254, -2.51984)

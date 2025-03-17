@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=5 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Fair/wall_5_wall_5.png" id="1_dicwn"]
 
@@ -7,39 +7,22 @@ resource_name = "wall_5"
 albedo_texture = ExtResource("1_dicwn")
 texture_filter = 2
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_rnjp7"]
-_surfaces = [{
-"aabb": AABB(-1, -0.0500001, -2, 2, 0.0500003, 2),
-"format": 34896613377,
-"index_count": 66,
-"index_data": PackedByteArray("DgADAAUACQAHAAsACwAGAA0ACwAHAAYADQAGAA8AAwAPAAIAAwAOAA8ABQAMAA4ADgANAA8ADgAMAA0ABAAMAAUABAAKAAwADAALAA0ADAAKAAsACgAJAAsACgAIAAkAAQAJAAgAAQAAAAkABgACAA8AAQAIAAQACAAKAAQABwAJAAAA"),
-"lods": [0.0603665, PackedByteArray("DgADAAUAAwAOAAIADgAGAAIADgAFAAYABQAHAAYABQAKAAcABAAKAAUAAQAKAAQACgAJAAcAAQAJAAoABwAJAAAAAQAAAAkA"), 0.0791445, PackedByteArray("AwAGAAIAAwAFAAYABQAHAAYABQAEAAcABAAAAAcAAQAAAAQA")],
-"name": "wall_5",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 16,
-"vertex_data": PackedByteArray("///+////AAAAAP7///8AAP///v8AAAAAAAD//wAAAAAAAP7/SJIAAAAA/v+2bQAA///+/7ZtAAD///7/SJIAAJIk/v/atgAAbNv+/9q2AACSJAAASJIAAGzbAABIkgAAkiQAALZtAABs2wAAtm0AAJIk/v8kSQAAbNv+/yRJAAA=")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_1c0hx"]
 resource_name = "wall_5_wall_5"
+lightmap_size_hint = Vector2i(22, 22)
 _surfaces = [{
 "aabb": AABB(-1, -0.0500001, -2, 2, 0.0500003, 2),
-"attribute_data": PackedByteArray("AAD///////8AAAAA//8AAP//SJL//7ZtAAC2bQAASJJs29q2kiTatmzbSJKSJEiSbNu2bZIktm1s2yRJkiQkSQ=="),
-"format": 34896613399,
+"attribute_data": PackedByteArray("22xbP5JIkj5dXTQ/9kVXPwAAgD8AAAAAjC56P4wuej8AAIA/22zbPsZ0ET+MLno/kkgSPrfaNj8vR5c+AewiPgAAAACSSBI/XRjdPowuujySSBI+kkgSP2MY3T6x6iI+AAAAANts2z7GdBE/jC66PJJIEj7bbNs+yXQRP7HqIj6SSBI+kkiSPl1dND8B7CI+AAAAAAAAAACMLno/jC66PNtsWz/bbNs+yXQRP6BFVz8AAIA/kkgSP10Y3T6MLno/22xbP5JIEj9jGN0+oEVXP9tsWz+32jY/L0eXPvZFVz8AAIA/AACAP4wuujyMLno/AAAAAAAAgD+MLro8jC66PA=="),
+"format": 34359742519,
 "index_count": 66,
-"index_data": PackedByteArray("DgADAAUACQAHAAsACwAGAA0ACwAHAAYADQAGAA8AAwAPAAIAAwAOAA8ABQAMAA4ADgANAA8ADgAMAA0ABAAMAAUABAAKAAwADAALAA0ADAAKAAsACgAJAAsACgAIAAkAAQAJAAgAAQAAAAkABgACAA8AAQAIAAQACAAKAAQABwAJAAAA"),
-"lods": [0.0603665, PackedByteArray("DgADAAUAAwAOAAIADgAGAAIADgAFAAYABQAHAAYABQAKAAcABAAKAAUAAQAKAAQACgAJAAcAAQAJAAoABwAJAAAAAQAAAAkA"), 0.0791445, PackedByteArray("AwAGAAIAAwAFAAYABQAHAAYABQAEAAcABAAAAAcAAQAAAAQA")],
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABQAGAAcABQAEAAYABwAGAAgAAQAIAAkAAQAAAAgAAgAKAAAAAAAHAAgAAAAKAAcACwAKAAIACwAMAAoACgAFAAcACgAMAAUADAADAAUADAANAAMADgADAA0ADgAPAAMABgAJAAgADgANAAsADQAMAAsABAADAA8A"),
 "material": SubResource("StandardMaterial3D_4l3cv"),
-"name": "wall_5",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 16,
-"vertex_data": PackedByteArray("///+//////8AAP7//////////v8AAP//AAD//wAA//8AAP7/SJIr/AAA/v+2bVX8///+/7ZtVfz///7/SJIr/JIk/v/atln/bNv+/9q2Wf+SJAAASJJo/WzbAABIkmj9kiQAALZtn/1s2wAAtm2f/ZIk/v8kSWT/bNv+/yRJZP//v////7////+/////v///UcML/LfA4PsehLdA84NRQ2bCU/+qgGZC/MNo/ZaC/UO3vi790IK3Pkm+SP+2gEk+")
+"vertex_data": PackedByteArray("t9s2vwAAGLW327a/AACAvwAAVDQAAADAAACAvwAAGLWSSZK/ttk2PwAAGLWSShK/AACAPwAAGLXcblu/ttk2P+jMTL3cblu/AACAPwAAGLWSSZK/ttk2P+jMTL2SSZK/ttk2PwAAGLW327a/AACAPwAAGLUAAADAt9s2v+jMTL2SSZK/AACAvwAAGLXcblu/t9s2v+jMTL3cblu/t9s2vwAAGLWSShK/AACAvwAAGLUAAAAAAACAPwAAGLUAAAAAxHWOArgCXMEAgAAAAAD/v/lsQA7ODmbHjoI1CrcCob5BjgQTzg6XuG6J3hIuCua6BJM/Ds0Ol7jckm4JLQrnujqKjQK3AqK+AIAAAAAA/78hbW8JLgoWxbxxBRPQDmfHj3bcEi8KF8VtfTcKugJdwQCAAAAAAP+/AIAAAAAA/78=")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_rnjp7")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rwwhn"]
 points = PackedVector3Array(0.730084, -0.0658637, -0.74628, -1.01587, -0.00239027, -2.01548, -1.01587, 0.0293558, -2.01548, -1.01587, 0.0293558, 0.0154753, 1.01587, 0.0293558, -2.01548, 1.01587, 0.0293558, 0.0154753, -0.825347, -0.0658637, -0.841326, 0.730084, -0.0658637, -1.25392, -1.01587, -0.00239027, 0.0154753, 1.01587, -0.00239027, 0.0154753, 1.01587, -0.00239027, -2.01548, -0.730084, -0.0658637, -1.25392, 1.01587, -0.0341177, -0.841326, -1.01587, -0.0341177, -1.15867, -0.730084, -0.0658637, -0.74628, 0.825347, -0.0658637, -1.15867, 0.825347, -0.0658637, -0.841326, -0.825347, -0.0658637, -1.15867, -1.01587, -0.0341177, -0.841326, 1.01587, -0.0341177, -1.15867)

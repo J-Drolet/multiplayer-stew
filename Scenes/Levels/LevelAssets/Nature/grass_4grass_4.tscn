@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=4]
+[gd_scene load_steps=4 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Nature/grass_4_grass_4.png" id="1_8ua8f"]
 
@@ -11,37 +11,22 @@ albedo_texture = ExtResource("1_8ua8f")
 texture_filter = 2
 texture_repeat = false
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_fy3gf"]
-_surfaces = [{
-"aabb": AABB(-0.55928, -0.48581, -0.503352, 1.11856, 0.918823, 0.55928),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AgAEAAMAAgABAAQAAQAFAAQAAQAAAAUACAAKAAkACAAHAAoABwALAAoABwAGAAsADgAQAA8ADgANABAADQARABAADQAMABEA"),
-"name": "grass_4",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 18,
-"vertex_data": PackedByteArray("AAAypQAAAAAAAFqH/38AAAAAWof//wAA//9ah///AAD//1qH/38AAP//MqUAAAAAmsxe8msYAAA2uf7/2ooAADa5/v9I/QAAyEa1Dkj9AADIRrUO2ooAACtaFQFrGAAASKQAAGsYAAA2ubUO2ooAADa5tQ5I/QAAyEb//0j9AADIRv//2ooAANoxSfFrGAAA")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_8o13q"]
 resource_name = "grass_4_grass_4"
+lightmap_size_hint = Vector2i(26, 22)
 _surfaces = [{
 "aabb": AABB(-0.55928, -0.48581, -0.503352, 1.11856, 0.918823, 0.55928),
-"attribute_data": PackedByteArray("AAD/PwAA/38AAP+/////v////3////8/AAD/PwAA/38AAP+/////v////3////8/AAD/PwAA/38AAP+/////v////3////8/"),
-"format": 34896613399,
+"attribute_data": PackedByteArray("AAAAAMD/Pz8ndiI/jC66PAAAgD8A//8+wDNNP0YXHT8AAIA/wP8/Pyd2Ij9GFx0/AAAAAAD//z7AM00/jC66PAAAgD8A/X8+sRN7P0YXHT8AAAAAAP1/PrETez+MLro8AAAAAMD/Pz+H0Z08jC56PwAAgD8A//8+EeoEP3+9Rz8AAIA/wP8/P0/sBD+MLno/AAAAAAD//z7ZiZ08f71HPwAAgD8A/X8+POwEP4N0ET8AAAAAAP1/PjnGnTxddBE/AAAAAMD/Pz/ZiZ08RhfdPgAAgD8A//8+T+wEP2G4cT4AAIA/wP8/P3npBD9GF90+AAAAAAD//z5+5J08YbhxPgAAgD8A/X8+bukEP4wuujwAAAAAAP1/PieVnTwMMbo8"),
+"format": 34359742519,
 "index_count": 36,
-"index_data": PackedByteArray("AgAEAAMAAgABAAQAAQAFAAQAAQAAAAUACAAKAAkACAAHAAoABwALAAoABwAGAAsADgAQAA8ADgANABAADQARABAADQAMABEA"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEAAwAFAAQABgAHAAgABgAJAAcACQAKAAcACQALAAoADAANAA4ADAAPAA0ADwAQAA0ADwARABAA"),
 "material": SubResource("StandardMaterial3D_laujj"),
-"name": "grass_4",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 18,
-"vertex_data": PackedByteArray("AAAypQAAF7EAAFqH/3+LuAAAWof///+///9ah////7///1qH/3+LuP//MqUAABexmsxe8msYTt02uf7/2orM3za5/v9I/YziyEa1Dkj9jOLIRrUO2orM3ytaFQFrGE7dSKQAAGsY+Nw2ubUO2oqc3za5tQ5I/YziyEb//0j9jOLIRv//2oqc39oxSfFrGPjc////f////3////9/////f////3////9/SZjtVYuaBFKrnFVOq5xVTouaBFJJmO1VgtYL6EnSmuVVzlLjVc5S40nSmuWC1gvo")
+"vertex_data": PackedByteArray("+SwPvwAAsLbAFGU9+SwPPwAAsLbgFWW++SwPPwAAsLbAFGU9+SwPvwAAsLbgFWW++SwPP5Rc2z2t2wC/+SwPv5Rc2z2t2wC/9Px/Pguy3T5wyUw9tgCAvj+13b7SzEy+tgCAvj+13b5wyUw99Px/Pguy3T7SzEy+cEMpvg6/9r4gZ+a+tl+rPjuoxD4gZ+a+9Px/Pj+13b5wyUw9tgCAvuGz3T7SzEy+tgCAvuGz3T5wyUw99Px/Pj+13b7SzEy+Y9OuvjOrwj4gZ+a+nFciPhe8+L4gZ+a+/3/9//7//7//fwLs/v//v/9//f/+//+//38C7P7//7//f4rc/v//v/9/itz+//+/JdElUSNRa5dKx9RWJFFslyXRJVEjUWuXSsfUViRRbJcTv5NbJFFslxO/k1skUWyX1i4mUShRkuhQOTNXJ1GS6NYuJlEoUZLoUDkzVydRkugCQjdcJ1GS6AJCN1wnUZLo")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_fy3gf")
 
 [node name="@Node3D@14" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)

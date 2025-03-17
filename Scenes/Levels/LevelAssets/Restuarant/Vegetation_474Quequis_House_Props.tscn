@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4]
+[gd_scene load_steps=5 format=4]
 
 [ext_resource type="Texture2D" path="res://Assets/Textures/Restaurant/Quequis_House_Props_Grass.png" id="1_0djwf"]
 
@@ -8,39 +8,22 @@ transparency = 4
 albedo_texture = ExtResource("1_0djwf")
 texture_filter = 2
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_bt3ly"]
-_surfaces = [{
-"aabb": AABB(-1, -0.985623, -1.95522, 2, 1.99731, 2.01151),
-"format": 34896613377,
-"index_count": 24,
-"index_data": PackedByteArray("AAADAAEAAAACAAMABAAHAAUABAAGAAcAAAADAAIAAAABAAMABAAHAAYABAAFAAcA"),
-"lods": [1.0, PackedByteArray("AAACAAMABAAGAAcAAAADAAIABAAHAAYA")],
-"name": "Grass",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AABTfv//AAD//1N+//8AAAAAU352AQAA//9TfnYBAAD8hv//iP4AALd5AACI/gAA/Ib//wAAAAC3eQAAAAAAAA==")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_1dmtn"]
 resource_name = "Quequis_House_Props_Plane_218"
+lightmap_size_hint = Vector2i(46, 46)
 _surfaces = [{
 "aabb": AABB(-1, -0.985623, -1.95522, 2, 1.99731, 2.01151),
-"attribute_data": PackedByteArray("/3///9H/////f/9/0f//fyyAQv///0L/LIBCf/7/Qn//f///0f////9//3/R//9/LIBC////Qv8sgEJ//v9Cfw=="),
-"format": 34896613399,
+"attribute_data": PackedByteArray("OC2AtwAAgD+nN30/pzd9P0/+fz8AAIC3C1kIPwtZCD9P/n8/AACAP6c3fT8LWQg/OC2AtwAAgLcLWQg/pzd9P+I+sjr+hX4/pzd9P+pN7z44LIA/gIC9uwtZCD9DFjI8OC2AP/6Ffj+nN30/QxYyPOI+sjqAgL27C1kIP+pN7z44LYC3AACAP+pN7z6nN30/T/5/PwAAgLdDFjI8C1kIPzgtgLcAAIC36k3vPgtZCD9P/n8/AACAP0MWMjynN30/4j6yOv6Ffj/qTe8+6k3vPjgsgD+AgL27QxYyPEMWMjziPrI6gIC9u+pN7z5DFjI8OC2AP/6Ffj9DFjI86k3vPg=="),
+"format": 34359742519,
 "index_count": 24,
-"index_data": PackedByteArray("AAADAAEAAAACAAMABAAHAAUABAAGAAcACAALAAoACAAJAAsADAAPAA4ADAANAA8A"),
-"lods": [1.0, PackedByteArray("AAACAAMABAAGAAcACAALAAoADAAPAA4A")],
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0A"),
 "material": SubResource("StandardMaterial3D_30aa6"),
-"name": "Grass",
 "primitive": 3,
-"uv_scale": Vector4(2.00276, 2, 0, 0),
+"uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 16,
-"vertex_data": PackedByteArray("AABTfv///7///1N+////vwAAU352Af+///9TfnYB/7/8hv//iP6P1rd5AACI/o/W/Ib//wAAj9a3eQAAAACP1gAAU37///8///9Tfv///z8AAFN+dgH/P///U352Af8//Ib//4j+bym3eQAAiP5vKfyG//8AAG8pt3kAAAAAbyn///9/////f////3////9/M6mZVDOpmVQzqZlUM6mZVAAA/38AAP9/AAD/fwAA/3/LVmWry1Zlq8tWZavLVmWr")
+"vertex_data": PackedByteArray("AACAvwCA5bdAkGY9AACAPwCA5bd+zPi/AACAPwCA5bdAkGY9AACAvwCA5bd+zPi/4JBfPfZ+gT8gazc90BBJvcpRfL+mRPq/0BBJvcpRfL8gazc94JBfPfZ+gT+mRPq/AACAvwCA5bdAkGY9AACAPwCA5bd+zPi/AACAvwCA5bd+zPi/AACAPwCA5bdAkGY94JBfPfZ+gT8gazc90BBJvcpRfL+mRPq/4JBfPfZ+gT+mRPq/0BBJvcpRfL8gazc9/3/9//7//7//f/3//v//v/9//f/+//+//3/9//7//7+t+a15q3kog635rXmreSiDrfmteat5KIOt+a15q3kogwKAAAD+//8/AoAAAP7//z8CgAAA/v//PwKAAAD+//8/UAZRhqx513xQBlGGrHnXfFAGUYasedd8UAZRhqx513w=")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_bt3ly")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_euuhk"]
 points = PackedVector3Array(-0.0261537, -1.00156, -1.97116, 0.0694479, 1.04186, 0.0722642, 1.02746, 0.0201499, 0.0722642, -1.01577, 0.0201499, 0.0722642, 0.0694479, 1.04186, -1.97116, -1.01577, 0.0201499, -1.97116, -0.0261537, -1.00156, 0.0722642, 1.02746, 0.0201499, -1.97116)

@@ -68,6 +68,9 @@ public partial class MeshManipulationUtlity : Node3D
             {
                 if(meshInstance.Mesh is ArrayMesh arrayMesh)
                 {
+                    ArrayMesh shadowMesh = arrayMesh.ShadowMesh;
+                    shadowMesh = null;
+                    shadowMesh.Free();
                     arrayMesh.LightmapUnwrap(meshInstance.Transform, 0.1f);
                 }
                 else
