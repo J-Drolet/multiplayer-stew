@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b48dqousk512e" path="res://Scripts/Pickups/TimedUpgradePickup.cs" id="1_ip3vc"]
 [ext_resource type="Texture2D" uid="uid://cnbfw8yt3ogh2" path="res://Assets/Textures/UI/ProgressBar/Border.png" id="2_yf5s6"]
 [ext_resource type="Texture2D" uid="uid://hlk0h74umyuk" path="res://Assets/Textures/UI/ProgressBar/Fill.png" id="3_ofemt"]
-[ext_resource type="Texture2D" uid="uid://ccht72tubkcrf" path="res://Assets/Models/PSXBunkers/drain_cover_3_drain_cover_3.png" id="4_cgelt"]
+[ext_resource type="Texture2D" uid="uid://b8i76gxfgq8xn" path="res://Assets/Textures/Fair/drain_cover_3_drain_cover_3.png" id="4_cgelt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5jbil"]
 size = Vector3(1.5, 1.25, 1.5)
