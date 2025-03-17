@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://ci2s7wgwurbhg"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/TextureSuperPack/snow_1.png" id="1_n0ora"]
+[ext_resource type="Texture2D" uid="uid://dm6khlnu0hd5a" path="res://Assets/Textures/TextureSuperPack/snow_1.png" id="1_n0ora"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_px5sg"]
 albedo_color = Color(0.856067, 0.856067, 0.856067, 1)
@@ -10,7 +10,9 @@ uv1_scale = Vector3(2.515, 2.515, 2.515)
 uv1_offset = Vector3(-0.74, -0.73, 0)
 
 [sub_resource type="BoxMesh" id="BoxMesh_mkgvw"]
+lightmap_size_hint = Vector2i(14, 21)
 material = SubResource("StandardMaterial3D_px5sg")
+add_uv2 = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_usce5"]
 size = Vector3(0.0342407, 1.53737, 1.99316)
