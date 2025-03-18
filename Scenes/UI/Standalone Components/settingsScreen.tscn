@@ -29,6 +29,21 @@ volumetric_fog_density = 0.04
 [sub_resource type="World3D" id="World3D_yo0k1"]
 environment = SubResource("Environment_5v5jn")
 
+[sub_resource type="Animation" id="Animation_wdb20"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CameraParent:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="Animation" id="Animation_fuxot"]
 resource_name = "bob_camera"
 length = 5.0
@@ -44,21 +59,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(0, -0.1, 0), Vector3(0, 0.1, 0), Vector3(0, -0.1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_wdb20"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CameraParent:position:y")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n52su"]
@@ -254,6 +254,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="GameTab" type="Panel" parent="Tabs"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -321,7 +322,7 @@ own_world_3d = true
 world_3d = SubResource("World3D_yo0k1")
 handle_input_locally = false
 size = Vector2i(168, 256)
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [node name="SubViewPortScene" type="Node3D" parent="Tabs/GameTab/VBoxContainer/Character Customization/Preview/SubViewport"]
 
@@ -467,7 +468,6 @@ size_flags_vertical = 4
 theme = ExtResource("2_oyqlb")
 
 [node name="VideoTab" type="Panel" parent="Tabs"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -581,6 +581,99 @@ popup/item_1/text = "Windowed"
 popup/item_1/id = 1
 popup/item_2/text = "Borderless Fullscreen"
 popup/item_2/id = 2
+
+[node name="MSAA" type="HBoxContainer" parent="Tabs/VideoTab/VBoxContainer" node_paths=PackedStringArray("Input")]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+script = ExtResource("6_45gcu")
+Input = NodePath("OptionButton")
+SettingSection = "settings"
+SettingName = "antialiasing_mode"
+
+[node name="Label" type="Label" parent="Tabs/VideoTab/VBoxContainer/MSAA"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme = ExtResource("2_oyqlb")
+text = "Anti-Aliasing"
+horizontal_alignment = 2
+
+[node name="OptionButton" type="OptionButton" parent="Tabs/VideoTab/VBoxContainer/MSAA"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+item_count = 4
+popup/item_0/text = "None"
+popup/item_0/id = 0
+popup/item_1/text = "MSAA 2x"
+popup/item_1/id = 1
+popup/item_2/text = "MSAA 4x"
+popup/item_2/id = 2
+popup/item_3/text = "MSAA 8x"
+popup/item_3/id = 3
+
+[node name="AnisotropicFiltering" type="HBoxContainer" parent="Tabs/VideoTab/VBoxContainer" node_paths=PackedStringArray("Input")]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+script = ExtResource("6_45gcu")
+Input = NodePath("OptionButton")
+SettingSection = "settings"
+SettingName = "anisotropic_filtering"
+
+[node name="Label" type="Label" parent="Tabs/VideoTab/VBoxContainer/AnisotropicFiltering"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme = ExtResource("2_oyqlb")
+text = "Texture Filtering Mode"
+horizontal_alignment = 2
+
+[node name="OptionButton" type="OptionButton" parent="Tabs/VideoTab/VBoxContainer/AnisotropicFiltering"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+item_count = 5
+popup/item_0/text = "No Anisotropic Filtering"
+popup/item_0/id = 0
+popup/item_1/text = "Anisotropic 2x"
+popup/item_1/id = 1
+popup/item_2/text = "Anisotropic 4x"
+popup/item_2/id = 2
+popup/item_3/text = "Anisotropic 8x"
+popup/item_3/id = 3
+popup/item_4/text = "Anisotropic 16x"
+popup/item_4/id = 4
+
+[node name="Upscaling" type="HBoxContainer" parent="Tabs/VideoTab/VBoxContainer" node_paths=PackedStringArray("Input")]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+script = ExtResource("6_45gcu")
+Input = NodePath("OptionButton")
+SettingSection = "settings"
+SettingName = "scaling_mode"
+
+[node name="Label" type="Label" parent="Tabs/VideoTab/VBoxContainer/Upscaling"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme = ExtResource("2_oyqlb")
+text = "Image Upscaling"
+horizontal_alignment = 2
+
+[node name="OptionButton" type="OptionButton" parent="Tabs/VideoTab/VBoxContainer/Upscaling"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+item_count = 6
+popup/item_0/text = "None (Bilinear)"
+popup/item_0/id = 0
+popup/item_1/text = "Ultra Quality"
+popup/item_1/id = 1
+popup/item_2/text = "Quality"
+popup/item_2/id = 2
+popup/item_3/text = "Balanced"
+popup/item_3/id = 3
+popup/item_4/text = "Performance"
+popup/item_4/id = 4
+popup/item_5/text = "Near-Sighted"
+popup/item_5/id = 5
 
 [node name="AudioTab" type="Panel" parent="Tabs"]
 visible = false

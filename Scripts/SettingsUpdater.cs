@@ -34,6 +34,40 @@ public partial class SettingsUpdater: Node
                     case "sfx_volume":
                         AudioServer.SetBusVolumeDb(AudioServer.GetBusIndex("SFX"), Mathf.LinearToDb((float) propertyValue));
                         break;
+                    case "antialiasing_mode":
+                        GetViewport().Msaa3D = (Viewport.Msaa)(int)propertyValue;
+                        break;
+                    case "anisotropic_filtering":
+                        GetViewport().AnisotropicFilteringLevel = (Viewport.AnisotropicFiltering )(int)propertyValue;
+                        break;
+                    case "scaling_mode":
+                        switch((int) propertyValue) {
+                            case 0: // no upscaling
+                                GetViewport().Scaling3DMode = Viewport.Scaling3DModeEnum.Bilinear;
+                                GetViewport().Scaling3DScale = 1.0f;
+                                break;
+                            case 1: // Ultra Quality
+                                GetViewport().Scaling3DMode = Viewport.Scaling3DModeEnum.Fsr2;
+                                GetViewport().Scaling3DScale = 0.77f;
+                                break;
+                            case 2: // Quality
+                                GetViewport().Scaling3DMode = Viewport.Scaling3DModeEnum.Fsr2;
+                                GetViewport().Scaling3DScale = 0.67f;
+                                break;
+                            case 3: // Balanced
+                                GetViewport().Scaling3DMode = Viewport.Scaling3DModeEnum.Fsr2;
+                                GetViewport().Scaling3DScale = 0.59f;
+                                break;
+                            case 4: // Performance
+                                GetViewport().Scaling3DMode = Viewport.Scaling3DModeEnum.Fsr2;
+                                GetViewport().Scaling3DScale = 0.5f;
+                                break;
+                            case 5: // Near-sighted
+                                GetViewport().Scaling3DMode = Viewport.Scaling3DModeEnum.Fsr2;
+                                GetViewport().Scaling3DScale = 0.1f;
+                                break;
+                        }
+                        break;
                 }
 
                 break;

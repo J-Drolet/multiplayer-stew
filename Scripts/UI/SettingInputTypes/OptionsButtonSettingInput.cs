@@ -1,7 +1,6 @@
 using Godot;
 using multiplayerstew.Scripts.Attributes;
 using System;
-using System.Runtime.CompilerServices;
 
 public partial class OptionsButtonSettingInput: SettingInput
 {
