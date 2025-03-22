@@ -38,6 +38,9 @@ public partial class LevelManager : Node
 		GodotErrorService.ValidateRequiredData(this);
 		Instance = this;
 
+		// initialize WorldEnvironment based on settings
+		Config.Instance.EmitSignal("ConfigChanged", "settings", "ambient_occlusion", Config.GetValue("settings", "ambient_occlusion"));
+
 		SpawnPoints = GetTree().GetNodesInGroup("PlayerSpawnPoint").Select(s => s as Node3D).ToList();
 
 		foreach(long peerId in GameSessionManager.ConnectedPeers.Keys)

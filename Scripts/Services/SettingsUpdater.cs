@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Godot;
 
 public partial class SettingsUpdater: Node 
@@ -12,6 +13,7 @@ public partial class SettingsUpdater: Node
 
     private void SettingsUpdated(string section, string propertyKey, Variant propertyValue)
     {
+
         switch(section) {
             case "settings":
                 switch(propertyKey) {
@@ -68,10 +70,31 @@ public partial class SettingsUpdater: Node
                                 break;
                         }
                         break;
-                }
-
+                    case "ambient_occlusion":
+                        if(LevelManager.Instance != null)
+                        {
+                            List<WorldEnvironment> worldEnvironments = GodotNodeFindingService.FindNodes<WorldEnvironment>(LevelManager.Instance);
+                            foreach(WorldEnvironment worldEnvironment in worldEnvironments)
+                            {
+                                Godot.Environment environment = worldEnvironment.Environment;
+                                switch((int) propertyValue) {
+                                    case 0: // none
+                                        environment.SsaoEnabled = false;
+                                        break;
+                                    case 2: // medium
+                                        environment.SsaoEnabled = true;
+                                        environment.SsaoRadius = 1.0f;
+                                        break;
+                                    case 3: // high
+                                        environment.SsaoEnabled = true;
+                                        environment.SsaoRadius = 5.0f;
+                                        break;
+                                }
+                            }
+                        }
+                        break;
+                    }
                 break;
-        }
-        
+        } 
     }
 }

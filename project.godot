@@ -23,7 +23,7 @@ buses/default_bus_layout="res://Assets/audio_buses.tres"
 
 Ui="*res://Scripts/UI/UI.cs"
 Config="*res://Scripts/Services/Config.cs"
-SettingsUpdater="*res://Scripts/SettingsUpdater.cs"
+SettingsUpdater="*res://Scripts/Services/SettingsUpdater.cs"
 MultiplayerAudioService="*res://Scripts/Services/MultiplayerAudioService.cs"
 MultiplayerPropertyService="*res://Scripts/Services/MultiplayerPropertyService.cs"
 
@@ -36,6 +36,8 @@ settings/profiler/max_timestamp_query_elements=2048
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/resizable=false
+window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
 
 [dotnet]
 

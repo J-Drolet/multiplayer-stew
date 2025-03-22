@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://mujxr1ewuap1"]
+[gd_scene load_steps=25 format=4 uid="uid://mujxr1ewuap1"]
 
 [ext_resource type="Script" uid="uid://cgocmhkfg50vn" path="res://Scripts/UI/SettingsScreen.cs" id="1_cvm75"]
 [ext_resource type="Theme" uid="uid://emuxwpv1i0mt" path="res://Assets/Themes/SettingsMenu.tres" id="2_oyqlb"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://jle6g0wbah37" path="res://Scripts/UI/CharacterPreview.cs" id="4_wdb20"]
 [ext_resource type="Script" uid="uid://b2ppijulutxhp" path="res://Scripts/UI/SettingInputTypes/ButtonSettingInput.cs" id="5_aka8e"]
 [ext_resource type="Script" uid="uid://cm1nmgasd7h55" path="res://Scripts/UI/SettingInputTypes/OptionsButtonSettingInput.cs" id="6_45gcu"]
+[ext_resource type="Script" uid="uid://dkxgpuo2uthoc" path="res://Scripts/UI/Util/ResolutionOptionInitializer.cs" id="9_n52su"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wdb20"]
 sky_top_color = Color(0.770609, 0.231794, 0.159503, 1)
@@ -674,6 +675,56 @@ popup/item_4/text = "Performance"
 popup/item_4/id = 4
 popup/item_5/text = "Near-Sighted"
 popup/item_5/id = 5
+
+[node name="Ambient Occlusion" type="HBoxContainer" parent="Tabs/VideoTab/VBoxContainer" node_paths=PackedStringArray("Input")]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+script = ExtResource("6_45gcu")
+Input = NodePath("OptionButton")
+SettingSection = "settings"
+SettingName = "ambient_occlusion"
+
+[node name="Label" type="Label" parent="Tabs/VideoTab/VBoxContainer/Ambient Occlusion"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme = ExtResource("2_oyqlb")
+text = "Ambient Occlusion"
+horizontal_alignment = 2
+
+[node name="OptionButton" type="OptionButton" parent="Tabs/VideoTab/VBoxContainer/Ambient Occlusion"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "None"
+popup/item_0/id = 0
+popup/item_1/text = "Medium"
+popup/item_1/id = 2
+popup/item_2/text = "High"
+popup/item_2/id = 3
+
+[node name="Resolution" type="HBoxContainer" parent="Tabs/VideoTab/VBoxContainer" node_paths=PackedStringArray("Input")]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+script = ExtResource("6_45gcu")
+Input = NodePath("OptionButton")
+UseIndexSaving = false
+SettingSection = "settings"
+SettingName = "resolution"
+
+[node name="Label" type="Label" parent="Tabs/VideoTab/VBoxContainer/Resolution"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme = ExtResource("2_oyqlb")
+text = "Resolution"
+horizontal_alignment = 2
+
+[node name="OptionButton" type="OptionButton" parent="Tabs/VideoTab/VBoxContainer/Resolution"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+script = ExtResource("9_n52su")
 
 [node name="AudioTab" type="Panel" parent="Tabs"]
 visible = false
