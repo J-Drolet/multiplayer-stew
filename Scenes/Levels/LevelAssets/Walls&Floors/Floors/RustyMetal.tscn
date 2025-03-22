@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cja3prhe0ur25"]
+
+[ext_resource type="Texture2D" uid="uid://dhwsrh31tdsxl" path="res://Assets/Textures/Megapack2/floor_ceiling_hr_1_concrete_hr_3.png" id="1_rsjtg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a4otr"]
+resource_name = "concrete_hr_3"
+albedo_texture = ExtResource("1_rsjtg")
+uv1_scale = Vector3(0.25, 0.25, 0.25)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_4qcqe"]
+material = SubResource("StandardMaterial3D_a4otr")
+size = Vector3(4, 0.4, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4d11c"]
+size = Vector3(4, 0.4, 4)
+
+[node name="RustyMetal" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_4qcqe")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_4d11c")
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="StaticBody3D"]
+size = Vector3(4, 0.4, 4)

@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=4]
+[gd_scene load_steps=7 format=4 uid="uid://bld3kixlwtyta"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/floor_ceiling_rx_1_tile_floor_mx_3.png" id="1_2lqp0"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Megapack2/floor_ceiling_rx_1_concrete_hr_1.png" id="2_76a1c"]
+[ext_resource type="Texture2D" uid="uid://c2j004247gv1b" path="res://Assets/Textures/Megapack2/floor_ceiling_rx_1_tile_floor_mx_3.png" id="1_2lqp0"]
+[ext_resource type="Texture2D" uid="uid://nosy0vvducgn" path="res://Assets/Textures/Megapack2/floor_ceiling_rx_1_concrete_hr_1.png" id="2_76a1c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_byocf"]
 resource_name = "tile_floor_mx_3"

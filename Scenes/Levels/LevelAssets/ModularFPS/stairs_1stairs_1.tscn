@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4]
+[gd_scene load_steps=5 format=4 uid="uid://ci36wcpigjmv7"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/stairs_1_stairs_1.png" id="1_vwftq"]
+[ext_resource type="Texture2D" uid="uid://6pufgam7u7iq" path="res://Assets/Textures/Fair/stairs_1_stairs_1.png" id="1_vwftq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r31br"]
 resource_name = "stairs_1"
+cull_mode = 2
 albedo_texture = ExtResource("1_vwftq")
 texture_filter = 2
 
@@ -27,7 +28,7 @@ blend_shape_mode = 0
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_prh2i"]
 points = PackedVector3Array(1.01587, 0.906151, -0.984084, 0.985089, 0.878734, -1, -1.01587, 0.906151, -0.984084, -1.01587, 0.620092, -1.01587, 1.01587, -0.87149, -0.158889, 1.01587, -0.87149, 0.031746, -1.01587, -0.87149, 0.031746, 1.01587, 0.620092, -1.01587, -1.01587, -0.395374, -0.444482, -1.01587, 0.143976, -0.539543, -1.01587, -0.87149, -0.158889, 1.01587, -0.395374, -0.444482, 1.01587, 0.143976, -0.539543, 1.01587, -0.903373, 0.031746, -1.01587, -0.903373, 0.031746, -0.985089, 0.878734, -1)
 
-[node name="@Node3D@40" type="Node3D"]
+[node name="_Node3D_40" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@41" type="StaticBody3D" parent="."]

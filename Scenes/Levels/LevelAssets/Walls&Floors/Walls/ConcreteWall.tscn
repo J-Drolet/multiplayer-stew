@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckofq6vrn382u"]
+
+[ext_resource type="Texture2D" uid="uid://c22qx0cav3fox" path="res://Assets/Textures/Megapack2/wall_rg_1_wall_rg_1.png" id="1_bhhdv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ili77"]
+resource_name = "wall_rg_1"
+albedo_texture = ExtResource("1_bhhdv")
+uv1_scale = Vector3(0.33, 0.33, 0.33)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_oqow6"]
+material = SubResource("StandardMaterial3D_ili77")
+size = Vector3(4, 3, 0.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w2lu2"]
+size = Vector3(4, 3, 0.4)
+
+[node name="ConcreteWall" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+mesh = SubResource("BoxMesh_oqow6")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.997407, 0, 0, 0, 0.997407, 0, 0, 0, 0.997407, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_w2lu2")

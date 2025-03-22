@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=4]
+[gd_scene load_steps=7 format=4 uid="uid://cvl7rat7pp6dt"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/wall_1_wall_3.png" id="1_lvs7r"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/wall_1_wood_2.png" id="2_42lkw"]
+[ext_resource type="Texture2D" uid="uid://dn05thcod4i7c" path="res://Assets/Textures/Fair/wall_1_wall_3.png" id="1_lvs7r"]
+[ext_resource type="Texture2D" uid="uid://bnptlothvbdxp" path="res://Assets/Textures/Fair/wall_1_wood_2.png" id="2_42lkw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fvno0"]
 resource_name = "wall_3"
@@ -66,7 +66,7 @@ blend_shape_mode = 0
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1rkao"]
 points = PackedVector3Array(2.07746, 0.137222, 0.0188093, -2.07746, 0.0722762, -3.03246, -2.07746, 0.137222, 0.0188093, -2.07746, -0.12246, 0.0188093, 2.01239, -0.12246, -3.03246, 2.07746, -0.12246, 0.0188093, 2.07746, 0.0722762, -3.03246, -2.01239, -0.12246, -3.03246, -2.07746, 0.137222, -0.176226, 2.07746, 0.137222, -0.176226, 2.07746, -0.12246, -0.176226, -2.07746, -0.12246, -0.176226)
 
-[node name="@Node3D@274" type="Node3D"]
+[node name="_Node3D_274" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@275" type="StaticBody3D" parent="."]

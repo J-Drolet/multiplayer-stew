@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://jgwipi2p6vfa"]
+
+[ext_resource type="Texture2D" uid="uid://qbe2yx66sneo" path="res://Assets/Textures/Fair/floor_2_tiles_floor_1.png" id="1_tq4cp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2vy4g"]
+resource_name = "floor_2"
+albedo_texture = ExtResource("1_tq4cp")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_tq4cp"]
+material = SubResource("StandardMaterial3D_2vy4g")
+size = Vector3(4, 0.4, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ubpno"]
+size = Vector3(4, 0.4, 4)
+
+[node name="Tiles" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_tq4cp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_ubpno")
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="StaticBody3D"]
+size = Vector3(4, 0.4, 4)

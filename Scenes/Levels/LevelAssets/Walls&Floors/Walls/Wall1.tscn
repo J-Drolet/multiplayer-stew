@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dujq50nm04iwa"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4jy63"]
+load_path = "res://.godot/imported/wall_1_wall_3.png-d0e35c18c8aa8404f81198958a2d319f.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sarj8"]
+resource_name = "wall_3"
+albedo_texture = SubResource("CompressedTexture2D_4jy63")
+uv1_scale = Vector3(0.333, 0.333, 0.333)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_ub50u"]
+material = SubResource("StandardMaterial3D_sarj8")
+size = Vector3(4, 3, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nxd0m"]
+size = Vector3(4, 3, 0.1)
+
+[node name="Wall1" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+mesh = SubResource("BoxMesh_ub50u")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.997407, 0, 0, 0, 0.997407, 0, 0, 0, 0.997407, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_nxd0m")
