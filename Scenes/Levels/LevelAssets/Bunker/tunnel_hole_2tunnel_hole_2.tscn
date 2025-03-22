@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=4]
+[gd_scene load_steps=10 format=4 uid="uid://1yk2kf541cvx"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/tunnel_hole_2_metal_floor_1.png" id="1_s10q8"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/tunnel_hole_2_wall_6.png" id="2_bu17k"]
+[ext_resource type="Texture2D" uid="uid://baftks7j2oade" path="res://Assets/Textures/Fair/tunnel_hole_2_metal_floor_1.png" id="1_s10q8"]
+[ext_resource type="Texture2D" uid="uid://cspg0eetp6f7q" path="res://Assets/Textures/Fair/tunnel_hole_2_wall_6.png" id="2_bu17k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3l3uh"]
 resource_name = "metal_floor_1"
@@ -41,10 +41,19 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4qspe"]
-points = PackedVector3Array(1.80424, 0.204444, -0.583535, -2.06222, -0.117765, -3.03222, -1.67545, -0.182222, 0.061111, -1.67545, 0.204444, 0.061111, 1.67545, -0.182222, 0.061111, 2.06222, 0.0755303, -3.03222, -0.644343, 0.204444, -2.70975, 2.06222, -0.117765, -3.03222, 2.06222, 0.0755303, 0.061111, -2.06222, 0.0755303, -3.03222, -2.06222, -0.117765, 0.061111, -1.35328, -0.182222, -2.25889, 1.28869, 0.204444, -2.32308, 1.35328, -0.182222, -2.25889, 1.67545, 0.204444, 0.061111, -1.80424, 0.204444, -1.35687, -2.06222, 0.0755303, 0.061111, 2.06222, -0.117765, 0.061111, 0.386364, 0.204444, -2.77424, -1.80424, -0.182222, -1.42167, 1.80424, -0.182222, -1.42167, -1.28869, 0.204444, -2.32308, 1.80424, 0.204444, -1.35687, -1.80424, 0.204444, -0.583535, -1.54667, 0.204444, -2.00091, 1.54667, 0.204444, -2.00091, 1.03111, 0.204444, -2.51657, 1.80424, -0.182222, -0.51904, -1.80424, -0.182222, -0.51904, -0.386364, 0.204444, -2.77424, -1.67545, -0.182222, -1.80742, 1.67545, -0.182222, -1.80742)
+[sub_resource type="BoxShape3D" id="BoxShape3D_vwuqf"]
+size = Vector3(0.534424, 0.310791, 3.00464)
 
-[node name="@Node3D@126" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_jfohn"]
+size = Vector3(0.533356, 0.310791, 3.00356)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jnu7e"]
+size = Vector3(2.99194, 0.295898, 0.525269)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hqgmg"]
+size = Vector3(1.21838, 0.297852, 0.60083)
+
+[node name="_Node3D_126" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@127" type="StaticBody3D" parent="."]
@@ -54,4 +63,21 @@ mesh = SubResource("ArrayMesh_sqn0x")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@127"]
-shape = SubResource("ConvexPolygonShape3D_4qspe")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.76291, -2.17875e-08, -1.50076)
+shape = SubResource("BoxShape3D_vwuqf")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="@StaticBody3D@127"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.76232, -2.17875e-08, -1.50101)
+shape = SubResource("BoxShape3D_jfohn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="@StaticBody3D@127"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000136614, -6.56141e-08, -2.74101)
+shape = SubResource("BoxShape3D_jnu7e")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="@StaticBody3D@127"]
+transform = Transform3D(0.707107, 3.09086e-08, 0.707107, -3.09086e-08, 1, -1.28028e-08, -0.707107, -1.28028e-08, 0.707107, -1.32341, -4.10646e-08, -2.305)
+shape = SubResource("BoxShape3D_hqgmg")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="@StaticBody3D@127"]
+transform = Transform3D(0.707107, -3.09086e-08, -0.707107, 3.09086e-08, 1, -1.28028e-08, 0.707107, -1.28028e-08, 0.707107, 1.31671, -4.03829e-08, -2.28952)
+shape = SubResource("BoxShape3D_hqgmg")
