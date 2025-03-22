@@ -59,9 +59,13 @@ public partial class Character : Entity
     public bool CanMove { get; set; } = true; // whether or not the local player should be able to manipulate the character
 	public bool CanLook { get; set; } = true; // whether or not the local player should be able to manipulate the character
 
-	private float BaseSpeed = (float)Config.GetValue("game_constants", "base_speed", true);
-	private float SprintMultiplier = (float)Config.GetValue("game_constants", "sprint_multiplier", true);
+	public float BaseSpeed = (float)Config.GetValue("game_constants", "base_speed", true);
+	public float SprintMultiplier = (float)Config.GetValue("game_constants", "sprint_multiplier", true);
 	private float JumpVelocity = (float)Config.GetValue("game_constants", "jump_velocity", true);
+
+	// Signal on jump
+    [Signal]
+    public delegate void JumpEventHandler(bool isInAir);
 
 	public override void _EnterTree()
 	{
@@ -248,6 +252,7 @@ public partial class Character : Entity
 		// Handle Jump.
 		if (Input.IsActionJustPressed("Jump") && JumpsSinceHitGround <= jumpsAllowedInAir  && CanMove)
 		{
+			EmitSignal("Jump", JumpsSinceHitGround == 0);
 			velocity.Y = JumpVelocity;
 			JumpsSinceHitGround++;
 		}

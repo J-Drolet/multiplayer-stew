@@ -1,10 +1,12 @@
-[gd_scene load_steps=37 format=4 uid="uid://lcx7afjcynql"]
+[gd_scene load_steps=39 format=4 uid="uid://lcx7afjcynql"]
 
-[ext_resource type="Script" uid="uid://5yutkv0j58u4" path="res://Scripts/Character.cs" id="1_n6eoi"]
+[ext_resource type="Script" uid="uid://5yutkv0j58u4" path="res://Scripts/Character/Character.cs" id="1_n6eoi"]
 [ext_resource type="Script" uid="uid://c38dblfxtao7" path="res://Scripts/Base/DamageArea.cs" id="2_4301p"]
 [ext_resource type="AudioStream" uid="uid://b4o2ftef65g1l" path="res://Assets/Sounds/SFX/Voice B Pain Grunt 002.wav" id="2_b0fus"]
 [ext_resource type="PackedScene" uid="uid://bu6ksmfk5pwif" path="res://Scenes/Particles/InvisibilitySmoke.tscn" id="3_ffhoh"]
 [ext_resource type="PackedScene" uid="uid://cslx7c34bxb3h" path="res://Scenes/UI/Standalone Components/PowerPack.tscn" id="5_ejsiy"]
+[ext_resource type="Script" uid="uid://d0has0xre837m" path="res://Scripts/Character/FootSteps/FootStepEmitter.cs" id="6_2mse5"]
+[ext_resource type="Resource" uid="uid://dj1lnp8rxjxvw" path="res://Assets/FootProfiles/Shoes.tres" id="7_reotu"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mo30b"]
 radius = 0.164492
@@ -393,3 +395,11 @@ tree_root = SubResource("AnimationNodeStateMachine_7261l")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Sprint/Add2/add_amount = 1.0
 parameters/Sprint/TimeScale/scale = 2.0
+
+[node name="RayCast3D" type="RayCast3D" parent="." node_paths=PackedStringArray("Character")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.107824, 0)
+exclude_parent = false
+script = ExtResource("6_2mse5")
+Character = NodePath("..")
+FootProfile = ExtResource("7_reotu")
+FootstepDistance = 2.2
