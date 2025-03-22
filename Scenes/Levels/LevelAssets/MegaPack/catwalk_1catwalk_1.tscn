@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=4]
+[gd_scene load_steps=7 format=4 uid="uid://4t4uydtx3wd4"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/catwalk_1_metal_mesh_1.png" id="1_pl1i3"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/catwalk_1_metal_mp_5.png" id="2_mmoqf"]
+[ext_resource type="Texture2D" uid="uid://dphm5c64r02p" path="res://Assets/Textures/Fair/catwalk_1_metal_mesh_1.png" id="1_pl1i3"]
+[ext_resource type="Texture2D" uid="uid://ce4mb3i365lhj" path="res://Assets/Textures/Fair/catwalk_1_metal_mp_5.png" id="2_mmoqf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uqsbf"]
 resource_name = "metal_mesh_1"
@@ -49,6 +49,7 @@ size = Vector3(4.00684, 1.99707, 0.103516)
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@61" type="StaticBody3D" parent="."]
+metadata/material_type = "METAL"
 
 [node name="catwalk_1" type="MeshInstance3D" parent="@StaticBody3D@61"]
 mesh = SubResource("ArrayMesh_ilnxe")
