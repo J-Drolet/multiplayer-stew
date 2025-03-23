@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ln2ak"]
 resource_name = "Shelf_FR_I"
-transparency = 4
 albedo_texture = ExtResource("1_np4an")
 texture_filter = 2
 

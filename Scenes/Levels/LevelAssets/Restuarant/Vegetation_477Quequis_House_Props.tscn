@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fr11k"]
 resource_name = "Branches"
-transparency = 4
 albedo_texture = ExtResource("1_omahr")
 texture_filter = 2
 

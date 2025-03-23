@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1g4po"]
 resource_name = "sack_potatoes"
-transparency = 4
 albedo_texture = ExtResource("1_2v3xq")
 texture_filter = 2
 

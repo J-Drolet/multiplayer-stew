@@ -5,13 +5,11 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ypwlx"]
 resource_name = "BarkDecidious"
-transparency = 4
 albedo_texture = ExtResource("1_h5ldk")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fr11k"]
 resource_name = "Branches"
-transparency = 4
 albedo_texture = ExtResource("2_y240x")
 texture_filter = 2
 

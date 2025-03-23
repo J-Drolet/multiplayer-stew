@@ -8,7 +8,8 @@ public partial class MeshManipulationUtlity : Node3D
 {
     public enum UtilityMode{
         BackfaceCulling,
-        LightmapGeneration
+        LightmapGeneration,
+        RemoveTransparency
     }
 
     [Export, ExportRequired]
@@ -26,6 +27,9 @@ public partial class MeshManipulationUtlity : Node3D
                 break;
             case UtilityMode.LightmapGeneration:
                 GenerateLightmaps();
+                break;
+            case UtilityMode.RemoveTransparency:
+                RemoveTransparency();
                 break;
         }
         GetTree().Quit();
@@ -85,6 +89,32 @@ public partial class MeshManipulationUtlity : Node3D
             ResourceSaver.Save(scene, filepath);
 
             GD.Print("Added Lightmap to: " + filepath);
+        }
+    }
+
+    public void RemoveTransparency()
+    {
+        foreach(string filepath in GodotFileFindingService.GetScenesAtFilepath(ASSET_FOLDER))
+        {
+            PackedScene scene = (PackedScene)ResourceLoader.Load(filepath);
+            Node sceneNode = scene.Instantiate();
+            AddChild(sceneNode);
+            foreach(MeshInstance3D meshInstance in GodotNodeFindingService.FindNodes<MeshInstance3D>(sceneNode))
+            {
+                for(int i = 0; i < meshInstance.GetSurfaceOverrideMaterialCount(); i++)
+                {
+                    BaseMaterial3D mat = (BaseMaterial3D)meshInstance.Mesh.SurfaceGetMaterial(i);
+                    mat.Transparency = BaseMaterial3D.TransparencyEnum.Disabled;
+                    meshInstance.Mesh.SurfaceSetMaterial(i, mat);
+                }
+            }
+            
+            scene.Pack(sceneNode);
+            sceneNode.Free();
+
+            ResourceSaver.Save(scene, filepath);
+
+            GD.Print("Remove transparency from: " + filepath);
         }
     }
 }

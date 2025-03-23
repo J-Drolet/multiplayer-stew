@@ -1,18 +1,14 @@
-[gd_scene load_steps=7 format=4 uid="uid://csc37dnxl8rgn"]
+[gd_scene load_steps=7 format=4]
 
-[ext_resource type="Texture2D" uid="uid://csaoeeksmyme0" path="res://Assets/Models/Waffle House/Models/Quequis_House_Metal_01.png" id="1_jorsy"]
+[ext_resource type="Texture2D" path="res://Assets/Models/Waffle House/Models/Quequis_House_Metal_01.png" id="1_jorsy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_71iww"]
 resource_name = "Metal_01"
-transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_jorsy")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2n88f"]
 resource_name = "Emissor"
-transparency = 4
-cull_mode = 2
 albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
 roughness = 0.5
 emission_enabled = true

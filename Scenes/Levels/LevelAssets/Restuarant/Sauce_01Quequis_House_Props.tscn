@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_02pjc"]
 resource_name = "Sauce_01"
-transparency = 4
 albedo_texture = ExtResource("1_m520r")
 texture_filter = 2
 

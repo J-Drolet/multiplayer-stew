@@ -5,13 +5,11 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8k1lj"]
 resource_name = "Metal_03"
-transparency = 4
 albedo_texture = ExtResource("1_2aq1f")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6j378"]
 resource_name = "Wood"
-transparency = 4
 albedo_texture = ExtResource("2_7r4gy")
 texture_filter = 2
 

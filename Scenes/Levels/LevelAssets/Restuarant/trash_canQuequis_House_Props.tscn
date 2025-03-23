@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1h86x"]
 resource_name = "trash_can"
-transparency = 4
 albedo_texture = ExtResource("1_51eiu")
 texture_filter = 2
 

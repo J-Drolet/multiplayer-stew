@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7kox6"]
 resource_name = "Plants_02"
-transparency = 4
 albedo_texture = ExtResource("1_3p753")
 texture_filter = 2
 

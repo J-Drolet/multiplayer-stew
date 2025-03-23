@@ -7,19 +7,16 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1o1u4"]
 resource_name = "Plaster"
-transparency = 4
 albedo_texture = ExtResource("1_gnj2n")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfwwb"]
 resource_name = "Metal_01"
-transparency = 4
 albedo_texture = ExtResource("2_xy8e2")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0kqm"]
 resource_name = "street_lamps"
-transparency = 4
 albedo_texture = ExtResource("3_3043p")
 emission_enabled = true
 emission_energy_multiplier = 6.0

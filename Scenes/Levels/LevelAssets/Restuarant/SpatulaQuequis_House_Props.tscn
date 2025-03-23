@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgu7g"]
 resource_name = "Spatula"
-transparency = 4
 albedo_texture = ExtResource("1_xh7j4")
 texture_filter = 2
 

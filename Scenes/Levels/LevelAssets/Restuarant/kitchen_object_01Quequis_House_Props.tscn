@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8k1lj"]
 resource_name = "Metal_03"
-transparency = 4
 albedo_texture = ExtResource("1_0k2pe")
 texture_filter = 2
 

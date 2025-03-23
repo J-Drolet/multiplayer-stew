@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_luim0"]
 resource_name = "flour_bag_01"
-transparency = 4
 albedo_texture = ExtResource("1_200t3")
 texture_filter = 2
 

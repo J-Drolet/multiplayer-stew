@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pjt7m"]
 resource_name = "Houses"
-transparency = 4
 albedo_texture = ExtResource("1_qw5bx")
 texture_filter = 2
 

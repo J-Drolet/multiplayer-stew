@@ -6,19 +6,16 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1o1u4"]
 resource_name = "Plaster"
-transparency = 4
 albedo_texture = ExtResource("1_vaquu")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gsvv0"]
 resource_name = "sign"
-transparency = 4
 albedo_texture = ExtResource("2_jkwqy")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfwwb"]
 resource_name = "Metal_01"
-transparency = 4
 albedo_texture = ExtResource("3_kmtuj")
 texture_filter = 2
 

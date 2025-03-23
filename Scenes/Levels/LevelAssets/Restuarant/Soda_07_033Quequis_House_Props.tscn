@@ -5,13 +5,11 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2p51r"]
 resource_name = "Soda_07"
-transparency = 4
 albedo_texture = ExtResource("1_bc3g4")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1xcxj"]
 resource_name = "Plastic_box"
-transparency = 4
 albedo_texture = ExtResource("2_53guu")
 texture_filter = 2
 

@@ -4,13 +4,11 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1jrds"]
 resource_name = "Glass"
-transparency = 4
 albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
 roughness = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6isn5"]
 resource_name = "Soda_fountain"
-transparency = 4
 albedo_texture = ExtResource("1_ixnn1")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_wdh84"]

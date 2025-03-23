@@ -1,13 +1,11 @@
-[gd_scene load_steps=20 format=4 uid="uid://cxct8ku15nob6"]
+[gd_scene load_steps=19 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cfim7honnrw34" path="res://Assets/Models/Waffle House/Models/Quequis_House_Paper_dispenser.png" id="1_4q708"]
-[ext_resource type="Texture2D" uid="uid://cq7gfvjeqacvb" path="res://Assets/Models/Waffle House/Models/Quequis_House_Toilet.png" id="2_ttkna"]
-[ext_resource type="Texture2D" uid="uid://koq2v8b7g5ax" path="res://Assets/Models/Waffle House/Models/Quequis_House_Wall_W.png" id="3_qqqkb"]
-[ext_resource type="PackedScene" uid="uid://c7p1mhm63jn1g" path="res://Scenes/Levels/LevelAssets/WaffleHouse/Bathroom/ShitterWall.tscn" id="4_1dk54"]
+[ext_resource type="Texture2D" path="res://Assets/Models/Waffle House/Models/Quequis_House_Paper_dispenser.png" id="1_4q708"]
+[ext_resource type="Texture2D" path="res://Assets/Models/Waffle House/Models/Quequis_House_Toilet.png" id="2_ttkna"]
+[ext_resource type="Texture2D" path="res://Assets/Models/Waffle House/Models/Quequis_House_Wall_W.png" id="3_qqqkb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ukd4g"]
 resource_name = "Paper_dispenser"
-transparency = 4
 albedo_texture = ExtResource("1_4q708")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_x5w46"]
@@ -49,7 +47,6 @@ size = Vector3(0.18335, 0.508362, 0.560791)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1f2d2"]
 resource_name = "Wall_W"
-transparency = 4
 albedo_texture = ExtResource("3_qqqkb")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_34cpb"]
@@ -89,7 +86,6 @@ size = Vector3(1.06567, 2.61743, 0.0509033)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nn60r"]
 resource_name = "Toilet"
-transparency = 4
 albedo_texture = ExtResource("2_ttkna")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ka422"]
@@ -217,5 +213,4 @@ shape = SubResource("BoxShape3D_e4q4f")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00418091, 0.299515, 0.185699)
 shape = SubResource("BoxShape3D_85mxv")
 
-[node name="ShitterWall" parent="." instance=ExtResource("4_1dk54")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.689055, 0, 0)
+[node name="ShitterWall" type="Node3D" parent="."]

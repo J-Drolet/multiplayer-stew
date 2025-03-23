@@ -6,19 +6,16 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dm874"]
 resource_name = "ConcreteBare"
-transparency = 4
 albedo_texture = ExtResource("1_mwnrc")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfwwb"]
 resource_name = "Metal_01"
-transparency = 4
 albedo_texture = ExtResource("2_j5y0d")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mml4d"]
 resource_name = "M_Gas_station"
-transparency = 4
 albedo_texture = ExtResource("3_ci16r")
 texture_filter = 2
 

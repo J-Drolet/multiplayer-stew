@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jt3v0"]
 resource_name = "Grill"
-transparency = 4
 albedo_texture = ExtResource("1_blgik")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_gggyi"]

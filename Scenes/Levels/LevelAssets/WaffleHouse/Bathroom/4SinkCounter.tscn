@@ -1,18 +1,14 @@
-[gd_scene load_steps=8 format=4 uid="uid://bb7hdlb70q0v6"]
+[gd_scene load_steps=8 format=4]
 
-[ext_resource type="Texture2D" uid="uid://7t7bjmj3aoy0" path="res://Assets/Models/Waffle House/Models/Quequis_House_Metal-Metal.png" id="1_k4plm"]
-[ext_resource type="Texture2D" uid="uid://cv2he72n3pct3" path="res://Assets/Models/Waffle House/Models/Quequis_House_Marble.jpg" id="2_7ofcv"]
+[ext_resource type="Texture2D" path="res://Assets/Models/Waffle House/Models/Quequis_House_Metal-Metal.png" id="1_k4plm"]
+[ext_resource type="Texture2D" path="res://Assets/Models/Waffle House/Models/Quequis_House_Marble.jpg" id="2_7ofcv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_24ssh"]
 resource_name = "Metal"
-transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_k4plm")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t7c3v"]
 resource_name = "Marble"
-transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("2_7ofcv")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_w3ekr"]

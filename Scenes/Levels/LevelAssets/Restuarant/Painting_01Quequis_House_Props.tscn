@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_js4n5"]
 resource_name = "Paintings"
-transparency = 4
 albedo_texture = ExtResource("1_3lxti")
 texture_filter = 2
 
@@ -28,7 +27,7 @@ blend_shape_mode = 0
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_j8wwn"]
 points = PackedVector3Array(-1.06819, -0.94719, -0.0673905, 1.06819, 0.955524, 0.0661333, 1.06819, 0.955524, -0.0673905, -1.06819, 0.955524, 0.0661333, 1.06819, -0.94719, 0.0661333, 1.06819, -0.94719, -0.0673905, -1.06819, 0.955524, -0.0673905, -1.06819, -0.94719, 0.0661333)
 
-[node name="@Node3D@64" type="Node3D"]
+[node name="_Node3D_64" type="Node3D"]
 transform = Transform3D(0.186129, 0, 0, 0, 0.186129, 0, 0, 0, 0.186129, 0, 0, 0)
 
 [node name="@StaticBody3D@65" type="StaticBody3D" parent="."]
