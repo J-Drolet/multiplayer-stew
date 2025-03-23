@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cvewociex368f"]
 
-[ext_resource type="Texture2D" uid="uid://74eqsd42lna7" path="res://Assets/Textures/Megapack2/floor_ceiling_hr_6_concrete_hr_1.png" id="1_obdkp"]
+[ext_resource type="Texture2D" uid="uid://d31titrtgo6in" path="res://Assets/Textures/Megapack2/floor_ceiling_hr_6_concrete_hr_1.png" id="1_obdkp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vdra3"]
 resource_name = "concrete_hr_1"
@@ -11,7 +11,9 @@ uv1_world_triplanar = true
 texture_filter = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_xxqmw"]
+lightmap_size_hint = Vector2i(44, 30)
 material = SubResource("StandardMaterial3D_vdra3")
+add_uv2 = true
 size = Vector3(4, 0.4, 4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ujc7x"]

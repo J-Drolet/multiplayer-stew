@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cmowxcjmj80xi"]
 
-[ext_resource type="Texture2D" uid="uid://bf40122o5tcv6" path="res://Assets/Textures/Megapack2/asphalt_hr_1_large_asphalt_hr_1.png" id="1_f0vpc"]
+[ext_resource type="Texture2D" uid="uid://c70q7sxjy2tjl" path="res://Assets/Textures/Megapack2/asphalt_hr_1_large_asphalt_hr_1.png" id="1_f0vpc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ymd54"]
 resource_name = "asphalt_hr_1"
@@ -11,7 +11,9 @@ uv1_world_triplanar = true
 texture_filter = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_lp4ng"]
+lightmap_size_hint = Vector2i(44, 30)
 material = SubResource("StandardMaterial3D_ymd54")
+add_uv2 = true
 size = Vector3(4, 0.4, 4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_coliu"]

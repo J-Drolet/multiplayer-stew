@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://jjyqbp1dgnyy"]
 
-[ext_resource type="Texture2D" uid="uid://c2j004247gv1b" path="res://Assets/Textures/Megapack2/floor_ceiling_rx_1_tile_floor_mx_3.png" id="1_15byv"]
+[ext_resource type="Texture2D" uid="uid://dli724owdku0c" path="res://Assets/Textures/Megapack2/floor_ceiling_rx_1_tile_floor_mx_3.png" id="1_15byv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ybyps"]
 resource_name = "tile_floor_mx_3"
@@ -12,7 +12,9 @@ uv1_world_triplanar = true
 texture_filter = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_lwisa"]
+lightmap_size_hint = Vector2i(44, 30)
 material = SubResource("StandardMaterial3D_ybyps")
+add_uv2 = true
 size = Vector3(4, 0.4, 4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pkekl"]

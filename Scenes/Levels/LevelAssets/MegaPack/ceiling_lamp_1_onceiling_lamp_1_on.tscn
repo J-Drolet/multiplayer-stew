@@ -75,5 +75,6 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.84094e-08, 0.421157)
 light_color = Color(0.900799, 0.885939, 0.796467, 1)
 light_bake_mode = 1
+shadow_enabled = true
 shadow_caster_mask = 4294967279
 omni_range = 9.0
