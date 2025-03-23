@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://bic0xat7p13i8"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ufgjh"]
+angle_min = 1.07288e-05
+angle_max = 180.0
+direction = Vector3(0, 1, 0)
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="Gradient" id="Gradient_idrpu"]
+colors = PackedColorArray(1, 0.570984, 0.226563, 1, 0, 0, 0, 0.0156863)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wdvgh"]
+gradient = SubResource("Gradient_idrpu")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30r6s"]
+transparency = 1
+albedo_texture = SubResource("GradientTexture2D_wdvgh")
+roughness = 0.0
+emission_enabled = true
+emission_energy_multiplier = 10.0
+emission_texture = SubResource("GradientTexture2D_wdvgh")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_s42mm"]
+material = SubResource("StandardMaterial3D_30r6s")
+size = Vector2(0.3, 0.3)
+
+[node name="MuzzleFlash" type="GPUParticles3D"]
+emitting = false
+lifetime = 0.05
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_ufgjh")
+draw_pass_1 = SubResource("QuadMesh_s42mm")

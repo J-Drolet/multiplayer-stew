@@ -1,10 +1,11 @@
-[gd_scene load_steps=29 format=4 uid="uid://bfmxfalt2u42"]
+[gd_scene load_steps=30 format=4 uid="uid://bfmxfalt2u42"]
 
 [ext_resource type="Script" uid="uid://uoy74i0gesrj" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_owfg8"]
 [ext_resource type="PackedScene" uid="uid://de6ynjcj4qnom" path="res://Scenes/Projectiles/Submachine gun bullet.tscn" id="2_lm1gr"]
 [ext_resource type="AudioStream" uid="uid://cmyml6f07k1mi" path="res://Assets/Sounds/SFX/SmgClick.wav" id="3_wb17l"]
 [ext_resource type="Texture2D" uid="uid://ndibxcnbyrid" path="res://Assets/Textures/Weapons/Uzi_glb_Uzi_Tex.png" id="4_423su"]
 [ext_resource type="AudioStream" uid="uid://bx33pgdldlcuu" path="res://Assets/Sounds/SFX/SmgFire.wav" id="5_r8y5g"]
+[ext_resource type="PackedScene" uid="uid://bic0xat7p13i8" path="res://Scenes/Particles/MuzzleFlash.tscn" id="6_7tdwr"]
 [ext_resource type="AudioStream" uid="uid://4t4ernk4fu31" path="res://Assets/Sounds/SFX/SmgUnload.wav" id="6_thpou"]
 [ext_resource type="AudioStream" uid="uid://cxrdyusd8nnr" path="res://Assets/Sounds/SFX/SmgLoad.wav" id="7_sdlpq"]
 [ext_resource type="AudioStream" uid="uid://d35o2e8e1c2hp" path="res://Assets/Sounds/SFX/SmgSlide.wav" id="8_4ihlr"]
@@ -284,6 +285,32 @@ tracks/7/keys = {
 "method": &"EmitParticles"
 }]
 }
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Body/MuzzleFlash/MuzzleFlashParticles")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"EmitParticles"
+}]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Body/MuzzleFlash/MuzzleFlashLight:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.001, 0.04),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
 [sub_resource type="Animation" id="Animation_i6i74"]
 length = 0.001
@@ -394,6 +421,18 @@ tracks/8/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(0, 0, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Body/MuzzleFlash/MuzzleFlashLight:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_2y52e"]
@@ -519,6 +558,9 @@ properties/5/replication_mode = 1
 properties/6/path = NodePath(".:rotation")
 properties/6/spawn = true
 properties/6/replication_mode = 1
+properties/7/path = NodePath("Body/MuzzleFlash/MuzzleFlashLight:visible")
+properties/7/spawn = true
+properties/7/replication_mode = 1
 
 [node name="Mac10" type="Node3D" node_paths=PackedStringArray("APlayer")]
 script = ExtResource("1_owfg8")
@@ -552,6 +594,21 @@ skeleton = NodePath("")
 transform = Transform3D(0.0452191, 0, 0, 0, 0.368654, 0, 0, 0, 0.0663822, 0, 0, 0)
 mesh = SubResource("ArrayMesh_5ngv0")
 skeleton = NodePath("")
+
+[node name="MuzzleFlash" type="Node3D" parent="Body"]
+transform = Transform3D(0.835361, -2.52435e-29, 0, 0, 0.0754592, 6.66134e-16, 0, -3.55271e-15, 0.835361, -4.73483e-07, 1.25657, 2.80081)
+
+[node name="MuzzleFlashParticles" type="Node3D" parent="Body/MuzzleFlash"]
+transform = Transform3D(15.4004, 0, 0, 0, -6.73173e-07, 15.4004, 0, -15.4004, -6.73174e-07, 0, 0, 0)
+script = ExtResource("9_372hq")
+ParticleScene = ExtResource("6_7tdwr")
+ParticleSpawnMode = 0
+
+[node name="MuzzleFlashLight" type="OmniLight3D" parent="Body/MuzzleFlash"]
+visible = false
+light_color = Color(1, 0.572549, 0.227451, 1)
+light_energy = 5.0
+omni_range = 15.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
