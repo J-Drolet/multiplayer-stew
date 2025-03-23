@@ -190,13 +190,12 @@ draw_pass_1 = SubResource("BoxMesh_22q3m")
 [node name="OmniLight3D" type="OmniLight3D" parent="AshTray"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0222223, 0.0353351, -0.0480129)
 light_color = Color(0.770611, 0.366527, 0.0236719, 1)
-light_energy = 0.315
+light_energy = 0.32
 light_indirect_energy = 1.401
 shadow_enabled = true
 omni_range = 1.0
 script = ExtResource("1_ofda2")
 FlickerNoise = SubResource("NoiseTexture2D_as55v")
-FlickerIntensity = 2.0
 
 [node name="ashtray_1" type="MeshInstance3D" parent="AshTray"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
@@ -204,7 +203,7 @@ mesh = SubResource("ArrayMesh_xpp6a")
 skeleton = NodePath("")
 
 [node name="SmokeParticles" parent="AshTray" instance=ExtResource("4_fhpuw")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.0187712, 0.0376718, -0.0574109)
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.0216597, 0.0376718, -0.0604489)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AshTray"]
 libraries = {
