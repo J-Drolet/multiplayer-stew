@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://b3fxyfjflkvpu"]
+[gd_scene load_steps=34 format=4 uid="uid://b3fxyfjflkvpu"]
 
 [ext_resource type="Script" uid="uid://uoy74i0gesrj" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_afhbb"]
 [ext_resource type="PackedScene" uid="uid://x45b1orurjwf" path="res://Scenes/Projectiles/AugBullet.tscn" id="2_bl7sb"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bvolebrfyhrsi" path="res://Assets/Textures/Weapons/AUG_AUG.png" id="8_xdqq6"]
 [ext_resource type="Script" uid="uid://bl1otymgjtlka" path="res://Scripts/Base/SelfDestroyingParticle.cs" id="9_3if1e"]
 [ext_resource type="PackedScene" uid="uid://m5ohhp5uxd8" path="res://Scenes/Particles/AugShellParticle.tscn" id="10_7fcci"]
+[ext_resource type="PackedScene" uid="uid://bic0xat7p13i8" path="res://Scenes/Particles/MuzzleFlash.tscn" id="11_ka7g5"]
 
 [sub_resource type="Animation" id="Animation_68lhc"]
 resource_name = "Fire"
@@ -90,6 +91,32 @@ tracks/5/keys = {
 "args": [],
 "method": &"EmitParticles"
 }]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AUG/Cylinder/MuzzleFlash/MuzzleFlashParticles")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"EmitParticles"
+}]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AUG/Cylinder/MuzzleFlash/MuzzleFlashLight:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.01, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="Animation" id="Animation_w6ohp"]
@@ -189,6 +216,18 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(-1.80151, 0.0719449, 0.0135172)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AUG/Cylinder/MuzzleFlash/MuzzleFlashLight:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_yy4lc"]
@@ -314,6 +353,9 @@ properties/5/replication_mode = 1
 properties/6/path = NodePath("AUG/Cylinder/Charging Handle:position")
 properties/6/spawn = true
 properties/6/replication_mode = 1
+properties/7/path = NodePath("AUG/Cylinder/MuzzleFlash/MuzzleFlashLight:visible")
+properties/7/spawn = true
+properties/7/replication_mode = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_foiew"]
 resource_name = "Material"
@@ -591,6 +633,21 @@ skeleton = NodePath("")
 transform = Transform3D(0.0777308, 0, 0, 0, -3.7614e-08, -0.0777308, 0, 0.860509, -3.39772e-09, 0, 0.211119, -0.671475)
 mesh = SubResource("ArrayMesh_tgptk")
 skeleton = NodePath("")
+
+[node name="MuzzleFlash" type="Node3D" parent="AUG/Cylinder"]
+transform = Transform3D(0.835361, 0, 0, 0, 0.0754592, 6.66134e-16, 0, -3.55271e-15, 0.835361, 0, -2.1203, 0.107762)
+
+[node name="MuzzleFlashParticles" type="Node3D" parent="AUG/Cylinder/MuzzleFlash"]
+transform = Transform3D(15.4004, 0, 0, 0, -6.73173e-07, 15.4004, 0, -15.4004, -6.73174e-07, 0, 0, 0)
+script = ExtResource("9_3if1e")
+ParticleScene = ExtResource("11_ka7g5")
+ParticleSpawnMode = 0
+
+[node name="MuzzleFlashLight" type="OmniLight3D" parent="AUG/Cylinder/MuzzleFlash"]
+visible = false
+light_color = Color(1, 0.572549, 0.227451, 1)
+light_energy = 5.0
+omni_range = 15.0
 
 [node name="Charging Handle" type="MeshInstance3D" parent="AUG/Cylinder"]
 transform = Transform3D(-1.4554, 4.55604, 2.44456e-08, 0, -2.0458e-07, 0.574495, 6.1911, 1.07103, 5.74664e-09, -1.80151, 0.0719449, 0.0135172)

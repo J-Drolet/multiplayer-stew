@@ -67,7 +67,6 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_pi04f")
 
 [node name="GPUParticles3D" type="GPUParticles3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 emitting = false
 amount = 1
 lifetime = 7.0
