@@ -7,19 +7,16 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1o1u4"]
 resource_name = "Plaster"
-transparency = 4
 albedo_texture = ExtResource("1_48s5i")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfwwb"]
 resource_name = "Metal_01"
-transparency = 4
 albedo_texture = ExtResource("2_iii12")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0kqm"]
 resource_name = "street_lamps"
-transparency = 4
 albedo_texture = ExtResource("3_r8yme")
 emission_enabled = true
 emission_energy_multiplier = 6.0
@@ -68,7 +65,7 @@ blend_shape_mode = 0
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6gl6o"]
 points = PackedVector3Array(0.324023, -0.355164, 0.187962, -1.14438, 7.91135, -0.30159, -1.14438, 7.91135, 0.296782, 1.13995, 8.18386, -0.30159, -0.110884, -0.355164, -0.356, 1.07856, 7.95437, 0.2807, -0.110884, -0.355164, 0.351192, -0.382785, -0.355164, -0.0295396, 0.324023, -0.355164, -0.19277, -1.14438, 8.18386, -0.30159, 0.378359, -0.355164, -0.0295396, 0.106458, -0.355164, 0.351192, 0.106458, -0.355164, -0.356, -0.274114, -0.355164, 0.242372, 1.13995, 7.91135, -0.30159, -0.219555, -0.355164, -0.30159, 0.106458, 0.624547, 0.351192, 0.106458, 0.624547, -0.356, 0.215129, -0.355164, 0.296782, 0.215129, -0.355164, -0.30159, -0.110884, 0.624547, -0.356, -0.110884, 0.624547, 0.351192)
 
-[node name="@Node3D@116" type="Node3D"]
+[node name="_Node3D_116" type="Node3D"]
 transform = Transform3D(-1, 0, -3.89414e-07, 0, 1, 0, 3.89414e-07, 0, -1, 0, 0, 0)
 
 [node name="@StaticBody3D@117" type="StaticBody3D" parent="."]

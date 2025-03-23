@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://c7p1mhm63jn1g"]
+[gd_scene load_steps=7 format=4]
 
-[ext_resource type="Texture2D" uid="uid://koq2v8b7g5ax" path="res://Assets/Models/Waffle House/Models/Quequis_House_Wall_W.png" id="1_7oaoa"]
+[ext_resource type="Texture2D" path="res://Assets/Models/Waffle House/Models/Quequis_House_Wall_W.png" id="1_7oaoa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1f2d2"]
 resource_name = "Wall_W"
-transparency = 4
 albedo_texture = ExtResource("1_7oaoa")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_kvaxf"]

@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e784y"]
 resource_name = "Sauces_condiments"
-transparency = 4
 albedo_texture = ExtResource("1_eva31")
 texture_filter = 2
 

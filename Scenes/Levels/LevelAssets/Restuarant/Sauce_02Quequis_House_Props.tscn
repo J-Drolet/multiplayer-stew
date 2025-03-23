@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jr8lw"]
 resource_name = "Sauce_02"
-transparency = 4
 albedo_texture = ExtResource("1_swtab")
 texture_filter = 2
 

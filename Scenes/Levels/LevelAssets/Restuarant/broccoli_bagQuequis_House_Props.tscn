@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_joiwh"]
 resource_name = "broccoli_bag"
-transparency = 4
 albedo_texture = ExtResource("1_b3sji")
 texture_filter = 2
 

@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jrivt"]
 resource_name = "bag_onions"
-transparency = 4
 albedo_texture = ExtResource("1_8g7dl")
 texture_filter = 2
 

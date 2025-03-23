@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p6jic"]
 resource_name = "Coffee_maker"
-transparency = 4
 albedo_texture = ExtResource("1_wav5u")
 texture_filter = 2
 

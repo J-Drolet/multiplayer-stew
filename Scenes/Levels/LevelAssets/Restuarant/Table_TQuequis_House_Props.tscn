@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1qghv"]
 resource_name = "Shelf_B"
-transparency = 4
 albedo_texture = ExtResource("1_yaea3")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_uu5i3"]

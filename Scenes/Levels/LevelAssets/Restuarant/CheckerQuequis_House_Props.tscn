@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vuqad"]
 resource_name = "Checker"
-transparency = 4
 albedo_texture = ExtResource("1_d17cr")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_khi38"]

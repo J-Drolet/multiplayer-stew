@@ -1,11 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://cqan04n78s4l6"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cs6cq7kvgqqh1" path="res://Assets/Models/Waffle House/Models/Quequis_House_trash_can_01.png" id="1_1k3ub"]
+[ext_resource type="Texture2D" path="res://Assets/Models/Waffle House/Models/Quequis_House_trash_can_01.png" id="1_1k3ub"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_23xg4"]
 resource_name = "trash_can_01"
-transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_1k3ub")
 texture_filter = 2
 

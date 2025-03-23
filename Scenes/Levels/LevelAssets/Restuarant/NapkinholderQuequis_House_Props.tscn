@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d6ig3"]
 resource_name = "Napkinholder"
-transparency = 4
 albedo_texture = ExtResource("1_adgo4")
 texture_filter = 2
 

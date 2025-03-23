@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jx17d"]
 resource_name = "Box_B"
-transparency = 4
 albedo_texture = ExtResource("1_gngs8")
 texture_filter = 2
 
@@ -28,7 +27,7 @@ blend_shape_mode = 0
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vqc2i"]
 points = PackedVector3Array(-1, -1, -0.404699, 1, 1, 1.88102, -0.997127, 1, 1.88102, -1, -1, 1.8843, 1, -0.997127, 1.88102, 1, 1, -0.401415, -0.997127, 1, -0.401415, 1, -0.997127, -0.401415)
 
-[node name="@Node3D@10" type="Node3D"]
+[node name="_Node3D_10" type="Node3D"]
 transform = Transform3D(0.414883, 0, 0, 0, 0.414883, 0, 0, 0, 0.414883, 0, 0, 0)
 
 [node name="@StaticBody3D@11" type="StaticBody3D" parent="."]
