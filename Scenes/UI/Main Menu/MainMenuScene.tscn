@@ -1,8 +1,10 @@
-[gd_scene load_steps=16 format=4 uid="uid://cudk3xia134co"]
+[gd_scene load_steps=22 format=4 uid="uid://cudk3xia134co"]
 
+[ext_resource type="Script" uid="uid://bpk3lhhtw27eo" path="res://Scripts/LevelAssets/FlickeringLight.cs" id="1_ofda2"]
 [ext_resource type="Texture2D" uid="uid://brbm7jbw7ixrv" path="res://Assets/Textures/MainMenu/ashtray_1_plastic_4.png" id="1_xfxkh"]
 [ext_resource type="Texture2D" uid="uid://bght50ruha72c" path="res://Assets/Textures/MainMenu/ashtray_1_cigs_packet_1.png" id="2_qau8m"]
 [ext_resource type="Texture2D" uid="uid://b5egrx8shn3jl" path="res://Assets/Textures/MainMenu/ashtray_1_ash_1.png" id="3_30wmq"]
+[ext_resource type="PackedScene" uid="uid://d2nepwypwjil2" path="res://Scenes/Particles/SmokeParticles.tscn" id="4_fhpuw"]
 
 [sub_resource type="Curve" id="Curve_fj820"]
 _data = [Vector2(0, 0.156585), 0.0, 0.0, 0, 0, Vector2(0.821883, 0.143902), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -42,6 +44,14 @@ albedo_color = Color(0.400698, 0.400698, 0.400698, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_22q3m"]
 material = SubResource("StandardMaterial3D_i5qp1")
 size = Vector3(0.007, 0.007, 0.007)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ofda2"]
+noise_type = 0
+frequency = 0.03
+fractal_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_as55v"]
+noise = SubResource("FastNoiseLite_ofda2")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wikus"]
 resource_name = "plastic_4"
@@ -144,6 +154,26 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_lmne2")
 
+[sub_resource type="Animation" id="Animation_ofda2"]
+resource_name = "flicker"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OmniLight3D:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_as55v"]
+_data = {
+&"flicker": SubResource("Animation_ofda2")
+}
+
 [node name="MainMenuScene" type="Node3D"]
 
 [node name="AshTray" type="Node3D" parent="."]
@@ -151,6 +181,7 @@ transform = Transform3D(0.577801, 0, 0.816178, 0, 1, 0, -0.816178, 0, 0.577801, 
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="AshTray"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125625, 0.0353351, -0.0433358)
+visible = false
 amount = 150
 lifetime = 1.5
 process_material = SubResource("ParticleProcessMaterial_8hqq2")
@@ -159,14 +190,25 @@ draw_pass_1 = SubResource("BoxMesh_22q3m")
 [node name="OmniLight3D" type="OmniLight3D" parent="AshTray"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0222223, 0.0353351, -0.0480129)
 light_color = Color(0.770611, 0.366527, 0.0236719, 1)
-light_energy = 0.2
+light_energy = 0.32
+light_indirect_energy = 1.401
 shadow_enabled = true
 omni_range = 1.0
+script = ExtResource("1_ofda2")
+FlickerNoise = SubResource("NoiseTexture2D_as55v")
 
 [node name="ashtray_1" type="MeshInstance3D" parent="AshTray"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = SubResource("ArrayMesh_xpp6a")
 skeleton = NodePath("")
 
+[node name="SmokeParticles" parent="AshTray" instance=ExtResource("4_fhpuw")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.0216597, 0.0376718, -0.0604489)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AshTray"]
+libraries = {
+&"": SubResource("AnimationLibrary_as55v")
+}
+
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.75655, -0.296311, 0.582951, 1.49012e-08, 0.89145, 0.45312, -0.653936, -0.342808, 0.674426, 0.0963641, 0.0950838, 0.116131)
+transform = Transform3D(0.485178, -0.0846888, 0.870305, 0.00286515, 0.995448, 0.0952692, -0.874411, -0.0437289, 0.483211, 0.121854, 0.0903531, 0.190478)
