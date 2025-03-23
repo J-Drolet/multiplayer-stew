@@ -46,7 +46,7 @@ offset_right = 68.688
 offset_bottom = 54.272
 theme = ExtResource("1_c0h8v")
 theme_override_font_sizes/font_size = 100
-text = "Multiplayer Stew"
+text = "Je m'appelle Cigarette"
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 layout_mode = 1

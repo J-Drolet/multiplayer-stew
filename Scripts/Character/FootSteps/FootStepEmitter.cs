@@ -8,9 +8,6 @@ using System.Linq;
 public partial class FootStepEmitter : RayCast3D
 {
 
-    
-    public static string AIR_NAME = "Air";
-
     [Export, ExportRequired]
     public Character Character;
     [Export, ExportRequired]
