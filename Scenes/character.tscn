@@ -28,9 +28,6 @@ noise = SubResource("FastNoiseLite_nytcm")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wlyuj"]
 resource_name = "Top"
 render_priority = 1
-transparency = 2
-alpha_scissor_threshold = 0.5
-alpha_antialiasing_mode = 0
 roughness = 0.867391
 normal_enabled = true
 normal_texture = SubResource("NoiseTexture2D_ejsiy")
@@ -38,9 +35,6 @@ normal_texture = SubResource("NoiseTexture2D_ejsiy")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65fk3"]
 resource_name = "Bottom"
 render_priority = 1
-transparency = 2
-alpha_scissor_threshold = 0.5
-alpha_antialiasing_mode = 0
 albedo_color = Color(0.906715, 0.54389, 0.129084, 1)
 roughness = 0.873913
 normal_enabled = true
@@ -51,9 +45,6 @@ normal_texture = SubResource("NoiseTexture2D_ejsiy")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxeyr"]
 resource_name = "End"
 render_priority = 1
-transparency = 2
-alpha_scissor_threshold = 0.5
-alpha_antialiasing_mode = 0
 albedo_color = Color(0.176132, 0.0839063, 0.0228969, 1)
 normal_texture = SubResource("NoiseTexture2D_2mse5")
 
