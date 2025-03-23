@@ -106,7 +106,7 @@ public partial class FootStepEmitter : RayCast3D
         if(IsColliding())
         {
             GodotObject collider = GetCollider();
-            string colliderTag = (string)collider.GetMeta("material_type", "");
+            string colliderTag = (string)collider.GetMeta("material", "");
 
             return FootProfile.StringToMaterial(colliderTag);
         }

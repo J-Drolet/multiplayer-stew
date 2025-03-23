@@ -399,6 +399,7 @@ parameters/Sprint/TimeScale/scale = 2.0
 [node name="RayCast3D" type="RayCast3D" parent="." node_paths=PackedStringArray("Character")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.107824, 0)
 exclude_parent = false
+collision_mask = 17
 script = ExtResource("6_2mse5")
 Character = NodePath("..")
 FootProfile = ExtResource("7_reotu")
