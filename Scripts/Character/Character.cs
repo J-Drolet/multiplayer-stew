@@ -62,6 +62,7 @@ public partial class Character : Entity
 	public float BaseSpeed = (float)Config.GetValue("game_constants", "base_speed", true);
 	public float SprintMultiplier = (float)Config.GetValue("game_constants", "sprint_multiplier", true);
 	private float JumpVelocity = (float)Config.GetValue("game_constants", "jump_velocity", true);
+	private float DescentGravityScale = (float)Config.GetValue("game_constants", "gravity_scale_descent", true);
 
 	// Signal on jump
     [Signal]
@@ -238,7 +239,15 @@ public partial class Character : Entity
 		// Add the gravity.
 		if (!IsOnFloor())
 		{
-			velocity += GetGravity() * (float)delta;
+			if(velocity.Y > 0)
+			{
+				velocity += GetGravity() * (float)delta;
+			}
+			else // on descent games generally increase gravity to reduce floatiness
+			{
+				velocity += GetGravity() * DescentGravityScale * (float)delta;
+			}
+			
 			if(JumpsSinceHitGround == 0) // makes it so double jump doesn't allow 2 jumps in the air if fell of a ledge
 			{
 				JumpsSinceHitGround++;
