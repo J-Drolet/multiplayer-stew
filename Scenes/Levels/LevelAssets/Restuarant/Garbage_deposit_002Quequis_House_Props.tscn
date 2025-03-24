@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xkdy3"]
 resource_name = "Garbage_deposit"
-transparency = 4
 albedo_texture = ExtResource("1_xs0vk")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_g6d1o"]

@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=4]
+[gd_scene load_steps=5 format=4 uid="uid://bc6ybxlkcms7q"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/carpet_1_carpet_1.png" id="1_kja7o"]
+[ext_resource type="Texture2D" uid="uid://cqw65bx5s3ny1" path="res://Assets/Textures/Fair/carpet_1_carpet_1.png" id="1_kja7o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_63wi6"]
 resource_name = "carpet_1"
@@ -29,10 +29,12 @@ blend_shape_mode = 0
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nc6rh"]
 points = PackedVector3Array(-1.36598, -0.871348, -0.0298434, 1.36598, 0.879157, 0.0128434, 1.36598, 0.879157, -0.0298434, -1.36598, 0.879157, 0.0128434, 1.36598, -0.871348, 0.0128434, 1.36598, -0.871348, -0.0298434, -1.36598, 0.879157, -0.0298434, -1.36598, -0.871348, 0.0128434)
 
-[node name="@Node3D@48" type="Node3D"]
+[node name="_Node3D_48" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@49" type="StaticBody3D" parent="."]
+collision_layer = 16
+metadata/material = "FABRIC"
 
 [node name="carpet_1" type="MeshInstance3D" parent="@StaticBody3D@49"]
 mesh = SubResource("ArrayMesh_yiioy")

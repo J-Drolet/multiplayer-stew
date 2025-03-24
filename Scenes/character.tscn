@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://5yutkv0j58u4" path="res://Scripts/Character/Character.cs" id="1_n6eoi"]
 [ext_resource type="Script" uid="uid://c38dblfxtao7" path="res://Scripts/Base/DamageArea.cs" id="2_4301p"]
-[ext_resource type="AudioStream" uid="uid://b4o2ftef65g1l" path="res://Assets/Sounds/SFX/Voice B Pain Grunt 002.wav" id="2_b0fus"]
-[ext_resource type="PackedScene" uid="uid://bu6ksmfk5pwif" path="res://Scenes/Particles/InvisibilitySmoke.tscn" id="3_ffhoh"]
+[ext_resource type="AudioStream" uid="uid://dbvro82au5vr5" path="res://Assets/Sounds/SFX/Voice B Pain Grunt 002.wav" id="2_b0fus"]
+[ext_resource type="PackedScene" path="res://Scenes/Particles/SmokeParticles.tscn" id="5_a5ess"]
 [ext_resource type="PackedScene" uid="uid://cslx7c34bxb3h" path="res://Scenes/UI/Standalone Components/PowerPack.tscn" id="5_ejsiy"]
 [ext_resource type="Script" uid="uid://d0has0xre837m" path="res://Scripts/Character/FootSteps/FootStepEmitter.cs" id="6_2mse5"]
 [ext_resource type="Resource" uid="uid://dj1lnp8rxjxvw" path="res://Assets/FootProfiles/Shoes.tres" id="7_reotu"]
@@ -28,7 +28,6 @@ noise = SubResource("FastNoiseLite_nytcm")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wlyuj"]
 resource_name = "Top"
 render_priority = 1
-transparency = 1
 roughness = 0.867391
 normal_enabled = true
 normal_texture = SubResource("NoiseTexture2D_ejsiy")
@@ -36,7 +35,6 @@ normal_texture = SubResource("NoiseTexture2D_ejsiy")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65fk3"]
 resource_name = "Bottom"
 render_priority = 1
-transparency = 1
 albedo_color = Color(0.906715, 0.54389, 0.129084, 1)
 roughness = 0.873913
 normal_enabled = true
@@ -47,7 +45,6 @@ normal_texture = SubResource("NoiseTexture2D_ejsiy")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxeyr"]
 resource_name = "End"
 render_priority = 1
-transparency = 1
 albedo_color = Color(0.176132, 0.0839063, 0.0228969, 1)
 normal_texture = SubResource("NoiseTexture2D_2mse5")
 
@@ -317,7 +314,7 @@ ATree = NodePath("AnimationTree")
 CharacterMesh = NodePath("CharacterVisuals/CharacterMesh")
 HeadCosmeticSlot = NodePath("Head/HeadCosmetics")
 FaceCosmeticSlot = NodePath("Head/FaceCosmetics")
-InvisibilitySmokeParticles = NodePath("CharacterVisuals/InvisibilitySmoke")
+InvisibilitySmokeParticles = NodePath("CharacterVisuals/SmokeParticles")
 OutlinePlayerSFX = ExtResource("2_b0fus")
 Hitboxes = [NodePath("Hitbox")]
 HealthText = NodePath("CharacterVisuals/Cur Health")
@@ -341,6 +338,7 @@ shape = SubResource("CylinderShape3D_2mse5")
 
 [node name="CharacterMesh" type="MeshInstance3D" parent="CharacterVisuals"]
 transform = Transform3D(0.16289, 0, 0, 0, 0.990428, 0, 0, 0, 0.16289, 0, 1, 0)
+layers = 32
 mesh = SubResource("ArrayMesh_nytcm")
 skeleton = NodePath("")
 
@@ -350,15 +348,14 @@ visible = false
 billboard = 1
 text = "Text"
 
-[node name="InvisibilitySmoke" parent="CharacterVisuals" instance=ExtResource("3_ffhoh")]
-transform = Transform3D(1, 0, 0, 0, 0.999996, 0, 0, 0, 1, 0, 0.5, 0)
+[node name="SmokeParticles" parent="CharacterVisuals" instance=ExtResource("5_a5ess")]
 emitting = false
 
 [node name="Head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.0409511)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.577425, -0.203255)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.577425, -0.103255)
 cull_mask = 1048573
 
 [node name="Hand" type="Node3D" parent="Head/Camera3D"]
@@ -399,6 +396,7 @@ parameters/Sprint/TimeScale/scale = 2.0
 [node name="RayCast3D" type="RayCast3D" parent="." node_paths=PackedStringArray("Character")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.107824, 0)
 exclude_parent = false
+collision_mask = 17
 script = ExtResource("6_2mse5")
 Character = NodePath("..")
 FootProfile = ExtResource("7_reotu")

@@ -7,25 +7,21 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1o1u4"]
 resource_name = "Plaster"
-transparency = 4
 albedo_texture = ExtResource("1_a6b5k")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dnau5"]
 resource_name = "brick_stone"
-transparency = 4
 albedo_texture = ExtResource("2_gyvxn")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_khpq6"]
 resource_name = "Plaster_02"
-transparency = 4
 albedo_texture = ExtResource("3_igwof")
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a8fw2"]
 resource_name = "sign_01"
-transparency = 4
 albedo_texture = ExtResource("4_km1eb")
 texture_filter = 2
 

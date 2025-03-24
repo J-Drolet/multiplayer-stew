@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://jgwipi2p6vfa"]
 
-[ext_resource type="Texture2D" uid="uid://qbe2yx66sneo" path="res://Assets/Textures/Fair/floor_2_tiles_floor_1.png" id="1_tq4cp"]
+[ext_resource type="Texture2D" uid="uid://ty4ulthp878k" path="res://Assets/Textures/Fair/floor_2_tiles_floor_1.png" id="1_tq4cp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2vy4g"]
 resource_name = "floor_2"
@@ -11,7 +11,9 @@ uv1_world_triplanar = true
 texture_filter = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_tq4cp"]
+lightmap_size_hint = Vector2i(44, 30)
 material = SubResource("StandardMaterial3D_2vy4g")
+add_uv2 = true
 size = Vector3(4, 0.4, 4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ubpno"]

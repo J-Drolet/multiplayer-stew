@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xpgl"]
 resource_name = "Armchair"
-transparency = 4
 albedo_texture = ExtResource("1_ft1iu")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_cve2h"]

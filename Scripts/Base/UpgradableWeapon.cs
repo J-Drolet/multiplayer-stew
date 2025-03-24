@@ -54,7 +54,7 @@ namespace multiplayerstew.Scripts.Base
 			LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].projectileSpawner.AddSpawnableScene(Projectile.ResourcePath);
 			CurrentAmmo = MaxAmmo;
 
-			foreach(VisualInstance3D mesh in GodotNodeFindingService.FindNodes<VisualInstance3D>(this))
+			foreach(MeshInstance3D mesh in GodotNodeFindingService.FindNodes<MeshInstance3D>(this))
 			{
 				if(IsMultiplayerAuthority()) // Move local meshes to overlay layer
 				{

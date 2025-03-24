@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://dmb0qat8x0a17"]
+[gd_scene load_steps=9 format=4 uid="uid://dmb0qat8x0a17"]
 
-[ext_resource type="Texture2D" uid="uid://bi3k070c4s111" path="res://Assets/Textures/Fair/cig_1_cigs_packet_1.png" id="1_gr6c4"]
+[ext_resource type="Texture2D" uid="uid://c0q6q4j0m6f04" path="res://Assets/Textures/Fair/cig_1_cigs_packet_1.png" id="1_gr6c4"]
+[ext_resource type="PackedScene" uid="uid://d2nepwypwjil2" path="res://Scenes/Particles/SmokeParticles.tscn" id="2_j3qoj"]
+[ext_resource type="Script" uid="uid://bpk3lhhtw27eo" path="res://Scripts/LevelAssets/FlickeringLight.cs" id="3_d4hr8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nvwgd"]
 resource_name = "cigs_packet_1"
@@ -42,6 +44,14 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_j3qoj")
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ofda2"]
+noise_type = 0
+frequency = 0.03
+fractal_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_a0ov7"]
+noise = SubResource("FastNoiseLite_ofda2")
+
 [node name="Cigarette" type="Node3D"]
 transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, -0.00664043, 0, 0.0544499)
 
@@ -49,3 +59,17 @@ transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819
 transform = Transform3D(-1.71951, 0.479493, 0.686463, 0.3717, 1.84207, -0.355619, -0.750322, -0.186312, -1.74933, 0.127969, -0.189839, 0.101771)
 mesh = SubResource("ArrayMesh_d4hr8")
 skeleton = NodePath("")
+
+[node name="GPUParticles3D" parent="cig_1" instance=ExtResource("2_j3qoj")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.0992476, -5.21541e-09, 2.6077e-09)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="cig_1"]
+transform = Transform3D(1, 1.42496e-08, 7.12481e-09, -1.42496e-08, 1, -1.7812e-09, -7.12481e-09, 1.7812e-09, 1, -0.0915091, 0.00176675, -0.00240064)
+light_color = Color(0.770611, 0.366527, 0.0236719, 1)
+light_energy = 0.15
+light_indirect_energy = 1.401
+shadow_enabled = true
+omni_range = 0.5
+script = ExtResource("3_d4hr8")
+FlickerNoise = SubResource("NoiseTexture2D_a0ov7")
+FlickerIntensity = 0.5

@@ -36,6 +36,7 @@ grow_vertical = 2
 color = Color(0.263981, 0.29494, 0.266843, 1)
 
 [node name="Label" type="Label" parent="Background"]
+z_index = 10
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.706
@@ -46,16 +47,15 @@ offset_right = 68.688
 offset_bottom = 54.272
 theme = ExtResource("1_c0h8v")
 theme_override_font_sizes/font_size = 100
-text = "Multiplayer Stew"
+text = "Je m'appelle Cigarette"
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+z_index = -2
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.479
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 0.191956
-grow_horizontal = 0
+grow_horizontal = 2
 grow_vertical = 2
 stretch = true
 
@@ -64,7 +64,7 @@ world_3d = SubResource("World3D_quggo")
 transparent_bg = true
 handle_input_locally = false
 msaa_3d = 2
-size = Vector2i(1000, 1080)
+size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 
 [node name="MainMenuScene" parent="SubViewportContainer/SubViewport" instance=ExtResource("7_xli4m")]

@@ -4,7 +4,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0txau"]
 resource_name = "Mustard_Jar"
-transparency = 4
 albedo_texture = ExtResource("1_qhgp5")
 texture_filter = 2
 

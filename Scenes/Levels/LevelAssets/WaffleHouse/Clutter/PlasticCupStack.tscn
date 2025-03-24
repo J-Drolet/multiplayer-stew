@@ -1,11 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://dhl7e5kijerry"]
+[gd_scene load_steps=6 format=4]
 
-[ext_resource type="Texture2D" uid="uid://ycv7g41f2a2f" path="res://Assets/Models/Waffle House/Models/Quequis_House_plastic_cups.png" id="1_nmfnj"]
+[ext_resource type="Texture2D" path="res://Assets/Models/Waffle House/Models/Quequis_House_plastic_cups.png" id="1_nmfnj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t27y4"]
 resource_name = "plastic_cups"
-transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("1_nmfnj")
 texture_filter = 2
 

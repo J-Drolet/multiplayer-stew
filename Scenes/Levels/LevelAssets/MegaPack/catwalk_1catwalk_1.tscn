@@ -49,7 +49,7 @@ size = Vector3(4.00684, 1.99707, 0.103516)
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [node name="@StaticBody3D@61" type="StaticBody3D" parent="."]
-metadata/material_type = "METAL"
+metadata/material = "METAL"
 
 [node name="catwalk_1" type="MeshInstance3D" parent="@StaticBody3D@61"]
 mesh = SubResource("ArrayMesh_ilnxe")

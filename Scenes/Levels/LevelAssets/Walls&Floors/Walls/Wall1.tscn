@@ -12,7 +12,9 @@ uv1_world_triplanar = true
 texture_filter = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_ub50u"]
+lightmap_size_hint = Vector2i(24, 56)
 material = SubResource("StandardMaterial3D_sarj8")
+add_uv2 = true
 size = Vector3(4, 3, 0.1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nxd0m"]

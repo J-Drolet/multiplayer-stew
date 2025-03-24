@@ -8,9 +8,6 @@ using System.Linq;
 public partial class FootStepEmitter : RayCast3D
 {
 
-    
-    public static string AIR_NAME = "Air";
-
     [Export, ExportRequired]
     public Character Character;
     [Export, ExportRequired]
@@ -46,7 +43,7 @@ public partial class FootStepEmitter : RayCast3D
         if(LastFootProfileMaterial != null && LastFootProfileMaterial.JumpSFX.Length > 0)
         {
             AudioStream audioStream = LastFootProfileMaterial.JumpSFX[RNG.RandiRange(0, LastFootProfileMaterial.JumpSFX.Length - 1)];
-            MultiplayerAudioService.Instance.PlaySound(audioStream.ResourcePath, LevelManager.Instance.GetPath(), Multiplayer.GetUniqueId(), "SFX");
+            MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, audioStream.ResourcePath, GetPath(), Multiplayer.GetUniqueId(), "SFX");
         }
     }
 
@@ -62,7 +59,7 @@ public partial class FootStepEmitter : RayCast3D
                 if(footMaterial != null && footMaterial.LandingSFX.Length > 0)
                 {
                     AudioStream audioStream = footMaterial.LandingSFX[RNG.RandiRange(0, footMaterial.LandingSFX.Length - 1)];
-                    MultiplayerAudioService.Instance.PlaySound(audioStream.ResourcePath, LevelManager.Instance.GetPath(), Multiplayer.GetUniqueId(), "SFX");
+                    MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, audioStream.ResourcePath, GetPath(), Multiplayer.GetUniqueId(), "SFX");
                 }
                 CurDistanceTravelled = 0; // reset distance travelled on landing
                 LastPosition = GlobalPosition * XZVector;
@@ -91,7 +88,7 @@ public partial class FootStepEmitter : RayCast3D
                 }
 
                 AudioStream audioStream = stepsSfxArray[RNG.RandiRange(0, stepsSfxArray.Length - 1)];
-                MultiplayerAudioService.Instance.PlaySound(audioStream.ResourcePath, LevelManager.Instance.GetPath(), Multiplayer.GetUniqueId(), "SFX");
+                MultiplayerAudioService.Instance.Rpc(MultiplayerAudioService.MethodName.PlaySound, audioStream.ResourcePath, GetPath(), Multiplayer.GetUniqueId(), "SFX");
             }
 
         }
@@ -106,7 +103,7 @@ public partial class FootStepEmitter : RayCast3D
         if(IsColliding())
         {
             GodotObject collider = GetCollider();
-            string colliderTag = (string)collider.GetMeta("material_type", "");
+            string colliderTag = (string)collider.GetMeta("material", "");
 
             return FootProfile.StringToMaterial(colliderTag);
         }

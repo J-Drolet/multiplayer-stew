@@ -4,5 +4,5 @@
 
 [node name="MeshManipulationUtlity" type="Node3D"]
 script = ExtResource("1_5mh6l")
-ASSET_FOLDER = "res://Scenes/Levels/LevelAssets/MegaPack2/"
-UtilMode = 1
+ASSET_FOLDER = "res://Scenes/Levels/LevelAssets/WaffleHouse/Lighting/"
+UtilMode = 2

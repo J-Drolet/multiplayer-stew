@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=4]
+[gd_scene load_steps=5 format=4 uid="uid://cdi1v8o7oh2jr"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/lamp_3_on_lamp_3.png" id="1_edkhf"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/lamp_3_on_lamp_3_emission.png" id="2_3ro1q"]
+[ext_resource type="Texture2D" uid="uid://ce2lid27dwyll" path="res://Assets/Textures/Fair/lamp_3_on_lamp_3.png" id="1_edkhf"]
+[ext_resource type="Texture2D" uid="uid://bmafta6v0wtp3" path="res://Assets/Textures/Fair/lamp_3_on_lamp_3_emission.png" id="2_3ro1q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6w2f3"]
 resource_name = "lamp_3_on"
@@ -40,5 +40,6 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, -0.707613, -0.706601, 0, 0.706601, -0.707613, 0, 0.199606, 0.144322)
 light_color = Color(1, 1, 0.784314, 1)
 light_energy = 2.0
+light_bake_mode = 1
 spot_range = 10.0
 spot_angle = 50.0

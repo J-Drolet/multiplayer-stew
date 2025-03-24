@@ -37,7 +37,7 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/resizable=false
 window/stretch/mode="canvas_items"
-window/stretch/aspect="ignore"
+window/stretch/aspect="expand"
 
 [dotnet]
 
@@ -110,7 +110,7 @@ ViewScoreboard={
 3d_physics/layer_2="pickup"
 3d_physics/layer_3="hitbox"
 3d_physics/layer_4="projectile"
-3d_physics/layer_5="Layer 5"
+3d_physics/layer_5="Non-collision Geometry"
 
 [physics]
 
