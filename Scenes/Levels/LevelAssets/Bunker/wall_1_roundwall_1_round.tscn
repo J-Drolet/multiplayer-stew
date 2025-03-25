@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=4]
+[gd_scene load_steps=5 format=4 uid="uid://nsdlrcsk65eb"]
 
-[ext_resource type="Texture2D" path="res://Assets/Textures/Fair/wall_1_round_wall_6.png" id="1_mpf2j"]
+[ext_resource type="Texture2D" uid="uid://b4kkymuo4rbl0" path="res://Assets/Textures/Fair/wall_1_round_wall_6.png" id="1_mpf2j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xg6mq"]
 resource_name = "wall_6"
@@ -27,7 +27,7 @@ blend_shape_mode = 0
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wy1gx"]
 points = PackedVector3Array(1.36033, 0.11138, -2.97503, 0.102759, 4.06246, 0.0188093, 0.102759, 4.06246, -3.03246, 4.06246, 0.102352, 0.0188093, 0.214948, 0.973825, -0.0210802, 4.06246, 0.102352, -3.03246, -0.0225179, 1.86002, -2.9811, 1.86002, -0.0225179, -0.0325546, 0.214948, 0.973825, -2.99257, -0.045, 4.015, -0.0160442, 0.973285, 0.215093, -0.0208692, 4.015, -0.0450001, -2.99761, -0.0225179, 1.86002, -0.0325545, -0.0449751, 4.01498, -2.99759, 4.015, -0.0450001, -0.0160442, 1.86002, -0.0225179, -2.9811, 0.973285, 0.215093, -2.99278)
 
-[node name="@Node3D@146" type="Node3D"]
+[node name="_Node3D_146" type="Node3D"]
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
 
 [node name="@StaticBody3D@147" type="StaticBody3D" parent="."]
