@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://uoy74i0gesrj" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_ekypa"]
 [ext_resource type="PackedScene" uid="uid://chv0b14sstem5" path="res://Scenes/Projectiles/ShotgunPellet.tscn" id="2_67p85"]
-[ext_resource type="AudioStream" uid="uid://cpcaj2mn321lc" path="res://Assets/Sounds/SFX/ShotgunFire.wav" id="3_ibh0c"]
-[ext_resource type="AudioStream" uid="uid://7oiv1wlji2kh" path="res://Assets/Sounds/SFX/ShotgunUnlatch.wav" id="4_odpjs"]
-[ext_resource type="Texture2D" uid="uid://h4o23p1xwjgl" path="res://Assets/Textures/Weapons/Double_Barrel_glb_Shotgun_tex.png" id="4_v4e64"]
-[ext_resource type="AudioStream" uid="uid://cbn6kn8af1aqd" path="res://Assets/Sounds/SFX/ShotgunLoad.wav" id="5_1jm2x"]
-[ext_resource type="Texture2D" uid="uid://b2nvm6qlgdxw3" path="res://Assets/Textures/Weapons/Ammo_glb_Ammo_tex.png" id="5_mkipk"]
-[ext_resource type="AudioStream" uid="uid://bbtjx13gjcshc" path="res://Assets/Sounds/SFX/ShotgunLatch.wav" id="6_ylv44"]
+[ext_resource type="AudioStream" uid="uid://dyf64e2425cnd" path="res://Assets/Sounds/SFX/ShotgunFire.wav" id="3_ibh0c"]
+[ext_resource type="AudioStream" uid="uid://j6ddhp0k7ik2" path="res://Assets/Sounds/SFX/ShotgunUnlatch.wav" id="4_odpjs"]
+[ext_resource type="Texture2D" uid="uid://cimyblxjq77k2" path="res://Assets/Textures/Weapons/Double_Barrel_glb_Shotgun_tex.png" id="4_v4e64"]
+[ext_resource type="AudioStream" uid="uid://bv7vd4wuysfxc" path="res://Assets/Sounds/SFX/ShotgunLoad.wav" id="5_1jm2x"]
+[ext_resource type="Texture2D" uid="uid://dpmxe81eskxr7" path="res://Assets/Textures/Weapons/Ammo_glb_Ammo_tex.png" id="5_mkipk"]
+[ext_resource type="AudioStream" uid="uid://dusrix5x06j8e" path="res://Assets/Sounds/SFX/ShotgunLatch.wav" id="6_ylv44"]
 [ext_resource type="PackedScene" uid="uid://bic0xat7p13i8" path="res://Scenes/Particles/MuzzleFlash.tscn" id="9_q7434"]
 [ext_resource type="Script" uid="uid://bl1otymgjtlka" path="res://Scripts/Base/SelfDestroyingParticle.cs" id="9_x08go"]
 [ext_resource type="PackedScene" uid="uid://bjyaanpyul0bx" path="res://Scenes/Particles/ShotgunShellParticle.tscn" id="10_b4gog"]
@@ -649,26 +649,31 @@ libraries = {
 
 [node name="Body" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(-0.5, -4.37114e-08, 1.91069e-15, 0, -2.18557e-08, -0.5, 4.37114e-08, -0.5, 2.18557e-08, 0, 0.016571, -0.142085)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_km4uc")
 skeleton = NodePath("")
 
 [node name="Barrels" type="MeshInstance3D" parent="Meshes/Body"]
 transform = Transform3D(0.677858, 0, 0, 0, 0.677858, 0, 0, 0, 0.677858, 0, 0.0766358, -0.192528)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_2xcyw")
 skeleton = NodePath("")
 
 [node name="FrontHand" type="MeshInstance3D" parent="Meshes/Body/Barrels"]
 transform = Transform3D(-0.973655, -3.84359e-15, 8.51196e-08, -8.51196e-08, 1.40572e-09, -0.973655, 3.7207e-15, -0.973655, -1.40572e-09, 0.0171345, 2.37199, 0.117534)
+gi_mode = 2
 mesh = SubResource("SphereMesh_1tuyb")
 skeleton = NodePath("../../AnimationPlayer")
 
 [node name="Trigger" type="MeshInstance3D" parent="Meshes/Body"]
 transform = Transform3D(0.15355, 0, 0, 0, 0.0483988, 0.0306611, 0, -0.145723, 0.0101834, 0, -0.946951, -0.0123682)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_otmnp")
 skeleton = NodePath("")
 
 [node name="BackHand" type="MeshInstance3D" parent="Meshes/Body"]
 transform = Transform3D(-0.66, 5.08778e-21, 5.7699e-08, -5.7699e-08, -2.88495e-08, -0.66, 2.52211e-15, -0.66, 2.88495e-08, -0.00580733, -1.40013, 0.232012)
+gi_mode = 2
 mesh = SubResource("SphereMesh_1tuyb")
 skeleton = NodePath("../../AnimationPlayer")
 
@@ -685,17 +690,20 @@ ParticleSpawnMode = 0
 visible = false
 light_color = Color(1, 0.572549, 0.227451, 1)
 light_energy = 5.0
+shadow_enabled = true
 omni_range = 15.0
 
 [node name="Shells" type="Node3D" parent="Meshes"]
 
 [node name="Shotgun_shell_1" type="MeshInstance3D" parent="Meshes/Shells"]
 transform = Transform3D(0.038, 0, 0, 0, -3.14939e-07, 0.038, 0, -0.087, -1.3756e-07, -0.054, 0.245, 0.01)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_cd3f6")
 skeleton = NodePath("")
 
 [node name="Shotgun_shell_2" type="MeshInstance3D" parent="Meshes/Shells"]
 transform = Transform3D(0.038, 0, 0, 0, -3.14939e-07, 0.038, 0, -0.087, -1.3756e-07, 0.054, 0.245, 0.01)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_cd3f6")
 skeleton = NodePath("")
 

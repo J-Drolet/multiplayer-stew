@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=4 uid="uid://dkd00oegnv1s8"]
 
-[ext_resource type="Texture2D" uid="uid://ndibxcnbyrid" path="res://Assets/Textures/Weapons/Uzi_glb_Uzi_Tex.png" id="1_vi47m"]
+[ext_resource type="Texture2D" uid="uid://o0c7jaah4uaf" path="res://Assets/Textures/Weapons/Uzi_glb_Uzi_Tex.png" id="1_vi47m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7hig3"]
 resource_name = "Uzi"
@@ -178,6 +178,7 @@ transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 
 [node name="Body" type="MeshInstance3D" parent="Scale"]
 transform = Transform3D(-0.177498, 0, -1.55174e-08, 0, 0.177498, 0, 1.55174e-08, 0, -0.177498, 0, 0.0700675, -0.0887221)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_jy31b")
 skeleton = NodePath("")
 

@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" uid="uid://uoy74i0gesrj" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_owfg8"]
 [ext_resource type="PackedScene" uid="uid://de6ynjcj4qnom" path="res://Scenes/Projectiles/Submachine gun bullet.tscn" id="2_lm1gr"]
-[ext_resource type="AudioStream" uid="uid://cmyml6f07k1mi" path="res://Assets/Sounds/SFX/SmgClick.wav" id="3_wb17l"]
-[ext_resource type="Texture2D" uid="uid://ndibxcnbyrid" path="res://Assets/Textures/Weapons/Uzi_glb_Uzi_Tex.png" id="4_423su"]
-[ext_resource type="AudioStream" uid="uid://bx33pgdldlcuu" path="res://Assets/Sounds/SFX/SmgFire.wav" id="5_r8y5g"]
+[ext_resource type="AudioStream" uid="uid://vv13wj56o404" path="res://Assets/Sounds/SFX/SmgClick.wav" id="3_wb17l"]
+[ext_resource type="Texture2D" uid="uid://o0c7jaah4uaf" path="res://Assets/Textures/Weapons/Uzi_glb_Uzi_Tex.png" id="4_423su"]
+[ext_resource type="AudioStream" uid="uid://ch5y8j76ag7bn" path="res://Assets/Sounds/SFX/SmgFire.wav" id="5_r8y5g"]
 [ext_resource type="PackedScene" uid="uid://bic0xat7p13i8" path="res://Scenes/Particles/MuzzleFlash.tscn" id="6_7tdwr"]
-[ext_resource type="AudioStream" uid="uid://4t4ernk4fu31" path="res://Assets/Sounds/SFX/SmgUnload.wav" id="6_thpou"]
-[ext_resource type="AudioStream" uid="uid://cxrdyusd8nnr" path="res://Assets/Sounds/SFX/SmgLoad.wav" id="7_sdlpq"]
-[ext_resource type="AudioStream" uid="uid://d35o2e8e1c2hp" path="res://Assets/Sounds/SFX/SmgSlide.wav" id="8_4ihlr"]
+[ext_resource type="AudioStream" uid="uid://cvteofwn8wnpb" path="res://Assets/Sounds/SFX/SmgUnload.wav" id="6_thpou"]
+[ext_resource type="AudioStream" uid="uid://8qpyt6vgcgf0" path="res://Assets/Sounds/SFX/SmgLoad.wav" id="7_sdlpq"]
+[ext_resource type="AudioStream" uid="uid://5huqbqc3ymj5" path="res://Assets/Sounds/SFX/SmgSlide.wav" id="8_4ihlr"]
 [ext_resource type="Script" uid="uid://bl1otymgjtlka" path="res://Scripts/Base/SelfDestroyingParticle.cs" id="9_372hq"]
 [ext_resource type="PackedScene" uid="uid://5ca6e2gg4dc1" path="res://Scenes/Particles/SmgShellParticle.tscn" id="10_74ii5"]
 
@@ -572,26 +572,31 @@ ClickSound = ExtResource("3_wb17l")
 
 [node name="Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.177498, 0, -1.55174e-08, 0, 0.177498, 0, 1.55174e-08, 0, -0.177498, 0, 0.0700675, -0.0887221)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_u2ki2")
 skeleton = NodePath("")
 
 [node name="ChargingHandle" type="MeshInstance3D" parent="Body"]
 transform = Transform3D(0.185328, 0, 0, 0, 0.107652, 0, -1.77636e-15, 0, 1.15694, 0, 1.8392, -0.66121)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_thiyj")
 skeleton = NodePath("")
 
 [node name="Mag" type="MeshInstance3D" parent="Body"]
 transform = Transform3D(0.17107, 0, 0, 0, 1.28912, 0, 0, 0, 0.340383, -0.0300148, -0.827813, -0.553594)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_5ii0n")
 skeleton = NodePath("")
 
 [node name="Slide" type="MeshInstance3D" parent="Body"]
 transform = Transform3D(0.185328, 0, 0, 0, 0.107652, 0, 0, 0, 1.15694, 0, 1.8392, -0.660946)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_g46eu")
 skeleton = NodePath("")
 
 [node name="Trigger" type="MeshInstance3D" parent="Body"]
 transform = Transform3D(0.0452191, 0, 0, 0, 0.368654, 0, 0, 0, 0.0663822, 0, 0, 0)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_5ngv0")
 skeleton = NodePath("")
 
@@ -608,6 +613,7 @@ ParticleSpawnMode = 0
 visible = false
 light_color = Color(1, 0.572549, 0.227451, 1)
 light_energy = 3.0
+shadow_enabled = true
 omni_range = 7.5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -617,12 +623,14 @@ libraries = {
 
 [node name="HandMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, -0.0527012, 0.0262967)
+gi_mode = 2
 mesh = SubResource("SphereMesh_sshab")
 skeleton = NodePath("../AnimationPlayer")
 
 [node name="ReloadHand" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, -0.0527012, 0.0262967)
 visible = false
+gi_mode = 2
 mesh = SubResource("SphereMesh_sshab")
 skeleton = NodePath("../AnimationPlayer")
 

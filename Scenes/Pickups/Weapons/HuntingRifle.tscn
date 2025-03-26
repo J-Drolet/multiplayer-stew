@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=4 uid="uid://deb6m1u2resl6"]
 
-[ext_resource type="Texture2D" uid="uid://cc57dwj3u3ksg" path="res://Assets/Textures/Weapons/Rifle_Rifle.png" id="1_hiumt"]
+[ext_resource type="Texture2D" uid="uid://cwgatv0pl7vvk" path="res://Assets/Textures/Weapons/Rifle_Rifle.png" id="1_hiumt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8aokh"]
 resource_name = "Rifle"
@@ -214,30 +214,36 @@ shadow_mesh = SubResource("ArrayMesh_hgrmg")
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.202366, 0)
 
 [node name="GunBase" type="MeshInstance3D" parent="Scale"]
+gi_mode = 2
 mesh = SubResource("ArrayMesh_w6ske")
 skeleton = NodePath("")
 
 [node name="Barrel" type="MeshInstance3D" parent="Scale/GunBase"]
 transform = Transform3D(-0.309017, -8.9407e-08, 0.951057, -0.951057, -2.38419e-07, -0.309017, 2.08616e-07, -1, -1.19209e-07, 0, 0.0649956, -1.16339)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_sfi35")
 skeleton = NodePath("")
 
 [node name="Chamber" type="MeshInstance3D" parent="Scale/GunBase"]
 transform = Transform3D(-0.309017, -1.19209e-07, 0.951057, -0.951057, -1.19209e-07, -0.309017, 1.19209e-07, -1, -1.19209e-07, 0, 0.0649956, 0.203087)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_idlhl")
 skeleton = NodePath("")
 
 [node name="Bolt" type="MeshInstance3D" parent="Scale/GunBase/Chamber"]
 transform = Transform3D(1, 7.10542e-15, -4.3914e-15, -7.10542e-15, 1, 7.10542e-15, 4.3914e-15, -7.10542e-15, 1, 2.6077e-08, -0.166383, -1.30385e-08)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_ukunr")
 skeleton = NodePath("")
 
 [node name="Mag" type="MeshInstance3D" parent="Scale/GunBase"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.275213, 0.233232)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_who8a")
 skeleton = NodePath("")
 
 [node name="Thing" type="MeshInstance3D" parent="Scale/GunBase"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, -0.0352841, -1.86379)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_q2dww")
 skeleton = NodePath("")

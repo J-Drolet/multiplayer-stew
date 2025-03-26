@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" uid="uid://uoy74i0gesrj" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_22ate"]
 [ext_resource type="PackedScene" uid="uid://diqolrhp5s6sw" path="res://Scenes/Projectiles/BoltyBullet.tscn" id="2_1wu46"]
-[ext_resource type="AudioStream" uid="uid://ctonyyekn7was" path="res://Assets/Sounds/SFX/BoltClick.wav" id="3_nqx7o"]
-[ext_resource type="AudioStream" uid="uid://bx428q7d35s7r" path="res://Assets/Sounds/SFX/BoltFire.wav" id="4_gwq22"]
-[ext_resource type="AudioStream" uid="uid://dnklbm13sycta" path="res://Assets/Sounds/SFX/CustomBoltRackLower.wav" id="5_b4lha"]
-[ext_resource type="AudioStream" uid="uid://cqqynqr7ok0ol" path="res://Assets/Sounds/SFX/BoltRack1.wav" id="6_5a56a"]
-[ext_resource type="AudioStream" uid="uid://dsngiqag60doy" path="res://Assets/Sounds/SFX/BoltUnload.wav" id="7_ljmdi"]
-[ext_resource type="AudioStream" uid="uid://dlufjct4osr82" path="res://Assets/Sounds/SFX/BoltLoad.wav" id="8_vceak"]
-[ext_resource type="AudioStream" uid="uid://fhidnaoaxl2w" path="res://Assets/Sounds/SFX/BoltRack2.wav" id="9_akfsu"]
-[ext_resource type="Texture2D" uid="uid://cc57dwj3u3ksg" path="res://Assets/Textures/Weapons/Rifle_Rifle.png" id="10_b76cq"]
+[ext_resource type="AudioStream" uid="uid://dtitilcjanjym" path="res://Assets/Sounds/SFX/BoltClick.wav" id="3_nqx7o"]
+[ext_resource type="AudioStream" uid="uid://dyjig28ytx0cy" path="res://Assets/Sounds/SFX/BoltFire.wav" id="4_gwq22"]
+[ext_resource type="AudioStream" uid="uid://ffjesj7gp0vv" path="res://Assets/Sounds/SFX/CustomBoltRackLower.wav" id="5_b4lha"]
+[ext_resource type="AudioStream" uid="uid://c4wcbglkmkgcv" path="res://Assets/Sounds/SFX/BoltRack1.wav" id="6_5a56a"]
+[ext_resource type="AudioStream" uid="uid://dbhaqed3xhxg6" path="res://Assets/Sounds/SFX/BoltUnload.wav" id="7_ljmdi"]
+[ext_resource type="AudioStream" uid="uid://cjlg6xkryy0yi" path="res://Assets/Sounds/SFX/BoltLoad.wav" id="8_vceak"]
+[ext_resource type="AudioStream" uid="uid://csdlgnlh7rc1w" path="res://Assets/Sounds/SFX/BoltRack2.wav" id="9_akfsu"]
+[ext_resource type="Texture2D" uid="uid://cwgatv0pl7vvk" path="res://Assets/Textures/Weapons/Rifle_Rifle.png" id="10_b76cq"]
 [ext_resource type="Script" uid="uid://bl1otymgjtlka" path="res://Scripts/Base/SelfDestroyingParticle.cs" id="11_gewaw"]
 [ext_resource type="PackedScene" uid="uid://bic0xat7p13i8" path="res://Scenes/Particles/MuzzleFlash.tscn" id="12_0nu6s"]
 [ext_resource type="PackedScene" uid="uid://ciaqkt6kkv2l0" path="res://Scenes/Particles/RifleShellParticle.tscn" id="12_63sm6"]
@@ -593,41 +593,49 @@ libraries = {
 }
 
 [node name="GunBase" type="MeshInstance3D" parent="."]
+gi_mode = 2
 mesh = SubResource("ArrayMesh_rtqet")
 skeleton = NodePath("")
 
 [node name="HandMesh2" type="MeshInstance3D" parent="GunBase"]
 transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, -0.0546447, -0.172621, -1.10893)
+gi_mode = 2
 mesh = SubResource("SphereMesh_1tuyb")
 skeleton = NodePath("")
 
 [node name="HandMesh" type="MeshInstance3D" parent="GunBase"]
 transform = Transform3D(0.33, 0, 0, 0, 0.311216, 0.109749, 0, -0.109749, 0.311216, 0.0565529, -0.345726, 0.611887)
+gi_mode = 2
 mesh = SubResource("SphereMesh_1tuyb")
 skeleton = NodePath("")
 
 [node name="Barrel" type="MeshInstance3D" parent="GunBase"]
 transform = Transform3D(-0.309017, -8.9407e-08, 0.951057, -0.951057, -2.38419e-07, -0.309017, 2.08616e-07, -1, -1.19209e-07, 0, 0.0649956, -1.16339)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_wspij")
 skeleton = NodePath("")
 
 [node name="Chamber" type="MeshInstance3D" parent="GunBase"]
 transform = Transform3D(-0.309017, -1.19209e-07, 0.951057, -0.951057, -1.19209e-07, -0.309017, 1.19209e-07, -1, -1.19209e-07, 0, 0.0649956, 0.203087)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_s7hk8")
 skeleton = NodePath("")
 
 [node name="Bolt" type="MeshInstance3D" parent="GunBase/Chamber"]
 transform = Transform3D(1, 7.10542e-15, -4.3914e-15, -7.10542e-15, 1, 7.10542e-15, 4.3914e-15, -7.10542e-15, 1, 2.6077e-08, -0.166383, -1.30385e-08)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_p6q5q")
 skeleton = NodePath("")
 
 [node name="Mag" type="MeshInstance3D" parent="GunBase"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.275213, 0.233232)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_iicda")
 skeleton = NodePath("")
 
 [node name="Thing" type="MeshInstance3D" parent="GunBase"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, -0.0352841, -1.86379)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_mf585")
 skeleton = NodePath("")
 
@@ -644,6 +652,7 @@ ParticleSpawnMode = 0
 visible = false
 light_color = Color(1, 0.572549, 0.227451, 1)
 light_energy = 5.0
+shadow_enabled = true
 omni_range = 15.0
 
 [node name="SelfDestroyingShell" type="Node3D" parent="."]
