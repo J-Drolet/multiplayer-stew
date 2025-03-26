@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://5yutkv0j58u4" path="res://Scripts/Character/Character.cs" id="1_n6eoi"]
 [ext_resource type="Script" uid="uid://c38dblfxtao7" path="res://Scripts/Base/DamageArea.cs" id="2_4301p"]
-[ext_resource type="AudioStream" uid="uid://dbvro82au5vr5" path="res://Assets/Sounds/SFX/Voice B Pain Grunt 002.wav" id="2_b0fus"]
-[ext_resource type="PackedScene" path="res://Scenes/Particles/SmokeParticles.tscn" id="5_a5ess"]
+[ext_resource type="AudioStream" uid="uid://b4o2ftef65g1l" path="res://Assets/Sounds/SFX/Voice B Pain Grunt 002.wav" id="2_b0fus"]
+[ext_resource type="PackedScene" uid="uid://d2nepwypwjil2" path="res://Scenes/Particles/SmokeParticles.tscn" id="5_a5ess"]
 [ext_resource type="PackedScene" uid="uid://cslx7c34bxb3h" path="res://Scenes/UI/Standalone Components/PowerPack.tscn" id="5_ejsiy"]
 [ext_resource type="Script" uid="uid://d0has0xre837m" path="res://Scripts/Character/FootSteps/FootStepEmitter.cs" id="6_2mse5"]
 [ext_resource type="Resource" uid="uid://dj1lnp8rxjxvw" path="res://Assets/FootProfiles/Shoes.tres" id="7_reotu"]
@@ -28,6 +28,9 @@ noise = SubResource("FastNoiseLite_nytcm")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wlyuj"]
 resource_name = "Top"
 render_priority = 1
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
 albedo_color = Color(0.877616, 0.877616, 0.877616, 1)
 metallic_specular = 0.0
 normal_enabled = true
@@ -36,6 +39,9 @@ normal_texture = SubResource("NoiseTexture2D_ejsiy")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65fk3"]
 resource_name = "Bottom"
 render_priority = 1
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
 albedo_color = Color(0.744422, 0.436063, 0.0615597, 1)
 metallic_specular = 0.0
 normal_enabled = true
@@ -46,6 +52,9 @@ normal_texture = SubResource("NoiseTexture2D_ejsiy")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxeyr"]
 resource_name = "End"
 render_priority = 1
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
 albedo_color = Color(0.176132, 0.0839063, 0.0228969, 1)
 normal_texture = SubResource("NoiseTexture2D_2mse5")
 
