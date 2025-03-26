@@ -28,15 +28,16 @@ noise = SubResource("FastNoiseLite_nytcm")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wlyuj"]
 resource_name = "Top"
 render_priority = 1
-roughness = 0.867391
+albedo_color = Color(0.877616, 0.877616, 0.877616, 1)
+metallic_specular = 0.0
 normal_enabled = true
 normal_texture = SubResource("NoiseTexture2D_ejsiy")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65fk3"]
 resource_name = "Bottom"
 render_priority = 1
-albedo_color = Color(0.906715, 0.54389, 0.129084, 1)
-roughness = 0.873913
+albedo_color = Color(0.744422, 0.436063, 0.0615597, 1)
+metallic_specular = 0.0
 normal_enabled = true
 normal_texture = SubResource("NoiseTexture2D_ejsiy")
 
@@ -338,7 +339,7 @@ shape = SubResource("CylinderShape3D_2mse5")
 
 [node name="CharacterMesh" type="MeshInstance3D" parent="CharacterVisuals"]
 transform = Transform3D(0.16289, 0, 0, 0, 0.990428, 0, 0, 0, 0.16289, 0, 1, 0)
-layers = 32
+gi_mode = 2
 mesh = SubResource("ArrayMesh_nytcm")
 skeleton = NodePath("")
 
@@ -356,7 +357,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.0409511)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.577425, -0.103255)
-cull_mask = 1048573
+cull_mask = 1048541
 
 [node name="Hand" type="Node3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.368436, -0.486425, -1.21339)

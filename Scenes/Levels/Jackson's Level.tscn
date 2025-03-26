@@ -123,7 +123,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/poster_cx_12poster_cx_12.tscn" id="121_aosf6"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/clipboard_mx_1clipboard_mx_1.tscn" id="122_j64l4"]
 [ext_resource type="PackedScene" uid="uid://c5jrbsxm7l72n" path="res://Scenes/Levels/LevelAssets/Extras/Toilet_PaperMisc.tscn" id="123_edgai"]
-[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/beam_1beam_1.tscn" id="123_gtb6o"]
+[ext_resource type="PackedScene" uid="uid://bhg3mfoqt55ua" path="res://Scenes/Levels/LevelAssets/MegaPack/beam_1beam_1.tscn" id="123_gtb6o"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_rx_1floor_ceiling_rx_1.tscn" id="124_0jyr2"]
 [ext_resource type="PackedScene" uid="uid://bji68bhxbkk3i" path="res://Scenes/Levels/LevelAssets/MegaPack2/platform_b_handrail_1platform_b_handrail_1.tscn" id="124_nd62l"]
 [ext_resource type="PackedScene" uid="uid://bpodiysncqwlr" path="res://Scenes/Levels/LevelAssets/Extras/Poster_MissingMisc.tscn" id="124_u37gd"]
@@ -158,7 +158,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/Bunker/wall_1_plainwall_1_plain.tscn" id="154_asth5"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack2/floor_ceiling_hr_4floor_ceiling_hr_4.tscn" id="156_duc1y"]
 [ext_resource type="PackedScene" uid="uid://rqtoi5uj4wgv" path="res://Scenes/Levels/LevelAssets/Extras/Radio_001Misc.tscn" id="157_l07n6"]
-[ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/lamp_2_onlamp_2_on.tscn" id="157_uryc5"]
+[ext_resource type="PackedScene" uid="uid://wr48m4pirm2a" path="res://Scenes/Levels/LevelAssets/MegaPack/lamp_2_onlamp_2_on.tscn" id="157_uryc5"]
 [ext_resource type="PackedScene" uid="uid://cccga77osql1n" path="res://Scenes/Levels/LevelAssets/MegaPack2/bolt_mx_1bolt_mx_1.tscn" id="157_ysqkc"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/ModularFPS/metal_barrel_1metal_barrel_1.tscn" id="158_0dmvx"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/LevelAssets/MegaPack/lamp_2_offlamp_2_off.tscn" id="158_pebcw"]
@@ -401,14 +401,14 @@ noise = SubResource("FastNoiseLite_nytcm")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wlyuj"]
 resource_name = "Top"
 render_priority = 1
-roughness = 0.867391
+albedo_color = Color(0.920995, 0.920995, 0.920995, 1)
 normal_enabled = true
 normal_texture = SubResource("NoiseTexture2D_ejsiy")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65fk3"]
 resource_name = "Bottom"
 render_priority = 1
-albedo_color = Color(0.906715, 0.54389, 0.129084, 1)
+albedo_color = Color(0.665923, 0.369016, 0.0217365, 1)
 roughness = 0.873913
 normal_enabled = true
 normal_texture = SubResource("NoiseTexture2D_ejsiy")
@@ -507,6 +507,58 @@ PlayerScene = ExtResource("2_auvs1")
 environment = SubResource("Environment_xaw54")
 
 [node name="Lights" type="Node3D" parent="."]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.80433, 7.58214, -20.2176)
+light_color = Color(0.901961, 0.886275, 0.796078, 1)
+light_energy = 5.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 50.0
+distance_fade_shadow = 10.0
+spot_range = 12.3656
+spot_attenuation = 0.32
+spot_angle = 47.94
+spot_angle_attenuation = 0.450623
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.80433, 7.58214, 9.71074)
+light_color = Color(0.901961, 0.886275, 0.796078, 1)
+light_energy = 3.8
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 50.0
+distance_fade_shadow = 10.0
+spot_range = 11.5364
+spot_attenuation = 0.32
+spot_angle = 46.4063
+spot_angle_attenuation = 0.450623
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 16.1594, 7.58214, -0.189112)
+light_color = Color(0.901961, 0.886275, 0.796078, 1)
+light_energy = 3.8
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 50.0
+distance_fade_shadow = 10.0
+spot_range = 11.5364
+spot_attenuation = 0.32
+spot_angle = 46.4063
+spot_angle_attenuation = 0.450623
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -9.25609, 7.69994, -0.584852)
+light_color = Color(0.901961, 0.886275, 0.796078, 1)
+light_energy = 3.8
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 50.0
+distance_fade_shadow = 10.0
+spot_range = 11.5364
+spot_attenuation = 0.32
+spot_angle = 46.4063
+spot_angle_attenuation = 0.450623
 
 [node name="Floor" type="Node3D" parent="."]
 
@@ -1531,8 +1583,11 @@ transform = Transform3D(-0.141281, -0.989968, 1.98211e-08, 2.65491e-07, -5.79109
 
 [node name="SpotLight3D" type="SpotLight3D" parent="flashlight_1flashlight_1_tscn"]
 transform = Transform3D(0.0989221, 0.0242411, -0.994801, -0.940472, 0.328944, -0.085504, 0.32516, 0.944038, 0.0553378, 0.235693, 0.0007267, -0.0843006)
-visible = false
 light_energy = 11.21
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 50.0
+distance_fade_shadow = 10.0
 spot_range = 16.1783
 
 [node name="cassette_tape_1cassette_tape_1_tscn" parent="." instance=ExtResource("71_bv3g2")]
@@ -5247,9 +5302,6 @@ transform = Transform3D(0.52969, -0.401342, 0.00870449, -0.0087045, -0.0258906, 
 [node name="wooden_crate_hx_1_1wooden_crate_hx_1_1_tscn2" parent="." instance=ExtResource("165_83inw")]
 transform = Transform3D(0.517943, -0.21521, 0.00276995, -0.00276996, -0.0138832, -0.560702, 0.21521, 0.517764, -0.0138832, -16.1663, 7.92143, -0.300134)
 
-[node name="lamp_mx_1_onlamp_mx_1_on_tscn2" parent="." instance=ExtResource("159_pgahi")]
-transform = Transform3D(-1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -16.572, 6.81303, -1.98879)
-
 [node name="jerrycan_mx_1jerrycan_mx_1_tscn" parent="." instance=ExtResource("187_fflhd")]
 transform = Transform3D(0.983195, 0.182557, 2.46742e-08, 3.11849e-08, -3.27933e-08, -1, -0.182557, 0.983195, -3.79352e-08, -16.5618, 5.0317, 2.29282)
 
@@ -7474,6 +7526,30 @@ transform = Transform3D(1, -1.74846e-07, 7.64274e-15, 0, -4.37114e-08, -1, 1.748
 [node name="ceiling_lamp_1_onceiling_lamp_1_on_tscn197" parent="." instance=ExtResource("80_ltegg")]
 transform = Transform3D(1, -1.74846e-07, 7.64274e-15, 0, -4.37114e-08, -1, 1.74846e-07, 1, -4.37114e-08, 24, 8, 14)
 
+[node name="ceiling_lamp_1_onceiling_lamp_1_on_tscn210" parent="." instance=ExtResource("80_ltegg")]
+transform = Transform3D(1, -1.74846e-07, 7.64274e-15, 0, -4.37114e-08, -1, 1.74846e-07, 1, -4.37114e-08, 24.5, 8, 23.2188)
+
+[node name="ceiling_lamp_1_onceiling_lamp_1_on_tscn211" parent="." instance=ExtResource("80_ltegg")]
+transform = Transform3D(1, -1.74846e-07, 7.64274e-15, 0, -4.37114e-08, -1, 1.74846e-07, 1, -4.37114e-08, 24.5, 8, 24.2188)
+
+[node name="ceiling_lamp_1_onceiling_lamp_1_on_tscn212" parent="." instance=ExtResource("80_ltegg")]
+transform = Transform3D(1, -1.74846e-07, 7.64274e-15, 0, -4.37114e-08, -1, 1.74846e-07, 1, -4.37114e-08, 24.5, 8, 19.7188)
+
+[node name="ceiling_lamp_1_onceiling_lamp_1_on_tscn213" parent="." instance=ExtResource("80_ltegg")]
+transform = Transform3D(1, -1.74846e-07, 7.64274e-15, 0, -4.37114e-08, -1, 1.74846e-07, 1, -4.37114e-08, 24.5, 8, 20.7188)
+
+[node name="ceiling_lamp_1_onceiling_lamp_1_on_tscn214" parent="." instance=ExtResource("80_ltegg")]
+transform = Transform3D(1, -1.74846e-07, 7.64274e-15, 0, -4.37114e-08, -1, 1.74846e-07, 1, -4.37114e-08, 20.5, 8, 23.2188)
+
+[node name="ceiling_lamp_1_onceiling_lamp_1_on_tscn215" parent="." instance=ExtResource("80_ltegg")]
+transform = Transform3D(1, -1.74846e-07, 7.64274e-15, 0, -4.37114e-08, -1, 1.74846e-07, 1, -4.37114e-08, 20.5, 8, 24.2188)
+
+[node name="ceiling_lamp_1_onceiling_lamp_1_on_tscn216" parent="." instance=ExtResource("80_ltegg")]
+transform = Transform3D(1, -1.74846e-07, 7.64274e-15, 0, -4.37114e-08, -1, 1.74846e-07, 1, -4.37114e-08, 20.5, 8, 19.7188)
+
+[node name="ceiling_lamp_1_onceiling_lamp_1_on_tscn217" parent="." instance=ExtResource("80_ltegg")]
+transform = Transform3D(1, -1.74846e-07, 7.64274e-15, 0, -4.37114e-08, -1, 1.74846e-07, 1, -4.37114e-08, 20.5, 8, 20.7188)
+
 [node name="ceiling_lamp_1_onceiling_lamp_1_on_tscn198" parent="." instance=ExtResource("80_ltegg")]
 transform = Transform3D(1, -1.74846e-07, 7.64274e-15, 0, -4.37114e-08, -1, 1.74846e-07, 1, -4.37114e-08, 20, 8, 14)
 
@@ -7773,6 +7849,24 @@ transform = Transform3D(1, -6.11959e-07, 4.37114e-08, 4.37114e-08, -8.74228e-08,
 
 [node name="ceiling_lamp_1_onceiling_lamp_1_on_tscn305" parent="." instance=ExtResource("80_ltegg")]
 transform = Transform3D(1, -6.11959e-07, 4.37114e-08, 4.37114e-08, -8.74228e-08, -1, 6.11959e-07, 1, -8.74228e-08, 16, 8, 4)
+
+[node name="ceiling_lamp_1_onceiling_lamp_1_on_tscn312" parent="." instance=ExtResource("80_ltegg")]
+transform = Transform3D(1, -6.11959e-07, 4.37114e-08, 4.37114e-08, -8.74228e-08, -1, 6.11959e-07, 1, -8.74228e-08, 12, 8, -4)
+
+[node name="ceiling_lamp_1_onceiling_lamp_1_on_tscn313" parent="." instance=ExtResource("80_ltegg")]
+transform = Transform3D(1, -6.11959e-07, 4.37114e-08, 4.37114e-08, -8.74228e-08, -1, 6.11959e-07, 1, -8.74228e-08, 12, 8, -3)
+
+[node name="ceiling_lamp_1_onceiling_lamp_1_on_tscn314" parent="." instance=ExtResource("80_ltegg")]
+transform = Transform3D(1, -6.11959e-07, 4.37114e-08, 4.37114e-08, -8.74228e-08, -1, 6.11959e-07, 1, -8.74228e-08, 12, 8, 0)
+
+[node name="ceiling_lamp_1_onceiling_lamp_1_on_tscn315" parent="." instance=ExtResource("80_ltegg")]
+transform = Transform3D(1, -6.11959e-07, 4.37114e-08, 4.37114e-08, -8.74228e-08, -1, 6.11959e-07, 1, -8.74228e-08, 12, 8, 1)
+
+[node name="ceiling_lamp_1_onceiling_lamp_1_on_tscn316" parent="." instance=ExtResource("80_ltegg")]
+transform = Transform3D(1, -6.11959e-07, 4.37114e-08, 4.37114e-08, -8.74228e-08, -1, 6.11959e-07, 1, -8.74228e-08, 12, 8, 5)
+
+[node name="ceiling_lamp_1_onceiling_lamp_1_on_tscn317" parent="." instance=ExtResource("80_ltegg")]
+transform = Transform3D(1, -6.11959e-07, 4.37114e-08, 4.37114e-08, -8.74228e-08, -1, 6.11959e-07, 1, -8.74228e-08, 12, 8, 4)
 
 [node name="ceiling_lamp_1_onceiling_lamp_1_on_tscn306" parent="." instance=ExtResource("80_ltegg")]
 transform = Transform3D(1, -6.11959e-07, 4.37114e-08, 4.37114e-08, -8.74228e-08, -1, 6.11959e-07, 1, -8.74228e-08, 20, 8, -3)
@@ -11668,7 +11762,10 @@ transform = Transform3D(-0.860348, 0.509706, -8.66645e-08, 6.17809e-08, -6.57465
 
 [node name="SpotLight3D" type="SpotLight3D" parent="flashlight_1flashlight_1_tscn5"]
 transform = Transform3D(0.145146, 0.169162, -0.974843, -0.470509, 0.878541, 0.082396, 0.870376, 0.446712, 0.207109, 0.230605, -0.00297165, -0.109213)
-visible = false
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 50.0
+distance_fade_shadow = 10.0
 
 [node name="canned_food_2canned_food_2_tscn4" parent="." instance=ExtResource("275_t10gb")]
 transform = Transform3D(0.532684, -0.846314, 3.69936e-08, 0, -4.37114e-08, -1, 0.846314, 0.532684, -2.32844e-08, -11.1183, 3.40446, -11.7329)
@@ -12179,9 +12276,11 @@ transform = Transform3D(-0.890113, 0.455739, -1.9921e-08, 0, -4.37114e-08, -1, -
 
 [node name="SpotLight3D" type="SpotLight3D" parent="flashlight_1flashlight_1_tscn6"]
 transform = Transform3D(0.179546, -0.169663, -0.969009, 0.560293, 0.827278, -0.0410315, 0.808601, -0.535561, 0.243596, 0.229172, -0.00183868, -0.135374)
-visible = false
 light_energy = 3.748
 shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 50.0
+distance_fade_shadow = 10.0
 spot_range = 5.45939
 spot_angle = 54.7304
 
@@ -12243,13 +12342,172 @@ transform = Transform3D(0.678511, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08,
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, -1.19209e-07, -11.5)
 
 [node name="CharacterMesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.16289, 0, 0, 0, 0.990428, 0, 0, 0, 0.16289, 7.6141, 1.07711, -8.73235)
-layers = 32
+transform = Transform3D(0.16289, 0, 0, 0, 0.990428, 0, 0, 0, 0.16289, -12.0543, 6.25245, -8.80984)
+visible = false
 gi_mode = 2
 mesh = SubResource("ArrayMesh_ludxl")
 skeleton = NodePath("")
 
+[node name="lamp_mx_1_onlamp_mx_1_on_tscn4" parent="." instance=ExtResource("159_pgahi")]
+transform = Transform3D(-1, -2.02076e-15, -1.50996e-07, -2.84217e-14, 1, 1.74846e-07, 1.50996e-07, 1.74846e-07, -1, 14.0034, 2.92894, 5.77163)
+
+[node name="lamp_mx_1_onlamp_mx_1_on_tscn5" parent="." instance=ExtResource("159_pgahi")]
+transform = Transform3D(-1, -2.02076e-15, -1.50996e-07, -2.84217e-14, 1, 1.74846e-07, 1.50996e-07, 1.74846e-07, -1, 18, 2.91125, 5.77137)
+
+[node name="lamp_mx_1_onlamp_mx_1_on_tscn6" parent="." instance=ExtResource("159_pgahi")]
+transform = Transform3D(-1, -2.02076e-15, -1.50996e-07, -2.84217e-14, 1, 1.74846e-07, 1.50996e-07, 1.74846e-07, -1, 21.9843, 2.8557, 5.77082)
+
+[node name="lamp_mx_1_onlamp_mx_1_on_tscn7" parent="." instance=ExtResource("159_pgahi")]
+transform = Transform3D(-1, -2.02076e-15, -1.50996e-07, -2.84217e-14, 1, 1.74846e-07, 1.50996e-07, 1.74846e-07, -1, 9.99788, 2.90347, 5.85132)
+
+[node name="lamp_mx_1_onlamp_mx_1_on_tscn8" parent="." instance=ExtResource("159_pgahi")]
+transform = Transform3D(1, 2.84217e-14, -2.84217e-14, -2.84217e-14, 1, 1.74846e-07, 2.84217e-14, -1.74846e-07, 1, 9.98252, 2.87462, -5.77143)
+
+[node name="lamp_mx_1_onlamp_mx_1_on_tscn9" parent="." instance=ExtResource("159_pgahi")]
+transform = Transform3D(1, 2.84217e-14, -2.84217e-14, -2.84217e-14, 1, 1.74846e-07, 2.84217e-14, -1.74846e-07, 1, 13.9613, 2.87544, -5.77272)
+
+[node name="lamp_mx_1_onlamp_mx_1_on_tscn10" parent="." instance=ExtResource("159_pgahi")]
+transform = Transform3D(1, 2.84217e-14, -2.84217e-14, -2.84217e-14, 1, 1.74846e-07, 2.84217e-14, -1.74846e-07, 1, 17.9778, 2.89518, -5.77226)
+
+[node name="lamp_mx_1_onlamp_mx_1_on_tscn11" parent="." instance=ExtResource("159_pgahi")]
+transform = Transform3D(1, 1.74846e-07, 2.14926e-15, -1.74846e-07, 1, 1.74846e-07, 2.84217e-14, -1.74846e-07, 1, 21.9914, 2.90064, -5.7716)
+
+[node name="lamp_3_onlamp_3_on_tscn17" parent="." instance=ExtResource("50_iumrw")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 25.894, 2.41774, 3.98661)
+
+[node name="lamp_3_onlamp_3_on_tscn18" parent="." instance=ExtResource("50_iumrw")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 25.894, 2.44695, -4.01431)
+
+[node name="lamp_mx_1_onlamp_mx_1_on_tscn12" parent="." instance=ExtResource("159_pgahi")]
+transform = Transform3D(1, 1.74846e-07, 2.14926e-15, -1.74846e-07, 1, 1.74846e-07, 2.84217e-14, -1.74846e-07, 1, 2.00101, 2.9163, 6.22856)
+
+[node name="lamp_mx_1_onlamp_mx_1_on_tscn13" parent="." instance=ExtResource("159_pgahi")]
+transform = Transform3D(-4.37114e-08, 1.74846e-07, -1, -1.74846e-07, 1, 1.74846e-07, 1, 1.74846e-07, -4.37114e-08, 9.78587, 2.8786, 10.0025)
+
+[node name="lamp_mx_1_onlamp_mx_1_on_tscn14" parent="." instance=ExtResource("159_pgahi")]
+transform = Transform3D(-1, -1.74846e-07, 1.50996e-07, -1.74846e-07, 1, 1.74846e-07, -1.50996e-07, 1.74846e-07, -1, 2.00552, 2.89516, 13.8266)
+
+[node name="lamp_mx_1_onlamp_mx_1_on_tscn15" parent="." instance=ExtResource("159_pgahi")]
+transform = Transform3D(-1, -1.74846e-07, 1.50996e-07, -1.74846e-07, 1, 1.74846e-07, -1.50996e-07, 1.74846e-07, -1, 5.98444, 2.87723, 13.7857)
+
+[node name="lamp_mx_1_onlamp_mx_1_on_tscn16" parent="." instance=ExtResource("159_pgahi")]
+transform = Transform3D(-1, -4.77172e-14, 1.50996e-07, -2.13163e-14, 1, 1.74846e-07, -1.50996e-07, 1.74846e-07, -1, -1.9936, 2.89292, 13.8198)
+
+[node name="lamp_mx_1_onlamp_mx_1_on_tscn17" parent="." instance=ExtResource("159_pgahi")]
+transform = Transform3D(-1.62921e-07, 1.74846e-07, -1, -2.13163e-14, 1, 1.74846e-07, 1, 4.98022e-14, -1.62921e-07, -6.09298, 2.92193, -0.011175)
+
+[node name="lamp_mx_1_onlamp_mx_1_on_tscn18" parent="." instance=ExtResource("159_pgahi")]
+transform = Transform3D(3.13916e-07, -1.74846e-07, 1, -2.13163e-14, 1, 1.74846e-07, -1, -7.62032e-14, 3.13916e-07, -13.9717, 2.86074, 4.2986)
+
+[node name="lamp_3_onlamp_3_on_tscn19" parent="." instance=ExtResource("50_iumrw")]
+transform = Transform3D(1.94707e-07, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 1.94707e-07, -8.51092e-15, -13.8824, 4.91253, -0.523724)
+
+[node name="lamp_mx_1_onlamp_mx_1_on_tscn19" parent="." instance=ExtResource("159_pgahi")]
+transform = Transform3D(3.13916e-07, -1.74846e-07, 1, -2.13163e-14, 1, 1.74846e-07, -1, -7.62032e-14, 3.13916e-07, 10.2288, 2.92145, 0.007965)
+
+[node name="lamp_3_onlamp_3_on_tscn20" parent="." instance=ExtResource("50_iumrw")]
+transform = Transform3D(1.94707e-07, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 1.94707e-07, -8.51092e-15, -13.894, 2.43975, -3.98822)
+
 [node name="LightmapGI" type="LightmapGI" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0158405, 0.0176115, 0.00387335)
+bounces = 5
+bounce_indirect_energy = 2.0
 light_data = ExtResource("327_wspmd")
+
+[node name="lamp_2_onlamp_2_on_tscn2" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(4.37113e-08, -2.62268e-07, -1, -1.50996e-07, -1, 2.62268e-07, -1, 1.50996e-07, -4.37114e-08, 23.4969, 4.6, -12.4697)
+
+[node name="lamp_2_onlamp_2_on_tscn3" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(4.37113e-08, -2.62268e-07, -1, -1.50996e-07, -1, 2.62268e-07, -1, 1.50996e-07, -4.37114e-08, 17.3219, 4.6, -12.5079)
+
+[node name="lamp_2_onlamp_2_on_tscn4" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(1, -1.50996e-07, 1.50996e-07, -1.50996e-07, -1, 2.62268e-07, 1.50996e-07, -2.62268e-07, -1, 15.4964, 4.6, -10.6369)
+
+[node name="lamp_2_onlamp_2_on_tscn5" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(-7.54979e-08, 2.62268e-07, 1, -1.50996e-07, -1, 2.62268e-07, 1, -1.50996e-07, 7.54979e-08, 13.127, 4.6, -12.4979)
+
+[node name="lamp_2_onlamp_2_on_tscn6" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(-1, 1.50996e-07, -1.31134e-07, -1.50996e-07, -1, 2.62268e-07, -1.31134e-07, 2.62268e-07, 1, 15.3604, 4.6, -14.6742)
+
+[node name="lamp_2_onlamp_2_on_tscn7" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(1.62921e-07, -2.62268e-07, -1, -1.50996e-07, -1, 2.62268e-07, -1, 1.50996e-07, -1.62921e-07, 11.8761, 4.6, -18.6551)
+
+[node name="lamp_2_onlamp_2_on_tscn8" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(1.62921e-07, -2.62268e-07, -1, -1.50996e-07, -1, 2.62268e-07, -1, 1.50996e-07, -1.62921e-07, 7.93042, 4.6, -12.4966)
+
+[node name="lamp_2_onlamp_2_on_tscn9" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(1.62921e-07, -2.62268e-07, -1, -1.50996e-07, -1, 2.62268e-07, -1, 1.50996e-07, -1.62921e-07, -0.72866, 4.6, -12.4943)
+
+[node name="lamp_2_onlamp_2_on_tscn10" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(1, -1.50996e-07, 1.50996e-07, -1.50996e-07, -1, 2.62268e-07, 1.50996e-07, -2.62268e-07, -1, -8.52895, 4.6, -12.6417)
+
+[node name="lamp_2_onlamp_2_on_tscn11" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(-3.13916e-07, 1.74846e-07, 1, -3.89414e-07, -1, 1.74845e-07, 1, -3.89414e-07, 3.13916e-07, -9.57448, 4.6, -18.6884)
+
+[node name="lamp_2_onlamp_2_on_tscn12" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(-3.13916e-07, 1.74846e-07, 1, -3.89414e-07, -1, 1.74845e-07, 1, -3.89414e-07, 3.13916e-07, -13.7433, 4.6, -12.7322)
+
+[node name="lamp_2_onlamp_2_on_tscn13" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(-1, 3.89414e-07, -3.93403e-07, -3.89414e-07, -1, 1.74845e-07, -3.93403e-07, 1.74846e-07, 1, -8.53518, 4.6, -8.42354)
+
+[node name="lamp_2_onlamp_2_on_tscn14" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(4.01339e-07, -1.74846e-07, -1, -3.89414e-07, -1, 1.74845e-07, -1, 3.89414e-07, -4.01339e-07, -18.6072, 4.6, -8.58046)
+
+[node name="lamp_2_onlamp_2_on_tscn15" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(1, -3.89414e-07, 3.89414e-07, -3.89414e-07, -1, 1.74845e-07, 3.89414e-07, -1.74846e-07, -1, -24.5368, 4.6, -6.70437)
+
+[node name="lamp_2_onlamp_2_on_tscn16" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(1, -3.89414e-07, 3.89414e-07, -3.89414e-07, -1, 1.74845e-07, 3.89414e-07, -1.74846e-07, -1, -23.3454, 4.6, 0.990552)
+
+[node name="lamp_2_onlamp_2_on_tscn17" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(-5.52335e-07, 1.74846e-07, 1, -3.89414e-07, -1, 1.74845e-07, 1, -3.89414e-07, 5.52335e-07, -18.8516, 4.6, -0.484937)
+
+[node name="lamp_2_onlamp_2_on_tscn18" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(-1, 3.89414e-07, -5.68248e-07, -3.89414e-07, -1, 1.74845e-07, -5.68248e-07, 1.74846e-07, 1, -18.6432, 4.6, 7.63446)
+
+[node name="lamp_2_onlamp_2_on_tscn19" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(-1, 3.89414e-07, -5.68248e-07, -3.89414e-07, -1, 1.74845e-07, -5.68248e-07, 1.74846e-07, 1, -18.5343, 4.6, 14.512)
+
+[node name="lamp_2_onlamp_2_on_tscn20" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(1, -3.89414e-07, 6.27833e-07, -3.89414e-07, -1, 4.37114e-07, 6.27833e-07, -4.37114e-07, -1, -22.083, 4.6, 17.3174)
+
+[node name="lamp_2_onlamp_2_on_tscn21" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(1, -3.89414e-07, 6.27833e-07, -3.89414e-07, -1, 4.37114e-07, 6.27833e-07, -4.37114e-07, -1, -22.0956, 4.6, 21.1094)
+
+[node name="ceiling_lamp_1_onceiling_lamp_1_on_tscn13" parent="." instance=ExtResource("80_ltegg")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -19.9765, 11, 23.948)
+
+[node name="lamp_3_onlamp_3_on_tscn21" parent="." instance=ExtResource("50_iumrw")]
+transform = Transform3D(1, -1.50996e-07, -1.50996e-07, -1.50996e-07, -1, -8.74227e-08, -1.50996e-07, 8.74228e-08, -1, -23.9457, 7.73472, 21.8931)
+
+[node name="lamp_3_onlamp_3_on_tscn22" parent="." instance=ExtResource("50_iumrw")]
+transform = Transform3D(1, -1.50996e-07, -1.50996e-07, -1.50996e-07, -1, -8.74227e-08, -1.50996e-07, 8.74228e-08, -1, -20.0257, 7.68, 21.8931)
+
+[node name="lamp_2_onlamp_2_on_tscn22" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(1, -3.89414e-07, 6.27833e-07, -3.89414e-07, -1, 4.37114e-07, 6.27833e-07, -4.37114e-07, -1, -16.3382, 4.6, -12.6851)
+
+[node name="lamp_3_onlamp_3_on_tscn23" parent="." instance=ExtResource("50_iumrw")]
+transform = Transform3D(1, -1.50996e-07, -1.50996e-07, -1.50996e-07, -1, -8.74227e-08, -1.50996e-07, 8.74228e-08, -1, 23.7202, 4.88913, -18.1069)
+
+[node name="lamp_2_onlamp_2_on_tscn23" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(-1, -1.50996e-07, 2.62268e-07, 1.50996e-07, -1, 1.74846e-07, 2.62268e-07, 1.74846e-07, 1, 3.5439, 4.6, -12.678)
+
+[node name="lamp_2_onlamp_2_on_tscn24" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(-1.94707e-07, -1.74846e-07, -1, 3.89414e-07, -1, 1.74845e-07, -1, -3.89414e-07, 1.94707e-07, 15.1573, 4.6, -18.6694)
+
+[node name="lamp_2_onlamp_2_on_tscn25" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(1, 3.89414e-07, -1.50996e-07, 3.89414e-07, -1, 1.74845e-07, -1.50996e-07, -1.74846e-07, -1, 23.6172, 4.6, -15.9617)
+
+[node name="lamp_2_onlamp_2_on_tscn26" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(-1, -3.89414e-07, 8.74228e-08, 3.89414e-07, -1, 1.74845e-07, 8.74228e-08, 1.74846e-07, 1, -23.3206, 4.59985, -12.7265)
+
+[node name="lamp_2_onlamp_2_on_tscn27" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(-1, -3.89414e-07, 8.74228e-08, 3.89414e-07, -1, 1.74845e-07, 8.74228e-08, 1.74846e-07, 1, -24.5763, 4.59961, -10.3741)
+
+[node name="lamp_2_onlamp_2_on_tscn28" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(-1, -3.89414e-07, 8.74228e-08, 3.89414e-07, -1, 1.74845e-07, 8.74228e-08, 1.74846e-07, 1, -24.6737, 4.6, -1.64025)
+
+[node name="lamp_2_onlamp_2_on_tscn29" parent="." instance=ExtResource("157_uryc5")]
+transform = Transform3D(-1, -3.89414e-07, 8.74228e-08, 3.89414e-07, -1, 1.74845e-07, 8.74228e-08, 1.74846e-07, 1, -18.6074, 4.6, -5.04275)
 
 [editable path="cig_1cig_1_tscn7"]

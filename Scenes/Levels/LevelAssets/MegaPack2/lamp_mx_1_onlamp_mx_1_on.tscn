@@ -56,3 +56,10 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@301"]
 shape = SubResource("ConvexPolygonShape3D_p8p21")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.169568, 0.350376)
+light_color = Color(0.900799, 0.885939, 0.796467, 1)
+light_bake_mode = 1
+shadow_caster_mask = 4294967279
+omni_range = 8.0
