@@ -16,8 +16,10 @@ public partial class PauseMenu : Control
             Input.MouseMode = Input.MouseModeEnum.Visible;
             if(LevelManager.Instance != null && LevelManager.Instance.LevelPeerInfo.ContainsKey(Multiplayer.GetUniqueId()) && LevelManager.Instance.LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode != null)
             {
-                LevelManager.Instance.LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode.CanMove = false;
-                LevelManager.Instance.LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode.CanLook = false;
+                Character localCharacter = LevelManager.Instance.LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode;
+                localCharacter.CanMove = false;
+                localCharacter.CanLook = false;
+                localCharacter.CanFire = false;
             }
         }
         else
@@ -25,8 +27,10 @@ public partial class PauseMenu : Control
             Input.MouseMode = Input.MouseModeEnum.Captured;
             if(LevelManager.Instance != null && LevelManager.Instance.LevelPeerInfo.ContainsKey(Multiplayer.GetUniqueId()) && LevelManager.Instance.LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode != null)
             {
-                LevelManager.Instance.LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode.CanMove = true;
-                LevelManager.Instance.LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode.CanLook = true;
+                Character localCharacter = LevelManager.Instance.LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode;
+                localCharacter.CanMove = true;
+                localCharacter.CanLook = true;
+                localCharacter.CanFire = true;
             }
         }
     }

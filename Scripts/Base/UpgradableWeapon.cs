@@ -112,7 +112,7 @@ namespace multiplayerstew.Scripts.Base
 
         public void Fire()
 		{   
-			if ((CurrentAmmo > 0 || MaxAmmo < 0) && CanFire && !IsPassive) 
+			if ((CurrentAmmo > 0 || MaxAmmo < 0) && CanFire && !IsPassive && LevelManager.Instance.LevelPeerInfo[GetMultiplayerAuthority()].characterNode.CanFire) 
 			{	
 				if(GetCurrentFireMode() != FireModes.Charge)
 				{

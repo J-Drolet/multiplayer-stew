@@ -58,6 +58,7 @@ public partial class Character : Entity
 
     public bool CanMove { get; set; } = true; // whether or not the local player should be able to manipulate the character
 	public bool CanLook { get; set; } = true; // whether or not the local player should be able to manipulate the character
+	public bool CanFire { get; set; } = true; // whether or not the local player should be able to shoot their gun
 
 	public float BaseSpeed = (float)Config.GetValue("game_constants", "base_speed", true);
 	public float SprintMultiplier = (float)Config.GetValue("game_constants", "sprint_multiplier", true);
@@ -153,7 +154,7 @@ public partial class Character : Entity
 
 		if (EquippedWeapon != null) 
 		{ 
-		EquippedWeapon.IsPassive = isPassive;
+			EquippedWeapon.IsPassive = isPassive;
 		}
         #endregion
     }
