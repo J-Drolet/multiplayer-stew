@@ -168,7 +168,7 @@ public partial class LevelManager : Node
 
 			GameTime += delta;
 			// End game code
-			if(GameTime >= GameSessionManager.GameDurationSeconds || maxAura >= GameSessionManager.MaxAura) 
+			if(GameTime >= GameSessionManager.GameInfo.DurationInSeconds || maxAura >= GameSessionManager.GameInfo.MaxAura) 
 			{
 				GameOver = true;
 				Rpc(MethodName.NotifyEndGame);

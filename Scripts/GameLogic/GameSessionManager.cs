@@ -6,9 +6,8 @@ public static class GameSessionManager
 {   
     public static Dictionary<long, PeerInfo> ConnectedPeers = new();
 
+    public static GameInfo GameInfo { get; set; }
     public static long GameHost { get; set; } = -1;
-    public static int GameDurationSeconds { get; set; }
-    public static int MaxAura {get; set; }
 
     public static void RemovePlayer(long id)
     {

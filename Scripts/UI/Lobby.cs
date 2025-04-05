@@ -4,6 +4,7 @@ using multiplayerstew.Scripts.Services;
 using System;
 using System.Data.Common;
 using System.Linq;
+using System.Text.Json;
 
 
 public partial class Lobby : Control
@@ -85,6 +86,12 @@ public partial class Lobby : Control
 
     public void OnStartPressed() 
     {
-        Client.Instance.StartGame(Root.LevelsFilepath + LevelSelector.GetItemText(LevelSelector.Selected) + ".tscn", (int)MaxTimeInput.Value * 60, (int)MaxAuraInput.Value);
+        string levelPath = Root.LevelsFilepath + LevelSelector.GetItemText(LevelSelector.Selected) + ".tscn";
+
+        GameInfo gameInfo = new();
+        gameInfo.DurationInSeconds = (int)MaxTimeInput.Value * 60;
+        gameInfo.MaxAura = (int)MaxAuraInput.Value;
+        
+        Client.Instance.RpcId(1, Client.MethodName.NotifyStartGame, levelPath, JsonSerializer.Serialize(gameInfo));
     }
 }

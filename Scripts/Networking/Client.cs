@@ -74,13 +74,6 @@ public partial class Client : Node
         Multiplayer.MultiplayerPeer = new OfflineMultiplayerPeer();
     }
 
-    /// <summary>
-    /// Tell the server to start the game. This will only hope if calling peer is the host
-    /// </summary>
-    public void StartGame(string levelPath, int durationInSeconds, int maxAura) {
-        RpcId(1, MethodName.NotifyStartGame, levelPath, durationInSeconds, maxAura);
-    }
-
     public void ConnectToServer(string ip, int port)
     {
         // Set up the client network connection to the server
@@ -151,12 +144,11 @@ public partial class Client : Node
     }
 
     [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
-    public void NotifyStartGame(string filepath, int durationInSeconds, int maxAura)
+    private void NotifyStartGame(string gameInfoJson)
     {
         UI.MainMenu.Hide();
         UI.LoadingScreen.Show();
-        GameSessionManager.GameDurationSeconds = durationInSeconds;
-        GameSessionManager.MaxAura = maxAura;
+        GameSessionManager.GameInfo = JsonSerializer.Deserialize<GameInfo>(gameInfoJson);
     }
 
     [Rpc(MultiplayerApi.RpcMode.Authority, CallLocal = false, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
