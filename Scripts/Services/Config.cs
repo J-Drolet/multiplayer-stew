@@ -22,19 +22,33 @@ public partial class Config: Node
     public override void _EnterTree()
     {   
         Instance = this;
+        LoadConfig();
+    }
+
+    public override void _UnhandledInput(InputEvent @event)
+    {
+        if(@event is InputEventKey key && key.Keycode == Key.F10 && key.IsPressed())
+        {
+            Rpc(MethodName.LoadConfig);
+        }
+    }
+
+    [Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+    private void LoadConfig()
+    {
         DefaultSettings = new ConfigFile();
         Error defaultError = DefaultSettings.Load(DefaultSettingsFilepath);
         if(defaultError != Error.Ok) {
-            GD.PrintErr("Config._EnterTree - Failed to load default config with Status code: " + defaultError.ToString());
+            GD.PrintErr("Config.LoadConfig - Failed to load default config with Status code: " + defaultError.ToString());
         }
-
 
         UserSettings = new ConfigFile();
         Error usrError = UserSettings.Load(UserSettingsFilepath);
         if(usrError != Error.Ok) {
-            GD.PrintErr("Config._EnterTree - Failed to load user config with Status code: " + usrError.ToString());
+            GD.PrintErr("Config.LoadConfig - Failed to load user config with Status code: " + usrError.ToString());
         }
     }
+
 
     /// <summary>
     /// Used to go through every setting and emit the ConfigChanged signal for each setting. Specifically used for SettingsUpdater to initialize initial state of settings

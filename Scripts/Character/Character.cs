@@ -60,11 +60,6 @@ public partial class Character : Entity
 	public bool CanLook { get; set; } = true; // whether or not the local player should be able to manipulate the character
 	public bool CanFire { get; set; } = true; // whether or not the local player should be able to shoot their gun
 
-	public float BaseSpeed = (float)Config.GetValue("game_constants", "base_speed", true);
-	public float SprintMultiplier = (float)Config.GetValue("game_constants", "sprint_multiplier", true);
-	private float JumpVelocity = (float)Config.GetValue("game_constants", "jump_velocity", true);
-	private float DescentGravityScale = (float)Config.GetValue("game_constants", "gravity_scale_descent", true);
-
 	// Signal on jump
     [Signal]
     public delegate void JumpEventHandler(bool isInAir);
@@ -216,13 +211,15 @@ public partial class Character : Entity
 	{
 		if(!IsMultiplayerAuthority()) return;
 		Vector3 velocity = Velocity;
-		double acceleration = BaseSpeed;
-		double deceleration = BaseSpeed;
-		double speed = BaseSpeed;
+		double baseSpeed = (float)Config.GetValue("game_constants", "base_speed", true);
+
+		double acceleration = baseSpeed;
+		double deceleration = baseSpeed;
+		double speed = baseSpeed;
 
         if (Input.IsActionPressed("Sprint"))
 		{
-			speed *= SprintMultiplier;
+			speed *= (float)Config.GetValue("game_constants", "sprint_multiplier", true);;
 		}
 
 		if(Upgrades.Contains(Upgrade.C_FastSlide))
@@ -247,7 +244,8 @@ public partial class Character : Entity
 			}
 			else // on descent games generally increase gravity to reduce floatiness
 			{
-				velocity += GetGravity() * DescentGravityScale * (float)delta;
+				float descentGravityScale = (float)Config.GetValue("game_constants", "gravity_scale_descent", true);
+				velocity += GetGravity() * descentGravityScale * (float)delta;
 			}
 			
 			if(JumpsSinceHitGround == 0) // makes it so double jump doesn't allow 2 jumps in the air if fell of a ledge
@@ -264,7 +262,7 @@ public partial class Character : Entity
 		if (Input.IsActionJustPressed("Jump") && JumpsSinceHitGround <= jumpsAllowedInAir  && CanMove)
 		{
 			EmitSignal("Jump", JumpsSinceHitGround == 0);
-			velocity.Y = JumpVelocity;
+			velocity.Y = (float)Config.GetValue("game_constants", "jump_velocity", true);
 			JumpsSinceHitGround++;
 		}
 

@@ -33,8 +33,8 @@ public partial class FootStepEmitter : RayCast3D
         WasLastOnFloor = Character.IsOnFloor();
         LastPosition = Character.GlobalPosition;
 
-        WalkSpeed = Character.BaseSpeed;
-        RunSpeed = Character.SprintMultiplier * WalkSpeed;
+        WalkSpeed = (float)Config.GetValue("game_constants", "base_speed", true);
+        RunSpeed = (float)Config.GetValue("game_constants", "sprint_multiplier", true) * WalkSpeed;
         Character.Jump += OnJump;
     }
 
