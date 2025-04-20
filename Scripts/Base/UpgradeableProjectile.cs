@@ -3,6 +3,7 @@ using multiplayerstew.Scripts.Attributes;
 using multiplayerstew.Scripts.Services;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text.Json;
 
@@ -29,9 +30,11 @@ namespace multiplayerstew.Scripts.Base
         private double CatchUpTime = 0;
         private int AngleOffset;
         public bool IsDummy = false; // For fake visual versions
+    
 
         public int projectileOwner;
         private Random Rng;
+        private Vector3 LastFramePosition; // used for drawing projectile path
         private RayCast3D WorldHitDetectionRaycast; // for detecting if about to hit a world element
         private RayCast3D HitboxDetectionRaycast; // for detecting if hitting a hitbox
         private HashSet<Upgrade> Upgrades = new(); // projectiles keep track of their own upgrades. Don't want projectile behavior to change mid-flight on upgrade pickup
@@ -105,7 +108,12 @@ namespace multiplayerstew.Scripts.Base
 
         public override void _Process(double delta)
         {
-            if (!IsMultiplayerAuthority()) return; // only the server is concerned with destroying bullets
+            if (!IsMultiplayerAuthority()) 
+            {
+                DrawDebugLine(LastFramePosition, GlobalPosition); // draw server paths
+                LastFramePosition = GlobalPosition;
+                return; // only the server is concerned with destroying bullets
+            }
 
             TimeAlive += (float)delta;
             if (TimeAlive > Lifespan)
@@ -181,7 +189,7 @@ namespace multiplayerstew.Scripts.Base
                 // Collision with world detection
                 WorldHitDetectionRaycast.TargetPosition = ToLocal(GlobalPosition + Velocity * (float)delta);
                 WorldHitDetectionRaycast.ForceRaycastUpdate();
-                if(WorldHitDetectionRaycast.IsColliding())
+                while(WorldHitDetectionRaycast.IsColliding())
                 {
                     if(Upgrades.Contains(Upgrade.W_BouncyProjectile) && BouncesRegistered < (int) Config.GetValue("Upgrade.W_BouncyProjectile", "bounce_max_bounces", true))
                     {
@@ -192,6 +200,7 @@ namespace multiplayerstew.Scripts.Base
                         float percentageDeltaToCollision = lengthToCollision / (Velocity * (float)delta).Length();
                         float remaingDelta = (1 - percentageDeltaToCollision) * (float) delta; // only give the remaining delta for moving
                         
+                        DrawDebugLine(GlobalPosition, collisionPoint);
                         GlobalPosition = collisionPoint;
                         Velocity = Velocity - 2 * Velocity.Dot(collisionNormal) * collisionNormal;
                         delta = remaingDelta;
@@ -200,10 +209,13 @@ namespace multiplayerstew.Scripts.Base
                     else // always destroy on hit wall
                     {
                         DisableSelf();
+                        break;
                     }
-
+                    WorldHitDetectionRaycast.TargetPosition = ToLocal(GlobalPosition + Velocity * (float)delta);
+                    WorldHitDetectionRaycast.ForceRaycastUpdate();
                 }
-
+                
+                DrawDebugLine(GlobalPosition, GlobalPosition + (Velocity * (float)delta));
                 GlobalPosition += Velocity * (float)delta;
             }
         }
@@ -233,6 +245,46 @@ namespace multiplayerstew.Scripts.Base
             if(Multiplayer.GetRemoteSenderId() == 1) // only server should send this
             {
                 QueueFree();
+            }
+        }
+
+        private void DrawDebugLine(Vector3 start, Vector3 end)
+        {
+            void DrawLine(Vector3 start, Vector3 end, Color color)
+            {
+                MeshInstance3D meshParent = new();
+                ImmediateMesh mesh = new();
+                mesh.SurfaceBegin(Mesh.PrimitiveType.Lines);
+                mesh.SurfaceAddVertex(start);
+                mesh.SurfaceAddVertex(end);
+                mesh.SurfaceEnd();
+                Material lineMaterial = new StandardMaterial3D();
+                lineMaterial.Set("albedo_color", color);
+                mesh.SurfaceSetMaterial(0, lineMaterial);
+                meshParent.Mesh = mesh;
+
+                float lifespan = (float)Config.GetValue("debug", "projectile_path_fade_time", true);
+                Timer timer = new();
+                timer.WaitTime = lifespan;
+                timer.OneShot = true;
+                timer.Autostart = true;
+                timer.Timeout += meshParent.QueueFree;
+
+                LevelManager.Instance.AddChild(meshParent);
+                meshParent.AddChild(timer);
+            }
+
+            if(GetMultiplayerAuthority() == 1 && start != Vector3.Zero && (bool)Config.GetValue("debug", "view_server_path", true)) // we don't use Vector3 = Zero because that is always the orign -> would lead to weird paths
+            {
+                if(projectileOwner == GetMultiplayerAuthority() || (bool)Config.GetValue("debug", "view_other_peer_paths", true))
+                {
+                    DrawLine(start, end, (Color)Config.GetValue("debug", "server_path_color", true));
+                }
+            }
+
+            if(IsMultiplayerAuthority() && (bool)Config.GetValue("debug", "view_local_path", true))
+            {
+                DrawLine(start, end, (Color)Config.GetValue("debug", "local_path_color", true));
             }
         }
     }
