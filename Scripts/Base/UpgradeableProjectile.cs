@@ -263,7 +263,7 @@ namespace multiplayerstew.Scripts.Base
                 mesh.SurfaceSetMaterial(0, lineMaterial);
                 meshParent.Mesh = mesh;
 
-                float lifespan = (float)Config.GetValue("debug", "projectile_path_fade_time", true);
+                float lifespan = (float)Config.GetValue("debug", "projectile_path_fade_time", false);
                 Timer timer = new();
                 timer.WaitTime = lifespan;
                 timer.OneShot = true;
@@ -274,17 +274,17 @@ namespace multiplayerstew.Scripts.Base
                 meshParent.AddChild(timer);
             }
 
-            if(GetMultiplayerAuthority() == 1 && start != Vector3.Zero && (bool)Config.GetValue("debug", "view_server_path", true)) // we don't use Vector3 = Zero because that is always the orign -> would lead to weird paths
+            if(GetMultiplayerAuthority() == 1 && start != Vector3.Zero && (bool)Config.GetValue("debug", "view_server_path", false)) // we don't use Vector3 = Zero because that is always the orign -> would lead to weird paths
             {
-                if(projectileOwner == GetMultiplayerAuthority() || (bool)Config.GetValue("debug", "view_other_peer_paths", true))
+                if(projectileOwner == GetMultiplayerAuthority() || (bool)Config.GetValue("debug", "view_other_peer_paths", false))
                 {
-                    DrawLine(start, end, (Color)Config.GetValue("debug", "server_path_color", true));
+                    DrawLine(start, end, (Color)Config.GetValue("debug", "server_path_color", false));
                 }
             }
 
-            if(IsMultiplayerAuthority() && (bool)Config.GetValue("debug", "view_local_path", true))
+            if(IsMultiplayerAuthority() && (bool)Config.GetValue("debug", "view_local_path", false))
             {
-                DrawLine(start, end, (Color)Config.GetValue("debug", "local_path_color", true));
+                DrawLine(start, end, (Color)Config.GetValue("debug", "local_path_color", false));
             }
         }
     }

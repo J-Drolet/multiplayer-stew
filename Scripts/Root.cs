@@ -14,6 +14,7 @@ public partial class Root : Node
 	public static readonly string HeadCosmeticFilepath = "res://Scenes/Cosmetics/Head/";
     public static readonly string FaceCosmeticFilepath = "res://Scenes/Cosmetics/Face/";
     public static readonly string ThumbnailFilepath = "res://Assets/Textures/Thumbnails/";
+    public static readonly string ConsoleCommandFilepath = "res://Scripts/UI/Console/Commands/Implementations/";
 
     [Export, ExportRequired]
 	public PackedScene ClientScene { get; set; }

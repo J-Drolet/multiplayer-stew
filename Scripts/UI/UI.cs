@@ -18,6 +18,7 @@ public partial class UI: Node
     public static Hitmarker Hitmarker { get; set; }
     public static LoadingScreen LoadingScreen { get; set; }
     public static KillPopups KillPopups { get; set; }
+    public static Console Console { get; set; }
     
     public static void DisplayError(string errorText) 
     {   
@@ -27,19 +28,31 @@ public partial class UI: Node
     public override void _UnhandledInput(InputEvent @event)
     {
         if(@event.IsActionPressed("PauseMenu")) {
-            if(SettingsScreen.Visible) 
+            if(Console.Visible) // closing console takes ultimate priority
+            {
+                Console.Visible = false;
+            }
+            else if(SettingsScreen.Visible) 
             {
                 SettingsScreen.Visible = false;
+            }
+            else if(ServerBrowser.Visible) 
+            {
+                ServerBrowser.Hide();
             }
             else if(!MainMenu.Visible) // if in game we can toggle the pause menu
             {
                 PauseMenu.Visible = !PauseMenu.Visible;
             }
+        }
+    }
 
-            if(ServerBrowser.Visible) 
-            {
-                ServerBrowser.Hide();
-            }
+    public override void _Input(InputEvent @event)
+    {
+        if(@event.IsActionPressed("Console"))
+        {
+            Console.Visible = !Console.Visible;
+            GetViewport().SetInputAsHandled(); // don't add ` to the line input that we auto focus in the console
         }
     }
 

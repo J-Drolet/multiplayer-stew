@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://eoi8ks6agami"]
+[gd_scene load_steps=15 format=3 uid="uid://eoi8ks6agami"]
 
 [ext_resource type="Script" uid="uid://d3r5pnkqsi5fh" path="res://Scripts/Networking/Client.cs" id="1_i1rml"]
 [ext_resource type="PackedScene" uid="uid://emhg32smyqx0" path="res://Scenes/UI/Main Menu/mainMenu.tscn" id="2_518qk"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c4wr0n7pacuhv" path="res://Scenes/UI/Standalone Components/EndOfGame.tscn" id="10_lyo1v"]
 [ext_resource type="PackedScene" uid="uid://b2wqxmis36qbr" path="res://Scenes/UI/Scoreboard/Scoreboard.tscn" id="10_ueqgi"]
 [ext_resource type="PackedScene" uid="uid://ddjwjb1jmqeye" path="res://Scenes/UI/Standalone Components/LoadingScreen.tscn" id="11_k5qxj"]
+[ext_resource type="PackedScene" uid="uid://bpjxn58rfkmuv" path="res://Scenes/UI/Standalone Components/Console.tscn" id="14_m2580"]
 
 [node name="Network" type="Node"]
 script = ExtResource("1_i1rml")
@@ -69,4 +70,7 @@ visible = false
 [node name="Spinner" parent="." instance=ExtResource("4_ryq63")]
 
 [node name="ErrorMessage" parent="." instance=ExtResource("3_rpxpi")]
+visible = false
+
+[node name="Console" parent="." instance=ExtResource("14_m2580")]
 visible = false
