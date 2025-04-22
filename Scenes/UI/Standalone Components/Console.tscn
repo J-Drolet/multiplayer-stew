@@ -45,3 +45,4 @@ empty_selection_clipboard_enabled = false
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 placeholder_text = "help"
+emoji_menu_enabled = false

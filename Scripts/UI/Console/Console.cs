@@ -14,8 +14,11 @@ public partial class Console : Control
     [Export, ExportRequired]
     public TextEdit Output { get; set; }
 
-    private List<string> History = new List<string>();
+    private List<string> History = new List<string>(){"help"}; // default help command in history
     private int HistoryIndex = 0;
+
+    private int NextUpIndex = 0;
+    private int NextDownIndex = 0;
 
     public List<IConsoleCommand> Commands = new();
 
@@ -45,36 +48,30 @@ public partial class Console : Control
         {
             if(@event.IsActionPressed("ui_up"))
             {
-                if(HistoryIndex >= 0)
-                {
-                    CommandLine.Text = History[HistoryIndex];
-                    HistoryIndex--;
+                HistoryIndex = Math.Clamp(HistoryIndex + 1, 0, History.Count - 1);
+                CommandLine.Text = History[HistoryIndex];
 
-                    GetViewport().SetInputAsHandled(); // make it so line edit doesn't do default behavior instead
-                }
+                GetViewport().SetInputAsHandled(); // make it so line edit doesn't do default behavior instead
             }
             else if(@event.IsActionPressed("ui_down"))
             {
-                if(HistoryIndex < History.Count - 1)
+                HistoryIndex = Math.Clamp(HistoryIndex - 1, -1, History.Count - 1);
+                if(HistoryIndex < 0)
                 {
-                    HistoryIndex++;
-                    CommandLine.Text = History[HistoryIndex];
-
-                    GetViewport().SetInputAsHandled(); // make it so line edit doesn't do default behavior instead
+                    CommandLine.Text = "";
                 }
+                else{
+                    CommandLine.Text = History[HistoryIndex];
+                }
+
+                GetViewport().SetInputAsHandled(); // make it so line edit doesn't do default behavior instead
             }
         }
     }
 
-
-    private void OnConsoleTextChanged(string newText)
-    {
-        ResetHistoryIndex(); // reset history index when typing
-    }
-
     private void ResetHistoryIndex()
     {
-        HistoryIndex = History.Count - 1;
+        HistoryIndex = -1;
     }
 
 
@@ -130,7 +127,7 @@ public partial class Console : Control
             {
                 History.Remove(historyText); // we only add unique commands
             }
-            History.Add(historyText);
+            History.Insert(0, historyText);
         }
 
         return result;
