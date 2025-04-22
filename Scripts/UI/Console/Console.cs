@@ -29,7 +29,6 @@ public partial class Console : Control
         UI.Console = this;
         VisibilityChanged += OnVisibilityChanged;
         CommandLine.TextSubmitted += OnConsoleSubmit;
-        CommandLine.TextChanged += OnConsoleTextChanged;
         CommandLine.KeepEditingOnTextSubmit = true;
 
         // dynamically load all console commands
@@ -91,7 +90,7 @@ public partial class Console : Control
         {
             CommandLine.GrabFocus();
             CommandLine.Text = "";
-            OnConsoleTextChanged("");
+            ResetHistoryIndex();
         }
         else
         {
