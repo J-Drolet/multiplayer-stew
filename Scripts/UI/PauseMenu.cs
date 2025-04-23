@@ -17,9 +17,9 @@ public partial class PauseMenu : Control
             if(LevelManager.Instance != null && LevelManager.Instance.LevelPeerInfo.ContainsKey(Multiplayer.GetUniqueId()) && LevelManager.Instance.LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode != null)
             {
                 Character localCharacter = LevelManager.Instance.LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode;
-                localCharacter.CanMove = false;
-                localCharacter.CanLook = false;
-                localCharacter.CanFire = false;
+                localCharacter.CanMove.AddLock("PauseMenu");
+                localCharacter.CanLook.AddLock("PauseMenu");
+                localCharacter.CanFire.AddLock("PauseMenu");
             }
         }
         else
@@ -28,9 +28,9 @@ public partial class PauseMenu : Control
             if(LevelManager.Instance != null && LevelManager.Instance.LevelPeerInfo.ContainsKey(Multiplayer.GetUniqueId()) && LevelManager.Instance.LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode != null)
             {
                 Character localCharacter = LevelManager.Instance.LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode;
-                localCharacter.CanMove = true;
-                localCharacter.CanLook = true;
-                localCharacter.CanFire = true;
+                localCharacter.CanMove.RemoveLock("PauseMenu");
+                localCharacter.CanLook.RemoveLock("PauseMenu");
+                localCharacter.CanFire.RemoveLock("PauseMenu");
             }
         }
     }

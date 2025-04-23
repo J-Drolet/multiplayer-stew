@@ -56,9 +56,9 @@ public partial class Character : Entity
     private int JumpsSinceHitGround { get; set; } // keeps track of how many jumps the character has done since last hitting the ground
     #endregion
 
-    public bool CanMove { get; set; } = true; // whether or not the local player should be able to manipulate the character
-	public bool CanLook { get; set; } = true; // whether or not the local player should be able to manipulate the character
-	public bool CanFire { get; set; } = true; // whether or not the local player should be able to shoot their gun
+    public Multilock CanMove { get; set; } = new(); // whether or not the local player should be able to manipulate the character
+	public Multilock CanLook { get; set; } = new(); // whether or not the local player should be able to manipulate the character
+	public Multilock CanFire { get; set; } = new(); // whether or not the local player should be able to shoot their gun
 
 	// Signal on jump
     [Signal]
@@ -114,7 +114,7 @@ public partial class Character : Entity
     {
 		if(!IsMultiplayerAuthority()) return;
 
-		if(CanLook)
+		if(CanLook.IsUnlocked())
 		{
 			if(@event is InputEventMouseMotion)
 			{
@@ -259,7 +259,7 @@ public partial class Character : Entity
 		}
 
 		// Handle Jump.
-		if (Input.IsActionJustPressed("Jump") && JumpsSinceHitGround <= jumpsAllowedInAir  && CanMove)
+		if (Input.IsActionJustPressed("Jump") && JumpsSinceHitGround <= jumpsAllowedInAir  && CanMove.IsUnlocked())
 		{
 			EmitSignal("Jump", JumpsSinceHitGround == 0);
 			velocity.Y = (float)Config.GetValue("game_constants", "jump_velocity", true);
@@ -267,7 +267,7 @@ public partial class Character : Entity
 		}
 
 		Vector3 direction = Vector3.Zero;
-		if(CanMove)
+		if(CanMove.IsUnlocked())
 		{
 			// Get the input direction and handle the movement/deceleration.
 			// As good practice, you should replace UI actions with custom gameplay actions.

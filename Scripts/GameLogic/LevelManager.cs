@@ -207,8 +207,8 @@ public partial class LevelManager : Node
 	public void NotifyEndGame()
 	{
 		Character localCharacter = LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode;
-		localCharacter.CanLook = false;
-		localCharacter.CanMove = false;
+		localCharacter.CanLook.AddLock("EndGame");
+		localCharacter.CanMove.AddLock("EndGame");
 
 		UI.EndOfGame.Show();
 	}

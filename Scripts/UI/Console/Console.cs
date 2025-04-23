@@ -96,6 +96,24 @@ public partial class Console : Control
         {
             CommandLine.ReleaseFocus();
         }
+
+        if(LevelManager.Instance != null && LevelManager.Instance.LevelPeerInfo.ContainsKey(Multiplayer.GetUniqueId()) && LevelManager.Instance.LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode != null)
+        {
+            Character localCharacter = LevelManager.Instance.LevelPeerInfo[Multiplayer.GetUniqueId()].characterNode;
+            if(Visible)
+            {
+                localCharacter.CanMove.AddLock("Console");
+                localCharacter.CanLook.AddLock("Console");
+                localCharacter.CanFire.AddLock("Console");
+            }
+            else
+            {
+                localCharacter.CanMove.RemoveLock("Console");
+                localCharacter.CanLook.RemoveLock("Console");
+                localCharacter.CanFire.RemoveLock("Console");
+            }
+
+        }
     }
 
     private ConsoleExecutionResult ProcessCommand(List<string> args)
