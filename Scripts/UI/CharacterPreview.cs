@@ -43,7 +43,7 @@ public partial class CharacterPreview : Control
         HeadSlot.GetChildren().ToList().ForEach(child => child.QueueFree());
 
         string filepath = HeadCosmeticOption.GetItemMetadata((int)index).ToString();
-        if(filepath != null)
+        if(!String.IsNullOrWhiteSpace(filepath))
         {
             HeadSlot.AddChild(GD.Load<PackedScene>(filepath).Instantiate());
         }
@@ -56,7 +56,7 @@ public partial class CharacterPreview : Control
         FaceSlot.GetChildren().ToList().ForEach(child => child.QueueFree());
 
         string filepath = FaceCosmeticOption.GetItemMetadata((int)index).ToString();
-        if(filepath != null)
+        if(!String.IsNullOrWhiteSpace(filepath))
         {
             FaceSlot.AddChild(GD.Load<PackedScene>(filepath).Instantiate());
         }
