@@ -14,333 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://bic0xat7p13i8" path="res://Scenes/Particles/MuzzleFlash.tscn" id="12_0nu6s"]
 [ext_resource type="PackedScene" uid="uid://ciaqkt6kkv2l0" path="res://Scenes/Particles/RifleShellParticle.tscn" id="12_63sm6"]
 
-[sub_resource type="Animation" id="Animation_nrxdk"]
-resource_name = "Fire"
-length = 1.41
-step = 0.01
-tracks/0/type = "position_3d"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("GunBase")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.1, 1, 0, 0.101976, 0.81581, 0.3, 1, 0, 0, 0)
-tracks/1/type = "rotation_3d"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("GunBase")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.12, 1, 0.123472, 0, 0, 0.992348, 0.28, 1, 0, 0, 0, 1)
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:CanFire")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.41),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/3/type = "position_3d"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("GunBase/HandMesh")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = PackedFloat32Array(0, 1, 0.0565529, -0.345726, 0.611887, 0.32, 1, 0.0565529, -0.345726, 0.611887, 0.42, 1, 0.260048, -0.100357, 0.493135, 0.48, 1, 0.260048, -0.100357, 0.493135, 0.55, 1, 0.322439, 0.105403, 0.493135, 0.74, 1, 0.322439, 0.105403, 0.493135, 0.84, 1, 0.322439, 0.105403, 0.963618, 0.99, 1, 0.322439, 0.105403, 0.963618, 1.06, 1, 0.322439, 0.105403, 0.493135, 1.2, 1, 0.322439, 0.105403, 0.493135, 1.28, 1, 0.260048, -0.100357, 0.493135, 1.34, 1, 0.260048, -0.100357, 0.493135, 1.41, 1, 0.0565529, -0.345726, 0.611887)
-tracks/4/type = "position_3d"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("GunBase/Chamber/Bolt")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = PackedFloat32Array(0, 1, 2.6077e-08, -0.166383, -1.30385e-08, 0.74, 1, 2.6077e-08, -0.166383, -1.30385e-08, 0.84, 1, 9.68575e-08, -0.636867, -5.02914e-08, 0.99, 1, 9.68575e-08, -0.636867, -5.02914e-08, 1.06, 1, 2.6077e-08, -0.166383, -1.30385e-08, 1.2, 1, 2.6077e-08, -0.166383, -1.30385e-08)
-tracks/5/type = "rotation_3d"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("GunBase/Chamber/Bolt")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = PackedFloat32Array(0, 1, -3.55271e-15, -2.1957e-15, -3.55271e-15, 1, 0.48, 1, -3.55271e-15, -2.1957e-15, -3.55271e-15, 1, 0.55, 1, 5.96046e-08, -0.5, -5.96046e-08, 0.866025, 1.2, 1, 5.96046e-08, -0.5, -5.96046e-08, 0.866025, 1.28, 1, -3.55271e-15, -2.1957e-15, -3.55271e-15, 1)
-tracks/6/type = "method"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("SelfDestroyingShell")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0.84),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"EmitParticles"
-}]
-}
-tracks/7/type = "method"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath(".")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.49),
-"transitions": PackedFloat32Array(1, 1),
-"values": [{
-"args": [ExtResource("4_gwq22")],
-"method": &"PlayGunSound"
-}, {
-"args": [ExtResource("5_b4lha")],
-"method": &"PlayGunSound"
-}]
-}
-tracks/8/type = "method"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("GunBase/MuzzleFlash/MuzzleFlashParticles")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [2],
-"method": &"EmitParticlesOnLocalOnlyLayer"
-}]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("GunBase/MuzzleFlash/MuzzleFlashLight:visible")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.05),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-
-[sub_resource type="Animation" id="Animation_htqds"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:CanFire")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "position_3d"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("GunBase")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0)
-tracks/2/type = "position_3d"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("GunBase/HandMesh")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0, 1, 0.0565529, -0.345726, 0.611887)
-tracks/3/type = "position_3d"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("GunBase/Chamber/Bolt")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = PackedFloat32Array(0, 1, 2.6077e-08, -0.166383, -1.30385e-08)
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("GunBase/HandMesh:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.0565529, -0.345726, 0.611887)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("GunBase/Mag:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, -0.275213, 0.233232)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("GunBase/Mag:rotation")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("GunBase/Chamber/Bolt:rotation")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-7.10542e-15, -4.3914e-15, -7.10542e-15)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("GunBase/Chamber/Bolt:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(2.6077e-08, -0.166383, -1.30385e-08)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("GunBase/MuzzleFlash/MuzzleFlashLight:visible")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="Animation" id="Animation_qx21q"]
-resource_name = "Reload"
-length = 2.84
-step = 0.01
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("GunBase/HandMesh:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.21, 0.3, 0.42, 0.5, 0.63, 0.7, 0.93, 1.01, 1.38, 1.63, 1.87, 1.97, 2.17, 2.25, 2.45, 2.51, 2.63, 2.7, 2.84),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0.0565529, -0.345726, 0.611887), Vector3(0.243921, -0.0867199, 0.465379), Vector3(0.243921, -0.0867199, 0.465379), Vector3(0.269684, 0.11255, 0.479104), Vector3(0.269684, 0.11255, 0.479104), Vector3(0.269684, 0.11255, 0.930296), Vector3(0.269684, 0.11255, 0.930296), Vector3(-0.00267361, -0.440276, 0.1069), Vector3(-0.00267361, -0.440276, 0.1069), Vector3(-0.00267361, -2.10255, 1.13816), Vector3(-0.00267361, -2.10255, 1.13816), Vector3(-0.00267361, -0.440276, 0.1069), Vector3(-0.00267361, -0.440276, 0.1069), Vector3(0.269684, 0.11255, 0.930296), Vector3(0.269684, 0.11255, 0.930296), Vector3(0.269684, 0.11255, 0.479104), Vector3(0.269684, 0.11255, 0.479104), Vector3(0.243921, -0.0867199, 0.465379), Vector3(0.243921, -0.0867199, 0.465379), Vector3(0.0565529, -0.345726, 0.611887)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("GunBase/Mag:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.01, 1.38, 1.63, 1.87),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0, -0.275213, 0.233232), Vector3(0, -0.275213, 0.233232), Vector3(0, -1.90487, 1.2024), Vector3(0, -1.90487, 1.2024), Vector3(0, -0.275213, 0.233232)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("GunBase/Mag:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.01, 1.21, 1.63, 1.87),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(-0.33903, 0, 0), Vector3(-0.33903, 0, 0), Vector3(0, 0, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("GunBase/Chamber/Bolt:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0.3, 0.42, 2.51, 2.63),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-7.10542e-15, -4.3914e-15, -7.10542e-15), Vector3(4.12635e-08, -1.09692, -1.70883e-07), Vector3(4.12635e-08, -1.09692, -1.70883e-07), Vector3(-7.10542e-15, -4.3914e-15, -7.10542e-15)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("GunBase/Chamber/Bolt:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.3, 0.5, 0.63, 2.25, 2.45, 2.51),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(2.6077e-08, -0.166383, -1.30385e-08), Vector3(2.6077e-08, -0.166383, -1.30385e-08), Vector3(8.9407e-08, -0.617576, -4.47035e-08), Vector3(8.9407e-08, -0.617576, -4.47035e-08), Vector3(2.6077e-08, -0.166383, -1.30385e-08), Vector3(2.6077e-08, -0.166383, -1.30385e-08)]
-}
-tracks/5/type = "method"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath(".")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0.3, 0.98, 1.82, 2.25, 2.63),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"values": [{
-"args": [ExtResource("6_5a56a")],
-"method": &"PlayGunSound"
-}, {
-"args": [ExtResource("7_ljmdi")],
-"method": &"PlayGunSound"
-}, {
-"args": [ExtResource("8_vceak")],
-"method": &"PlayGunSound"
-}, {
-"args": [ExtResource("9_akfsu")],
-"method": &"PlayGunSound"
-}, {
-"args": [],
-"method": &"RefillAmmo"
-}]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath(".:CanFire")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 2.84),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_1dmhd"]
-_data = {
-&"Fire": SubResource("Animation_nrxdk"),
-&"RESET": SubResource("Animation_htqds"),
-&"Reload": SubResource("Animation_qx21q")
-}
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8aokh"]
 resource_name = "Rifle"
 cull_mode = 2
@@ -553,6 +226,333 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_mjx8a")
 
+[sub_resource type="Animation" id="Animation_nrxdk"]
+resource_name = "Fire"
+length = 1.41
+step = 0.01
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scale/GunBase")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.1, 1, 0, 0.101976, 0.81581, 0.3, 1, 0, 0, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scale/GunBase")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.12, 1, 0.123472, 0, 0, 0.992348, 0.28, 1, 0, 0, 0, 1)
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:CanFire")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.41),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "position_3d"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Scale/GunBase/HandMesh")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.0565529, -0.345726, 0.611887, 0.32, 1, 0.0565529, -0.345726, 0.611887, 0.42, 1, 0.260048, -0.100357, 0.493135, 0.48, 1, 0.260048, -0.100357, 0.493135, 0.55, 1, 0.322439, 0.105403, 0.493135, 0.74, 1, 0.322439, 0.105403, 0.493135, 0.84, 1, 0.322439, 0.105403, 0.963618, 0.99, 1, 0.322439, 0.105403, 0.963618, 1.06, 1, 0.322439, 0.105403, 0.493135, 1.2, 1, 0.322439, 0.105403, 0.493135, 1.28, 1, 0.260048, -0.100357, 0.493135, 1.34, 1, 0.260048, -0.100357, 0.493135, 1.41, 1, 0.0565529, -0.345726, 0.611887)
+tracks/4/type = "position_3d"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Scale/GunBase/Chamber/Bolt")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 2.6077e-08, -0.166383, -1.30385e-08, 0.74, 1, 2.6077e-08, -0.166383, -1.30385e-08, 0.84, 1, 9.68575e-08, -0.636867, -5.02914e-08, 0.99, 1, 9.68575e-08, -0.636867, -5.02914e-08, 1.06, 1, 2.6077e-08, -0.166383, -1.30385e-08, 1.2, 1, 2.6077e-08, -0.166383, -1.30385e-08)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Scale/GunBase/Chamber/Bolt")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -3.55271e-15, -2.1957e-15, -3.55271e-15, 1, 0.48, 1, -3.55271e-15, -2.1957e-15, -3.55271e-15, 1, 0.55, 1, 5.96046e-08, -0.5, -5.96046e-08, 0.866025, 1.2, 1, 5.96046e-08, -0.5, -5.96046e-08, 0.866025, 1.28, 1, -3.55271e-15, -2.1957e-15, -3.55271e-15, 1)
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Scale/SelfDestroyingShell")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.84),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"EmitParticles"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.49),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [ExtResource("4_gwq22")],
+"method": &"PlayGunSound"
+}, {
+"args": [ExtResource("5_b4lha")],
+"method": &"PlayGunSound"
+}]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Scale/GunBase/MuzzleFlash/MuzzleFlashParticles")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [2],
+"method": &"EmitParticlesOnLocalOnlyLayer"
+}]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Scale/GunBase/MuzzleFlash/MuzzleFlashLight:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_htqds"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:CanFire")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scale/GunBase")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/2/type = "position_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Scale/GunBase/HandMesh")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.0565529, -0.345726, 0.611887)
+tracks/3/type = "position_3d"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Scale/GunBase/Chamber/Bolt")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 2.6077e-08, -0.166383, -1.30385e-08)
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Scale/GunBase/HandMesh:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0565529, -0.345726, 0.611887)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Scale/GunBase/Mag:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.275213, 0.233232)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Scale/GunBase/Mag:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Scale/GunBase/Chamber/Bolt:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-7.10542e-15, -4.3914e-15, -7.10542e-15)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Scale/GunBase/Chamber/Bolt:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2.6077e-08, -0.166383, -1.30385e-08)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Scale/GunBase/MuzzleFlash/MuzzleFlashLight:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_qx21q"]
+resource_name = "Reload"
+length = 2.84
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scale/GunBase/HandMesh:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.21, 0.3, 0.42, 0.5, 0.63, 0.7, 0.93, 1.01, 1.38, 1.63, 1.87, 1.97, 2.17, 2.25, 2.45, 2.51, 2.63, 2.7, 2.84),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.0565529, -0.345726, 0.611887), Vector3(0.243921, -0.0867199, 0.465379), Vector3(0.243921, -0.0867199, 0.465379), Vector3(0.269684, 0.11255, 0.479104), Vector3(0.269684, 0.11255, 0.479104), Vector3(0.269684, 0.11255, 0.930296), Vector3(0.269684, 0.11255, 0.930296), Vector3(-0.00267361, -0.440276, 0.1069), Vector3(-0.00267361, -0.440276, 0.1069), Vector3(-0.00267361, -2.10255, 1.13816), Vector3(-0.00267361, -2.10255, 1.13816), Vector3(-0.00267361, -0.440276, 0.1069), Vector3(-0.00267361, -0.440276, 0.1069), Vector3(0.269684, 0.11255, 0.930296), Vector3(0.269684, 0.11255, 0.930296), Vector3(0.269684, 0.11255, 0.479104), Vector3(0.269684, 0.11255, 0.479104), Vector3(0.243921, -0.0867199, 0.465379), Vector3(0.243921, -0.0867199, 0.465379), Vector3(0.0565529, -0.345726, 0.611887)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scale/GunBase/Mag:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.01, 1.38, 1.63, 1.87),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.275213, 0.233232), Vector3(0, -0.275213, 0.233232), Vector3(0, -1.90487, 1.2024), Vector3(0, -1.90487, 1.2024), Vector3(0, -0.275213, 0.233232)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Scale/GunBase/Mag:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.01, 1.21, 1.63, 1.87),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(-0.33903, 0, 0), Vector3(-0.33903, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Scale/GunBase/Chamber/Bolt:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3, 0.42, 2.51, 2.63),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-7.10542e-15, -4.3914e-15, -7.10542e-15), Vector3(4.12635e-08, -1.09692, -1.70883e-07), Vector3(4.12635e-08, -1.09692, -1.70883e-07), Vector3(-7.10542e-15, -4.3914e-15, -7.10542e-15)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Scale/GunBase/Chamber/Bolt:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.3, 0.5, 0.63, 2.25, 2.45, 2.51),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(2.6077e-08, -0.166383, -1.30385e-08), Vector3(2.6077e-08, -0.166383, -1.30385e-08), Vector3(8.9407e-08, -0.617576, -4.47035e-08), Vector3(8.9407e-08, -0.617576, -4.47035e-08), Vector3(2.6077e-08, -0.166383, -1.30385e-08), Vector3(2.6077e-08, -0.166383, -1.30385e-08)]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.3, 0.98, 1.82, 2.25, 2.63),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [ExtResource("6_5a56a")],
+"method": &"PlayGunSound"
+}, {
+"args": [ExtResource("7_ljmdi")],
+"method": &"PlayGunSound"
+}, {
+"args": [ExtResource("8_vceak")],
+"method": &"PlayGunSound"
+}, {
+"args": [ExtResource("9_akfsu")],
+"method": &"PlayGunSound"
+}, {
+"args": [],
+"method": &"RefillAmmo"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:CanFire")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 2.84),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1dmhd"]
+_data = {
+&"Fire": SubResource("Animation_nrxdk"),
+&"RESET": SubResource("Animation_htqds"),
+&"Reload": SubResource("Animation_qx21q")
+}
+
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ydk02"]
 properties/0/path = NodePath("GunBase:position")
 properties/0/spawn = true
@@ -587,78 +587,81 @@ APlayer = NodePath("AnimationPlayer")
 ClickSound = ExtResource("3_nqx7o")
 metadata/_edit_group_ = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_1dmhd")
-}
+[node name="Scale" type="Node3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.25, 0, -0.28)
 
-[node name="GunBase" type="MeshInstance3D" parent="."]
+[node name="GunBase" type="MeshInstance3D" parent="Scale"]
 gi_mode = 2
 mesh = SubResource("ArrayMesh_rtqet")
 skeleton = NodePath("")
 
-[node name="HandMesh2" type="MeshInstance3D" parent="GunBase"]
+[node name="HandMesh2" type="MeshInstance3D" parent="Scale/GunBase"]
 transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, -0.0546447, -0.172621, -1.10893)
 gi_mode = 2
 mesh = SubResource("SphereMesh_1tuyb")
 skeleton = NodePath("")
 
-[node name="HandMesh" type="MeshInstance3D" parent="GunBase"]
+[node name="HandMesh" type="MeshInstance3D" parent="Scale/GunBase"]
 transform = Transform3D(0.33, 0, 0, 0, 0.311216, 0.109749, 0, -0.109749, 0.311216, 0.0565529, -0.345726, 0.611887)
 gi_mode = 2
 mesh = SubResource("SphereMesh_1tuyb")
 skeleton = NodePath("")
 
-[node name="Barrel" type="MeshInstance3D" parent="GunBase"]
+[node name="Barrel" type="MeshInstance3D" parent="Scale/GunBase"]
 transform = Transform3D(-0.309017, -8.9407e-08, 0.951057, -0.951057, -2.38419e-07, -0.309017, 2.08616e-07, -1, -1.19209e-07, 0, 0.0649956, -1.16339)
 gi_mode = 2
 mesh = SubResource("ArrayMesh_wspij")
 skeleton = NodePath("")
 
-[node name="Chamber" type="MeshInstance3D" parent="GunBase"]
+[node name="Chamber" type="MeshInstance3D" parent="Scale/GunBase"]
 transform = Transform3D(-0.309017, -1.19209e-07, 0.951057, -0.951057, -1.19209e-07, -0.309017, 1.19209e-07, -1, -1.19209e-07, 0, 0.0649956, 0.203087)
 gi_mode = 2
 mesh = SubResource("ArrayMesh_s7hk8")
 skeleton = NodePath("")
 
-[node name="Bolt" type="MeshInstance3D" parent="GunBase/Chamber"]
+[node name="Bolt" type="MeshInstance3D" parent="Scale/GunBase/Chamber"]
 transform = Transform3D(1, 7.10542e-15, -4.3914e-15, -7.10542e-15, 1, 7.10542e-15, 4.3914e-15, -7.10542e-15, 1, 2.6077e-08, -0.166383, -1.30385e-08)
 gi_mode = 2
 mesh = SubResource("ArrayMesh_p6q5q")
 skeleton = NodePath("")
 
-[node name="Mag" type="MeshInstance3D" parent="GunBase"]
+[node name="Mag" type="MeshInstance3D" parent="Scale/GunBase"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.275213, 0.233232)
 gi_mode = 2
 mesh = SubResource("ArrayMesh_iicda")
 skeleton = NodePath("")
 
-[node name="Thing" type="MeshInstance3D" parent="GunBase"]
+[node name="Thing" type="MeshInstance3D" parent="Scale/GunBase"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, -0.0352841, -1.86379)
 gi_mode = 2
 mesh = SubResource("ArrayMesh_mf585")
 skeleton = NodePath("")
 
-[node name="MuzzleFlash" type="Node3D" parent="GunBase"]
+[node name="MuzzleFlash" type="Node3D" parent="Scale/GunBase"]
 transform = Transform3D(0.835361, 0, 0, 0, 0.0754592, 6.66134e-16, 0, -3.55271e-15, 0.835361, 0, 0.0556304, -2.61519)
 
-[node name="MuzzleFlashParticles" type="Node3D" parent="GunBase/MuzzleFlash"]
+[node name="MuzzleFlashParticles" type="Node3D" parent="Scale/GunBase/MuzzleFlash"]
 transform = Transform3D(15.4004, 0, 0, 0, -6.73173e-07, 15.4004, 0, -15.4004, -6.73174e-07, 0, 0, 0)
 script = ExtResource("11_gewaw")
 ParticleScene = ExtResource("12_0nu6s")
 ParticleSpawnMode = 0
 
-[node name="MuzzleFlashLight" type="OmniLight3D" parent="GunBase/MuzzleFlash"]
+[node name="MuzzleFlashLight" type="OmniLight3D" parent="Scale/GunBase/MuzzleFlash"]
 visible = false
 light_color = Color(1, 0.572549, 0.227451, 1)
 light_energy = 5.0
 shadow_enabled = true
 omni_range = 15.0
 
-[node name="SelfDestroyingShell" type="Node3D" parent="."]
+[node name="SelfDestroyingShell" type="Node3D" parent="Scale"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0671198, 0.165043)
 script = ExtResource("11_gewaw")
 ParticleScene = ExtResource("12_63sm6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1dmhd")
+}
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_ydk02")
