@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" uid="uid://uoy74i0gesrj" path="res://Scripts/Base/UpgradableWeapon.cs" id="1_22ate"]
 [ext_resource type="PackedScene" uid="uid://diqolrhp5s6sw" path="res://Scenes/Projectiles/BoltyBullet.tscn" id="2_1wu46"]
-[ext_resource type="AudioStream" uid="uid://dtitilcjanjym" path="res://Assets/Sounds/SFX/BoltClick.wav" id="3_nqx7o"]
-[ext_resource type="AudioStream" uid="uid://dyjig28ytx0cy" path="res://Assets/Sounds/SFX/BoltFire.wav" id="4_gwq22"]
-[ext_resource type="AudioStream" uid="uid://ffjesj7gp0vv" path="res://Assets/Sounds/SFX/CustomBoltRackLower.wav" id="5_b4lha"]
-[ext_resource type="AudioStream" uid="uid://c4wcbglkmkgcv" path="res://Assets/Sounds/SFX/BoltRack1.wav" id="6_5a56a"]
-[ext_resource type="AudioStream" uid="uid://dbhaqed3xhxg6" path="res://Assets/Sounds/SFX/BoltUnload.wav" id="7_ljmdi"]
-[ext_resource type="AudioStream" uid="uid://cjlg6xkryy0yi" path="res://Assets/Sounds/SFX/BoltLoad.wav" id="8_vceak"]
-[ext_resource type="AudioStream" uid="uid://csdlgnlh7rc1w" path="res://Assets/Sounds/SFX/BoltRack2.wav" id="9_akfsu"]
-[ext_resource type="Texture2D" uid="uid://cwgatv0pl7vvk" path="res://Assets/Textures/Weapons/Rifle_Rifle.png" id="10_b76cq"]
+[ext_resource type="AudioStream" uid="uid://ctonyyekn7was" path="res://Assets/Sounds/SFX/BoltClick.wav" id="3_nqx7o"]
+[ext_resource type="AudioStream" uid="uid://bx428q7d35s7r" path="res://Assets/Sounds/SFX/BoltFire.wav" id="4_gwq22"]
+[ext_resource type="AudioStream" uid="uid://dnklbm13sycta" path="res://Assets/Sounds/SFX/CustomBoltRackLower.wav" id="5_b4lha"]
+[ext_resource type="AudioStream" uid="uid://cqqynqr7ok0ol" path="res://Assets/Sounds/SFX/BoltRack1.wav" id="6_5a56a"]
+[ext_resource type="AudioStream" uid="uid://dsngiqag60doy" path="res://Assets/Sounds/SFX/BoltUnload.wav" id="7_ljmdi"]
+[ext_resource type="AudioStream" uid="uid://dlufjct4osr82" path="res://Assets/Sounds/SFX/BoltLoad.wav" id="8_vceak"]
+[ext_resource type="AudioStream" uid="uid://fhidnaoaxl2w" path="res://Assets/Sounds/SFX/BoltRack2.wav" id="9_akfsu"]
+[ext_resource type="Texture2D" uid="uid://cc57dwj3u3ksg" path="res://Assets/Textures/Weapons/Rifle_Rifle.png" id="10_b76cq"]
 [ext_resource type="Script" uid="uid://bl1otymgjtlka" path="res://Scripts/Base/SelfDestroyingParticle.cs" id="11_gewaw"]
 [ext_resource type="PackedScene" uid="uid://bic0xat7p13i8" path="res://Scenes/Particles/MuzzleFlash.tscn" id="12_0nu6s"]
 [ext_resource type="PackedScene" uid="uid://ciaqkt6kkv2l0" path="res://Scenes/Particles/RifleShellParticle.tscn" id="12_63sm6"]
@@ -554,28 +554,28 @@ _data = {
 }
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ydk02"]
-properties/0/path = NodePath("GunBase:position")
+properties/0/path = NodePath("Scale/GunBase:position")
 properties/0/spawn = true
 properties/0/replication_mode = 1
-properties/1/path = NodePath("GunBase:rotation")
+properties/1/path = NodePath("Scale/GunBase:rotation")
 properties/1/spawn = true
 properties/1/replication_mode = 1
-properties/2/path = NodePath("GunBase/HandMesh:position")
+properties/2/path = NodePath("Scale/GunBase/HandMesh:position")
 properties/2/spawn = true
 properties/2/replication_mode = 1
-properties/3/path = NodePath("GunBase/Chamber/Bolt:rotation")
+properties/3/path = NodePath("Scale/GunBase/Chamber/Bolt:position")
 properties/3/spawn = true
 properties/3/replication_mode = 1
-properties/4/path = NodePath("GunBase/Chamber/Bolt:position")
+properties/4/path = NodePath("Scale/GunBase/Chamber/Bolt:rotation")
 properties/4/spawn = true
 properties/4/replication_mode = 1
-properties/5/path = NodePath("GunBase/Mag:rotation")
+properties/5/path = NodePath("Scale/GunBase/Mag:position")
 properties/5/spawn = true
 properties/5/replication_mode = 1
-properties/6/path = NodePath("GunBase/Mag:position")
+properties/6/path = NodePath("Scale/GunBase/Mag:rotation")
 properties/6/spawn = true
 properties/6/replication_mode = 1
-properties/7/path = NodePath("GunBase/MuzzleFlash/MuzzleFlashLight:visible")
+properties/7/path = NodePath("Scale/GunBase/MuzzleFlash/MuzzleFlashLight:visible")
 properties/7/spawn = true
 properties/7/replication_mode = 1
 
