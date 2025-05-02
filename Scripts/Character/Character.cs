@@ -84,8 +84,8 @@ public partial class Character : Entity
 			UI.InGameUI.Show();
 			Input.MouseMode = Input.MouseModeEnum.Captured;
 
-            CharacterMesh.SetLayerMaskValue(1, false);
-            CharacterMesh.SetLayerMaskValue(6, true);
+            /*CharacterMesh.SetLayerMaskValue(1, false);
+            CharacterMesh.SetLayerMaskValue(6, true);*/
 
 			LevelManager.Instance.ToggleXrayEffect(false); // disable Xray effect on spawn
 		}

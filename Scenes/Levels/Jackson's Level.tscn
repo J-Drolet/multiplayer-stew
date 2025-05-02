@@ -2081,7 +2081,6 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -0.981424, 0, 1, -4.28994e-08,
 transform = Transform3D(0.907191, 0.28671, -0.3079, 0, 0.731842, 0.681475, 0.420719, -0.618228, 0.66392, 0, 0, 0)
 layers = 3
 shadow_enabled = true
-directional_shadow_mode = 0
 directional_shadow_blend_splits = true
 
 [node name="DirectionalLight3DInterior" type="DirectionalLight3D" parent="."]

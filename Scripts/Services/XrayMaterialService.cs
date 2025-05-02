@@ -19,7 +19,7 @@ public static class XrayMaterialService
             BaseMaterial3D xrayCopy = (BaseMaterial3D)xrayMaterial.Duplicate();
             BaseMaterial3D realMaterial = (BaseMaterial3D)meshInstance.Mesh.SurfaceGetMaterial(i).Duplicate();
             realMaterial.RenderPriority = 1; // needs to render after xray
-            realMaterial.Transparency = BaseMaterial3D.TransparencyEnum.Alpha; 
+            realMaterial.Transparency = BaseMaterial3D.TransparencyEnum.AlphaScissor; 
             realMaterial.DepthDrawMode = BaseMaterial3D.DepthDrawModeEnum.Always; // makes it so the depth test always happens, bug happened when xrayMaterial was transparent, engine thought you could see through it even when next pass was opaque
             xrayCopy.NextPass = realMaterial;
             meshInstance.SetSurfaceOverrideMaterial(i, xrayCopy);
