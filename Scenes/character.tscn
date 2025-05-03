@@ -1,10 +1,9 @@
-[gd_scene load_steps=39 format=4 uid="uid://lcx7afjcynql"]
+[gd_scene load_steps=38 format=4 uid="uid://lcx7afjcynql"]
 
 [ext_resource type="Script" uid="uid://5yutkv0j58u4" path="res://Scripts/Character/Character.cs" id="1_n6eoi"]
 [ext_resource type="Script" uid="uid://c38dblfxtao7" path="res://Scripts/Base/DamageArea.cs" id="2_4301p"]
-[ext_resource type="AudioStream" uid="uid://b4o2ftef65g1l" path="res://Assets/Sounds/SFX/Voice B Pain Grunt 002.wav" id="2_b0fus"]
-[ext_resource type="PackedScene" uid="uid://d2nepwypwjil2" path="res://Scenes/Particles/SmokeParticles.tscn" id="5_a5ess"]
-[ext_resource type="PackedScene" uid="uid://cslx7c34bxb3h" path="res://Scenes/UI/Standalone Components/PowerPack.tscn" id="5_ejsiy"]
+[ext_resource type="AudioStream" uid="uid://dbvro82au5vr5" path="res://Assets/Sounds/SFX/Voice B Pain Grunt 002.wav" id="2_b0fus"]
+[ext_resource type="PackedScene" path="res://Scenes/Particles/SmokeParticles.tscn" id="5_a5ess"]
 [ext_resource type="Script" uid="uid://d0has0xre837m" path="res://Scripts/Character/FootSteps/FootStepEmitter.cs" id="6_2mse5"]
 [ext_resource type="Resource" uid="uid://dj1lnp8rxjxvw" path="res://Assets/FootProfiles/Shoes.tres" id="7_reotu"]
 
@@ -311,12 +310,11 @@ states/Walk/position = Vector2(481, 94)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_uyc7b"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_hr1ek"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_0a1m0"), "Sprint", "Idle", SubResource("AnimationNodeStateMachineTransition_ixqql"), "Sprint", "Walk", SubResource("AnimationNodeStateMachineTransition_24ak6"), "Walk", "Sprint", SubResource("AnimationNodeStateMachineTransition_n1s64"), "Idle", "Sprint", SubResource("AnimationNodeStateMachineTransition_u4lto")]
 graph_offset = Vector2(-85, 3)
 
-[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "Head", "Hand", "PowerPackDisplayManager", "ProjectileOrigin", "WeaponSpawner", "APlayer", "ATree", "CharacterMesh", "HeadCosmeticSlot", "FaceCosmeticSlot", "InvisibilitySmokeParticles", "Hitboxes", "HealthText")]
+[node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("Camera", "Head", "Hand", "ProjectileOrigin", "WeaponSpawner", "APlayer", "ATree", "CharacterMesh", "HeadCosmeticSlot", "FaceCosmeticSlot", "InvisibilitySmokeParticles", "Hitboxes", "HealthText")]
 script = ExtResource("1_n6eoi")
 Camera = NodePath("Head/Camera3D")
 Head = NodePath("Head")
 Hand = NodePath("Head/Camera3D/Hand")
-PowerPackDisplayManager = NodePath("Head/Camera3D/Pack")
 ProjectileOrigin = NodePath("Head/Camera3D/ProjectileOrigin")
 WeaponSpawner = NodePath("Head/Camera3D/Hand/WeaponParent/MultiplayerSpawner")
 APlayer = NodePath("AnimationPlayer")
@@ -378,9 +376,6 @@ spawn_path = NodePath("..")
 
 [node name="ProjectileOrigin" type="Node3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.793709)
-
-[node name="Pack" parent="Head/Camera3D" instance=ExtResource("5_ejsiy")]
-transform = Transform3D(0.104356, 0.0168493, 0.044935, -0.00779863, 0.112074, -0.0239131, -0.0473524, 0.018675, 0.102967, -0.363863, -0.112363, -0.364438)
 
 [node name="HeadCosmetics" type="Node3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.98936, -0.0409511)

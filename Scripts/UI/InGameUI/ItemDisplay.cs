@@ -10,6 +10,8 @@ public partial class ItemDisplay : MarginContainer
 {
     [Export, ExportRequired]
     public GridContainer ItemGrid { get; set; }
+    [Export, ExportRequired]
+    public Label PowerLevelLabel { get; set; }
 
     private Dictionary<Upgrade, CompressedTexture2D> Thumbnails { get; set; } = [];
 
@@ -20,7 +22,7 @@ public partial class ItemDisplay : MarginContainer
         GodotErrorService.ValidateRequiredData(this);
         LoadThumbnails();
     }
-    public void Refresh(IEnumerable<Upgrade> upgrades)
+    public void Refresh(IEnumerable<Upgrade> upgrades, int powerLevel)
     {
         // Empty Item Grid
         foreach(Node child in ItemGrid.GetChildren())
@@ -35,6 +37,8 @@ public partial class ItemDisplay : MarginContainer
             thumbnail.Texture = Thumbnails.ContainsKey(upgrade) ? Thumbnails[upgrade] : dummyTexture;
             ItemGrid.AddChild(thumbnail);
         }
+
+        PowerLevelLabel.Text = powerLevel.ToString();
     }
 
     private void LoadThumbnails()

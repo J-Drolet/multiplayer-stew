@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dker47ss6f07g"]
+[gd_scene load_steps=24 format=3 uid="uid://dker47ss6f07g"]
 
 [ext_resource type="Script" uid="uid://c6d03e7dxcwth" path="res://Scripts/UI/InGameUI.cs" id="1_8bj3a"]
 [ext_resource type="Script" uid="uid://p8vtx7t4ry0c" path="res://Scripts/UI/GunViewCamera.cs" id="2_v6n63"]
@@ -38,6 +38,9 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+
+[sub_resource type="Theme" id="Theme_ofslv"]
+BoxContainer/constants/separation = 50
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gg4ao"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -265,7 +268,7 @@ theme_override_constants/margin_bottom = 5
 [node name="VBoxContainer" type="VBoxContainer" parent="Ammo Display/MarginContainer"]
 layout_mode = 2
 
-[node name="ItemDisplay" type="MarginContainer" parent="." node_paths=PackedStringArray("ItemGrid")]
+[node name="ItemDisplay" type="MarginContainer" parent="." node_paths=PackedStringArray("ItemGrid", "PowerLevelLabel")]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -274,10 +277,12 @@ offset_left = -293.0
 offset_right = -136.0
 offset_bottom = 89.0
 grow_horizontal = 0
+theme = SubResource("Theme_ofslv")
 theme_override_constants/margin_top = 25
 theme_override_constants/margin_right = 25
 script = ExtResource("11_42qaf")
 ItemGrid = NodePath("Panel/Items")
+PowerLevelLabel = NodePath("../PowerLevelLabel")
 
 [node name="Panel" type="PanelContainer" parent="ItemDisplay"]
 layout_mode = 2
@@ -292,6 +297,19 @@ columns = 4
 [node name="TextureRect" type="TextureRect" parent="ItemDisplay/Panel/Items"]
 layout_mode = 2
 texture = ExtResource("12_vbjgj")
+
+[node name="PowerLevelLabel" type="Label" parent="."]
+layout_mode = 2
+offset_left = 1772.0
+offset_top = 26.0
+offset_right = 1904.0
+offset_bottom = 98.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.745098, 0.533333, 0.247059, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 52
+text = "2     "
 
 [node name="KillPopups" type="VBoxContainer" parent="." node_paths=PackedStringArray("KillPopupPrototype")]
 clip_contents = true

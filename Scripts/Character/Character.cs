@@ -16,8 +16,6 @@ public partial class Character : Entity
 	[Export, ExportRequired]
 	public Node3D Hand { get; set; }
     public HashSet<Upgrade> Upgrades { get; set; } = new();
-    [Export, ExportRequired]
-    public Node3D PowerPackDisplayManager { get; set; }
 
     #region WeaponProperties
     [Export]
@@ -78,8 +76,7 @@ public partial class Character : Entity
 			LevelManager.Instance.RpcId(1, LevelManager.MethodName.RequestSpawnPoint);
 			UI.InGameUI.AmmoCount.Visible = EquippedWeapon != null; // hide ammoCount on respawn
 			UI.InGameUI.FlavorTextDisplay.HideDisplay();
-			UI.InGameUI.ItemDisplay.Refresh(Upgrades);
-			ATree.Active = true;
+            ATree.Active = true;
 
 			UI.InGameUI.Show();
 			Input.MouseMode = Input.MouseModeEnum.Captured;
@@ -89,10 +86,7 @@ public partial class Character : Entity
 
 			LevelManager.Instance.ToggleXrayEffect(false); // disable Xray effect on spawn
 		}
-		else
-		{
-			PowerPackDisplayManager.Hide();
-		}
+
 
 		// Load Cosmetics
 		FaceCosmeticSlot.AddChild(ResourceLoader.Load<PackedScene>(GameSessionManager.ConnectedPeers[GetMultiplayerAuthority()].FaceCosmetic).Instantiate());
@@ -385,7 +379,7 @@ public partial class Character : Entity
 			
 			WeaponSpawner.GetParent().AddChild(EquippedWeapon);
 		}
-		UpdatePowerLevelStats();
+        UpdatePowerLevelStats();
 	}
 
 	private void OnWeaponDespawned(Node node)
@@ -410,7 +404,8 @@ public partial class Character : Entity
 			if(IsMultiplayerAuthority())
 			{
 				UI.InGameUI.FlavorTextDisplay.DisplayFlavorTextFor(weapon.WeaponType, oldWeapon);
-			}
+                UI.InGameUI.ItemDisplay.Refresh(Upgrades, CalculatePowerLevel());
+            }
 		}
     }
 
@@ -421,7 +416,7 @@ public partial class Character : Entity
 		UpdatePowerLevelStats();
 		if(IsMultiplayerAuthority())
 		{
-			UI.InGameUI.ItemDisplay.Refresh(Upgrades);
+			UI.InGameUI.ItemDisplay.Refresh(Upgrades, CalculatePowerLevel());
 			UI.InGameUI.FlavorTextDisplay.DisplayFlavorTextFor(upgrade);
 		}
 	}
@@ -432,9 +427,9 @@ public partial class Character : Entity
         Upgrades.Remove(upgrade);
 		if (IsMultiplayerAuthority())
 		{
-			UI.InGameUI.ItemDisplay.Refresh(Upgrades);
+            UI.InGameUI.ItemDisplay.Refresh(Upgrades, CalculatePowerLevel());
 
-			if(upgrade == Upgrade.C_OutlinePlayers)
+            if (upgrade == Upgrade.C_OutlinePlayers)
 			{
 				LevelManager.Instance.ToggleXrayEffect(false); // disable xray in case we remove this
 				
