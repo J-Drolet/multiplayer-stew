@@ -51,7 +51,6 @@ public partial class LevelManager : Node
 			{
 				// Setup player stats
 				PlayerStats.Add(peerId, new());
-                GD.Print("IN READY: ", peerId);
                 PlayerStats[peerId].kills = 0;
 				PlayerStats[peerId].deaths = 0;
 				PlayerStats[peerId].maxPowerLevel = 0;
@@ -142,8 +141,12 @@ public partial class LevelManager : Node
 			int maxAura = 0;
 			foreach(long id in LevelPeerInfo.Keys)
 			{
-				foreach(long key in PlayerStats.Keys)
-					GD.Print("IN PROCESS: ", key, PlayerStats.Keys.Count);
+                if (!PlayerStats.ContainsKey(id))
+                {
+                    GD.PrintErr($"PlayerStats does not contain key: {id}");
+                    continue; // Skip processing for this ID
+                }
+
                 int playerAura = PlayerStats[id].aura;
 				maxAura = playerAura > maxAura ? playerAura : maxAura;
 

@@ -88,9 +88,18 @@ public partial class Character : Entity
 		}
 
 
-		// Load Cosmetics
-		FaceCosmeticSlot.AddChild(ResourceLoader.Load<PackedScene>(GameSessionManager.ConnectedPeers[GetMultiplayerAuthority()].FaceCosmetic).Instantiate());
-        HeadCosmeticSlot.AddChild(ResourceLoader.Load<PackedScene>(GameSessionManager.ConnectedPeers[GetMultiplayerAuthority()].HeadCosmetic).Instantiate());
+        // Load Cosmetics
+        // Load the cosmetics from the GameSessionManager
+        string faceCosmetic = GameSessionManager.ConnectedPeers[GetMultiplayerAuthority()].FaceCosmetic;
+		string headCosmetic = GameSessionManager.ConnectedPeers[GetMultiplayerAuthority()].HeadCosmetic;
+		if (!String.IsNullOrWhiteSpace(faceCosmetic))
+		{
+			FaceCosmeticSlot.AddChild(ResourceLoader.Load<PackedScene>(faceCosmetic).Instantiate());
+		}
+		if (!String.IsNullOrWhiteSpace(headCosmetic))
+		{
+			HeadCosmeticSlot.AddChild(ResourceLoader.Load<PackedScene>(headCosmetic).Instantiate());
+		}
 		FaceCosmeticSlot.Visible = !IsMultiplayerAuthority();
 		HeadCosmeticSlot.Visible = !IsMultiplayerAuthority();
 
