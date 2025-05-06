@@ -1,11 +1,30 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text.Json;
+
+public class ServerData
+{
+    public int ServerID { get; set; }
+    public string ServerName { get; set; }
+    public int Port { get; set; }
+    public int Players { get; set; }
+    public bool InLobby { get; set; }
+}
 
 public partial class Server : Node
 {
+    
     public static Server Instance { get; private set; }
+    public ServerData ServerData { get; set; } = new ServerData() 
+    { 
+        Port = 3333
+    };
+    // If server is managed by server manager. Will output data file in server data folder
+    public bool IsManaged { get; set; } = false;
+    public string ServerDataFilepath { get; set; }
+    private string ServerDataFile { get { return Path.Combine(ServerDataFilepath, $"SD_{ServerData.ServerID}.json"); }}
     
     // Define the maximum number of clients allowed
     private const int MaxClients = 6;
@@ -29,7 +48,7 @@ public partial class Server : Node
         Multiplayer.PeerDisconnected += PeerDisconnected;
 
         Peer = new ENetMultiplayerPeer();
-        Error err = Peer.CreateServer(3333, MaxClients);
+        Error err = Peer.CreateServer(ServerData.Port, MaxClients);
 
         if (err != Error.Ok)
         {
@@ -37,7 +56,7 @@ public partial class Server : Node
         }
         else
         {
-            GD.Print("Server._Ready - Server started successfully.");
+            GD.Print($"Server._Ready - Server started successfully on port {ServerData.Port}.");
             Multiplayer.MultiplayerPeer = Peer;
         }
 
@@ -52,6 +71,7 @@ public partial class Server : Node
             }
         };
         AddChild(timer);
+        OnServerDataChanged();
     }
 
     private void PeerDisconnected(long id)
@@ -59,6 +79,15 @@ public partial class Server : Node
         GD.Print("Server.PeerDisconnected - Player disconnected: " + id);
         
         GameSessionManager.RemovePlayer(id);
+
+        // Close server if no players are left
+        if (GameSessionManager.ConnectedPeers.Count == 0)
+        {
+            GD.Print("Server.PeerDisconnected - No players left, closing server");
+            Multiplayer.MultiplayerPeer.Close();
+            GetTree().Quit(); // Quit the game
+        }
+        OnServerDataChanged();
     }
 
     private void PeerConnected(long id) {
@@ -74,6 +103,8 @@ public partial class Server : Node
         {
             RpcId(id, MethodName.NotifyConnectionRefused, "Connection failed: Game has already started");
         }
+
+        OnServerDataChanged();
     }
 
     /// <summary>
@@ -125,6 +156,11 @@ public partial class Server : Node
             PackedScene levelPackedScene = (PackedScene)ResourceLoader.Load(levelPath);
             Node level = levelPackedScene.Instantiate();
             Root.Instance.AddChild(level); // using Root.Instance just to access tree
+        }
+        else if (Multiplayer.IsServer() && IsManaged)
+        {
+            OnServerDataChanged();
+            ServerData.InLobby = false;
         }
     }
 
@@ -190,6 +226,23 @@ public partial class Server : Node
             LevelManager.Instance.PlayerStats[Multiplayer.GetRemoteSenderId()].ping = (int)(ping * 1000);
         }
     }
-    
-   
+
+    private void OnServerDataChanged()
+    {
+        if(IsManaged && !string.IsNullOrEmpty(ServerDataFilepath))
+        {
+            try
+            {
+                ServerData.Players = GameSessionManager.ConnectedPeers.Count;
+                //write file to disk 
+                string json = JsonSerializer.Serialize(ServerData, new JsonSerializerOptions { WriteIndented = true });
+                
+                File.WriteAllText(@ServerDataFile, json);
+            }
+            catch (Exception e)
+            {
+                GD.PrintErr("Server.OnServerDataChanged - Error writing server data to file: " + e.Message);
+            }
+        }
+    }
 }

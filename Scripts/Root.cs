@@ -35,18 +35,51 @@ public partial class Root : Node
 		RegisterLevelScenes();
 
 		bool isServer = false;
-		string[] args = OS.GetCmdlineArgs();
+		bool isManaged = false;
+		string serverDataFilePath = "";
+		int id = 0;
+		int port = 3333; // default port
+		string name = "My Server"; // default server name
+        string[] args = OS.GetCmdlineArgs();
 		foreach (string arg in args)
 		{
-			if(arg == "--server") {
-				isServer = true;;
+			if (arg == "--server") {
+				isServer = true; ;
+			}
+			else if(arg.Contains("--id"))
+            {
+                id = arg.Split('=')[1].ToInt();
+            }
+            else if (arg.Contains("--data-filepath"))
+            {
+                serverDataFilePath = arg.Split('=')[1].Trim('"');
+            }
+            else if (arg.Contains("--port"))
+			{
+				port = arg.Split('=')[1].Trim('"').ToInt();
+			}
+			else if (arg.Contains("--name"))
+			{
+				name = arg.Split('=')[1].Trim('"');
+			}
+			else if (arg.Contains("--managed"))
+			{
+				isManaged = true;
+				serverDataFilePath = arg.Split('=')[1].Trim('"');
 			}
 		}
 
 		if(isServer) 
 		{
 			Node networkingScene = ServerScene.Instantiate();
-			AddChild(networkingScene);
+            (networkingScene as Server).ServerData.ServerID = id;
+            (networkingScene as Server).ServerData.Port = port;
+            (networkingScene as Server).ServerData.ServerName = name;
+			(networkingScene as Server).ServerData.InLobby = true;
+			(networkingScene as Server).ServerData.Players = 0;
+            (networkingScene as Server).IsManaged = isManaged;
+            (networkingScene as Server).ServerDataFilepath = serverDataFilePath;
+            AddChild(networkingScene);
 		}
 		else 
 		{
