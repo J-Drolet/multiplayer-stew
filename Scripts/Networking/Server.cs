@@ -103,8 +103,6 @@ public partial class Server : Node
         {
             RpcId(id, MethodName.NotifyConnectionRefused, "Connection failed: Game has already started");
         }
-
-        OnServerDataChanged();
     }
 
     /// <summary>
@@ -137,6 +135,7 @@ public partial class Server : Node
         }
 
         GameSessionManager.ConnectedPeers.Add(id, JsonSerializer.Deserialize<PeerInfo>(peerInfoJson));
+        OnServerDataChanged();
     }
 
     /// <summary>
@@ -156,12 +155,13 @@ public partial class Server : Node
             PackedScene levelPackedScene = (PackedScene)ResourceLoader.Load(levelPath);
             Node level = levelPackedScene.Instantiate();
             Root.Instance.AddChild(level); // using Root.Instance just to access tree
+            if (IsManaged)
+            {
+                ServerData.InLobby = false;
+                OnServerDataChanged();
+            }
         }
-        else if (Multiplayer.IsServer() && IsManaged)
-        {
-            OnServerDataChanged();
-            ServerData.InLobby = false;
-        }
+        
     }
 
     /// <summary>
